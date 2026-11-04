@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.reflow.outboundCreate",
+  "cnName": "翻仓出库单创建",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-reflow-outboundCreate",
+  "name": "yunc.reflow.outboundCreate",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.reflow.outboundCreate",
   "description": "翻仓出库单创建接口",
   "method": "GET",
   "path": "/yunc/reflow/outboundCreate",
@@ -551,6 +553,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2276",
   "updatedAt": "2022-11-03",
-  "_file_stem": "warehouse-yunc-reflow-outboundCreate",
-  "cnName": "翻仓出库单创建"
+  "_file_stem": "warehouse-yunc-reflow-outboundCreate"
 }

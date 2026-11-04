@@ -1,11 +1,12 @@
-# install.store.providerStoreAbilityTemplate
+# 服务商的能力模板列表
 
-> 服务商的能力模板列表
+> install.store.providerStoreAbilityTemplate — 服务商的能力模板列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.providerStoreAbilityTemplate` |
 | 中文名 | 服务商的能力模板列表 |
+| 文档地址 | `/docs/doudian/install/install-install-store-providerStoreAbilityTemplate` |
+| 接口 ID | `doudian.install.install.store.providerStoreAbilityTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAbilityTemplate` |

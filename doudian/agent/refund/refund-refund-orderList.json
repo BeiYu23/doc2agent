@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.refund.orderList",
+  "cnName": "获取备货中有退款的订单列表",
+  "docUrl": "/docs/doudian/refund/refund-refund-orderList",
+  "name": "refund.orderList",
   "platform": "doudian",
   "group": "refund",
-  "name": "refund.orderList",
   "description": "获取备货中有退款的订单列表（6.30下线）",
   "method": "GET",
   "path": "/refund/orderList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/80",
   "updatedAt": "2021-06-10",
-  "_file_stem": "refund-refund-orderList",
-  "cnName": "获取备货中有退款的订单列表"
+  "_file_stem": "refund-refund-orderList"
 }

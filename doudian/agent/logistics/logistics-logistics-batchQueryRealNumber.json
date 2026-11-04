@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.batchQueryRealNumber",
+  "cnName": "批量获取真实手机号",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-batchQueryRealNumber",
+  "name": "logistics.batchQueryRealNumber",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.batchQueryRealNumber",
   "description": "批量获取真实手机号",
   "method": "GET",
   "path": "/logistics/batchQueryRealNumber",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3534",
   "updatedAt": "2023-05-16",
-  "_file_stem": "logistics-logistics-batchQueryRealNumber",
-  "cnName": "批量获取真实手机号"
+  "_file_stem": "logistics-logistics-batchQueryRealNumber"
 }

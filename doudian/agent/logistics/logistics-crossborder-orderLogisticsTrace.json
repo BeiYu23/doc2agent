@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.crossborder.orderLogisticsTrace",
+  "cnName": "服务商回传国际干线作业节点",
+  "docUrl": "/docs/doudian/logistics/logistics-crossborder-orderLogisticsTrace",
+  "name": "crossborder.orderLogisticsTrace",
   "platform": "doudian",
   "group": "logistics",
-  "name": "crossborder.orderLogisticsTrace",
   "description": "服务商回传国际干线作业节点",
   "method": "GET",
   "path": "/crossborder/orderLogisticsTrace",
@@ -160,6 +162,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/528",
   "updatedAt": "2021-05-18",
-  "_file_stem": "logistics-crossborder-orderLogisticsTrace",
-  "cnName": "服务商回传国际干线作业节点"
+  "_file_stem": "logistics-crossborder-orderLogisticsTrace"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.product.mGetAggs",
+  "cnName": "【二方接口】获取评价信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-product-mGetAggs",
+  "name": "second.product.mGetAggs",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.product.mGetAggs",
   "description": "【二方接口】获取评价信息",
   "method": "GET",
   "path": "/second/product/mGetAggs",
@@ -82,6 +84,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6930",
   "updatedAt": "2024-10-10",
-  "_file_stem": "dongchedi-second-product-mGetAggs",
-  "cnName": "【二方接口】获取评价信息"
+  "_file_stem": "dongchedi-second-product-mGetAggs"
 }

@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.queryPrice
+# 查询价格
 
-> 查询价格
+> supplyChain.supplyProduct.queryPrice — 查询价格
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.queryPrice` |
 | 中文名 | 查询价格 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-queryPrice` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.queryPrice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

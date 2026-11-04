@@ -1,11 +1,12 @@
-# yunc.erpCargoSinglePush
+# 货品推送接口-ERP(单个
 
-> 货品推送接口-ERP(单个)
+> yunc.erpCargoSinglePush — 货品推送接口-ERP(单个)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.erpCargoSinglePush` |
 | 中文名 | 货品推送接口-ERP(单个 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-erpCargoSinglePush` |
+| 接口 ID | `doudian.warehouse.yunc.erpCargoSinglePush` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/erpCargoSinglePush` |

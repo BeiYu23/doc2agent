@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.freightList",
+  "cnName": "获取供应商运费列表",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-freightList",
+  "name": "supplyChain.freightList",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.freightList",
   "description": "获取供应商运费列表",
   "method": "GET",
   "path": "/supplyChain/freightList",
@@ -71,6 +73,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/7430",
   "updatedAt": "2025-04-28",
-  "_file_stem": "supply-chain-supplyChain-freightList",
-  "cnName": "获取供应商运费列表"
+  "_file_stem": "supply-chain-supplyChain-freightList"
 }

@@ -1,11 +1,12 @@
-# marketing.queryAvailableProduct
+# 支持根据特定条件查询营销可用商品
 
-> 支持根据特定条件查询营销可用商品
+> marketing.queryAvailableProduct — 支持根据特定条件查询营销可用商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.queryAvailableProduct` |
 | 中文名 | 支持根据特定条件查询营销可用商品 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-queryAvailableProduct` |
+| 接口 ID | `doudian.marketing.marketing.queryAvailableProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/queryAvailableProduct` |

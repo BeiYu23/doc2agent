@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.address.addAftersaleStrategy",
+  "cnName": "添加售后地址策略",
+  "docUrl": "/docs/doudian/refund/refund-address-addAftersaleStrategy",
+  "name": "address.addAftersaleStrategy",
   "platform": "doudian",
   "group": "refund",
-  "name": "address.addAftersaleStrategy",
   "description": "添加售后地址策略",
   "method": "GET",
   "path": "/address/addAftersaleStrategy",
@@ -199,6 +201,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/6905",
   "updatedAt": "2024-09-25",
-  "_file_stem": "refund-address-addAftersaleStrategy",
-  "cnName": "添加售后地址策略"
+  "_file_stem": "refund-address-addAftersaleStrategy"
 }

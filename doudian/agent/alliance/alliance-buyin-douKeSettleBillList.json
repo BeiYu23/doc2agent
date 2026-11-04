@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.douKeSettleBillList",
+  "cnName": "支持查询抖客结算账单明细",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-douKeSettleBillList",
+  "name": "buyin.douKeSettleBillList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.douKeSettleBillList",
   "description": "支持查询抖客结算账单明细",
   "method": "GET",
   "path": "/buyin/douKeSettleBillList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/5999",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-douKeSettleBillList",
-  "cnName": "支持查询抖客结算账单明细"
+  "_file_stem": "alliance-buyin-douKeSettleBillList"
 }

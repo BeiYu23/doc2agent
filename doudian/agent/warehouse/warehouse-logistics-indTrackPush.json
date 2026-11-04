@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.logistics.indTrackPush",
+  "cnName": "即时配轨迹推送",
+  "docUrl": "/docs/doudian/warehouse/warehouse-logistics-indTrackPush",
+  "name": "logistics.indTrackPush",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "logistics.indTrackPush",
   "description": "即时配轨迹推送接口",
   "method": "GET",
   "path": "/logistics/indTrackPush",
@@ -200,6 +202,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2109",
   "updatedAt": "2022-10-09",
-  "_file_stem": "warehouse-logistics-indTrackPush",
-  "cnName": "即时配轨迹推送"
+  "_file_stem": "warehouse-logistics-indTrackPush"
 }

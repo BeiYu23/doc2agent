@@ -1,11 +1,12 @@
-# order.stockUp
+# 确认货到付款订单
 
-> 确认货到付款订单
+> order.stockUp — 确认货到付款订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.stockUp` |
 | 中文名 | 确认货到付款订单 |
+| 文档地址 | `/docs/doudian/order/order-order-stockUp` |
+| 接口 ID | `doudian.order.order.stockUp` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/stockUp` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.isv.getClueList",
+  "cnName": "提供给isv，根据店铺获取线索",
+  "docUrl": "/docs/doudian/product/product-product-isv-getClueList",
+  "name": "product.isv.getClueList",
   "platform": "doudian",
   "group": "product",
-  "name": "product.isv.getClueList",
   "description": "提供给isv，根据店铺获取线索",
   "method": "GET",
   "path": "/product/isv/getClueList",
@@ -177,6 +179,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2195",
   "updatedAt": "2024-02-28",
-  "_file_stem": "product-product-isv-getClueList",
-  "cnName": "提供给isv，根据店铺获取线索"
+  "_file_stem": "product-product-isv-getClueList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.distributionLiveProductList",
+  "cnName": "分销直播间商品列表",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-distributionLiveProductList",
+  "name": "buyin.distributionLiveProductList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.distributionLiveProductList",
   "description": "分销直播间商品列表",
   "method": "GET",
   "path": "/buyin/distributionLiveProductList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1770",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-distributionLiveProductList",
-  "cnName": "分销直播间商品列表"
+  "_file_stem": "alliance-buyin-distributionLiveProductList"
 }

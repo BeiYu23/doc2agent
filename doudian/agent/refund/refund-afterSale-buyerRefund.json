@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.buyerRefund",
+  "cnName": "商家处理发货后仅退款申请",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-buyerRefund",
+  "name": "afterSale.buyerRefund",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.buyerRefund",
   "description": "商家处理发货后仅退款申请（831下线，可使用该接口：/afterSale/Operate）",
   "method": "GET",
   "path": "/afterSale/buyerRefund",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/131",
   "updatedAt": "2021-06-30",
-  "_file_stem": "refund-afterSale-buyerRefund",
-  "cnName": "商家处理发货后仅退款申请"
+  "_file_stem": "refund-afterSale-buyerRefund"
 }

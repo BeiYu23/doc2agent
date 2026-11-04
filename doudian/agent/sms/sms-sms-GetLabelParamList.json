@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.GetLabelParamList",
+  "cnName": "标签参数获取",
+  "docUrl": "/docs/doudian/sms/sms-sms-GetLabelParamList",
+  "name": "sms.GetLabelParamList",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.GetLabelParamList",
   "description": "标签参数获取",
   "method": "GET",
   "path": "/sms/GetLabelParamList",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6728",
   "updatedAt": "2024-07-26",
-  "_file_stem": "sms-sms-GetLabelParamList",
-  "cnName": "标签参数获取"
+  "_file_stem": "sms-sms-GetLabelParamList"
 }

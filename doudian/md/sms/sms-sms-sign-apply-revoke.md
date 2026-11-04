@@ -1,11 +1,12 @@
-# sms.sign.apply.revoke
+# 撤销短信签名申请单
 
-> 撤销短信签名申请单
+> sms.sign.apply.revoke — 撤销短信签名申请单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.sign.apply.revoke` |
 | 中文名 | 撤销短信签名申请单 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-sign-apply-revoke` |
+| 接口 ID | `doudian.sms.sms.sign.apply.revoke` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/sign/apply/revoke` |

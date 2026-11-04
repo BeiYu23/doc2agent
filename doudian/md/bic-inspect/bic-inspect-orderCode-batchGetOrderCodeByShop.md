@@ -1,12 +1,13 @@
-# orderCode.batchGetOrderCodeByShop
+# 批量预绑订单码
 
-> 批量预绑订单码
+> orderCode.batchGetOrderCodeByShop — 批量预绑订单码
 批量预绑订单码，下载后订单进入预绑码状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bic-inspect.orderCode.batchGetOrderCodeByShop` |
 | 中文名 | 批量预绑订单码 |
+| 文档地址 | `/docs/doudian/bic-inspect/bic-inspect-orderCode-batchGetOrderCodeByShop` |
+| 接口 ID | `doudian.bic-inspect.orderCode.batchGetOrderCodeByShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/batchGetOrderCodeByShop` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.getIdentification",
+  "cnName": "CC查身份证",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-getIdentification",
+  "name": "crossBorder.getIdentification",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.getIdentification",
   "description": "CC查身份证",
   "method": "GET",
   "path": "/crossBorder/getIdentification",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6648",
   "updatedAt": "2024-06-28",
-  "_file_stem": "cross-border-crossBorder-getIdentification",
-  "cnName": "CC查身份证"
+  "_file_stem": "cross-border-crossBorder-getIdentification"
 }

@@ -1,13 +1,14 @@
-# buyin.kolProductsDetail
+# 本接口用于查询达人视角下单个或批量推广商品的
 
-> 1、本接口用于查询达人视角下单个或批量推广商品的详情；
+> buyin.kolProductsDetail — 1、本接口用于查询达人视角下单个或批量推广商品的详情；
 2、如商品推广不可推广（如下架、清退、封禁等情况下），接口会返回为空；商品状态查询接口：/buyin/materialsProductStatus
 3、调用接口前，请先获取精选联盟业务权限：https
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.kolProductsDetail` |
 | 中文名 | 本接口用于查询达人视角下单个或批量推广商品的 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-kolProductsDetail` |
+| 接口 ID | `doudian.alliance.buyin.kolProductsDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolProductsDetail` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.cargo.auditList",
+  "cnName": "审核记录列表",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-cargo-auditList",
+  "name": "supplyCenter.cargo.auditList",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.cargo.auditList",
   "description": "审核记录列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5141",
   "updatedAt": "2023-10-19",
-  "_file_stem": "selection-supplyCenter-cargo-auditList",
-  "cnName": "审核记录列表"
+  "_file_stem": "selection-supplyCenter-cargo-auditList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.searchList",
+  "cnName": "根据条件检索满足要求的订单列表",
+  "docUrl": "/docs/doudian/order/order-order-searchList",
+  "name": "order.searchList",
   "platform": "doudian",
   "group": "order",
-  "name": "order.searchList",
   "description": "根据条件检索满足要求的订单列表，支持下单时间和更新时间排序；最大支持查询近90天的数据；注意！订单在风控中时请勿发货！",
   "method": "GET",
   "path": "/order/searchList",
@@ -324,6 +326,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1342",
   "updatedAt": "2026-08-31",
-  "_file_stem": "order-order-searchList",
-  "cnName": "根据条件检索满足要求的订单列表"
+  "_file_stem": "order-order-searchList"
 }

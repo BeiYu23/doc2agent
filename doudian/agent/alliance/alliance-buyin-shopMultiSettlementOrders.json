@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.shopMultiSettlementOrders",
+  "cnName": "商家分次结算订单",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-shopMultiSettlementOrders",
+  "name": "buyin.shopMultiSettlementOrders",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.shopMultiSettlementOrders",
   "description": "商家分次结算订单",
   "method": "GET",
   "path": "/buyin/shopMultiSettlementOrders",
@@ -206,6 +208,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2703",
   "updatedAt": "2023-04-18",
-  "_file_stem": "alliance-buyin-shopMultiSettlementOrders",
-  "cnName": "商家分次结算订单"
+  "_file_stem": "alliance-buyin-shopMultiSettlementOrders"
 }

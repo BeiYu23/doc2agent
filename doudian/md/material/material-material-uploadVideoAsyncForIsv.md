@@ -1,11 +1,12 @@
-# material.uploadVideoAsyncForIsv
+# isv单个视频上传
 
-> isv单个视频上传
+> material.uploadVideoAsyncForIsv — isv单个视频上传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.uploadVideoAsyncForIsv` |
 | 中文名 | isv单个视频上传 |
+| 文档地址 | `/docs/doudian/material/material-material-uploadVideoAsyncForIsv` |
+| 接口 ID | `doudian.material.material.uploadVideoAsyncForIsv` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/uploadVideoAsyncForIsv` |

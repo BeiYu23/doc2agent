@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.productsDetail",
+  "cnName": "批量查询推广商品",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-productsDetail",
+  "name": "buyin.productsDetail",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.productsDetail",
   "description": "批量查询推广商品详情",
   "method": "GET",
   "path": "/buyin/productsDetail",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2867",
   "updatedAt": "2024-04-11",
-  "_file_stem": "alliance-buyin-productsDetail",
-  "cnName": "批量查询推广商品"
+  "_file_stem": "alliance-buyin-productsDetail"
 }

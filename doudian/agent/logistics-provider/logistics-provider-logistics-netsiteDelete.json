@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.netsiteDelete",
+  "cnName": "网点信息停用",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-netsiteDelete",
+  "name": "logistics.netsiteDelete",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.netsiteDelete",
   "description": "网点信息停用",
   "method": "GET",
   "path": "/logistics/netsiteDelete",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6938",
   "updatedAt": "2024-10-15",
-  "_file_stem": "logistics-provider-logistics-netsiteDelete",
-  "cnName": "网点信息停用"
+  "_file_stem": "logistics-provider-logistics-netsiteDelete"
 }

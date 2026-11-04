@@ -1,11 +1,12 @@
-# logistics.updateOrder
+# 更新收件人信息
 
-> 更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）
+> logistics.updateOrder — 更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.updateOrder` |
 | 中文名 | 更新收件人信息 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-updateOrder` |
+| 接口 ID | `doudian.waybill.logistics.updateOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/updateOrder` |

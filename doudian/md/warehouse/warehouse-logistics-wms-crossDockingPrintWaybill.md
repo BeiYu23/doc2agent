@@ -1,11 +1,12 @@
-# logistics.wms.crossDockingPrintWaybill
+# 越库单质检取号打印
 
-> 越库单质检取号打印接口
+> logistics.wms.crossDockingPrintWaybill — 越库单质检取号打印接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.logistics.wms.crossDockingPrintWaybill` |
 | 中文名 | 越库单质检取号打印 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-logistics-wms-crossDockingPrintWaybill` |
+| 接口 ID | `doudian.warehouse.logistics.wms.crossDockingPrintWaybill` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/wms/crossDockingPrintWaybill` |

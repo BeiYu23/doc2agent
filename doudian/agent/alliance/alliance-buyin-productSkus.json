@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.productSkus",
+  "cnName": "查询商品 SKU",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-productSkus",
+  "name": "buyin.productSkus",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.productSkus",
   "description": "查询商品 SKU",
   "method": "GET",
   "path": "/buyin/productSkus",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1626",
   "updatedAt": "2024-04-11",
-  "_file_stem": "alliance-buyin-productSkus",
-  "cnName": "查询商品 SKU"
+  "_file_stem": "alliance-buyin-productSkus"
 }

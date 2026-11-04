@@ -1,8 +1,10 @@
 {
   "id": "doudian.coupon.coupons.cancelVerify",
+  "cnName": "卡券取消核销",
+  "docUrl": "/docs/doudian/coupon/coupon-coupons-cancelVerify",
+  "name": "coupons.cancelVerify",
   "platform": "doudian",
   "group": "coupon",
-  "name": "coupons.cancelVerify",
   "description": "卡券取消核销接口",
   "method": "GET",
   "path": "/coupons/cancelVerify",
@@ -125,6 +127,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/668",
   "updatedAt": "2025-09-10",
-  "_file_stem": "coupon-coupons-cancelVerify",
-  "cnName": "卡券取消核销"
+  "_file_stem": "coupon-coupons-cancelVerify"
 }

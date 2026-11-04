@@ -1,11 +1,12 @@
-# supplyChain.queryCatePropList
+# 类目属性规则查询
 
-> 类目属性规则查询
+> supplyChain.queryCatePropList — 类目属性规则查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.queryCatePropList` |
 | 中文名 | 类目属性规则查询 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-queryCatePropList` |
+| 接口 ID | `doudian.cross-border.supplyChain.queryCatePropList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryCatePropList` |

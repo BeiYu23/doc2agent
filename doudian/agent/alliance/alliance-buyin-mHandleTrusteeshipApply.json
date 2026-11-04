@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.mHandleTrusteeshipApply",
+  "cnName": "团长托管商品审核",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-mHandleTrusteeshipApply",
+  "name": "buyin.mHandleTrusteeshipApply",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.mHandleTrusteeshipApply",
   "description": "团长托管商品审核",
   "method": "GET",
   "path": "/buyin/mHandleTrusteeshipApply",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2138",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-mHandleTrusteeshipApply",
-  "cnName": "团长托管商品审核"
+  "_file_stem": "alliance-buyin-mHandleTrusteeshipApply"
 }

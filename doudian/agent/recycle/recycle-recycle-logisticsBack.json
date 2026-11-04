@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.logisticsBack",
+  "cnName": "回收商退货发货",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-logisticsBack",
+  "name": "recycle.logisticsBack",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.logisticsBack",
   "description": "回收商退货发货",
   "method": "GET",
   "path": "/recycle/logisticsBack",
@@ -93,6 +95,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1889",
   "updatedAt": "2021-09-03",
-  "_file_stem": "recycle-recycle-logisticsBack",
-  "cnName": "回收商退货发货"
+  "_file_stem": "recycle-recycle-logisticsBack"
 }

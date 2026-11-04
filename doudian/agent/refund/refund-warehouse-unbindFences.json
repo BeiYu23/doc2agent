@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.warehouse.unbindFences",
+  "cnName": "用于外部仓和电子围栏解绑",
+  "docUrl": "/docs/doudian/refund/refund-warehouse-unbindFences",
+  "name": "warehouse.unbindFences",
   "platform": "doudian",
   "group": "refund",
-  "name": "warehouse.unbindFences",
   "description": "用于外部仓和电子围栏解绑",
   "method": "GET",
   "path": "/warehouse/unbindFences",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/1913",
   "updatedAt": "2022-08-10",
-  "_file_stem": "refund-warehouse-unbindFences",
-  "cnName": "用于外部仓和电子围栏解绑"
+  "_file_stem": "refund-warehouse-unbindFences"
 }

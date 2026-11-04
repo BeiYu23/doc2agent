@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.product.editV2",
+  "cnName": "编辑商品",
+  "docUrl": "/docs/doudian/shop/shop-product-editV2",
+  "name": "product.editV2",
   "platform": "doudian",
   "group": "shop",
-  "name": "product.editV2",
   "description": "编辑商品",
   "method": "GET",
   "path": "/product/editV2",
@@ -1161,6 +1163,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2082",
   "updatedAt": "2022-06-29",
-  "_file_stem": "shop-product-editV2",
-  "cnName": "编辑商品"
+  "_file_stem": "shop-product-editV2"
 }

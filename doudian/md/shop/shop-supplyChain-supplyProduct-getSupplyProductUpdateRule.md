@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.getSupplyProductUpdateRule
+# 获取产品发布模板
 
-> 获取产品发布模板
+> supplyChain.supplyProduct.getSupplyProductUpdateRule — 获取产品发布模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.supplyProduct.getSupplyProductUpdateRule` |
 | 中文名 | 获取产品发布模板 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-supplyProduct-getSupplyProductUpdateRule` |
+| 接口 ID | `doudian.shop.supplyChain.supplyProduct.getSupplyProductUpdateRule` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

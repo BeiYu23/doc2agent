@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.warehouse.bindStore",
+  "cnName": "仓库绑定门店",
+  "docUrl": "/docs/doudian/retail-store/retail-store-warehouse-bindStore",
+  "name": "warehouse.bindStore",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "warehouse.bindStore",
   "description": "仓库绑定门店",
   "method": "GET",
   "path": "/warehouse/bindStore",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2350",
   "updatedAt": "2022-10-14",
-  "_file_stem": "retail-store-warehouse-bindStore",
-  "cnName": "仓库绑定门店"
+  "_file_stem": "retail-store-warehouse-bindStore"
 }

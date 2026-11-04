@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.blindbox.result",
+  "cnName": "小程序用户抽盒，同步抽盒结果平台",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-blindbox-result",
+  "name": "mini.blindbox.result",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.blindbox.result",
   "description": "小程序用户抽盒，同步抽盒结果平台\n1、使用场景说明，用户下单后在小程序抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果",
   "method": "GET",
   "path": "/mini/blindbox/result",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6798",
   "updatedAt": "2024-08-26",
-  "_file_stem": "miniapp-mini-blindbox-result",
-  "cnName": "小程序用户抽盒，同步抽盒结果平台"
+  "_file_stem": "miniapp-mini-blindbox-result"
 }

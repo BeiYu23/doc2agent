@@ -1,11 +1,12 @@
-# alliance.materialsProductCategory
+# 类目查询
 
-> 类目查询
+> alliance.materialsProductCategory — 类目查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.materialsProductCategory` |
 | 中文名 | 类目查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-materialsProductCategory` |
+| 接口 ID | `doudian.alliance.alliance.materialsProductCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/materialsProductCategory` |

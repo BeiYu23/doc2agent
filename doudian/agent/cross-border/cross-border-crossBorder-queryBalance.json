@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.queryBalance",
+  "cnName": "查询跨境商家资金信息",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-queryBalance",
+  "name": "crossBorder.queryBalance",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.queryBalance",
   "description": "查询跨境商家资金信息接口",
   "method": "GET",
   "path": "/crossBorder/queryBalance",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/662",
   "updatedAt": "2021-07-12",
-  "_file_stem": "cross-border-crossBorder-queryBalance",
-  "cnName": "查询跨境商家资金信息"
+  "_file_stem": "cross-border-crossBorder-queryBalance"
 }

@@ -1,11 +1,12 @@
-# buyin.liveShareCommandParse
+# 解析分销直播间口令
 
-> 解析分销直播间口令
+> buyin.liveShareCommandParse — 解析分销直播间口令
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.liveShareCommandParse` |
 | 中文名 | 解析分销直播间口令 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-liveShareCommandParse` |
+| 接口 ID | `doudian.alliance.buyin.liveShareCommandParse` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/liveShareCommandParse` |

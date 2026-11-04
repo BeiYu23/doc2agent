@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierAccept",
+  "cnName": "服务商接单",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierAccept",
+  "name": "install.order.supplierAccept",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierAccept",
   "description": "服务商接单",
   "method": "GET",
   "path": "/install/order/supplierAccept",
@@ -101,6 +103,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5781",
   "updatedAt": "2023-12-21",
-  "_file_stem": "logistics-provider-install-order-supplierAccept",
-  "cnName": "服务商接单"
+  "_file_stem": "logistics-provider-install-order-supplierAccept"
 }

@@ -1,11 +1,12 @@
-# warehouse.createFence
+# 创建电子围栏
 
-> 创建电子围栏
+> warehouse.createFence — 创建电子围栏
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.createFence` |
 | 中文名 | 创建电子围栏 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-createFence` |
+| 接口 ID | `doudian.stock.warehouse.createFence` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/createFence` |

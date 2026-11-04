@@ -1,11 +1,12 @@
-# shopVideo.submitHiddenWaterMarkTask
+# 提交加暗水印任务
 
-> 提交加暗水印任务
+> shopVideo.submitHiddenWaterMarkTask — 提交加暗水印任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.submitHiddenWaterMarkTask` |
 | 中文名 | 提交加暗水印任务 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-submitHiddenWaterMarkTask` |
+| 接口 ID | `doudian.video.shopVideo.submitHiddenWaterMarkTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/submitHiddenWaterMarkTask` |

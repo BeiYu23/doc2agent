@@ -1,11 +1,12 @@
-# superm.pop.saveActivity
+# 保存小时达活动
 
-> 保存小时达活动
+> superm.pop.saveActivity — 保存小时达活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.saveActivity` |
 | 中文名 | 保存小时达活动 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-saveActivity` |
+| 接口 ID | `doudian.retail-store.superm.pop.saveActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/saveActivity` |

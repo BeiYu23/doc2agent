@@ -1,11 +1,12 @@
-# shop.bindStoreFreight
+# 门店绑定运费模版
 
-> 门店绑定运费模版
+> shop.bindStoreFreight — 门店绑定运费模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.bindStoreFreight` |
 | 中文名 | 门店绑定运费模版 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-bindStoreFreight` |
+| 接口 ID | `doudian.shop.shop.bindStoreFreight` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/bindStoreFreight` |

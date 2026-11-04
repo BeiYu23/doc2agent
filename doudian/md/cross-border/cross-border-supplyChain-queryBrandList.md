@@ -1,11 +1,12 @@
-# supplyChain.queryBrandList
+# 查询品牌列表
 
-> 查询品牌列表
+> supplyChain.queryBrandList — 查询品牌列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.queryBrandList` |
 | 中文名 | 查询品牌列表 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-queryBrandList` |
+| 接口 ID | `doudian.cross-border.supplyChain.queryBrandList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryBrandList` |

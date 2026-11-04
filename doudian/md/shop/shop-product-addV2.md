@@ -1,11 +1,12 @@
-# product.addV2
+# 发布商品
 
-> 发布商品
+> product.addV2 — 发布商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.product.addV2` |
 | 中文名 | 发布商品 |
+| 文档地址 | `/docs/doudian/shop/shop-product-addV2` |
+| 接口 ID | `doudian.shop.product.addV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/addV2` |

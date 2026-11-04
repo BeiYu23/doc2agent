@@ -1,11 +1,12 @@
-# product.addSchema
+# 商品发布schema提交
 
-> 商品发布schema提交
+> product.addSchema — 商品发布schema提交
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.addSchema` |
 | 中文名 | 商品发布schema提交 |
+| 文档地址 | `/docs/doudian/product/product-product-addSchema` |
+| 接口 ID | `doudian.product.product.addSchema` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/addSchema` |

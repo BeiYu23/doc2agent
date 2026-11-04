@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-refund.retail.aftersale.list",
+  "cnName": "售后列表",
+  "docUrl": "/docs/doudian/retail-refund/retail-refund-retail-aftersale-list",
+  "name": "retail.aftersale.list",
   "platform": "doudian",
   "group": "retail-refund",
-  "name": "retail.aftersale.list",
   "description": "售后列表，仅到家业务(即时零售)使用，电商业务使用/aftersale/list接口",
   "method": "GET",
   "path": "/retail/aftersale/list",
@@ -320,6 +322,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1548/6890",
   "updatedAt": "2024-11-22",
-  "_file_stem": "retail-refund-retail-aftersale-list",
-  "cnName": "售后列表"
+  "_file_stem": "retail-refund-retail-aftersale-list"
 }

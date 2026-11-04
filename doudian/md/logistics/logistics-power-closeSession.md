@@ -1,11 +1,12 @@
-# power.closeSession
+# 客服关闭会话
 
-> 客服关闭会话
+> power.closeSession — 客服关闭会话
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.closeSession` |
 | 中文名 | 客服关闭会话 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-closeSession` |
+| 接口 ID | `doudian.logistics.power.closeSession` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/closeSession` |

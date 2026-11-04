@@ -1,11 +1,12 @@
-# wms.deliveryInfoNotify
+# 仓储系统回传发货信息
 
-> 仓储系统回传发货信息
+> wms.deliveryInfoNotify — 仓储系统回传发货信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.wms.deliveryInfoNotify` |
 | 中文名 | 仓储系统回传发货信息 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-wms-deliveryInfoNotify` |
+| 接口 ID | `doudian.warehouse.wms.deliveryInfoNotify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/wms/deliveryInfoNotify` |

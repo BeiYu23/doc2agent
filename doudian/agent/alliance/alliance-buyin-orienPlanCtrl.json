@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.orienPlanCtrl",
+  "cnName": "商品定向计划管理",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-orienPlanCtrl",
+  "name": "buyin.orienPlanCtrl",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.orienPlanCtrl",
   "description": "商品定向计划管理",
   "method": "GET",
   "path": "/buyin/orienPlanCtrl",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/704",
   "updatedAt": "2021-07-22",
-  "_file_stem": "alliance-buyin-orienPlanCtrl",
-  "cnName": "商品定向计划管理"
+  "_file_stem": "alliance-buyin-orienPlanCtrl"
 }

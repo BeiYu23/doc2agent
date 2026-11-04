@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.sku.editPrice",
+  "cnName": "编辑sku价格",
+  "docUrl": "/docs/doudian/product/product-sku-editPrice",
+  "name": "sku.editPrice",
   "platform": "doudian",
   "group": "product",
-  "name": "sku.editPrice",
   "description": "编辑sku价格",
   "method": "GET",
   "path": "/sku/editPrice",
@@ -147,6 +149,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1822",
   "updatedAt": "2024-03-05",
-  "_file_stem": "product-sku-editPrice",
-  "cnName": "编辑sku价格"
+  "_file_stem": "product-sku-editPrice"
 }

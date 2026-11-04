@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.getSpuRule",
+  "cnName": "获取SPU发布规则和模板",
+  "docUrl": "/docs/doudian/product/product-spu-getSpuRule",
+  "name": "spu.getSpuRule",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.getSpuRule",
   "description": "获取SPU发布规则和模板",
   "method": "GET",
   "path": "/spu/getSpuRule",
@@ -227,6 +229,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2312",
   "updatedAt": "2026-08-13",
-  "_file_stem": "product-spu-getSpuRule",
-  "cnName": "获取SPU发布规则和模板"
+  "_file_stem": "product-spu-getSpuRule"
 }

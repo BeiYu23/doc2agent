@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.setOffline",
+  "cnName": "支持所有类型商品下架",
+  "docUrl": "/docs/doudian/product/product-product-setOffline",
+  "name": "product.setOffline",
   "platform": "doudian",
   "group": "product",
-  "name": "product.setOffline",
   "description": "1、支持所有类型商品下架\n2、接口调用成功，商品会放到仓库中",
   "method": "GET",
   "path": "/product/setOffline",
@@ -195,6 +197,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/252",
   "updatedAt": "2024-03-05",
-  "_file_stem": "product-product-setOffline",
-  "cnName": "支持所有类型商品下架"
+  "_file_stem": "product-product-setOffline"
 }

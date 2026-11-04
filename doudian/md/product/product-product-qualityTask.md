@@ -1,11 +1,12 @@
-# product.qualityTask
+# 商品每日诊断任务查询
 
-> 商品每日诊断任务查询API
+> product.qualityTask — 商品每日诊断任务查询API
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.qualityTask` |
 | 中文名 | 商品每日诊断任务查询 |
+| 文档地址 | `/docs/doudian/product/product-product-qualityTask` |
+| 接口 ID | `doudian.product.product.qualityTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/qualityTask` |

@@ -1,11 +1,12 @@
-# pigeon.getVideoPlayUrl
+# 获取飞鸽视频播放URL
 
-> 获取飞鸽视频播放URL
+> pigeon.getVideoPlayUrl — 获取飞鸽视频播放URL
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.getVideoPlayUrl` |
 | 中文名 | 获取飞鸽视频播放URL |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-getVideoPlayUrl` |
+| 接口 ID | `doudian.feige.pigeon.getVideoPlayUrl` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/getVideoPlayUrl` |

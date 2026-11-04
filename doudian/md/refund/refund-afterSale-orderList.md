@@ -1,11 +1,12 @@
-# afterSale.orderList
+# 获取已发货且有售后的订单列表
 
-> 获取已发货且有售后的订单列表（6.30下线）
+> afterSale.orderList — 获取已发货且有售后的订单列表（6.30下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.orderList` |
 | 中文名 | 获取已发货且有售后的订单列表 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-orderList` |
+| 接口 ID | `doudian.refund.afterSale.orderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/orderList` |

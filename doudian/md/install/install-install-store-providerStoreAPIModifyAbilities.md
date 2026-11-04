@@ -1,11 +1,12 @@
-# install.store.providerStoreAPIModifyAbilities
+# 行业服务商门店更新门店服务能力
 
-> 行业服务商门店更新门店服务能力
+> install.store.providerStoreAPIModifyAbilities — 行业服务商门店更新门店服务能力
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.providerStoreAPIModifyAbilities` |
 | 中文名 | 行业服务商门店更新门店服务能力 |
+| 文档地址 | `/docs/doudian/install/install-install-store-providerStoreAPIModifyAbilities` |
+| 接口 ID | `doudian.install.install.store.providerStoreAPIModifyAbilities` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAPIModifyAbilities` |

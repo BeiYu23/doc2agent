@@ -1,11 +1,12 @@
-# pigeon.ISVExecuteTool
+# 执行ISV客服工具的接口
 
-> 执行ISV客服工具的接口，支持执行各种客服相关的自动化工具和脚本
+> pigeon.ISVExecuteTool — 执行ISV客服工具的接口，支持执行各种客服相关的自动化工具和脚本
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.ISVExecuteTool` |
 | 中文名 | 执行ISV客服工具的接口 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-ISVExecuteTool` |
+| 接口 ID | `doudian.feige.pigeon.ISVExecuteTool` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/ISVExecuteTool` |

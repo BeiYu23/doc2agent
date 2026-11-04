@@ -5,9 +5,10 @@
   "docBase": "本仓库内相对路径",
   "entries": [
     {
+      "cnName": "",
+      "docUrl": "/docs/douyin/video-detail",
       "id": "douyin.video.detail",
       "name": "获取视频详情",
-      "cnName": "",
       "method": "GET",
       "path": "/aweme/v1/web/aweme/detail",
       "description": "按视频 ID 拉取单条视频的详情数据（标题、作者、统计等）。",

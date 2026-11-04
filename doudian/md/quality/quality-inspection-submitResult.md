@@ -1,11 +1,12 @@
-# inspection.submitResult
+# 外部服务商上传质检结果
 
-> 外部服务商上传质检结果
+> inspection.submitResult — 外部服务商上传质检结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.quality.inspection.submitResult` |
 | 中文名 | 外部服务商上传质检结果 |
+| 文档地址 | `/docs/doudian/quality/quality-inspection-submitResult` |
+| 接口 ID | `doudian.quality.inspection.submitResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/submitResult` |

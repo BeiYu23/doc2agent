@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.capacityRule.queryList",
+  "cnName": "门店时段容量查询列表",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-capacityRule-queryList",
+  "name": "superm.capacityRule.queryList",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.capacityRule.queryList",
   "description": "门店时段容量查询列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -215,6 +217,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3592",
   "updatedAt": "2023-09-15",
-  "_file_stem": "retail-store-superm-capacityRule-queryList",
-  "cnName": "门店时段容量查询列表"
+  "_file_stem": "retail-store-superm-capacityRule-queryList"
 }

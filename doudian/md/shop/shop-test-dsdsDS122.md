@@ -1,11 +1,12 @@
-# test.dsdsDS122
+# （dsdsDS122）
 
-> dddd
+> test.dsdsDS122 — dddd
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.test.dsdsDS122` |
 | 中文名 | （dsdsDS122） |
+| 文档地址 | `/docs/doudian/shop/shop-test-dsdsDS122` |
+| 接口 ID | `doudian.shop.test.dsdsDS122` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/dsdsDS122` |

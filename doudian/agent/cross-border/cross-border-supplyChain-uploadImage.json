@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.supplyChain.uploadImage",
+  "cnName": "转换上传图片",
+  "docUrl": "/docs/doudian/cross-border/cross-border-supplyChain-uploadImage",
+  "name": "supplyChain.uploadImage",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "supplyChain.uploadImage",
   "description": "转换上传图片",
   "method": "GET",
   "path": "/supplyChain/uploadImage",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6326",
   "updatedAt": "2024-03-26",
-  "_file_stem": "cross-border-supplyChain-uploadImage",
-  "cnName": "转换上传图片"
+  "_file_stem": "cross-border-supplyChain-uploadImage"
 }

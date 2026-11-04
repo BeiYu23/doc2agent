@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.logisticsAddMultiPack",
+  "cnName": "单个店铺订单拆分为多个物流包裹进行发货",
+  "docUrl": "/docs/doudian/logistics/logistics-order-logisticsAddMultiPack",
+  "name": "order.logisticsAddMultiPack",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.logisticsAddMultiPack",
   "description": "1、单个店铺订单拆分为多个物流包裹进行发货；\n2、接口执行逻辑：一笔主订单有3个子订单，其中一个子订单已申请退款，调用该接口时3个子订单都发货时，接口会整个发货请求都失败（不会出现部分子单成功，部分子单失败的情况）。",
   "method": "GET",
   "path": "/order/logisticsAddMultiPack",
@@ -916,6 +918,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/562",
   "updatedAt": "2025-01-22",
-  "_file_stem": "logistics-order-logisticsAddMultiPack",
-  "cnName": "单个店铺订单拆分为多个物流包裹进行发货"
+  "_file_stem": "logistics-order-logisticsAddMultiPack"
 }

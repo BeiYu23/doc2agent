@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.btas.saveInspectionInfo",
+  "cnName": "商家_商家送检线下质检订单",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-btas-saveInspectionInfo",
+  "name": "btas.saveInspectionInfo",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "btas.saveInspectionInfo",
   "description": "商家_商家送检线下质检订单",
   "method": "GET",
   "path": "/btas/saveInspectionInfo",
@@ -219,6 +221,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/574",
   "updatedAt": "2021-06-07",
-  "_file_stem": "btas-inspect-btas-saveInspectionInfo",
-  "cnName": "商家_商家送检线下质检订单"
+  "_file_stem": "btas-inspect-btas-saveInspectionInfo"
 }

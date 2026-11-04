@@ -1,11 +1,12 @@
-# contentAIGC.getAIVideoCreditOpen
+# 查询商家可用积分与充值地址
 
-> 查询商家可用积分与充值地址
+> contentAIGC.getAIVideoCreditOpen — 查询商家可用积分与充值地址
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.doubao.contentAIGC.getAIVideoCreditOpen` |
 | 中文名 | 查询商家可用积分与充值地址 |
+| 文档地址 | `/docs/doudian/doubao/doubao-contentAIGC-getAIVideoCreditOpen` |
+| 接口 ID | `doudian.doubao.contentAIGC.getAIVideoCreditOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/getAIVideoCreditOpen` |

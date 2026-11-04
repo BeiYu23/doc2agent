@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.compass.batchSearchProductDiagnosis",
+  "cnName": "批量查询商品搜索优化项",
+  "docUrl": "/docs/doudian/product/product-compass-batchSearchProductDiagnosis",
+  "name": "compass.batchSearchProductDiagnosis",
   "platform": "doudian",
   "group": "product",
-  "name": "compass.batchSearchProductDiagnosis",
   "description": "批量查询商品搜索优化项",
   "method": "GET",
   "path": "/compass/batchSearchProductDiagnosis",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/7947",
   "updatedAt": "2025-12-19",
-  "_file_stem": "product-compass-batchSearchProductDiagnosis",
-  "cnName": "批量查询商品搜索优化项"
+  "_file_stem": "product-compass-batchSearchProductDiagnosis"
 }

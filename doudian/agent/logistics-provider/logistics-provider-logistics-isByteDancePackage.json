@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.isByteDancePackage",
+  "cnName": "字节面单信息查询",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-isByteDancePackage",
+  "name": "logistics.isByteDancePackage",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.isByteDancePackage",
   "description": "字节面单信息查询",
   "method": "GET",
   "path": "/logistics/isByteDancePackage",
@@ -256,6 +258,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/1989",
   "updatedAt": "2025-04-17",
-  "_file_stem": "logistics-provider-logistics-isByteDancePackage",
-  "cnName": "字节面单信息查询"
+  "_file_stem": "logistics-provider-logistics-isByteDancePackage"
 }

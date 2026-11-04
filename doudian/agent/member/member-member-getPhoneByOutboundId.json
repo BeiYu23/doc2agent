@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.getPhoneByOutboundId",
+  "cnName": "根据外呼id获取手机号（火山专用",
+  "docUrl": "/docs/doudian/member/member-member-getPhoneByOutboundId",
+  "name": "member.getPhoneByOutboundId",
   "platform": "doudian",
   "group": "member",
-  "name": "member.getPhoneByOutboundId",
   "description": "根据外呼id获取手机号（火山专用）",
   "method": "GET",
   "path": "/member/getPhoneByOutboundId",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6062",
   "updatedAt": "2024-01-12",
-  "_file_stem": "member-member-getPhoneByOutboundId",
-  "cnName": "根据外呼id获取手机号（火山专用"
+  "_file_stem": "member-member-getPhoneByOutboundId"
 }

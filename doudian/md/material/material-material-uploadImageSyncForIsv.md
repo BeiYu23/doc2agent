@@ -1,11 +1,12 @@
-# material.uploadImageSyncForIsv
+# isv单个图片上传
 
-> isv单个图片上传
+> material.uploadImageSyncForIsv — isv单个图片上传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.uploadImageSyncForIsv` |
 | 中文名 | isv单个图片上传 |
+| 文档地址 | `/docs/doudian/material/material-material-uploadImageSyncForIsv` |
+| 接口 ID | `doudian.material.material.uploadImageSyncForIsv` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/uploadImageSyncForIsv` |

@@ -1,11 +1,12 @@
-# open.SaasCreateImageReproductionTask
+# 创建图片复刻任务 (SaaS
 
-> 创建图片复刻任务 (SaaS)
+> open.SaasCreateImageReproductionTask — 创建图片复刻任务 (SaaS)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.SaasCreateImageReproductionTask` |
 | 中文名 | 创建图片复刻任务 (SaaS |
+| 文档地址 | `/docs/doudian/video/video-open-SaasCreateImageReproductionTask` |
+| 接口 ID | `doudian.video.open.SaasCreateImageReproductionTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/SaasCreateImageReproductionTask` |

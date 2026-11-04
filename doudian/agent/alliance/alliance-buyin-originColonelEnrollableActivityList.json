@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.originColonelEnrollableActivityList",
+  "cnName": "接口用于团长获取可参与的二级团长活动",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-originColonelEnrollableActivityList",
+  "name": "buyin.originColonelEnrollableActivityList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.originColonelEnrollableActivityList",
   "description": "接口用于团长获取可参与的二级团长活动，支持报名状态筛选，包括已提报和未提报两种状态",
   "method": "GET",
   "path": "/buyin/originColonelEnrollableActivityList",
@@ -256,6 +258,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1675",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-originColonelEnrollableActivityList",
-  "cnName": "接口用于团长获取可参与的二级团长活动"
+  "_file_stem": "alliance-buyin-originColonelEnrollableActivityList"
 }

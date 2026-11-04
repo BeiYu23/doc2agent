@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.virtualServicePushCallRecordUrl",
+  "cnName": "通话录音url回传",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-virtualServicePushCallRecordUrl",
+  "name": "logistics.virtualServicePushCallRecordUrl",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.virtualServicePushCallRecordUrl",
   "description": "通话录音url回传接口",
   "method": "GET",
   "path": "/logistics/virtualServicePushCallRecordUrl",
@@ -95,6 +97,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2777",
   "updatedAt": "2024-12-03",
-  "_file_stem": "logistics-provider-logistics-virtualServicePushCallRecordUrl",
-  "cnName": "通话录音url回传"
+  "_file_stem": "logistics-provider-logistics-virtualServicePushCallRecordUrl"
 }

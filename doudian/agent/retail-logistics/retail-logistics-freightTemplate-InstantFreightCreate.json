@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-logistics.freightTemplate.InstantFreightCreate",
+  "cnName": "即时零售运费模板创建",
+  "docUrl": "/docs/doudian/retail-logistics/retail-logistics-freightTemplate-InstantFreightCreate",
+  "name": "freightTemplate.InstantFreightCreate",
   "platform": "doudian",
   "group": "retail-logistics",
-  "name": "freightTemplate.InstantFreightCreate",
   "description": "即时零售运费模板创建接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -452,6 +454,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1530/7354",
   "updatedAt": "2025-03-27",
-  "_file_stem": "retail-logistics-freightTemplate-InstantFreightCreate",
-  "cnName": "即时零售运费模板创建"
+  "_file_stem": "retail-logistics-freightTemplate-InstantFreightCreate"
 }

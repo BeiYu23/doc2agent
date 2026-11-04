@@ -1,11 +1,12 @@
-# sms.getTemplateBizType
+# 获取模板类型
 
-> 获取模板类型
+> sms.getTemplateBizType — 获取模板类型
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.getTemplateBizType` |
 | 中文名 | 获取模板类型 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-getTemplateBizType` |
+| 接口 ID | `doudian.sms.sms.getTemplateBizType` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getTemplateBizType` |

@@ -1,11 +1,12 @@
-# material.moveFolderToRecycleBin
+# 将文件夹移动到回收站
 
-> 将文件夹移动到回收站
+> material.moveFolderToRecycleBin — 将文件夹移动到回收站
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.moveFolderToRecycleBin` |
 | 中文名 | 将文件夹移动到回收站 |
+| 文档地址 | `/docs/doudian/material/material-material-moveFolderToRecycleBin` |
+| 接口 ID | `doudian.material.material.moveFolderToRecycleBin` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/moveFolderToRecycleBin` |

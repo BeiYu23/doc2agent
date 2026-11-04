@@ -1,11 +1,12 @@
-# open.getOrderRecoveryRecommendation
+# 一期暂无平台推荐策略能力，需三方自行制定
 
-> 一期暂无平台推荐策略能力，需三方自行制定。
+> open.getOrderRecoveryRecommendation — 一期暂无平台推荐策略能力，需三方自行制定。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.open.getOrderRecoveryRecommendation` |
 | 中文名 | 一期暂无平台推荐策略能力，需三方自行制定 |
+| 文档地址 | `/docs/doudian/refund/refund-open-getOrderRecoveryRecommendation` |
+| 接口 ID | `doudian.refund.open.getOrderRecoveryRecommendation` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/getOrderRecoveryRecommendation` |

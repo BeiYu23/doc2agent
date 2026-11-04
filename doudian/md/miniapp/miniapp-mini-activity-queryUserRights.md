@@ -1,11 +1,12 @@
-# mini.activity.queryUserRights
+# 查询用户店铺下的权益列表
 
-> 查询用户店铺下的权益列表
+> mini.activity.queryUserRights — 查询用户店铺下的权益列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.queryUserRights` |
 | 中文名 | 查询用户店铺下的权益列表 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-queryUserRights` |
+| 接口 ID | `doudian.miniapp.mini.activity.queryUserRights` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/queryUserRights` |

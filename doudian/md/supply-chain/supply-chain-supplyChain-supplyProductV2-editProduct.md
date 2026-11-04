@@ -1,11 +1,12 @@
-# supplyChain.supplyProductV2.editProduct
+# 修改货品
 
-> 修改货品
+> supplyChain.supplyProductV2.editProduct — 修改货品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.editProduct` |
 | 中文名 | 修改货品 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-editProduct` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.editProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

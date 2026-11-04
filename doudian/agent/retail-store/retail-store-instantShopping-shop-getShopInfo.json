@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.shop.getShopInfo",
+  "cnName": "获取店铺信息",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-shop-getShopInfo",
+  "name": "instantShopping.shop.getShopInfo",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.shop.getShopInfo",
   "description": "获取店铺信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -71,6 +73,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/7377",
   "updatedAt": "2025-03-23",
-  "_file_stem": "retail-store-instantShopping-shop-getShopInfo",
-  "cnName": "获取店铺信息"
+  "_file_stem": "retail-store-instantShopping-shop-getShopInfo"
 }

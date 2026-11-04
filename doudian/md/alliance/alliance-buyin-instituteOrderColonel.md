@@ -1,11 +1,12 @@
-# buyin.instituteOrderColonel
+# 查询团长抖音
 
-> 查询团长抖音、火山、头条和西瓜订单，需要团长百应授权
+> buyin.instituteOrderColonel — 查询团长抖音、火山、头条和西瓜订单，需要团长百应授权
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.instituteOrderColonel` |
 | 中文名 | 查询团长抖音 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-instituteOrderColonel` |
+| 接口 ID | `doudian.alliance.buyin.instituteOrderColonel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/instituteOrderColonel` |

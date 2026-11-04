@@ -1,11 +1,12 @@
-# logistics.resource.endsiteReport
+# 同步物流商数据的
 
-> 同步物流商数据的接口
+> logistics.resource.endsiteReport — 同步物流商数据的接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.resource.endsiteReport` |
 | 中文名 | 同步物流商数据的 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-resource-endsiteReport` |
+| 接口 ID | `doudian.logistics-provider.logistics.resource.endsiteReport` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

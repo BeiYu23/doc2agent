@@ -1,11 +1,12 @@
-# inspection.order.supplierCheckIn
+# 服务商上门签到
 
-> 服务商上门签到
+> inspection.order.supplierCheckIn — 服务商上门签到
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierCheckIn` |
 | 中文名 | 服务商上门签到 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierCheckIn` |
+| 接口 ID | `doudian.industry.inspection.order.supplierCheckIn` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

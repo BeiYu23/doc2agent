@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.verifyPointChange",
+  "cnName": "对积分变更做确认",
+  "docUrl": "/docs/doudian/member/member-member-verifyPointChange",
+  "name": "member.verifyPointChange",
   "platform": "doudian",
   "group": "member",
-  "name": "member.verifyPointChange",
   "description": "对积分变更做确认，返回积分变更的结果、最新的积分值和额外信息。",
   "method": "GET",
   "path": "/member/verifyPointChange",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1033",
   "updatedAt": "2021-09-14",
-  "_file_stem": "member-member-verifyPointChange",
-  "cnName": "对积分变更做确认"
+  "_file_stem": "member-member-verifyPointChange"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.fuwu.order.search",
+  "cnName": "服务市场商家订购搜索",
+  "docUrl": "/docs/doudian/tool/tool-fuwu-order-search",
+  "name": "fuwu.order.search",
   "platform": "doudian",
   "group": "tool",
-  "name": "fuwu.order.search",
   "description": "服务市场商家订购搜索接口",
   "method": "GET",
   "path": "/fuwu/order/search",
@@ -216,6 +218,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/6529",
   "updatedAt": "2024-07-01",
-  "_file_stem": "tool-fuwu-order-search",
-  "cnName": "服务市场商家订购搜索"
+  "_file_stem": "tool-fuwu-order-search"
 }

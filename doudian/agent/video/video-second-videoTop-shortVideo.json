@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.videoTop.shortVideo",
+  "cnName": "获取短视频榜单",
+  "docUrl": "/docs/doudian/video/video-second-videoTop-shortVideo",
+  "name": "second.videoTop.shortVideo",
   "platform": "doudian",
   "group": "video",
-  "name": "second.videoTop.shortVideo",
   "description": "获取短视频榜单",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -197,6 +199,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7932",
   "updatedAt": "2026-01-30",
-  "_file_stem": "video-second-videoTop-shortVideo",
-  "cnName": "获取短视频榜单"
+  "_file_stem": "video-second-videoTop-shortVideo"
 }

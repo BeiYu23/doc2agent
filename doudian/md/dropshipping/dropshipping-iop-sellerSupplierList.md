@@ -1,11 +1,12 @@
-# iop.sellerSupplierList
+# 【商家】查询厂商管理列表
 
-> 【商家】查询厂商管理列表
+> iop.sellerSupplierList — 【商家】查询厂商管理列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.sellerSupplierList` |
 | 中文名 | 【商家】查询厂商管理列表 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-sellerSupplierList` |
+| 接口 ID | `doudian.dropshipping.iop.sellerSupplierList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/sellerSupplierList` |

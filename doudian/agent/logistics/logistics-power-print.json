@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.print",
+  "cnName": "打印面单（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-print",
+  "name": "power.print",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.print",
   "description": "打印面单（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/print",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1490",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-print",
-  "cnName": "打印面单（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-print"
 }

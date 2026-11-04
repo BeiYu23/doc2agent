@@ -1,11 +1,12 @@
-# superm.shopOrderDispatcher
+# 呼叫运力或取消
 
-> 呼叫运力或取消
+> superm.shopOrderDispatcher — 呼叫运力或取消
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.shopOrderDispatcher` |
 | 中文名 | 呼叫运力或取消 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-shopOrderDispatcher` |
+| 接口 ID | `doudian.retail-store.superm.shopOrderDispatcher` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/shopOrderDispatcher` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.home-order.retailCustom.order.orderDetail",
+  "cnName": "定制化的即使零售订单详情",
+  "docUrl": "/docs/doudian/home-order/home-order-retailCustom-order-orderDetail",
+  "name": "retailCustom.order.orderDetail",
   "platform": "doudian",
   "group": "home-order",
-  "name": "retailCustom.order.orderDetail",
   "description": "定制化的即使零售订单详情接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -1088,6 +1090,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1522/6660",
   "updatedAt": "2024-08-13",
-  "_file_stem": "home-order-retailCustom-order-orderDetail",
-  "cnName": "定制化的即使零售订单详情"
+  "_file_stem": "home-order-retailCustom-order-orderDetail"
 }

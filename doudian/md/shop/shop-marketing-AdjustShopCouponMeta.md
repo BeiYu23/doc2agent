@@ -1,11 +1,12 @@
-# marketing.AdjustShopCouponMeta
+# 修改优惠券库存
 
-> 修改优惠券库存
+> marketing.AdjustShopCouponMeta — 修改优惠券库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.marketing.AdjustShopCouponMeta` |
 | 中文名 | 修改优惠券库存 |
+| 文档地址 | `/docs/doudian/shop/shop-marketing-AdjustShopCouponMeta` |
+| 接口 ID | `doudian.shop.marketing.AdjustShopCouponMeta` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/AdjustShopCouponMeta` |

@@ -1,11 +1,12 @@
-# open.QueryProductAgentResults
+# 查询任务结果
 
-> 查询任务结果
+> open.QueryProductAgentResults — 查询任务结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.QueryProductAgentResults` |
 | 中文名 | 查询任务结果 |
+| 文档地址 | `/docs/doudian/tool/tool-open-QueryProductAgentResults` |
+| 接口 ID | `doudian.tool.open.QueryProductAgentResults` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/QueryProductAgentResults` |

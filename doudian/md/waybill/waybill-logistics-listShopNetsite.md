@@ -1,11 +1,12 @@
-# logistics.listShopNetsite
+# 本接口可以查询商家和物流商的订购关系以及物流单…
 
-> 本接口可以查询商家和物流商的订购关系以及物流单号使用情况
+> logistics.listShopNetsite — 本接口可以查询商家和物流商的订购关系以及物流单号使用情况
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.listShopNetsite` |
 | 中文名 | 本接口可以查询商家和物流商的订购关系以及物流单… |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-listShopNetsite` |
+| 接口 ID | `doudian.waybill.logistics.listShopNetsite` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/listShopNetsite` |

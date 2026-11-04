@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.logistics.newCreateOrder",
+  "cnName": "取号接口，传入收货人密文获取运单号",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-newCreateOrder",
+  "name": "instantShopping.logistics.newCreateOrder",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.logistics.newCreateOrder",
   "description": "取号接口，传入收货人密文获取运单号",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -847,6 +849,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7242",
   "updatedAt": "2026-08-13",
-  "_file_stem": "retail-waybill-instantShopping-logistics-newCreateOrder",
-  "cnName": "取号接口，传入收货人密文获取运单号"
+  "_file_stem": "retail-waybill-instantShopping-logistics-newCreateOrder"
 }

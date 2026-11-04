@@ -1,11 +1,12 @@
-# buyin.activityProductExtendList
+# 延长推广待处理/已处理记录查询
 
-> 延长推广待处理/已处理记录查询
+> buyin.activityProductExtendList — 延长推广待处理/已处理记录查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.activityProductExtendList` |
 | 中文名 | 延长推广待处理/已处理记录查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-activityProductExtendList` |
+| 接口 ID | `doudian.alliance.buyin.activityProductExtendList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/activityProductExtendList` |

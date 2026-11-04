@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.getSearchIndex",
+  "cnName": "获取订单加密索引串",
+  "docUrl": "/docs/doudian/order/order-order-getSearchIndex",
+  "name": "order.getSearchIndex",
   "platform": "doudian",
   "group": "order",
-  "name": "order.getSearchIndex",
   "description": "获取订单加密索引串",
   "method": "GET",
   "path": "/order/getSearchIndex",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/482",
   "updatedAt": "2021-06-30",
-  "_file_stem": "order-order-getSearchIndex",
-  "cnName": "获取订单加密索引串"
+  "_file_stem": "order-order-getSearchIndex"
 }

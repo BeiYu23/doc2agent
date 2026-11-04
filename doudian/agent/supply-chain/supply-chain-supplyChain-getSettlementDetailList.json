@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.getSettlementDetailList",
+  "cnName": "结算单列表查询",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-getSettlementDetailList",
+  "name": "supplyChain.getSettlementDetailList",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.getSettlementDetailList",
   "description": "结算单列表查询",
   "method": "GET",
   "path": "/supplyChain/getSettlementDetailList",
@@ -233,6 +235,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/7420",
   "updatedAt": "2025-04-24",
-  "_file_stem": "supply-chain-supplyChain-getSettlementDetailList",
-  "cnName": "结算单列表查询"
+  "_file_stem": "supply-chain-supplyChain-getSettlementDetailList"
 }

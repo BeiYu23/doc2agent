@@ -1,11 +1,12 @@
-# buyin.doukeRewardOrders
+# 抖客获取近30天内奖励订单
 
-> 抖客获取近30天内奖励订单
+> buyin.doukeRewardOrders — 抖客获取近30天内奖励订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukeRewardOrders` |
 | 中文名 | 抖客获取近30天内奖励订单 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukeRewardOrders` |
+| 接口 ID | `doudian.alliance.buyin.doukeRewardOrders` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukeRewardOrders` |

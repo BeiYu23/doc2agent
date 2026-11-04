@@ -1,11 +1,12 @@
-# power.querySessionMessage
+# 客服查询历史消息
 
-> 客服查询历史消息
+> power.querySessionMessage — 客服查询历史消息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.querySessionMessage` |
 | 中文名 | 客服查询历史消息 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-querySessionMessage` |
+| 接口 ID | `doudian.logistics.power.querySessionMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/querySessionMessage` |

@@ -1,11 +1,12 @@
-# order.deliverTimeChangeConfirm
+# 延迟发货审核结果回传
 
-> 延迟发货审核结果回传
+> order.deliverTimeChangeConfirm — 延迟发货审核结果回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.deliverTimeChangeConfirm` |
 | 中文名 | 延迟发货审核结果回传 |
+| 文档地址 | `/docs/doudian/order/order-order-deliverTimeChangeConfirm` |
+| 接口 ID | `doudian.order.order.deliverTimeChangeConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/deliverTimeChangeConfirm` |

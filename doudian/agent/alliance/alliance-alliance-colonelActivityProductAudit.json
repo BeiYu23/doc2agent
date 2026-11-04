@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.colonelActivityProductAudit",
+  "cnName": "专属团长活动商品审核",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-colonelActivityProductAudit",
+  "name": "alliance.colonelActivityProductAudit",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.colonelActivityProductAudit",
   "description": "专属团长活动商品审核接口",
   "method": "GET",
   "path": "/alliance/colonelActivityProductAudit",
@@ -158,6 +160,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/971",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-alliance-colonelActivityProductAudit",
-  "cnName": "专属团长活动商品审核"
+  "_file_stem": "alliance-alliance-colonelActivityProductAudit"
 }

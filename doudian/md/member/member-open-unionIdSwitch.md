@@ -1,11 +1,12 @@
-# open.unionIdSwitch
+# 抖音unionId转换抖店会员unionId
 
-> 抖音unionId转换抖店会员unionId
+> open.unionIdSwitch — 抖音unionId转换抖店会员unionId
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.open.unionIdSwitch` |
 | 中文名 | 抖音unionId转换抖店会员unionId |
+| 文档地址 | `/docs/doudian/member/member-open-unionIdSwitch` |
+| 接口 ID | `doudian.member.open.unionIdSwitch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/unionIdSwitch` |

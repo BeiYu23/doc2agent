@@ -1,12 +1,13 @@
-# address.getProvince
+# 获取四级地址全量省份信息
 
-> 获取四级地址全量省份信息
+> address.getProvince — 获取四级地址全量省份信息
 物流发货获取省份列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.address.getProvince` |
 | 中文名 | 获取四级地址全量省份信息 |
+| 文档地址 | `/docs/doudian/logistics/logistics-address-getProvince` |
+| 接口 ID | `doudian.logistics.address.getProvince` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/getProvince` |

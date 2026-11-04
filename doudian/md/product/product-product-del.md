@@ -1,11 +1,12 @@
-# product.del
+# 删除商品
 
-> 删除商品
+> product.del — 删除商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.del` |
 | 中文名 | 删除商品 |
+| 文档地址 | `/docs/doudian/product/product-product-del` |
+| 接口 ID | `doudian.product.product.del` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/del` |

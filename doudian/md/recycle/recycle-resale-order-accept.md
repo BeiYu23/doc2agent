@@ -1,11 +1,12 @@
-# resale.order.accept
+# 服务商接单
 
-> 服务商接单
+> resale.order.accept — 服务商接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.accept` |
 | 中文名 | 服务商接单 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-accept` |
+| 接口 ID | `doudian.recycle.resale.order.accept` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/accept` |

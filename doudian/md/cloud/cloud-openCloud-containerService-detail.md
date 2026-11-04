@@ -1,11 +1,12 @@
-# openCloud.containerService.detail
+# 查询容器服务
 
-> 查询容器服务详情
+> openCloud.containerService.detail — 查询容器服务详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.containerService.detail` |
 | 中文名 | 查询容器服务 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-containerService-detail` |
+| 接口 ID | `doudian.cloud.openCloud.containerService.detail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/containerService/detail` |

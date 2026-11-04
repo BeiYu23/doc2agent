@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.inspection.inspectionTemplate.get",
+  "cnName": "获取检测模版",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-inspection-inspectionTemplate-get",
+  "name": "inspection.inspectionTemplate.get",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "inspection.inspectionTemplate.get",
   "description": "获取检测模版",
   "method": "GET",
   "path": "/inspection/inspectionTemplate/get",
@@ -188,6 +190,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7341",
   "updatedAt": "2025-03-07",
-  "_file_stem": "logistics-provider-inspection-inspectionTemplate-get",
-  "cnName": "获取检测模版"
+  "_file_stem": "logistics-provider-inspection-inspectionTemplate-get"
 }

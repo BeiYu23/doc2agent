@@ -1,11 +1,12 @@
-# topup.productActionCMCC
+# 中国移动店铺商品上下架
 
-> 中国移动店铺商品上下架
+> topup.productActionCMCC — 中国移动店铺商品上下架
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.topup.productActionCMCC` |
 | 中文名 | 中国移动店铺商品上下架 |
+| 文档地址 | `/docs/doudian/tool/tool-topup-productActionCMCC` |
+| 接口 ID | `doudian.tool.topup.productActionCMCC` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/productActionCMCC` |

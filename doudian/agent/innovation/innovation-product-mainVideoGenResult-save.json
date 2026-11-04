@@ -1,8 +1,10 @@
 {
   "id": "doudian.innovation.product.mainVideoGenResult.save",
+  "cnName": "主图视频生成结果回传",
+  "docUrl": "/docs/doudian/innovation/innovation-product-mainVideoGenResult-save",
+  "name": "product.mainVideoGenResult.save",
   "platform": "doudian",
   "group": "innovation",
-  "name": "product.mainVideoGenResult.save",
   "description": "主图视频生成结果回传",
   "method": "GET",
   "path": "/product/mainVideoGenResult/save",
@@ -110,6 +112,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1543/6834",
   "updatedAt": "2024-09-29",
-  "_file_stem": "innovation-product-mainVideoGenResult-save",
-  "cnName": "主图视频生成结果回传"
+  "_file_stem": "innovation-product-mainVideoGenResult-save"
 }

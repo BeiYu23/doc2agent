@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.returnOrder.operate",
+  "cnName": "供应商操作售后单",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-returnOrder-operate",
+  "name": "supplyChain.returnOrder.operate",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.returnOrder.operate",
   "description": "供应商操作售后单",
   "method": "GET",
   "path": "/supplyChain/returnOrder/operate",
@@ -123,6 +125,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/4035",
   "updatedAt": "2023-06-05",
-  "_file_stem": "supply-chain-supplyChain-returnOrder-operate",
-  "cnName": "供应商操作售后单"
+  "_file_stem": "supply-chain-supplyChain-returnOrder-operate"
 }

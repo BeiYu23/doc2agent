@@ -1,11 +1,12 @@
-# recycle.confirmReceive
+# 回收商确认收货操作
 
-> 回收商确认收货操作
+> recycle.confirmReceive — 回收商确认收货操作
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.confirmReceive` |
 | 中文名 | 回收商确认收货操作 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-confirmReceive` |
+| 接口 ID | `doudian.recycle.recycle.confirmReceive` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/confirmReceive` |

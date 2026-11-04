@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.getServiceList",
+  "cnName": "获取售后平台客服工单列表，对应抖店功能",
+  "docUrl": "/docs/doudian/order/order-order-getServiceList",
+  "name": "order.getServiceList",
   "platform": "doudian",
   "group": "order",
-  "name": "order.getServiceList",
   "description": "获取售后平台客服工单列表，对应抖店功能：https://school.jinritemai.com/doudian/web/lark-doc/fdJHrykEbfsrM",
   "method": "GET",
   "path": "/order/getServiceList",
@@ -143,6 +145,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1835",
   "updatedAt": "2022-11-14",
-  "_file_stem": "order-order-getServiceList",
-  "cnName": "获取售后平台客服工单列表，对应抖店功能"
+  "_file_stem": "order-order-getServiceList"
 }

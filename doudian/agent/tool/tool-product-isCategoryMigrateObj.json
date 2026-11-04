@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.product.isCategoryMigrateObj",
+  "cnName": "主要用于类目树升级场景",
+  "docUrl": "/docs/doudian/tool/tool-product-isCategoryMigrateObj",
+  "name": "product.isCategoryMigrateObj",
   "platform": "doudian",
   "group": "tool",
-  "name": "product.isCategoryMigrateObj",
   "description": "主要用于类目树升级场景，判断店铺和类目的信息是否已经升级需使用新的类目信息做相关操作，如商品发布，商品更新等",
   "method": "GET",
   "path": "/product/isCategoryMigrateObj",
@@ -71,6 +73,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/8058",
   "updatedAt": "2026-01-21",
-  "_file_stem": "tool-product-isCategoryMigrateObj",
-  "cnName": "主要用于类目树升级场景"
+  "_file_stem": "tool-product-isCategoryMigrateObj"
 }

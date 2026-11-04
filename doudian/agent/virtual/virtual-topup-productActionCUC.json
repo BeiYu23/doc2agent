@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.topup.productActionCUC",
+  "cnName": "商品上下架",
+  "docUrl": "/docs/doudian/virtual/virtual-topup-productActionCUC",
+  "name": "topup.productActionCUC",
   "platform": "doudian",
   "group": "virtual",
-  "name": "topup.productActionCUC",
   "description": "商品上下架接口",
   "method": "GET",
   "path": "/topup/productActionCUC",
@@ -71,6 +73,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/7984",
   "updatedAt": "2025-12-25",
-  "_file_stem": "virtual-topup-productActionCUC",
-  "cnName": "商品上下架"
+  "_file_stem": "virtual-topup-productActionCUC"
 }

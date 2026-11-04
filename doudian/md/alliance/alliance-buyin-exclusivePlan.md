@@ -1,11 +1,12 @@
-# buyin.exclusivePlan
+# 创建/修改商品专属推广计划
 
-> 创建/修改商品专属推广计划
+> buyin.exclusivePlan — 创建/修改商品专属推广计划
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.exclusivePlan` |
 | 中文名 | 创建/修改商品专属推广计划 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-exclusivePlan` |
+| 接口 ID | `doudian.alliance.buyin.exclusivePlan` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/exclusivePlan` |

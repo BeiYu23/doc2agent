@@ -1,11 +1,12 @@
-# crossborder.getOrderStatus
+# 跨境查询订单状态
 
-> 跨境查询订单状态
+> crossborder.getOrderStatus — 跨境查询订单状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.crossborder.getOrderStatus` |
 | 中文名 | 跨境查询订单状态 |
+| 文档地址 | `/docs/doudian/logistics/logistics-crossborder-getOrderStatus` |
+| 接口 ID | `doudian.logistics.crossborder.getOrderStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/getOrderStatus` |

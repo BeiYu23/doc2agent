@@ -1,8 +1,10 @@
 {
   "id": "doudian.phone-industry.maintenance.order.supplierUpdateServiceItem",
+  "cnName": "服务item信息更新",
+  "docUrl": "/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierUpdateServiceItem",
+  "name": "maintenance.order.supplierUpdateServiceItem",
   "platform": "doudian",
   "group": "phone-industry",
-  "name": "maintenance.order.supplierUpdateServiceItem",
   "description": "服务item信息更新，如果之前未回传过此item则视为新增",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1520/6729",
   "updatedAt": "2024-08-23",
-  "_file_stem": "phone-industry-maintenance-order-supplierUpdateServiceItem",
-  "cnName": "服务item信息更新"
+  "_file_stem": "phone-industry-maintenance-order-supplierUpdateServiceItem"
 }

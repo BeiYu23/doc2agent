@@ -1,11 +1,12 @@
-# supplyCenter.base.productUpdateRule
+# 获取类目下发布规则
 
-> 获取类目下发布规则
+> supplyCenter.base.productUpdateRule — 获取类目下发布规则
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.base.productUpdateRule` |
 | 中文名 | 获取类目下发布规则 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-base-productUpdateRule` |
+| 接口 ID | `doudian.selection.supplyCenter.base.productUpdateRule` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

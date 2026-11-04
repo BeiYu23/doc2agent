@@ -1,11 +1,12 @@
-# order.updatePostAmount
+# 订单邮费修改
 
-> 订单邮费修改接口
+> order.updatePostAmount — 订单邮费修改接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.updatePostAmount` |
 | 中文名 | 订单邮费修改 |
+| 文档地址 | `/docs/doudian/order/order-order-updatePostAmount` |
+| 接口 ID | `doudian.order.order.updatePostAmount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/updatePostAmount` |

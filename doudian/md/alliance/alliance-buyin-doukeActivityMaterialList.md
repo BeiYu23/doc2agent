@@ -1,11 +1,12 @@
-# buyin.doukeActivityMaterialList
+# 获取活动页物料列表
 
-> 获取活动页物料列表
+> buyin.doukeActivityMaterialList — 获取活动页物料列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukeActivityMaterialList` |
 | 中文名 | 获取活动页物料列表 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukeActivityMaterialList` |
+| 接口 ID | `doudian.alliance.buyin.doukeActivityMaterialList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukeActivityMaterialList` |

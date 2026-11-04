@@ -1,13 +1,14 @@
-# afterSale.CancelSendGoodsSuccess
+# 商家在抖店后台售后小助手配置取消发货自动退策略
 
-> 1、商家在抖店后台售后小助手配置取消发货自动退策略；
+> afterSale.CancelSendGoodsSuccess — 1、商家在抖店后台售后小助手配置取消发货自动退策略；
 2、当用户发起退款申请，且商家判断符合退款的场景时，可以调用取消发货接口同步平台取消发货；
 3、命中策略后该售后单自动执行退款操作；
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.CancelSendGoodsSuccess` |
 | 中文名 | 商家在抖店后台售后小助手配置取消发货自动退策略 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-CancelSendGoodsSuccess` |
+| 接口 ID | `doudian.refund.afterSale.CancelSendGoodsSuccess` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/CancelSendGoodsSuccess` |

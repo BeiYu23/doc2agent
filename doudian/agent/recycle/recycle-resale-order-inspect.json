@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.inspect",
+  "cnName": "【邮寄回收】开始质检",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-inspect",
+  "name": "resale.order.inspect",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.inspect",
   "description": "【邮寄回收】开始质检",
   "method": "GET",
   "path": "/resale/order/inspect",
@@ -79,6 +81,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4629",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-inspect",
-  "cnName": "【邮寄回收】开始质检"
+  "_file_stem": "recycle-resale-order-inspect"
 }

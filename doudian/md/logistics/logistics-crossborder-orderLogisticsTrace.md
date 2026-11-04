@@ -1,11 +1,12 @@
-# crossborder.orderLogisticsTrace
+# 服务商回传国际干线作业节点
 
-> 服务商回传国际干线作业节点
+> crossborder.orderLogisticsTrace — 服务商回传国际干线作业节点
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.crossborder.orderLogisticsTrace` |
 | 中文名 | 服务商回传国际干线作业节点 |
+| 文档地址 | `/docs/doudian/logistics/logistics-crossborder-orderLogisticsTrace` |
+| 接口 ID | `doudian.logistics.crossborder.orderLogisticsTrace` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/orderLogisticsTrace` |

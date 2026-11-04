@@ -1,11 +1,12 @@
-# shop.setStorePackageFee
+# 设置门店打包费
 
-> 设置门店打包费
+> shop.setStorePackageFee — 设置门店打包费
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.shop.setStorePackageFee` |
 | 中文名 | 设置门店打包费 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-shop-setStorePackageFee` |
+| 接口 ID | `doudian.retail-store.shop.setStorePackageFee` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/setStorePackageFee` |

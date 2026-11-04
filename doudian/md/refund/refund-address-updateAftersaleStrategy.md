@@ -1,11 +1,12 @@
-# address.updateAftersaleStrategy
+# 更新地址策略
 
-> 更新地址策略
+> address.updateAftersaleStrategy — 更新地址策略
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.address.updateAftersaleStrategy` |
 | 中文名 | 更新地址策略 |
+| 文档地址 | `/docs/doudian/refund/refund-address-updateAftersaleStrategy` |
+| 接口 ID | `doudian.refund.address.updateAftersaleStrategy` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/updateAftersaleStrategy` |

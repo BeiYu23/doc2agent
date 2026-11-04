@@ -1,11 +1,12 @@
-# sendHome.msgComponent.getToken
+# 获取消息组件token
 
-> 获取消息组件token
+> sendHome.msgComponent.getToken — 获取消息组件token
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.sendHome.msgComponent.getToken` |
 | 中文名 | 获取消息组件token |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-sendHome-msgComponent-getToken` |
+| 接口 ID | `doudian.retail-store.sendHome.msgComponent.getToken` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

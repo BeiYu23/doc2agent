@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.searchImageText",
+  "cnName": "搜索图文",
+  "docUrl": "/docs/doudian/video/video-shopVideo-searchImageText",
+  "name": "shopVideo.searchImageText",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.searchImageText",
   "description": "搜索图文",
   "method": "GET",
   "path": "/shopVideo/searchImageText",
@@ -152,6 +154,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8141",
   "updatedAt": "2026-03-13",
-  "_file_stem": "video-shopVideo-searchImageText",
-  "cnName": "搜索图文"
+  "_file_stem": "video-shopVideo-searchImageText"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createAigcTask",
+  "cnName": "创建aigc集成任务",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createAigcTask",
+  "name": "second.ecomInsight.createAigcTask",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createAigcTask",
   "description": "创建aigc集成任务",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8354",
   "updatedAt": "2026-06-02",
-  "_file_stem": "video-second-ecomInsight-createAigcTask",
-  "cnName": "创建aigc集成任务"
+  "_file_stem": "video-second-ecomInsight-createAigcTask"
 }

@@ -1,11 +1,12 @@
-# mini.activity.rights
+# 根据商品查询用户权益现状
 
-> 根据商品查询用户权益现状
+> mini.activity.rights — 根据商品查询用户权益现状
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.rights` |
 | 中文名 | 根据商品查询用户权益现状 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-rights` |
+| 接口 ID | `doudian.miniapp.mini.activity.rights` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/rights` |

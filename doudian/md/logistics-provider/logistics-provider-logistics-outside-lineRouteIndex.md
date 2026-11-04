@@ -1,11 +1,12 @@
-# logistics.outside.lineRouteIndex
+# 查询Top200的责任线路
 
-> 查询Top200的责任线路
+> logistics.outside.lineRouteIndex — 查询Top200的责任线路
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.outside.lineRouteIndex` |
 | 中文名 | 查询Top200的责任线路 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-outside-lineRouteIndex` |
+| 接口 ID | `doudian.logistics-provider.logistics.outside.lineRouteIndex` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

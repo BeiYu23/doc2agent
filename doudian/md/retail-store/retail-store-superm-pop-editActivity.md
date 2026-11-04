@@ -1,11 +1,12 @@
-# superm.pop.editActivity
+# 编辑小时达活动
 
-> 编辑小时达活动
+> superm.pop.editActivity — 编辑小时达活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.editActivity` |
 | 中文名 | 编辑小时达活动 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-editActivity` |
+| 接口 ID | `doudian.retail-store.superm.pop.editActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/editActivity` |

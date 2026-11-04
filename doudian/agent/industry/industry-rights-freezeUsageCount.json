@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.rights.freezeUsageCount",
+  "cnName": "冻结权益使用次数",
+  "docUrl": "/docs/doudian/industry/industry-rights-freezeUsageCount",
+  "name": "rights.freezeUsageCount",
   "platform": "doudian",
   "group": "industry",
-  "name": "rights.freezeUsageCount",
   "description": "冻结权益使用次数",
   "method": "GET",
   "path": "/rights/freezeUsageCount",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8348",
   "updatedAt": "2026-06-23",
-  "_file_stem": "industry-rights-freezeUsageCount",
-  "cnName": "冻结权益使用次数"
+  "_file_stem": "industry-rights-freezeUsageCount"
 }

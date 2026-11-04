@@ -1,11 +1,12 @@
-# order.replyService
+# 回复服务请求
 
-> 回复服务请求
+> order.replyService — 回复服务请求
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.replyService` |
 | 中文名 | 回复服务请求 |
+| 文档地址 | `/docs/doudian/order/order-order-replyService` |
+| 接口 ID | `doudian.order.order.replyService` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/replyService` |

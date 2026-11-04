@@ -1,11 +1,12 @@
-# product.editComponentTemplate
+# 编辑尺码模板
 
-> 编辑尺码模板
+> product.editComponentTemplate — 编辑尺码模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.editComponentTemplate` |
 | 中文名 | 编辑尺码模板 |
+| 文档地址 | `/docs/doudian/product/product-product-editComponentTemplate` |
+| 接口 ID | `doudian.product.product.editComponentTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/editComponentTemplate` |

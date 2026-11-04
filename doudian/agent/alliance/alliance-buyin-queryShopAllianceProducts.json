@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.queryShopAllianceProducts",
+  "cnName": "联盟商家-查询店铺联盟推广",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-queryShopAllianceProducts",
+  "name": "buyin.queryShopAllianceProducts",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.queryShopAllianceProducts",
   "description": "联盟商家-查询店铺联盟推广",
   "method": "GET",
   "path": "/buyin/queryShopAllianceProducts",
@@ -201,6 +203,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2408",
   "updatedAt": "2023-12-14",
-  "_file_stem": "alliance-buyin-queryShopAllianceProducts",
-  "cnName": "联盟商家-查询店铺联盟推广"
+  "_file_stem": "alliance-buyin-queryShopAllianceProducts"
 }

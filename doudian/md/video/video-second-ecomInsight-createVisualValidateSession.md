@@ -1,11 +1,12 @@
-# second.ecomInsight.createVisualValidateSession
+# 创建活体检测链接
 
-> 创建活体检测链接
+> second.ecomInsight.createVisualValidateSession — 创建活体检测链接
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.createVisualValidateSession` |
 | 中文名 | 创建活体检测链接 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-createVisualValidateSession` |
+| 接口 ID | `doudian.video.second.ecomInsight.createVisualValidateSession` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

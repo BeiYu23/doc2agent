@@ -1,11 +1,12 @@
-# instantShopping.order.stockingCompleted
+# 自提订单商家上报备货完成
 
-> 自提订单商家上报备货完成
+> instantShopping.order.stockingCompleted — 自提订单商家上报备货完成
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-waybill.instantShopping.order.stockingCompleted` |
 | 中文名 | 自提订单商家上报备货完成 |
+| 文档地址 | `/docs/doudian/retail-waybill/retail-waybill-instantShopping-order-stockingCompleted` |
+| 接口 ID | `doudian.retail-waybill.instantShopping.order.stockingCompleted` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# contentAIGC.previewAIVideoTaskOpen
+# 预校验成片参数与积分，不占用额度
 
-> 预校验成片参数与积分，不占用额度
+> contentAIGC.previewAIVideoTaskOpen — 预校验成片参数与积分，不占用额度
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.doubao.contentAIGC.previewAIVideoTaskOpen` |
 | 中文名 | 预校验成片参数与积分，不占用额度 |
+| 文档地址 | `/docs/doudian/doubao/doubao-contentAIGC-previewAIVideoTaskOpen` |
+| 接口 ID | `doudian.doubao.contentAIGC.previewAIVideoTaskOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/previewAIVideoTaskOpen` |

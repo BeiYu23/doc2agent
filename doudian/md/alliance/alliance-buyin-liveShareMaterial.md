@@ -1,11 +1,12 @@
-# buyin.liveShareMaterial
+# 直播间分销物料查询
 
-> 直播间分销物料查询
+> buyin.liveShareMaterial — 直播间分销物料查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.liveShareMaterial` |
 | 中文名 | 直播间分销物料查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-liveShareMaterial` |
+| 接口 ID | `doudian.alliance.buyin.liveShareMaterial` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/liveShareMaterial` |

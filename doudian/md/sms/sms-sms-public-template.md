@@ -1,11 +1,12 @@
-# sms.public.template
+# 公共模版查询
 
-> 公共模版查询接口
+> sms.public.template — 公共模版查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.public.template` |
 | 中文名 | 公共模版查询 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-public-template` |
+| 接口 ID | `doudian.sms.sms.public.template` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/public/template` |

@@ -1,11 +1,12 @@
-# supplyCenter.product.GetRecommendCategory
+# 商品类目预测
 
-> 商品类目预测
+> supplyCenter.product.GetRecommendCategory — 商品类目预测
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.product.GetRecommendCategory` |
 | 中文名 | 商品类目预测 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-product-GetRecommendCategory` |
+| 接口 ID | `doudian.selection.supplyCenter.product.GetRecommendCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# instantShopping.order.uploadPic
+# 商家上传图片
 
-> 商家上传图片
+> instantShopping.order.uploadPic — 商家上传图片
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-order.instantShopping.order.uploadPic` |
 | 中文名 | 商家上传图片 |
+| 文档地址 | `/docs/doudian/retail-order/retail-order-instantShopping-order-uploadPic` |
+| 接口 ID | `doudian.retail-order.instantShopping.order.uploadPic` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.alliance.kol.basicInfo",
+  "cnName": "获取达人基本信息",
+  "docUrl": "/docs/doudian/tool/tool-alliance-kol-basicInfo",
+  "name": "alliance.kol.basicInfo",
   "platform": "doudian",
   "group": "tool",
-  "name": "alliance.kol.basicInfo",
   "description": "获取达人基本信息",
   "method": "GET",
   "path": "/alliance/kol/basicInfo",
@@ -56,6 +58,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7604",
   "updatedAt": "2025-07-16",
-  "_file_stem": "tool-alliance-kol-basicInfo",
-  "cnName": "获取达人基本信息"
+  "_file_stem": "tool-alliance-kol-basicInfo"
 }

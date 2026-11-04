@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.netsiteQuery",
+  "cnName": "网点信息查询",
+  "docUrl": "/docs/doudian/logistics/logistics-power-netsiteQuery",
+  "name": "power.netsiteQuery",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.netsiteQuery",
   "description": "网点信息查询",
   "method": "GET",
   "path": "/power/netsiteQuery",
@@ -115,6 +117,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1453",
   "updatedAt": "2023-03-20",
-  "_file_stem": "logistics-power-netsiteQuery",
-  "cnName": "网点信息查询"
+  "_file_stem": "logistics-power-netsiteQuery"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.alliance.mGetItems",
+  "cnName": "【二方接口】根据推广id列表获取推广",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-alliance-mGetItems",
+  "name": "second.alliance.mGetItems",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.alliance.mGetItems",
   "description": "【二方接口】根据推广id列表获取推广详情",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -93,6 +95,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/7017",
   "updatedAt": "2024-10-21",
-  "_file_stem": "dongchedi-second-alliance-mGetItems",
-  "cnName": "【二方接口】根据推广id列表获取推广"
+  "_file_stem": "dongchedi-second-alliance-mGetItems"
 }

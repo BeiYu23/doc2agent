@@ -1,11 +1,12 @@
-# shopVideo.getInfoForPublish
+# 查询投稿需要的信息
 
-> 查询投稿需要的信息
+> shopVideo.getInfoForPublish — 查询投稿需要的信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.getInfoForPublish` |
 | 中文名 | 查询投稿需要的信息 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-getInfoForPublish` |
+| 接口 ID | `doudian.video.shopVideo.getInfoForPublish` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/getInfoForPublish` |

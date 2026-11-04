@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.getUserOrderList",
+  "cnName": "支持按抖店open_id或抖音小程序open_…",
+  "docUrl": "/docs/doudian/order/order-order-getUserOrderList",
+  "name": "order.getUserOrderList",
   "platform": "doudian",
   "group": "order",
-  "name": "order.getUserOrderList",
   "description": "支持按抖店open_id或抖音小程序open_id查询订单简要信息，仅电商小程序在C端面向用户呈现订单任务类场景使用",
   "method": "GET",
   "path": "/order/getUserOrderList",
@@ -194,6 +196,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1915",
   "updatedAt": "2022-05-12",
-  "_file_stem": "order-order-getUserOrderList",
-  "cnName": "支持按抖店open_id或抖音小程序open_…"
+  "_file_stem": "order-order-getUserOrderList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.updateCollectInfo",
+  "cnName": "取件信息推送",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-updateCollectInfo",
+  "name": "logistics.updateCollectInfo",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.updateCollectInfo",
   "description": "取件信息推送",
   "method": "GET",
   "path": "/logistics/updateCollectInfo",
@@ -527,6 +529,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7186",
   "updatedAt": "2026-08-20",
-  "_file_stem": "logistics-provider-logistics-updateCollectInfo",
-  "cnName": "取件信息推送"
+  "_file_stem": "logistics-provider-logistics-updateCollectInfo"
 }

@@ -1,11 +1,12 @@
-# product.editSchema
+# 商品发布schema编辑
 
-> 商品发布schema编辑接口
+> product.editSchema — 商品发布schema编辑接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.editSchema` |
 | 中文名 | 商品发布schema编辑 |
+| 文档地址 | `/docs/doudian/product/product-product-editSchema` |
+| 接口 ID | `doudian.product.product.editSchema` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/editSchema` |

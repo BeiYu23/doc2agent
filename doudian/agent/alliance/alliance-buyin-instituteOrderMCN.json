@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instituteOrderMCN",
+  "cnName": "查询MCN机构的抖音",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instituteOrderMCN",
+  "name": "buyin.instituteOrderMCN",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instituteOrderMCN",
   "description": "查询MCN机构的抖音、火山、西瓜和头条的联盟订单，需要MCN机构百应授权",
   "method": "GET",
   "path": "/buyin/instituteOrderMCN",
@@ -183,6 +185,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1602",
   "updatedAt": "2022-09-09",
-  "_file_stem": "alliance-buyin-instituteOrderMCN",
-  "cnName": "查询MCN机构的抖音"
+  "_file_stem": "alliance-buyin-instituteOrderMCN"
 }

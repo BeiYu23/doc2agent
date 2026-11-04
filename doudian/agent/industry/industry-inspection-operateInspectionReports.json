@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.operateInspectionReports",
+  "cnName": "验机报告管理操作（绑定/解绑sku，上架/下架",
+  "docUrl": "/docs/doudian/industry/industry-inspection-operateInspectionReports",
+  "name": "inspection.operateInspectionReports",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.operateInspectionReports",
   "description": "验机报告管理操作（绑定/解绑sku，上架/下架）",
   "method": "GET",
   "path": "/inspection/operateInspectionReports",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8258",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-operateInspectionReports",
-  "cnName": "验机报告管理操作（绑定/解绑sku，上架/下架"
+  "_file_stem": "industry-inspection-operateInspectionReports"
 }

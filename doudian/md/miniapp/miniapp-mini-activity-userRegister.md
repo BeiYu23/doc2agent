@@ -1,11 +1,12 @@
-# mini.activity.userRegister
+# 专享价活动注册
 
-> 专享价活动注册
+> mini.activity.userRegister — 专享价活动注册
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.userRegister` |
 | 中文名 | 专享价活动注册 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-userRegister` |
+| 接口 ID | `doudian.miniapp.mini.activity.userRegister` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/userRegister` |

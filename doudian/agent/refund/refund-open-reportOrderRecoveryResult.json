@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.open.reportOrderRecoveryResult",
+  "cnName": "上报挽单执行结果",
+  "docUrl": "/docs/doudian/refund/refund-open-reportOrderRecoveryResult",
+  "name": "open.reportOrderRecoveryResult",
   "platform": "doudian",
   "group": "refund",
-  "name": "open.reportOrderRecoveryResult",
   "description": "上报挽单执行结果",
   "method": "GET",
   "path": "/open/reportOrderRecoveryResult",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/8095",
   "updatedAt": "2026-02-13",
-  "_file_stem": "refund-open-reportOrderRecoveryResult",
-  "cnName": "上报挽单执行结果"
+  "_file_stem": "refund-open-reportOrderRecoveryResult"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.uploadVideoAsyncForIsv",
+  "cnName": "isv单个视频上传",
+  "docUrl": "/docs/doudian/material/material-material-uploadVideoAsyncForIsv",
+  "name": "material.uploadVideoAsyncForIsv",
   "platform": "doudian",
   "group": "material",
-  "name": "material.uploadVideoAsyncForIsv",
   "description": "isv单个视频上传",
   "method": "GET",
   "path": "/material/uploadVideoAsyncForIsv",
@@ -158,6 +160,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/3241",
   "updatedAt": "2023-03-16",
-  "_file_stem": "material-material-uploadVideoAsyncForIsv",
-  "cnName": "isv单个视频上传"
+  "_file_stem": "material-material-uploadVideoAsyncForIsv"
 }

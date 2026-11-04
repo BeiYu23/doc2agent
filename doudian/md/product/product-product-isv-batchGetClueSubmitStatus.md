@@ -1,11 +1,12 @@
-# product.isv.batchGetClueSubmitStatus
+# 批量查询线索的提报状态
 
-> 批量查询线索的提报状态
+> product.isv.batchGetClueSubmitStatus — 批量查询线索的提报状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.isv.batchGetClueSubmitStatus` |
 | 中文名 | 批量查询线索的提报状态 |
+| 文档地址 | `/docs/doudian/product/product-product-isv-batchGetClueSubmitStatus` |
+| 接口 ID | `doudian.product.product.isv.batchGetClueSubmitStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/batchGetClueSubmitStatus` |

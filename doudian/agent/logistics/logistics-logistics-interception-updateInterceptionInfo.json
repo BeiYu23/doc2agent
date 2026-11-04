@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.interception.updateInterceptionInfo",
+  "cnName": "用于服务商推送拦截状态",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-interception-updateInterceptionInfo",
+  "name": "logistics.interception.updateInterceptionInfo",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.interception.updateInterceptionInfo",
   "description": "用于服务商推送拦截状态",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -144,6 +146,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3564",
   "updatedAt": "2024-06-19",
-  "_file_stem": "logistics-logistics-interception-updateInterceptionInfo",
-  "cnName": "用于服务商推送拦截状态"
+  "_file_stem": "logistics-logistics-interception-updateInterceptionInfo"
 }

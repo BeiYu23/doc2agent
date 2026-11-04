@@ -1,11 +1,12 @@
-# supplyChain.getOrderByOrderNo
+# 根据供货单号查询
 
-> 根据供货单号查询详情
+> supplyChain.getOrderByOrderNo — 根据供货单号查询详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.getOrderByOrderNo` |
 | 中文名 | 根据供货单号查询 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-getOrderByOrderNo` |
+| 接口 ID | `doudian.supply-chain.supplyChain.getOrderByOrderNo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/getOrderByOrderNo` |

@@ -1,11 +1,12 @@
-# yunc.synchronizeSN
+# WMS回传SN信息
 
-> WMS回传SN信息
+> yunc.synchronizeSN — WMS回传SN信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.synchronizeSN` |
 | 中文名 | WMS回传SN信息 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-synchronizeSN` |
+| 接口 ID | `doudian.warehouse.yunc.synchronizeSN` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/synchronizeSN` |

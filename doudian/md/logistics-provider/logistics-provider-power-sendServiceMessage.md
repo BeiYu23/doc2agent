@@ -1,11 +1,12 @@
-# power.sendServiceMessage
+# 客服发消息
 
-> 客服发消息
+> power.sendServiceMessage — 客服发消息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.power.sendServiceMessage` |
 | 中文名 | 客服发消息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-power-sendServiceMessage` |
+| 接口 ID | `doudian.logistics-provider.power.sendServiceMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/sendServiceMessage` |

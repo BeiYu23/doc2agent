@@ -1,8 +1,10 @@
 {
   "id": "doudian.dropshipping.iop.waybillCancel",
+  "cnName": "【厂商】取消电子面单",
+  "docUrl": "/docs/doudian/dropshipping/dropshipping-iop-waybillCancel",
+  "name": "iop.waybillCancel",
   "platform": "doudian",
   "group": "dropshipping",
-  "name": "iop.waybillCancel",
   "description": "【厂商】取消电子面单",
   "method": "GET",
   "path": "/iop/waybillCancel",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/59/675",
   "updatedAt": "2021-07-18",
-  "_file_stem": "dropshipping-iop-waybillCancel",
-  "cnName": "【厂商】取消电子面单"
+  "_file_stem": "dropshipping-iop-waybillCancel"
 }

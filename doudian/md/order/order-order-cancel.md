@@ -1,11 +1,12 @@
-# order.cancel
+# 取消货到付款订单
 
-> 取消货到付款订单
+> order.cancel — 取消货到付款订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.cancel` |
 | 中文名 | 取消货到付款订单 |
+| 文档地址 | `/docs/doudian/order/order-order-cancel` |
+| 接口 ID | `doudian.order.order.cancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/cancel` |

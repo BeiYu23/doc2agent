@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.getStoreDetail",
+  "cnName": "单个获取门店信息",
+  "docUrl": "/docs/doudian/shop/shop-shop-getStoreDetail",
+  "name": "shop.getStoreDetail",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.getStoreDetail",
   "description": "单个获取门店信息",
   "method": "GET",
   "path": "/shop/getStoreDetail",
@@ -149,6 +151,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2043",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-shop-getStoreDetail",
-  "cnName": "单个获取门店信息"
+  "_file_stem": "shop-shop-getStoreDetail"
 }

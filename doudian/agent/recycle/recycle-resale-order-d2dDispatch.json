@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.d2dDispatch",
+  "cnName": "【上门回收】服务商已派单",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-d2dDispatch",
+  "name": "resale.order.d2dDispatch",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.d2dDispatch",
   "description": "【上门回收】服务商已派单",
   "method": "GET",
   "path": "/resale/order/d2dDispatch",
@@ -124,6 +126,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4635",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-d2dDispatch",
-  "cnName": "【上门回收】服务商已派单"
+  "_file_stem": "recycle-resale-order-d2dDispatch"
 }

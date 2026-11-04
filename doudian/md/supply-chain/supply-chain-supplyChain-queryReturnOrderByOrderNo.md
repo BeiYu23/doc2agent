@@ -1,11 +1,12 @@
-# supplyChain.queryReturnOrderByOrderNo
+# 通过售后单ID或者渠道交易单ID查询售后明细
 
-> 通过售后单ID或者渠道交易单ID查询售后明细
+> supplyChain.queryReturnOrderByOrderNo — 通过售后单ID或者渠道交易单ID查询售后明细
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.queryReturnOrderByOrderNo` |
 | 中文名 | 通过售后单ID或者渠道交易单ID查询售后明细 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-queryReturnOrderByOrderNo` |
+| 接口 ID | `doudian.supply-chain.supplyChain.queryReturnOrderByOrderNo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryReturnOrderByOrderNo` |

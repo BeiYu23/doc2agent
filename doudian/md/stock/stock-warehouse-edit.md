@@ -1,11 +1,12 @@
-# warehouse.edit
+# 编辑区域仓
 
-> 编辑区域仓
+> warehouse.edit — 编辑区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.edit` |
 | 中文名 | 编辑区域仓 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-edit` |
+| 接口 ID | `doudian.stock.warehouse.edit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/edit` |

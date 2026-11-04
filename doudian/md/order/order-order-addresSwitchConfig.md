@@ -1,12 +1,13 @@
-# order.addresSwitchConfig
+# 获取App对于商家订单修改地址的审核权限
 
-> 获取App对于商家订单修改地址的审核权限
+> order.addresSwitchConfig — 获取App对于商家订单修改地址的审核权限
 获取App对于商家订单修改地址的审核权限
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.addresSwitchConfig` |
 | 中文名 | 获取App对于商家订单修改地址的审核权限 |
+| 文档地址 | `/docs/doudian/order/order-order-addresSwitchConfig` |
+| 接口 ID | `doudian.order.order.addresSwitchConfig` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/addresSwitchConfig` |

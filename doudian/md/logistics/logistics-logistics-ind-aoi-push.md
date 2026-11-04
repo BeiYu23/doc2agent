@@ -1,11 +1,12 @@
-# logistics.ind.aoi.push
+# 门店入驻后，自动/手动向承运商同步门店信息
 
-> 门店入驻后，自动/手动向承运商同步门店信息
+> logistics.ind.aoi.push — 门店入驻后，自动/手动向承运商同步门店信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.ind.aoi.push` |
 | 中文名 | 门店入驻后，自动/手动向承运商同步门店信息 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-ind-aoi-push` |
+| 接口 ID | `doudian.logistics.logistics.ind.aoi.push` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/ind/aoi/push` |

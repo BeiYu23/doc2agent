@@ -1,11 +1,12 @@
-# second.product.batchGetProduct2C
+# 【二方接口】批量获取商品信息
 
-> 【二方接口】批量获取商品信息
+> second.product.batchGetProduct2C — 【二方接口】批量获取商品信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.product.batchGetProduct2C` |
 | 中文名 | 【二方接口】批量获取商品信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-product-batchGetProduct2C` |
+| 接口 ID | `doudian.dongchedi.second.product.batchGetProduct2C` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/batchGetProduct2C` |

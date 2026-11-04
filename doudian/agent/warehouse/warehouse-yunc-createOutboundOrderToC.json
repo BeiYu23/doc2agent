@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.createOutboundOrderToC",
+  "cnName": "创建出库单ToC",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-createOutboundOrderToC",
+  "name": "yunc.createOutboundOrderToC",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.createOutboundOrderToC",
   "description": "创建出库单ToC",
   "method": "GET",
   "path": "/yunc/createOutboundOrderToC",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/747",
   "updatedAt": "2021-09-07",
-  "_file_stem": "warehouse-yunc-createOutboundOrderToC",
-  "cnName": "创建出库单ToC"
+  "_file_stem": "warehouse-yunc-createOutboundOrderToC"
 }

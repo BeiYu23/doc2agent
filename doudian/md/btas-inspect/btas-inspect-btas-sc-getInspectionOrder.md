@@ -1,12 +1,13 @@
-# btas.sc.getInspectionOrder
+# 质检机构获取该机构的订单状态信息
 
-> 质检机构获取该机构的订单状态信息，包含履约状态，取消状态，送检状态和发货状态等。
+> btas.sc.getInspectionOrder — 质检机构获取该机构的订单状态信息，包含履约状态，取消状态，送检状态和发货状态等。
 注意该字段需要手动配置接口权限，且仅能查询当前机构的订单。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sc.getInspectionOrder` |
 | 中文名 | 质检机构获取该机构的订单状态信息 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sc-getInspectionOrder` |
+| 接口 ID | `doudian.btas-inspect.btas.sc.getInspectionOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/getInspectionOrder` |

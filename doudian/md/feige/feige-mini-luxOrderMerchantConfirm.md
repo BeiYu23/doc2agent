@@ -1,11 +1,12 @@
-# mini.luxOrderMerchantConfirm
+# 奢品订单商家确认
 
-> 奢品订单商家确认接口
+> mini.luxOrderMerchantConfirm — 奢品订单商家确认接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.mini.luxOrderMerchantConfirm` |
 | 中文名 | 奢品订单商家确认 |
+| 文档地址 | `/docs/doudian/feige/feige-mini-luxOrderMerchantConfirm` |
+| 接口 ID | `doudian.feige.mini.luxOrderMerchantConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/luxOrderMerchantConfirm` |

@@ -1,11 +1,12 @@
-# material.easyShuttle
+# 一键删除
 
-> 一键删除
+> material.easyShuttle — 一键删除
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.easyShuttle` |
 | 中文名 | 一键删除 |
+| 文档地址 | `/docs/doudian/material/material-material-easyShuttle` |
+| 接口 ID | `doudian.material.material.easyShuttle` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/easyShuttle` |

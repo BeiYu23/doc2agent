@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.List",
+  "cnName": "售后列表接口",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-List",
+  "name": "afterSale.List",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.List",
   "description": "1、售后列表接口，可以支持多种筛选规则，详情见请求参数。\n2、时间类型参数均为以秒为单位的时间戳，金额均以分为单位。\n3、接口中page*size最多不能超过5万条数据。如果超过5万条，请使用时间参数分割数据。\n4、默认情况下，只能查到近6个月以内的数据，",
   "method": "GET",
   "path": "/afterSale/List",
@@ -376,6 +378,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/1295",
   "updatedAt": "2025-04-27",
-  "_file_stem": "refund-afterSale-List",
-  "cnName": "售后列表接口"
+  "_file_stem": "refund-afterSale-List"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-goods.supplyChain.inspection.GetStandardCollection",
+  "cnName": "查询质检标准集",
+  "docUrl": "/docs/doudian/supply-goods/supply-goods-supplyChain-inspection-GetStandardCollection",
+  "name": "supplyChain.inspection.GetStandardCollection",
   "platform": "doudian",
   "group": "supply-goods",
-  "name": "supplyChain.inspection.GetStandardCollection",
   "description": "查询质检标准集",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -136,6 +138,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1523/8267",
   "updatedAt": "2026-05-06",
-  "_file_stem": "supply-goods-supplyChain-inspection-GetStandardCollection",
-  "cnName": "查询质检标准集"
+  "_file_stem": "supply-goods-supplyChain-inspection-GetStandardCollection"
 }

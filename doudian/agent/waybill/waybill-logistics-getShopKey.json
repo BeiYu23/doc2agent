@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.getShopKey",
+  "cnName": "查询商家电子面单密钥",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-getShopKey",
+  "name": "logistics.getShopKey",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.getShopKey",
   "description": "查询商家电子面单密钥",
   "method": "GET",
   "path": "/logistics/getShopKey",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/478",
   "updatedAt": "2025-02-12",
-  "_file_stem": "waybill-logistics-getShopKey",
-  "cnName": "查询商家电子面单密钥"
+  "_file_stem": "waybill-logistics-getShopKey"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.createDelivery",
+  "cnName": "即时零售下发配送任务",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-createDelivery",
+  "name": "instantShopping.createDelivery",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.createDelivery",
   "description": "即时零售下发配送任务",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -415,6 +417,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/4777",
   "updatedAt": "2025-09-10",
-  "_file_stem": "retail-store-instantShopping-createDelivery",
-  "cnName": "即时零售下发配送任务"
+  "_file_stem": "retail-store-instantShopping-createDelivery"
 }

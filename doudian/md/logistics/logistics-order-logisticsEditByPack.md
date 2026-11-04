@@ -1,13 +1,14 @@
-# order.logisticsEditByPack
+# 调用场景
 
-> 调用场景：
+> order.logisticsEditByPack — 调用场景：
 1、支持修改一单多包（拆单发货）【/order/logisticsAddMultiPack】和合单发货【/order/logisticsAddSinglePack】接口，发货成功的订单；
 2、注意：整单发货修改物流请使用【/order/logi
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsEditByPack` |
 | 中文名 | 调用场景 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsEditByPack` |
+| 接口 ID | `doudian.logistics.order.logisticsEditByPack` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsEditByPack` |

@@ -1,11 +1,12 @@
-# token.refresh
+# 使用refresh_token刷新access…
 
-> 使用refresh_token刷新access_token
+> token.refresh — 使用refresh_token刷新access_token
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.token.refresh` |
 | 中文名 | 使用refresh_token刷新access… |
+| 文档地址 | `/docs/doudian/tool/tool-token-refresh` |
+| 接口 ID | `doudian.tool.token.refresh` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/token/refresh` |

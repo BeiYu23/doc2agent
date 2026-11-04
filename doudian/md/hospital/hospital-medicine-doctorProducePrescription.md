@@ -1,11 +1,12 @@
-# medicine.doctorProducePrescription
+# 医生开处方单
 
-> 医生开处方单
+> medicine.doctorProducePrescription — 医生开处方单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.hospital.medicine.doctorProducePrescription` |
 | 中文名 | 医生开处方单 |
+| 文档地址 | `/docs/doudian/hospital/hospital-medicine-doctorProducePrescription` |
+| 接口 ID | `doudian.hospital.medicine.doctorProducePrescription` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/doctorProducePrescription` |

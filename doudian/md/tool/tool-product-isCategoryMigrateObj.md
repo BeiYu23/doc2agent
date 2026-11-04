@@ -1,11 +1,12 @@
-# product.isCategoryMigrateObj
+# 主要用于类目树升级场景
 
-> 主要用于类目树升级场景，判断店铺和类目的信息是否已经升级需使用新的类目信息做相关操作，如商品发布，商品更新等
+> product.isCategoryMigrateObj — 主要用于类目树升级场景，判断店铺和类目的信息是否已经升级需使用新的类目信息做相关操作，如商品发布，商品更新等
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.product.isCategoryMigrateObj` |
 | 中文名 | 主要用于类目树升级场景 |
+| 文档地址 | `/docs/doudian/tool/tool-product-isCategoryMigrateObj` |
+| 接口 ID | `doudian.tool.product.isCategoryMigrateObj` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isCategoryMigrateObj` |

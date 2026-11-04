@@ -1,11 +1,12 @@
-# freightTemplate.update
+# 更新运费模板
 
-> 更新运费模板
+> freightTemplate.update — 更新运费模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.freightTemplate.update` |
 | 中文名 | 更新运费模板 |
+| 文档地址 | `/docs/doudian/shop/shop-freightTemplate-update` |
+| 接口 ID | `doudian.shop.freightTemplate.update` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/freightTemplate/update` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.isv.createProductFromSupplyPlatform",
+  "cnName": "搜索线索提报 (三方货源发品场景",
+  "docUrl": "/docs/doudian/product/product-product-isv-createProductFromSupplyPlatform",
+  "name": "product.isv.createProductFromSupplyPlatform",
   "platform": "doudian",
   "group": "product",
-  "name": "product.isv.createProductFromSupplyPlatform",
   "description": "搜索线索提报 (三方货源发品场景)",
   "method": "GET",
   "path": "/product/isv/createProductFromSupplyPlatform",
@@ -120,6 +122,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4665",
   "updatedAt": "2023-09-07",
-  "_file_stem": "product-product-isv-createProductFromSupplyPlatform",
-  "cnName": "搜索线索提报 (三方货源发品场景"
+  "_file_stem": "product-product-isv-createProductFromSupplyPlatform"
 }

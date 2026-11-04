@@ -1,11 +1,12 @@
-# superm.pop.queryStoreCouponList
+# 小时达-查询门店优惠列表
 
-> 小时达-查询门店优惠列表
+> superm.pop.queryStoreCouponList — 小时达-查询门店优惠列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.queryStoreCouponList` |
 | 中文名 | 小时达-查询门店优惠列表 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-queryStoreCouponList` |
+| 接口 ID | `doudian.retail-store.superm.pop.queryStoreCouponList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/queryStoreCouponList` |

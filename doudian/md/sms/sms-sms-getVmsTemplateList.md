@@ -1,11 +1,12 @@
-# sms.getVmsTemplateList
+# 获取视频短信模板list
 
-> 获取视频短信模板list
+> sms.getVmsTemplateList — 获取视频短信模板list
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.getVmsTemplateList` |
 | 中文名 | 获取视频短信模板list |
+| 文档地址 | `/docs/doudian/sms/sms-sms-getVmsTemplateList` |
+| 接口 ID | `doudian.sms.sms.getVmsTemplateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getVmsTemplateList` |

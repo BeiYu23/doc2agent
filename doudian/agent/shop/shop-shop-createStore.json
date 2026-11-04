@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.createStore",
+  "cnName": "创建门店",
+  "docUrl": "/docs/doudian/shop/shop-shop-createStore",
+  "name": "shop.createStore",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.createStore",
   "description": "创建门店",
   "method": "GET",
   "path": "/shop/createStore",
@@ -164,6 +166,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2033",
   "updatedAt": "2022-08-08",
-  "_file_stem": "shop-shop-createStore",
-  "cnName": "创建门店"
+  "_file_stem": "shop-shop-createStore"
 }

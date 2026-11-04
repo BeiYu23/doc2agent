@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-stock.instantShopping.notifyErpAuditStatus",
+  "cnName": "Erp商家开仓审核通过",
+  "docUrl": "/docs/doudian/retail-stock/retail-stock-instantShopping-notifyErpAuditStatus",
+  "name": "instantShopping.notifyErpAuditStatus",
   "platform": "doudian",
   "group": "retail-stock",
-  "name": "instantShopping.notifyErpAuditStatus",
   "description": "Erp商家开仓审核通过",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1594/7535",
   "updatedAt": "2025-06-24",
-  "_file_stem": "retail-stock-instantShopping-notifyErpAuditStatus",
-  "cnName": "Erp商家开仓审核通过"
+  "_file_stem": "retail-stock-instantShopping-notifyErpAuditStatus"
 }

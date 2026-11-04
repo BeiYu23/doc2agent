@@ -1,11 +1,12 @@
-# product.sellPointList
+# 查询商品卖点列表
 
-> 查询商品卖点列表
+> product.sellPointList — 查询商品卖点列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.creative.product.sellPointList` |
 | 中文名 | 查询商品卖点列表 |
+| 文档地址 | `/docs/doudian/creative/creative-product-sellPointList` |
+| 接口 ID | `doudian.creative.product.sellPointList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/sellPointList` |

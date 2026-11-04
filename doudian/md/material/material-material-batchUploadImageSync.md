@@ -1,13 +1,14 @@
-# material.batchUploadImageSync
+# 一次上传的数量限制50张图片且单个图片最大不能…
 
-> 1、一次上传的数量限制50张图片且单个图片最大不能超过10M；   
+> material.batchUploadImageSync — 1、一次上传的数量限制50张图片且单个图片最大不能超过10M；   
 2、接口上传成功，素材中心会对素材进行异步审核，审核时效：非风险图片99%在4s内完成审核，风险图片我们会在24h内审核完成；对于审核失败的素材，素材中心会在一定时间内将其删除；
 3、上
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.batchUploadImageSync` |
 | 中文名 | 一次上传的数量限制50张图片且单个图片最大不能… |
+| 文档地址 | `/docs/doudian/material/material-material-batchUploadImageSync` |
+| 接口 ID | `doudian.material.material.batchUploadImageSync` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/batchUploadImageSync` |

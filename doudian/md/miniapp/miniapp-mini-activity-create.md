@@ -1,11 +1,12 @@
-# mini.activity.create
+# 创建小程序专属价活动
 
-> 创建小程序专属价活动
+> mini.activity.create — 创建小程序专属价活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.create` |
 | 中文名 | 创建小程序专属价活动 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-create` |
+| 接口 ID | `doudian.miniapp.mini.activity.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/create` |

@@ -1,11 +1,12 @@
-# coupons.verify
+# 卡券核销
 
-> 卡券核销
+> coupons.verify — 卡券核销
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.verify` |
 | 中文名 | 卡券核销 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-verify` |
+| 接口 ID | `doudian.coupon.coupons.verify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/verify` |

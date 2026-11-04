@@ -1,11 +1,12 @@
-# supplyChain.outside.getInfoInTimeRate
+# 查询信息及时量的责任机构排名
 
-> 查询信息及时量的责任机构排名
+> supplyChain.outside.getInfoInTimeRate — 查询信息及时量的责任机构排名
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getInfoInTimeRate` |
 | 中文名 | 查询信息及时量的责任机构排名 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getInfoInTimeRate` |
+| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getInfoInTimeRate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

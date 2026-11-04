@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.pushOutboundFeedback",
+  "cnName": "给外部WMS调用的推送出库信息回传",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-pushOutboundFeedback",
+  "name": "yunc.pushOutboundFeedback",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.pushOutboundFeedback",
   "description": "给外部WMS调用的推送出库信息回传",
   "method": "GET",
   "path": "/yunc/pushOutboundFeedback",
@@ -1150,6 +1152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1868",
   "updatedAt": "2026-04-28",
-  "_file_stem": "warehouse-yunc-pushOutboundFeedback",
-  "cnName": "给外部WMS调用的推送出库信息回传"
+  "_file_stem": "warehouse-yunc-pushOutboundFeedback"
 }

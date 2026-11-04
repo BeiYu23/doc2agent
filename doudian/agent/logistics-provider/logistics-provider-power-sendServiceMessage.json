@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.power.sendServiceMessage",
+  "cnName": "客服发消息",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-power-sendServiceMessage",
+  "name": "power.sendServiceMessage",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "power.sendServiceMessage",
   "description": "客服发消息",
   "method": "GET",
   "path": "/power/sendServiceMessage",
@@ -156,6 +158,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2995",
   "updatedAt": "2023-02-27",
-  "_file_stem": "logistics-provider-power-sendServiceMessage",
-  "cnName": "客服发消息"
+  "_file_stem": "logistics-provider-power-sendServiceMessage"
 }

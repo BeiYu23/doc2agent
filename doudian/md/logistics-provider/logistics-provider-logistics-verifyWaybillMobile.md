@@ -1,11 +1,12 @@
-# logistics.verifyWaybillMobile
+# 验证运单收件人手机号与入参是否一致
 
-> 验证运单收件人手机号与入参是否一致
+> logistics.verifyWaybillMobile — 验证运单收件人手机号与入参是否一致
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.verifyWaybillMobile` |
 | 中文名 | 验证运单收件人手机号与入参是否一致 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-verifyWaybillMobile` |
+| 接口 ID | `doudian.logistics-provider.logistics.verifyWaybillMobile` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/verifyWaybillMobile` |

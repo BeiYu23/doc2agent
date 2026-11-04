@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.BatchCheckServiceOpenStatus",
+  "cnName": "批量服务订购查询",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-BatchCheckServiceOpenStatus",
+  "name": "logistics.BatchCheckServiceOpenStatus",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.BatchCheckServiceOpenStatus",
   "description": "批量服务订购查询",
   "method": "GET",
   "path": "/logistics/BatchCheckServiceOpenStatus",
@@ -101,6 +103,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/4838",
   "updatedAt": "2023-10-10",
-  "_file_stem": "waybill-logistics-BatchCheckServiceOpenStatus",
-  "cnName": "批量服务订购查询"
+  "_file_stem": "waybill-logistics-BatchCheckServiceOpenStatus"
 }

@@ -1,11 +1,12 @@
-# microapp.invoke.cloudApi
+# 调用ISV云内应用
 
-> 调用ISV云内应用接口
+> microapp.invoke.cloudApi — 调用ISV云内应用接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.microapp.invoke.cloudApi` |
 | 中文名 | 调用ISV云内应用 |
+| 文档地址 | `/docs/doudian/cloud/cloud-microapp-invoke-cloudApi` |
+| 接口 ID | `doudian.cloud.microapp.invoke.cloudApi` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

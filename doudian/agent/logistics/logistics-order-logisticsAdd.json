@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.logisticsAdd",
+  "cnName": "暂时只支持整单出库",
+  "docUrl": "/docs/doudian/logistics/logistics-order-logisticsAdd",
+  "name": "order.logisticsAdd",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.logisticsAdd",
   "description": "暂时只支持整单出库，即接口调用时入参只能传父订单号。\nTips：部分发货状态下的父订单，调此接口发货，会报错：该订单当前为“部分发货”状态，无法调用此接口",
   "method": "GET",
   "path": "/order/logisticsAdd",
@@ -1022,6 +1024,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/718",
   "updatedAt": "2025-08-20",
-  "_file_stem": "logistics-order-logisticsAdd",
-  "cnName": "暂时只支持整单出库"
+  "_file_stem": "logistics-order-logisticsAdd"
 }

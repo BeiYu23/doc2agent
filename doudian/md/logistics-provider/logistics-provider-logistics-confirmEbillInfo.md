@@ -1,11 +1,12 @@
-# logistics.confirmEbillInfo
+# 校验面单信息
 
-> 校验面单信息
+> logistics.confirmEbillInfo — 校验面单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.confirmEbillInfo` |
 | 中文名 | 校验面单信息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-confirmEbillInfo` |
+| 接口 ID | `doudian.logistics-provider.logistics.confirmEbillInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/confirmEbillInfo` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyConsign",
+  "cnName": "供货单发货",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyConsign",
+  "name": "supplyChain.supplyConsign",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyConsign",
   "description": "供货单发货",
   "method": "GET",
   "path": "/supplyChain/supplyConsign",
@@ -226,6 +228,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/1733",
   "updatedAt": "2025-04-29",
-  "_file_stem": "supply-chain-supplyChain-supplyConsign",
-  "cnName": "供货单发货"
+  "_file_stem": "supply-chain-supplyChain-supplyConsign"
 }

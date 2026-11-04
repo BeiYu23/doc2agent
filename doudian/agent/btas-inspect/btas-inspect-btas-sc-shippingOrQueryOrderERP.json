@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.btas.sc.shippingOrQueryOrderERP",
+  "cnName": "质检机构_实物质检订单发货",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-btas-sc-shippingOrQueryOrderERP",
+  "name": "btas.sc.shippingOrQueryOrderERP",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "btas.sc.shippingOrQueryOrderERP",
   "description": "质检机构_实物质检订单发货（废弃）",
   "method": "GET",
   "path": "/btas/sc/shippingOrQueryOrderERP",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/2945",
   "updatedAt": "2023-02-09",
-  "_file_stem": "btas-inspect-btas-sc-shippingOrQueryOrderERP",
-  "cnName": "质检机构_实物质检订单发货"
+  "_file_stem": "btas-inspect-btas-sc-shippingOrQueryOrderERP"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.home-scene.foodTakeout.life.rejectOrder",
+  "cnName": "生服-订单拒绝",
+  "docUrl": "/docs/doudian/home-scene/home-scene-foodTakeout-life-rejectOrder",
+  "name": "foodTakeout.life.rejectOrder",
   "platform": "doudian",
   "group": "home-scene",
-  "name": "foodTakeout.life.rejectOrder",
   "description": "生服-订单拒绝",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1525/6692",
   "updatedAt": "2024-07-11",
-  "_file_stem": "home-scene-foodTakeout-life-rejectOrder",
-  "cnName": "生服-订单拒绝"
+  "_file_stem": "home-scene-foodTakeout-life-rejectOrder"
 }

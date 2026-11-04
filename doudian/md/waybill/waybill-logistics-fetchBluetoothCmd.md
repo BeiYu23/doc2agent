@@ -1,11 +1,12 @@
-# logistics.fetchBluetoothCmd
+# 电子面单场景下，获取蓝牙的打印指令
 
-> 电子面单场景下，获取蓝牙的打印指令
+> logistics.fetchBluetoothCmd — 电子面单场景下，获取蓝牙的打印指令
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.fetchBluetoothCmd` |
 | 中文名 | 电子面单场景下，获取蓝牙的打印指令 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-fetchBluetoothCmd` |
+| 接口 ID | `doudian.waybill.logistics.fetchBluetoothCmd` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/fetchBluetoothCmd` |

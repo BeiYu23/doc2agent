@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.QueryVideoReproductionTask",
+  "cnName": "查询视频复刻任务",
+  "docUrl": "/docs/doudian/video/video-open-QueryVideoReproductionTask",
+  "name": "open.QueryVideoReproductionTask",
   "platform": "doudian",
   "group": "video",
-  "name": "open.QueryVideoReproductionTask",
   "description": "查询视频复刻任务",
   "method": "GET",
   "path": "/open/QueryVideoReproductionTask",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8516",
   "updatedAt": "2026-08-18",
-  "_file_stem": "video-open-QueryVideoReproductionTask",
-  "cnName": "查询视频复刻任务"
+  "_file_stem": "video-open-QueryVideoReproductionTask"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.createV2",
+  "cnName": "单个仓创建v2版本",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-createV2",
+  "name": "warehouse.createV2",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.createV2",
   "description": "单个仓创建v2版本",
   "method": "GET",
   "path": "/warehouse/createV2",
@@ -156,6 +158,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/2390",
   "updatedAt": "2022-08-18",
-  "_file_stem": "stock-warehouse-createV2",
-  "cnName": "单个仓创建v2版本"
+  "_file_stem": "stock-warehouse-createV2"
 }

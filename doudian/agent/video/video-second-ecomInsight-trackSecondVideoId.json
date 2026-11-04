@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.trackSecondVideoId",
+  "cnName": "记录秒级数据追踪数据",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-trackSecondVideoId",
+  "name": "second.ecomInsight.trackSecondVideoId",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.trackSecondVideoId",
   "description": "记录秒级数据追踪数据",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8634",
   "updatedAt": "2026-10-10",
-  "_file_stem": "video-second-ecomInsight-trackSecondVideoId",
-  "cnName": "记录秒级数据追踪数据"
+  "_file_stem": "video-second-ecomInsight-trackSecondVideoId"
 }

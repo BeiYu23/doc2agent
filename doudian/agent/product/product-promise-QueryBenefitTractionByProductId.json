@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.promise.QueryBenefitTractionByProductId",
+  "cnName": "商品维度查询利益点和库存建议",
+  "docUrl": "/docs/doudian/product/product-promise-QueryBenefitTractionByProductId",
+  "name": "promise.QueryBenefitTractionByProductId",
   "platform": "doudian",
   "group": "product",
-  "name": "promise.QueryBenefitTractionByProductId",
   "description": "商品维度查询利益点和库存建议",
   "method": "GET",
   "path": "/promise/QueryBenefitTractionByProductId",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8153",
   "updatedAt": "2026-03-23",
-  "_file_stem": "product-promise-QueryBenefitTractionByProductId",
-  "cnName": "商品维度查询利益点和库存建议"
+  "_file_stem": "product-promise-QueryBenefitTractionByProductId"
 }

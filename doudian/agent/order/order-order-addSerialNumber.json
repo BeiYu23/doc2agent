@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.addSerialNumber",
+  "cnName": "订单发货后",
+  "docUrl": "/docs/doudian/order/order-order-addSerialNumber",
+  "name": "order.addSerialNumber",
   "platform": "doudian",
   "group": "order",
-  "name": "order.addSerialNumber",
   "description": "订单发货后，如需修改商品序列号或补充上传商品序列号，可调用此接口进行修改或上传",
   "method": "GET",
   "path": "/order/addSerialNumber",
@@ -123,6 +125,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1289",
   "updatedAt": "2021-09-27",
-  "_file_stem": "order-order-addSerialNumber",
-  "cnName": "订单发货后"
+  "_file_stem": "order-order-addSerialNumber"
 }

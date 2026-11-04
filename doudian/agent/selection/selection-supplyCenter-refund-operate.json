@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.refund.operate",
+  "cnName": "退款驱动",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-refund-operate",
+  "name": "supplyCenter.refund.operate",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.refund.operate",
   "description": "退款驱动",
   "method": "GET",
   "path": "/supplyCenter/refund/operate",
@@ -139,6 +141,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/4818",
   "updatedAt": "2023-11-03",
-  "_file_stem": "selection-supplyCenter-refund-operate",
-  "cnName": "退款驱动"
+  "_file_stem": "selection-supplyCenter-refund-operate"
 }

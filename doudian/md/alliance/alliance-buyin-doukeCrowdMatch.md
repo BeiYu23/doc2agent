@@ -1,11 +1,12 @@
-# buyin.doukeCrowdMatch
+# 电商用户类型识别
 
-> 电商用户类型识别接口
+> buyin.doukeCrowdMatch — 电商用户类型识别接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukeCrowdMatch` |
 | 中文名 | 电商用户类型识别 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukeCrowdMatch` |
+| 接口 ID | `doudian.alliance.buyin.doukeCrowdMatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukeCrowdMatch` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.promise.updateOrderShipTime",
+  "cnName": "更新订单承诺发货时间",
+  "docUrl": "/docs/doudian/order/order-promise-updateOrderShipTime",
+  "name": "promise.updateOrderShipTime",
   "platform": "doudian",
   "group": "order",
-  "name": "promise.updateOrderShipTime",
   "description": "更新订单承诺发货时间",
   "method": "GET",
   "path": "/promise/updateOrderShipTime",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/7857",
   "updatedAt": "2025-11-10",
-  "_file_stem": "order-promise-updateOrderShipTime",
-  "cnName": "更新订单承诺发货时间"
+  "_file_stem": "order-promise-updateOrderShipTime"
 }

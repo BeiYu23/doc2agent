@@ -1,11 +1,12 @@
-# logistics.pushOnlineService
+# 物流商推送商家的产品类型/增值服务的变更数据
 
-> 物流商推送商家的产品类型/增值服务的变更数据
+> logistics.pushOnlineService — 物流商推送商家的产品类型/增值服务的变更数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.pushOnlineService` |
 | 中文名 | 物流商推送商家的产品类型/增值服务的变更数据 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-pushOnlineService` |
+| 接口 ID | `doudian.logistics-provider.logistics.pushOnlineService` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/pushOnlineService` |

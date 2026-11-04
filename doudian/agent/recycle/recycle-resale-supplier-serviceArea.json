@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.supplier.serviceArea",
+  "cnName": "【上门回收】更新上门服务范围信息同步",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-supplier-serviceArea",
+  "name": "resale.supplier.serviceArea",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.supplier.serviceArea",
   "description": "【上门回收】更新上门服务范围信息同步",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -396,6 +398,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4497",
   "updatedAt": "2026-03-26",
-  "_file_stem": "recycle-resale-supplier-serviceArea",
-  "cnName": "【上门回收】更新上门服务范围信息同步"
+  "_file_stem": "recycle-resale-supplier-serviceArea"
 }

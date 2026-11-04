@@ -1,11 +1,12 @@
-# openCloud.ddpGetShopList
+# 数据推送，推送店铺列表
 
-> 数据推送，推送店铺列表
+> openCloud.ddpGetShopList — 数据推送，推送店铺列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.ddpGetShopList` |
 | 中文名 | 数据推送，推送店铺列表 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-ddpGetShopList` |
+| 接口 ID | `doudian.cloud.openCloud.ddpGetShopList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/ddpGetShopList` |

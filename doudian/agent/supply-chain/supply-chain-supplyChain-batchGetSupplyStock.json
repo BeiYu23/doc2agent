@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.batchGetSupplyStock",
+  "cnName": "批量获取库存",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-batchGetSupplyStock",
+  "name": "supplyChain.batchGetSupplyStock",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.batchGetSupplyStock",
   "description": "批量获取库存",
   "method": "GET",
   "path": "/supplyChain/batchGetSupplyStock",
@@ -109,6 +111,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/7334",
   "updatedAt": "2025-03-05",
-  "_file_stem": "supply-chain-supplyChain-batchGetSupplyStock",
-  "cnName": "批量获取库存"
+  "_file_stem": "supply-chain-supplyChain-batchGetSupplyStock"
 }

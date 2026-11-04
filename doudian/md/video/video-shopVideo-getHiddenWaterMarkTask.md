@@ -1,11 +1,12 @@
-# shopVideo.getHiddenWaterMarkTask
+# 查询加暗水印任务
 
-> 查询加暗水印任务
+> shopVideo.getHiddenWaterMarkTask — 查询加暗水印任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.getHiddenWaterMarkTask` |
 | 中文名 | 查询加暗水印任务 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-getHiddenWaterMarkTask` |
+| 接口 ID | `doudian.video.shopVideo.getHiddenWaterMarkTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/getHiddenWaterMarkTask` |

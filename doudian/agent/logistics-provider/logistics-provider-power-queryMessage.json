@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.power.queryMessage",
+  "cnName": "消息查询",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-power-queryMessage",
+  "name": "power.queryMessage",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "power.queryMessage",
   "description": "消息查询",
   "method": "GET",
   "path": "/power/queryMessage",
@@ -99,6 +101,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2992",
   "updatedAt": "2023-02-27",
-  "_file_stem": "logistics-provider-power-queryMessage",
-  "cnName": "消息查询"
+  "_file_stem": "logistics-provider-power-queryMessage"
 }

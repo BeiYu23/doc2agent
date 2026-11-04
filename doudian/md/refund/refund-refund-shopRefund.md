@@ -1,11 +1,12 @@
-# refund.shopRefund
+# 商家处理备货中退款申请
 
-> 商家处理备货中退款申请（831下线，可使用该接口：/afterSale/Operate）
+> refund.shopRefund — 商家处理备货中退款申请（831下线，可使用该接口：/afterSale/Operate）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.refund.shopRefund` |
 | 中文名 | 商家处理备货中退款申请 |
+| 文档地址 | `/docs/doudian/refund/refund-refund-shopRefund` |
+| 接口 ID | `doudian.refund.refund.shopRefund` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/refund/shopRefund` |

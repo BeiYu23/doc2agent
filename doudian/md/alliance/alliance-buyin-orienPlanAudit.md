@@ -1,11 +1,12 @@
-# buyin.orienPlanAudit
+# 定向计划达人申请审核
 
-> 定向计划达人申请审核
+> buyin.orienPlanAudit — 定向计划达人申请审核
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.orienPlanAudit` |
 | 中文名 | 定向计划达人申请审核 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-orienPlanAudit` |
+| 接口 ID | `doudian.alliance.buyin.orienPlanAudit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/orienPlanAudit` |

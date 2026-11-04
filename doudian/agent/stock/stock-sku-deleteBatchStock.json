@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.sku.deleteBatchStock",
+  "cnName": "批量删除批次库存",
+  "docUrl": "/docs/doudian/stock/stock-sku-deleteBatchStock",
+  "name": "sku.deleteBatchStock",
   "platform": "doudian",
   "group": "stock",
-  "name": "sku.deleteBatchStock",
   "description": "批量删除批次库存",
   "method": "GET",
   "path": "/sku/deleteBatchStock",
@@ -167,6 +169,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/7723",
   "updatedAt": "2025-08-26",
-  "_file_stem": "stock-sku-deleteBatchStock",
-  "cnName": "批量删除批次库存"
+  "_file_stem": "stock-sku-deleteBatchStock"
 }

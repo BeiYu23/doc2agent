@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.sendSmsTestCode",
+  "cnName": "给测试手机号发送验证码",
+  "docUrl": "/docs/doudian/sms/sms-sms-sendSmsTestCode",
+  "name": "sms.sendSmsTestCode",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.sendSmsTestCode",
   "description": "给测试手机号发送验证码",
   "method": "GET",
   "path": "/sms/sendSmsTestCode",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7691",
   "updatedAt": "2025-08-11",
-  "_file_stem": "sms-sms-sendSmsTestCode",
-  "cnName": "给测试手机号发送验证码"
+  "_file_stem": "sms-sms-sendSmsTestCode"
 }

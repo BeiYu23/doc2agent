@@ -1,11 +1,12 @@
-# superm.getPlatformPickUpCalendar
+# 售后单查询运力时间段日历
 
-> 售后单查询运力时间段日历
+> superm.getPlatformPickUpCalendar — 售后单查询运力时间段日历
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.getPlatformPickUpCalendar` |
 | 中文名 | 售后单查询运力时间段日历 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-getPlatformPickUpCalendar` |
+| 接口 ID | `doudian.retail-store.superm.getPlatformPickUpCalendar` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getPlatformPickUpCalendar` |

@@ -1,11 +1,12 @@
-# sms.listSecondTemplate
+# 获取二级模板
 
-> 获取二级模板
+> sms.listSecondTemplate — 获取二级模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.listSecondTemplate` |
 | 中文名 | 获取二级模板 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-listSecondTemplate` |
+| 接口 ID | `doudian.sms.sms.listSecondTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/listSecondTemplate` |

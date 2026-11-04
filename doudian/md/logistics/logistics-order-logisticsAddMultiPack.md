@@ -1,12 +1,13 @@
-# order.logisticsAddMultiPack
+# 单个店铺订单拆分为多个物流包裹进行发货
 
-> 1、单个店铺订单拆分为多个物流包裹进行发货；
+> order.logisticsAddMultiPack — 1、单个店铺订单拆分为多个物流包裹进行发货；
 2、接口执行逻辑：一笔主订单有3个子订单，其中一个子订单已申请退款，调用该接口时3个子订单都发货时，接口会整个发货请求都失败（不会出现部分子单成功，部分子单失败的情况）。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsAddMultiPack` |
 | 中文名 | 单个店铺订单拆分为多个物流包裹进行发货 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsAddMultiPack` |
+| 接口 ID | `doudian.logistics.order.logisticsAddMultiPack` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsAddMultiPack` |

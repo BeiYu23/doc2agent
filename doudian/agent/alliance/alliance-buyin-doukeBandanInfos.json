@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.doukeBandanInfos",
+  "cnName": "抖客获取搬单订单信息",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-doukeBandanInfos",
+  "name": "buyin.doukeBandanInfos",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.doukeBandanInfos",
   "description": "抖客获取搬单订单信息",
   "method": "GET",
   "path": "/buyin/doukeBandanInfos",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/6241",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukeBandanInfos",
-  "cnName": "抖客获取搬单订单信息"
+  "_file_stem": "alliance-buyin-doukeBandanInfos"
 }

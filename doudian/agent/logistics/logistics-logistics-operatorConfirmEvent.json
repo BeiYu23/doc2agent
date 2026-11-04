@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.operatorConfirmEvent",
+  "cnName": "服务商师傅确认事件",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-operatorConfirmEvent",
+  "name": "logistics.operatorConfirmEvent",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.operatorConfirmEvent",
   "description": "服务商师傅确认事件",
   "method": "GET",
   "path": "/logistics/operatorConfirmEvent",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2919",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorConfirmEvent",
-  "cnName": "服务商师傅确认事件"
+  "_file_stem": "logistics-logistics-operatorConfirmEvent"
 }

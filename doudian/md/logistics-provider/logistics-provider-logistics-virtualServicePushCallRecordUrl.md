@@ -1,11 +1,12 @@
-# logistics.virtualServicePushCallRecordUrl
+# 通话录音url回传
 
-> 通话录音url回传接口
+> logistics.virtualServicePushCallRecordUrl — 通话录音url回传接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.virtualServicePushCallRecordUrl` |
 | 中文名 | 通话录音url回传 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-virtualServicePushCallRecordUrl` |
+| 接口 ID | `doudian.logistics-provider.logistics.virtualServicePushCallRecordUrl` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/virtualServicePushCallRecordUrl` |

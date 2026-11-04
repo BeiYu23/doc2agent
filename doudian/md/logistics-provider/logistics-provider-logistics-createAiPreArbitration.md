@@ -1,11 +1,12 @@
-# logistics.createAiPreArbitration
+# 创建AI预校验
 
-> 创建AI预校验
+> logistics.createAiPreArbitration — 创建AI预校验
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.createAiPreArbitration` |
 | 中文名 | 创建AI预校验 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-createAiPreArbitration` |
+| 接口 ID | `doudian.logistics-provider.logistics.createAiPreArbitration` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/createAiPreArbitration` |

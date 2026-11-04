@@ -1,11 +1,12 @@
-# logistics.operatorCompleteEvent
+# 服务完成事件
 
-> 服务完成事件
+> logistics.operatorCompleteEvent — 服务完成事件
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.operatorCompleteEvent` |
 | 中文名 | 服务完成事件 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-operatorCompleteEvent` |
+| 接口 ID | `doudian.logistics.logistics.operatorCompleteEvent` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/operatorCompleteEvent` |

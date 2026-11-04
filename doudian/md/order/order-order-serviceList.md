@@ -1,11 +1,12 @@
-# order.serviceList
+# 获取服务请求列表
 
-> 获取服务请求列表
+> order.serviceList — 获取服务请求列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.serviceList` |
 | 中文名 | 获取服务请求列表 |
+| 文档地址 | `/docs/doudian/order/order-order-serviceList` |
+| 接口 ID | `doudian.order.order.serviceList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/serviceList` |

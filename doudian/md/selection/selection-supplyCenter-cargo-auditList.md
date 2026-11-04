@@ -1,11 +1,12 @@
-# supplyCenter.cargo.auditList
+# 审核记录列表
 
-> 审核记录列表
+> supplyCenter.cargo.auditList — 审核记录列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.cargo.auditList` |
 | 中文名 | 审核记录列表 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-cargo-auditList` |
+| 接口 ID | `doudian.selection.supplyCenter.cargo.auditList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

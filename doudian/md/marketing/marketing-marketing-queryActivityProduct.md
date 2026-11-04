@@ -1,11 +1,12 @@
-# marketing.queryActivityProduct
+# 查询营销玩法圈品信息
 
-> 查询营销玩法圈品信息
+> marketing.queryActivityProduct — 查询营销玩法圈品信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.queryActivityProduct` |
 | 中文名 | 查询营销玩法圈品信息 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-queryActivityProduct` |
+| 接口 ID | `doudian.marketing.marketing.queryActivityProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/queryActivityProduct` |

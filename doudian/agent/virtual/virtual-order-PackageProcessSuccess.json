@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.order.PackageProcessSuccess",
+  "cnName": "套餐办理成功",
+  "docUrl": "/docs/doudian/virtual/virtual-order-PackageProcessSuccess",
+  "name": "order.PackageProcessSuccess",
   "platform": "doudian",
   "group": "virtual",
-  "name": "order.PackageProcessSuccess",
   "description": "套餐办理成功",
   "method": "GET",
   "path": "/order/PackageProcessSuccess",
@@ -143,6 +145,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/6903",
   "updatedAt": "2024-09-24",
-  "_file_stem": "virtual-order-PackageProcessSuccess",
-  "cnName": "套餐办理成功"
+  "_file_stem": "virtual-order-PackageProcessSuccess"
 }

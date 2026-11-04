@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.address.areaList",
+  "cnName": "获取区列表",
+  "docUrl": "/docs/doudian/logistics/logistics-address-areaList",
+  "name": "address.areaList",
   "platform": "doudian",
   "group": "logistics",
-  "name": "address.areaList",
   "description": "获取区列表（6.30下线）",
   "method": "GET",
   "path": "/address/areaList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/103",
   "updatedAt": "2021-05-07",
-  "_file_stem": "logistics-address-areaList",
-  "cnName": "获取区列表"
+  "_file_stem": "logistics-address-areaList"
 }

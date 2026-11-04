@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instGmv",
+  "cnName": "【已下线，公告",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instGmv",
+  "name": "buyin.instGmv",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instGmv",
   "description": "【已下线，公告https://op.jinritemai.com/docs/notice-docs/21/7407】\n查询机构某天的选品GMV，不包括抖音应用选品GMV数据",
   "method": "GET",
   "path": "/buyin/instGmv",
@@ -81,6 +83,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1652",
   "updatedAt": "2022-11-15",
-  "_file_stem": "alliance-buyin-instGmv",
-  "cnName": "【已下线，公告"
+  "_file_stem": "alliance-buyin-instGmv"
 }

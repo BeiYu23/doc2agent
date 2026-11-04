@@ -1,11 +1,12 @@
-# sendHome.marketing.listActivity
+# 查询营销活动列表
 
-> 查询营销活动列表
+> sendHome.marketing.listActivity — 查询营销活动列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.sendHome.marketing.listActivity` |
 | 中文名 | 查询营销活动列表 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-listActivity` |
+| 接口 ID | `doudian.retail-marketing.sendHome.marketing.listActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

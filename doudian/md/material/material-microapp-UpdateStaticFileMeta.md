@@ -1,11 +1,12 @@
-# microapp.UpdateStaticFileMeta
+# ISV上传静态资源后绑定相对路径
 
-> ISV上传静态资源后绑定相对路径
+> microapp.UpdateStaticFileMeta — ISV上传静态资源后绑定相对路径
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.microapp.UpdateStaticFileMeta` |
 | 中文名 | ISV上传静态资源后绑定相对路径 |
+| 文档地址 | `/docs/doudian/material/material-microapp-UpdateStaticFileMeta` |
+| 接口 ID | `doudian.material.microapp.UpdateStaticFileMeta` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/microapp/UpdateStaticFileMeta` |

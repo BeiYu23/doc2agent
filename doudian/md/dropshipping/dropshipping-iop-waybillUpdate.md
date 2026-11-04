@@ -1,11 +1,12 @@
-# iop.waybillUpdate
+# 【厂商】代发订单更新发货
 
-> 【厂商】代发订单更新发货接口
+> iop.waybillUpdate — 【厂商】代发订单更新发货接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.waybillUpdate` |
 | 中文名 | 【厂商】代发订单更新发货 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-waybillUpdate` |
+| 接口 ID | `doudian.dropshipping.iop.waybillUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/waybillUpdate` |

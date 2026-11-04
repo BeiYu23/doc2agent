@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.app.checkPigeonAuth",
+  "cnName": "检查飞鸽鉴权",
+  "docUrl": "/docs/doudian/feige/feige-app-checkPigeonAuth",
+  "name": "app.checkPigeonAuth",
   "platform": "doudian",
   "group": "feige",
-  "name": "app.checkPigeonAuth",
   "description": "检查飞鸽鉴权",
   "method": "GET",
   "path": "/app/checkPigeonAuth",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/7783",
   "updatedAt": "2025-09-17",
-  "_file_stem": "feige-app-checkPigeonAuth",
-  "cnName": "检查飞鸽鉴权"
+  "_file_stem": "feige-app-checkPigeonAuth"
 }

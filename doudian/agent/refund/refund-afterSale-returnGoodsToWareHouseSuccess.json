@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.returnGoodsToWareHouseSuccess",
+  "cnName": "商家确认售后单对应的用户退货入仓成功",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-returnGoodsToWareHouseSuccess",
+  "name": "afterSale.returnGoodsToWareHouseSuccess",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.returnGoodsToWareHouseSuccess",
   "description": "商家确认售后单对应的用户退货入仓成功",
   "method": "GET",
   "path": "/afterSale/returnGoodsToWareHouseSuccess",
@@ -127,6 +129,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/815",
   "updatedAt": "2021-08-11",
-  "_file_stem": "refund-afterSale-returnGoodsToWareHouseSuccess",
-  "cnName": "商家确认售后单对应的用户退货入仓成功"
+  "_file_stem": "refund-afterSale-returnGoodsToWareHouseSuccess"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.listSecondTemplate",
+  "cnName": "获取二级模板",
+  "docUrl": "/docs/doudian/sms/sms-sms-listSecondTemplate",
+  "name": "sms.listSecondTemplate",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.listSecondTemplate",
   "description": "获取二级模板",
   "method": "GET",
   "path": "/sms/listSecondTemplate",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/8436",
   "updatedAt": "2026-07-28",
-  "_file_stem": "sms-sms-listSecondTemplate",
-  "cnName": "获取二级模板"
+  "_file_stem": "sms-sms-listSecondTemplate"
 }

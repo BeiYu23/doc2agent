@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.instantShopping.getStoreAutoCallRider",
+  "cnName": "查询自动呼叫运力配置",
+  "docUrl": "/docs/doudian/logistics/logistics-instantShopping-getStoreAutoCallRider",
+  "name": "instantShopping.getStoreAutoCallRider",
   "platform": "doudian",
   "group": "logistics",
-  "name": "instantShopping.getStoreAutoCallRider",
   "description": "查询自动呼叫运力配置",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -100,6 +102,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/7189",
   "updatedAt": "2025-01-02",
-  "_file_stem": "logistics-instantShopping-getStoreAutoCallRider",
-  "cnName": "查询自动呼叫运力配置"
+  "_file_stem": "logistics-instantShopping-getStoreAutoCallRider"
 }

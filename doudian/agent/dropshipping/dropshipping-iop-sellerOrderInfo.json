@@ -1,8 +1,10 @@
 {
   "id": "doudian.dropshipping.iop.sellerOrderInfo",
+  "cnName": "【商家】查看代发订单",
+  "docUrl": "/docs/doudian/dropshipping/dropshipping-iop-sellerOrderInfo",
+  "name": "iop.sellerOrderInfo",
   "platform": "doudian",
   "group": "dropshipping",
-  "name": "iop.sellerOrderInfo",
   "description": "【商家】查看代发订单详情",
   "method": "GET",
   "path": "/iop/sellerOrderInfo",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/59/1875",
   "updatedAt": "2021-09-09",
-  "_file_stem": "dropshipping-iop-sellerOrderInfo",
-  "cnName": "【商家】查看代发订单"
+  "_file_stem": "dropshipping-iop-sellerOrderInfo"
 }

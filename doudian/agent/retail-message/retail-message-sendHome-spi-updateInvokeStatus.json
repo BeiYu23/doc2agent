@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-message.sendHome.spi.updateInvokeStatus",
+  "cnName": "更新spi最终失败落库记录的状态",
+  "docUrl": "/docs/doudian/retail-message/retail-message-sendHome-spi-updateInvokeStatus",
+  "name": "sendHome.spi.updateInvokeStatus",
   "platform": "doudian",
   "group": "retail-message",
-  "name": "sendHome.spi.updateInvokeStatus",
   "description": "更新spi最终失败落库记录的状态",
   "method": "GET",
   "path": "/sendHome/spi/updateInvokeStatus",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1534/6775",
   "updatedAt": "2024-08-14",
-  "_file_stem": "retail-message-sendHome-spi-updateInvokeStatus",
-  "cnName": "更新spi最终失败落库记录的状态"
+  "_file_stem": "retail-message-sendHome-spi-updateInvokeStatus"
 }

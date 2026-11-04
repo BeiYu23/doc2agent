@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.getStaffOnlineRecordList",
+  "cnName": "查询客服在线日志列表",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-getStaffOnlineRecordList",
+  "name": "pigeon.getStaffOnlineRecordList",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.getStaffOnlineRecordList",
   "description": "查询客服在线日志列表",
   "method": "GET",
   "path": "/pigeon/getStaffOnlineRecordList",
@@ -100,6 +102,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5343",
   "updatedAt": "2023-11-10",
-  "_file_stem": "feige-pigeon-getStaffOnlineRecordList",
-  "cnName": "查询客服在线日志列表"
+  "_file_stem": "feige-pigeon-getStaffOnlineRecordList"
 }

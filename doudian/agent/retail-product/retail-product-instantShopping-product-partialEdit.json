@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-product.instantShopping.product.partialEdit",
+  "cnName": "部分编辑商品信息",
+  "docUrl": "/docs/doudian/retail-product/retail-product-instantShopping-product-partialEdit",
+  "name": "instantShopping.product.partialEdit",
   "platform": "doudian",
   "group": "retail-product",
-  "name": "instantShopping.product.partialEdit",
   "description": "部分编辑商品信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -466,6 +468,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7447",
   "updatedAt": "2026-07-15",
-  "_file_stem": "retail-product-instantShopping-product-partialEdit",
-  "cnName": "部分编辑商品信息"
+  "_file_stem": "retail-product-instantShopping-product-partialEdit"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-order.instantShopping.order.uploadPic",
+  "cnName": "商家上传图片",
+  "docUrl": "/docs/doudian/retail-order/retail-order-instantShopping-order-uploadPic",
+  "name": "instantShopping.order.uploadPic",
   "platform": "doudian",
   "group": "retail-order",
-  "name": "instantShopping.order.uploadPic",
   "description": "商家上传图片",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -104,6 +106,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1531/8558",
   "updatedAt": "2026-08-31",
-  "_file_stem": "retail-order-instantShopping-order-uploadPic",
-  "cnName": "商家上传图片"
+  "_file_stem": "retail-order-instantShopping-order-uploadPic"
 }

@@ -1,11 +1,12 @@
-# install.ticket.operateIndustryTicket
+# 行业服务操作工单
 
-> 行业服务操作工单
+> install.ticket.operateIndustryTicket — 行业服务操作工单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.ticket.operateIndustryTicket` |
 | 中文名 | 行业服务操作工单 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-ticket-operateIndustryTicket` |
+| 接口 ID | `doudian.logistics-provider.install.ticket.operateIndustryTicket` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/ticket/operateIndustryTicket` |

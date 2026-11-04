@@ -1,11 +1,12 @@
-# marketing.couponDigest
+# 查询优惠券摘要信息
 
-> 查询优惠券摘要信息
+> marketing.couponDigest — 查询优惠券摘要信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.marketing.couponDigest` |
 | 中文名 | 查询优惠券摘要信息 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-marketing-couponDigest` |
+| 接口 ID | `doudian.miniapp.marketing.couponDigest` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/couponDigest` |

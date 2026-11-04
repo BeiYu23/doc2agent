@@ -1,11 +1,12 @@
-# open.appIpWhiteListAdd
+# 新增应用ip白名单
 
-> 新增应用ip白名单
+> open.appIpWhiteListAdd — 新增应用ip白名单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.appIpWhiteListAdd` |
 | 中文名 | 新增应用ip白名单 |
+| 文档地址 | `/docs/doudian/tool/tool-open-appIpWhiteListAdd` |
+| 接口 ID | `doudian.tool.open.appIpWhiteListAdd` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/appIpWhiteListAdd` |

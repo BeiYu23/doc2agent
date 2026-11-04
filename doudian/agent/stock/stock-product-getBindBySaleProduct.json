@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.product.getBindBySaleProduct",
+  "cnName": "通过前台销售商品查供货商品",
+  "docUrl": "/docs/doudian/stock/stock-product-getBindBySaleProduct",
+  "name": "product.getBindBySaleProduct",
   "platform": "doudian",
   "group": "stock",
-  "name": "product.getBindBySaleProduct",
   "description": "通过前台销售商品查供货商品",
   "method": "GET",
   "path": "/product/getBindBySaleProduct",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/8329",
   "updatedAt": "2026-05-22",
-  "_file_stem": "stock-product-getBindBySaleProduct",
-  "cnName": "通过前台销售商品查供货商品"
+  "_file_stem": "stock-product-getBindBySaleProduct"
 }

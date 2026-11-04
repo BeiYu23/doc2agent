@@ -1,11 +1,12 @@
-# product.detail
+# 查询商品
 
-> 查询商品详情
+> product.detail — 查询商品详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.detail` |
 | 中文名 | 查询商品 |
+| 文档地址 | `/docs/doudian/product/product-product-detail` |
+| 接口 ID | `doudian.product.product.detail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/detail` |

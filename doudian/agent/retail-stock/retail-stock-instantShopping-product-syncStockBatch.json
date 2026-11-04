@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-stock.instantShopping.product.syncStockBatch",
+  "cnName": "库存批量同步",
+  "docUrl": "/docs/doudian/retail-stock/retail-stock-instantShopping-product-syncStockBatch",
+  "name": "instantShopping.product.syncStockBatch",
   "platform": "doudian",
   "group": "retail-stock",
-  "name": "instantShopping.product.syncStockBatch",
   "description": "库存批量同步接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -418,6 +420,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1594/7450",
   "updatedAt": "2025-05-13",
-  "_file_stem": "retail-stock-instantShopping-product-syncStockBatch",
-  "cnName": "库存批量同步"
+  "_file_stem": "retail-stock-instantShopping-product-syncStockBatch"
 }

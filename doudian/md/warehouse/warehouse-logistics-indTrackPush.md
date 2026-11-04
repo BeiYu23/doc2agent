@@ -1,11 +1,12 @@
-# logistics.indTrackPush
+# 即时配轨迹推送
 
-> 即时配轨迹推送接口
+> logistics.indTrackPush — 即时配轨迹推送接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.logistics.indTrackPush` |
 | 中文名 | 即时配轨迹推送 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-logistics-indTrackPush` |
+| 接口 ID | `doudian.warehouse.logistics.indTrackPush` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/indTrackPush` |

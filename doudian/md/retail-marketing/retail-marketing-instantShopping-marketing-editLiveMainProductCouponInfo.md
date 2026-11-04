@@ -1,11 +1,12 @@
-# instantShopping.marketing.editLiveMainProductCouponInfo
+# 修改直播主品券信息
 
-> 修改直播主品券信息
+> instantShopping.marketing.editLiveMainProductCouponInfo — 修改直播主品券信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.editLiveMainProductCouponInfo` |
 | 中文名 | 修改直播主品券信息 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-editLiveMainProductCouponInfo` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.editLiveMainProductCouponInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

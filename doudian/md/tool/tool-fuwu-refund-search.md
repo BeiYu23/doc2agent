@@ -1,11 +1,12 @@
-# fuwu.refund.search
+# 服务市场订单退款单查询
 
-> 服务市场订单退款单查询
+> fuwu.refund.search — 服务市场订单退款单查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.fuwu.refund.search` |
 | 中文名 | 服务市场订单退款单查询 |
+| 文档地址 | `/docs/doudian/tool/tool-fuwu-refund-search` |
+| 接口 ID | `doudian.tool.fuwu.refund.search` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/refund/search` |

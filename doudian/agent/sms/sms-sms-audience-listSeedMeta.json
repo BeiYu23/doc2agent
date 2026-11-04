@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.audience.listSeedMeta",
+  "cnName": "获取种子人群元数据",
+  "docUrl": "/docs/doudian/sms/sms-sms-audience-listSeedMeta",
+  "name": "sms.audience.listSeedMeta",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.audience.listSeedMeta",
   "description": "获取种子人群元数据接口",
   "method": "GET",
   "path": "/sms/audience/listSeedMeta",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7661",
   "updatedAt": "2025-08-01",
-  "_file_stem": "sms-sms-audience-listSeedMeta",
-  "cnName": "获取种子人群元数据"
+  "_file_stem": "sms-sms-audience-listSeedMeta"
 }

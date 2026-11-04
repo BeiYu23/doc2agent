@@ -1,11 +1,12 @@
-# sms.bindTrafficDrivingParams
+# 绑定引流链接
 
-> 绑定引流链接
+> sms.bindTrafficDrivingParams — 绑定引流链接
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.bindTrafficDrivingParams` |
 | 中文名 | 绑定引流链接 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-bindTrafficDrivingParams` |
+| 接口 ID | `doudian.sms.sms.bindTrafficDrivingParams` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/bindTrafficDrivingParams` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.supplyChain.procurement.queryProcurementOrder",
+  "cnName": "查询采购单信息",
+  "docUrl": "/docs/doudian/industry/industry-supplyChain-procurement-queryProcurementOrder",
+  "name": "supplyChain.procurement.queryProcurementOrder",
   "platform": "doudian",
   "group": "industry",
-  "name": "supplyChain.procurement.queryProcurementOrder",
   "description": "查询采购单信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -93,6 +95,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/7969",
   "updatedAt": "2025-12-19",
-  "_file_stem": "industry-supplyChain-procurement-queryProcurementOrder",
-  "cnName": "查询采购单信息"
+  "_file_stem": "industry-supplyChain-procurement-queryProcurementOrder"
 }

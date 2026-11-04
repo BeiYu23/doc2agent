@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.gis.serviceArea.sync",
+  "cnName": "同步服务范围数据",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-gis-serviceArea-sync",
+  "name": "gis.serviceArea.sync",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "gis.serviceArea.sync",
   "description": "同步服务范围数据",
   "method": "GET",
   "path": "/gis/serviceArea/sync",
@@ -310,6 +312,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2883",
   "updatedAt": "2023-02-28",
-  "_file_stem": "logistics-provider-gis-serviceArea-sync",
-  "cnName": "同步服务范围数据"
+  "_file_stem": "logistics-provider-gis-serviceArea-sync"
 }

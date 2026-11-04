@@ -1,8 +1,10 @@
 {
   "id": "doudian.permission.buyin.getAllianceProductDetails",
+  "cnName": "【二方接口】联盟商品",
+  "docUrl": "/docs/doudian/permission/permission-buyin-getAllianceProductDetails",
+  "name": "buyin.getAllianceProductDetails",
   "platform": "doudian",
   "group": "permission",
-  "name": "buyin.getAllianceProductDetails",
   "description": "【二方接口】联盟商品详情",
   "method": "GET",
   "path": "/buyin/getAllianceProductDetails",
@@ -221,6 +223,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1506/6583",
   "updatedAt": "2024-05-30",
-  "_file_stem": "permission-buyin-getAllianceProductDetails",
-  "cnName": "【二方接口】联盟商品"
+  "_file_stem": "permission-buyin-getAllianceProductDetails"
 }

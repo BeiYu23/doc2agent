@@ -1,11 +1,12 @@
-# superm.deliverConfig.update
+# 时效管理更新
 
-> 时效管理更新
+> superm.deliverConfig.update — 时效管理更新
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.deliverConfig.update` |
 | 中文名 | 时效管理更新 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-deliverConfig-update` |
+| 接口 ID | `doudian.retail-store.superm.deliverConfig.update` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/deliverConfig/update` |

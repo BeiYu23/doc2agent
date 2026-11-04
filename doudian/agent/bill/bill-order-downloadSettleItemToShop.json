@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.downloadSettleItemToShop",
+  "cnName": "通过url方式",
+  "docUrl": "/docs/doudian/bill/bill-order-downloadSettleItemToShop",
+  "name": "order.downloadSettleItemToShop",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.downloadSettleItemToShop",
   "description": "1、通过url方式，下载文件生成结算账单下单接口，调用接口生成个download_id ，通过返回的download_id调用【/order/downloadToShop】查询下载url文件链接。如果当天账单数据未完全生成会拦截下载请求。\n2、如需非url",
   "method": "GET",
   "path": "/order/downloadSettleItemToShop",
@@ -140,6 +142,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1191",
   "updatedAt": "2023-01-12",
-  "_file_stem": "bill-order-downloadSettleItemToShop",
-  "cnName": "通过url方式"
+  "_file_stem": "bill-order-downloadSettleItemToShop"
 }

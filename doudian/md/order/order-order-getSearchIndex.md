@@ -1,11 +1,12 @@
-# order.getSearchIndex
+# 获取订单加密索引串
 
-> 获取订单加密索引串
+> order.getSearchIndex — 获取订单加密索引串
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.getSearchIndex` |
 | 中文名 | 获取订单加密索引串 |
+| 文档地址 | `/docs/doudian/order/order-order-getSearchIndex` |
+| 接口 ID | `doudian.order.order.getSearchIndex` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getSearchIndex` |

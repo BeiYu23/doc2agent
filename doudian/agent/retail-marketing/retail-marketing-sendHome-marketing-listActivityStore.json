@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.sendHome.marketing.listActivityStore",
+  "cnName": "查询营销活动圈选的门店",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-listActivityStore",
+  "name": "sendHome.marketing.listActivityStore",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "sendHome.marketing.listActivityStore",
   "description": "查询营销活动圈选的门店",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6810",
   "updatedAt": "2024-08-27",
-  "_file_stem": "retail-marketing-sendHome-marketing-listActivityStore",
-  "cnName": "查询营销活动圈选的门店"
+  "_file_stem": "retail-marketing-sendHome-marketing-listActivityStore"
 }

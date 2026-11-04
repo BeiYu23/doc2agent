@@ -1,11 +1,12 @@
-# order.addressModify
+# 用于卖家和买家沟通后，主动帮买家修改收货信息
 
-> 用于卖家和买家沟通后，主动帮买家修改收货信息
+> order.addressModify — 用于卖家和买家沟通后，主动帮买家修改收货信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.addressModify` |
 | 中文名 | 用于卖家和买家沟通后，主动帮买家修改收货信息 |
+| 文档地址 | `/docs/doudian/order/order-order-addressModify` |
+| 接口 ID | `doudian.order.order.addressModify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/addressModify` |

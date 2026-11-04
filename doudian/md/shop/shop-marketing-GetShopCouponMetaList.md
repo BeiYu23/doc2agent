@@ -1,11 +1,12 @@
-# marketing.GetShopCouponMetaList
+# 店铺优惠券列表
 
-> 店铺优惠券列表
+> marketing.GetShopCouponMetaList — 店铺优惠券列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.marketing.GetShopCouponMetaList` |
 | 中文名 | 店铺优惠券列表 |
+| 文档地址 | `/docs/doudian/shop/shop-marketing-GetShopCouponMetaList` |
+| 接口 ID | `doudian.shop.marketing.GetShopCouponMetaList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/GetShopCouponMetaList` |

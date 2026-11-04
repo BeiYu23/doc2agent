@@ -1,11 +1,12 @@
-# appMessage.send
+# 发送服务市场应用消息
 
-> 发送服务市场应用消息
+> appMessage.send — 发送服务市场应用消息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.appMessage.send` |
 | 中文名 | 发送服务市场应用消息 |
+| 文档地址 | `/docs/doudian/tool/tool-appMessage-send` |
+| 接口 ID | `doudian.tool.appMessage.send` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/appMessage/send` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.getProductSuggestionList",
+  "cnName": "查询诊断商品列表及其处理建议",
+  "docUrl": "/docs/doudian/product/product-product-getProductSuggestionList",
+  "name": "product.getProductSuggestionList",
   "platform": "doudian",
   "group": "product",
-  "name": "product.getProductSuggestionList",
   "description": "查询诊断商品列表及其处理建议",
   "method": "GET",
   "path": "/product/getProductSuggestionList",
@@ -120,6 +122,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8339",
   "updatedAt": "2026-08-06",
-  "_file_stem": "product-product-getProductSuggestionList",
-  "cnName": "查询诊断商品列表及其处理建议"
+  "_file_stem": "product-product-getProductSuggestionList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.sms.deleteUserAudience",
+  "cnName": "删除人群包",
+  "docUrl": "/docs/doudian/member/member-sms-deleteUserAudience",
+  "name": "sms.deleteUserAudience",
   "platform": "doudian",
   "group": "member",
-  "name": "sms.deleteUserAudience",
   "description": "删除人群包",
   "method": "GET",
   "path": "/sms/deleteUserAudience",
@@ -72,6 +74,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6773",
   "updatedAt": "2024-08-14",
-  "_file_stem": "member-sms-deleteUserAudience",
-  "cnName": "删除人群包"
+  "_file_stem": "member-sms-deleteUserAudience"
 }

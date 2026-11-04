@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.downloadShopAccountItem",
+  "cnName": "请求下载资金流水明细",
+  "docUrl": "/docs/doudian/bill/bill-order-downloadShopAccountItem",
+  "name": "order.downloadShopAccountItem",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.downloadShopAccountItem",
   "description": "请求下载资金流水明细，得到download_id,download_id获取文件需要从order/downloadShopAccountItemFile接口获取，数据T+1生成，建议第二天15点之后下载",
   "method": "GET",
   "path": "/order/downloadShopAccountItem",
@@ -131,6 +133,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1431",
   "updatedAt": "2023-05-29",
-  "_file_stem": "bill-order-downloadShopAccountItem",
-  "cnName": "请求下载资金流水明细"
+  "_file_stem": "bill-order-downloadShopAccountItem"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.applyCompositeVideo",
+  "cnName": "元素材视频创意发布",
+  "docUrl": "/docs/doudian/creative/creative-product-material-applyCompositeVideo",
+  "name": "product.material.applyCompositeVideo",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.applyCompositeVideo",
   "description": "元素材视频创意发布",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -79,6 +81,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4240",
   "updatedAt": "2023-07-31",
-  "_file_stem": "creative-product-material-applyCompositeVideo",
-  "cnName": "元素材视频创意发布"
+  "_file_stem": "creative-product-material-applyCompositeVideo"
 }

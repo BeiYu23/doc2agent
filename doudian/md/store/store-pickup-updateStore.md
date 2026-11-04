@@ -1,11 +1,12 @@
-# pickup.updateStore
+# 更新门店
 
-> 更新门店
+> pickup.updateStore — 更新门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.store.pickup.updateStore` |
 | 中文名 | 更新门店 |
+| 文档地址 | `/docs/doudian/store/store-pickup-updateStore` |
+| 接口 ID | `doudian.store.pickup.updateStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/updateStore` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.recoverMaterial",
+  "cnName": "从回收站中恢复素材",
+  "docUrl": "/docs/doudian/material/material-material-recoverMaterial",
+  "name": "material.recoverMaterial",
   "platform": "doudian",
   "group": "material",
-  "name": "material.recoverMaterial",
   "description": "从回收站中恢复素材",
   "method": "GET",
   "path": "/material/recoverMaterial",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/954",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-recoverMaterial",
-  "cnName": "从回收站中恢复素材"
+  "_file_stem": "material-material-recoverMaterial"
 }

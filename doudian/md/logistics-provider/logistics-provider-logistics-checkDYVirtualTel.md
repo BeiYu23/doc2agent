@@ -1,11 +1,12 @@
-# logistics.checkDYVirtualTel
+# 查询虚拟号是否抖音平台
 
-> 查询虚拟号是否抖音平台
+> logistics.checkDYVirtualTel — 查询虚拟号是否抖音平台
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.checkDYVirtualTel` |
 | 中文名 | 查询虚拟号是否抖音平台 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-checkDYVirtualTel` |
+| 接口 ID | `doudian.logistics-provider.logistics.checkDYVirtualTel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/checkDYVirtualTel` |

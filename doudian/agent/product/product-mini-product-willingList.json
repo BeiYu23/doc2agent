@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.mini.product.willingList",
+  "cnName": "商品收藏列表查询",
+  "docUrl": "/docs/doudian/product/product-mini-product-willingList",
+  "name": "mini.product.willingList",
   "platform": "doudian",
   "group": "product",
-  "name": "mini.product.willingList",
   "description": "商品收藏列表查询",
   "method": "GET",
   "path": "/mini/product/willingList",
@@ -64,6 +66,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4234",
   "updatedAt": "2023-08-10",
-  "_file_stem": "product-mini-product-willingList",
-  "cnName": "商品收藏列表查询"
+  "_file_stem": "product-mini-product-willingList"
 }

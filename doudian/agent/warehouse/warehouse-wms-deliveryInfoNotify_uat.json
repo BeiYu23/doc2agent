@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.wms.deliveryInfoNotify_uat",
+  "cnName": "WMS 签收回传UAT环境",
+  "docUrl": "/docs/doudian/warehouse/warehouse-wms-deliveryInfoNotify_uat",
+  "name": "wms.deliveryInfoNotify_uat",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "wms.deliveryInfoNotify_uat",
   "description": "WMS 签收回传UAT环境",
   "method": "GET",
   "path": "/wms/deliveryInfoNotify_uat",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1693",
   "updatedAt": "2022-03-02",
-  "_file_stem": "warehouse-wms-deliveryInfoNotify_uat",
-  "cnName": "WMS 签收回传UAT环境"
+  "_file_stem": "warehouse-wms-deliveryInfoNotify_uat"
 }

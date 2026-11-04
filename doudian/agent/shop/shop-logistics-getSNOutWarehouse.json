@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.logistics.getSNOutWarehouse",
+  "cnName": "获取SN出库数据",
+  "docUrl": "/docs/doudian/shop/shop-logistics-getSNOutWarehouse",
+  "name": "logistics.getSNOutWarehouse",
   "platform": "doudian",
   "group": "shop",
-  "name": "logistics.getSNOutWarehouse",
   "description": "获取SN出库数据接口",
   "method": "GET",
   "path": "/logistics/getSNOutWarehouse",
@@ -114,6 +116,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/6722",
   "updatedAt": "2025-08-26",
-  "_file_stem": "shop-logistics-getSNOutWarehouse",
-  "cnName": "获取SN出库数据"
+  "_file_stem": "shop-logistics-getSNOutWarehouse"
 }

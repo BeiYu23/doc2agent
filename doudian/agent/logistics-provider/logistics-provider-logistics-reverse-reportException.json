@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.reverse.reportException",
+  "cnName": "上报上门取件履约过程中的异常",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-reverse-reportException",
+  "name": "logistics.reverse.reportException",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.reverse.reportException",
   "description": "上报上门取件履约过程中的异常",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -377,6 +379,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/3198",
   "updatedAt": "2026-01-27",
-  "_file_stem": "logistics-provider-logistics-reverse-reportException",
-  "cnName": "上报上门取件履约过程中的异常"
+  "_file_stem": "logistics-provider-logistics-reverse-reportException"
 }

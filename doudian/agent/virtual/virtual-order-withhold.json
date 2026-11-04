@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.order.withhold",
+  "cnName": "合约机分期贴息",
+  "docUrl": "/docs/doudian/virtual/virtual-order-withhold",
+  "name": "order.withhold",
   "platform": "doudian",
   "group": "virtual",
-  "name": "order.withhold",
   "description": "合约机分期贴息，如果消费者违约，运营商通过这个接口发起代扣。",
   "method": "GET",
   "path": "/order/withhold",
@@ -136,6 +138,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/6551",
   "updatedAt": "2024-07-05",
-  "_file_stem": "virtual-order-withhold",
-  "cnName": "合约机分期贴息"
+  "_file_stem": "virtual-order-withhold"
 }

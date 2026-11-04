@@ -1,11 +1,12 @@
-# logistics.operatorAppointmentEvent
+# 服务商预约时间
 
-> 服务商预约时间
+> logistics.operatorAppointmentEvent — 服务商预约时间
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.operatorAppointmentEvent` |
 | 中文名 | 服务商预约时间 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-operatorAppointmentEvent` |
+| 接口 ID | `doudian.logistics.logistics.operatorAppointmentEvent` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/operatorAppointmentEvent` |

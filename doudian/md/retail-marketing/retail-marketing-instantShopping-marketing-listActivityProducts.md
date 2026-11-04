@@ -1,11 +1,12 @@
-# instantShopping.marketing.listActivityProducts
+# 即时零售商家营销工具开放服务
 
-> 即时零售商家营销工具开放服务
+> instantShopping.marketing.listActivityProducts — 即时零售商家营销工具开放服务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listActivityProducts` |
 | 中文名 | 即时零售商家营销工具开放服务 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listActivityProducts` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listActivityProducts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

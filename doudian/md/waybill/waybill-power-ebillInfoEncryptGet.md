@@ -1,11 +1,12 @@
-# power.ebillInfoEncryptGet
+# 面单信息查询接口（脱敏） （仅用于兼容老物流网关
 
-> 面单信息查询接口（脱敏） （仅用于兼容老物流网关）
+> power.ebillInfoEncryptGet — 面单信息查询接口（脱敏） （仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.power.ebillInfoEncryptGet` |
 | 中文名 | 面单信息查询接口（脱敏） （仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/waybill/waybill-power-ebillInfoEncryptGet` |
+| 接口 ID | `doudian.waybill.power.ebillInfoEncryptGet` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/ebillInfoEncryptGet` |

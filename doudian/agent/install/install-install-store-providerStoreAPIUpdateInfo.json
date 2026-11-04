@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.providerStoreAPIUpdateInfo",
+  "cnName": "服务商门店更新",
+  "docUrl": "/docs/doudian/install/install-install-store-providerStoreAPIUpdateInfo",
+  "name": "install.store.providerStoreAPIUpdateInfo",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.providerStoreAPIUpdateInfo",
   "description": "服务商门店更新API",
   "method": "GET",
   "path": "/install/store/providerStoreAPIUpdateInfo",
@@ -184,6 +186,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7680",
   "updatedAt": "2026-06-02",
-  "_file_stem": "install-install-store-providerStoreAPIUpdateInfo",
-  "cnName": "服务商门店更新"
+  "_file_stem": "install-install-store-providerStoreAPIUpdateInfo"
 }

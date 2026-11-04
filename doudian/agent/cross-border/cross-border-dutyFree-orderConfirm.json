@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.dutyFree.orderConfirm",
+  "cnName": "商家接单",
+  "docUrl": "/docs/doudian/cross-border/cross-border-dutyFree-orderConfirm",
+  "name": "dutyFree.orderConfirm",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "dutyFree.orderConfirm",
   "description": "商家接单",
   "method": "GET",
   "path": "/dutyFree/orderConfirm",
@@ -110,6 +112,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/1873",
   "updatedAt": "2021-07-22",
-  "_file_stem": "cross-border-dutyFree-orderConfirm",
-  "cnName": "商家接单"
+  "_file_stem": "cross-border-dutyFree-orderConfirm"
 }

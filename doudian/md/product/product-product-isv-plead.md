@@ -1,11 +1,12 @@
-# product.isv.plead
+# 提报申诉
 
-> 提报申诉
+> product.isv.plead — 提报申诉
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.isv.plead` |
 | 中文名 | 提报申诉 |
+| 文档地址 | `/docs/doudian/product/product-product-isv-plead` |
+| 接口 ID | `doudian.product.product.isv.plead` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/plead` |

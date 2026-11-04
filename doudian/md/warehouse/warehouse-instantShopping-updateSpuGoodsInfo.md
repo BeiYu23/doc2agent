@@ -1,11 +1,12 @@
-# instantShopping.updateSpuGoodsInfo
+# 支持仓储服务商回传货品基础信息
 
-> 支持仓储服务商回传货品基础信息
+> instantShopping.updateSpuGoodsInfo — 支持仓储服务商回传货品基础信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.updateSpuGoodsInfo` |
 | 中文名 | 支持仓储服务商回传货品基础信息 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-updateSpuGoodsInfo` |
+| 接口 ID | `doudian.warehouse.instantShopping.updateSpuGoodsInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

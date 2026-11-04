@@ -1,11 +1,12 @@
-# trade.TopSearchQueryPredict
+# 商品标题热搜词推荐
 
-> 商品标题热搜词推荐
+> trade.TopSearchQueryPredict — 商品标题热搜词推荐
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.trade.TopSearchQueryPredict` |
 | 中文名 | 商品标题热搜词推荐 |
+| 文档地址 | `/docs/doudian/product/product-trade-TopSearchQueryPredict` |
+| 接口 ID | `doudian.product.trade.TopSearchQueryPredict` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/TopSearchQueryPredict` |

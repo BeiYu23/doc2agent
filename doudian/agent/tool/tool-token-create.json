@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.token.create",
+  "cnName": "生成token",
+  "docUrl": "/docs/doudian/tool/tool-token-create",
+  "name": "token.create",
   "platform": "doudian",
   "group": "tool",
-  "name": "token.create",
   "description": "生成token API。创建token成功即可，可以定期调/token/refresh接口来刷新token避免过期，请不要频繁的调用！\n推荐使用SDK进行token获取：https://op.jinritemai.com/docs/guide-docs/1",
   "method": "GET",
   "path": "/token/create",
@@ -238,6 +240,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/1600",
   "updatedAt": "2025-01-06",
-  "_file_stem": "tool-token-create",
-  "cnName": "生成token"
+  "_file_stem": "tool-token-create"
 }

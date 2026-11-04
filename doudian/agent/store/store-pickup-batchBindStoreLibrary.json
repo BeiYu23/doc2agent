@@ -1,8 +1,10 @@
 {
   "id": "doudian.store.pickup.batchBindStoreLibrary",
+  "cnName": "门店组批量绑定门店",
+  "docUrl": "/docs/doudian/store/store-pickup-batchBindStoreLibrary",
+  "name": "pickup.batchBindStoreLibrary",
   "platform": "doudian",
   "group": "store",
-  "name": "pickup.batchBindStoreLibrary",
   "description": "门店组批量绑定门店",
   "method": "GET",
   "path": "/pickup/batchBindStoreLibrary",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7237",
   "updatedAt": "2026-06-24",
-  "_file_stem": "store-pickup-batchBindStoreLibrary",
-  "cnName": "门店组批量绑定门店"
+  "_file_stem": "store-pickup-batchBindStoreLibrary"
 }

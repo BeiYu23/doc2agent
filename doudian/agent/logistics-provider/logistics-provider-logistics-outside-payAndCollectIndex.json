@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.outside.payAndCollectIndex",
+  "cnName": "按照服务商",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-outside-payAndCollectIndex",
+  "name": "logistics.outside.payAndCollectIndex",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.outside.payAndCollectIndex",
   "description": "按照服务商、揽收地区、收货地区查询各服务商全国或各省份流向上Top200的责任线路以及对应的责任运单量",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -150,6 +152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2926",
   "updatedAt": "2023-02-03",
-  "_file_stem": "logistics-provider-logistics-outside-payAndCollectIndex",
-  "cnName": "按照服务商"
+  "_file_stem": "logistics-provider-logistics-outside-payAndCollectIndex"
 }

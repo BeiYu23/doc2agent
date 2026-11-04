@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.pop.EditStoreCoupon",
+  "cnName": "小时达-编辑门店优惠券",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-pop-EditStoreCoupon",
+  "name": "superm.pop.EditStoreCoupon",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.pop.EditStoreCoupon",
   "description": "小时达-编辑门店优惠券",
   "method": "GET",
   "path": "/superm/pop/EditStoreCoupon",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3920",
   "updatedAt": "2023-05-26",
-  "_file_stem": "retail-store-superm-pop-EditStoreCoupon",
-  "cnName": "小时达-编辑门店优惠券"
+  "_file_stem": "retail-store-superm-pop-EditStoreCoupon"
 }

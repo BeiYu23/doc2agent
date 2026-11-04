@@ -1,11 +1,12 @@
-# recycle.sms.uploadIdentification
+# 上传服务商资质
 
-> 上传服务商资质
+> recycle.sms.uploadIdentification — 上传服务商资质
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.recycle.sms.uploadIdentification` |
 | 中文名 | 上传服务商资质 |
+| 文档地址 | `/docs/doudian/sms/sms-recycle-sms-uploadIdentification` |
+| 接口 ID | `doudian.sms.recycle.sms.uploadIdentification` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sms/uploadIdentification` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.rejectReasonList",
+  "cnName": "拒绝原因列表",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-rejectReasonList",
+  "name": "superm.rejectReasonList",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.rejectReasonList",
   "description": "拒绝原因列表",
   "method": "GET",
   "path": "/superm/rejectReasonList",
@@ -63,6 +65,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2958",
   "updatedAt": "2023-09-15",
-  "_file_stem": "retail-store-superm-rejectReasonList",
-  "cnName": "拒绝原因列表"
+  "_file_stem": "retail-store-superm-rejectReasonList"
 }

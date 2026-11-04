@@ -1,11 +1,12 @@
-# instantShopping.starhub.queryAftersaleInboundOrder
+# 查询退供出库单状态数据
 
-> 查询退供出库单状态数据
+> instantShopping.starhub.queryAftersaleInboundOrder — 查询退供出库单状态数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.starhub.queryAftersaleInboundOrder` |
 | 中文名 | 查询退供出库单状态数据 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-starhub-queryAftersaleInboundOrder` |
+| 接口 ID | `doudian.warehouse.instantShopping.starhub.queryAftersaleInboundOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

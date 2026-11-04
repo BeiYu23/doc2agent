@@ -1,8 +1,10 @@
 {
   "id": "doudian.doubao.contentAIGC.previewAIVideoTaskOpen",
+  "cnName": "预校验成片参数与积分，不占用额度",
+  "docUrl": "/docs/doudian/doubao/doubao-contentAIGC-previewAIVideoTaskOpen",
+  "name": "contentAIGC.previewAIVideoTaskOpen",
   "platform": "doudian",
   "group": "doubao",
-  "name": "contentAIGC.previewAIVideoTaskOpen",
   "description": "预校验成片参数与积分，不占用额度",
   "method": "GET",
   "path": "/contentAIGC/previewAIVideoTaskOpen",
@@ -179,6 +181,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1627/8657",
   "updatedAt": "2026-09-23",
-  "_file_stem": "doubao-contentAIGC-previewAIVideoTaskOpen",
-  "cnName": "预校验成片参数与积分，不占用额度"
+  "_file_stem": "doubao-contentAIGC-previewAIVideoTaskOpen"
 }

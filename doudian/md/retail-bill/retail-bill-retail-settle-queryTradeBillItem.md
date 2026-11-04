@@ -1,11 +1,12 @@
-# retail.settle.queryTradeBillItem
+# 即时零售交易账单查询
 
-> 即时零售交易账单查询接口
+> retail.settle.queryTradeBillItem — 即时零售交易账单查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-bill.retail.settle.queryTradeBillItem` |
 | 中文名 | 即时零售交易账单查询 |
+| 文档地址 | `/docs/doudian/retail-bill/retail-bill-retail-settle-queryTradeBillItem` |
+| 接口 ID | `doudian.retail-bill.retail.settle.queryTradeBillItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/retail/settle/queryTradeBillItem` |

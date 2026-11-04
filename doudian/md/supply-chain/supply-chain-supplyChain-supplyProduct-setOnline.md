@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.setOnline
+# 上架产品
 
-> 上架产品
+> supplyChain.supplyProduct.setOnline — 上架产品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.setOnline` |
 | 中文名 | 上架产品 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-setOnline` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.setOnline` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

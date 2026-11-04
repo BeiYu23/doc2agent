@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.cartSchema",
+  "cnName": "获取购物车跳转链接schema",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-cartSchema",
+  "name": "supplyChain.cartSchema",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.cartSchema",
   "description": "获取购物车跳转链接schema",
   "method": "GET",
   "path": "/supplyChain/cartSchema",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2852",
   "updatedAt": "2023-01-16",
-  "_file_stem": "shop-supplyChain-cartSchema",
-  "cnName": "获取购物车跳转链接schema"
+  "_file_stem": "shop-supplyChain-cartSchema"
 }

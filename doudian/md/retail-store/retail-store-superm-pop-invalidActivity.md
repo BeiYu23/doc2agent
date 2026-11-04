@@ -1,11 +1,12 @@
-# superm.pop.invalidActivity
+# 失效小时达活动
 
-> 失效小时达活动
+> superm.pop.invalidActivity — 失效小时达活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.invalidActivity` |
 | 中文名 | 失效小时达活动 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-invalidActivity` |
+| 接口 ID | `doudian.retail-store.superm.pop.invalidActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/invalidActivity` |

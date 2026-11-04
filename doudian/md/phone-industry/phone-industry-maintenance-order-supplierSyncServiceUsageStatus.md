@@ -1,11 +1,12 @@
-# maintenance.order.supplierSyncServiceUsageStatus
+# 服务使用状态同步
 
-> 服务使用状态同步
+> maintenance.order.supplierSyncServiceUsageStatus — 服务使用状态同步
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.order.supplierSyncServiceUsageStatus` |
 | 中文名 | 服务使用状态同步 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierSyncServiceUsageStatus` |
+| 接口 ID | `doudian.phone-industry.maintenance.order.supplierSyncServiceUsageStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

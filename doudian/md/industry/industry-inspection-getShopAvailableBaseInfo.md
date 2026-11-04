@@ -1,11 +1,12 @@
-# inspection.getShopAvailableBaseInfo
+# 查询商家可用的基础信息（类目、品牌、型号
 
-> 查询商家可用的基础信息（类目、品牌、型号）
+> inspection.getShopAvailableBaseInfo — 查询商家可用的基础信息（类目、品牌、型号）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.getShopAvailableBaseInfo` |
 | 中文名 | 查询商家可用的基础信息（类目、品牌、型号 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-getShopAvailableBaseInfo` |
+| 接口 ID | `doudian.industry.inspection.getShopAvailableBaseInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/getShopAvailableBaseInfo` |

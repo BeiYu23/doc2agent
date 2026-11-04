@@ -1,11 +1,12 @@
-# logistics.majorAppliances.UpdateCollectTime
+# 服务商改约
 
-> 服务商改约
+> logistics.majorAppliances.UpdateCollectTime — 服务商改约
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.majorAppliances.UpdateCollectTime` |
 | 中文名 | 服务商改约 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-majorAppliances-UpdateCollectTime` |
+| 接口 ID | `doudian.logistics-provider.logistics.majorAppliances.UpdateCollectTime` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

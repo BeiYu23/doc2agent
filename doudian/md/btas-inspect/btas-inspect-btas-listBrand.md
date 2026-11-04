@@ -1,11 +1,12 @@
-# btas.listBrand
+# 获取可图片鉴定的品牌
 
-> 获取可图片鉴定的品牌
+> btas.listBrand — 获取可图片鉴定的品牌
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.listBrand` |
 | 中文名 | 获取可图片鉴定的品牌 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-listBrand` |
+| 接口 ID | `doudian.btas-inspect.btas.listBrand` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/listBrand` |

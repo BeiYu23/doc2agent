@@ -1,11 +1,12 @@
-# buyin.orienPlanList
+# 商品定向计划查询
 
-> 商品定向计划查询
+> buyin.orienPlanList — 商品定向计划查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.orienPlanList` |
 | 中文名 | 商品定向计划查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-orienPlanList` |
+| 接口 ID | `doudian.alliance.buyin.orienPlanList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/orienPlanList` |

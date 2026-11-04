@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.product.list4Virtual",
+  "cnName": "【二方接口】获取商品列表",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-product-list4Virtual",
+  "name": "second.product.list4Virtual",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.product.list4Virtual",
   "description": "【二方接口】获取商品列表",
   "method": "GET",
   "path": "/second/product/list4Virtual",
@@ -324,6 +326,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/7015",
   "updatedAt": "2024-10-21",
-  "_file_stem": "dongchedi-second-product-list4Virtual",
-  "cnName": "【二方接口】获取商品列表"
+  "_file_stem": "dongchedi-second-product-list4Virtual"
 }

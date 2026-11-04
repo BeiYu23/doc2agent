@@ -1,11 +1,12 @@
-# sku.deleteBatchStock
+# 批量删除批次库存
 
-> 批量删除批次库存
+> sku.deleteBatchStock — 批量删除批次库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.sku.deleteBatchStock` |
 | 中文名 | 批量删除批次库存 |
+| 文档地址 | `/docs/doudian/stock/stock-sku-deleteBatchStock` |
+| 接口 ID | `doudian.stock.sku.deleteBatchStock` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/deleteBatchStock` |

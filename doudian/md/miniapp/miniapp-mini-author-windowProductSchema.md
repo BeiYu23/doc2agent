@@ -1,11 +1,12 @@
-# mini.author.windowProductSchema
+# 获取达人橱窗商品 schema
 
-> 获取达人橱窗商品 schema
+> mini.author.windowProductSchema — 获取达人橱窗商品 schema
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.author.windowProductSchema` |
 | 中文名 | 获取达人橱窗商品 schema |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-author-windowProductSchema` |
+| 接口 ID | `doudian.miniapp.mini.author.windowProductSchema` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/author/windowProductSchema` |

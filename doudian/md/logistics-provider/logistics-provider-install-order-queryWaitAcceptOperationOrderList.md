@@ -1,11 +1,12 @@
-# install.order.queryWaitAcceptOperationOrderList
+# 未接单的实操单据列表查询
 
-> 未接单的实操单据列表查询
+> install.order.queryWaitAcceptOperationOrderList — 未接单的实操单据列表查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.queryWaitAcceptOperationOrderList` |
 | 中文名 | 未接单的实操单据列表查询 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-queryWaitAcceptOperationOrderList` |
+| 接口 ID | `doudian.logistics-provider.install.order.queryWaitAcceptOperationOrderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/queryWaitAcceptOperationOrderList` |

@@ -1,11 +1,12 @@
-# order.updateOrderAmount
+# 未支付订单改货款
 
-> 未支付订单改货款
+> order.updateOrderAmount — 未支付订单改货款
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.updateOrderAmount` |
 | 中文名 | 未支付订单改货款 |
+| 文档地址 | `/docs/doudian/order/order-order-updateOrderAmount` |
+| 接口 ID | `doudian.order.order.updateOrderAmount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/updateOrderAmount` |

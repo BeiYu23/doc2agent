@@ -1,11 +1,12 @@
-# alliance.colonelActivityProduct
+# 活动商品查询
 
-> 活动商品查询接口
+> alliance.colonelActivityProduct — 活动商品查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.colonelActivityProduct` |
 | 中文名 | 活动商品查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-colonelActivityProduct` |
+| 接口 ID | `doudian.alliance.alliance.colonelActivityProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelActivityProduct` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.originColonelApplyActivities",
+  "cnName": "团长报名二级团长活动",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-originColonelApplyActivities",
+  "name": "buyin.originColonelApplyActivities",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.originColonelApplyActivities",
   "description": "团长报名二级团长活动",
   "method": "GET",
   "path": "/buyin/originColonelApplyActivities",
@@ -189,6 +191,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1672",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-originColonelApplyActivities",
-  "cnName": "团长报名二级团长活动"
+  "_file_stem": "alliance-buyin-originColonelApplyActivities"
 }

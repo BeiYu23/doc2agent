@@ -1,11 +1,12 @@
-# afterSale.fillLogistics
+# 售后商家填写物流信息
 
-> 售后商家填写物流信息
+> afterSale.fillLogistics — 售后商家填写物流信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.fillLogistics` |
 | 中文名 | 售后商家填写物流信息 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-fillLogistics` |
+| 接口 ID | `doudian.refund.afterSale.fillLogistics` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/fillLogistics` |

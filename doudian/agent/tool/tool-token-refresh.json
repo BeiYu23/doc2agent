@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.token.refresh",
+  "cnName": "使用refresh_token刷新access…",
+  "docUrl": "/docs/doudian/tool/tool-token-refresh",
+  "name": "token.refresh",
   "platform": "doudian",
   "group": "tool",
-  "name": "token.refresh",
   "description": "使用refresh_token刷新access_token",
   "method": "GET",
   "path": "/token/refresh",
@@ -182,6 +184,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/1601",
   "updatedAt": "2024-11-14",
-  "_file_stem": "tool-token-refresh",
-  "cnName": "使用refresh_token刷新access…"
+  "_file_stem": "tool-token-refresh"
 }

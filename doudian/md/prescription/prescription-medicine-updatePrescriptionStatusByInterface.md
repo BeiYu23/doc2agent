@@ -1,11 +1,12 @@
-# medicine.updatePrescriptionStatusByInterface
+# 商家ERP通过调用接口审核处方单
 
-> 商家ERP通过调用接口审核处方单
+> medicine.updatePrescriptionStatusByInterface — 商家ERP通过调用接口审核处方单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.prescription.medicine.updatePrescriptionStatusByInterface` |
 | 中文名 | 商家ERP通过调用接口审核处方单 |
+| 文档地址 | `/docs/doudian/prescription/prescription-medicine-updatePrescriptionStatusByInterface` |
+| 接口 ID | `doudian.prescription.medicine.updatePrescriptionStatusByInterface` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/updatePrescriptionStatusByInterface` |

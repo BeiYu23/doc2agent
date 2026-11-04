@@ -1,11 +1,12 @@
-# supplyCenter.order.cancel
+# 采购单取消
 
-> 采购单取消
+> supplyCenter.order.cancel — 采购单取消
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.order.cancel` |
 | 中文名 | 采购单取消 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-order-cancel` |
+| 接口 ID | `doudian.selection.supplyCenter.order.cancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/order/cancel` |

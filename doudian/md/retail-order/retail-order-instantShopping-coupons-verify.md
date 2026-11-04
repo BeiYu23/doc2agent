@@ -1,11 +1,12 @@
-# instantShopping.coupons.verify
+# 即时零售验券
 
-> 即时零售验券
+> instantShopping.coupons.verify — 即时零售验券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-order.instantShopping.coupons.verify` |
 | 中文名 | 即时零售验券 |
+| 文档地址 | `/docs/doudian/retail-order/retail-order-instantShopping-coupons-verify` |
+| 接口 ID | `doudian.retail-order.instantShopping.coupons.verify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

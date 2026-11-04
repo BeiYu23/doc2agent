@@ -1,11 +1,12 @@
-# inspection.inspectionInfo.submit
+# 品控中心-质检结果回传
 
-> 品控中心-质检结果回传
+> inspection.inspectionInfo.submit — 品控中心-质检结果回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.inspection.inspectionInfo.submit` |
 | 中文名 | 品控中心-质检结果回传 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-inspection-inspectionInfo-submit` |
+| 接口 ID | `doudian.warehouse.inspection.inspectionInfo.submit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/inspectionInfo/submit` |

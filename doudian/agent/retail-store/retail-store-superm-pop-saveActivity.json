@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.pop.saveActivity",
+  "cnName": "保存小时达活动",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-pop-saveActivity",
+  "name": "superm.pop.saveActivity",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.pop.saveActivity",
   "description": "保存小时达活动",
   "method": "GET",
   "path": "/superm/pop/saveActivity",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2967",
   "updatedAt": "2023-02-17",
-  "_file_stem": "retail-store-superm-pop-saveActivity",
-  "cnName": "保存小时达活动"
+  "_file_stem": "retail-store-superm-pop-saveActivity"
 }

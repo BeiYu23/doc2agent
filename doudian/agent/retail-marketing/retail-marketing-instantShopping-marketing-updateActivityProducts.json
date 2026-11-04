@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.updateActivityProducts",
+  "cnName": "更新商品",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-updateActivityProducts",
+  "name": "instantShopping.marketing.updateActivityProducts",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.updateActivityProducts",
   "description": "更新商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -1170,6 +1172,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6383",
   "updatedAt": "2024-05-22",
-  "_file_stem": "retail-marketing-instantShopping-marketing-updateActivityProducts",
-  "cnName": "更新商品"
+  "_file_stem": "retail-marketing-instantShopping-marketing-updateActivityProducts"
 }

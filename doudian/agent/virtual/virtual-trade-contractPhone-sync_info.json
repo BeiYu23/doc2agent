@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.trade.contractPhone.sync_info",
+  "cnName": "合约机办理结果同步",
+  "docUrl": "/docs/doudian/virtual/virtual-trade-contractPhone-sync_info",
+  "name": "trade.contractPhone.sync_info",
   "platform": "doudian",
   "group": "virtual",
-  "name": "trade.contractPhone.sync_info",
   "description": "合约机办理结果同步接口",
   "method": "GET",
   "path": "/trade/contractPhone/sync_info",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/2437",
   "updatedAt": "2022-10-10",
-  "_file_stem": "virtual-trade-contractPhone-sync_info",
-  "cnName": "合约机办理结果同步"
+  "_file_stem": "virtual-trade-contractPhone-sync_info"
 }

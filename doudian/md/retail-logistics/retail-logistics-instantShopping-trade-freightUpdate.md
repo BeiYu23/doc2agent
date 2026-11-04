@@ -1,11 +1,12 @@
-# instantShopping.trade.freightUpdate
+# 即时零售运费模板更新
 
-> 即时零售运费模板更新接口
+> instantShopping.trade.freightUpdate — 即时零售运费模板更新接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.instantShopping.trade.freightUpdate` |
 | 中文名 | 即时零售运费模板更新 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-instantShopping-trade-freightUpdate` |
+| 接口 ID | `doudian.retail-logistics.instantShopping.trade.freightUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

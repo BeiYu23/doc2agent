@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.merge",
+  "cnName": "判断一批待发货订单",
+  "docUrl": "/docs/doudian/order/order-order-merge",
+  "name": "order.merge",
   "platform": "doudian",
   "group": "order",
-  "name": "order.merge",
   "description": "判断一批待发货订单，哪些可以收件人信息一致，可以使用同一个包裹进行发货：\n1. 批处理上限为100\n2. 只支持近15天的代发货订单的合单判断\n3. 同一天创建的订单：open_address_id不同的，一定不可以合单；open_address_id相同",
   "method": "GET",
   "path": "/order/merge",
@@ -100,6 +102,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/4042",
   "updatedAt": "2023-06-15",
-  "_file_stem": "order-order-merge",
-  "cnName": "判断一批待发货订单"
+  "_file_stem": "order-order-merge"
 }

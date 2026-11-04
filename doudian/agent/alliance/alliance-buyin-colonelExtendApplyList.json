@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.colonelExtendApplyList",
+  "cnName": "专属团长活动商品延时申请结果查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-colonelExtendApplyList",
+  "name": "buyin.colonelExtendApplyList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.colonelExtendApplyList",
   "description": "专属团长活动商品延时申请结果查询",
   "method": "GET",
   "path": "/buyin/colonelExtendApplyList",
@@ -130,6 +132,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2430",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-colonelExtendApplyList",
-  "cnName": "专属团长活动商品延时申请结果查询"
+  "_file_stem": "alliance-buyin-colonelExtendApplyList"
 }

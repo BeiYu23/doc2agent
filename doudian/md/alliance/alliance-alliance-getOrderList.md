@@ -1,11 +1,12 @@
-# alliance.getOrderList
+# 查询联盟订单明细
 
-> 查询联盟订单明细
+> alliance.getOrderList — 查询联盟订单明细
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.getOrderList` |
 | 中文名 | 查询联盟订单明细 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-getOrderList` |
+| 接口 ID | `doudian.alliance.alliance.getOrderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/getOrderList` |

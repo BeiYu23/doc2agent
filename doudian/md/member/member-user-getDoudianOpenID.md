@@ -1,11 +1,12 @@
-# user.getDoudianOpenID
+# 获取抖店用户唯一标识
 
-> 获取抖店用户唯一标识
+> user.getDoudianOpenID — 获取抖店用户唯一标识
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.user.getDoudianOpenID` |
 | 中文名 | 获取抖店用户唯一标识 |
+| 文档地址 | `/docs/doudian/member/member-user-getDoudianOpenID` |
+| 接口 ID | `doudian.member.user.getDoudianOpenID` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/user/getDoudianOpenID` |

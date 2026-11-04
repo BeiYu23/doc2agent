@@ -1,11 +1,12 @@
-# sms.audience.createCrowdTask
+# 创建种子人群任务
 
-> 创建种子人群任务
+> sms.audience.createCrowdTask — 创建种子人群任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.audience.createCrowdTask` |
 | 中文名 | 创建种子人群任务 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-audience-createCrowdTask` |
+| 接口 ID | `doudian.sms.sms.audience.createCrowdTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/createCrowdTask` |

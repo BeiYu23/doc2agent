@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.openIdSwitch",
+  "cnName": "提供抖音和抖店 Openid 转换功能",
+  "docUrl": "/docs/doudian/tool/tool-open-openIdSwitch",
+  "name": "open.openIdSwitch",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.openIdSwitch",
   "description": "提供抖音和抖店 Openid 转换功能",
   "method": "GET",
   "path": "/open/openIdSwitch",
@@ -98,6 +100,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/1973",
   "updatedAt": "2022-06-02",
-  "_file_stem": "tool-open-openIdSwitch",
-  "cnName": "提供抖音和抖店 Openid 转换功能"
+  "_file_stem": "tool-open-openIdSwitch"
 }

@@ -1,11 +1,12 @@
-# address.delAftersaleStrategy
+# 删除售后地址策略
 
-> 删除售后地址策略
+> address.delAftersaleStrategy — 删除售后地址策略
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.address.delAftersaleStrategy` |
 | 中文名 | 删除售后地址策略 |
+| 文档地址 | `/docs/doudian/refund/refund-address-delAftersaleStrategy` |
+| 接口 ID | `doudian.refund.address.delAftersaleStrategy` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/delAftersaleStrategy` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.DeleteProductRecord",
+  "cnName": "删除备案",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-DeleteProductRecord",
+  "name": "crossBorder.DeleteProductRecord",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.DeleteProductRecord",
   "description": "删除备案",
   "method": "GET",
   "path": "/crossBorder/DeleteProductRecord",
@@ -131,6 +133,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6182",
   "updatedAt": "2024-02-23",
-  "_file_stem": "cross-border-crossBorder-DeleteProductRecord",
-  "cnName": "删除备案"
+  "_file_stem": "cross-border-crossBorder-DeleteProductRecord"
 }

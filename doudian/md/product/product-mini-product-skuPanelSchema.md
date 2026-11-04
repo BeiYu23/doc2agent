@@ -1,11 +1,12 @@
-# mini.product.skuPanelSchema
+# 获取商品sku面板schema
 
-> 获取商品sku面板schema
+> mini.product.skuPanelSchema — 获取商品sku面板schema
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.mini.product.skuPanelSchema` |
 | 中文名 | 获取商品sku面板schema |
+| 文档地址 | `/docs/doudian/product/product-mini-product-skuPanelSchema` |
+| 接口 ID | `doudian.product.mini.product.skuPanelSchema` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/product/skuPanelSchema` |

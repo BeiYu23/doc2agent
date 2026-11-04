@@ -1,11 +1,12 @@
-# power.pushRoute
+# 用于物流轨迹接口迁移（仅用于兼容老物流网关
 
-> 用于物流轨迹接口迁移（仅用于兼容老物流网关）
+> power.pushRoute — 用于物流轨迹接口迁移（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.pushRoute` |
 | 中文名 | 用于物流轨迹接口迁移（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-pushRoute` |
+| 接口 ID | `doudian.logistics.power.pushRoute` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushRoute` |

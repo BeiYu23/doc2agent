@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.mergeV2",
+  "cnName": "合单校验",
+  "docUrl": "/docs/doudian/order/order-order-mergeV2",
+  "name": "order.mergeV2",
   "platform": "doudian",
   "group": "order",
-  "name": "order.mergeV2",
   "description": "合单校验接口",
   "method": "GET",
   "path": "/order/mergeV2",
@@ -128,6 +130,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/6649",
   "updatedAt": "2024-06-21",
-  "_file_stem": "order-order-mergeV2",
-  "cnName": "合单校验"
+  "_file_stem": "order-order-mergeV2"
 }

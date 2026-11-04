@@ -1,11 +1,12 @@
-# product.getCatePropertyV2
+# 调用【/product/addV2】创建商品和…
 
-> 1、调用【/product/addV2】创建商品和【/product/editV2】更新商品时，请求参数【product_format_new】字段需传入。
+> product.getCatePropertyV2 — 1、调用【/product/addV2】创建商品和【/product/editV2】更新商品时，请求参数【product_format_new】字段需传入。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getCatePropertyV2` |
 | 中文名 | 调用【/product/addV2】创建商品和… |
+| 文档地址 | `/docs/doudian/product/product-product-getCatePropertyV2` |
+| 接口 ID | `doudian.product.product.getCatePropertyV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getCatePropertyV2` |

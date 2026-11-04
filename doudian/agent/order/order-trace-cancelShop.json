@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.trace.cancelShop",
+  "cnName": "订单链路监控删除用户",
+  "docUrl": "/docs/doudian/order/order-trace-cancelShop",
+  "name": "trace.cancelShop",
   "platform": "doudian",
   "group": "order",
-  "name": "trace.cancelShop",
   "description": "订单链路监控删除用户",
   "method": "GET",
   "path": "/trace/cancelShop",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2793",
   "updatedAt": "2022-12-13",
-  "_file_stem": "order-trace-cancelShop",
-  "cnName": "订单链路监控删除用户"
+  "_file_stem": "order-trace-cancelShop"
 }

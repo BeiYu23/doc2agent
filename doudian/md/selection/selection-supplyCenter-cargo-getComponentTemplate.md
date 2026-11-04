@@ -1,11 +1,12 @@
-# supplyCenter.cargo.getComponentTemplate
+# 分页查询尺寸模板
 
-> 分页查询尺寸模板
+> supplyCenter.cargo.getComponentTemplate — 分页查询尺寸模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.cargo.getComponentTemplate` |
 | 中文名 | 分页查询尺寸模板 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-cargo-getComponentTemplate` |
+| 接口 ID | `doudian.selection.supplyCenter.cargo.getComponentTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

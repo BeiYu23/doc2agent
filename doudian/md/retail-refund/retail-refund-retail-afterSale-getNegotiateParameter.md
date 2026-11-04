@@ -1,11 +1,12 @@
-# retail.afterSale.getNegotiateParameter
+# 售后协商参数获取
 
-> 售后协商参数获取
+> retail.afterSale.getNegotiateParameter — 售后协商参数获取
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-refund.retail.afterSale.getNegotiateParameter` |
 | 中文名 | 售后协商参数获取 |
+| 文档地址 | `/docs/doudian/retail-refund/retail-refund-retail-afterSale-getNegotiateParameter` |
+| 接口 ID | `doudian.retail-refund.retail.afterSale.getNegotiateParameter` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

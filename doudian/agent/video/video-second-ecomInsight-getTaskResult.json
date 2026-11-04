@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.getTaskResult",
+  "cnName": "获取任务结果",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-getTaskResult",
+  "name": "second.ecomInsight.getTaskResult",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.getTaskResult",
   "description": "获取任务结果",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -314,6 +316,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7930",
   "updatedAt": "2026-04-02",
-  "_file_stem": "video-second-ecomInsight-getTaskResult",
-  "cnName": "获取任务结果"
+  "_file_stem": "video-second-ecomInsight-getTaskResult"
 }

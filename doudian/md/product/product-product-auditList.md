@@ -1,11 +1,12 @@
-# product.auditList
+# 审核记录列表
 
-> 审核记录列表
+> product.auditList — 审核记录列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.auditList` |
 | 中文名 | 审核记录列表 |
+| 文档地址 | `/docs/doudian/product/product-product-auditList` |
+| 接口 ID | `doudian.product.product.auditList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/auditList` |

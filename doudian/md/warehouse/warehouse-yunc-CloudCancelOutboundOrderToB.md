@@ -1,11 +1,12 @@
-# yunc.CloudCancelOutboundOrderToB
+# 云仓出库取消toB
 
-> 云仓出库取消toB
+> yunc.CloudCancelOutboundOrderToB — 云仓出库取消toB
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.CloudCancelOutboundOrderToB` |
 | 中文名 | 云仓出库取消toB |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-CloudCancelOutboundOrderToB` |
+| 接口 ID | `doudian.warehouse.yunc.CloudCancelOutboundOrderToB` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/CloudCancelOutboundOrderToB` |

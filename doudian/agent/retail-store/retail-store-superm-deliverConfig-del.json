@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.deliverConfig.del",
+  "cnName": "时效管理删除",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-deliverConfig-del",
+  "name": "superm.deliverConfig.del",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.deliverConfig.del",
   "description": "时效管理删除",
   "method": "GET",
   "path": "/superm/deliverConfig/del",
@@ -65,6 +67,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3598",
   "updatedAt": "2023-10-08",
-  "_file_stem": "retail-store-superm-deliverConfig-del",
-  "cnName": "时效管理删除"
+  "_file_stem": "retail-store-superm-deliverConfig-del"
 }

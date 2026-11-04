@@ -1,11 +1,12 @@
-# buyin.institutePidCreate
+# 抖客PID创建
 
-> 抖客PID创建
+> buyin.institutePidCreate — 抖客PID创建
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.institutePidCreate` |
 | 中文名 | 抖客PID创建 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-institutePidCreate` |
+| 接口 ID | `doudian.alliance.buyin.institutePidCreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/institutePidCreate` |

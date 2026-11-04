@@ -1,11 +1,12 @@
-# shop.topupTmaToken
+# 获取腾讯侧小程序登陆态token
 
-> 获取腾讯侧小程序登陆态token
+> shop.topupTmaToken — 获取腾讯侧小程序登陆态token
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.shop.topupTmaToken` |
 | 中文名 | 获取腾讯侧小程序登陆态token |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-shop-topupTmaToken` |
+| 接口 ID | `doudian.miniapp.shop.topupTmaToken` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/topupTmaToken` |

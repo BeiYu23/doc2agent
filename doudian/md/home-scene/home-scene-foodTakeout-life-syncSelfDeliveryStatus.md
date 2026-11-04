@@ -1,11 +1,12 @@
-# foodTakeout.life.syncSelfDeliveryStatus
+# 生服-自配送回传配送信息
 
-> 生服-自配送回传配送信息
+> foodTakeout.life.syncSelfDeliveryStatus — 生服-自配送回传配送信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.home-scene.foodTakeout.life.syncSelfDeliveryStatus` |
 | 中文名 | 生服-自配送回传配送信息 |
+| 文档地址 | `/docs/doudian/home-scene/home-scene-foodTakeout-life-syncSelfDeliveryStatus` |
+| 接口 ID | `doudian.home-scene.foodTakeout.life.syncSelfDeliveryStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

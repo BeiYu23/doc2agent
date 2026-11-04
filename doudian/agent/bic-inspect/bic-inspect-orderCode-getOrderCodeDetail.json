@@ -1,8 +1,10 @@
 {
   "id": "doudian.bic-inspect.orderCode.getOrderCodeDetail",
+  "cnName": "通过订单码和商家信息查询订单码绑定的订单详情信…",
+  "docUrl": "/docs/doudian/bic-inspect/bic-inspect-orderCode-getOrderCodeDetail",
+  "name": "orderCode.getOrderCodeDetail",
   "platform": "doudian",
   "group": "bic-inspect",
-  "name": "orderCode.getOrderCodeDetail",
   "description": "通过订单码和商家信息查询订单码绑定的订单详情信息(包括材质、镶嵌材质、质量、商品名称等)",
   "method": "GET",
   "path": "/orderCode/getOrderCodeDetail",
@@ -111,6 +113,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/2857",
   "updatedAt": "2024-07-30",
-  "_file_stem": "bic-inspect-orderCode-getOrderCodeDetail",
-  "cnName": "通过订单码和商家信息查询订单码绑定的订单详情信…"
+  "_file_stem": "bic-inspect-orderCode-getOrderCodeDetail"
 }

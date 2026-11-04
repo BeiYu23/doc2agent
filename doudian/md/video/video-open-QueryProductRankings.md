@@ -1,11 +1,12 @@
-# open.QueryProductRankings
+# 查询商品榜单
 
-> 查询商品榜单
+> open.QueryProductRankings — 查询商品榜单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.QueryProductRankings` |
 | 中文名 | 查询商品榜单 |
+| 文档地址 | `/docs/doudian/video/video-open-QueryProductRankings` |
+| 接口 ID | `doudian.video.open.QueryProductRankings` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/QueryProductRankings` |

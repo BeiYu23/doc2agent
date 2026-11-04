@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.resale.order.userSelfInspect",
+  "cnName": "一站式换新用户自助验机完成",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-resale-order-userSelfInspect",
+  "name": "resale.order.userSelfInspect",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "resale.order.userSelfInspect",
   "description": "一站式换新用户自助验机完成",
   "method": "GET",
   "path": "/resale/order/userSelfInspect",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7563",
   "updatedAt": "2025-08-06",
-  "_file_stem": "logistics-provider-resale-order-userSelfInspect",
-  "cnName": "一站式换新用户自助验机完成"
+  "_file_stem": "logistics-provider-resale-order-userSelfInspect"
 }

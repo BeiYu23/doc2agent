@@ -1,11 +1,12 @@
-# second.liveroom.upsertAnchorBindRelationship
+# 【三方接口】更新应用绑定的直播间主播列表
 
-> 【三方接口】更新应用绑定的直播间主播列表
+> second.liveroom.upsertAnchorBindRelationship — 【三方接口】更新应用绑定的直播间主播列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.permission.second.liveroom.upsertAnchorBindRelationship` |
 | 中文名 | 【三方接口】更新应用绑定的直播间主播列表 |
+| 文档地址 | `/docs/doudian/permission/permission-second-liveroom-upsertAnchorBindRelationship` |
+| 接口 ID | `doudian.permission.second.liveroom.upsertAnchorBindRelationship` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

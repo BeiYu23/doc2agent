@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.crossborder.orderCustomClearance",
+  "cnName": "服务商回告清关状态",
+  "docUrl": "/docs/doudian/logistics/logistics-crossborder-orderCustomClearance",
+  "name": "crossborder.orderCustomClearance",
   "platform": "doudian",
   "group": "logistics",
-  "name": "crossborder.orderCustomClearance",
   "description": "服务商回告清关状态",
   "method": "GET",
   "path": "/crossborder/orderCustomClearance",
@@ -158,6 +160,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/527",
   "updatedAt": "2021-05-18",
-  "_file_stem": "logistics-crossborder-orderCustomClearance",
-  "cnName": "服务商回告清关状态"
+  "_file_stem": "logistics-crossborder-orderCustomClearance"
 }

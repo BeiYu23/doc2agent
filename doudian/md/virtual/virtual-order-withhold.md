@@ -1,11 +1,12 @@
-# order.withhold
+# 合约机分期贴息
 
-> 合约机分期贴息，如果消费者违约，运营商通过这个接口发起代扣。
+> order.withhold — 合约机分期贴息，如果消费者违约，运营商通过这个接口发起代扣。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.order.withhold` |
 | 中文名 | 合约机分期贴息 |
+| 文档地址 | `/docs/doudian/virtual/virtual-order-withhold` |
+| 接口 ID | `doudian.virtual.order.withhold` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/withhold` |

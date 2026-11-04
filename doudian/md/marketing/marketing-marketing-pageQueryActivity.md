@@ -1,11 +1,12 @@
-# marketing.pageQueryActivity
+# 分页查询营销玩法
 
-> 分页查询营销玩法
+> marketing.pageQueryActivity — 分页查询营销玩法
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.pageQueryActivity` |
 | 中文名 | 分页查询营销玩法 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-pageQueryActivity` |
+| 接口 ID | `doudian.marketing.marketing.pageQueryActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/pageQueryActivity` |

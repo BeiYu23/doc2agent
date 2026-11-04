@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.getTaskBillDetail",
+  "cnName": "获取任务账单",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-getTaskBillDetail",
+  "name": "second.ecomInsight.getTaskBillDetail",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.getTaskBillDetail",
   "description": "获取任务账单详情",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8344",
   "updatedAt": "2026-05-29",
-  "_file_stem": "video-second-ecomInsight-getTaskBillDetail",
-  "cnName": "获取任务账单"
+  "_file_stem": "video-second-ecomInsight-getTaskBillDetail"
 }

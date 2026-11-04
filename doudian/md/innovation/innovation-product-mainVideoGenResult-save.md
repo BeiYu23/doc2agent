@@ -1,11 +1,12 @@
-# product.mainVideoGenResult.save
+# 主图视频生成结果回传
 
-> 主图视频生成结果回传
+> product.mainVideoGenResult.save — 主图视频生成结果回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.innovation.product.mainVideoGenResult.save` |
 | 中文名 | 主图视频生成结果回传 |
+| 文档地址 | `/docs/doudian/innovation/innovation-product-mainVideoGenResult-save` |
+| 接口 ID | `doudian.innovation.product.mainVideoGenResult.save` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/mainVideoGenResult/save` |

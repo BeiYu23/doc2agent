@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.resale.order.queryOperationOrderCallLog",
+  "cnName": "以旧换新隐私号接通信息查询",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-resale-order-queryOperationOrderCallLog",
+  "name": "resale.order.queryOperationOrderCallLog",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "resale.order.queryOperationOrderCallLog",
   "description": "以旧换新隐私号接通信息查询",
   "method": "GET",
   "path": "/resale/order/queryOperationOrderCallLog",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5875",
   "updatedAt": "2023-12-14",
-  "_file_stem": "logistics-provider-resale-order-queryOperationOrderCallLog",
-  "cnName": "以旧换新隐私号接通信息查询"
+  "_file_stem": "logistics-provider-resale-order-queryOperationOrderCallLog"
 }

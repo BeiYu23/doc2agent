@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.instantShopping.querySaleOutboundOrder",
+  "cnName": "查询抖音即时零售共享仓销售出库单信息",
+  "docUrl": "/docs/doudian/warehouse/warehouse-instantShopping-querySaleOutboundOrder",
+  "name": "instantShopping.querySaleOutboundOrder",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "instantShopping.querySaleOutboundOrder",
   "description": "查询抖音即时零售共享仓销售出库单信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6387",
   "updatedAt": "2024-04-10",
-  "_file_stem": "warehouse-instantShopping-querySaleOutboundOrder",
-  "cnName": "查询抖音即时零售共享仓销售出库单信息"
+  "_file_stem": "warehouse-instantShopping-querySaleOutboundOrder"
 }

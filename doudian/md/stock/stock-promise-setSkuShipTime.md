@@ -1,13 +1,14 @@
-# promise.setSkuShipTime
+# 【接口调用需加白，不再新增名单】
 
-> 【接口调用需加白，不再新增名单】
+> promise.setSkuShipTime — 【接口调用需加白，不再新增名单】
 设置sku发货时效
 设置sku在某仓的发货时效
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.promise.setSkuShipTime` |
 | 中文名 | 【接口调用需加白，不再新增名单】 |
+| 文档地址 | `/docs/doudian/stock/stock-promise-setSkuShipTime` |
+| 接口 ID | `doudian.stock.promise.setSkuShipTime` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/setSkuShipTime` |

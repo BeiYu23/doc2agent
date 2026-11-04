@@ -1,11 +1,12 @@
-# alliance.colonelBatchAddCaptainGoods
+# 批量加商品到指定活动
 
-> 批量加商品到指定活动
+> alliance.colonelBatchAddCaptainGoods — 批量加商品到指定活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.colonelBatchAddCaptainGoods` |
 | 中文名 | 批量加商品到指定活动 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-colonelBatchAddCaptainGoods` |
+| 接口 ID | `doudian.alliance.alliance.colonelBatchAddCaptainGoods` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelBatchAddCaptainGoods` |

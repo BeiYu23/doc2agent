@@ -1,12 +1,13 @@
-# material.deleteFolder
+# 彻底删除文件夹
 
-> 彻底删除文件夹，包括当前文件夹和当前文件夹包含的所有子文件夹和素材。删除后不可查询。
+> material.deleteFolder — 彻底删除文件夹，包括当前文件夹和当前文件夹包含的所有子文件夹和素材。删除后不可查询。
 批量操作时，要求入参中的所有文件夹在同一个父文件夹下。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.deleteFolder` |
 | 中文名 | 彻底删除文件夹 |
+| 文档地址 | `/docs/doudian/material/material-material-deleteFolder` |
+| 接口 ID | `doudian.material.material.deleteFolder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/deleteFolder` |

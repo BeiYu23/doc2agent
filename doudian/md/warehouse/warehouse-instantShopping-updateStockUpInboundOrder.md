@@ -1,11 +1,12 @@
-# instantShopping.updateStockUpInboundOrder
+# 更新备货入库子单信息
 
-> 更新备货入库子单信息
+> instantShopping.updateStockUpInboundOrder — 更新备货入库子单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.updateStockUpInboundOrder` |
 | 中文名 | 更新备货入库子单信息 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-updateStockUpInboundOrder` |
+| 接口 ID | `doudian.warehouse.instantShopping.updateStockUpInboundOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

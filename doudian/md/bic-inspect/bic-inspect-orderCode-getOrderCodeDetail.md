@@ -1,11 +1,12 @@
-# orderCode.getOrderCodeDetail
+# 通过订单码和商家信息查询订单码绑定的订单详情信…
 
-> 通过订单码和商家信息查询订单码绑定的订单详情信息(包括材质、镶嵌材质、质量、商品名称等)
+> orderCode.getOrderCodeDetail — 通过订单码和商家信息查询订单码绑定的订单详情信息(包括材质、镶嵌材质、质量、商品名称等)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bic-inspect.orderCode.getOrderCodeDetail` |
 | 中文名 | 通过订单码和商家信息查询订单码绑定的订单详情信… |
+| 文档地址 | `/docs/doudian/bic-inspect/bic-inspect-orderCode-getOrderCodeDetail` |
+| 接口 ID | `doudian.bic-inspect.orderCode.getOrderCodeDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/getOrderCodeDetail` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.callAndCancelTransportCapability",
+  "cnName": "同城零售运力呼叫和运力取消",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-callAndCancelTransportCapability",
+  "name": "yunc.callAndCancelTransportCapability",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.callAndCancelTransportCapability",
   "description": "同城零售运力呼叫和运力取消接口",
   "method": "GET",
   "path": "/yunc/callAndCancelTransportCapability",
@@ -478,6 +480,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/3581",
   "updatedAt": "2023-04-21",
-  "_file_stem": "warehouse-yunc-callAndCancelTransportCapability",
-  "cnName": "同城零售运力呼叫和运力取消"
+  "_file_stem": "warehouse-yunc-callAndCancelTransportCapability"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.queryPublicDomainAudience",
+  "cnName": "查询公域标签圈选的人群包",
+  "docUrl": "/docs/doudian/sms/sms-sms-queryPublicDomainAudience",
+  "name": "sms.queryPublicDomainAudience",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.queryPublicDomainAudience",
   "description": "查询公域标签圈选的人群包",
   "method": "GET",
   "path": "/sms/queryPublicDomainAudience",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7503",
   "updatedAt": "2025-10-15",
-  "_file_stem": "sms-sms-queryPublicDomainAudience",
-  "cnName": "查询公域标签圈选的人群包"
+  "_file_stem": "sms-sms-queryPublicDomainAudience"
 }

@@ -1,11 +1,12 @@
-# QA.xz002
+# 接口描述11
 
-> 接口描述11
+> QA.xz002 — 接口描述11
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.QA.xz002` |
 | 中文名 | 接口描述11 |
+| 文档地址 | `/docs/doudian/shop/shop-QA-xz002` |
+| 接口 ID | `doudian.shop.QA.xz002` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/QA/xz002` |

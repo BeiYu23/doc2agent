@@ -1,11 +1,12 @@
-# sms.sign.getVersion
+# 获取短信签名版本
 
-> 获取短信签名版本
+> sms.sign.getVersion — 获取短信签名版本
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.sign.getVersion` |
 | 中文名 | 获取短信签名版本 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-sign-getVersion` |
+| 接口 ID | `doudian.sms.sms.sign.getVersion` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/sign/getVersion` |

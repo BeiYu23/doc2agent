@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.confirmEbillInfo",
+  "cnName": "校验面单信息",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-confirmEbillInfo",
+  "name": "logistics.confirmEbillInfo",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.confirmEbillInfo",
   "description": "校验面单信息",
   "method": "GET",
   "path": "/logistics/confirmEbillInfo",
@@ -118,6 +120,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6894",
   "updatedAt": "2024-09-23",
-  "_file_stem": "logistics-provider-logistics-confirmEbillInfo",
-  "cnName": "校验面单信息"
+  "_file_stem": "logistics-provider-logistics-confirmEbillInfo"
 }

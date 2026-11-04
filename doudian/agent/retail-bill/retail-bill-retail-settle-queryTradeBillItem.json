@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-bill.retail.settle.queryTradeBillItem",
+  "cnName": "即时零售交易账单查询",
+  "docUrl": "/docs/doudian/retail-bill/retail-bill-retail-settle-queryTradeBillItem",
+  "name": "retail.settle.queryTradeBillItem",
   "platform": "doudian",
   "group": "retail-bill",
-  "name": "retail.settle.queryTradeBillItem",
   "description": "即时零售交易账单查询接口",
   "method": "GET",
   "path": "/retail/settle/queryTradeBillItem",
@@ -210,6 +212,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1518/6772",
   "updatedAt": "2026-07-16",
-  "_file_stem": "retail-bill-retail-settle-queryTradeBillItem",
-  "cnName": "即时零售交易账单查询"
+  "_file_stem": "retail-bill-retail-settle-queryTradeBillItem"
 }

@@ -1,11 +1,12 @@
-# yunc.cancelOutboundOrderToB
+# toB场景取消出库单
 
-> toB场景取消出库单
+> yunc.cancelOutboundOrderToB — toB场景取消出库单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.cancelOutboundOrderToB` |
 | 中文名 | toB场景取消出库单 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-cancelOutboundOrderToB` |
+| 接口 ID | `doudian.warehouse.yunc.cancelOutboundOrderToB` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/cancelOutboundOrderToB` |

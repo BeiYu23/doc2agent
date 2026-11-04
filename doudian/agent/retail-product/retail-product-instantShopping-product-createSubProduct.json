@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-product.instantShopping.product.createSubProduct",
+  "cnName": "基于店铺主品创建门店子品 (同步创建",
+  "docUrl": "/docs/doudian/retail-product/retail-product-instantShopping-product-createSubProduct",
+  "name": "instantShopping.product.createSubProduct",
   "platform": "doudian",
   "group": "retail-product",
-  "name": "instantShopping.product.createSubProduct",
   "description": "基于店铺主品创建门店子品 (同步创建)",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -270,6 +272,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7452",
   "updatedAt": "2025-05-13",
-  "_file_stem": "retail-product-instantShopping-product-createSubProduct",
-  "cnName": "基于店铺主品创建门店子品 (同步创建"
+  "_file_stem": "retail-product-instantShopping-product-createSubProduct"
 }

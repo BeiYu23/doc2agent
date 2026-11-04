@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-stock.instantShopping.updateErpSaleOutboundOrder",
+  "cnName": "更新Erp订单关联的出库单状态",
+  "docUrl": "/docs/doudian/retail-stock/retail-stock-instantShopping-updateErpSaleOutboundOrder",
+  "name": "instantShopping.updateErpSaleOutboundOrder",
   "platform": "doudian",
   "group": "retail-stock",
-  "name": "instantShopping.updateErpSaleOutboundOrder",
   "description": "更新Erp订单关联的出库单状态",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -347,6 +349,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1594/7647",
   "updatedAt": "2025-08-06",
-  "_file_stem": "retail-stock-instantShopping-updateErpSaleOutboundOrder",
-  "cnName": "更新Erp订单关联的出库单状态"
+  "_file_stem": "retail-stock-instantShopping-updateErpSaleOutboundOrder"
 }

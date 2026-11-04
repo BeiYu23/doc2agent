@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.createPrice",
+  "cnName": "上传估价",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-createPrice",
+  "name": "recycle.createPrice",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.createPrice",
   "description": "上传估价",
   "method": "GET",
   "path": "/recycle/createPrice",
@@ -119,6 +121,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1883",
   "updatedAt": "2021-09-03",
-  "_file_stem": "recycle-recycle-createPrice",
-  "cnName": "上传估价"
+  "_file_stem": "recycle-recycle-createPrice"
 }

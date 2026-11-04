@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.institutePidCreate",
+  "cnName": "抖客PID创建",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-institutePidCreate",
+  "name": "buyin.institutePidCreate",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.institutePidCreate",
   "description": "抖客PID创建",
   "method": "GET",
   "path": "/buyin/institutePidCreate",
@@ -144,6 +146,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1273",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-institutePidCreate",
-  "cnName": "抖客PID创建"
+  "_file_stem": "alliance-buyin-institutePidCreate"
 }

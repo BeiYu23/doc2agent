@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.deleteVmsTemplate",
+  "cnName": "删除视频短信模板",
+  "docUrl": "/docs/doudian/sms/sms-sms-deleteVmsTemplate",
+  "name": "sms.deleteVmsTemplate",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.deleteVmsTemplate",
   "description": "删除视频短信模板",
   "method": "GET",
   "path": "/sms/deleteVmsTemplate",
@@ -74,6 +76,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/4016",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-deleteVmsTemplate",
-  "cnName": "删除视频短信模板"
+  "_file_stem": "sms-sms-deleteVmsTemplate"
 }

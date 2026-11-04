@@ -1,8 +1,10 @@
 {
   "id": "doudian.pickup.logistics.overSize.reportException",
+  "cnName": "上报大件上门取件履约过程中的异常",
+  "docUrl": "/docs/doudian/pickup/pickup-logistics-overSize-reportException",
+  "name": "logistics.overSize.reportException",
   "platform": "doudian",
   "group": "pickup",
-  "name": "logistics.overSize.reportException",
   "description": "上报大件上门取件履约过程中的异常",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -377,6 +379,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1526/6706",
   "updatedAt": "2026-01-09",
-  "_file_stem": "pickup-logistics-overSize-reportException",
-  "cnName": "上报大件上门取件履约过程中的异常"
+  "_file_stem": "pickup-logistics-overSize-reportException"
 }

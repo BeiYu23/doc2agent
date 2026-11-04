@@ -1,11 +1,12 @@
-# sku.editCode
+# 修改sku编码
 
-> 修改sku编码
+> sku.editCode — 修改sku编码
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.sku.editCode` |
 | 中文名 | 修改sku编码 |
+| 文档地址 | `/docs/doudian/product/product-sku-editCode` |
+| 接口 ID | `doudian.product.sku.editCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/editCode` |

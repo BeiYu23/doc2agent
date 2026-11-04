@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.address.update",
+  "cnName": "该接口支持店铺修改单条售后地址信息",
+  "docUrl": "/docs/doudian/shop/shop-address-update",
+  "name": "address.update",
   "platform": "doudian",
   "group": "shop",
-  "name": "address.update",
   "description": "该接口支持店铺修改单条售后地址信息",
   "method": "GET",
   "path": "/address/update",
@@ -243,6 +245,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1511",
   "updatedAt": "2022-10-27",
-  "_file_stem": "shop-address-update",
-  "cnName": "该接口支持店铺修改单条售后地址信息"
+  "_file_stem": "shop-address-update"
 }

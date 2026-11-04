@@ -1,11 +1,12 @@
-# supplyChain.outside.getInfoAccurateRate
+# 获取信息不准确的机构列表
 
-> 获取信息不准确的机构列表
+> supplyChain.outside.getInfoAccurateRate — 获取信息不准确的机构列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getInfoAccurateRate` |
 | 中文名 | 获取信息不准确的机构列表 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getInfoAccurateRate` |
+| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getInfoAccurateRate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

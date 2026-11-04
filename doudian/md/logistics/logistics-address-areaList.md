@@ -1,11 +1,12 @@
-# address.areaList
+# 获取区列表
 
-> 获取区列表（6.30下线）
+> address.areaList — 获取区列表（6.30下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.address.areaList` |
 | 中文名 | 获取区列表 |
+| 文档地址 | `/docs/doudian/logistics/logistics-address-areaList` |
+| 接口 ID | `doudian.logistics.address.areaList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/areaList` |

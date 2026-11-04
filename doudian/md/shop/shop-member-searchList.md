@@ -1,11 +1,12 @@
-# member.searchList
+# 会员信息列表查询
 
-> 会员信息列表查询
+> member.searchList — 会员信息列表查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.member.searchList` |
 | 中文名 | 会员信息列表查询 |
+| 文档地址 | `/docs/doudian/shop/shop-member-searchList` |
+| 接口 ID | `doudian.shop.member.searchList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/searchList` |

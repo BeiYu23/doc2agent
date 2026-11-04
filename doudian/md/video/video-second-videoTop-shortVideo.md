@@ -1,11 +1,12 @@
-# second.videoTop.shortVideo
+# 获取短视频榜单
 
-> 获取短视频榜单
+> second.videoTop.shortVideo — 获取短视频榜单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.videoTop.shortVideo` |
 | 中文名 | 获取短视频榜单 |
+| 文档地址 | `/docs/doudian/video/video-second-videoTop-shortVideo` |
+| 接口 ID | `doudian.video.second.videoTop.shortVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

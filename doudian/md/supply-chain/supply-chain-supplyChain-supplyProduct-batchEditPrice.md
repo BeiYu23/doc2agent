@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.batchEditPrice
+# 批量改价
 
-> 批量改价
+> supplyChain.supplyProduct.batchEditPrice — 批量改价
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.batchEditPrice` |
 | 中文名 | 批量改价 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-batchEditPrice` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.batchEditPrice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

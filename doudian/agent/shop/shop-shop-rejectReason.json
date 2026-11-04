@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.rejectReason",
+  "cnName": "店铺驳回原因查看",
+  "docUrl": "/docs/doudian/shop/shop-shop-rejectReason",
+  "name": "shop.rejectReason",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.rejectReason",
   "description": "店铺驳回原因查看",
   "method": "GET",
   "path": "/shop/rejectReason",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/654",
   "updatedAt": "2021-07-05",
-  "_file_stem": "shop-shop-rejectReason",
-  "cnName": "店铺驳回原因查看"
+  "_file_stem": "shop-shop-rejectReason"
 }

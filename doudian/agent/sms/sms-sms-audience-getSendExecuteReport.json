@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.audience.getSendExecuteReport",
+  "cnName": "查询任务发送情况",
+  "docUrl": "/docs/doudian/sms/sms-sms-audience-getSendExecuteReport",
+  "name": "sms.audience.getSendExecuteReport",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.audience.getSendExecuteReport",
   "description": "查询任务发送情况",
   "method": "GET",
   "path": "/sms/audience/getSendExecuteReport",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6665",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-audience-getSendExecuteReport",
-  "cnName": "查询任务发送情况"
+  "_file_stem": "sms-sms-audience-getSendExecuteReport"
 }

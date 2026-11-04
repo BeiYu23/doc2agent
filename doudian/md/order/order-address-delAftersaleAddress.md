@@ -1,11 +1,12 @@
-# address.delAftersaleAddress
+# 删除商家地址库单条地址
 
-> 删除商家地址库单条地址。
+> address.delAftersaleAddress — 删除商家地址库单条地址。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.address.delAftersaleAddress` |
 | 中文名 | 删除商家地址库单条地址 |
+| 文档地址 | `/docs/doudian/order/order-address-delAftersaleAddress` |
+| 接口 ID | `doudian.order.address.delAftersaleAddress` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/delAftersaleAddress` |

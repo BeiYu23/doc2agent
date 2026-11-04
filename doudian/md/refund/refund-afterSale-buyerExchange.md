@@ -1,11 +1,12 @@
-# afterSale.buyerExchange
+# 商家处理换货请求
 
-> 商家处理换货请求接口
+> afterSale.buyerExchange — 商家处理换货请求接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.buyerExchange` |
 | 中文名 | 商家处理换货请求 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-buyerExchange` |
+| 接口 ID | `doudian.refund.afterSale.buyerExchange` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/buyerExchange` |

@@ -1,11 +1,12 @@
-# second.product.getActiveCaptainProductInfo
+# 【二方接口】查询生效的团长商品信息
 
-> 【二方接口】查询生效的团长商品信息
+> second.product.getActiveCaptainProductInfo — 【二方接口】查询生效的团长商品信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.second.product.getActiveCaptainProductInfo` |
 | 中文名 | 【二方接口】查询生效的团长商品信息 |
+| 文档地址 | `/docs/doudian/tool/tool-second-product-getActiveCaptainProductInfo` |
+| 接口 ID | `doudian.tool.second.product.getActiveCaptainProductInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/getActiveCaptainProductInfo` |

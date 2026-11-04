@@ -1,11 +1,12 @@
-# sendHome.spi.querySpiError
+# 到家查询spi最终持久化失败落库记录
 
-> 到家查询spi最终持久化失败落库记录
+> sendHome.spi.querySpiError — 到家查询spi最终持久化失败落库记录
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-message.sendHome.spi.querySpiError` |
 | 中文名 | 到家查询spi最终持久化失败落库记录 |
+| 文档地址 | `/docs/doudian/retail-message/retail-message-sendHome-spi-querySpiError` |
+| 接口 ID | `doudian.retail-message.sendHome.spi.querySpiError` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sendHome/spi/querySpiError` |

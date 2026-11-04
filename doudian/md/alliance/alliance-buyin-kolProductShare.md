@@ -1,11 +1,12 @@
-# buyin.kolProductShare
+# 抖客商品分销转链
 
-> 抖客商品分销转链
+> buyin.kolProductShare — 抖客商品分销转链
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.kolProductShare` |
 | 中文名 | 抖客商品分销转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-kolProductShare` |
+| 接口 ID | `doudian.alliance.buyin.kolProductShare` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolProductShare` |

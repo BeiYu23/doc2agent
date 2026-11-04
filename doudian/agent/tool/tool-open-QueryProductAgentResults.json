@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.QueryProductAgentResults",
+  "cnName": "查询任务结果",
+  "docUrl": "/docs/doudian/tool/tool-open-QueryProductAgentResults",
+  "name": "open.QueryProductAgentResults",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.QueryProductAgentResults",
   "description": "查询任务结果",
   "method": "GET",
   "path": "/open/QueryProductAgentResults",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/8429",
   "updatedAt": "2026-07-31",
-  "_file_stem": "tool-open-QueryProductAgentResults",
-  "cnName": "查询任务结果"
+  "_file_stem": "tool-open-QueryProductAgentResults"
 }

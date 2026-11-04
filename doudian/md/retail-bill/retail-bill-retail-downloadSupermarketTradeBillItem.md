@@ -1,11 +1,12 @@
-# retail.downloadSupermarketTradeBillItem
+# 即时零售交易账单下载
 
-> 即时零售交易账单下载
+> retail.downloadSupermarketTradeBillItem — 即时零售交易账单下载
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-bill.retail.downloadSupermarketTradeBillItem` |
 | 中文名 | 即时零售交易账单下载 |
+| 文档地址 | `/docs/doudian/retail-bill/retail-bill-retail-downloadSupermarketTradeBillItem` |
+| 接口 ID | `doudian.retail-bill.retail.downloadSupermarketTradeBillItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/retail/downloadSupermarketTradeBillItem` |

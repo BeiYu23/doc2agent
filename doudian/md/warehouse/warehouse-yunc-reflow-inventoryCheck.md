@@ -1,11 +1,12 @@
-# yunc.reflow.inventoryCheck
+# 库存对账
 
-> 库存对账接口
+> yunc.reflow.inventoryCheck — 库存对账接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.reflow.inventoryCheck` |
 | 中文名 | 库存对账 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-reflow-inventoryCheck` |
+| 接口 ID | `doudian.warehouse.yunc.reflow.inventoryCheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/reflow/inventoryCheck` |

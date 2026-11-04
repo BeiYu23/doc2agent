@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.cancelCloudOutboundOrderToB",
+  "cnName": "toB场景取消出库单",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-cancelCloudOutboundOrderToB",
+  "name": "yunc.cancelCloudOutboundOrderToB",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.cancelCloudOutboundOrderToB",
   "description": "toB场景取消出库单",
   "method": "GET",
   "path": "/yunc/cancelCloudOutboundOrderToB",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/828",
   "updatedAt": "2021-08-17",
-  "_file_stem": "warehouse-yunc-cancelCloudOutboundOrderToB",
-  "cnName": "toB场景取消出库单"
+  "_file_stem": "warehouse-yunc-cancelCloudOutboundOrderToB"
 }

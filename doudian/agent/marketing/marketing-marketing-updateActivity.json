@@ -1,8 +1,10 @@
 {
   "id": "doudian.marketing.marketing.updateActivity",
+  "cnName": "更新营销玩法",
+  "docUrl": "/docs/doudian/marketing/marketing-marketing-updateActivity",
+  "name": "marketing.updateActivity",
   "platform": "doudian",
   "group": "marketing",
-  "name": "marketing.updateActivity",
   "description": "更新营销玩法",
   "method": "GET",
   "path": "/marketing/updateActivity",
@@ -767,6 +769,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/7781",
   "updatedAt": "2025-09-16",
-  "_file_stem": "marketing-marketing-updateActivity",
-  "cnName": "更新营销玩法"
+  "_file_stem": "marketing-marketing-updateActivity"
 }

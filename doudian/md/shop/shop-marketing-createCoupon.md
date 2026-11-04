@@ -1,11 +1,12 @@
-# marketing.createCoupon
+# 营销中心-创建优惠券
 
-> 营销中心-创建优惠券
+> marketing.createCoupon — 营销中心-创建优惠券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.marketing.createCoupon` |
 | 中文名 | 营销中心-创建优惠券 |
+| 文档地址 | `/docs/doudian/shop/shop-marketing-createCoupon` |
+| 接口 ID | `doudian.shop.marketing.createCoupon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/createCoupon` |

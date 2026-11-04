@@ -1,11 +1,12 @@
-# second.ecomInsight.taskList
+# 获取task列表
 
-> 获取task列表
+> second.ecomInsight.taskList — 获取task列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.taskList` |
 | 中文名 | 获取task列表 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-taskList` |
+| 接口 ID | `doudian.video.second.ecomInsight.taskList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

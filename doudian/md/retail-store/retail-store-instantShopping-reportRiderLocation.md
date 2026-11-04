@@ -1,11 +1,12 @@
-# instantShopping.reportRiderLocation
+# 用于自配送场景中
 
-> 用于自配送场景中，商家向抖音回传骑手位置信息，抖音会向用户展示骑手位置
+> instantShopping.reportRiderLocation — 用于自配送场景中，商家向抖音回传骑手位置信息，抖音会向用户展示骑手位置
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.instantShopping.reportRiderLocation` |
 | 中文名 | 用于自配送场景中 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-instantShopping-reportRiderLocation` |
+| 接口 ID | `doudian.retail-store.instantShopping.reportRiderLocation` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierAppointment",
+  "cnName": "服务商已预约",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierAppointment",
+  "name": "install.order.supplierAppointment",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierAppointment",
   "description": "服务商已预约",
   "method": "GET",
   "path": "/install/order/supplierAppointment",
@@ -151,6 +153,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5785",
   "updatedAt": "2023-12-21",
-  "_file_stem": "logistics-provider-install-order-supplierAppointment",
-  "cnName": "服务商已预约"
+  "_file_stem": "logistics-provider-install-order-supplierAppointment"
 }

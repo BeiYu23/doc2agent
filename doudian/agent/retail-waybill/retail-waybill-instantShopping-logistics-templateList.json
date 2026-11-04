@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.logistics.templateList",
+  "cnName": "获取商家所有标准模版信息",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-templateList",
+  "name": "instantShopping.logistics.templateList",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.logistics.templateList",
   "description": "获取商家所有标准模版信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -80,6 +82,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7243",
   "updatedAt": "2025-02-06",
-  "_file_stem": "retail-waybill-instantShopping-logistics-templateList",
-  "cnName": "获取商家所有标准模版信息"
+  "_file_stem": "retail-waybill-instantShopping-logistics-templateList"
 }

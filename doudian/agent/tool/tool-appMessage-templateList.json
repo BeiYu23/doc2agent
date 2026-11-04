@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.appMessage.templateList",
+  "cnName": "获取消息模版列表",
+  "docUrl": "/docs/doudian/tool/tool-appMessage-templateList",
+  "name": "appMessage.templateList",
   "platform": "doudian",
   "group": "tool",
-  "name": "appMessage.templateList",
   "description": "获取消息模版列表",
   "method": "GET",
   "path": "/appMessage/templateList",
@@ -95,6 +97,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3645",
   "updatedAt": "2023-05-08",
-  "_file_stem": "tool-appMessage-templateList",
-  "cnName": "获取消息模版列表"
+  "_file_stem": "tool-appMessage-templateList"
 }

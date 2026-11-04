@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-express.instantShopping.logisticsMerchant.notifySignChange",
+  "cnName": "签约信息变更通知",
+  "docUrl": "/docs/doudian/retail-express/retail-express-instantShopping-logisticsMerchant-notifySignChange",
+  "name": "instantShopping.logisticsMerchant.notifySignChange",
   "platform": "doudian",
   "group": "retail-express",
-  "name": "instantShopping.logisticsMerchant.notifySignChange",
   "description": "签约信息变更通知",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1584/7301",
   "updatedAt": "2025-03-03",
-  "_file_stem": "retail-express-instantShopping-logisticsMerchant-notifySignChange",
-  "cnName": "签约信息变更通知"
+  "_file_stem": "retail-express-instantShopping-logisticsMerchant-notifySignChange"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.getOrderByOrderNo",
+  "cnName": "根据供货单号查询",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-getOrderByOrderNo",
+  "name": "supplyChain.getOrderByOrderNo",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.getOrderByOrderNo",
   "description": "根据供货单号查询详情",
   "method": "GET",
   "path": "/supplyChain/getOrderByOrderNo",
@@ -148,6 +150,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/1738",
   "updatedAt": "2026-03-05",
-  "_file_stem": "supply-chain-supplyChain-getOrderByOrderNo",
-  "cnName": "根据供货单号查询"
+  "_file_stem": "supply-chain-supplyChain-getOrderByOrderNo"
 }

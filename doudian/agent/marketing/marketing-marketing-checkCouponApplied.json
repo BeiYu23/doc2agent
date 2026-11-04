@@ -1,8 +1,10 @@
 {
   "id": "doudian.marketing.marketing.checkCouponApplied",
+  "cnName": "查询用户已领取优惠券核销数量",
+  "docUrl": "/docs/doudian/marketing/marketing-marketing-checkCouponApplied",
+  "name": "marketing.checkCouponApplied",
   "platform": "doudian",
   "group": "marketing",
-  "name": "marketing.checkCouponApplied",
   "description": "查询用户已领取优惠券核销数量",
   "method": "GET",
   "path": "/marketing/checkCouponApplied",
@@ -84,6 +86,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/4258",
   "updatedAt": "2023-08-04",
-  "_file_stem": "marketing-marketing-checkCouponApplied",
-  "cnName": "查询用户已领取优惠券核销数量"
+  "_file_stem": "marketing-marketing-checkCouponApplied"
 }

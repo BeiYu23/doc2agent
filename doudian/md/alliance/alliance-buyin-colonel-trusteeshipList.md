@@ -1,11 +1,12 @@
-# buyin.colonel.trusteeshipList
+# 团长托管商品查询
 
-> 团长托管商品查询
+> buyin.colonel.trusteeshipList — 团长托管商品查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.colonel.trusteeshipList` |
 | 中文名 | 团长托管商品查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-colonel-trusteeshipList` |
+| 接口 ID | `doudian.alliance.buyin.colonel.trusteeshipList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonel/trusteeshipList` |

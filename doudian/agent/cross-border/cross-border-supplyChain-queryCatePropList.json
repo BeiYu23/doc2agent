@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.supplyChain.queryCatePropList",
+  "cnName": "类目属性规则查询",
+  "docUrl": "/docs/doudian/cross-border/cross-border-supplyChain-queryCatePropList",
+  "name": "supplyChain.queryCatePropList",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "supplyChain.queryCatePropList",
   "description": "类目属性规则查询",
   "method": "GET",
   "path": "/supplyChain/queryCatePropList",
@@ -254,6 +256,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6323",
   "updatedAt": "2024-04-26",
-  "_file_stem": "cross-border-supplyChain-queryCatePropList",
-  "cnName": "类目属性规则查询"
+  "_file_stem": "cross-border-supplyChain-queryCatePropList"
 }

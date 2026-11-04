@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.courierStation.cancelTerminalOrder",
+  "cnName": "驿站主动取消订单",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-courierStation-cancelTerminalOrder",
+  "name": "logistics.courierStation.cancelTerminalOrder",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.courierStation.cancelTerminalOrder",
   "description": "驿站主动取消订单",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -218,6 +220,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2938",
   "updatedAt": "2023-04-03",
-  "_file_stem": "logistics-provider-logistics-courierStation-cancelTerminalOrder",
-  "cnName": "驿站主动取消订单"
+  "_file_stem": "logistics-provider-logistics-courierStation-cancelTerminalOrder"
 }

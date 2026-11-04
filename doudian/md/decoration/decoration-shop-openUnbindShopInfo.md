@@ -1,11 +1,12 @@
-# shop.openUnbindShopInfo
+# 店铺装修-解绑门店-门店信息
 
-> 店铺装修-解绑门店-门店信息
+> shop.openUnbindShopInfo — 店铺装修-解绑门店-门店信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.openUnbindShopInfo` |
 | 中文名 | 店铺装修-解绑门店-门店信息 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-openUnbindShopInfo` |
+| 接口 ID | `doudian.decoration.shop.openUnbindShopInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/openUnbindShopInfo` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.promise.QueryBenefitTraction",
+  "cnName": "查询店铺维度利益点和库存推荐",
+  "docUrl": "/docs/doudian/product/product-promise-QueryBenefitTraction",
+  "name": "promise.QueryBenefitTraction",
   "platform": "doudian",
   "group": "product",
-  "name": "promise.QueryBenefitTraction",
   "description": "查询店铺维度利益点和库存推荐",
   "method": "GET",
   "path": "/promise/QueryBenefitTraction",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8154",
   "updatedAt": "2026-03-25",
-  "_file_stem": "product-promise-QueryBenefitTraction",
-  "cnName": "查询店铺维度利益点和库存推荐"
+  "_file_stem": "product-promise-QueryBenefitTraction"
 }

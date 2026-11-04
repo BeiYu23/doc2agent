@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.updateInterceptionInfo",
+  "cnName": "拦截成功退回结果回传接口（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-updateInterceptionInfo",
+  "name": "power.updateInterceptionInfo",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.updateInterceptionInfo",
   "description": "拦截成功退回结果回传接口（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/updateInterceptionInfo",
@@ -117,6 +119,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1480",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-updateInterceptionInfo",
-  "cnName": "拦截成功退回结果回传接口（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-updateInterceptionInfo"
 }

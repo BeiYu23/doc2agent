@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.title.recommend.query",
+  "cnName": "商品标题优化工具",
+  "docUrl": "/docs/doudian/product/product-product-title-recommend-query",
+  "name": "product.title.recommend.query",
   "platform": "doudian",
   "group": "product",
-  "name": "product.title.recommend.query",
   "description": "商品标题优化工具",
   "method": "GET",
   "path": "/product/title/recommend/query",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2163",
   "updatedAt": "2022-07-12",
-  "_file_stem": "product-product-title-recommend-query",
-  "cnName": "商品标题优化工具"
+  "_file_stem": "product-product-title-recommend-query"
 }

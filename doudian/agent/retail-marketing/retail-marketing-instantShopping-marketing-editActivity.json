@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.editActivity",
+  "cnName": "编辑活动",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-editActivity",
+  "name": "instantShopping.marketing.editActivity",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.editActivity",
   "description": "编辑活动",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -106,6 +108,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6379",
   "updatedAt": "2024-05-08",
-  "_file_stem": "retail-marketing-instantShopping-marketing-editActivity",
-  "cnName": "编辑活动"
+  "_file_stem": "retail-marketing-instantShopping-marketing-editActivity"
 }

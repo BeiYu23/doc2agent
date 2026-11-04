@@ -1,11 +1,12 @@
-# trade.UpdateTradeLimitTemplate
+# 更新限售模版
 
-> 更新限售模版
+> trade.UpdateTradeLimitTemplate — 更新限售模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.trade.UpdateTradeLimitTemplate` |
 | 中文名 | 更新限售模版 |
+| 文档地址 | `/docs/doudian/shop/shop-trade-UpdateTradeLimitTemplate` |
+| 接口 ID | `doudian.shop.trade.UpdateTradeLimitTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/UpdateTradeLimitTemplate` |

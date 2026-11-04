@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.order.query",
+  "cnName": "查询采购单信息",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-order-query",
+  "name": "supplyCenter.order.query",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.order.query",
   "description": "查询采购单信息",
   "method": "GET",
   "path": "/supplyCenter/order/query",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5617",
   "updatedAt": "2023-11-10",
-  "_file_stem": "selection-supplyCenter-order-query",
-  "cnName": "查询采购单信息"
+  "_file_stem": "selection-supplyCenter-order-query"
 }

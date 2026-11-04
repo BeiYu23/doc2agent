@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.productClue.RealTimeCommonClueListForShopFromOpen",
+  "cnName": "商机推荐",
+  "docUrl": "/docs/doudian/product/product-productClue-RealTimeCommonClueListForShopFromOpen",
+  "name": "productClue.RealTimeCommonClueListForShopFromOpen",
   "platform": "doudian",
   "group": "product",
-  "name": "productClue.RealTimeCommonClueListForShopFromOpen",
   "description": "商机推荐接口",
   "method": "GET",
   "path": "/productClue/RealTimeCommonClueListForShopFromOpen",
@@ -381,6 +383,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/7743",
   "updatedAt": "2026-05-06",
-  "_file_stem": "product-productClue-RealTimeCommonClueListForShopFromOpen",
-  "cnName": "商机推荐"
+  "_file_stem": "product-productClue-RealTimeCommonClueListForShopFromOpen"
 }

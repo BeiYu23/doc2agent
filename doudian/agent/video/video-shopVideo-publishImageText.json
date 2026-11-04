@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.publishImageText",
+  "cnName": "发布图文接口，支持渠道号",
+  "docUrl": "/docs/doudian/video/video-shopVideo-publishImageText",
+  "name": "shopVideo.publishImageText",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.publishImageText",
   "description": "发布图文接口，支持渠道号",
   "method": "GET",
   "path": "/shopVideo/publishImageText",
@@ -317,6 +319,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8139",
   "updatedAt": "2026-03-11",
-  "_file_stem": "video-shopVideo-publishImageText",
-  "cnName": "发布图文接口，支持渠道号"
+  "_file_stem": "video-shopVideo-publishImageText"
 }

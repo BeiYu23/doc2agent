@@ -1,11 +1,12 @@
-# supplyChain.queryWhInventorySnapshot
+# 查询品仓库存行快照信息
 
-> 查询品仓库存行快照信息
+> supplyChain.queryWhInventorySnapshot — 查询品仓库存行快照信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.queryWhInventorySnapshot` |
 | 中文名 | 查询品仓库存行快照信息 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-queryWhInventorySnapshot` |
+| 接口 ID | `doudian.supply-chain.supplyChain.queryWhInventorySnapshot` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryWhInventorySnapshot` |

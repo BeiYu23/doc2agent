@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.uploadCompensation",
+  "cnName": "货到付款订单上传赔付凭证",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-uploadCompensation",
+  "name": "afterSale.uploadCompensation",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.uploadCompensation",
   "description": "货到付款订单上传赔付凭证（6.30下线）",
   "method": "GET",
   "path": "/afterSale/uploadCompensation",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/92",
   "updatedAt": "2021-05-07",
-  "_file_stem": "refund-afterSale-uploadCompensation",
-  "cnName": "货到付款订单上传赔付凭证"
+  "_file_stem": "refund-afterSale-uploadCompensation"
 }

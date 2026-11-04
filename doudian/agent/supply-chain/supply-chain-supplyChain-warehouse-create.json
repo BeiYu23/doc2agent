@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.warehouse.create",
+  "cnName": "创建区域仓",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-warehouse-create",
+  "name": "supplyChain.warehouse.create",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.warehouse.create",
   "description": "创建区域仓",
   "method": "GET",
   "path": "/supplyChain/warehouse/create",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2560",
   "updatedAt": "2022-09-28",
-  "_file_stem": "supply-chain-supplyChain-warehouse-create",
-  "cnName": "创建区域仓"
+  "_file_stem": "supply-chain-supplyChain-warehouse-create"
 }

@@ -48,7 +48,8 @@ doc2agent/
 ## 接口目录（catalog）
 
 - `catalog/` 由 `tool/gen_catalog.py` 从各平台 `agent/index.json` 生成，**勿手改**。
-- 每个条目含 `id / cnName / name / method / path / group / description / md / agent` 九个字段（`cnName` 为从官方描述提炼的简短中文名）。
+- 每个条目按 `cnName / docUrl / id / name / method / path / description / group / md / agent` 排列（中文名置首）。
+- `docUrl` 是**前端站内路由** `/docs/<platform>/<group>/<stem>`，供页面跳转；`md`/`agent` 是仓库内相对路径；官方来源 URL 在各接口 `agent/*.json` 的 `source` 字段。
 - 当前收录 1505 个接口（doudian 1504 + douyin 1）；平台文档刷新后跑 `python cli.py catalog` 重建。
 
 ## 新增接口流程

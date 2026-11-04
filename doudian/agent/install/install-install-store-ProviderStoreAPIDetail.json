@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.ProviderStoreAPIDetail",
+  "cnName": "服务商门店详情",
+  "docUrl": "/docs/doudian/install/install-install-store-ProviderStoreAPIDetail",
+  "name": "install.store.ProviderStoreAPIDetail",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.ProviderStoreAPIDetail",
   "description": "服务商门店详情接口",
   "method": "GET",
   "path": "/install/store/ProviderStoreAPIDetail",
@@ -117,6 +119,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7677",
   "updatedAt": "2026-05-25",
-  "_file_stem": "install-install-store-ProviderStoreAPIDetail",
-  "cnName": "服务商门店详情"
+  "_file_stem": "install-install-store-ProviderStoreAPIDetail"
 }

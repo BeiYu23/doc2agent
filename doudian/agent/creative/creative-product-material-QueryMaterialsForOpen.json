@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.QueryMaterialsForOpen",
+  "cnName": "查询作品素材信息",
+  "docUrl": "/docs/doudian/creative/creative-product-material-QueryMaterialsForOpen",
+  "name": "product.material.QueryMaterialsForOpen",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.QueryMaterialsForOpen",
   "description": "查询作品素材信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4256",
   "updatedAt": "2023-08-03",
-  "_file_stem": "creative-product-material-QueryMaterialsForOpen",
-  "cnName": "查询作品素材信息"
+  "_file_stem": "creative-product-material-QueryMaterialsForOpen"
 }

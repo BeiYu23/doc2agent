@@ -1,11 +1,12 @@
-# buyin.instPickSourceConvert
+# 商品选品来源转链
 
-> 商品选品来源转链
+> buyin.instPickSourceConvert — 商品选品来源转链
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.instPickSourceConvert` |
 | 中文名 | 商品选品来源转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-instPickSourceConvert` |
+| 接口 ID | `doudian.alliance.buyin.instPickSourceConvert` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/instPickSourceConvert` |

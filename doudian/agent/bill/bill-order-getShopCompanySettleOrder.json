@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.getShopCompanySettleOrder",
+  "cnName": "获取抖超小时达子公司模式结算账单明细",
+  "docUrl": "/docs/doudian/bill/bill-order-getShopCompanySettleOrder",
+  "name": "order.getShopCompanySettleOrder",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.getShopCompanySettleOrder",
   "description": "获取抖超小时达子公司模式结算账单明细",
   "method": "GET",
   "path": "/order/getShopCompanySettleOrder",
@@ -187,6 +189,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/2890",
   "updatedAt": "2023-01-11",
-  "_file_stem": "bill-order-getShopCompanySettleOrder",
-  "cnName": "获取抖超小时达子公司模式结算账单明细"
+  "_file_stem": "bill-order-getShopCompanySettleOrder"
 }

@@ -1,11 +1,12 @@
-# orderCode.downloadOrderCodeByShop
+# 预绑订单码
 
-> 预绑订单码，下载后订单进入预绑码状态【请勿使用该接口查询订单信息！！！】
+> orderCode.downloadOrderCodeByShop — 预绑订单码，下载后订单进入预绑码状态【请勿使用该接口查询订单信息！！！】
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bic-inspect.orderCode.downloadOrderCodeByShop` |
 | 中文名 | 预绑订单码 |
+| 文档地址 | `/docs/doudian/bic-inspect/bic-inspect-orderCode-downloadOrderCodeByShop` |
+| 接口 ID | `doudian.bic-inspect.orderCode.downloadOrderCodeByShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/downloadOrderCodeByShop` |

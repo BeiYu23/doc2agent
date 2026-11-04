@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-refund.retail.afterSale.applyNegotiate",
+  "cnName": "商家发起协商",
+  "docUrl": "/docs/doudian/retail-refund/retail-refund-retail-afterSale-applyNegotiate",
+  "name": "retail.afterSale.applyNegotiate",
   "platform": "doudian",
   "group": "retail-refund",
-  "name": "retail.afterSale.applyNegotiate",
   "description": "商家发起协商",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -212,6 +214,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1548/6898",
   "updatedAt": "2024-09-23",
-  "_file_stem": "retail-refund-retail-afterSale-applyNegotiate",
-  "cnName": "商家发起协商"
+  "_file_stem": "retail-refund-retail-afterSale-applyNegotiate"
 }

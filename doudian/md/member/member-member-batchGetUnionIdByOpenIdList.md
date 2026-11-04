@@ -1,11 +1,12 @@
-# member.batchGetUnionIdByOpenIdList
+# 会员open_id转union_id
 
-> 会员open_id转union_id
+> member.batchGetUnionIdByOpenIdList — 会员open_id转union_id
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.batchGetUnionIdByOpenIdList` |
 | 中文名 | 会员open_id转union_id |
+| 文档地址 | `/docs/doudian/member/member-member-batchGetUnionIdByOpenIdList` |
+| 接口 ID | `doudian.member.member.batchGetUnionIdByOpenIdList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/batchGetUnionIdByOpenIdList` |

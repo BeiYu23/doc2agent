@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.queryInstituteOrders",
+  "cnName": "【即将下线】查询机构联盟订单",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-queryInstituteOrders",
+  "name": "buyin.queryInstituteOrders",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.queryInstituteOrders",
   "description": "【即将下线】查询机构联盟订单",
   "method": "GET",
   "path": "/buyin/queryInstituteOrders",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1398",
   "updatedAt": "2024-06-12",
-  "_file_stem": "alliance-buyin-queryInstituteOrders",
-  "cnName": "【即将下线】查询机构联盟订单"
+  "_file_stem": "alliance-buyin-queryInstituteOrders"
 }

@@ -1,11 +1,12 @@
-# afterSale.returnGoodsToWareHouseSuccess
+# 商家确认售后单对应的用户退货入仓成功
 
-> 商家确认售后单对应的用户退货入仓成功
+> afterSale.returnGoodsToWareHouseSuccess — 商家确认售后单对应的用户退货入仓成功
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.returnGoodsToWareHouseSuccess` |
 | 中文名 | 商家确认售后单对应的用户退货入仓成功 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-returnGoodsToWareHouseSuccess` |
+| 接口 ID | `doudian.refund.afterSale.returnGoodsToWareHouseSuccess` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/returnGoodsToWareHouseSuccess` |

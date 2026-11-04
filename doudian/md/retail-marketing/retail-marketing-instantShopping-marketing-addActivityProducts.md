@@ -1,11 +1,12 @@
-# instantShopping.marketing.addActivityProducts
+# 添加商品
 
-> 添加商品
+> instantShopping.marketing.addActivityProducts — 添加商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.addActivityProducts` |
 | 中文名 | 添加商品 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-addActivityProducts` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.addActivityProducts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

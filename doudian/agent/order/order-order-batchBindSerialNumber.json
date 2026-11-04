@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.batchBindSerialNumber",
+  "cnName": "上传序列号",
+  "docUrl": "/docs/doudian/order/order-order-batchBindSerialNumber",
+  "name": "order.batchBindSerialNumber",
   "platform": "doudian",
   "group": "order",
-  "name": "order.batchBindSerialNumber",
   "description": "上传序列号",
   "method": "GET",
   "path": "/order/batchBindSerialNumber",
@@ -152,6 +154,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/7383",
   "updatedAt": "2025-03-27",
-  "_file_stem": "order-order-batchBindSerialNumber",
-  "cnName": "上传序列号"
+  "_file_stem": "order-order-batchBindSerialNumber"
 }

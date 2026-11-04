@@ -1,11 +1,12 @@
-# buyin.shopPidMemberCreate
+# 店铺会员绑定渠道关系创建
 
-> 店铺会员绑定渠道关系创建
+> buyin.shopPidMemberCreate — 店铺会员绑定渠道关系创建
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.shopPidMemberCreate` |
 | 中文名 | 店铺会员绑定渠道关系创建 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-shopPidMemberCreate` |
+| 接口 ID | `doudian.alliance.buyin.shopPidMemberCreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/shopPidMemberCreate` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.applyCoupon",
+  "cnName": "领券",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-applyCoupon",
+  "name": "supplyChain.applyCoupon",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.applyCoupon",
   "description": "领券",
   "method": "GET",
   "path": "/supplyChain/applyCoupon",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2858",
   "updatedAt": "2023-01-18",
-  "_file_stem": "shop-supplyChain-applyCoupon",
-  "cnName": "领券"
+  "_file_stem": "shop-supplyChain-applyCoupon"
 }

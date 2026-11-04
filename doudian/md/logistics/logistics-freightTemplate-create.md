@@ -1,11 +1,12 @@
-# freightTemplate.create
+# 创建运费模板
 
-> 创建运费模板
+> freightTemplate.create — 创建运费模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.freightTemplate.create` |
 | 中文名 | 创建运费模板 |
+| 文档地址 | `/docs/doudian/logistics/logistics-freightTemplate-create` |
+| 接口 ID | `doudian.logistics.freightTemplate.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/freightTemplate/create` |

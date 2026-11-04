@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.applyMainPicVideo",
+  "cnName": "应用主图视频至商品",
+  "docUrl": "/docs/doudian/product/product-product-applyMainPicVideo",
+  "name": "product.applyMainPicVideo",
   "platform": "doudian",
   "group": "product",
-  "name": "product.applyMainPicVideo",
   "description": "应用主图视频至商品",
   "method": "GET",
   "path": "/product/applyMainPicVideo",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/7048",
   "updatedAt": "2024-11-18",
-  "_file_stem": "product-product-applyMainPicVideo",
-  "cnName": "应用主图视频至商品"
+  "_file_stem": "product-product-applyMainPicVideo"
 }

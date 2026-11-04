@@ -1,11 +1,12 @@
-# fuwu.payOrderForVolc
+# 火山支付成功回调
 
-> 火山支付成功回调
+> fuwu.payOrderForVolc — 火山支付成功回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.fuwu.payOrderForVolc` |
 | 中文名 | 火山支付成功回调 |
+| 文档地址 | `/docs/doudian/tool/tool-fuwu-payOrderForVolc` |
+| 接口 ID | `doudian.tool.fuwu.payOrderForVolc` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/payOrderForVolc` |

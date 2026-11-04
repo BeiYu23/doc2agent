@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.superm.getDispatcherInfo",
+  "cnName": "运力呼叫询价/取消呼叫询价（正向",
+  "docUrl": "/docs/doudian/logistics/logistics-superm-getDispatcherInfo",
+  "name": "superm.getDispatcherInfo",
   "platform": "doudian",
   "group": "logistics",
-  "name": "superm.getDispatcherInfo",
   "description": "运力呼叫询价/取消呼叫询价（正向）",
   "method": "GET",
   "path": "/superm/getDispatcherInfo",
@@ -285,6 +287,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2740",
   "updatedAt": "2023-09-15",
-  "_file_stem": "logistics-superm-getDispatcherInfo",
-  "cnName": "运力呼叫询价/取消呼叫询价（正向"
+  "_file_stem": "logistics-superm-getDispatcherInfo"
 }

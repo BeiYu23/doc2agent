@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.sku.stockNum",
+  "cnName": "查询商品规格库存",
+  "docUrl": "/docs/doudian/stock/stock-sku-stockNum",
+  "name": "sku.stockNum",
   "platform": "doudian",
   "group": "stock",
-  "name": "sku.stockNum",
   "description": "查询商品规格库存",
   "method": "GET",
   "path": "/sku/stockNum",
@@ -237,6 +239,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/936",
   "updatedAt": "2025-02-17",
-  "_file_stem": "stock-sku-stockNum",
-  "cnName": "查询商品规格库存"
+  "_file_stem": "stock-sku-stockNum"
 }

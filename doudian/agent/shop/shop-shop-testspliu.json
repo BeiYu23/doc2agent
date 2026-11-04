@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.testspliu",
+  "cnName": "测试",
+  "docUrl": "/docs/doudian/shop/shop-shop-testspliu",
+  "name": "shop.testspliu",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.testspliu",
   "description": "测试",
   "method": "GET",
   "path": "/shop/testspliu",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1499",
   "updatedAt": "2021-11-25",
-  "_file_stem": "shop-shop-testspliu",
-  "cnName": "测试"
+  "_file_stem": "shop-shop-testspliu"
 }

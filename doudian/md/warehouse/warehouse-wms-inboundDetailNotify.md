@@ -1,11 +1,12 @@
-# wms.inboundDetailNotify
+# 入库明细回传
 
-> 入库明细回传，WMS回传入库数据时，使用该接口回传
+> wms.inboundDetailNotify — 入库明细回传，WMS回传入库数据时，使用该接口回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.wms.inboundDetailNotify` |
 | 中文名 | 入库明细回传 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-wms-inboundDetailNotify` |
+| 接口 ID | `doudian.warehouse.wms.inboundDetailNotify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/wms/inboundDetailNotify` |

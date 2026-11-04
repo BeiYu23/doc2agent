@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.getShopAccountItem",
+  "cnName": "查询资金流水明细",
+  "docUrl": "/docs/doudian/bill/bill-order-getShopAccountItem",
+  "name": "order.getShopAccountItem",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.getShopAccountItem",
   "description": "查询资金流水明细，查询方式为时间轮训方式，数据T+1生成，建议第二天10点之后查询。如因任务积压导致延迟的情况，建议重试。",
   "method": "GET",
   "path": "/order/getShopAccountItem",
@@ -186,6 +188,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1430",
   "updatedAt": "2026-03-19",
-  "_file_stem": "bill-order-getShopAccountItem",
-  "cnName": "查询资金流水明细"
+  "_file_stem": "bill-order-getShopAccountItem"
 }

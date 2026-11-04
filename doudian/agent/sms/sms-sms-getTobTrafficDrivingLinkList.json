@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.getTobTrafficDrivingLinkList",
+  "cnName": "查询引流链接",
+  "docUrl": "/docs/doudian/sms/sms-sms-getTobTrafficDrivingLinkList",
+  "name": "sms.getTobTrafficDrivingLinkList",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.getTobTrafficDrivingLinkList",
   "description": "查询引流链接",
   "method": "GET",
   "path": "/sms/getTobTrafficDrivingLinkList",
@@ -81,6 +83,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/8435",
   "updatedAt": "2026-07-28",
-  "_file_stem": "sms-sms-getTobTrafficDrivingLinkList",
-  "cnName": "查询引流链接"
+  "_file_stem": "sms-sms-getTobTrafficDrivingLinkList"
 }

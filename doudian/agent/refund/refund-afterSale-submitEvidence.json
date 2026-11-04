@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.submitEvidence",
+  "cnName": "卖家提交举证信息",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-submitEvidence",
+  "name": "afterSale.submitEvidence",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.submitEvidence",
   "description": "卖家提交举证信息",
   "method": "GET",
   "path": "/afterSale/submitEvidence",
@@ -67,6 +69,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/1853",
   "updatedAt": "2021-01-04",
-  "_file_stem": "refund-afterSale-submitEvidence",
-  "cnName": "卖家提交举证信息"
+  "_file_stem": "refund-afterSale-submitEvidence"
 }

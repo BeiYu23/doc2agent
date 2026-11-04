@@ -1,11 +1,12 @@
-# supplyChain.invoice.operateRefundInvoiceApply
+# 红字确认单上传
 
-> 红字确认单上传
+> supplyChain.invoice.operateRefundInvoiceApply — 红字确认单上传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.supplyChain.invoice.operateRefundInvoiceApply` |
 | 中文名 | 红字确认单上传 |
+| 文档地址 | `/docs/doudian/bill/bill-supplyChain-invoice-operateRefundInvoiceApply` |
+| 接口 ID | `doudian.bill.supplyChain.invoice.operateRefundInvoiceApply` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

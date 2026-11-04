@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.imageVersion.list",
+  "cnName": "查询镜像列表",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-imageVersion-list",
+  "name": "openCloud.v1.imageVersion.list",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.imageVersion.list",
   "description": "查询镜像列表",
   "method": "GET",
   "path": "/openCloud/v1/imageVersion/list",
@@ -132,6 +134,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4156",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-imageVersion-list",
-  "cnName": "查询镜像列表"
+  "_file_stem": "cloud-openCloud-v1-imageVersion-list"
 }

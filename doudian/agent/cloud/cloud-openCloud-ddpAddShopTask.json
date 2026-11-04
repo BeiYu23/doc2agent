@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.ddpAddShopTask",
+  "cnName": "数据推送，发起店铺补偿任务",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-ddpAddShopTask",
+  "name": "openCloud.ddpAddShopTask",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.ddpAddShopTask",
   "description": "数据推送，发起店铺补偿任务",
   "method": "GET",
   "path": "/openCloud/ddpAddShopTask",
@@ -140,6 +142,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/2908",
   "updatedAt": "2025-04-01",
-  "_file_stem": "cloud-openCloud-ddpAddShopTask",
-  "cnName": "数据推送，发起店铺补偿任务"
+  "_file_stem": "cloud-openCloud-ddpAddShopTask"
 }

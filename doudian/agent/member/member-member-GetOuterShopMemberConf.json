@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.GetOuterShopMemberConf",
+  "cnName": "入会面板调用",
+  "docUrl": "/docs/doudian/member/member-member-GetOuterShopMemberConf",
+  "name": "member.GetOuterShopMemberConf",
   "platform": "doudian",
   "group": "member",
-  "name": "member.GetOuterShopMemberConf",
   "description": "入会面板调用",
   "method": "GET",
   "path": "/member/GetOuterShopMemberConf",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1805",
   "updatedAt": "2024-05-13",
-  "_file_stem": "member-member-GetOuterShopMemberConf",
-  "cnName": "入会面板调用"
+  "_file_stem": "member-member-GetOuterShopMemberConf"
 }

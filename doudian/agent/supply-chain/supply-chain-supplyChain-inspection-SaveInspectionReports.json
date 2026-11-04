@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.inspection.SaveInspectionReports",
+  "cnName": "创建/编辑验机报告",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-inspection-SaveInspectionReports",
+  "name": "supplyChain.inspection.SaveInspectionReports",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.inspection.SaveInspectionReports",
   "description": "创建/编辑验机报告",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -442,6 +444,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/8265",
   "updatedAt": "2026-05-06",
-  "_file_stem": "supply-chain-supplyChain-inspection-SaveInspectionReports",
-  "cnName": "创建/编辑验机报告"
+  "_file_stem": "supply-chain-supplyChain-inspection-SaveInspectionReports"
 }

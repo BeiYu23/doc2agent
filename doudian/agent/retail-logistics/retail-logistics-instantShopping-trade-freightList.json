@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-logistics.instantShopping.trade.freightList",
+  "cnName": "即时零售运费模板查询列表",
+  "docUrl": "/docs/doudian/retail-logistics/retail-logistics-instantShopping-trade-freightList",
+  "name": "instantShopping.trade.freightList",
   "platform": "doudian",
   "group": "retail-logistics",
-  "name": "instantShopping.trade.freightList",
   "description": "即时零售运费模板查询列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -133,6 +135,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1530/7422",
   "updatedAt": "2025-06-06",
-  "_file_stem": "retail-logistics-instantShopping-trade-freightList",
-  "cnName": "即时零售运费模板查询列表"
+  "_file_stem": "retail-logistics-instantShopping-trade-freightList"
 }

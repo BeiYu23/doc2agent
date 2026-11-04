@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.stockUp",
+  "cnName": "确认货到付款订单",
+  "docUrl": "/docs/doudian/order/order-order-stockUp",
+  "name": "order.stockUp",
   "platform": "doudian",
   "group": "order",
-  "name": "order.stockUp",
   "description": "确认货到付款订单",
   "method": "GET",
   "path": "/order/stockUp",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/69",
   "updatedAt": "2021-05-19",
-  "_file_stem": "order-order-stockUp",
-  "cnName": "确认货到付款订单"
+  "_file_stem": "order-order-stockUp"
 }

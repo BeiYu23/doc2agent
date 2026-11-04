@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.trade.create_trade_limit_template",
+  "cnName": "创建限售规则模板",
+  "docUrl": "/docs/doudian/shop/shop-trade-create_trade_limit_template",
+  "name": "trade.create_trade_limit_template",
   "platform": "doudian",
   "group": "shop",
-  "name": "trade.create_trade_limit_template",
   "description": "创建限售规则模板",
   "method": "GET",
   "path": "/trade/create_trade_limit_template",
@@ -196,6 +198,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2111",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-trade-create_trade_limit_template",
-  "cnName": "创建限售规则模板"
+  "_file_stem": "shop-trade-create_trade_limit_template"
 }

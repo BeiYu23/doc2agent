@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.resale.supplier.categoryPropertiesTemplate",
+  "cnName": "推送叶子类目对应的类目属性和模版",
+  "docUrl": "/docs/doudian/industry/industry-resale-supplier-categoryPropertiesTemplate",
+  "name": "resale.supplier.categoryPropertiesTemplate",
   "platform": "doudian",
   "group": "industry",
-  "name": "resale.supplier.categoryPropertiesTemplate",
   "description": "推送叶子类目对应的类目属性和模版",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -318,6 +320,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8465",
   "updatedAt": "2026-08-06",
-  "_file_stem": "industry-resale-supplier-categoryPropertiesTemplate",
-  "cnName": "推送叶子类目对应的类目属性和模版"
+  "_file_stem": "industry-resale-supplier-categoryPropertiesTemplate"
 }

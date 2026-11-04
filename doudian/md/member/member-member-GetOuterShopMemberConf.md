@@ -1,11 +1,12 @@
-# member.GetOuterShopMemberConf
+# 入会面板调用
 
-> 入会面板调用
+> member.GetOuterShopMemberConf — 入会面板调用
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.GetOuterShopMemberConf` |
 | 中文名 | 入会面板调用 |
+| 文档地址 | `/docs/doudian/member/member-member-GetOuterShopMemberConf` |
+| 接口 ID | `doudian.member.member.GetOuterShopMemberConf` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/GetOuterShopMemberConf` |

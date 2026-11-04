@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.fuwu.writeOffUsageCount",
+  "cnName": "核销已冻结的使用次数",
+  "docUrl": "/docs/doudian/industry/industry-fuwu-writeOffUsageCount",
+  "name": "fuwu.writeOffUsageCount",
   "platform": "doudian",
   "group": "industry",
-  "name": "fuwu.writeOffUsageCount",
   "description": "核销已冻结的使用次数",
   "method": "GET",
   "path": "/fuwu/writeOffUsageCount",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8349",
   "updatedAt": "2026-06-23",
-  "_file_stem": "industry-fuwu-writeOffUsageCount",
-  "cnName": "核销已冻结的使用次数"
+  "_file_stem": "industry-fuwu-writeOffUsageCount"
 }

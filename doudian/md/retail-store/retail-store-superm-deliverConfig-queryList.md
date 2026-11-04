@@ -1,11 +1,12 @@
-# superm.deliverConfig.queryList
+# 时效管理查询
 
-> 时效管理查询
+> superm.deliverConfig.queryList — 时效管理查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.deliverConfig.queryList` |
 | 中文名 | 时效管理查询 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-deliverConfig-queryList` |
+| 接口 ID | `doudian.retail-store.superm.deliverConfig.queryList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

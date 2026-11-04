@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.doukePidEdit",
+  "cnName": "独立抖客PID编辑",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-doukePidEdit",
+  "name": "buyin.doukePidEdit",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.doukePidEdit",
   "description": "独立抖客PID编辑",
   "method": "GET",
   "path": "/buyin/doukePidEdit",
@@ -88,6 +90,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/3080",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukePidEdit",
-  "cnName": "独立抖客PID编辑"
+  "_file_stem": "alliance-buyin-doukePidEdit"
 }

@@ -1,11 +1,12 @@
-# product.list
+# 获取商品列表
 
-> 获取商品列表（即将下线，可使用该接口：/product/listV2）
+> product.list — 获取商品列表（即将下线，可使用该接口：/product/listV2）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.list` |
 | 中文名 | 获取商品列表 |
+| 文档地址 | `/docs/doudian/product/product-product-list` |
+| 接口 ID | `doudian.product.product.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/list` |

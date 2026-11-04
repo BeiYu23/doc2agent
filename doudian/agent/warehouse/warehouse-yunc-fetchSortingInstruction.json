@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.fetchSortingInstruction",
+  "cnName": "获取分拣指令",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-fetchSortingInstruction",
+  "name": "yunc.fetchSortingInstruction",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.fetchSortingInstruction",
   "description": "获取分拣指令",
   "method": "GET",
   "path": "/yunc/fetchSortingInstruction",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2669",
   "updatedAt": "2022-11-08",
-  "_file_stem": "warehouse-yunc-fetchSortingInstruction",
-  "cnName": "获取分拣指令"
+  "_file_stem": "warehouse-yunc-fetchSortingInstruction"
 }

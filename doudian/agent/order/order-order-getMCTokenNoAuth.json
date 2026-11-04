@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.getMCTokenNoAuth",
+  "cnName": "获取前端明文解密token",
+  "docUrl": "/docs/doudian/order/order-order-getMCTokenNoAuth",
+  "name": "order.getMCTokenNoAuth",
   "platform": "doudian",
   "group": "order",
-  "name": "order.getMCTokenNoAuth",
   "description": "获取前端明文解密token",
   "method": "GET",
   "path": "/order/getMCTokenNoAuth",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/4762",
   "updatedAt": "2023-09-19",
-  "_file_stem": "order-order-getMCTokenNoAuth",
-  "cnName": "获取前端明文解密token"
+  "_file_stem": "order-order-getMCTokenNoAuth"
 }

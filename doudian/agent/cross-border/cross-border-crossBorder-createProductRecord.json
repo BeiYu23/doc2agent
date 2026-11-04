@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.createProductRecord",
+  "cnName": "创建备案",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-createProductRecord",
+  "name": "crossBorder.createProductRecord",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.createProductRecord",
   "description": "创建备案",
   "method": "GET",
   "path": "/crossBorder/createProductRecord",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6246",
   "updatedAt": "2024-09-13",
-  "_file_stem": "cross-border-crossBorder-createProductRecord",
-  "cnName": "创建备案"
+  "_file_stem": "cross-border-crossBorder-createProductRecord"
 }

@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.editPrice
+# 编辑价格
 
-> 编辑价格
+> supplyChain.supplyProduct.editPrice — 编辑价格
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.editPrice` |
 | 中文名 | 编辑价格 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-editPrice` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.editPrice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

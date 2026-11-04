@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.mGetPlayInfo",
+  "cnName": "批量获取视频信息",
+  "docUrl": "/docs/doudian/material/material-material-mGetPlayInfo",
+  "name": "material.mGetPlayInfo",
   "platform": "doudian",
   "group": "material",
-  "name": "material.mGetPlayInfo",
   "description": "批量获取视频信息",
   "method": "GET",
   "path": "/material/mGetPlayInfo",
@@ -89,6 +91,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/2164",
   "updatedAt": "2022-11-09",
-  "_file_stem": "material-material-mGetPlayInfo",
-  "cnName": "批量获取视频信息"
+  "_file_stem": "material-material-mGetPlayInfo"
 }

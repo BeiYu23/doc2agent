@@ -1,11 +1,12 @@
-# alliance.colonelActivityProductExtension
+# 专属团长活动商品延时
 
-> 专属团长活动商品延时接口
+> alliance.colonelActivityProductExtension — 专属团长活动商品延时接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.colonelActivityProductExtension` |
 | 中文名 | 专属团长活动商品延时 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-colonelActivityProductExtension` |
+| 接口 ID | `doudian.alliance.alliance.colonelActivityProductExtension` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelActivityProductExtension` |

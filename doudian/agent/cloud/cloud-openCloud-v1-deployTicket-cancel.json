@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.deployTicket.cancel",
+  "cnName": "发布取消",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-cancel",
+  "name": "openCloud.v1.deployTicket.cancel",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.deployTicket.cancel",
   "description": "发布取消",
   "method": "GET",
   "path": "/openCloud/v1/deployTicket/cancel",
@@ -67,6 +69,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4151",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-deployTicket-cancel",
-  "cnName": "发布取消"
+  "_file_stem": "cloud-openCloud-v1-deployTicket-cancel"
 }

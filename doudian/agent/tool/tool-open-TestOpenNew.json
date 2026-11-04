@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.TestOpenNew",
+  "cnName": "测试使用的",
+  "docUrl": "/docs/doudian/tool/tool-open-TestOpenNew",
+  "name": "open.TestOpenNew",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.TestOpenNew",
   "description": "测试使用的API",
   "method": "GET",
   "path": "/open/TestOpenNew",
@@ -508,6 +510,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/2273",
   "updatedAt": "2022-08-01",
-  "_file_stem": "tool-open-TestOpenNew",
-  "cnName": "测试使用的"
+  "_file_stem": "tool-open-TestOpenNew"
 }

@@ -1,11 +1,12 @@
-# alliance.activityProductCategoryList
+# 创建活动时候可选择的类目
 
-> 创建活动时候可选择的类目接口
+> alliance.activityProductCategoryList — 创建活动时候可选择的类目接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.activityProductCategoryList` |
 | 中文名 | 创建活动时候可选择的类目 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-activityProductCategoryList` |
+| 接口 ID | `doudian.alliance.alliance.activityProductCategoryList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/activityProductCategoryList` |

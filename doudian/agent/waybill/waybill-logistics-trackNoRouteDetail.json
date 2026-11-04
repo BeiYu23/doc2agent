@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.trackNoRouteDetail",
+  "cnName": "查询条件",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-trackNoRouteDetail",
+  "name": "logistics.trackNoRouteDetail",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.trackNoRouteDetail",
   "description": "查询条件：\n1、必须是通过抖音电子面单获取的单号并且调用过发货接口回传的运单号才可以查询到物流轨迹；",
   "method": "GET",
   "path": "/logistics/trackNoRouteDetail",
@@ -137,6 +139,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1851",
   "updatedAt": "2021-08-18",
-  "_file_stem": "waybill-logistics-trackNoRouteDetail",
-  "cnName": "查询条件"
+  "_file_stem": "waybill-logistics-trackNoRouteDetail"
 }

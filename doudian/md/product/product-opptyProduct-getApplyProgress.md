@@ -1,11 +1,12 @@
-# opptyProduct.getApplyProgress
+# 机会品提报进度查询
 
-> 机会品提报进度查询
+> opptyProduct.getApplyProgress — 机会品提报进度查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.opptyProduct.getApplyProgress` |
 | 中文名 | 机会品提报进度查询 |
+| 文档地址 | `/docs/doudian/product/product-opptyProduct-getApplyProgress` |
+| 接口 ID | `doudian.product.opptyProduct.getApplyProgress` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/opptyProduct/getApplyProgress` |

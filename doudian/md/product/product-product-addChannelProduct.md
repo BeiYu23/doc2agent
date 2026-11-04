@@ -1,11 +1,12 @@
-# product.addChannelProduct
+# 创建销售渠道品
 
-> 创建销售渠道品
+> product.addChannelProduct — 创建销售渠道品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.addChannelProduct` |
 | 中文名 | 创建销售渠道品 |
+| 文档地址 | `/docs/doudian/product/product-product-addChannelProduct` |
+| 接口 ID | `doudian.product.product.addChannelProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/addChannelProduct` |

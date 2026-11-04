@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.getSpuInfoBySpuId",
+  "cnName": "SPU信息查看",
+  "docUrl": "/docs/doudian/product/product-spu-getSpuInfoBySpuId",
+  "name": "spu.getSpuInfoBySpuId",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.getSpuInfoBySpuId",
   "description": "SPU信息查看",
   "method": "GET",
   "path": "/spu/getSpuInfoBySpuId",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1825",
   "updatedAt": "2021-06-30",
-  "_file_stem": "product-spu-getSpuInfoBySpuId",
-  "cnName": "SPU信息查看"
+  "_file_stem": "product-spu-getSpuInfoBySpuId"
 }

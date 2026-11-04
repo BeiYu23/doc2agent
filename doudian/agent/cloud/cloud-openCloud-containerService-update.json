@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.containerService.update",
+  "cnName": "更新容器服务",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-containerService-update",
+  "name": "openCloud.containerService.update",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.containerService.update",
   "description": "更新容器服务",
   "method": "GET",
   "path": "/openCloud/containerService/update",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/6452",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-containerService-update",
-  "cnName": "更新容器服务"
+  "_file_stem": "cloud-openCloud-containerService-update"
 }

@@ -1,11 +1,12 @@
-# sms.sendResult
+# 查询短信发送结果
 
-> 查询短信发送结果
+> sms.sendResult — 查询短信发送结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.sendResult` |
 | 中文名 | 查询短信发送结果 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-sendResult` |
+| 接口 ID | `doudian.sms.sms.sendResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/sendResult` |

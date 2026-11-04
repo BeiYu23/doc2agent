@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.applyVmsTemplate",
+  "cnName": "申请创建图文短信模板",
+  "docUrl": "/docs/doudian/sms/sms-sms-applyVmsTemplate",
+  "name": "sms.applyVmsTemplate",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.applyVmsTemplate",
   "description": "申请创建图文短信模板",
   "method": "GET",
   "path": "/sms/applyVmsTemplate",
@@ -204,6 +206,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/4014",
   "updatedAt": "2026-05-14",
-  "_file_stem": "sms-sms-applyVmsTemplate",
-  "cnName": "申请创建图文短信模板"
+  "_file_stem": "sms-sms-applyVmsTemplate"
 }

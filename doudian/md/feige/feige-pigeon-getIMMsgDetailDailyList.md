@@ -1,11 +1,12 @@
-# pigeon.getIMMsgDetailDailyList
+# 查询消息列表
 
-> 查询消息列表
+> pigeon.getIMMsgDetailDailyList — 查询消息列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.getIMMsgDetailDailyList` |
 | 中文名 | 查询消息列表 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-getIMMsgDetailDailyList` |
+| 接口 ID | `doudian.feige.pigeon.getIMMsgDetailDailyList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/getIMMsgDetailDailyList` |

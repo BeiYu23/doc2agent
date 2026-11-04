@@ -1,11 +1,12 @@
-# pickup.unbindStoreLibrary
+# 门店组批量解绑门店
 
-> 门店组批量解绑门店
+> pickup.unbindStoreLibrary — 门店组批量解绑门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.store.pickup.unbindStoreLibrary` |
 | 中文名 | 门店组批量解绑门店 |
+| 文档地址 | `/docs/doudian/store/store-pickup-unbindStoreLibrary` |
+| 接口 ID | `doudian.store.pickup.unbindStoreLibrary` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/unbindStoreLibrary` |

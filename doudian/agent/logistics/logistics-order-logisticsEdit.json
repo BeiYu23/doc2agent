@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.logisticsEdit",
+  "cnName": "更新整单发货物流信息",
+  "docUrl": "/docs/doudian/logistics/logistics-order-logisticsEdit",
+  "name": "order.logisticsEdit",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.logisticsEdit",
   "description": "更新整单发货物流信息",
   "method": "GET",
   "path": "/order/logisticsEdit",
@@ -304,6 +306,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/390",
   "updatedAt": "2026-09-03",
-  "_file_stem": "logistics-order-logisticsEdit",
-  "cnName": "更新整单发货物流信息"
+  "_file_stem": "logistics-order-logisticsEdit"
 }

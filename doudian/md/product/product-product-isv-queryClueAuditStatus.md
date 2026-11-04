@@ -1,11 +1,12 @@
-# product.isv.queryClueAuditStatus
+# 查询线索提报审核结果
 
-> 查询线索提报审核结果
+> product.isv.queryClueAuditStatus — 查询线索提报审核结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.isv.queryClueAuditStatus` |
 | 中文名 | 查询线索提报审核结果 |
+| 文档地址 | `/docs/doudian/product/product-product-isv-queryClueAuditStatus` |
+| 接口 ID | `doudian.product.product.isv.queryClueAuditStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/queryClueAuditStatus` |

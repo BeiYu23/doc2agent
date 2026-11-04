@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.test.testxiaze",
+  "cnName": "（testxiaze）",
+  "docUrl": "/docs/doudian/order/order-test-testxiaze",
+  "name": "test.testxiaze",
   "platform": "doudian",
   "group": "order",
-  "name": "test.testxiaze",
   "description": "test",
   "method": "GET",
   "path": "/test/testxiaze",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2435",
   "updatedAt": "2022-08-27",
-  "_file_stem": "order-test-testxiaze",
-  "cnName": "（testxiaze）"
+  "_file_stem": "order-test-testxiaze"
 }

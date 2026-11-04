@@ -1,11 +1,12 @@
-# buyin.institutePidList
+# 抖客PID查询
 
-> 抖客PID查询接口
+> buyin.institutePidList — 抖客PID查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.institutePidList` |
 | 中文名 | 抖客PID查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-institutePidList` |
+| 接口 ID | `doudian.alliance.buyin.institutePidList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/institutePidList` |

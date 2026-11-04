@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.deployTicket.confirm",
+  "cnName": "确认发布",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-confirm",
+  "name": "openCloud.v1.deployTicket.confirm",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.deployTicket.confirm",
   "description": "确认发布",
   "method": "GET",
   "path": "/openCloud/v1/deployTicket/confirm",
@@ -67,6 +69,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4154",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-deployTicket-confirm",
-  "cnName": "确认发布"
+  "_file_stem": "cloud-openCloud-v1-deployTicket-confirm"
 }

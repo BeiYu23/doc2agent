@@ -1,11 +1,12 @@
-# pickup.batchUpdateStoreStatus
+# 批量更新门店状态
 
-> 批量更新门店状态
+> pickup.batchUpdateStoreStatus — 批量更新门店状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.store.pickup.batchUpdateStoreStatus` |
 | 中文名 | 批量更新门店状态 |
+| 文档地址 | `/docs/doudian/store/store-pickup-batchUpdateStoreStatus` |
+| 接口 ID | `doudian.store.pickup.batchUpdateStoreStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/batchUpdateStoreStatus` |

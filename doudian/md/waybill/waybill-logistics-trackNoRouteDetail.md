@@ -1,12 +1,13 @@
-# logistics.trackNoRouteDetail
+# 查询条件
 
-> 查询条件：
+> logistics.trackNoRouteDetail — 查询条件：
 1、必须是通过抖音电子面单获取的单号并且调用过发货接口回传的运单号才可以查询到物流轨迹；
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.trackNoRouteDetail` |
 | 中文名 | 查询条件 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-trackNoRouteDetail` |
+| 接口 ID | `doudian.waybill.logistics.trackNoRouteDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/trackNoRouteDetail` |

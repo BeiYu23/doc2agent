@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.deleteMaterial",
+  "cnName": "彻底删除素材",
+  "docUrl": "/docs/doudian/material/material-material-deleteMaterial",
+  "name": "material.deleteMaterial",
   "platform": "doudian",
   "group": "material",
-  "name": "material.deleteMaterial",
   "description": "彻底删除素材",
   "method": "GET",
   "path": "/material/deleteMaterial",
@@ -96,6 +98,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1138",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-deleteMaterial",
-  "cnName": "彻底删除素材"
+  "_file_stem": "material-material-deleteMaterial"
 }

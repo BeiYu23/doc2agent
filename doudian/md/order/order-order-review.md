@@ -1,11 +1,12 @@
-# order.review
+# 商家回传订单审核结果
 
-> 商家回传订单审核结果
+> order.review — 商家回传订单审核结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.review` |
 | 中文名 | 商家回传订单审核结果 |
+| 文档地址 | `/docs/doudian/order/order-order-review` |
+| 接口 ID | `doudian.order.order.review` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/review` |

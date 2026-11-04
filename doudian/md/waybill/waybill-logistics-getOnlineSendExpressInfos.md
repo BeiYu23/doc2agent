@@ -1,11 +1,12 @@
-# logistics.getOnlineSendExpressInfos
+# 在线寄件询价
 
-> 在线寄件询价接口
+> logistics.getOnlineSendExpressInfos — 在线寄件询价接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.getOnlineSendExpressInfos` |
 | 中文名 | 在线寄件询价 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-getOnlineSendExpressInfos` |
+| 接口 ID | `doudian.waybill.logistics.getOnlineSendExpressInfos` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getOnlineSendExpressInfos` |

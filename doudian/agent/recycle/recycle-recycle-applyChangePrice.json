@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.applyChangePrice",
+  "cnName": "回收商申请调价",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-applyChangePrice",
+  "name": "recycle.applyChangePrice",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.applyChangePrice",
   "description": "回收商申请调价",
   "method": "GET",
   "path": "/recycle/applyChangePrice",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1887",
   "updatedAt": "2021-09-07",
-  "_file_stem": "recycle-recycle-applyChangePrice",
-  "cnName": "回收商申请调价"
+  "_file_stem": "recycle-recycle-applyChangePrice"
 }

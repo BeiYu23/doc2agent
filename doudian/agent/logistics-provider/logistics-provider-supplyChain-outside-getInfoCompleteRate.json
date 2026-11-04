@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.supplyChain.outside.getInfoCompleteRate",
+  "cnName": "查询信息完整量的责任机构排名",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getInfoCompleteRate",
+  "name": "supplyChain.outside.getInfoCompleteRate",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "supplyChain.outside.getInfoCompleteRate",
   "description": "查询信息完整量的责任机构排名",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2484",
   "updatedAt": "2024-06-12",
-  "_file_stem": "logistics-provider-supplyChain-outside-getInfoCompleteRate",
-  "cnName": "查询信息完整量的责任机构排名"
+  "_file_stem": "logistics-provider-supplyChain-outside-getInfoCompleteRate"
 }

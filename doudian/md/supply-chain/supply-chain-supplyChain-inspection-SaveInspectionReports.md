@@ -1,11 +1,12 @@
-# supplyChain.inspection.SaveInspectionReports
+# 创建/编辑验机报告
 
-> 创建/编辑验机报告
+> supplyChain.inspection.SaveInspectionReports — 创建/编辑验机报告
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.inspection.SaveInspectionReports` |
 | 中文名 | 创建/编辑验机报告 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-inspection-SaveInspectionReports` |
+| 接口 ID | `doudian.supply-chain.supplyChain.inspection.SaveInspectionReports` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

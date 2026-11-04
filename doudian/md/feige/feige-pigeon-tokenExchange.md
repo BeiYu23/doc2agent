@@ -1,11 +1,12 @@
-# pigeon.tokenExchange
+# 飞鸽token换取登录参数
 
-> 飞鸽token换取登录参数
+> pigeon.tokenExchange — 飞鸽token换取登录参数
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.tokenExchange` |
 | 中文名 | 飞鸽token换取登录参数 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-tokenExchange` |
+| 接口 ID | `doudian.feige.pigeon.tokenExchange` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/tokenExchange` |

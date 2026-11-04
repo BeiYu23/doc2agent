@@ -1,11 +1,12 @@
-# coupons.extendCertValidEndByOrder
+# 三方卡券延期
 
-> 三方卡券延期
+> coupons.extendCertValidEndByOrder — 三方卡券延期
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.coupons.extendCertValidEndByOrder` |
 | 中文名 | 三方卡券延期 |
+| 文档地址 | `/docs/doudian/order/order-coupons-extendCertValidEndByOrder` |
+| 接口 ID | `doudian.order.coupons.extendCertValidEndByOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/extendCertValidEndByOrder` |

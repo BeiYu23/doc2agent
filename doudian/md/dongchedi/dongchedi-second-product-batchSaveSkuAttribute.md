@@ -1,11 +1,12 @@
-# second.product.batchSaveSkuAttribute
+# 【二方接口】保存SKU扩展属性
 
-> 【二方接口】保存SKU扩展属性
+> second.product.batchSaveSkuAttribute — 【二方接口】保存SKU扩展属性
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.product.batchSaveSkuAttribute` |
 | 中文名 | 【二方接口】保存SKU扩展属性 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-product-batchSaveSkuAttribute` |
+| 接口 ID | `doudian.dongchedi.second.product.batchSaveSkuAttribute` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/batchSaveSkuAttribute` |

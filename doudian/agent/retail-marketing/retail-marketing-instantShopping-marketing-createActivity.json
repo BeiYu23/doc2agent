@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.createActivity",
+  "cnName": "创建活动",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-createActivity",
+  "name": "instantShopping.marketing.createActivity",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.createActivity",
   "description": "创建活动",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -293,6 +295,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6385",
   "updatedAt": "2024-05-11",
-  "_file_stem": "retail-marketing-instantShopping-marketing-createActivity",
-  "cnName": "创建活动"
+  "_file_stem": "retail-marketing-instantShopping-marketing-createActivity"
 }

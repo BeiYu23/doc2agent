@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.warehouse.getFencesByStore",
+  "cnName": "根据门店查询围栏",
+  "docUrl": "/docs/doudian/retail-store/retail-store-warehouse-getFencesByStore",
+  "name": "warehouse.getFencesByStore",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "warehouse.getFencesByStore",
   "description": "根据门店查询围栏",
   "method": "GET",
   "path": "/warehouse/getFencesByStore",
@@ -89,6 +91,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/6374",
   "updatedAt": "2024-08-20",
-  "_file_stem": "retail-store-warehouse-getFencesByStore",
-  "cnName": "根据门店查询围栏"
+  "_file_stem": "retail-store-warehouse-getFencesByStore"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.coupons.extendCertValidEndByOrder",
+  "cnName": "三方卡券延期",
+  "docUrl": "/docs/doudian/order/order-coupons-extendCertValidEndByOrder",
+  "name": "coupons.extendCertValidEndByOrder",
   "platform": "doudian",
   "group": "order",
-  "name": "coupons.extendCertValidEndByOrder",
   "description": "三方卡券延期",
   "method": "GET",
   "path": "/coupons/extendCertValidEndByOrder",
@@ -150,6 +152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1730",
   "updatedAt": "2022-03-22",
-  "_file_stem": "order-coupons-extendCertValidEndByOrder",
-  "cnName": "三方卡券延期"
+  "_file_stem": "order-coupons-extendCertValidEndByOrder"
 }

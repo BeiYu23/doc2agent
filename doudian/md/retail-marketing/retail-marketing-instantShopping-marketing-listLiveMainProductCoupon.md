@@ -1,11 +1,12 @@
-# instantShopping.marketing.listLiveMainProductCoupon
+# 批量查询直播主品券活动
 
-> 批量查询直播主品券活动
+> instantShopping.marketing.listLiveMainProductCoupon — 批量查询直播主品券活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listLiveMainProductCoupon` |
 | 中文名 | 批量查询直播主品券活动 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listLiveMainProductCoupon` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listLiveMainProductCoupon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

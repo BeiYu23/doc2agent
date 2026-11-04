@@ -1,13 +1,14 @@
-# product.listV2
+# 批量查询商家抖店商品信息
 
-> 使用场景：批量查询商家抖店商品信息
+> product.listV2 — 使用场景：批量查询商家抖店商品信息
 1、支持使用商品状态，商品类型、商品创建时间和更新时间筛选商品
 2、最大支持1次查询1万条，如返回商品数据大于1万条，请增加筛选条件。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.listV2` |
 | 中文名 | 批量查询商家抖店商品信息 |
+| 文档地址 | `/docs/doudian/product/product-product-listV2` |
+| 接口 ID | `doudian.product.product.listV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/listV2` |

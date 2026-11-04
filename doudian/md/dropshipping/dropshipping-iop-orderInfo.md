@@ -1,11 +1,12 @@
-# iop.orderInfo
+# 【厂商】订单
 
-> 【厂商】订单详情
+> iop.orderInfo — 【厂商】订单详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.orderInfo` |
 | 中文名 | 【厂商】订单 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-orderInfo` |
+| 接口 ID | `doudian.dropshipping.iop.orderInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/orderInfo` |

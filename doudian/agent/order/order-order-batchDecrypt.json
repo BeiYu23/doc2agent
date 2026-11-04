@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.batchDecrypt",
+  "cnName": "接口支持解密在文档字段有“密文”红色标识字段值…",
+  "docUrl": "/docs/doudian/order/order-order-batchDecrypt",
+  "name": "order.batchDecrypt",
   "platform": "doudian",
   "group": "order",
-  "name": "order.batchDecrypt",
   "description": "1、接口支持解密在文档字段有“密文”红色标识字段值：收件人电话收件人姓名；详细地址；账号值；证件号；证件姓名\n2、不支持解密doudian_open_id字段加密用户ID串\n3、最大支持一次解密50条数据\n4、cipher_infos字段待解密的密文列表示",
   "method": "GET",
   "path": "/order/batchDecrypt",
@@ -137,6 +139,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/982",
   "updatedAt": "2023-12-25",
-  "_file_stem": "order-order-batchDecrypt",
-  "cnName": "接口支持解密在文档字段有“密文”红色标识字段值…"
+  "_file_stem": "order-order-batchDecrypt"
 }

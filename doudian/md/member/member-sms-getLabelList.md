@@ -1,11 +1,12 @@
-# sms.getLabelList
+# 获取标签列表
 
-> 获取标签列表
+> sms.getLabelList — 获取标签列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.sms.getLabelList` |
 | 中文名 | 获取标签列表 |
+| 文档地址 | `/docs/doudian/member/member-sms-getLabelList` |
+| 接口 ID | `doudian.member.sms.getLabelList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getLabelList` |

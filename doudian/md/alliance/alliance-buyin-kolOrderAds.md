@@ -1,11 +1,12 @@
-# buyin.kolOrderAds
+# 查询达人的直播间分销、商品分销、活动页分销订单
 
-> 查询达人的直播间分销、商品分销、活动页分销订单
+> buyin.kolOrderAds — 查询达人的直播间分销、商品分销、活动页分销订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.kolOrderAds` |
 | 中文名 | 查询达人的直播间分销、商品分销、活动页分销订单 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-kolOrderAds` |
+| 接口 ID | `doudian.alliance.buyin.kolOrderAds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolOrderAds` |

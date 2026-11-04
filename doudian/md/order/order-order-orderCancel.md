@@ -1,11 +1,12 @@
-# order.orderCancel
+# 商家取消待支付订单
 
-> 商家取消待支付订单
+> order.orderCancel — 商家取消待支付订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.orderCancel` |
 | 中文名 | 商家取消待支付订单 |
+| 文档地址 | `/docs/doudian/order/order-order-orderCancel` |
+| 接口 ID | `doudian.order.order.orderCancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/orderCancel` |

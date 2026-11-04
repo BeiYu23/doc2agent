@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.shop.shopDiagnosis",
+  "cnName": "店铺维度诊断",
+  "docUrl": "/docs/doudian/product/product-shop-shopDiagnosis",
+  "name": "shop.shopDiagnosis",
   "platform": "doudian",
   "group": "product",
-  "name": "shop.shopDiagnosis",
   "description": "店铺维度诊断",
   "method": "GET",
   "path": "/shop/shopDiagnosis",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8369",
   "updatedAt": "2026-06-25",
-  "_file_stem": "product-shop-shopDiagnosis",
-  "cnName": "店铺维度诊断"
+  "_file_stem": "product-shop-shopDiagnosis"
 }

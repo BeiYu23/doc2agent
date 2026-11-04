@@ -1,11 +1,12 @@
-# product.qualityList
+# 查询店铺商品质量情况，对标后台商品成长中心
 
-> 查询店铺商品质量情况，对标后台商品成长中心
+> product.qualityList — 查询店铺商品质量情况，对标后台商品成长中心
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.qualityList` |
 | 中文名 | 查询店铺商品质量情况，对标后台商品成长中心 |
+| 文档地址 | `/docs/doudian/product/product-product-qualityList` |
+| 接口 ID | `doudian.product.product.qualityList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/qualityList` |

@@ -1,11 +1,12 @@
-# instantShopping.marketing.createLiveMainProductCoupon
+# 创建直播主品券
 
-> 创建直播主品券
+> instantShopping.marketing.createLiveMainProductCoupon — 创建直播主品券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.createLiveMainProductCoupon` |
 | 中文名 | 创建直播主品券 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-createLiveMainProductCoupon` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.createLiveMainProductCoupon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

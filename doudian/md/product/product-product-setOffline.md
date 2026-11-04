@@ -1,12 +1,13 @@
-# product.setOffline
+# 支持所有类型商品下架
 
-> 1、支持所有类型商品下架
+> product.setOffline — 1、支持所有类型商品下架
 2、接口调用成功，商品会放到仓库中
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.setOffline` |
 | 中文名 | 支持所有类型商品下架 |
+| 文档地址 | `/docs/doudian/product/product-product-setOffline` |
+| 接口 ID | `doudian.product.product.setOffline` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/setOffline` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.downloadToShop",
+  "cnName": "通过【/order/downloadSettl…",
+  "docUrl": "/docs/doudian/bill/bill-order-downloadToShop",
+  "name": "order.downloadToShop",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.downloadToShop",
   "description": "1、通过【/order/downloadSettleItemToShop】接口返回的download_id。调用接口生成文件下载的URL链接时效为1小时，失效后需重新调此接口获取新的链接。\n2、如需非url下载方式请调用【/order/getSettleB",
   "method": "GET",
   "path": "/order/downloadToShop",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1193",
   "updatedAt": "2022-09-28",
-  "_file_stem": "bill-order-downloadToShop",
-  "cnName": "通过【/order/downloadSettl…"
+  "_file_stem": "bill-order-downloadToShop"
 }

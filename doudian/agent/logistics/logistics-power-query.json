@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.query",
+  "cnName": "查询物流（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-query",
+  "name": "power.query",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.query",
   "description": "查询物流（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/query",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1476",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-query",
-  "cnName": "查询物流（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-query"
 }

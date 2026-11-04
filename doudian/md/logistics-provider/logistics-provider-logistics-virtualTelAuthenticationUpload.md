@@ -1,11 +1,12 @@
-# logistics.virtualTelAuthenticationUpload
+# 虚拟号主叫二次认证信息上传
 
-> 虚拟号主叫二次认证信息上传接口
+> logistics.virtualTelAuthenticationUpload — 虚拟号主叫二次认证信息上传接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.virtualTelAuthenticationUpload` |
 | 中文名 | 虚拟号主叫二次认证信息上传 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-virtualTelAuthenticationUpload` |
+| 接口 ID | `doudian.logistics-provider.logistics.virtualTelAuthenticationUpload` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/virtualTelAuthenticationUpload` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.qualification.getAlternativeCategory.v2",
+  "cnName": "（v2）",
+  "docUrl": "/docs/doudian/shop/shop-qualification-getAlternativeCategory-v2",
+  "name": "qualification.getAlternativeCategory.v2",
   "platform": "doudian",
   "group": "shop",
-  "name": "qualification.getAlternativeCategory.v2",
   "description": "qualification.getAlternativeCategory.v2",
   "method": "GET",
   "path": "/qualification/getAlternativeCategory/v2",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/804",
   "updatedAt": "2021-08-11",
-  "_file_stem": "shop-qualification-getAlternativeCategory-v2",
-  "cnName": "（v2）"
+  "_file_stem": "shop-qualification-getAlternativeCategory-v2"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.sendHome.marketing.listActivity",
+  "cnName": "查询营销活动列表",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-listActivity",
+  "name": "sendHome.marketing.listActivity",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "sendHome.marketing.listActivity",
   "description": "查询营销活动列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -172,6 +174,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6809",
   "updatedAt": "2024-08-27",
-  "_file_stem": "retail-marketing-sendHome-marketing-listActivity",
-  "cnName": "查询营销活动列表"
+  "_file_stem": "retail-marketing-sendHome-marketing-listActivity"
 }

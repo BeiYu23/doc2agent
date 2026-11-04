@@ -1,8 +1,10 @@
 {
   "id": "doudian.prescription.medicine.getShopDruggist",
+  "cnName": "商家ERP获取店铺下的药剂师",
+  "docUrl": "/docs/doudian/prescription/prescription-medicine-getShopDruggist",
+  "name": "medicine.getShopDruggist",
   "platform": "doudian",
   "group": "prescription",
-  "name": "medicine.getShopDruggist",
   "description": "商家ERP获取店铺下的药剂师",
   "method": "GET",
   "path": "/medicine/getShopDruggist",
@@ -71,6 +73,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1479/6462",
   "updatedAt": "2024-04-29",
-  "_file_stem": "prescription-medicine-getShopDruggist",
-  "cnName": "商家ERP获取店铺下的药剂师"
+  "_file_stem": "prescription-medicine-getShopDruggist"
 }

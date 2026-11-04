@@ -1,11 +1,12 @@
-# instantShopping.distributionMerchant.statusCallback
+# 配送商状态回调
 
-> 配送商状态回调
+> instantShopping.distributionMerchant.statusCallback — 配送商状态回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.instantShopping.distributionMerchant.statusCallback` |
 | 中文名 | 配送商状态回调 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-instantShopping-distributionMerchant-statusCallback` |
+| 接口 ID | `doudian.retail-store.instantShopping.distributionMerchant.statusCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

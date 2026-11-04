@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.getProductUpdateRule",
+  "cnName": "查询商品发布规则",
+  "docUrl": "/docs/doudian/product/product-product-getProductUpdateRule",
+  "name": "product.getProductUpdateRule",
   "platform": "doudian",
   "group": "product",
-  "name": "product.getProductUpdateRule",
   "description": "查询商品发布规则",
   "method": "GET",
   "path": "/product/getProductUpdateRule",
@@ -673,6 +675,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1614",
   "updatedAt": "2026-09-14",
-  "_file_stem": "product-product-getProductUpdateRule",
-  "cnName": "查询商品发布规则"
+  "_file_stem": "product-product-getProductUpdateRule"
 }

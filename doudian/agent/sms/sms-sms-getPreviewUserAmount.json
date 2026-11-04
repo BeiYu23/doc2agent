@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.getPreviewUserAmount",
+  "cnName": "预估公域标签圈选人群包人群数量",
+  "docUrl": "/docs/doudian/sms/sms-sms-getPreviewUserAmount",
+  "name": "sms.getPreviewUserAmount",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.getPreviewUserAmount",
   "description": "预估公域标签圈选人群包人群数量",
   "method": "GET",
   "path": "/sms/getPreviewUserAmount",
@@ -92,6 +94,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7502",
   "updatedAt": "2025-09-19",
-  "_file_stem": "sms-sms-getPreviewUserAmount",
-  "cnName": "预估公域标签圈选人群包人群数量"
+  "_file_stem": "sms-sms-getPreviewUserAmount"
 }

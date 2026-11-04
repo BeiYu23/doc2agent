@@ -1,8 +1,10 @@
 {
   "id": "doudian.marketing.marketing.queryFinalPrice",
+  "cnName": "查询到手价",
+  "docUrl": "/docs/doudian/marketing/marketing-marketing-queryFinalPrice",
+  "name": "marketing.queryFinalPrice",
   "platform": "doudian",
   "group": "marketing",
-  "name": "marketing.queryFinalPrice",
   "description": "查询到手价",
   "method": "GET",
   "path": "/marketing/queryFinalPrice",
@@ -341,6 +343,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/7773",
   "updatedAt": "2025-09-16",
-  "_file_stem": "marketing-marketing-queryFinalPrice",
-  "cnName": "查询到手价"
+  "_file_stem": "marketing-marketing-queryFinalPrice"
 }

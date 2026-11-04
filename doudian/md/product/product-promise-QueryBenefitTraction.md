@@ -1,11 +1,12 @@
-# promise.QueryBenefitTraction
+# 查询店铺维度利益点和库存推荐
 
-> 查询店铺维度利益点和库存推荐
+> promise.QueryBenefitTraction — 查询店铺维度利益点和库存推荐
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.promise.QueryBenefitTraction` |
 | 中文名 | 查询店铺维度利益点和库存推荐 |
+| 文档地址 | `/docs/doudian/product/product-promise-QueryBenefitTraction` |
+| 接口 ID | `doudian.product.promise.QueryBenefitTraction` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/QueryBenefitTraction` |

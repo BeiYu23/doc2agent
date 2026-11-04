@@ -1,8 +1,10 @@
 {
   "id": "doudian.permission.product.commentCounter",
+  "cnName": "获取商品维度或者店铺维度的评价计数信息",
+  "docUrl": "/docs/doudian/permission/permission-product-commentCounter",
+  "name": "product.commentCounter",
   "platform": "doudian",
   "group": "permission",
-  "name": "product.commentCounter",
   "description": "获取商品维度或者店铺维度的评价计数信息、或者是印象词信息",
   "method": "GET",
   "path": "/product/commentCounter",
@@ -696,6 +698,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1506/7909",
   "updatedAt": "2025-12-02",
-  "_file_stem": "permission-product-commentCounter",
-  "cnName": "获取商品维度或者店铺维度的评价计数信息"
+  "_file_stem": "permission-product-commentCounter"
 }

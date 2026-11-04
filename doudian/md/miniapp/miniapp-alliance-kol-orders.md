@@ -1,11 +1,12 @@
-# alliance.kol.orders
+# 查询达人联盟订单
 
-> 查询达人联盟订单
+> alliance.kol.orders — 查询达人联盟订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.alliance.kol.orders` |
 | 中文名 | 查询达人联盟订单 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-alliance-kol-orders` |
+| 接口 ID | `doudian.miniapp.alliance.kol.orders` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/kol/orders` |

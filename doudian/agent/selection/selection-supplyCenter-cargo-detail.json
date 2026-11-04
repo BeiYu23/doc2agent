@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.cargo.detail",
+  "cnName": "查询货品",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-cargo-detail",
+  "name": "supplyCenter.cargo.detail",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.cargo.detail",
   "description": "查询货品详情",
   "method": "GET",
   "path": "/supplyCenter/cargo/detail",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5335",
   "updatedAt": "2023-11-09",
-  "_file_stem": "selection-supplyCenter-cargo-detail",
-  "cnName": "查询货品"
+  "_file_stem": "selection-supplyCenter-cargo-detail"
 }

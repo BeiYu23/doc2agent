@@ -1,11 +1,12 @@
-# logistics.BatchCheckServiceOpenStatus
+# 批量服务订购查询
 
-> 批量服务订购查询
+> logistics.BatchCheckServiceOpenStatus — 批量服务订购查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.BatchCheckServiceOpenStatus` |
 | 中文名 | 批量服务订购查询 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-BatchCheckServiceOpenStatus` |
+| 接口 ID | `doudian.waybill.logistics.BatchCheckServiceOpenStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/BatchCheckServiceOpenStatus` |

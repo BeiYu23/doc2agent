@@ -1,11 +1,12 @@
-# supplyChain.procurement.QueryReturnOrder
+# 查询退供单
 
-> 查询退供单
+> supplyChain.procurement.QueryReturnOrder — 查询退供单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.supplyChain.procurement.QueryReturnOrder` |
 | 中文名 | 查询退供单 |
+| 文档地址 | `/docs/doudian/industry/industry-supplyChain-procurement-QueryReturnOrder` |
+| 接口 ID | `doudian.industry.supplyChain.procurement.QueryReturnOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

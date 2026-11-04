@@ -1,11 +1,12 @@
-# buyin.applyActivities
+# 商品团长活动提报
 
-> 商品团长活动提报接口
+> buyin.applyActivities — 商品团长活动提报接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.applyActivities` |
 | 中文名 | 商品团长活动提报 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-applyActivities` |
+| 接口 ID | `doudian.alliance.buyin.applyActivities` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/applyActivities` |

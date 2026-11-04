@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.register",
+  "cnName": "用户注册活动",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-register",
+  "name": "mini.activity.register",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.register",
   "description": "用户注册活动",
   "method": "GET",
   "path": "/mini/activity/register",
@@ -168,6 +170,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/4957",
   "updatedAt": "2024-01-29",
-  "_file_stem": "miniapp-mini-activity-register",
-  "cnName": "用户注册活动"
+  "_file_stem": "miniapp-mini-activity-register"
 }

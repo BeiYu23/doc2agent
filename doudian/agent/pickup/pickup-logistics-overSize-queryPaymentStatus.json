@@ -1,8 +1,10 @@
 {
   "id": "doudian.pickup.logistics.overSize.queryPaymentStatus",
+  "cnName": "大件逆向支付信息查询",
+  "docUrl": "/docs/doudian/pickup/pickup-logistics-overSize-queryPaymentStatus",
+  "name": "logistics.overSize.queryPaymentStatus",
   "platform": "doudian",
   "group": "pickup",
-  "name": "logistics.overSize.queryPaymentStatus",
   "description": "大件逆向支付信息查询",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -110,6 +112,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1526/6707",
   "updatedAt": "2024-07-15",
-  "_file_stem": "pickup-logistics-overSize-queryPaymentStatus",
-  "cnName": "大件逆向支付信息查询"
+  "_file_stem": "pickup-logistics-overSize-queryPaymentStatus"
 }

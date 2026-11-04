@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProduct.add",
+  "cnName": "创建产品",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-add",
+  "name": "supplyChain.supplyProduct.add",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProduct.add",
   "description": "创建产品",
   "method": "GET",
   "path": "/supplyChain/supplyProduct/add",
@@ -325,6 +327,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2542",
   "updatedAt": "2023-05-11",
-  "_file_stem": "supply-chain-supplyChain-supplyProduct-add",
-  "cnName": "创建产品"
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-add"
 }

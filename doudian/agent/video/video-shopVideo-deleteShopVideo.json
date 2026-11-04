@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.deleteShopVideo",
+  "cnName": "删除短视频",
+  "docUrl": "/docs/doudian/video/video-shopVideo-deleteShopVideo",
+  "name": "shopVideo.deleteShopVideo",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.deleteShopVideo",
   "description": "删除短视频",
   "method": "GET",
   "path": "/shopVideo/deleteShopVideo",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7488",
   "updatedAt": "2025-05-28",
-  "_file_stem": "video-shopVideo-deleteShopVideo",
-  "cnName": "删除短视频"
+  "_file_stem": "video-shopVideo-deleteShopVideo"
 }

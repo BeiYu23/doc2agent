@@ -1,11 +1,12 @@
-# buyin.colonelExtendApplyList
+# 专属团长活动商品延时申请结果查询
 
-> 专属团长活动商品延时申请结果查询
+> buyin.colonelExtendApplyList — 专属团长活动商品延时申请结果查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.colonelExtendApplyList` |
 | 中文名 | 专属团长活动商品延时申请结果查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-colonelExtendApplyList` |
+| 接口 ID | `doudian.alliance.buyin.colonelExtendApplyList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonelExtendApplyList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.member.searchList",
+  "cnName": "会员信息列表查询",
+  "docUrl": "/docs/doudian/shop/shop-member-searchList",
+  "name": "member.searchList",
   "platform": "doudian",
   "group": "shop",
-  "name": "member.searchList",
   "description": "会员信息列表查询",
   "method": "GET",
   "path": "/member/searchList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/366",
   "updatedAt": "2021-08-03",
-  "_file_stem": "shop-member-searchList",
-  "cnName": "会员信息列表查询"
+  "_file_stem": "shop-member-searchList"
 }

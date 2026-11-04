@@ -1,11 +1,12 @@
-# open.CreateVideoAnalysisTask
+# 创建视频分析任务
 
-> 创建视频分析任务
+> open.CreateVideoAnalysisTask — 创建视频分析任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.CreateVideoAnalysisTask` |
 | 中文名 | 创建视频分析任务 |
+| 文档地址 | `/docs/doudian/video/video-open-CreateVideoAnalysisTask` |
+| 接口 ID | `doudian.video.open.CreateVideoAnalysisTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/CreateVideoAnalysisTask` |

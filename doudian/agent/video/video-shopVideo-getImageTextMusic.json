@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.getImageTextMusic",
+  "cnName": "获取图文音乐列表",
+  "docUrl": "/docs/doudian/video/video-shopVideo-getImageTextMusic",
+  "name": "shopVideo.getImageTextMusic",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.getImageTextMusic",
   "description": "获取图文音乐列表",
   "method": "GET",
   "path": "/shopVideo/getImageTextMusic",
@@ -118,6 +120,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8140",
   "updatedAt": "2026-03-11",
-  "_file_stem": "video-shopVideo-getImageTextMusic",
-  "cnName": "获取图文音乐列表"
+  "_file_stem": "video-shopVideo-getImageTextMusic"
 }

@@ -1,11 +1,12 @@
-# superm.capacityRule.queryByid
+# 门店时段容量查询
 
-> 门店时段容量查询
+> superm.capacityRule.queryByid — 门店时段容量查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.capacityRule.queryByid` |
 | 中文名 | 门店时段容量查询 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-capacityRule-queryByid` |
+| 接口 ID | `doudian.retail-store.superm.capacityRule.queryByid` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.product.queryProductSyncSubTask",
+  "cnName": "查询根任务下的子任务列表",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-product-queryProductSyncSubTask",
+  "name": "superm.product.queryProductSyncSubTask",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.product.queryProductSyncSubTask",
   "description": "查询根任务下的子任务列表",
   "method": "GET",
   "path": "/superm/product/queryProductSyncSubTask",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2695",
   "updatedAt": "2022-11-02",
-  "_file_stem": "retail-store-superm-product-queryProductSyncSubTask",
-  "cnName": "查询根任务下的子任务列表"
+  "_file_stem": "retail-store-superm-product-queryProductSyncSubTask"
 }

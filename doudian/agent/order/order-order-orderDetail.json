@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.orderDetail",
+  "cnName": "订单详情查询",
+  "docUrl": "/docs/doudian/order/order-order-orderDetail",
+  "name": "order.orderDetail",
   "platform": "doudian",
   "group": "order",
-  "name": "order.orderDetail",
   "description": "订单详情查询",
   "method": "GET",
   "path": "/order/orderDetail",
@@ -1371,6 +1373,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1343",
   "updatedAt": "2026-10-22",
-  "_file_stem": "order-order-orderDetail",
-  "cnName": "订单详情查询"
+  "_file_stem": "order-order-orderDetail"
 }

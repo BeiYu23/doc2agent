@@ -1,13 +1,14 @@
-# orderCode.erpShopBindOrderCode
+# 质检/查验订单商家发货接口
 
-> 质检/查验订单商家发货接口，调用后会绑定订单和订单码，并生成qic入库单，
+> orderCode.erpShopBindOrderCode — 质检/查验订单商家发货接口，调用后会绑定订单和订单码，并生成qic入库单，
 delivery_type 是 【0】&& ship_type 是【1】，对应一单一包裹模式；
 delivery_type 是 【0】&& ship_type 是【3】，对应混订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bic-inspect.orderCode.erpShopBindOrderCode` |
 | 中文名 | 质检/查验订单商家发货接口 |
+| 文档地址 | `/docs/doudian/bic-inspect/bic-inspect-orderCode-erpShopBindOrderCode` |
+| 接口 ID | `doudian.bic-inspect.orderCode.erpShopBindOrderCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/erpShopBindOrderCode` |

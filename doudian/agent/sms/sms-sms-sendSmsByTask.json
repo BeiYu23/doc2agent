@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.sendSmsByTask",
+  "cnName": "通过父任务发起新的短信发送任务",
+  "docUrl": "/docs/doudian/sms/sms-sms-sendSmsByTask",
+  "name": "sms.sendSmsByTask",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.sendSmsByTask",
   "description": "通过父任务发起新的短信发送任务",
   "method": "GET",
   "path": "/sms/sendSmsByTask",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7789",
   "updatedAt": "2025-09-19",
-  "_file_stem": "sms-sms-sendSmsByTask",
-  "cnName": "通过父任务发起新的短信发送任务"
+  "_file_stem": "sms-sms-sendSmsByTask"
 }

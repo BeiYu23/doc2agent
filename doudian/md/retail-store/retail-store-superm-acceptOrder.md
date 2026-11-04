@@ -1,11 +1,12 @@
-# superm.acceptOrder
+# 超市小时达接单
 
-> 超市小时达接单
+> superm.acceptOrder — 超市小时达接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.acceptOrder` |
 | 中文名 | 超市小时达接单 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-acceptOrder` |
+| 接口 ID | `doudian.retail-store.superm.acceptOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/acceptOrder` |

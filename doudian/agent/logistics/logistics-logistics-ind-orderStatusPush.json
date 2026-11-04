@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.ind.orderStatusPush",
+  "cnName": "订单状态回传",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-ind-orderStatusPush",
+  "name": "logistics.ind.orderStatusPush",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.ind.orderStatusPush",
   "description": "订单状态回传",
   "method": "GET",
   "path": "/logistics/ind/orderStatusPush",
@@ -281,6 +283,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2456",
   "updatedAt": "2023-04-24",
-  "_file_stem": "logistics-logistics-ind-orderStatusPush",
-  "cnName": "订单状态回传"
+  "_file_stem": "logistics-logistics-ind-orderStatusPush"
 }

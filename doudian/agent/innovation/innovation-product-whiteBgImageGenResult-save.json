@@ -1,8 +1,10 @@
 {
   "id": "doudian.innovation.product.whiteBgImageGenResult.save",
+  "cnName": "白底图生成结果回传",
+  "docUrl": "/docs/doudian/innovation/innovation-product-whiteBgImageGenResult-save",
+  "name": "product.whiteBgImageGenResult.save",
   "platform": "doudian",
   "group": "innovation",
-  "name": "product.whiteBgImageGenResult.save",
   "description": "白底图生成结果回传",
   "method": "GET",
   "path": "/product/whiteBgImageGenResult/save",
@@ -117,6 +119,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1543/6833",
   "updatedAt": "2024-09-29",
-  "_file_stem": "innovation-product-whiteBgImageGenResult-save",
-  "cnName": "白底图生成结果回传"
+  "_file_stem": "innovation-product-whiteBgImageGenResult-save"
 }

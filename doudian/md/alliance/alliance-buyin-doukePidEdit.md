@@ -1,11 +1,12 @@
-# buyin.doukePidEdit
+# 独立抖客PID编辑
 
-> 独立抖客PID编辑
+> buyin.doukePidEdit — 独立抖客PID编辑
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukePidEdit` |
 | 中文名 | 独立抖客PID编辑 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukePidEdit` |
+| 接口 ID | `doudian.alliance.buyin.doukePidEdit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukePidEdit` |

@@ -1,11 +1,12 @@
-# iop.roleGet
+# 【厂商】查询店铺身份
 
-> 【厂商】查询店铺身份
+> iop.roleGet — 【厂商】查询店铺身份
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.roleGet` |
 | 中文名 | 【厂商】查询店铺身份 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-roleGet` |
+| 接口 ID | `doudian.dropshipping.iop.roleGet` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/roleGet` |

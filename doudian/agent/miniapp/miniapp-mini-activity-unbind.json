@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.unbind",
+  "cnName": "用户解绑活动",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-unbind",
+  "name": "mini.activity.unbind",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.unbind",
   "description": "用户解绑活动",
   "method": "GET",
   "path": "/mini/activity/unbind",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6747",
   "updatedAt": "2024-08-05",
-  "_file_stem": "miniapp-mini-activity-unbind",
-  "cnName": "用户解绑活动"
+  "_file_stem": "miniapp-mini-activity-unbind"
 }

@@ -1,11 +1,12 @@
-# productClue.RealTimeCommonClueListForShopFromOpen
+# 商机推荐
 
-> 商机推荐接口
+> productClue.RealTimeCommonClueListForShopFromOpen — 商机推荐接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.productClue.RealTimeCommonClueListForShopFromOpen` |
 | 中文名 | 商机推荐 |
+| 文档地址 | `/docs/doudian/product/product-productClue-RealTimeCommonClueListForShopFromOpen` |
+| 接口 ID | `doudian.product.productClue.RealTimeCommonClueListForShopFromOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/productClue/RealTimeCommonClueListForShopFromOpen` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.ind.aoi.push",
+  "cnName": "门店入驻后，自动/手动向承运商同步门店信息",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-ind-aoi-push",
+  "name": "logistics.ind.aoi.push",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.ind.aoi.push",
   "description": "门店入驻后，自动/手动向承运商同步门店信息",
   "method": "GET",
   "path": "/logistics/ind/aoi/push",
@@ -174,6 +176,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2455",
   "updatedAt": "2022-11-02",
-  "_file_stem": "logistics-logistics-ind-aoi-push",
-  "cnName": "门店入驻后，自动/手动向承运商同步门店信息"
+  "_file_stem": "logistics-logistics-ind-aoi-push"
 }

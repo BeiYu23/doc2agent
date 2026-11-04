@@ -1,11 +1,12 @@
-# power.updateCollectInfo
+# 取件信息推送（仅用于兼容老物流网关
 
-> 取件信息推送（仅用于兼容老物流网关）
+> power.updateCollectInfo — 取件信息推送（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.updateCollectInfo` |
 | 中文名 | 取件信息推送（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-updateCollectInfo` |
+| 接口 ID | `doudian.logistics.power.updateCollectInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/updateCollectInfo` |

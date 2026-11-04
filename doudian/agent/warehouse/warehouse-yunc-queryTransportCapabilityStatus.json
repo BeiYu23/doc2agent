@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.queryTransportCapabilityStatus",
+  "cnName": "运力配送状态查询",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-queryTransportCapabilityStatus",
+  "name": "yunc.queryTransportCapabilityStatus",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.queryTransportCapabilityStatus",
   "description": "运力配送状态查询接口",
   "method": "GET",
   "path": "/yunc/queryTransportCapabilityStatus",
@@ -93,6 +95,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/3584",
   "updatedAt": "2023-04-18",
-  "_file_stem": "warehouse-yunc-queryTransportCapabilityStatus",
-  "cnName": "运力配送状态查询"
+  "_file_stem": "warehouse-yunc-queryTransportCapabilityStatus"
 }

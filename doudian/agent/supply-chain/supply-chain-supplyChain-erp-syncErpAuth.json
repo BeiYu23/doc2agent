@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.erp.syncErpAuth",
+  "cnName": "授权信息同步",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-erp-syncErpAuth",
+  "name": "supplyChain.erp.syncErpAuth",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.erp.syncErpAuth",
   "description": "授权信息同步",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -156,6 +158,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/8110",
   "updatedAt": "2026-04-15",
-  "_file_stem": "supply-chain-supplyChain-erp-syncErpAuth",
-  "cnName": "授权信息同步"
+  "_file_stem": "supply-chain-supplyChain-erp-syncErpAuth"
 }

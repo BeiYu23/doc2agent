@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.erpInboundCreate",
+  "cnName": "erp创建入库单",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-erpInboundCreate",
+  "name": "yunc.erpInboundCreate",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.erpInboundCreate",
   "description": "erp创建入库单",
   "method": "GET",
   "path": "/yunc/erpInboundCreate",
@@ -370,6 +372,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/899",
   "updatedAt": "2023-01-17",
-  "_file_stem": "warehouse-yunc-erpInboundCreate",
-  "cnName": "erp创建入库单"
+  "_file_stem": "warehouse-yunc-erpInboundCreate"
 }

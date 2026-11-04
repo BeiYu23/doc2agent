@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.kolProductShare",
+  "cnName": "抖客商品分销转链",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-kolProductShare",
+  "name": "buyin.kolProductShare",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.kolProductShare",
   "description": "抖客商品分销转链",
   "method": "GET",
   "path": "/buyin/kolProductShare",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1464",
   "updatedAt": "2023-09-18",
-  "_file_stem": "alliance-buyin-kolProductShare",
-  "cnName": "抖客商品分销转链"
+  "_file_stem": "alliance-buyin-kolProductShare"
 }

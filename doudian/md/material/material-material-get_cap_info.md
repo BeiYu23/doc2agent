@@ -1,11 +1,12 @@
-# material.get_cap_info
+# 获取商家容量
 
-> 获取商家容量详情
+> material.get_cap_info — 获取商家容量详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.get_cap_info` |
 | 中文名 | 获取商家容量 |
+| 文档地址 | `/docs/doudian/material/material-material-get_cap_info` |
+| 接口 ID | `doudian.material.material.get_cap_info` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/get_cap_info` |

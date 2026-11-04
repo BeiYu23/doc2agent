@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.listV2",
+  "cnName": "批量查询商家抖店商品信息",
+  "docUrl": "/docs/doudian/product/product-product-listV2",
+  "name": "product.listV2",
   "platform": "doudian",
   "group": "product",
-  "name": "product.listV2",
   "description": "使用场景：批量查询商家抖店商品信息\n1、支持使用商品状态，商品类型、商品创建时间和更新时间筛选商品\n2、最大支持1次查询1万条，如返回商品数据大于1万条，请增加筛选条件。",
   "method": "GET",
   "path": "/product/listV2",
@@ -347,6 +349,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/633",
   "updatedAt": "2026-01-21",
-  "_file_stem": "product-product-listV2",
-  "cnName": "批量查询商家抖店商品信息"
+  "_file_stem": "product-product-listV2"
 }

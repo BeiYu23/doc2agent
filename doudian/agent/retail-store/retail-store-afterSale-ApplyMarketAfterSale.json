@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.afterSale.ApplyMarketAfterSale",
+  "cnName": "申请缺重/缺货",
+  "docUrl": "/docs/doudian/retail-store/retail-store-afterSale-ApplyMarketAfterSale",
+  "name": "afterSale.ApplyMarketAfterSale",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "afterSale.ApplyMarketAfterSale",
   "description": "申请缺重/缺货",
   "method": "GET",
   "path": "/afterSale/ApplyMarketAfterSale",
@@ -170,6 +172,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2402",
   "updatedAt": "2025-11-26",
-  "_file_stem": "retail-store-afterSale-ApplyMarketAfterSale",
-  "cnName": "申请缺重/缺货"
+  "_file_stem": "retail-store-afterSale-ApplyMarketAfterSale"
 }

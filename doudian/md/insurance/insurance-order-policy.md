@@ -1,11 +1,12 @@
-# order.policy
+# 查各种保险的保单
 
-> 查各种保险的保单详情
+> order.policy — 查各种保险的保单详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.insurance.order.policy` |
 | 中文名 | 查各种保险的保单 |
+| 文档地址 | `/docs/doudian/insurance/insurance-order-policy` |
+| 接口 ID | `doudian.insurance.order.policy` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/policy` |

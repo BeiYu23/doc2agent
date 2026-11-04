@@ -1,11 +1,12 @@
-# retailCustom.afterSale.getAfterSaleDetail
+# 提供给商家获取售后单详情信息
 
-> 提供给商家获取售后单详情信息
+> retailCustom.afterSale.getAfterSaleDetail — 提供给商家获取售后单详情信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.home-refund.retailCustom.afterSale.getAfterSaleDetail` |
 | 中文名 | 提供给商家获取售后单详情信息 |
+| 文档地址 | `/docs/doudian/home-refund/home-refund-retailCustom-afterSale-getAfterSaleDetail` |
+| 接口 ID | `doudian.home-refund.retailCustom.afterSale.getAfterSaleDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

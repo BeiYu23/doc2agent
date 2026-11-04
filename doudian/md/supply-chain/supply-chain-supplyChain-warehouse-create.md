@@ -1,11 +1,12 @@
-# supplyChain.warehouse.create
+# 创建区域仓
 
-> 创建区域仓
+> supplyChain.warehouse.create — 创建区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.warehouse.create` |
 | 中文名 | 创建区域仓 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-warehouse-create` |
+| 接口 ID | `doudian.supply-chain.supplyChain.warehouse.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/warehouse/create` |

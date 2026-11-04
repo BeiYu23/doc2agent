@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.terminalCancelOrder",
+  "cnName": "物流商取消",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-terminalCancelOrder",
+  "name": "logistics.terminalCancelOrder",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.terminalCancelOrder",
   "description": "物流商取消",
   "method": "GET",
   "path": "/logistics/terminalCancelOrder",
@@ -290,6 +292,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2032",
   "updatedAt": "2024-03-01",
-  "_file_stem": "logistics-logistics-terminalCancelOrder",
-  "cnName": "物流商取消"
+  "_file_stem": "logistics-logistics-terminalCancelOrder"
 }

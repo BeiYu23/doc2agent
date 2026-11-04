@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.supplier.getSupplierCategory",
+  "cnName": "获取供应商可选类目",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-supplier-getSupplierCategory",
+  "name": "supplyChain.supplier.getSupplierCategory",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.supplier.getSupplierCategory",
   "description": "获取供应商可选类目",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2121",
   "updatedAt": "2022-06-28",
-  "_file_stem": "shop-supplyChain-supplier-getSupplierCategory",
-  "cnName": "获取供应商可选类目"
+  "_file_stem": "shop-supplyChain-supplier-getSupplierCategory"
 }

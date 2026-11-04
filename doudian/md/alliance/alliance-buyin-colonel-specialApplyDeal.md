@@ -1,11 +1,12 @@
-# buyin.colonel.specialApplyDeal
+# 团长活动特殊申请审核
 
-> 团长活动特殊申请审核
+> buyin.colonel.specialApplyDeal — 团长活动特殊申请审核
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.colonel.specialApplyDeal` |
 | 中文名 | 团长活动特殊申请审核 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-colonel-specialApplyDeal` |
+| 接口 ID | `doudian.alliance.buyin.colonel.specialApplyDeal` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonel/specialApplyDeal` |

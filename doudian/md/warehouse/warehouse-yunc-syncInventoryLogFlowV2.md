@@ -1,11 +1,12 @@
-# yunc.syncInventoryLogFlowV2
+# 外部同步库存流水V2
 
-> 外部同步库存流水V2
+> yunc.syncInventoryLogFlowV2 — 外部同步库存流水V2
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.syncInventoryLogFlowV2` |
 | 中文名 | 外部同步库存流水V2 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-syncInventoryLogFlowV2` |
+| 接口 ID | `doudian.warehouse.yunc.syncInventoryLogFlowV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/syncInventoryLogFlowV2` |

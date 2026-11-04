@@ -1,11 +1,12 @@
-# order.getServiceList
+# 获取售后平台客服工单列表，对应抖店功能
 
-> 获取售后平台客服工单列表，对应抖店功能：https://school.jinritemai.com/doudian/web/lark-doc/fdJHrykEbfsrM
+> order.getServiceList — 获取售后平台客服工单列表，对应抖店功能：https://school.jinritemai.com/doudian/web/lark-doc/fdJHrykEbfsrM
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.getServiceList` |
 | 中文名 | 获取售后平台客服工单列表，对应抖店功能 |
+| 文档地址 | `/docs/doudian/order/order-order-getServiceList` |
+| 接口 ID | `doudian.order.order.getServiceList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getServiceList` |

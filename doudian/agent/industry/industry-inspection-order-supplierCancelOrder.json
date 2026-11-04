@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.order.supplierCancelOrder",
+  "cnName": "服务商取消",
+  "docUrl": "/docs/doudian/industry/industry-inspection-order-supplierCancelOrder",
+  "name": "inspection.order.supplierCancelOrder",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.order.supplierCancelOrder",
   "description": "服务商取消",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -133,6 +135,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8322",
   "updatedAt": "2026-05-21",
-  "_file_stem": "industry-inspection-order-supplierCancelOrder",
-  "cnName": "服务商取消"
+  "_file_stem": "industry-inspection-order-supplierCancelOrder"
 }

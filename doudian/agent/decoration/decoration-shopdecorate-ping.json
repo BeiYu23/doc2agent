@@ -1,8 +1,10 @@
 {
   "id": "doudian.decoration.shopdecorate.ping",
+  "cnName": "测试",
+  "docUrl": "/docs/doudian/decoration/decoration-shopdecorate-ping",
+  "name": "shopdecorate.ping",
   "platform": "doudian",
   "group": "decoration",
-  "name": "shopdecorate.ping",
   "description": "测试",
   "method": "GET",
   "path": "/shopdecorate/ping",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/2825",
   "updatedAt": "2022-12-16",
-  "_file_stem": "decoration-shopdecorate-ping",
-  "cnName": "测试"
+  "_file_stem": "decoration-shopdecorate-ping"
 }

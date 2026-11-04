@@ -1,11 +1,12 @@
-# supplyCenter.cargo.edit
+# 精选货源平台编辑货品
 
-> 精选货源平台编辑货品
+> supplyCenter.cargo.edit — 精选货源平台编辑货品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.cargo.edit` |
 | 中文名 | 精选货源平台编辑货品 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-cargo-edit` |
+| 接口 ID | `doudian.selection.supplyCenter.cargo.edit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/cargo/edit` |

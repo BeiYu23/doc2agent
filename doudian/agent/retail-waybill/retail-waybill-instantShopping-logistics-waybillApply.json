@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.logistics.waybillApply",
+  "cnName": "获取面单信息",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-waybillApply",
+  "name": "instantShopping.logistics.waybillApply",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.logistics.waybillApply",
   "description": "获取面单信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -153,6 +155,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7239",
   "updatedAt": "2025-02-06",
-  "_file_stem": "retail-waybill-instantShopping-logistics-waybillApply",
-  "cnName": "获取面单信息"
+  "_file_stem": "retail-waybill-instantShopping-logistics-waybillApply"
 }

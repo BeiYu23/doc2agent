@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.cpaypromotion.ecom.applyMerchantSettleBill",
+  "cnName": "通过url方式",
+  "docUrl": "/docs/doudian/bill/bill-cpaypromotion-ecom-applyMerchantSettleBill",
+  "name": "cpaypromotion.ecom.applyMerchantSettleBill",
   "platform": "doudian",
   "group": "bill",
-  "name": "cpaypromotion.ecom.applyMerchantSettleBill",
   "description": "1、通过url方式，下载文件生成结算账单下单接口，调用该接口生成一个download_id ，通过返回的download_id调用【YOUR_SECRET_KEY】查询下载url文件链接。如果申",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -118,6 +120,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/7722",
   "updatedAt": "2025-08-26",
-  "_file_stem": "bill-cpaypromotion-ecom-applyMerchantSettleBill",
-  "cnName": "通过url方式"
+  "_file_stem": "bill-cpaypromotion-ecom-applyMerchantSettleBill"
 }

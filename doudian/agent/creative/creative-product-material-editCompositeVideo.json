@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.editCompositeVideo",
+  "cnName": "商品元视频创意编辑",
+  "docUrl": "/docs/doudian/creative/creative-product-material-editCompositeVideo",
+  "name": "product.material.editCompositeVideo",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.editCompositeVideo",
   "description": "商品元视频创意编辑",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -120,6 +122,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4238",
   "updatedAt": "2023-08-02",
-  "_file_stem": "creative-product-material-editCompositeVideo",
-  "cnName": "商品元视频创意编辑"
+  "_file_stem": "creative-product-material-editCompositeVideo"
 }

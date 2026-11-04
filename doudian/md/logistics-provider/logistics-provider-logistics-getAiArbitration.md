@@ -1,11 +1,12 @@
-# logistics.getAiArbitration
+# 查询预校验结果
 
-> 查询预校验结果接口
+> logistics.getAiArbitration — 查询预校验结果接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.getAiArbitration` |
 | 中文名 | 查询预校验结果 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-getAiArbitration` |
+| 接口 ID | `doudian.logistics-provider.logistics.getAiArbitration` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getAiArbitration` |

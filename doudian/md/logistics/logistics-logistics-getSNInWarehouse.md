@@ -1,11 +1,12 @@
-# logistics.getSNInWarehouse
+# 获取SN入库数据
 
-> 获取SN入库数据接口
+> logistics.getSNInWarehouse — 获取SN入库数据接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.getSNInWarehouse` |
 | 中文名 | 获取SN入库数据 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-getSNInWarehouse` |
+| 接口 ID | `doudian.logistics.logistics.getSNInWarehouse` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getSNInWarehouse` |

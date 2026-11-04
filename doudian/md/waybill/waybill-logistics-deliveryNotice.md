@@ -1,11 +1,12 @@
-# logistics.deliveryNotice
+# 顺丰极效前置订单放行/回退
 
-> 顺丰极效前置订单放行/回退；
+> logistics.deliveryNotice — 顺丰极效前置订单放行/回退；
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.deliveryNotice` |
 | 中文名 | 顺丰极效前置订单放行/回退 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-deliveryNotice` |
+| 接口 ID | `doudian.waybill.logistics.deliveryNotice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/deliveryNotice` |

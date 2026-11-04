@@ -1,11 +1,12 @@
-# instantShopping.queryStockUpInboundOrder
+# 查询备货入库子单状态
 
-> 查询备货入库子单状态
+> instantShopping.queryStockUpInboundOrder — 查询备货入库子单状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.queryStockUpInboundOrder` |
 | 中文名 | 查询备货入库子单状态 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-queryStockUpInboundOrder` |
+| 接口 ID | `doudian.warehouse.instantShopping.queryStockUpInboundOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

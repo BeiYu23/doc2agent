@@ -1,11 +1,12 @@
-# mini.activity.userCanRegister
+# 判断用户是否可以参加活动
 
-> 判断用户是否可以参加活动
+> mini.activity.userCanRegister — 判断用户是否可以参加活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.userCanRegister` |
 | 中文名 | 判断用户是否可以参加活动 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-userCanRegister` |
+| 接口 ID | `doudian.miniapp.mini.activity.userCanRegister` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/userCanRegister` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.colonelGetOfficialSelectionProductList",
+  "cnName": "团长拉取爆品合伙人选品库商品",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-colonelGetOfficialSelectionProductList",
+  "name": "alliance.colonelGetOfficialSelectionProductList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.colonelGetOfficialSelectionProductList",
   "description": "团长拉取爆品合伙人选品库商品",
   "method": "GET",
   "path": "/alliance/colonelGetOfficialSelectionProductList",
@@ -217,6 +219,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/8361",
   "updatedAt": "2026-10-21",
-  "_file_stem": "alliance-alliance-colonelGetOfficialSelectionProductList",
-  "cnName": "团长拉取爆品合伙人选品库商品"
+  "_file_stem": "alliance-alliance-colonelGetOfficialSelectionProductList"
 }

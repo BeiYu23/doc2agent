@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.getVideoPlayUrl",
+  "cnName": "获取飞鸽视频播放URL",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-getVideoPlayUrl",
+  "name": "pigeon.getVideoPlayUrl",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.getVideoPlayUrl",
   "description": "获取飞鸽视频播放URL",
   "method": "GET",
   "path": "/pigeon/getVideoPlayUrl",
@@ -149,6 +151,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5947",
   "updatedAt": "2023-12-20",
-  "_file_stem": "feige-pigeon-getVideoPlayUrl",
-  "cnName": "获取飞鸽视频播放URL"
+  "_file_stem": "feige-pigeon-getVideoPlayUrl"
 }

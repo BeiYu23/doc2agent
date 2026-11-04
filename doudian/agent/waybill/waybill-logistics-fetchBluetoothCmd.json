@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.fetchBluetoothCmd",
+  "cnName": "电子面单场景下，获取蓝牙的打印指令",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-fetchBluetoothCmd",
+  "name": "logistics.fetchBluetoothCmd",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.fetchBluetoothCmd",
   "description": "电子面单场景下，获取蓝牙的打印指令",
   "method": "GET",
   "path": "/logistics/fetchBluetoothCmd",
@@ -209,6 +211,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/4142",
   "updatedAt": "2023-06-28",
-  "_file_stem": "waybill-logistics-fetchBluetoothCmd",
-  "cnName": "电子面单场景下，获取蓝牙的打印指令"
+  "_file_stem": "waybill-logistics-fetchBluetoothCmd"
 }

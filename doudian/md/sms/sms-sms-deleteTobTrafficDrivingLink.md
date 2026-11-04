@@ -1,11 +1,12 @@
-# sms.deleteTobTrafficDrivingLink
+# 删除引流链接
 
-> 删除引流链接
+> sms.deleteTobTrafficDrivingLink — 删除引流链接
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.deleteTobTrafficDrivingLink` |
 | 中文名 | 删除引流链接 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-deleteTobTrafficDrivingLink` |
+| 接口 ID | `doudian.sms.sms.deleteTobTrafficDrivingLink` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/deleteTobTrafficDrivingLink` |

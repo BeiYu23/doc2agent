@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.batchUploadImageSync",
+  "cnName": "一次上传的数量限制50张图片且单个图片最大不能…",
+  "docUrl": "/docs/doudian/material/material-material-batchUploadImageSync",
+  "name": "material.batchUploadImageSync",
   "platform": "doudian",
   "group": "material",
-  "name": "material.batchUploadImageSync",
   "description": "1、一次上传的数量限制50张图片且单个图片最大不能超过10M；   \n2、接口上传成功，素材中心会对素材进行异步审核，审核时效：非风险图片99%在4s内完成审核，风险图片我们会在24h内审核完成；对于审核失败的素材，素材中心会在一定时间内将其删除；\n3、上",
   "method": "GET",
   "path": "/material/batchUploadImageSync",
@@ -225,6 +227,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1616",
   "updatedAt": "2022-12-16",
-  "_file_stem": "material-material-batchUploadImageSync",
-  "cnName": "一次上传的数量限制50张图片且单个图片最大不能…"
+  "_file_stem": "material-material-batchUploadImageSync"
 }

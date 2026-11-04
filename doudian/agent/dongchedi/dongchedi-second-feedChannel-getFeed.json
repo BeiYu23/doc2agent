@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.feedChannel.getFeed",
+  "cnName": "【二方接口】Feed2.0",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-feedChannel-getFeed",
+  "name": "second.feedChannel.getFeed",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.feedChannel.getFeed",
   "description": "【二方接口】Feed2.0接口",
   "method": "GET",
   "path": "/second/feedChannel/getFeed",
@@ -890,6 +892,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6881",
   "updatedAt": "2024-09-14",
-  "_file_stem": "dongchedi-second-feedChannel-getFeed",
-  "cnName": "【二方接口】Feed2.0"
+  "_file_stem": "dongchedi-second-feedChannel-getFeed"
 }

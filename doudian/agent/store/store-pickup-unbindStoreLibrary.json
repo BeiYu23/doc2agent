@@ -1,8 +1,10 @@
 {
   "id": "doudian.store.pickup.unbindStoreLibrary",
+  "cnName": "门店组批量解绑门店",
+  "docUrl": "/docs/doudian/store/store-pickup-unbindStoreLibrary",
+  "name": "pickup.unbindStoreLibrary",
   "platform": "doudian",
   "group": "store",
-  "name": "pickup.unbindStoreLibrary",
   "description": "门店组批量解绑门店",
   "method": "GET",
   "path": "/pickup/unbindStoreLibrary",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7337",
   "updatedAt": "2026-06-24",
-  "_file_stem": "store-pickup-unbindStoreLibrary",
-  "cnName": "门店组批量解绑门店"
+  "_file_stem": "store-pickup-unbindStoreLibrary"
 }

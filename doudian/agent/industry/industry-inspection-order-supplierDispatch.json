@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.order.supplierDispatch",
+  "cnName": "服务商已派单",
+  "docUrl": "/docs/doudian/industry/industry-inspection-order-supplierDispatch",
+  "name": "inspection.order.supplierDispatch",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.order.supplierDispatch",
   "description": "服务商已派单",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8327",
   "updatedAt": "2026-05-21",
-  "_file_stem": "industry-inspection-order-supplierDispatch",
-  "cnName": "服务商已派单"
+  "_file_stem": "industry-inspection-order-supplierDispatch"
 }

@@ -1,11 +1,12 @@
-# shopVideo.genUploadAuth
+# 获取SDK上传视频的授权
 
-> 获取SDK上传视频的授权
+> shopVideo.genUploadAuth — 获取SDK上传视频的授权
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.genUploadAuth` |
 | 中文名 | 获取SDK上传视频的授权 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-genUploadAuth` |
+| 接口 ID | `doudian.video.shopVideo.genUploadAuth` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/genUploadAuth` |

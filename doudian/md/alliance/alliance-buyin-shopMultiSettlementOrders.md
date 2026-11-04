@@ -1,11 +1,12 @@
-# buyin.shopMultiSettlementOrders
+# 商家分次结算订单
 
-> 商家分次结算订单
+> buyin.shopMultiSettlementOrders — 商家分次结算订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.shopMultiSettlementOrders` |
 | 中文名 | 商家分次结算订单 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-shopMultiSettlementOrders` |
+| 接口 ID | `doudian.alliance.buyin.shopMultiSettlementOrders` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/shopMultiSettlementOrders` |

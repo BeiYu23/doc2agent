@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-express.instantShopping.logisticsMerchant.syncOrganizeStructure",
+  "cnName": "同步组织架构",
+  "docUrl": "/docs/doudian/retail-express/retail-express-instantShopping-logisticsMerchant-syncOrganizeStructure",
+  "name": "instantShopping.logisticsMerchant.syncOrganizeStructure",
   "platform": "doudian",
   "group": "retail-express",
-  "name": "instantShopping.logisticsMerchant.syncOrganizeStructure",
   "description": "同步组织架构",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1584/7303",
   "updatedAt": "2025-02-27",
-  "_file_stem": "retail-express-instantShopping-logisticsMerchant-syncOrganizeStructure",
-  "cnName": "同步组织架构"
+  "_file_stem": "retail-express-instantShopping-logisticsMerchant-syncOrganizeStructure"
 }

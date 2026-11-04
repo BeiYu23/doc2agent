@@ -1,11 +1,12 @@
-# inspection.order.supplierAccept
+# 服务商接单
 
-> 服务商接单
+> inspection.order.supplierAccept — 服务商接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierAccept` |
 | 中文名 | 服务商接单 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierAccept` |
+| 接口 ID | `doudian.industry.inspection.order.supplierAccept` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.expressDispatch",
+  "cnName": "【邮寄回收】服务商已派单",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-expressDispatch",
+  "name": "resale.order.expressDispatch",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.expressDispatch",
   "description": "【邮寄回收】服务商已派单",
   "method": "GET",
   "path": "/resale/order/expressDispatch",
@@ -148,6 +150,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4636",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-expressDispatch",
-  "cnName": "【邮寄回收】服务商已派单"
+  "_file_stem": "recycle-resale-order-expressDispatch"
 }

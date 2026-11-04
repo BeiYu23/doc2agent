@@ -1,11 +1,12 @@
-# order.decryptBatch
+# 此接口用于批量解密
 
-> 此接口用于批量解密
+> order.decryptBatch — 此接口用于批量解密
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.decryptBatch` |
 | 中文名 | 此接口用于批量解密 |
+| 文档地址 | `/docs/doudian/order/order-order-decryptBatch` |
+| 接口 ID | `doudian.order.order.decryptBatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/decryptBatch` |

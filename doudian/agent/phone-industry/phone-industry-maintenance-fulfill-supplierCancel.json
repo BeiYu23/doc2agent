@@ -1,8 +1,10 @@
 {
   "id": "doudian.phone-industry.maintenance.fulfill.supplierCancel",
+  "cnName": "维修服务商取消履约过程",
+  "docUrl": "/docs/doudian/phone-industry/phone-industry-maintenance-fulfill-supplierCancel",
+  "name": "maintenance.fulfill.supplierCancel",
   "platform": "doudian",
   "group": "phone-industry",
-  "name": "maintenance.fulfill.supplierCancel",
   "description": "维修服务商取消履约过程",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1520/7895",
   "updatedAt": "2025-11-27",
-  "_file_stem": "phone-industry-maintenance-fulfill-supplierCancel",
-  "cnName": "维修服务商取消履约过程"
+  "_file_stem": "phone-industry-maintenance-fulfill-supplierCancel"
 }

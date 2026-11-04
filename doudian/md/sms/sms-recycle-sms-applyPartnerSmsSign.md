@@ -1,11 +1,12 @@
-# recycle.sms.applyPartnerSmsSign
+# 申请短信签名
 
-> 申请短信签名
+> recycle.sms.applyPartnerSmsSign — 申请短信签名
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.recycle.sms.applyPartnerSmsSign` |
 | 中文名 | 申请短信签名 |
+| 文档地址 | `/docs/doudian/sms/sms-recycle-sms-applyPartnerSmsSign` |
+| 接口 ID | `doudian.sms.recycle.sms.applyPartnerSmsSign` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sms/applyPartnerSmsSign` |

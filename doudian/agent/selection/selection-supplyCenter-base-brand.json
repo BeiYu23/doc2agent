@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.base.brand",
+  "cnName": "精选货源获取类目品牌",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-base-brand",
+  "name": "supplyCenter.base.brand",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.base.brand",
   "description": "精选货源获取类目品牌",
   "method": "GET",
   "path": "/supplyCenter/base/brand",
@@ -92,6 +94,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5328",
   "updatedAt": "2023-10-25",
-  "_file_stem": "selection-supplyCenter-base-brand",
-  "cnName": "精选货源获取类目品牌"
+  "_file_stem": "selection-supplyCenter-base-brand"
 }

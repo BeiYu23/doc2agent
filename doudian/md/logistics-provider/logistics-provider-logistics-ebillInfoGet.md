@@ -1,11 +1,12 @@
-# logistics.ebillInfoGet
+# 面单明文信息查询
 
-> 面单明文信息查询接口
+> logistics.ebillInfoGet — 面单明文信息查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.ebillInfoGet` |
 | 中文名 | 面单明文信息查询 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-ebillInfoGet` |
+| 接口 ID | `doudian.logistics-provider.logistics.ebillInfoGet` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/ebillInfoGet` |

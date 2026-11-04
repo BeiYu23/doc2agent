@@ -1,8 +1,10 @@
 {
   "id": "doudian.prescription.medicine.getShopMemberAuthStoreIds",
+  "cnName": "获取成员有权限的门店",
+  "docUrl": "/docs/doudian/prescription/prescription-medicine-getShopMemberAuthStoreIds",
+  "name": "medicine.getShopMemberAuthStoreIds",
   "platform": "doudian",
   "group": "prescription",
-  "name": "medicine.getShopMemberAuthStoreIds",
   "description": "获取成员有权限的门店",
   "method": "GET",
   "path": "/medicine/getShopMemberAuthStoreIds",
@@ -1034,6 +1036,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1479/6487",
   "updatedAt": "2024-04-29",
-  "_file_stem": "prescription-medicine-getShopMemberAuthStoreIds",
-  "cnName": "获取成员有权限的门店"
+  "_file_stem": "prescription-medicine-getShopMemberAuthStoreIds"
 }

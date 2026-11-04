@@ -1,11 +1,12 @@
-# logistics.createCall
+# 派前电联创建呼叫
 
-> 派前电联创建呼叫接口
+> logistics.createCall — 派前电联创建呼叫接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.createCall` |
 | 中文名 | 派前电联创建呼叫 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-createCall` |
+| 接口 ID | `doudian.logistics-provider.logistics.createCall` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/createCall` |

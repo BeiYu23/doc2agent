@@ -1,11 +1,12 @@
-# mini.activity.query
+# 店铺活动查询
 
-> 店铺活动查询接口
+> mini.activity.query — 店铺活动查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.query` |
 | 中文名 | 店铺活动查询 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-query` |
+| 接口 ID | `doudian.miniapp.mini.activity.query` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/query` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.decoration.shop.GetProdCateRelation",
+  "cnName": "即时零售",
+  "docUrl": "/docs/doudian/decoration/decoration-shop-GetProdCateRelation",
+  "name": "shop.GetProdCateRelation",
   "platform": "doudian",
   "group": "decoration",
-  "name": "shop.GetProdCateRelation",
   "description": "即时零售，分类页场景，通过商品ID查询对应关联的页面分类信息。仅返回映射关系，具体生效情况，以查询到的tmp_id、cate_id查询为准。 如果页面是下线状态，仍可以查询到映射关系。\n\n无法查询的原因：\n1.  绑定关系不存在。\n2. 绑定的分类已经被删",
   "method": "GET",
   "path": "/shop/GetProdCateRelation",
@@ -56,6 +58,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/6874",
   "updatedAt": "2024-09-12",
-  "_file_stem": "decoration-shop-GetProdCateRelation",
-  "cnName": "即时零售"
+  "_file_stem": "decoration-shop-GetProdCateRelation"
 }

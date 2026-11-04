@@ -1,11 +1,12 @@
-# maintenance.order.supplierCancelOrder
+# 服务商主动取消订单事件
 
-> 服务商主动取消订单事件
+> maintenance.order.supplierCancelOrder — 服务商主动取消订单事件
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.order.supplierCancelOrder` |
 | 中文名 | 服务商主动取消订单事件 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierCancelOrder` |
+| 接口 ID | `doudian.phone-industry.maintenance.order.supplierCancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# ddp_open.ai.reportUsage
+# 上报商家用量
 
-> 上报商家用量
+> ddp_open.ai.reportUsage — 上报商家用量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.ddp_open.ai.reportUsage` |
 | 中文名 | 上报商家用量 |
+| 文档地址 | `/docs/doudian/industry/industry-ddp_open-ai-reportUsage` |
+| 接口 ID | `doudian.industry.ddp_open.ai.reportUsage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/ddp_open/ai/reportUsage` |

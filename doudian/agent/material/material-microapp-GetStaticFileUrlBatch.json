@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.microapp.GetStaticFileUrlBatch",
+  "cnName": "ISV批量兑换文件url",
+  "docUrl": "/docs/doudian/material/material-microapp-GetStaticFileUrlBatch",
+  "name": "microapp.GetStaticFileUrlBatch",
   "platform": "doudian",
   "group": "material",
-  "name": "microapp.GetStaticFileUrlBatch",
   "description": "ISV批量兑换文件url",
   "method": "GET",
   "path": "/microapp/GetStaticFileUrlBatch",
@@ -100,6 +102,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/2914",
   "updatedAt": "2024-12-26",
-  "_file_stem": "material-microapp-GetStaticFileUrlBatch",
-  "cnName": "ISV批量兑换文件url"
+  "_file_stem": "material-microapp-GetStaticFileUrlBatch"
 }

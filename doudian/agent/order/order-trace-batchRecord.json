@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.trace.batchRecord",
+  "cnName": "在订单链路监控场景中",
+  "docUrl": "/docs/doudian/order/order-trace-batchRecord",
+  "name": "trace.batchRecord",
   "platform": "doudian",
   "group": "order",
-  "name": "trace.batchRecord",
   "description": "在订单链路监控场景中，批量(最大20条)回传轨迹信息。 信息回传后能自动记录并统计监控状态信息",
   "method": "GET",
   "path": "/trace/batchRecord",
@@ -268,6 +270,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2797",
   "updatedAt": "2022-12-19",
-  "_file_stem": "order-trace-batchRecord",
-  "cnName": "在订单链路监控场景中"
+  "_file_stem": "order-trace-batchRecord"
 }

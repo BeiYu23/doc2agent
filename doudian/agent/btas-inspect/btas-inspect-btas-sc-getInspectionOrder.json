@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.btas.sc.getInspectionOrder",
+  "cnName": "质检机构获取该机构的订单状态信息",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-btas-sc-getInspectionOrder",
+  "name": "btas.sc.getInspectionOrder",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "btas.sc.getInspectionOrder",
   "description": "质检机构获取该机构的订单状态信息，包含履约状态，取消状态，送检状态和发货状态等。\n注意该字段需要手动配置接口权限，且仅能查询当前机构的订单。",
   "method": "GET",
   "path": "/btas/sc/getInspectionOrder",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/3529",
   "updatedAt": "2023-04-25",
-  "_file_stem": "btas-inspect-btas-sc-getInspectionOrder",
-  "cnName": "质检机构获取该机构的订单状态信息"
+  "_file_stem": "btas-inspect-btas-sc-getInspectionOrder"
 }

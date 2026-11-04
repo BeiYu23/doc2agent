@@ -1,11 +1,12 @@
-# sendHome.order.getOrderDetailAfterPicking
+# 拣货前退款后订单查询接口【即时零售】
 
-> 拣货前退款后订单查询接口【即时零售】
+> sendHome.order.getOrderDetailAfterPicking — 拣货前退款后订单查询接口【即时零售】
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.sendHome.order.getOrderDetailAfterPicking` |
 | 中文名 | 拣货前退款后订单查询接口【即时零售】 |
+| 文档地址 | `/docs/doudian/order/order-sendHome-order-getOrderDetailAfterPicking` |
+| 接口 ID | `doudian.order.sendHome.order.getOrderDetailAfterPicking` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sendHome/order/getOrderDetailAfterPicking` |

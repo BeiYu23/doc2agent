@@ -1,11 +1,12 @@
-# supplyChain.LiveCardRequest
+# 首页直播组件
 
-> 首页直播组件
+> supplyChain.LiveCardRequest — 首页直播组件
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.LiveCardRequest` |
 | 中文名 | 首页直播组件 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-LiveCardRequest` |
+| 接口 ID | `doudian.shop.supplyChain.LiveCardRequest` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/LiveCardRequest` |

@@ -1,11 +1,12 @@
-# fuwu.writeOffUsageCount
+# 核销已冻结的使用次数
 
-> 核销已冻结的使用次数
+> fuwu.writeOffUsageCount — 核销已冻结的使用次数
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.fuwu.writeOffUsageCount` |
 | 中文名 | 核销已冻结的使用次数 |
+| 文档地址 | `/docs/doudian/industry/industry-fuwu-writeOffUsageCount` |
+| 接口 ID | `doudian.industry.fuwu.writeOffUsageCount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/writeOffUsageCount` |

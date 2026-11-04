@@ -1,11 +1,12 @@
-# mini.product.isWanted
+# 查询是否收藏
 
-> 查询是否收藏
+> mini.product.isWanted — 查询是否收藏
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.mini.product.isWanted` |
 | 中文名 | 查询是否收藏 |
+| 文档地址 | `/docs/doudian/product/product-mini-product-isWanted` |
+| 接口 ID | `doudian.product.mini.product.isWanted` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/product/isWanted` |

@@ -1,11 +1,12 @@
-# member.GetJoinBonusCountForUser
+# 获取用户裂变引导入会人数
 
-> 获取用户裂变引导入会人数
+> member.GetJoinBonusCountForUser — 获取用户裂变引导入会人数
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.GetJoinBonusCountForUser` |
 | 中文名 | 获取用户裂变引导入会人数 |
+| 文档地址 | `/docs/doudian/member/member-member-GetJoinBonusCountForUser` |
+| 接口 ID | `doudian.member.member.GetJoinBonusCountForUser` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/GetJoinBonusCountForUser` |

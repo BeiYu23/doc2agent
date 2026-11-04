@@ -1,11 +1,12 @@
-# freightTemplate.list
+# 获取运费模板列表
 
-> 获取运费模板列表
+> freightTemplate.list — 获取运费模板列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.freightTemplate.list` |
 | 中文名 | 获取运费模板列表 |
+| 文档地址 | `/docs/doudian/logistics/logistics-freightTemplate-list` |
+| 接口 ID | `doudian.logistics.freightTemplate.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/freightTemplate/list` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.activityProductList",
+  "cnName": "一级团长查询提报活动商品",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-activityProductList",
+  "name": "buyin.activityProductList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.activityProductList",
   "description": "一级团长查询提报活动商品",
   "method": "GET",
   "path": "/buyin/activityProductList",
@@ -170,6 +172,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1926",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-activityProductList",
-  "cnName": "一级团长查询提报活动商品"
+  "_file_stem": "alliance-buyin-activityProductList"
 }

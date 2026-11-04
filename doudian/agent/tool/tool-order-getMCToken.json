@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.order.getMCToken",
+  "cnName": "获取前端组件token",
+  "docUrl": "/docs/doudian/tool/tool-order-getMCToken",
+  "name": "order.getMCToken",
   "platform": "doudian",
   "group": "tool",
-  "name": "order.getMCToken",
   "description": "获取前端组件token",
   "method": "GET",
   "path": "/order/getMCToken",
@@ -79,6 +81,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3586",
   "updatedAt": "2025-06-23",
-  "_file_stem": "tool-order-getMCToken",
-  "cnName": "获取前端组件token"
+  "_file_stem": "tool-order-getMCToken"
 }

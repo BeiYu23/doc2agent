@@ -1,11 +1,12 @@
-# product.upsertCargo
+# 货品创建、编辑
 
-> 货品创建、编辑
+> product.upsertCargo — 货品创建、编辑
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.product.upsertCargo` |
 | 中文名 | 货品创建、编辑 |
+| 文档地址 | `/docs/doudian/stock/stock-product-upsertCargo` |
+| 接口 ID | `doudian.stock.product.upsertCargo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/upsertCargo` |

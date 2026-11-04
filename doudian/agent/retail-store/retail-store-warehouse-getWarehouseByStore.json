@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.warehouse.getWarehouseByStore",
+  "cnName": "通过门店id查询仓信息",
+  "docUrl": "/docs/doudian/retail-store/retail-store-warehouse-getWarehouseByStore",
+  "name": "warehouse.getWarehouseByStore",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "warehouse.getWarehouseByStore",
   "description": "通过门店id查询仓信息",
   "method": "GET",
   "path": "/warehouse/getWarehouseByStore",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2442",
   "updatedAt": "2023-05-30",
-  "_file_stem": "retail-store-warehouse-getWarehouseByStore",
-  "cnName": "通过门店id查询仓信息"
+  "_file_stem": "retail-store-warehouse-getWarehouseByStore"
 }

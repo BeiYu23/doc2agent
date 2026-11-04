@@ -1,11 +1,12 @@
-# appMessage.taskList
+# 获取服务市场应用消息任务列表
 
-> 获取服务市场应用消息任务列表
+> appMessage.taskList — 获取服务市场应用消息任务列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.appMessage.taskList` |
 | 中文名 | 获取服务市场应用消息任务列表 |
+| 文档地址 | `/docs/doudian/tool/tool-appMessage-taskList` |
+| 接口 ID | `doudian.tool.appMessage.taskList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/appMessage/taskList` |

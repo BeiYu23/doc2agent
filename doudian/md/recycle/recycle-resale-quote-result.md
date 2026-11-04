@@ -1,11 +1,12 @@
-# resale.quote.result
+# 服务商质检完成报价/修改报价信息
 
-> 服务商质检完成报价/修改报价信息
+> resale.quote.result — 服务商质检完成报价/修改报价信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.quote.result` |
 | 中文名 | 服务商质检完成报价/修改报价信息 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-quote-result` |
+| 接口 ID | `doudian.recycle.resale.quote.result` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/quote/result` |

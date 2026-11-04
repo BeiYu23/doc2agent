@@ -1,11 +1,12 @@
-# logistics.govSubsidyInfoPush
+# 国补拍照信息回传
 
-> 国补拍照信息回传接口
+> logistics.govSubsidyInfoPush — 国补拍照信息回传接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.govSubsidyInfoPush` |
 | 中文名 | 国补拍照信息回传 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-govSubsidyInfoPush` |
+| 接口 ID | `doudian.logistics-provider.logistics.govSubsidyInfoPush` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/govSubsidyInfoPush` |

@@ -1,11 +1,12 @@
-# topup.resultCMCC
+# 中国移动话费充值结果回传
 
-> 中国移动话费充值结果回传
+> topup.resultCMCC — 中国移动话费充值结果回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.topup.resultCMCC` |
 | 中文名 | 中国移动话费充值结果回传 |
+| 文档地址 | `/docs/doudian/tool/tool-topup-resultCMCC` |
+| 接口 ID | `doudian.tool.topup.resultCMCC` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/resultCMCC` |

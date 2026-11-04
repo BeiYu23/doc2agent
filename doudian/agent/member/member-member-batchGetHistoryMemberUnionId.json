@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.batchGetHistoryMemberUnionId",
+  "cnName": "该接口可以根据店铺会员的openId获取品牌维…",
+  "docUrl": "/docs/doudian/member/member-member-batchGetHistoryMemberUnionId",
+  "name": "member.batchGetHistoryMemberUnionId",
   "platform": "doudian",
   "group": "member",
-  "name": "member.batchGetHistoryMemberUnionId",
   "description": "该接口可以根据店铺会员的openId获取品牌维度的用户身份标识unionId。同品牌下跨店铺中存量的抖音会员，可以用这个接口查询unionId，相同的unionId表示是同一个用户。\n注1：店铺如果不是品牌店铺，将无法获取unionId\n注2：用户如果不是",
   "method": "GET",
   "path": "/member/batchGetHistoryMemberUnionId",
@@ -134,6 +136,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/2136",
   "updatedAt": "2022-07-01",
-  "_file_stem": "member-member-batchGetHistoryMemberUnionId",
-  "cnName": "该接口可以根据店铺会员的openId获取品牌维…"
+  "_file_stem": "member-member-batchGetHistoryMemberUnionId"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.warehouse.info",
+  "cnName": "查询区域仓",
+  "docUrl": "/docs/doudian/shop/shop-warehouse-info",
+  "name": "warehouse.info",
   "platform": "doudian",
   "group": "shop",
-  "name": "warehouse.info",
   "description": "查询区域仓",
   "method": "GET",
   "path": "/warehouse/info",
@@ -99,6 +101,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2077",
   "updatedAt": "2022-07-12",
-  "_file_stem": "shop-warehouse-info",
-  "cnName": "查询区域仓"
+  "_file_stem": "shop-warehouse-info"
 }

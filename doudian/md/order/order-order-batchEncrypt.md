@@ -1,11 +1,12 @@
-# order.batchEncrypt
+# 批量加密
 
-> 批量加密接口
+> order.batchEncrypt — 批量加密接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.batchEncrypt` |
 | 中文名 | 批量加密 |
+| 文档地址 | `/docs/doudian/order/order-order-batchEncrypt` |
+| 接口 ID | `doudian.order.order.batchEncrypt` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/batchEncrypt` |

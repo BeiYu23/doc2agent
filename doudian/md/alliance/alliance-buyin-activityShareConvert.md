@@ -1,11 +1,12 @@
-# buyin.activityShareConvert
+# 活动页转链
 
-> 活动页转链接口
+> buyin.activityShareConvert — 活动页转链接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.activityShareConvert` |
 | 中文名 | 活动页转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-activityShareConvert` |
+| 接口 ID | `doudian.alliance.buyin.activityShareConvert` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/activityShareConvert` |

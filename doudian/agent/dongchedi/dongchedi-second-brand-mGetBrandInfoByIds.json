@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.brand.mGetBrandInfoByIds",
+  "cnName": "【二方接口】根据brand_id查询品牌信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-brand-mGetBrandInfoByIds",
+  "name": "second.brand.mGetBrandInfoByIds",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.brand.mGetBrandInfoByIds",
   "description": "【二方接口】根据brand_id查询品牌信息,翻页单次数量不超过300",
   "method": "GET",
   "path": "/second/brand/mGetBrandInfoByIds",
@@ -145,6 +147,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/7016",
   "updatedAt": "2024-10-21",
-  "_file_stem": "dongchedi-second-brand-mGetBrandInfoByIds",
-  "cnName": "【二方接口】根据brand_id查询品牌信息"
+  "_file_stem": "dongchedi-second-brand-mGetBrandInfoByIds"
 }

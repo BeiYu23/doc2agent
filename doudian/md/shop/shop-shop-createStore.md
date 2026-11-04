@@ -1,11 +1,12 @@
-# shop.createStore
+# 创建门店
 
-> 创建门店
+> shop.createStore — 创建门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.createStore` |
 | 中文名 | 创建门店 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-createStore` |
+| 接口 ID | `doudian.shop.shop.createStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/createStore` |

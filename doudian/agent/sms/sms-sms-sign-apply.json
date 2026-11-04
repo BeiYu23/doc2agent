@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.sign.apply",
+  "cnName": "提交短信签名申请单",
+  "docUrl": "/docs/doudian/sms/sms-sms-sign-apply",
+  "name": "sms.sign.apply",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.sign.apply",
   "description": "提交短信签名申请单",
   "method": "GET",
   "path": "/sms/sign/apply",
@@ -214,6 +216,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1525",
   "updatedAt": "2026-04-08",
-  "_file_stem": "sms-sms-sign-apply",
-  "cnName": "提交短信签名申请单"
+  "_file_stem": "sms-sms-sign-apply"
 }

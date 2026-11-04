@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.auditList",
+  "cnName": "审核记录列表",
+  "docUrl": "/docs/doudian/product/product-product-auditList",
+  "name": "product.auditList",
   "platform": "doudian",
   "group": "product",
-  "name": "product.auditList",
   "description": "审核记录列表",
   "method": "GET",
   "path": "/product/auditList",
@@ -141,6 +143,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1748",
   "updatedAt": "2025-01-07",
-  "_file_stem": "product-product-auditList",
-  "cnName": "审核记录列表"
+  "_file_stem": "product-product-auditList"
 }

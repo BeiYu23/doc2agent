@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.waybillApply",
+  "cnName": "获取面单信息",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-waybillApply",
+  "name": "logistics.waybillApply",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.waybillApply",
   "description": "获取面单信息",
   "method": "GET",
   "path": "/logistics/waybillApply",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/490",
   "updatedAt": "2021-06-22",
-  "_file_stem": "waybill-logistics-waybillApply",
-  "cnName": "获取面单信息"
+  "_file_stem": "waybill-logistics-waybillApply"
 }

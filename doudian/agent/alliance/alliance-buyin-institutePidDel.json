@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.institutePidDel",
+  "cnName": "抖客PID删除",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-institutePidDel",
+  "name": "buyin.institutePidDel",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.institutePidDel",
   "description": "抖客PID删除",
   "method": "GET",
   "path": "/buyin/institutePidDel",
@@ -72,6 +74,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1271",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-institutePidDel",
-  "cnName": "抖客PID删除"
+  "_file_stem": "alliance-buyin-institutePidDel"
 }

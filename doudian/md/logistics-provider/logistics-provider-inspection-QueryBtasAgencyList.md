@@ -1,11 +1,12 @@
-# inspection.QueryBtasAgencyList
+# 查询btas质检机构列表
 
-> 查询btas质检机构列表
+> inspection.QueryBtasAgencyList — 查询btas质检机构列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.inspection.QueryBtasAgencyList` |
 | 中文名 | 查询btas质检机构列表 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-inspection-QueryBtasAgencyList` |
+| 接口 ID | `doudian.logistics-provider.inspection.QueryBtasAgencyList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/QueryBtasAgencyList` |

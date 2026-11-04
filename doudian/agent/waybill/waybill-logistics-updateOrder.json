@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.updateOrder",
+  "cnName": "更新收件人信息",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-updateOrder",
+  "name": "logistics.updateOrder",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.updateOrder",
   "description": "更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）",
   "method": "GET",
   "path": "/logistics/updateOrder",
@@ -730,6 +732,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/494",
   "updatedAt": "2026-08-12",
-  "_file_stem": "waybill-logistics-updateOrder",
-  "cnName": "更新收件人信息"
+  "_file_stem": "waybill-logistics-updateOrder"
 }

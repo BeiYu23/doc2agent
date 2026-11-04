@@ -1,11 +1,12 @@
-# dutyFree.orderList
+# 商家拉单
 
-> 商家拉单
+> dutyFree.orderList — 商家拉单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.dutyFree.orderList` |
 | 中文名 | 商家拉单 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-dutyFree-orderList` |
+| 接口 ID | `doudian.cross-border.dutyFree.orderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/dutyFree/orderList` |

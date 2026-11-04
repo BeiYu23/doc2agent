@@ -1,11 +1,12 @@
-# sku.syncStockBatch
+# 库存批量同步
 
-> 库存批量同步接口
+> sku.syncStockBatch — 库存批量同步接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.sku.syncStockBatch` |
 | 中文名 | 库存批量同步 |
+| 文档地址 | `/docs/doudian/stock/stock-sku-syncStockBatch` |
+| 接口 ID | `doudian.stock.sku.syncStockBatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/syncStockBatch` |

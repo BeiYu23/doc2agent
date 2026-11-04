@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.pushTrackInfo",
+  "cnName": "异步推送面单运单信息",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-pushTrackInfo",
+  "name": "logistics.pushTrackInfo",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.pushTrackInfo",
   "description": "异步推送面单运单信息",
   "method": "GET",
   "path": "/logistics/pushTrackInfo",
@@ -148,6 +150,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8373",
   "updatedAt": "2026-06-24",
-  "_file_stem": "logistics-provider-logistics-pushTrackInfo",
-  "cnName": "异步推送面单运单信息"
+  "_file_stem": "logistics-provider-logistics-pushTrackInfo"
 }

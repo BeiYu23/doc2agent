@@ -1,11 +1,12 @@
-# yunc.reflow.inboundCallback
+# 翻仓入库单回告
 
-> 翻仓入库单回告接口
+> yunc.reflow.inboundCallback — 翻仓入库单回告接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.reflow.inboundCallback` |
 | 中文名 | 翻仓入库单回告 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-reflow-inboundCallback` |
+| 接口 ID | `doudian.warehouse.yunc.reflow.inboundCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/reflow/inboundCallback` |

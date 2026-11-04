@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.listChannelProduct",
+  "cnName": "检索渠道商品",
+  "docUrl": "/docs/doudian/product/product-product-listChannelProduct",
+  "name": "product.listChannelProduct",
   "platform": "doudian",
   "group": "product",
-  "name": "product.listChannelProduct",
   "description": "检索渠道商品",
   "method": "GET",
   "path": "/product/listChannelProduct",
@@ -172,6 +174,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4465",
   "updatedAt": "2024-05-13",
-  "_file_stem": "product-product-listChannelProduct",
-  "cnName": "检索渠道商品"
+  "_file_stem": "product-product-listChannelProduct"
 }

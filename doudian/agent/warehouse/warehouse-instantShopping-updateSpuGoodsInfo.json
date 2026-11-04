@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.instantShopping.updateSpuGoodsInfo",
+  "cnName": "支持仓储服务商回传货品基础信息",
+  "docUrl": "/docs/doudian/warehouse/warehouse-instantShopping-updateSpuGoodsInfo",
+  "name": "instantShopping.updateSpuGoodsInfo",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "instantShopping.updateSpuGoodsInfo",
   "description": "支持仓储服务商回传货品基础信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/7127",
   "updatedAt": "2024-12-04",
-  "_file_stem": "warehouse-instantShopping-updateSpuGoodsInfo",
-  "cnName": "支持仓储服务商回传货品基础信息"
+  "_file_stem": "warehouse-instantShopping-updateSpuGoodsInfo"
 }

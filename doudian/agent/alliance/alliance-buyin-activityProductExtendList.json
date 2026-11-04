@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.activityProductExtendList",
+  "cnName": "延长推广待处理/已处理记录查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-activityProductExtendList",
+  "name": "buyin.activityProductExtendList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.activityProductExtendList",
   "description": "延长推广待处理/已处理记录查询",
   "method": "GET",
   "path": "/buyin/activityProductExtendList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1674",
   "updatedAt": "2026-09-29",
-  "_file_stem": "alliance-buyin-activityProductExtendList",
-  "cnName": "延长推广待处理/已处理记录查询"
+  "_file_stem": "alliance-buyin-activityProductExtendList"
 }

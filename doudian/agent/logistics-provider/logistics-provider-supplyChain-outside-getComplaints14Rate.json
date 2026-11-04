@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.supplyChain.outside.getComplaints14Rate",
+  "cnName": "查询投诉工单量最多的相关网点",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getComplaints14Rate",
+  "name": "supplyChain.outside.getComplaints14Rate",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "supplyChain.outside.getComplaints14Rate",
   "description": "查询投诉工单量最多的相关网点",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2475",
   "updatedAt": "2022-09-26",
-  "_file_stem": "logistics-provider-supplyChain-outside-getComplaints14Rate",
-  "cnName": "查询投诉工单量最多的相关网点"
+  "_file_stem": "logistics-provider-supplyChain-outside-getComplaints14Rate"
 }

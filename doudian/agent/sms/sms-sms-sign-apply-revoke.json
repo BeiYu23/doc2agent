@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.sign.apply.revoke",
+  "cnName": "撤销短信签名申请单",
+  "docUrl": "/docs/doudian/sms/sms-sms-sign-apply-revoke",
+  "name": "sms.sign.apply.revoke",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.sign.apply.revoke",
   "description": "撤销短信签名申请单",
   "method": "GET",
   "path": "/sms/sign/apply/revoke",
@@ -109,6 +111,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1519",
   "updatedAt": "2026-03-24",
-  "_file_stem": "sms-sms-sign-apply-revoke",
-  "cnName": "撤销短信签名申请单"
+  "_file_stem": "sms-sms-sign-apply-revoke"
 }

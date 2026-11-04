@@ -1,11 +1,12 @@
-# supplyCenter.order.syncSupplierInfo
+# 支付前回传数据信息
 
-> 支付前回传数据信息
+> supplyCenter.order.syncSupplierInfo — 支付前回传数据信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.order.syncSupplierInfo` |
 | 中文名 | 支付前回传数据信息 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-order-syncSupplierInfo` |
+| 接口 ID | `doudian.selection.supplyCenter.order.syncSupplierInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

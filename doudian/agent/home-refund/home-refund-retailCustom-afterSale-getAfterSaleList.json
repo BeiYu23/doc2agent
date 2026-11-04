@@ -1,8 +1,10 @@
 {
   "id": "doudian.home-refund.retailCustom.afterSale.getAfterSaleList",
+  "cnName": "售后列表",
+  "docUrl": "/docs/doudian/home-refund/home-refund-retailCustom-afterSale-getAfterSaleList",
+  "name": "retailCustom.afterSale.getAfterSaleList",
   "platform": "doudian",
   "group": "home-refund",
-  "name": "retailCustom.afterSale.getAfterSaleList",
   "description": "售后列表接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -504,6 +506,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1521/6656",
   "updatedAt": "2024-06-28",
-  "_file_stem": "home-refund-retailCustom-afterSale-getAfterSaleList",
-  "cnName": "售后列表"
+  "_file_stem": "home-refund-retailCustom-afterSale-getAfterSaleList"
 }

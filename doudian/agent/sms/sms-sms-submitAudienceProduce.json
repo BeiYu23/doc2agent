@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.submitAudienceProduce",
+  "cnName": "提交人群包圈选生产任务",
+  "docUrl": "/docs/doudian/sms/sms-sms-submitAudienceProduce",
+  "name": "sms.submitAudienceProduce",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.submitAudienceProduce",
   "description": "提交人群包圈选生产任务",
   "method": "GET",
   "path": "/sms/submitAudienceProduce",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7786",
   "updatedAt": "2025-09-19",
-  "_file_stem": "sms-sms-submitAudienceProduce",
-  "cnName": "提交人群包圈选生产任务"
+  "_file_stem": "sms-sms-submitAudienceProduce"
 }

@@ -1,11 +1,12 @@
-# yunc.reflow.inboundCreate
+# 翻仓入库单创建
 
-> 翻仓入库单创建接口
+> yunc.reflow.inboundCreate — 翻仓入库单创建接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.reflow.inboundCreate` |
 | 中文名 | 翻仓入库单创建 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-reflow-inboundCreate` |
+| 接口 ID | `doudian.warehouse.yunc.reflow.inboundCreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/reflow/inboundCreate` |

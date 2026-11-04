@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.topup.microAppCreateOrder",
+  "cnName": "运营商小程序下单",
+  "docUrl": "/docs/doudian/miniapp/miniapp-topup-microAppCreateOrder",
+  "name": "topup.microAppCreateOrder",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "topup.microAppCreateOrder",
   "description": "运营商小程序下单",
   "method": "GET",
   "path": "/topup/microAppCreateOrder",
@@ -104,6 +106,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7705",
   "updatedAt": "2025-08-18",
-  "_file_stem": "miniapp-topup-microAppCreateOrder",
-  "cnName": "运营商小程序下单"
+  "_file_stem": "miniapp-topup-microAppCreateOrder"
 }

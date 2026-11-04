@@ -1,11 +1,12 @@
-# medicine.sendSpecifyMessage
+# 当医生拒绝开处方单，需要将理由同步到医药行业平台
 
-> 当医生拒绝开处方单，需要将理由同步到医药行业平台
+> medicine.sendSpecifyMessage — 当医生拒绝开处方单，需要将理由同步到医药行业平台
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.hospital.medicine.sendSpecifyMessage` |
 | 中文名 | 当医生拒绝开处方单，需要将理由同步到医药行业平台 |
+| 文档地址 | `/docs/doudian/hospital/hospital-medicine-sendSpecifyMessage` |
+| 接口 ID | `doudian.hospital.medicine.sendSpecifyMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/sendSpecifyMessage` |

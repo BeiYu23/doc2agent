@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.UpdateProductRecord",
+  "cnName": "更新备案",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-UpdateProductRecord",
+  "name": "crossBorder.UpdateProductRecord",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.UpdateProductRecord",
   "description": "更新备案",
   "method": "GET",
   "path": "/crossBorder/UpdateProductRecord",
@@ -547,6 +549,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6248",
   "updatedAt": "2024-10-10",
-  "_file_stem": "cross-border-crossBorder-UpdateProductRecord",
-  "cnName": "更新备案"
+  "_file_stem": "cross-border-crossBorder-UpdateProductRecord"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.addressConfirm",
+  "cnName": "买家地址变更确认",
+  "docUrl": "/docs/doudian/order/order-order-addressConfirm",
+  "name": "order.addressConfirm",
   "platform": "doudian",
   "group": "order",
-  "name": "order.addressConfirm",
   "description": "买家地址变更确认",
   "method": "GET",
   "path": "/order/addressConfirm",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1836",
   "updatedAt": "2024-06-24",
-  "_file_stem": "order-order-addressConfirm",
-  "cnName": "买家地址变更确认"
+  "_file_stem": "order-order-addressConfirm"
 }

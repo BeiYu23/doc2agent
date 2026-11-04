@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.getStoreSaleLimit",
+  "cnName": "获取门店绑定的限售模版",
+  "docUrl": "/docs/doudian/shop/shop-shop-getStoreSaleLimit",
+  "name": "shop.getStoreSaleLimit",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.getStoreSaleLimit",
   "description": "获取门店绑定的限售模版",
   "method": "GET",
   "path": "/shop/getStoreSaleLimit",
@@ -64,6 +66,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2379",
   "updatedAt": "2024-02-26",
-  "_file_stem": "shop-shop-getStoreSaleLimit",
-  "cnName": "获取门店绑定的限售模版"
+  "_file_stem": "shop-shop-getStoreSaleLimit"
 }

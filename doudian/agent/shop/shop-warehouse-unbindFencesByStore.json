@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.warehouse.unbindFencesByStore",
+  "cnName": "解绑门店和电子围栏",
+  "docUrl": "/docs/doudian/shop/shop-warehouse-unbindFencesByStore",
+  "name": "warehouse.unbindFencesByStore",
   "platform": "doudian",
   "group": "shop",
-  "name": "warehouse.unbindFencesByStore",
   "description": "解绑门店和电子围栏",
   "method": "GET",
   "path": "/warehouse/unbindFencesByStore",
@@ -88,6 +90,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2534",
   "updatedAt": "2023-12-15",
-  "_file_stem": "shop-warehouse-unbindFencesByStore",
-  "cnName": "解绑门店和电子围栏"
+  "_file_stem": "shop-warehouse-unbindFencesByStore"
 }

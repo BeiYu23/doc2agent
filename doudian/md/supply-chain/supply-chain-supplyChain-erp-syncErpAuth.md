@@ -1,11 +1,12 @@
-# supplyChain.erp.syncErpAuth
+# 授权信息同步
 
-> 授权信息同步
+> supplyChain.erp.syncErpAuth — 授权信息同步
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.erp.syncErpAuth` |
 | 中文名 | 授权信息同步 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-erp-syncErpAuth` |
+| 接口 ID | `doudian.supply-chain.supplyChain.erp.syncErpAuth` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

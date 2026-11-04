@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.batchEncrypt",
+  "cnName": "批量加密",
+  "docUrl": "/docs/doudian/order/order-order-batchEncrypt",
+  "name": "order.batchEncrypt",
   "platform": "doudian",
   "group": "order",
-  "name": "order.batchEncrypt",
   "description": "批量加密接口",
   "method": "GET",
   "path": "/order/batchEncrypt",
@@ -122,6 +124,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/487",
   "updatedAt": "2026-08-21",
-  "_file_stem": "order-order-batchEncrypt",
-  "cnName": "批量加密"
+  "_file_stem": "order-order-batchEncrypt"
 }

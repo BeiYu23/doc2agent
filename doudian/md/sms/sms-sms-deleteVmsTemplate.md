@@ -1,11 +1,12 @@
-# sms.deleteVmsTemplate
+# 删除视频短信模板
 
-> 删除视频短信模板
+> sms.deleteVmsTemplate — 删除视频短信模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.deleteVmsTemplate` |
 | 中文名 | 删除视频短信模板 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-deleteVmsTemplate` |
+| 接口 ID | `doudian.sms.sms.deleteVmsTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/deleteVmsTemplate` |

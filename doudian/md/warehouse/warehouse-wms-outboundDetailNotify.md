@@ -1,11 +1,12 @@
-# wms.outboundDetailNotify
+# WMS出库明细回传
 
-> WMS出库明细回传
+> wms.outboundDetailNotify — WMS出库明细回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.wms.outboundDetailNotify` |
 | 中文名 | WMS出库明细回传 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-wms-outboundDetailNotify` |
+| 接口 ID | `doudian.warehouse.wms.outboundDetailNotify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/wms/outboundDetailNotify` |

@@ -1,11 +1,12 @@
-# open.appIpWhiteListDelete
+# 仓库解绑门店
 
-> 仓库解绑门店接口
+> open.appIpWhiteListDelete — 仓库解绑门店接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.open.appIpWhiteListDelete` |
 | 中文名 | 仓库解绑门店 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-open-appIpWhiteListDelete` |
+| 接口 ID | `doudian.warehouse.open.appIpWhiteListDelete` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/appIpWhiteListDelete` |

@@ -1,11 +1,12 @@
-# logistics.getRecommendedAndDeliveryExpressByOrder
+# 查询订单维度快递可达及推荐服务
 
-> 查询订单维度快递可达及推荐服务
+> logistics.getRecommendedAndDeliveryExpressByOrder — 查询订单维度快递可达及推荐服务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.getRecommendedAndDeliveryExpressByOrder` |
 | 中文名 | 查询订单维度快递可达及推荐服务 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-getRecommendedAndDeliveryExpressByOrder` |
+| 接口 ID | `doudian.logistics.logistics.getRecommendedAndDeliveryExpressByOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getRecommendedAndDeliveryExpressByOrder` |

@@ -1,11 +1,12 @@
-# logistics.overSize.reportException
+# 上报大件上门取件履约过程中的异常
 
-> 上报大件上门取件履约过程中的异常
+> logistics.overSize.reportException — 上报大件上门取件履约过程中的异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.pickup.logistics.overSize.reportException` |
 | 中文名 | 上报大件上门取件履约过程中的异常 |
+| 文档地址 | `/docs/doudian/pickup/pickup-logistics-overSize-reportException` |
+| 接口 ID | `doudian.pickup.logistics.overSize.reportException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

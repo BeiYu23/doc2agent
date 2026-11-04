@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.kolMaterialsProductsDetails",
+  "cnName": "查询达人视角商品",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-kolMaterialsProductsDetails",
+  "name": "buyin.kolMaterialsProductsDetails",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.kolMaterialsProductsDetails",
   "description": "查询达人视角商品详情",
   "method": "GET",
   "path": "/buyin/kolMaterialsProductsDetails",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1589",
   "updatedAt": "2024-04-11",
-  "_file_stem": "alliance-buyin-kolMaterialsProductsDetails",
-  "cnName": "查询达人视角商品"
+  "_file_stem": "alliance-buyin-kolMaterialsProductsDetails"
 }

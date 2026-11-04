@@ -1,11 +1,12 @@
-# order.downloadShopAccountItem
+# 请求下载资金流水明细
 
-> 请求下载资金流水明细，得到download_id,download_id获取文件需要从order/downloadShopAccountItemFile接口获取，数据T+1生成，建议第二天15点之后下载
+> order.downloadShopAccountItem — 请求下载资金流水明细，得到download_id,download_id获取文件需要从order/downloadShopAccountItemFile接口获取，数据T+1生成，建议第二天15点之后下载
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.downloadShopAccountItem` |
 | 中文名 | 请求下载资金流水明细 |
+| 文档地址 | `/docs/doudian/bill/bill-order-downloadShopAccountItem` |
+| 接口 ID | `doudian.bill.order.downloadShopAccountItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/downloadShopAccountItem` |

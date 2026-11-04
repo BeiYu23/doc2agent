@@ -1,11 +1,12 @@
-# open.QueryVideoAnalysisTask
+# 查询视频分析任务
 
-> 查询视频分析任务
+> open.QueryVideoAnalysisTask — 查询视频分析任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.QueryVideoAnalysisTask` |
 | 中文名 | 查询视频分析任务 |
+| 文档地址 | `/docs/doudian/video/video-open-QueryVideoAnalysisTask` |
+| 接口 ID | `doudian.video.open.QueryVideoAnalysisTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/QueryVideoAnalysisTask` |

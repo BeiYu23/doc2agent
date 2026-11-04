@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.materialToken",
+  "cnName": "素材上传接口访问token",
+  "docUrl": "/docs/doudian/tool/tool-open-materialToken",
+  "name": "open.materialToken",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.materialToken",
   "description": "素材上传接口访问token",
   "method": "GET",
   "path": "/open/materialToken",
@@ -95,6 +97,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/2222",
   "updatedAt": "2024-09-04",
-  "_file_stem": "tool-open-materialToken",
-  "cnName": "素材上传接口访问token"
+  "_file_stem": "tool-open-materialToken"
 }

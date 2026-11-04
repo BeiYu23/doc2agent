@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.member.submitOutboundAudiencePlan",
+  "cnName": "提交外呼人群包生成计划",
+  "docUrl": "/docs/doudian/sms/sms-member-submitOutboundAudiencePlan",
+  "name": "member.submitOutboundAudiencePlan",
   "platform": "doudian",
   "group": "sms",
-  "name": "member.submitOutboundAudiencePlan",
   "description": "提交外呼人群包生成计划",
   "method": "GET",
   "path": "/member/submitOutboundAudiencePlan",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6879",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-member-submitOutboundAudiencePlan",
-  "cnName": "提交外呼人群包生成计划"
+  "_file_stem": "sms-member-submitOutboundAudiencePlan"
 }

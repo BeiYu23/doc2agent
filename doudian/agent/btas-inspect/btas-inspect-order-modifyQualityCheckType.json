@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.order.modifyQualityCheckType",
+  "cnName": "修改可质检订单质检类型",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-order-modifyQualityCheckType",
+  "name": "order.modifyQualityCheckType",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "order.modifyQualityCheckType",
   "description": "修改可质检订单质检类型",
   "method": "GET",
   "path": "/order/modifyQualityCheckType",
@@ -49,6 +51,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/3590",
   "updatedAt": "2023-04-23",
-  "_file_stem": "btas-inspect-order-modifyQualityCheckType",
-  "cnName": "修改可质检订单质检类型"
+  "_file_stem": "btas-inspect-order-modifyQualityCheckType"
 }

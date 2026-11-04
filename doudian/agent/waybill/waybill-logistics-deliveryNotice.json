@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.deliveryNotice",
+  "cnName": "顺丰极效前置订单放行/回退",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-deliveryNotice",
+  "name": "logistics.deliveryNotice",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.deliveryNotice",
   "description": "顺丰极效前置订单放行/回退；",
   "method": "GET",
   "path": "/logistics/deliveryNotice",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1578",
   "updatedAt": "2021-12-28",
-  "_file_stem": "waybill-logistics-deliveryNotice",
-  "cnName": "顺丰极效前置订单放行/回退"
+  "_file_stem": "waybill-logistics-deliveryNotice"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.checkPreDelivery",
+  "cnName": "查询商家/订单是否可用预发货",
+  "docUrl": "/docs/doudian/logistics/logistics-order-checkPreDelivery",
+  "name": "order.checkPreDelivery",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.checkPreDelivery",
   "description": "查询商家/订单是否可用预发货。如果不传订单ID，则查询店铺维度预发货判定结果。如果传了订单ID，则查询订单维度预发货判定结果。",
   "method": "GET",
   "path": "/order/checkPreDelivery",
@@ -89,6 +91,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/8212",
   "updatedAt": "2026-04-22",
-  "_file_stem": "logistics-order-checkPreDelivery",
-  "cnName": "查询商家/订单是否可用预发货"
+  "_file_stem": "logistics-order-checkPreDelivery"
 }

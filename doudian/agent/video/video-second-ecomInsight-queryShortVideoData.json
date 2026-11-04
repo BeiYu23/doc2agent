@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.queryShortVideoData",
+  "cnName": "查询短视频数据",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-queryShortVideoData",
+  "name": "second.ecomInsight.queryShortVideoData",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.queryShortVideoData",
   "description": "查询短视频数据接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -233,6 +235,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8182",
   "updatedAt": "2026-04-08",
-  "_file_stem": "video-second-ecomInsight-queryShortVideoData",
-  "cnName": "查询短视频数据"
+  "_file_stem": "video-second-ecomInsight-queryShortVideoData"
 }

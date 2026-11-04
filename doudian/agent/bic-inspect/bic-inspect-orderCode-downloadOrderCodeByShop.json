@@ -1,8 +1,10 @@
 {
   "id": "doudian.bic-inspect.orderCode.downloadOrderCodeByShop",
+  "cnName": "预绑订单码",
+  "docUrl": "/docs/doudian/bic-inspect/bic-inspect-orderCode-downloadOrderCodeByShop",
+  "name": "orderCode.downloadOrderCodeByShop",
   "platform": "doudian",
   "group": "bic-inspect",
-  "name": "orderCode.downloadOrderCodeByShop",
   "description": "预绑订单码，下载后订单进入预绑码状态【请勿使用该接口查询订单信息！！！】",
   "method": "GET",
   "path": "/orderCode/downloadOrderCodeByShop",
@@ -102,6 +104,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/1871",
   "updatedAt": "2024-08-01",
-  "_file_stem": "bic-inspect-orderCode-downloadOrderCodeByShop",
-  "cnName": "预绑订单码"
+  "_file_stem": "bic-inspect-orderCode-downloadOrderCodeByShop"
 }

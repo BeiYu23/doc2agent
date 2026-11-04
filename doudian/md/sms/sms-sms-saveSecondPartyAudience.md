@@ -1,11 +1,12 @@
-# sms.saveSecondPartyAudience
+# 保存二方人群
 
-> 保存二方人群
+> sms.saveSecondPartyAudience — 保存二方人群
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.saveSecondPartyAudience` |
 | 中文名 | 保存二方人群 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-saveSecondPartyAudience` |
+| 接口 ID | `doudian.sms.sms.saveSecondPartyAudience` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/saveSecondPartyAudience` |

@@ -1,11 +1,12 @@
-# buyin.distributionRedpackDetailList
+# 达人抖客红包
 
-> 达人抖客红包详情
+> buyin.distributionRedpackDetailList — 达人抖客红包详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.distributionRedpackDetailList` |
 | 中文名 | 达人抖客红包 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-distributionRedpackDetailList` |
+| 接口 ID | `doudian.alliance.buyin.distributionRedpackDetailList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/distributionRedpackDetailList` |

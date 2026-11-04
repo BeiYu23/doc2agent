@@ -1,11 +1,12 @@
-# warehouse.setPriority
+# 设置指定地址下的仓的优先级
 
-> 设置指定地址下的仓的优先级
+> warehouse.setPriority — 设置指定地址下的仓的优先级
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.setPriority` |
 | 中文名 | 设置指定地址下的仓的优先级 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-setPriority` |
+| 接口 ID | `doudian.stock.warehouse.setPriority` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/setPriority` |

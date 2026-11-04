@@ -1,11 +1,12 @@
-# power.callBackSessionResult
+# 会话创建响应
 
-> 会话创建响应
+> power.callBackSessionResult — 会话创建响应
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.power.callBackSessionResult` |
 | 中文名 | 会话创建响应 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-power-callBackSessionResult` |
+| 接口 ID | `doudian.logistics-provider.power.callBackSessionResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/callBackSessionResult` |

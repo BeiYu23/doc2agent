@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.getStoreAutoCallRiderInfo",
+  "cnName": "查询自动呼叫运力配置",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-getStoreAutoCallRiderInfo",
+  "name": "superm.getStoreAutoCallRiderInfo",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.getStoreAutoCallRiderInfo",
   "description": "查询自动呼叫运力配置",
   "method": "GET",
   "path": "/superm/getStoreAutoCallRiderInfo",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2799",
   "updatedAt": "2023-09-15",
-  "_file_stem": "retail-store-superm-getStoreAutoCallRiderInfo",
-  "cnName": "查询自动呼叫运力配置"
+  "_file_stem": "retail-store-superm-getStoreAutoCallRiderInfo"
 }

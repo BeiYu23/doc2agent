@@ -1,11 +1,12 @@
-# trade.CreateFreightTemplate
+# 小时达创建运费模板
 
-> 小时达创建运费模板
+> trade.CreateFreightTemplate — 小时达创建运费模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.trade.CreateFreightTemplate` |
 | 中文名 | 小时达创建运费模板 |
+| 文档地址 | `/docs/doudian/shop/shop-trade-CreateFreightTemplate` |
+| 接口 ID | `doudian.shop.trade.CreateFreightTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/CreateFreightTemplate` |

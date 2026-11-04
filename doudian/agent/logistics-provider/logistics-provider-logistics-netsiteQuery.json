@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.netsiteQuery",
+  "cnName": "电子面单网点信息查询",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-netsiteQuery",
+  "name": "logistics.netsiteQuery",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.netsiteQuery",
   "description": "电子面单网点信息查询",
   "method": "GET",
   "path": "/logistics/netsiteQuery",
@@ -115,6 +117,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6936",
   "updatedAt": "2024-10-15",
-  "_file_stem": "logistics-provider-logistics-netsiteQuery",
-  "cnName": "电子面单网点信息查询"
+  "_file_stem": "logistics-provider-logistics-netsiteQuery"
 }

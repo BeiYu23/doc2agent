@@ -1,11 +1,12 @@
-# openCloud.v1.deployTicket.confirm
+# 确认发布
 
-> 确认发布
+> openCloud.v1.deployTicket.confirm — 确认发布
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.confirm` |
 | 中文名 | 确认发布 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-confirm` |
+| 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.confirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/deployTicket/confirm` |

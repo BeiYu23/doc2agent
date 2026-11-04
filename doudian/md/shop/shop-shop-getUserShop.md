@@ -1,11 +1,12 @@
-# shop.getUserShop
+# 获取用户店铺信息
 
-> 获取用户店铺信息
+> shop.getUserShop — 获取用户店铺信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.getUserShop` |
 | 中文名 | 获取用户店铺信息 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-getUserShop` |
+| 接口 ID | `doudian.shop.shop.getUserShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getUserShop` |

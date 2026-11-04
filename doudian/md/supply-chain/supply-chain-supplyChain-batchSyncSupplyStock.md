@@ -1,11 +1,12 @@
-# supplyChain.batchSyncSupplyStock
+# 批量同步库存
 
-> 批量同步库存
+> supplyChain.batchSyncSupplyStock — 批量同步库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.batchSyncSupplyStock` |
 | 中文名 | 批量同步库存 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-batchSyncSupplyStock` |
+| 接口 ID | `doudian.supply-chain.supplyChain.batchSyncSupplyStock` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/batchSyncSupplyStock` |

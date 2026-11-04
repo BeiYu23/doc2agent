@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.trade.UpdateTradeLimitTemplate",
+  "cnName": "更新限售模版",
+  "docUrl": "/docs/doudian/shop/shop-trade-UpdateTradeLimitTemplate",
+  "name": "trade.UpdateTradeLimitTemplate",
   "platform": "doudian",
   "group": "shop",
-  "name": "trade.UpdateTradeLimitTemplate",
   "description": "更新限售模版",
   "method": "GET",
   "path": "/trade/UpdateTradeLimitTemplate",
@@ -203,6 +205,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2707",
   "updatedAt": "2024-06-12",
-  "_file_stem": "shop-trade-UpdateTradeLimitTemplate",
-  "cnName": "更新限售模版"
+  "_file_stem": "shop-trade-UpdateTradeLimitTemplate"
 }

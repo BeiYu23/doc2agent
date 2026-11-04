@@ -1,11 +1,12 @@
-# supplyChain.CouponZoneFeedsPage
+# 二级承接页商品卡片分页
 
-> 二级承接页商品卡片分页
+> supplyChain.CouponZoneFeedsPage — 二级承接页商品卡片分页
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.CouponZoneFeedsPage` |
 | 中文名 | 二级承接页商品卡片分页 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-CouponZoneFeedsPage` |
+| 接口 ID | `doudian.shop.supplyChain.CouponZoneFeedsPage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/CouponZoneFeedsPage` |

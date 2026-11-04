@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.refundProcessDetail",
+  "cnName": "根据子订单ID查询退款",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-refundProcessDetail",
+  "name": "afterSale.refundProcessDetail",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.refundProcessDetail",
   "description": "根据子订单ID查询退款详情（831下线，可使用该接口：/afterSale/Detail）",
   "method": "GET",
   "path": "/afterSale/refundProcessDetail",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/96",
   "updatedAt": "2021-06-30",
-  "_file_stem": "refund-afterSale-refundProcessDetail",
-  "cnName": "根据子订单ID查询退款"
+  "_file_stem": "refund-afterSale-refundProcessDetail"
 }

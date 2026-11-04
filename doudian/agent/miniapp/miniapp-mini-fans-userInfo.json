@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.fans.userInfo",
+  "cnName": "获取用户的购物粉丝团等级",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-fans-userInfo",
+  "name": "mini.fans.userInfo",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.fans.userInfo",
   "description": "获取用户的购物粉丝团等级",
   "method": "GET",
   "path": "/mini/fans/userInfo",
@@ -98,6 +100,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6932",
   "updatedAt": "2024-10-18",
-  "_file_stem": "miniapp-mini-fans-userInfo",
-  "cnName": "获取用户的购物粉丝团等级"
+  "_file_stem": "miniapp-mini-fans-userInfo"
 }

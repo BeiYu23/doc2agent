@@ -1,11 +1,12 @@
-# second.ecomInsight.createAigcTask
+# 创建aigc集成任务
 
-> 创建aigc集成任务
+> second.ecomInsight.createAigcTask — 创建aigc集成任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.createAigcTask` |
 | 中文名 | 创建aigc集成任务 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-createAigcTask` |
+| 接口 ID | `doudian.video.second.ecomInsight.createAigcTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

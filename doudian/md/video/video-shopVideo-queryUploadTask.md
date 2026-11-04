@@ -1,11 +1,12 @@
-# shopVideo.queryUploadTask
+# 查询url上传视频接口的任务信息（状态
 
-> 查询url上传视频接口的任务信息（状态、上传成功的视频id等）
+> shopVideo.queryUploadTask — 查询url上传视频接口的任务信息（状态、上传成功的视频id等）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.queryUploadTask` |
 | 中文名 | 查询url上传视频接口的任务信息（状态 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-queryUploadTask` |
+| 接口 ID | `doudian.video.shopVideo.queryUploadTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/queryUploadTask` |

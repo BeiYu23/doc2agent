@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.distributionMerchant.statusCallback",
+  "cnName": "配送商状态回调",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-distributionMerchant-statusCallback",
+  "name": "instantShopping.distributionMerchant.statusCallback",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.distributionMerchant.statusCallback",
   "description": "配送商状态回调",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -314,6 +316,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/6516",
   "updatedAt": "2024-05-14",
-  "_file_stem": "retail-store-instantShopping-distributionMerchant-statusCallback",
-  "cnName": "配送商状态回调"
+  "_file_stem": "retail-store-instantShopping-distributionMerchant-statusCallback"
 }

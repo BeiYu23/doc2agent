@@ -1,11 +1,12 @@
-# yunc.syncInventorySnapshot
+# 库存快照回传
 
-> 库存快照回传
+> yunc.syncInventorySnapshot — 库存快照回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.syncInventorySnapshot` |
 | 中文名 | 库存快照回传 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-syncInventorySnapshot` |
+| 接口 ID | `doudian.warehouse.yunc.syncInventorySnapshot` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/syncInventorySnapshot` |

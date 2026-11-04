@@ -1,11 +1,12 @@
-# mini.activity.edit
+# 编辑小程序专属价活动
 
-> 编辑小程序专属价活动
+> mini.activity.edit — 编辑小程序专属价活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.edit` |
 | 中文名 | 编辑小程序专属价活动 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-edit` |
+| 接口 ID | `doudian.miniapp.mini.activity.edit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/edit` |

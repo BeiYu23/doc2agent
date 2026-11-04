@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.antispam.orderSend",
+  "cnName": "支持使用在ISV系统商户发送（外部系统或模块",
+  "docUrl": "/docs/doudian/order/order-antispam-orderSend",
+  "name": "antispam.orderSend",
   "platform": "doudian",
   "group": "order",
-  "name": "antispam.orderSend",
   "description": "支持使用在ISV系统商户发送（外部系统或模块，如快递平台）场景",
   "method": "GET",
   "path": "/antispam/orderSend",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1840",
   "updatedAt": "2021-07-05",
-  "_file_stem": "order-antispam-orderSend",
-  "cnName": "支持使用在ISV系统商户发送（外部系统或模块"
+  "_file_stem": "order-antispam-orderSend"
 }

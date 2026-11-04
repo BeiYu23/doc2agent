@@ -1,11 +1,12 @@
-# supplyCenter.base.category
+# 精选货源获取类目
 
-> 精选货源获取类目
+> supplyCenter.base.category — 精选货源获取类目
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.base.category` |
 | 中文名 | 精选货源获取类目 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-base-category` |
+| 接口 ID | `doudian.selection.supplyCenter.base.category` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

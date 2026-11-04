@@ -1,11 +1,12 @@
-# alliance.colonelActivityProductAudit
+# 专属团长活动商品审核
 
-> 专属团长活动商品审核接口
+> alliance.colonelActivityProductAudit — 专属团长活动商品审核接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.colonelActivityProductAudit` |
 | 中文名 | 专属团长活动商品审核 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-colonelActivityProductAudit` |
+| 接口 ID | `doudian.alliance.alliance.colonelActivityProductAudit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelActivityProductAudit` |

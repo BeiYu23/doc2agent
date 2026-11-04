@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.applyLogisticsIntercept",
+  "cnName": "申请物流拦截",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-applyLogisticsIntercept",
+  "name": "afterSale.applyLogisticsIntercept",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.applyLogisticsIntercept",
   "description": "申请物流拦截",
   "method": "GET",
   "path": "/afterSale/applyLogisticsIntercept",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/897",
   "updatedAt": "2022-11-25",
-  "_file_stem": "refund-afterSale-applyLogisticsIntercept",
-  "cnName": "申请物流拦截"
+  "_file_stem": "refund-afterSale-applyLogisticsIntercept"
 }

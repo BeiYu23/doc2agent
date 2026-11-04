@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.syncInventorySnapshot",
+  "cnName": "库存快照回传",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-syncInventorySnapshot",
+  "name": "yunc.syncInventorySnapshot",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.syncInventorySnapshot",
   "description": "库存快照回传",
   "method": "GET",
   "path": "/yunc/syncInventorySnapshot",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2308",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-syncInventorySnapshot",
-  "cnName": "库存快照回传"
+  "_file_stem": "warehouse-yunc-syncInventorySnapshot"
 }

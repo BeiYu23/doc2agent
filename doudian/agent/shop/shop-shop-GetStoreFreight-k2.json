@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.GetStoreFreight",
+  "cnName": "获取门店运费模版",
+  "docUrl": "/docs/doudian/shop/shop-shop-GetStoreFreight-k2",
+  "name": "shop.GetStoreFreight",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.GetStoreFreight",
   "description": "获取门店运费模版",
   "method": "GET",
   "path": "/shop/GetStoreFreight",
@@ -66,6 +68,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2061",
   "updatedAt": "2022-06-22",
-  "_file_stem": "shop-shop-GetStoreFreight-k2",
-  "cnName": "获取门店运费模版"
+  "_file_stem": "shop-shop-GetStoreFreight-k2"
 }

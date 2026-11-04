@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.collectInfoCallback",
+  "cnName": "作为服务商确认接单的依据",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-collectInfoCallback",
+  "name": "logistics.collectInfoCallback",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.collectInfoCallback",
   "description": "作为服务商确认接单的依据，在揽收前可多次更新，揽收之后取消会失败，快递员信息或者网点信息回传会驱动运单变为已接单",
   "method": "GET",
   "path": "/logistics/collectInfoCallback",
@@ -184,6 +186,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/4455",
   "updatedAt": "2023-09-01",
-  "_file_stem": "logistics-provider-logistics-collectInfoCallback",
-  "cnName": "作为服务商确认接单的依据"
+  "_file_stem": "logistics-provider-logistics-collectInfoCallback"
 }

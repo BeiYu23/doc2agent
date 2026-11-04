@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.voiceNotifyCallRecordCallback",
+  "cnName": "火山引擎语音通知回调",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-voiceNotifyCallRecordCallback",
+  "name": "logistics.voiceNotifyCallRecordCallback",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.voiceNotifyCallRecordCallback",
   "description": "火山引擎语音通知回调",
   "method": "GET",
   "path": "/logistics/voiceNotifyCallRecordCallback",
@@ -355,6 +357,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2894",
   "updatedAt": "2023-02-27",
-  "_file_stem": "logistics-logistics-voiceNotifyCallRecordCallback",
-  "cnName": "火山引擎语音通知回调"
+  "_file_stem": "logistics-logistics-voiceNotifyCallRecordCallback"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.kolLiveShare",
+  "cnName": "获取达人直播间分享链接",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-kolLiveShare",
+  "name": "buyin.kolLiveShare",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.kolLiveShare",
   "description": "获取达人直播间分享链接",
   "method": "GET",
   "path": "/buyin/kolLiveShare",
@@ -148,6 +150,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1724",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-kolLiveShare",
-  "cnName": "获取达人直播间分享链接"
+  "_file_stem": "alliance-buyin-kolLiveShare"
 }

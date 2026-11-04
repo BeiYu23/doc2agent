@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.editFolder",
+  "cnName": "编辑/移动文件夹",
+  "docUrl": "/docs/doudian/material/material-material-editFolder",
+  "name": "material.editFolder",
   "platform": "doudian",
   "group": "material",
-  "name": "material.editFolder",
   "description": "编辑/移动文件夹",
   "method": "GET",
   "path": "/material/editFolder",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/948",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-editFolder",
-  "cnName": "编辑/移动文件夹"
+  "_file_stem": "material-material-editFolder"
 }

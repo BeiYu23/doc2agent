@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.QueryProductTopVideoIds",
+  "cnName": "单商品 Top 内容 ID 查询接口协议",
+  "docUrl": "/docs/doudian/video/video-open-QueryProductTopVideoIds",
+  "name": "open.QueryProductTopVideoIds",
   "platform": "doudian",
   "group": "video",
-  "name": "open.QueryProductTopVideoIds",
   "description": "单商品 Top 内容 ID 查询接口协议",
   "method": "GET",
   "path": "/open/QueryProductTopVideoIds",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8641",
   "updatedAt": "2026-09-21",
-  "_file_stem": "video-open-QueryProductTopVideoIds",
-  "cnName": "单商品 Top 内容 ID 查询接口协议"
+  "_file_stem": "video-open-QueryProductTopVideoIds"
 }

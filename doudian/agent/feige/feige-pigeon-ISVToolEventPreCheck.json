@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.ISVToolEventPreCheck",
+  "cnName": "ISV客服工具可用性预检查接口",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-ISVToolEventPreCheck",
+  "name": "pigeon.ISVToolEventPreCheck",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.ISVToolEventPreCheck",
   "description": "ISV客服工具可用性预检查接口，用于查询指定会话中各个客服工具的可执行状态和频控限制",
   "method": "GET",
   "path": "/pigeon/ISVToolEventPreCheck",
@@ -102,6 +104,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/7955",
   "updatedAt": "2025-12-17",
-  "_file_stem": "feige-pigeon-ISVToolEventPreCheck",
-  "cnName": "ISV客服工具可用性预检查接口"
+  "_file_stem": "feige-pigeon-ISVToolEventPreCheck"
 }

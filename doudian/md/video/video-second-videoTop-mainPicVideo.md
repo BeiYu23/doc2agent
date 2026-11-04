@@ -1,11 +1,12 @@
-# second.videoTop.mainPicVideo
+# 获取主图视频榜单
 
-> 获取主图视频榜单接口
+> second.videoTop.mainPicVideo — 获取主图视频榜单接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.videoTop.mainPicVideo` |
 | 中文名 | 获取主图视频榜单 |
+| 文档地址 | `/docs/doudian/video/video-second-videoTop-mainPicVideo` |
+| 接口 ID | `doudian.video.second.videoTop.mainPicVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

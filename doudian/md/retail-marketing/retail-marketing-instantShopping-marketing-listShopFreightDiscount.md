@@ -1,11 +1,12 @@
-# instantShopping.marketing.listShopFreightDiscount
+# 查询配送费满减活动
 
-> 查询配送费满减活动
+> instantShopping.marketing.listShopFreightDiscount — 查询配送费满减活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listShopFreightDiscount` |
 | 中文名 | 查询配送费满减活动 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listShopFreightDiscount` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listShopFreightDiscount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

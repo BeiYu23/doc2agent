@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.freightTemplate.create",
+  "cnName": "创建运费模板",
+  "docUrl": "/docs/doudian/logistics/logistics-freightTemplate-create",
+  "name": "freightTemplate.create",
   "platform": "doudian",
   "group": "logistics",
-  "name": "freightTemplate.create",
   "description": "创建运费模板",
   "method": "GET",
   "path": "/freightTemplate/create",
@@ -468,6 +470,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1661",
   "updatedAt": "2025-03-13",
-  "_file_stem": "logistics-freightTemplate-create",
-  "cnName": "创建运费模板"
+  "_file_stem": "logistics-freightTemplate-create"
 }

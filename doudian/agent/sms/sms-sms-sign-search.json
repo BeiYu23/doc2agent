@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.sign.search",
+  "cnName": "查看短信签名",
+  "docUrl": "/docs/doudian/sms/sms-sms-sign-search",
+  "name": "sms.sign.search",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.sign.search",
   "description": "查看短信签名",
   "method": "GET",
   "path": "/sms/sign/search",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1515",
   "updatedAt": "2026-03-11",
-  "_file_stem": "sms-sms-sign-search",
-  "cnName": "查看短信签名"
+  "_file_stem": "sms-sms-sign-search"
 }

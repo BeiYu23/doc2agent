@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.fuwu.right.list",
+  "cnName": "查询服务权益列表",
+  "docUrl": "/docs/doudian/creative/creative-fuwu-right-list",
+  "name": "fuwu.right.list",
   "platform": "doudian",
   "group": "creative",
-  "name": "fuwu.right.list",
   "description": "查询服务权益列表",
   "method": "GET",
   "path": "/fuwu/right/list",
@@ -84,6 +86,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4766",
   "updatedAt": "2023-09-19",
-  "_file_stem": "creative-fuwu-right-list",
-  "cnName": "查询服务权益列表"
+  "_file_stem": "creative-fuwu-right-list"
 }

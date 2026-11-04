@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProductV2.getProductUpdateRule",
+  "cnName": "查询货品发布规则",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-getProductUpdateRule",
+  "name": "supplyChain.supplyProductV2.getProductUpdateRule",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProductV2.getProductUpdateRule",
   "description": "查询货品发布规则",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -431,6 +433,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6671",
   "updatedAt": "2025-01-16",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getProductUpdateRule",
-  "cnName": "查询货品发布规则"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getProductUpdateRule"
 }

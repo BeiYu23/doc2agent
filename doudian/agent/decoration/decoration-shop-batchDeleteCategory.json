@@ -1,8 +1,10 @@
 {
   "id": "doudian.decoration.shop.batchDeleteCategory",
+  "cnName": "批量删除类目",
+  "docUrl": "/docs/doudian/decoration/decoration-shop-batchDeleteCategory",
+  "name": "shop.batchDeleteCategory",
   "platform": "doudian",
   "group": "decoration",
-  "name": "shop.batchDeleteCategory",
   "description": "批量删除类目",
   "method": "GET",
   "path": "/shop/batchDeleteCategory",
@@ -102,6 +104,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/6518",
   "updatedAt": "2024-05-15",
-  "_file_stem": "decoration-shop-batchDeleteCategory",
-  "cnName": "批量删除类目"
+  "_file_stem": "decoration-shop-batchDeleteCategory"
 }

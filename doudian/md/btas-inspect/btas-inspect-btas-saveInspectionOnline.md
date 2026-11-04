@@ -1,11 +1,12 @@
-# btas.saveInspectionOnline
+# 商家_商家送检图片质检（线上质检）订单
 
-> 商家_商家送检图片质检（线上质检）订单
+> btas.saveInspectionOnline — 商家_商家送检图片质检（线上质检）订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.saveInspectionOnline` |
 | 中文名 | 商家_商家送检图片质检（线上质检）订单 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-saveInspectionOnline` |
+| 接口 ID | `doudian.btas-inspect.btas.saveInspectionOnline` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/saveInspectionOnline` |

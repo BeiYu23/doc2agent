@@ -1,11 +1,12 @@
-# member.ChangePoint
+# 会员侧对外积分变更
 
-> 会员侧对外积分变更接口
+> member.ChangePoint — 会员侧对外积分变更接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.ChangePoint` |
 | 中文名 | 会员侧对外积分变更 |
+| 文档地址 | `/docs/doudian/member/member-member-ChangePoint` |
+| 接口 ID | `doudian.member.member.ChangePoint` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/ChangePoint` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.store.pickup.batchCreateStore",
+  "cnName": "批量创建门店",
+  "docUrl": "/docs/doudian/store/store-pickup-batchCreateStore",
+  "name": "pickup.batchCreateStore",
   "platform": "doudian",
   "group": "store",
-  "name": "pickup.batchCreateStore",
   "description": "批量创建门店",
   "method": "GET",
   "path": "/pickup/batchCreateStore",
@@ -276,6 +278,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7233",
   "updatedAt": "2026-06-24",
-  "_file_stem": "store-pickup-batchCreateStore",
-  "cnName": "批量创建门店"
+  "_file_stem": "store-pickup-batchCreateStore"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.diagnoseCheck",
+  "cnName": "发布前校验",
+  "docUrl": "/docs/doudian/product/product-product-diagnoseCheck",
+  "name": "product.diagnoseCheck",
   "platform": "doudian",
   "group": "product",
-  "name": "product.diagnoseCheck",
   "description": "发布前校验",
   "method": "GET",
   "path": "/product/diagnoseCheck",
@@ -764,6 +766,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/7342",
   "updatedAt": "2025-04-24",
-  "_file_stem": "product-product-diagnoseCheck",
-  "cnName": "发布前校验"
+  "_file_stem": "product-product-diagnoseCheck"
 }

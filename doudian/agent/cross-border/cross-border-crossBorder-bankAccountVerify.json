@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.bankAccountVerify",
+  "cnName": "银行信息校验",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-bankAccountVerify",
+  "name": "crossBorder.bankAccountVerify",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.bankAccountVerify",
   "description": "银行信息校验",
   "method": "GET",
   "path": "/crossBorder/bankAccountVerify",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/664",
   "updatedAt": "2021-07-12",
-  "_file_stem": "cross-border-crossBorder-bankAccountVerify",
-  "cnName": "银行信息校验"
+  "_file_stem": "cross-border-crossBorder-bankAccountVerify"
 }

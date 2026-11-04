@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.doukeActivityMaterialList",
+  "cnName": "获取活动页物料列表",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-doukeActivityMaterialList",
+  "name": "buyin.doukeActivityMaterialList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.doukeActivityMaterialList",
   "description": "获取活动页物料列表",
   "method": "GET",
   "path": "/buyin/doukeActivityMaterialList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/3129",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukeActivityMaterialList",
-  "cnName": "获取活动页物料列表"
+  "_file_stem": "alliance-buyin-doukeActivityMaterialList"
 }

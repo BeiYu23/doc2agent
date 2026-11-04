@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.marketing.GetShopCouponMetaList",
+  "cnName": "店铺优惠券列表",
+  "docUrl": "/docs/doudian/shop/shop-marketing-GetShopCouponMetaList",
+  "name": "marketing.GetShopCouponMetaList",
   "platform": "doudian",
   "group": "shop",
-  "name": "marketing.GetShopCouponMetaList",
   "description": "店铺优惠券列表",
   "method": "GET",
   "path": "/marketing/GetShopCouponMetaList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/519",
   "updatedAt": "2021-05-14",
-  "_file_stem": "shop-marketing-GetShopCouponMetaList",
-  "cnName": "店铺优惠券列表"
+  "_file_stem": "shop-marketing-GetShopCouponMetaList"
 }

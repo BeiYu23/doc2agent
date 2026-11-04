@@ -1,11 +1,12 @@
-# product.title.recommend.query
+# 商品标题优化工具
 
-> 商品标题优化工具
+> product.title.recommend.query — 商品标题优化工具
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.title.recommend.query` |
 | 中文名 | 商品标题优化工具 |
+| 文档地址 | `/docs/doudian/product/product-product-title-recommend-query` |
+| 接口 ID | `doudian.product.product.title.recommend.query` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/title/recommend/query` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.providerStoreAPICreate",
+  "cnName": "行业服务到店安装门店创建",
+  "docUrl": "/docs/doudian/install/install-install-store-providerStoreAPICreate",
+  "name": "install.store.providerStoreAPICreate",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.providerStoreAPICreate",
   "description": "行业服务到店安装门店创建API",
   "method": "GET",
   "path": "/install/store/providerStoreAPICreate",
@@ -194,6 +196,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7681",
   "updatedAt": "2026-06-02",
-  "_file_stem": "install-install-store-providerStoreAPICreate",
-  "cnName": "行业服务到店安装门店创建"
+  "_file_stem": "install-install-store-providerStoreAPICreate"
 }

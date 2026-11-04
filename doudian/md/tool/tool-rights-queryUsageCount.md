@@ -1,11 +1,12 @@
-# rights.queryUsageCount
+# 查询权益可使用次数
 
-> 查询权益可使用次数
+> rights.queryUsageCount — 查询权益可使用次数
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.rights.queryUsageCount` |
 | 中文名 | 查询权益可使用次数 |
+| 文档地址 | `/docs/doudian/tool/tool-rights-queryUsageCount` |
+| 接口 ID | `doudian.tool.rights.queryUsageCount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/queryUsageCount` |

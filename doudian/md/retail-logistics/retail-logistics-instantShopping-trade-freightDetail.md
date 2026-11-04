@@ -1,11 +1,12 @@
-# instantShopping.trade.freightDetail
+# 即时零售运费模板
 
-> 即时零售运费模板详情
+> instantShopping.trade.freightDetail — 即时零售运费模板详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.instantShopping.trade.freightDetail` |
 | 中文名 | 即时零售运费模板 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-instantShopping-trade-freightDetail` |
+| 接口 ID | `doudian.retail-logistics.instantShopping.trade.freightDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

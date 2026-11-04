@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.firmReceive",
+  "cnName": "商家确认是否收到退货",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-firmReceive",
+  "name": "afterSale.firmReceive",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.firmReceive",
   "description": "商家确认是否收到退货（831下线，可使用该接口：/afterSale/Operate）",
   "method": "GET",
   "path": "/afterSale/firmReceive",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/91",
   "updatedAt": "2021-06-30",
-  "_file_stem": "refund-afterSale-firmReceive",
-  "cnName": "商家确认是否收到退货"
+  "_file_stem": "refund-afterSale-firmReceive"
 }

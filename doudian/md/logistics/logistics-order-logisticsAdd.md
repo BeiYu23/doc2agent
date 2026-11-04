@@ -1,12 +1,13 @@
-# order.logisticsAdd
+# 暂时只支持整单出库
 
-> 暂时只支持整单出库，即接口调用时入参只能传父订单号。
+> order.logisticsAdd — 暂时只支持整单出库，即接口调用时入参只能传父订单号。
 Tips：部分发货状态下的父订单，调此接口发货，会报错：该订单当前为“部分发货”状态，无法调用此接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsAdd` |
 | 中文名 | 暂时只支持整单出库 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsAdd` |
+| 接口 ID | `doudian.logistics.order.logisticsAdd` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsAdd` |

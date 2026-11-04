@@ -1,11 +1,12 @@
-# product.material.editProductImageText
+# 商品元图文创意编辑
 
-> 商品元图文创意编辑
+> product.material.editProductImageText — 商品元图文创意编辑
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.creative.product.material.editProductImageText` |
 | 中文名 | 商品元图文创意编辑 |
+| 文档地址 | `/docs/doudian/creative/creative-product-material-editProductImageText` |
+| 接口 ID | `doudian.creative.product.material.editProductImageText` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

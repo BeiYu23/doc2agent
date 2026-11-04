@@ -1,11 +1,12 @@
-# warehouse.delFence
+# 删除电子围栏
 
-> 删除电子围栏
+> warehouse.delFence — 删除电子围栏
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.warehouse.delFence` |
 | 中文名 | 删除电子围栏 |
+| 文档地址 | `/docs/doudian/shop/shop-warehouse-delFence` |
+| 接口 ID | `doudian.shop.warehouse.delFence` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/delFence` |

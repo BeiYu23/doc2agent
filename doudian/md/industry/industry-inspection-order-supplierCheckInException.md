@@ -1,11 +1,12 @@
-# inspection.order.supplierCheckInException
+# 服务商上门异常
 
-> 服务商上门异常
+> inspection.order.supplierCheckInException — 服务商上门异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierCheckInException` |
 | 中文名 | 服务商上门异常 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierCheckInException` |
+| 接口 ID | `doudian.industry.inspection.order.supplierCheckInException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

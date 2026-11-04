@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.shopPidMemberCreate",
+  "cnName": "店铺会员绑定渠道关系创建",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-shopPidMemberCreate",
+  "name": "buyin.shopPidMemberCreate",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.shopPidMemberCreate",
   "description": "店铺会员绑定渠道关系创建",
   "method": "GET",
   "path": "/buyin/shopPidMemberCreate",
@@ -149,6 +151,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1493",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-shopPidMemberCreate",
-  "cnName": "店铺会员绑定渠道关系创建"
+  "_file_stem": "alliance-buyin-shopPidMemberCreate"
 }

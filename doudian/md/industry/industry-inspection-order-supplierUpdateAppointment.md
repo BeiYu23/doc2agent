@@ -1,11 +1,12 @@
-# inspection.order.supplierUpdateAppointment
+# 上门检测服务商更新预约信息
 
-> 上门检测服务商更新预约信息
+> inspection.order.supplierUpdateAppointment — 上门检测服务商更新预约信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierUpdateAppointment` |
 | 中文名 | 上门检测服务商更新预约信息 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierUpdateAppointment` |
+| 接口 ID | `doudian.industry.inspection.order.supplierUpdateAppointment` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

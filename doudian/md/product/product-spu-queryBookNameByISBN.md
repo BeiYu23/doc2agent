@@ -1,11 +1,12 @@
-# spu.queryBookNameByISBN
+# 根据ISBN查询书名
 
-> 根据ISBN查询书名
+> spu.queryBookNameByISBN — 根据ISBN查询书名
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.spu.queryBookNameByISBN` |
 | 中文名 | 根据ISBN查询书名 |
+| 文档地址 | `/docs/doudian/product/product-spu-queryBookNameByISBN` |
+| 接口 ID | `doudian.product.spu.queryBookNameByISBN` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/queryBookNameByISBN` |

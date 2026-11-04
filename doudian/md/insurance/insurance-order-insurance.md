@@ -1,12 +1,13 @@
-# order.insurance
+# 根据订单ID
 
-> 根据订单ID，获取该订单对应的运费险保单的详细信息；
+> order.insurance — 根据订单ID，获取该订单对应的运费险保单的详细信息；
 1、status<=1&status=5的情况下ins_ensured_time_begin、ins_ensured_time_end没有意义（返回的是默认时间"1754-08-31 06:49:25"
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.insurance.order.insurance` |
 | 中文名 | 根据订单ID |
+| 文档地址 | `/docs/doudian/insurance/insurance-order-insurance` |
+| 接口 ID | `doudian.insurance.order.insurance` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/insurance` |

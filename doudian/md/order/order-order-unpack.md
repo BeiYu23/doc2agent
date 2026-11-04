@@ -1,11 +1,12 @@
-# order.unpack
+# 手动拆单
 
-> 手动拆单（待下线）
+> order.unpack — 手动拆单（待下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.unpack` |
 | 中文名 | 手动拆单 |
+| 文档地址 | `/docs/doudian/order/order-order-unpack` |
+| 接口 ID | `doudian.order.order.unpack` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/unpack` |

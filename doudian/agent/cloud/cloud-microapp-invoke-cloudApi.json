@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.microapp.invoke.cloudApi",
+  "cnName": "调用ISV云内应用",
+  "docUrl": "/docs/doudian/cloud/cloud-microapp-invoke-cloudApi",
+  "name": "microapp.invoke.cloudApi",
   "platform": "doudian",
   "group": "cloud",
-  "name": "microapp.invoke.cloudApi",
   "description": "调用ISV云内应用接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -194,6 +196,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/6523",
   "updatedAt": "2024-05-27",
-  "_file_stem": "cloud-microapp-invoke-cloudApi",
-  "cnName": "调用ISV云内应用"
+  "_file_stem": "cloud-microapp-invoke-cloudApi"
 }

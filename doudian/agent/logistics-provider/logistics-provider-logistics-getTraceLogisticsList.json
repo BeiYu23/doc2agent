@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.getTraceLogisticsList",
+  "cnName": "获取溯源物流信息",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-getTraceLogisticsList",
+  "name": "logistics.getTraceLogisticsList",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.getTraceLogisticsList",
   "description": "获取溯源物流信息",
   "method": "GET",
   "path": "/logistics/getTraceLogisticsList",
@@ -115,6 +117,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7653",
   "updatedAt": "2025-07-31",
-  "_file_stem": "logistics-provider-logistics-getTraceLogisticsList",
-  "cnName": "获取溯源物流信息"
+  "_file_stem": "logistics-provider-logistics-getTraceLogisticsList"
 }

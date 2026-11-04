@@ -1,11 +1,12 @@
-# btas.sc.shippingOrQueryOrderERP
+# 质检机构_实物质检订单发货
 
-> 质检机构_实物质检订单发货（废弃）
+> btas.sc.shippingOrQueryOrderERP — 质检机构_实物质检订单发货（废弃）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sc.shippingOrQueryOrderERP` |
 | 中文名 | 质检机构_实物质检订单发货 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sc-shippingOrQueryOrderERP` |
+| 接口 ID | `doudian.btas-inspect.btas.sc.shippingOrQueryOrderERP` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/shippingOrQueryOrderERP` |

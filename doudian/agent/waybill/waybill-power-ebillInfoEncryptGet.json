@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.power.ebillInfoEncryptGet",
+  "cnName": "面单信息查询接口（脱敏） （仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/waybill/waybill-power-ebillInfoEncryptGet",
+  "name": "power.ebillInfoEncryptGet",
   "platform": "doudian",
   "group": "waybill",
-  "name": "power.ebillInfoEncryptGet",
   "description": "面单信息查询接口（脱敏） （仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/ebillInfoEncryptGet",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1482",
   "updatedAt": "2026-03-18",
-  "_file_stem": "waybill-power-ebillInfoEncryptGet",
-  "cnName": "面单信息查询接口（脱敏） （仅用于兼容老物流网关"
+  "_file_stem": "waybill-power-ebillInfoEncryptGet"
 }

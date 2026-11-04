@@ -1,11 +1,12 @@
-# logistics.updateCollectTime
+# 物流商推送改约时间
 
-> 物流商推送改约时间
+> logistics.updateCollectTime — 物流商推送改约时间
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.updateCollectTime` |
 | 中文名 | 物流商推送改约时间 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-updateCollectTime` |
+| 接口 ID | `doudian.logistics-provider.logistics.updateCollectTime` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/updateCollectTime` |

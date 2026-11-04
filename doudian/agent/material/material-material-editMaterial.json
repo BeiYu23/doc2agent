@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.editMaterial",
+  "cnName": "编辑素材",
+  "docUrl": "/docs/doudian/material/material-material-editMaterial",
+  "name": "material.editMaterial",
   "platform": "doudian",
   "group": "material",
-  "name": "material.editMaterial",
   "description": "编辑素材",
   "method": "GET",
   "path": "/material/editMaterial",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/956",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-editMaterial",
-  "cnName": "编辑素材"
+  "_file_stem": "material-material-editMaterial"
 }

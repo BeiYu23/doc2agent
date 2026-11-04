@@ -1,11 +1,12 @@
-# instantShopping.logistics.updateOrder
+# 更新收件人信息
 
-> 更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）
+> instantShopping.logistics.updateOrder — 更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-waybill.instantShopping.logistics.updateOrder` |
 | 中文名 | 更新收件人信息 |
+| 文档地址 | `/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-updateOrder` |
+| 接口 ID | `doudian.retail-waybill.instantShopping.logistics.updateOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# sms.template.search
+# 查询短信模板
 
-> 查询短信模板
+> sms.template.search — 查询短信模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.template.search` |
 | 中文名 | 查询短信模板 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-template-search` |
+| 接口 ID | `doudian.sms.sms.template.search` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/template/search` |

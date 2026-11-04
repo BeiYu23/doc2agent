@@ -1,11 +1,12 @@
-# maintenance.fulfill.supplierReceiveOrDetect
+# 维修服务商签收/检测通过
 
-> 维修服务商签收/检测通过
+> maintenance.fulfill.supplierReceiveOrDetect — 维修服务商签收/检测通过
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.fulfill.supplierReceiveOrDetect` |
 | 中文名 | 维修服务商签收/检测通过 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-fulfill-supplierReceiveOrDetect` |
+| 接口 ID | `doudian.phone-industry.maintenance.fulfill.supplierReceiveOrDetect` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

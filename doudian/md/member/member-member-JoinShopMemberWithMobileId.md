@@ -1,11 +1,12 @@
-# member.JoinShopMemberWithMobileId
+# 加入会员
 
-> 加入会员接口
+> member.JoinShopMemberWithMobileId — 加入会员接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.JoinShopMemberWithMobileId` |
 | 中文名 | 加入会员 |
+| 文档地址 | `/docs/doudian/member/member-member-JoinShopMemberWithMobileId` |
+| 接口 ID | `doudian.member.member.JoinShopMemberWithMobileId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/JoinShopMemberWithMobileId` |

@@ -1,11 +1,12 @@
-# alliance.kol.reputation
+# 查询达人的带货口碑和橱窗销量
 
-> 查询达人的带货口碑和橱窗销量
+> alliance.kol.reputation — 查询达人的带货口碑和橱窗销量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.alliance.kol.reputation` |
 | 中文名 | 查询达人的带货口碑和橱窗销量 |
+| 文档地址 | `/docs/doudian/tool/tool-alliance-kol-reputation` |
+| 接口 ID | `doudian.tool.alliance.kol.reputation` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/kol/reputation` |

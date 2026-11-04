@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.SyncWarehouseStock",
+  "cnName": "同步货品库存",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-SyncWarehouseStock",
+  "name": "instantShopping.SyncWarehouseStock",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.SyncWarehouseStock",
   "description": "同步货品库存",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -151,6 +153,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/6321",
   "updatedAt": "2024-07-22",
-  "_file_stem": "retail-store-instantShopping-SyncWarehouseStock",
-  "cnName": "同步货品库存"
+  "_file_stem": "retail-store-instantShopping-SyncWarehouseStock"
 }

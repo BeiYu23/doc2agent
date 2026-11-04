@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.resale.supplier.quoteResult",
+  "cnName": "查询平台生成的询价ID对应的问卷内容",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-resale-supplier-quoteResult",
+  "name": "resale.supplier.quoteResult",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "resale.supplier.quoteResult",
   "description": "查询平台生成的询价ID对应的问卷内容",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7737",
   "updatedAt": "2025-09-02",
-  "_file_stem": "logistics-provider-resale-supplier-quoteResult",
-  "cnName": "查询平台生成的询价ID对应的问卷内容"
+  "_file_stem": "logistics-provider-resale-supplier-quoteResult"
 }

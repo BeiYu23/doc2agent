@@ -1,11 +1,12 @@
-# buyin.kolMaterialsProductsSearch
+# 检索精选联盟商品，需达人/抖客授权
 
-> 检索精选联盟商品，需达人/抖客授权
+> buyin.kolMaterialsProductsSearch — 检索精选联盟商品，需达人/抖客授权
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.kolMaterialsProductsSearch` |
 | 中文名 | 检索精选联盟商品，需达人/抖客授权 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-kolMaterialsProductsSearch` |
+| 接口 ID | `doudian.alliance.buyin.kolMaterialsProductsSearch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolMaterialsProductsSearch` |

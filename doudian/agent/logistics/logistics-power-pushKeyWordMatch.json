@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.pushKeyWordMatch",
+  "cnName": "关键词匹配",
+  "docUrl": "/docs/doudian/logistics/logistics-power-pushKeyWordMatch",
+  "name": "power.pushKeyWordMatch",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.pushKeyWordMatch",
   "description": "关键词匹配",
   "method": "GET",
   "path": "/power/pushKeyWordMatch",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1635",
   "updatedAt": "2022-12-22",
-  "_file_stem": "logistics-power-pushKeyWordMatch",
-  "cnName": "关键词匹配"
+  "_file_stem": "logistics-power-pushKeyWordMatch"
 }

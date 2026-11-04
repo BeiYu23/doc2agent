@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.alliance.kol.storeList",
+  "cnName": "查询达人的橱窗商品",
+  "docUrl": "/docs/doudian/tool/tool-alliance-kol-storeList",
+  "name": "alliance.kol.storeList",
   "platform": "doudian",
   "group": "tool",
-  "name": "alliance.kol.storeList",
   "description": "查询达人的橱窗商品",
   "method": "GET",
   "path": "/alliance/kol/storeList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7599",
   "updatedAt": "2026-04-21",
-  "_file_stem": "tool-alliance-kol-storeList",
-  "cnName": "查询达人的橱窗商品"
+  "_file_stem": "tool-alliance-kol-storeList"
 }

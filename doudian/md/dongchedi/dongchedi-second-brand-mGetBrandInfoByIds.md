@@ -1,11 +1,12 @@
-# second.brand.mGetBrandInfoByIds
+# 【二方接口】根据brand_id查询品牌信息
 
-> 【二方接口】根据brand_id查询品牌信息,翻页单次数量不超过300
+> second.brand.mGetBrandInfoByIds — 【二方接口】根据brand_id查询品牌信息,翻页单次数量不超过300
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.brand.mGetBrandInfoByIds` |
 | 中文名 | 【二方接口】根据brand_id查询品牌信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-brand-mGetBrandInfoByIds` |
+| 接口 ID | `doudian.dongchedi.second.brand.mGetBrandInfoByIds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/brand/mGetBrandInfoByIds` |

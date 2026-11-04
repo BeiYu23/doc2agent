@@ -1,11 +1,12 @@
-# inspection.order.supplierCancelOrder
+# 服务商取消
 
-> 服务商取消
+> inspection.order.supplierCancelOrder — 服务商取消
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierCancelOrder` |
 | 中文名 | 服务商取消 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierCancelOrder` |
+| 接口 ID | `doudian.industry.inspection.order.supplierCancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

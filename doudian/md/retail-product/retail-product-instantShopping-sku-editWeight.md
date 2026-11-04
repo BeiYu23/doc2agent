@@ -1,11 +1,12 @@
-# instantShopping.sku.editWeight
+# 修改sku重量
 
-> 修改sku重量
+> instantShopping.sku.editWeight — 修改sku重量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-product.instantShopping.sku.editWeight` |
 | 中文名 | 修改sku重量 |
+| 文档地址 | `/docs/doudian/retail-product/retail-product-instantShopping-sku-editWeight` |
+| 接口 ID | `doudian.retail-product.instantShopping.sku.editWeight` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

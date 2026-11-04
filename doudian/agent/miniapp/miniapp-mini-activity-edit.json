@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.edit",
+  "cnName": "编辑小程序专属价活动",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-edit",
+  "name": "mini.activity.edit",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.edit",
   "description": "编辑小程序专属价活动",
   "method": "GET",
   "path": "/mini/activity/edit",
@@ -129,6 +131,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/4956",
   "updatedAt": "2023-10-13",
-  "_file_stem": "miniapp-mini-activity-edit",
-  "cnName": "编辑小程序专属价活动"
+  "_file_stem": "miniapp-mini-activity-edit"
 }

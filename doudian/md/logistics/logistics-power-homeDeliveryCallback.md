@@ -1,11 +1,12 @@
-# power.homeDeliveryCallback
+# 送货上门履约结果推送（仅用于兼容老物流网关
 
-> 送货上门履约结果推送（仅用于兼容老物流网关）
+> power.homeDeliveryCallback — 送货上门履约结果推送（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.homeDeliveryCallback` |
 | 中文名 | 送货上门履约结果推送（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-homeDeliveryCallback` |
+| 接口 ID | `doudian.logistics.power.homeDeliveryCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/homeDeliveryCallback` |

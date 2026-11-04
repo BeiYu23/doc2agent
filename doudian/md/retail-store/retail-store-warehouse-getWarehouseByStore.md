@@ -1,11 +1,12 @@
-# warehouse.getWarehouseByStore
+# 通过门店id查询仓信息
 
-> 通过门店id查询仓信息
+> warehouse.getWarehouseByStore — 通过门店id查询仓信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.warehouse.getWarehouseByStore` |
 | 中文名 | 通过门店id查询仓信息 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-warehouse-getWarehouseByStore` |
+| 接口 ID | `doudian.retail-store.warehouse.getWarehouseByStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/getWarehouseByStore` |

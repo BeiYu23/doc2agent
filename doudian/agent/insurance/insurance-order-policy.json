@@ -1,8 +1,10 @@
 {
   "id": "doudian.insurance.order.policy",
+  "cnName": "查各种保险的保单",
+  "docUrl": "/docs/doudian/insurance/insurance-order-policy",
+  "name": "order.policy",
   "platform": "doudian",
   "group": "insurance",
-  "name": "order.policy",
   "description": "查各种保险的保单详情",
   "method": "GET",
   "path": "/order/policy",
@@ -87,6 +89,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/32/1854",
   "updatedAt": "2023-04-17",
-  "_file_stem": "insurance-order-policy",
-  "cnName": "查各种保险的保单"
+  "_file_stem": "insurance-order-policy"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.warehouse.list",
+  "cnName": "外部仓列表",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-warehouse-list",
+  "name": "supplyChain.warehouse.list",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.warehouse.list",
   "description": "外部仓列表",
   "method": "GET",
   "path": "/supplyChain/warehouse/list",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2122",
   "updatedAt": "2022-06-28",
-  "_file_stem": "shop-supplyChain-warehouse-list",
-  "cnName": "外部仓列表"
+  "_file_stem": "shop-supplyChain-warehouse-list"
 }

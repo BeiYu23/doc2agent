@@ -1,11 +1,12 @@
-# supplyChain.inspection.ListInspectionReports
+# 查询质检报告列表
 
-> 查询质检报告列表
+> supplyChain.inspection.ListInspectionReports — 查询质检报告列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-goods.supplyChain.inspection.ListInspectionReports` |
 | 中文名 | 查询质检报告列表 |
+| 文档地址 | `/docs/doudian/supply-goods/supply-goods-supplyChain-inspection-ListInspectionReports` |
+| 接口 ID | `doudian.supply-goods.supplyChain.inspection.ListInspectionReports` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

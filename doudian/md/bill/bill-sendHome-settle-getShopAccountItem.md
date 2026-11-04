@@ -1,12 +1,13 @@
-# sendHome.settle.getShopAccountItem
+# 查询资金流水明细
 
-> 查询资金流水明细，查询方式为时间轮训方式，数据T+1生成，建议第二天15点之后查询。如因任务积压导致延迟的情况，建议重试。
+> sendHome.settle.getShopAccountItem — 查询资金流水明细，查询方式为时间轮训方式，数据T+1生成，建议第二天15点之后查询。如因任务积压导致延迟的情况，建议重试。
 如果流水明细为订单相关，会关联门店ID与门店商家自编码。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.sendHome.settle.getShopAccountItem` |
 | 中文名 | 查询资金流水明细 |
+| 文档地址 | `/docs/doudian/bill/bill-sendHome-settle-getShopAccountItem` |
+| 接口 ID | `doudian.bill.sendHome.settle.getShopAccountItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

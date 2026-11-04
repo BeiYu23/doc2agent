@@ -1,13 +1,14 @@
-# supplyChain.invoice.uploaduInvoiceResult
+# 上传开票结果
 
-> 上传开票结果。
+> supplyChain.invoice.uploaduInvoiceResult — 上传开票结果。
 该接口仅上门安装服务商使用。
 商家给消费者上传发票文件用/order/invoiceUpload接口。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.supplyChain.invoice.uploaduInvoiceResult` |
 | 中文名 | 上传开票结果 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-supplyChain-invoice-uploaduInvoiceResult` |
+| 接口 ID | `doudian.logistics-provider.supplyChain.invoice.uploaduInvoiceResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

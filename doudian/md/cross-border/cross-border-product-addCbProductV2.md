@@ -1,11 +1,12 @@
-# product.addCbProductV2
+# 新增跨境/海南商品
 
-> 新增跨境/海南商品
+> product.addCbProductV2 — 新增跨境/海南商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.product.addCbProductV2` |
 | 中文名 | 新增跨境/海南商品 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-product-addCbProductV2` |
+| 接口 ID | `doudian.cross-border.product.addCbProductV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/addCbProductV2` |

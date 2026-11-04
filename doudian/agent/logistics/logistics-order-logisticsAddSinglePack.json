@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.logisticsAddSinglePack",
+  "cnName": "支持同一店铺同一收货人的多个订单发同一个物流包裹",
+  "docUrl": "/docs/doudian/logistics/logistics-order-logisticsAddSinglePack",
+  "name": "order.logisticsAddSinglePack",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.logisticsAddSinglePack",
   "description": "支持同一店铺同一收货人的多个订单发同一个物流包裹",
   "method": "GET",
   "path": "/order/logisticsAddSinglePack",
@@ -558,6 +560,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/563",
   "updatedAt": "2025-01-22",
-  "_file_stem": "logistics-order-logisticsAddSinglePack",
-  "cnName": "支持同一店铺同一收货人的多个订单发同一个物流包裹"
+  "_file_stem": "logistics-order-logisticsAddSinglePack"
 }

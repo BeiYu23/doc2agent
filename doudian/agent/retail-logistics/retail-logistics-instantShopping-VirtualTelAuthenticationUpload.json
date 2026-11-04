@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-logistics.instantShopping.VirtualTelAuthenticationUpload",
+  "cnName": "骑手隐私号实名认证",
+  "docUrl": "/docs/doudian/retail-logistics/retail-logistics-instantShopping-VirtualTelAuthenticationUpload",
+  "name": "instantShopping.VirtualTelAuthenticationUpload",
   "platform": "doudian",
   "group": "retail-logistics",
-  "name": "instantShopping.VirtualTelAuthenticationUpload",
   "description": "骑手隐私号实名认证",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1530/7426",
   "updatedAt": "2025-04-24",
-  "_file_stem": "retail-logistics-instantShopping-VirtualTelAuthenticationUpload",
-  "cnName": "骑手隐私号实名认证"
+  "_file_stem": "retail-logistics-instantShopping-VirtualTelAuthenticationUpload"
 }

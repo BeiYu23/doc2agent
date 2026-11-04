@@ -1,11 +1,12 @@
-# shop.storeSuspend
+# 暂停营业
 
-> 暂停营业
+> shop.storeSuspend — 暂停营业
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.storeSuspend` |
 | 中文名 | 暂停营业 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-storeSuspend` |
+| 接口 ID | `doudian.shop.shop.storeSuspend` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/storeSuspend` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.getSettleBillDetailV3",
+  "cnName": "商家结算账单",
+  "docUrl": "/docs/doudian/bill/bill-order-getSettleBillDetailV3",
+  "name": "order.getSettleBillDetailV3",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.getSettleBillDetailV3",
   "description": "商家结算账单",
   "method": "GET",
   "path": "/order/getSettleBillDetailV3",
@@ -259,6 +261,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/7226",
   "updatedAt": "2026-07-16",
-  "_file_stem": "bill-order-getSettleBillDetailV3",
-  "cnName": "商家结算账单"
+  "_file_stem": "bill-order-getSettleBillDetailV3"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossborder.warehouseInOutboundEvent",
+  "cnName": "入库和提货出库回告",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossborder-warehouseInOutboundEvent",
+  "name": "crossborder.warehouseInOutboundEvent",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossborder.warehouseInOutboundEvent",
   "description": "入库和提货出库回告",
   "method": "GET",
   "path": "/crossborder/warehouseInOutboundEvent",
@@ -579,6 +581,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/1205",
   "updatedAt": "2023-05-19",
-  "_file_stem": "cross-border-crossborder-warehouseInOutboundEvent",
-  "cnName": "入库和提货出库回告"
+  "_file_stem": "cross-border-crossborder-warehouseInOutboundEvent"
 }

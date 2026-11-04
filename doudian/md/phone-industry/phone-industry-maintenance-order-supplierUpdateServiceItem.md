@@ -1,11 +1,12 @@
-# maintenance.order.supplierUpdateServiceItem
+# 服务item信息更新
 
-> 服务item信息更新，如果之前未回传过此item则视为新增
+> maintenance.order.supplierUpdateServiceItem — 服务item信息更新，如果之前未回传过此item则视为新增
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.order.supplierUpdateServiceItem` |
 | 中文名 | 服务item信息更新 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierUpdateServiceItem` |
+| 接口 ID | `doudian.phone-industry.maintenance.order.supplierUpdateServiceItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

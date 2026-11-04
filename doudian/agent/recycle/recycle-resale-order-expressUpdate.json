@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.expressUpdate",
+  "cnName": "【邮寄回收】服务商修改派单信息",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-expressUpdate",
+  "name": "resale.order.expressUpdate",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.expressUpdate",
   "description": "【邮寄回收】服务商修改派单信息",
   "method": "GET",
   "path": "/resale/order/expressUpdate",
@@ -148,6 +150,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4638",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-expressUpdate",
-  "cnName": "【邮寄回收】服务商修改派单信息"
+  "_file_stem": "recycle-resale-order-expressUpdate"
 }

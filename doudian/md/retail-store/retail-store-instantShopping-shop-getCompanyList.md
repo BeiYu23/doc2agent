@@ -1,11 +1,12 @@
-# instantShopping.shop.getCompanyList
+# 查询管理单元列表
 
-> 查询管理单元列表
+> instantShopping.shop.getCompanyList — 查询管理单元列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.instantShopping.shop.getCompanyList` |
 | 中文名 | 查询管理单元列表 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-instantShopping-shop-getCompanyList` |
+| 接口 ID | `doudian.retail-store.instantShopping.shop.getCompanyList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

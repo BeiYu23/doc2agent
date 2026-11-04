@@ -1,11 +1,12 @@
-# logistics.majorAppliances.pushOrderInfo
+# 服务商推进取件单状态
 
-> 服务商推进取件单状态
+> logistics.majorAppliances.pushOrderInfo — 服务商推进取件单状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.majorAppliances.pushOrderInfo` |
 | 中文名 | 服务商推进取件单状态 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-majorAppliances-pushOrderInfo` |
+| 接口 ID | `doudian.logistics-provider.logistics.majorAppliances.pushOrderInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

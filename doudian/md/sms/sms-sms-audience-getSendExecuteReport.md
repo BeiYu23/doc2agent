@@ -1,11 +1,12 @@
-# sms.audience.getSendExecuteReport
+# 查询任务发送情况
 
-> 查询任务发送情况
+> sms.audience.getSendExecuteReport — 查询任务发送情况
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.audience.getSendExecuteReport` |
 | 中文名 | 查询任务发送情况 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-audience-getSendExecuteReport` |
+| 接口 ID | `doudian.sms.sms.audience.getSendExecuteReport` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/getSendExecuteReport` |

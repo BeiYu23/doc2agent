@@ -1,11 +1,12 @@
-# buyin.colonelActivityDetail
+# 获取团长活动
 
-> 获取团长活动详情
+> buyin.colonelActivityDetail — 获取团长活动详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.colonelActivityDetail` |
 | 中文名 | 获取团长活动 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-colonelActivityDetail` |
+| 接口 ID | `doudian.alliance.buyin.colonelActivityDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonelActivityDetail` |

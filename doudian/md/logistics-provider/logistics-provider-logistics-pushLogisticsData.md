@@ -1,11 +1,12 @@
-# logistics.pushLogisticsData
+# 推送数据
 
-> 推送数据
+> logistics.pushLogisticsData — 推送数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.pushLogisticsData` |
 | 中文名 | 推送数据 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-pushLogisticsData` |
+| 接口 ID | `doudian.logistics-provider.logistics.pushLogisticsData` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/pushLogisticsData` |

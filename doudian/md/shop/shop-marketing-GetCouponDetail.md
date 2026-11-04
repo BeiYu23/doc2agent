@@ -1,11 +1,12 @@
-# marketing.GetCouponDetail
+# 优惠券详细信息查询
 
-> 优惠券详细信息查询
+> marketing.GetCouponDetail — 优惠券详细信息查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.marketing.GetCouponDetail` |
 | 中文名 | 优惠券详细信息查询 |
+| 文档地址 | `/docs/doudian/shop/shop-marketing-GetCouponDetail` |
+| 接口 ID | `doudian.shop.marketing.GetCouponDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/GetCouponDetail` |

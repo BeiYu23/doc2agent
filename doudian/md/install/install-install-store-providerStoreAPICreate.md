@@ -1,11 +1,12 @@
-# install.store.providerStoreAPICreate
+# 行业服务到店安装门店创建
 
-> 行业服务到店安装门店创建API
+> install.store.providerStoreAPICreate — 行业服务到店安装门店创建API
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.providerStoreAPICreate` |
 | 中文名 | 行业服务到店安装门店创建 |
+| 文档地址 | `/docs/doudian/install/install-install-store-providerStoreAPICreate` |
+| 接口 ID | `doudian.install.install.store.providerStoreAPICreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAPICreate` |

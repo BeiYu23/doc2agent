@@ -1,11 +1,12 @@
-# second.ecomInsight.getAssetTask
+# 获取素材任务信息
 
-> 获取素材任务信息
+> second.ecomInsight.getAssetTask — 获取素材任务信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.getAssetTask` |
 | 中文名 | 获取素材任务信息 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-getAssetTask` |
+| 接口 ID | `doudian.video.second.ecomInsight.getAssetTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

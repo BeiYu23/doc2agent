@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.sendHome.order.getOrderDetailAfterPicking",
+  "cnName": "拣货前退款后订单查询接口【即时零售】",
+  "docUrl": "/docs/doudian/order/order-sendHome-order-getOrderDetailAfterPicking",
+  "name": "sendHome.order.getOrderDetailAfterPicking",
   "platform": "doudian",
   "group": "order",
-  "name": "sendHome.order.getOrderDetailAfterPicking",
   "description": "拣货前退款后订单查询接口【即时零售】",
   "method": "GET",
   "path": "/sendHome/order/getOrderDetailAfterPicking",
@@ -643,6 +645,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/6634",
   "updatedAt": "2025-08-18",
-  "_file_stem": "order-sendHome-order-getOrderDetailAfterPicking",
-  "cnName": "拣货前退款后订单查询接口【即时零售】"
+  "_file_stem": "order-sendHome-order-getOrderDetailAfterPicking"
 }

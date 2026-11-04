@@ -1,11 +1,12 @@
-# sms.queryAudienceByCondition
+# 查询人群信息
 
-> 查询人群信息
+> sms.queryAudienceByCondition — 查询人群信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.sms.queryAudienceByCondition` |
 | 中文名 | 查询人群信息 |
+| 文档地址 | `/docs/doudian/member/member-sms-queryAudienceByCondition` |
+| 接口 ID | `doudian.member.sms.queryAudienceByCondition` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/queryAudienceByCondition` |

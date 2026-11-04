@@ -1,11 +1,12 @@
-# supplyChain.warehouse.list
+# 外部仓列表
 
-> 外部仓列表
+> supplyChain.warehouse.list — 外部仓列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.warehouse.list` |
 | 中文名 | 外部仓列表 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-warehouse-list` |
+| 接口 ID | `doudian.shop.supplyChain.warehouse.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/warehouse/list` |

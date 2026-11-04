@@ -1,11 +1,12 @@
-# retail.afterSale.getNegotiation
+# 查询到家售后协商
 
-> 查询到家售后协商详情
+> retail.afterSale.getNegotiation — 查询到家售后协商详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-refund.retail.afterSale.getNegotiation` |
 | 中文名 | 查询到家售后协商 |
+| 文档地址 | `/docs/doudian/retail-refund/retail-refund-retail-afterSale-getNegotiation` |
+| 接口 ID | `doudian.retail-refund.retail.afterSale.getNegotiation` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

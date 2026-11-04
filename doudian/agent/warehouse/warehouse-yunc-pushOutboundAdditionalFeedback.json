@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.pushOutboundAdditionalFeedback",
+  "cnName": "云仓出库单附属信息回传",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-pushOutboundAdditionalFeedback",
+  "name": "yunc.pushOutboundAdditionalFeedback",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.pushOutboundAdditionalFeedback",
   "description": "云仓出库单附属信息回传",
   "method": "GET",
   "path": "/yunc/pushOutboundAdditionalFeedback",
@@ -139,6 +141,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/7432",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-pushOutboundAdditionalFeedback",
-  "cnName": "云仓出库单附属信息回传"
+  "_file_stem": "warehouse-yunc-pushOutboundAdditionalFeedback"
 }

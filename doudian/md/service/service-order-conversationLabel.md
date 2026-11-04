@@ -1,11 +1,12 @@
-# order.conversationLabel
+# 订单进线情况
 
-> 订单进线情况
+> order.conversationLabel — 订单进线情况
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.service.order.conversationLabel` |
 | 中文名 | 订单进线情况 |
+| 文档地址 | `/docs/doudian/service/service-order-conversationLabel` |
+| 接口 ID | `doudian.service.order.conversationLabel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/conversationLabel` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.riskCheck",
+  "cnName": "人群灰产判断使用",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-riskCheck",
+  "name": "mini.riskCheck",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.riskCheck",
   "description": "人群灰产判断使用",
   "method": "GET",
   "path": "/mini/riskCheck",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7619",
   "updatedAt": "2025-07-31",
-  "_file_stem": "miniapp-mini-riskCheck",
-  "cnName": "人群灰产判断使用"
+  "_file_stem": "miniapp-mini-riskCheck"
 }

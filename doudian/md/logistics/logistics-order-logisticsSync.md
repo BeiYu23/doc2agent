@@ -1,11 +1,12 @@
-# order.logisticsSync
+# （logisticsSync）
 
-> order.logisticsSync
+> order.logisticsSync — order.logisticsSync
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsSync` |
 | 中文名 | （logisticsSync） |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsSync` |
+| 接口 ID | `doudian.logistics.order.logisticsSync` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsSync` |

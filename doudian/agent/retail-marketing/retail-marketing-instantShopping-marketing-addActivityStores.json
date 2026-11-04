@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.addActivityStores",
+  "cnName": "活动新增门店",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-addActivityStores",
+  "name": "instantShopping.marketing.addActivityStores",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.addActivityStores",
   "description": "活动新增门店",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -101,6 +103,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6384",
   "updatedAt": "2024-05-08",
-  "_file_stem": "retail-marketing-instantShopping-marketing-addActivityStores",
-  "cnName": "活动新增门店"
+  "_file_stem": "retail-marketing-instantShopping-marketing-addActivityStores"
 }

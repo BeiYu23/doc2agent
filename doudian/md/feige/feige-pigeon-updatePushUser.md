@@ -1,11 +1,12 @@
-# pigeon.updatePushUser
+# 飞鸽消息推送店铺设置
 
-> 飞鸽消息推送店铺设置
+> pigeon.updatePushUser — 飞鸽消息推送店铺设置
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.updatePushUser` |
 | 中文名 | 飞鸽消息推送店铺设置 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-updatePushUser` |
+| 接口 ID | `doudian.feige.pigeon.updatePushUser` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/updatePushUser` |

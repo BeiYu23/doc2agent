@@ -1,11 +1,12 @@
-# install.store.providerStoreAPIUpdateInfo
+# 服务商门店更新
 
-> 服务商门店更新API
+> install.store.providerStoreAPIUpdateInfo — 服务商门店更新API
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.providerStoreAPIUpdateInfo` |
 | 中文名 | 服务商门店更新 |
+| 文档地址 | `/docs/doudian/install/install-install-store-providerStoreAPIUpdateInfo` |
+| 接口 ID | `doudian.install.install.store.providerStoreAPIUpdateInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAPIUpdateInfo` |

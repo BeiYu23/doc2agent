@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.getStaffList",
+  "cnName": "查询店铺下的客服列表",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-getStaffList",
+  "name": "pigeon.getStaffList",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.getStaffList",
   "description": "查询店铺下的客服列表",
   "method": "GET",
   "path": "/pigeon/getStaffList",
@@ -56,6 +58,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5347",
   "updatedAt": "2023-11-08",
-  "_file_stem": "feige-pigeon-getStaffList",
-  "cnName": "查询店铺下的客服列表"
+  "_file_stem": "feige-pigeon-getStaffList"
 }

@@ -1,11 +1,12 @@
-# supplyChain.uploadImage
+# 转换上传图片
 
-> 转换上传图片
+> supplyChain.uploadImage — 转换上传图片
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.uploadImage` |
 | 中文名 | 转换上传图片 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-uploadImage` |
+| 接口 ID | `doudian.cross-border.supplyChain.uploadImage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/uploadImage` |

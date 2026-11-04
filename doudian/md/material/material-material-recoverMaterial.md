@@ -1,11 +1,12 @@
-# material.recoverMaterial
+# 从回收站中恢复素材
 
-> 从回收站中恢复素材
+> material.recoverMaterial — 从回收站中恢复素材
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.recoverMaterial` |
 | 中文名 | 从回收站中恢复素材 |
+| 文档地址 | `/docs/doudian/material/material-material-recoverMaterial` |
+| 接口 ID | `doudian.material.material.recoverMaterial` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/recoverMaterial` |

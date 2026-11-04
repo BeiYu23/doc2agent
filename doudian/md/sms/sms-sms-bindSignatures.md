@@ -1,11 +1,12 @@
-# sms.bindSignatures
+# 模板绑定商家签名
 
-> 模板绑定商家签名
+> sms.bindSignatures — 模板绑定商家签名
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.bindSignatures` |
 | 中文名 | 模板绑定商家签名 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-bindSignatures` |
+| 接口 ID | `doudian.sms.sms.bindSignatures` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/bindSignatures` |

@@ -1,11 +1,12 @@
-# trade.batchGetTradeLimitTemplateList
+# 批量查询限购模板
 
-> 批量查询限购模板
+> trade.batchGetTradeLimitTemplateList — 批量查询限购模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.trade.batchGetTradeLimitTemplateList` |
 | 中文名 | 批量查询限购模板 |
+| 文档地址 | `/docs/doudian/shop/shop-trade-batchGetTradeLimitTemplateList` |
+| 接口 ID | `doudian.shop.trade.batchGetTradeLimitTemplateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/batchGetTradeLimitTemplateList` |

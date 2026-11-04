@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.expressRecieved",
+  "cnName": "【邮寄回收】邮寄快递签收",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-expressRecieved",
+  "name": "resale.order.expressRecieved",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.expressRecieved",
   "description": "【邮寄回收】邮寄快递签收",
   "method": "GET",
   "path": "/resale/order/expressRecieved",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4630",
   "updatedAt": "2023-09-06",
-  "_file_stem": "recycle-resale-order-expressRecieved",
-  "cnName": "【邮寄回收】邮寄快递签收"
+  "_file_stem": "recycle-resale-order-expressRecieved"
 }

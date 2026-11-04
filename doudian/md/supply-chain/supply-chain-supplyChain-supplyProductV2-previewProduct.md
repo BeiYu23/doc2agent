@@ -1,11 +1,12 @@
-# supplyChain.supplyProductV2.previewProduct
+# 预览货品
 
-> 预览货品详情
+> supplyChain.supplyProductV2.previewProduct — 预览货品详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.previewProduct` |
 | 中文名 | 预览货品 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-previewProduct` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.previewProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

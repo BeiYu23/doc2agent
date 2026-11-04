@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.providerStoreAPIModifyStatus",
+  "cnName": "到店安装门店状态修改",
+  "docUrl": "/docs/doudian/install/install-install-store-providerStoreAPIModifyStatus",
+  "name": "install.store.providerStoreAPIModifyStatus",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.providerStoreAPIModifyStatus",
   "description": "到店安装门店状态修改",
   "method": "GET",
   "path": "/install/store/providerStoreAPIModifyStatus",
@@ -74,6 +76,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7679",
   "updatedAt": "2026-06-02",
-  "_file_stem": "install-install-store-providerStoreAPIModifyStatus",
-  "cnName": "到店安装门店状态修改"
+  "_file_stem": "install-install-store-providerStoreAPIModifyStatus"
 }

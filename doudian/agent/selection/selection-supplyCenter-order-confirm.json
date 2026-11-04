@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.order.confirm",
+  "cnName": "精选货源采购单推进确认收货状态",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-order-confirm",
+  "name": "supplyCenter.order.confirm",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.order.confirm",
   "description": "精选货源采购单推进确认收货状态",
   "method": "GET",
   "path": "/supplyCenter/order/confirm",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5320",
   "updatedAt": "2023-11-17",
-  "_file_stem": "selection-supplyCenter-order-confirm",
-  "cnName": "精选货源采购单推进确认收货状态"
+  "_file_stem": "selection-supplyCenter-order-confirm"
 }

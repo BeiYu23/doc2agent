@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createAssetTask",
+  "cnName": "创建素材任务",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createAssetTask",
+  "name": "second.ecomInsight.createAssetTask",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createAssetTask",
   "description": "创建素材任务",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -102,6 +104,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8183",
   "updatedAt": "2026-04-21",
-  "_file_stem": "video-second-ecomInsight-createAssetTask",
-  "cnName": "创建素材任务"
+  "_file_stem": "video-second-ecomInsight-createAssetTask"
 }

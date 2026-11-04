@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.operatorAcceptOrderEvent",
+  "cnName": "服务商接收派单后回执",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-operatorAcceptOrderEvent",
+  "name": "logistics.operatorAcceptOrderEvent",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.operatorAcceptOrderEvent",
   "description": "服务商接收派单后回执",
   "method": "GET",
   "path": "/logistics/operatorAcceptOrderEvent",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2921",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorAcceptOrderEvent",
-  "cnName": "服务商接收派单后回执"
+  "_file_stem": "logistics-logistics-operatorAcceptOrderEvent"
 }

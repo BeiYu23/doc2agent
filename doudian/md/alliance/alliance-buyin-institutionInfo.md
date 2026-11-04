@@ -1,11 +1,12 @@
-# buyin.institutionInfo
+# 获取机构信息
 
-> 获取机构信息
+> buyin.institutionInfo — 获取机构信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.institutionInfo` |
 | 中文名 | 获取机构信息 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-institutionInfo` |
+| 接口 ID | `doudian.alliance.buyin.institutionInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/institutionInfo` |

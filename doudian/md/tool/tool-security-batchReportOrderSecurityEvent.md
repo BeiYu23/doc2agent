@@ -1,11 +1,12 @@
-# security.batchReportOrderSecurityEvent
+# 电商云批量上报订单安全事件
 
-> 电商云批量上报订单安全事件接口
+> security.batchReportOrderSecurityEvent — 电商云批量上报订单安全事件接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.security.batchReportOrderSecurityEvent` |
 | 中文名 | 电商云批量上报订单安全事件 |
+| 文档地址 | `/docs/doudian/tool/tool-security-batchReportOrderSecurityEvent` |
+| 接口 ID | `doudian.tool.security.batchReportOrderSecurityEvent` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/security/batchReportOrderSecurityEvent` |

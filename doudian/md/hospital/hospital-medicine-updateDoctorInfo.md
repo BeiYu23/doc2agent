@@ -1,11 +1,12 @@
-# medicine.updateDoctorInfo
+# 更新医生信息
 
-> 更新医生信息
+> medicine.updateDoctorInfo — 更新医生信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.hospital.medicine.updateDoctorInfo` |
 | 中文名 | 更新医生信息 |
+| 文档地址 | `/docs/doudian/hospital/hospital-medicine-updateDoctorInfo` |
+| 接口 ID | `doudian.hospital.medicine.updateDoctorInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/updateDoctorInfo` |

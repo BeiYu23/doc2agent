@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.QueryVideoAnalysisTask",
+  "cnName": "查询视频分析任务",
+  "docUrl": "/docs/doudian/video/video-open-QueryVideoAnalysisTask",
+  "name": "open.QueryVideoAnalysisTask",
   "platform": "doudian",
   "group": "video",
-  "name": "open.QueryVideoAnalysisTask",
   "description": "查询视频分析任务",
   "method": "GET",
   "path": "/open/QueryVideoAnalysisTask",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8514",
   "updatedAt": "2026-08-18",
-  "_file_stem": "video-open-QueryVideoAnalysisTask",
-  "cnName": "查询视频分析任务"
+  "_file_stem": "video-open-QueryVideoAnalysisTask"
 }

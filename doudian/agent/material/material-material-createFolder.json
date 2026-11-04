@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.createFolder",
+  "cnName": "创建文件夹",
+  "docUrl": "/docs/doudian/material/material-material-createFolder",
+  "name": "material.createFolder",
   "platform": "doudian",
   "group": "material",
-  "name": "material.createFolder",
   "description": "创建文件夹",
   "method": "GET",
   "path": "/material/createFolder",
@@ -147,6 +149,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/946",
   "updatedAt": "2024-06-12",
-  "_file_stem": "material-material-createFolder",
-  "cnName": "创建文件夹"
+  "_file_stem": "material-material-createFolder"
 }

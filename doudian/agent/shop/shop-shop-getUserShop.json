@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.getUserShop",
+  "cnName": "获取用户店铺信息",
+  "docUrl": "/docs/doudian/shop/shop-shop-getUserShop",
+  "name": "shop.getUserShop",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.getUserShop",
   "description": "获取用户店铺信息",
   "method": "GET",
   "path": "/shop/getUserShop",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/651",
   "updatedAt": "2021-07-05",
-  "_file_stem": "shop-shop-getUserShop",
-  "cnName": "获取用户店铺信息"
+  "_file_stem": "shop-shop-getUserShop"
 }

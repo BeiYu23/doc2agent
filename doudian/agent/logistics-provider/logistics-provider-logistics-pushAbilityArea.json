@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.pushAbilityArea",
+  "cnName": "能力服务范围推送",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-pushAbilityArea",
+  "name": "logistics.pushAbilityArea",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.pushAbilityArea",
   "description": "能力服务范围推送",
   "method": "GET",
   "path": "/logistics/pushAbilityArea",
@@ -491,6 +493,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7510",
   "updatedAt": "2025-06-23",
-  "_file_stem": "logistics-provider-logistics-pushAbilityArea",
-  "cnName": "能力服务范围推送"
+  "_file_stem": "logistics-provider-logistics-pushAbilityArea"
 }

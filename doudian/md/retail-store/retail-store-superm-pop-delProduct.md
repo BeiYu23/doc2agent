@@ -1,11 +1,12 @@
-# superm.pop.delProduct
+# 小时达营销活动-删除商品
 
-> 小时达营销活动-删除商品
+> superm.pop.delProduct — 小时达营销活动-删除商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.delProduct` |
 | 中文名 | 小时达营销活动-删除商品 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-delProduct` |
+| 接口 ID | `doudian.retail-store.superm.pop.delProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/delProduct` |

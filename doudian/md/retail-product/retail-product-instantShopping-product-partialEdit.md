@@ -1,11 +1,12 @@
-# instantShopping.product.partialEdit
+# 部分编辑商品信息
 
-> 部分编辑商品信息
+> instantShopping.product.partialEdit — 部分编辑商品信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-product.instantShopping.product.partialEdit` |
 | 中文名 | 部分编辑商品信息 |
+| 文档地址 | `/docs/doudian/retail-product/retail-product-instantShopping-product-partialEdit` |
+| 接口 ID | `doudian.retail-product.instantShopping.product.partialEdit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

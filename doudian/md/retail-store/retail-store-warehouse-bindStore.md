@@ -1,11 +1,12 @@
-# warehouse.bindStore
+# 仓库绑定门店
 
-> 仓库绑定门店
+> warehouse.bindStore — 仓库绑定门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.warehouse.bindStore` |
 | 中文名 | 仓库绑定门店 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-warehouse-bindStore` |
+| 接口 ID | `doudian.retail-store.warehouse.bindStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/bindStore` |

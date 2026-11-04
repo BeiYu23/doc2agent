@@ -1,11 +1,12 @@
-# topup.accountTemplateList
+# 获取叶子类目可选的账号模板id
 
-> 获取叶子类目可选的账号模板id
+> topup.accountTemplateList — 获取叶子类目可选的账号模板id
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.topup.accountTemplateList` |
 | 中文名 | 获取叶子类目可选的账号模板id |
+| 文档地址 | `/docs/doudian/virtual/virtual-topup-accountTemplateList` |
+| 接口 ID | `doudian.virtual.topup.accountTemplateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/accountTemplateList` |

@@ -1,11 +1,12 @@
-# logistics.reverse.reportException
+# 上报上门取件履约过程中的异常
 
-> 上报上门取件履约过程中的异常
+> logistics.reverse.reportException — 上报上门取件履约过程中的异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.reverse.reportException` |
 | 中文名 | 上报上门取件履约过程中的异常 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-reverse-reportException` |
+| 接口 ID | `doudian.logistics-provider.logistics.reverse.reportException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

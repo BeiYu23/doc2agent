@@ -1,11 +1,12 @@
-# test.testxiaze
+# （testxiaze）
 
-> test
+> test.testxiaze — test
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.test.testxiaze` |
 | 中文名 | （testxiaze） |
+| 文档地址 | `/docs/doudian/order/order-test-testxiaze` |
+| 接口 ID | `doudian.order.test.testxiaze` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/testxiaze` |

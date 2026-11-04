@@ -1,11 +1,12 @@
-# promise.deliveryList
+# 商家发货时效配置推荐
 
-> 商家发货时效配置推荐
+> promise.deliveryList — 商家发货时效配置推荐
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.promise.deliveryList` |
 | 中文名 | 商家发货时效配置推荐 |
+| 文档地址 | `/docs/doudian/product/product-promise-deliveryList` |
+| 接口 ID | `doudian.product.promise.deliveryList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/deliveryList` |

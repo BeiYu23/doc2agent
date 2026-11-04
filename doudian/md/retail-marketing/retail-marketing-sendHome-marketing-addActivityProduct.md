@@ -1,11 +1,12 @@
-# sendHome.marketing.addActivityProduct
+# 为创建好的营销活动门店绑定商品
 
-> 为创建好的营销活动门店绑定商品
+> sendHome.marketing.addActivityProduct — 为创建好的营销活动门店绑定商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.sendHome.marketing.addActivityProduct` |
 | 中文名 | 为创建好的营销活动门店绑定商品 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-addActivityProduct` |
+| 接口 ID | `doudian.retail-marketing.sendHome.marketing.addActivityProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

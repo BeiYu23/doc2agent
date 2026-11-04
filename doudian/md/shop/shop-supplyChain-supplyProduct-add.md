@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.add
+# 创建产品
 
-> 创建产品
+> supplyChain.supplyProduct.add — 创建产品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.supplyProduct.add` |
 | 中文名 | 创建产品 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-supplyProduct-add` |
+| 接口 ID | `doudian.shop.supplyChain.supplyProduct.add` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/supplyProduct/add` |

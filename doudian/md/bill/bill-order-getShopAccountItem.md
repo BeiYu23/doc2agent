@@ -1,11 +1,12 @@
-# order.getShopAccountItem
+# 查询资金流水明细
 
-> 查询资金流水明细，查询方式为时间轮训方式，数据T+1生成，建议第二天10点之后查询。如因任务积压导致延迟的情况，建议重试。
+> order.getShopAccountItem — 查询资金流水明细，查询方式为时间轮训方式，数据T+1生成，建议第二天10点之后查询。如因任务积压导致延迟的情况，建议重试。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.getShopAccountItem` |
 | 中文名 | 查询资金流水明细 |
+| 文档地址 | `/docs/doudian/bill/bill-order-getShopAccountItem` |
+| 接口 ID | `doudian.bill.order.getShopAccountItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getShopAccountItem` |

@@ -1,11 +1,12 @@
-# trace.addShop
+# 订单链路监控添加用户
 
-> 订单链路监控添加用户
+> trace.addShop — 订单链路监控添加用户
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.trace.addShop` |
 | 中文名 | 订单链路监控添加用户 |
+| 文档地址 | `/docs/doudian/order/order-trace-addShop` |
+| 接口 ID | `doudian.order.trace.addShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trace/addShop` |

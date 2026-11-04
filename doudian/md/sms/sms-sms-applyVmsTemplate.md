@@ -1,11 +1,12 @@
-# sms.applyVmsTemplate
+# 申请创建图文短信模板
 
-> 申请创建图文短信模板
+> sms.applyVmsTemplate — 申请创建图文短信模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.applyVmsTemplate` |
 | 中文名 | 申请创建图文短信模板 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-applyVmsTemplate` |
+| 接口 ID | `doudian.sms.sms.applyVmsTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/applyVmsTemplate` |

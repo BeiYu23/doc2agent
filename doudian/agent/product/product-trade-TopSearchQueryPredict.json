@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.trade.TopSearchQueryPredict",
+  "cnName": "商品标题热搜词推荐",
+  "docUrl": "/docs/doudian/product/product-trade-TopSearchQueryPredict",
+  "name": "trade.TopSearchQueryPredict",
   "platform": "doudian",
   "group": "product",
-  "name": "trade.TopSearchQueryPredict",
   "description": "商品标题热搜词推荐",
   "method": "GET",
   "path": "/trade/TopSearchQueryPredict",
@@ -74,6 +76,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2677",
   "updatedAt": "2022-11-03",
-  "_file_stem": "product-trade-TopSearchQueryPredict",
-  "cnName": "商品标题热搜词推荐"
+  "_file_stem": "product-trade-TopSearchQueryPredict"
 }

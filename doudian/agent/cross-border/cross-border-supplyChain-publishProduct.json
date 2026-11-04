@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.supplyChain.publishProduct",
+  "cnName": "发布货品",
+  "docUrl": "/docs/doudian/cross-border/cross-border-supplyChain-publishProduct",
+  "name": "supplyChain.publishProduct",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "supplyChain.publishProduct",
   "description": "发布货品",
   "method": "GET",
   "path": "/supplyChain/publishProduct",
@@ -773,6 +775,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6325",
   "updatedAt": "2024-05-16",
-  "_file_stem": "cross-border-supplyChain-publishProduct",
-  "cnName": "发布货品"
+  "_file_stem": "cross-border-supplyChain-publishProduct"
 }

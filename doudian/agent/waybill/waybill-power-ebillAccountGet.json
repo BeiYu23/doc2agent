@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.power.ebillAccountGet",
+  "cnName": "面单余额查询（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/waybill/waybill-power-ebillAccountGet",
+  "name": "power.ebillAccountGet",
   "platform": "doudian",
   "group": "waybill",
-  "name": "power.ebillAccountGet",
   "description": "面单余额查询（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/ebillAccountGet",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1481",
   "updatedAt": "2021-11-24",
-  "_file_stem": "waybill-power-ebillAccountGet",
-  "cnName": "面单余额查询（仅用于兼容老物流网关"
+  "_file_stem": "waybill-power-ebillAccountGet"
 }

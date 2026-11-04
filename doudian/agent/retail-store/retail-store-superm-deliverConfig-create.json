@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.deliverConfig.create",
+  "cnName": "门店时效管理规则-添加",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-deliverConfig-create",
+  "name": "superm.deliverConfig.create",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.deliverConfig.create",
   "description": "门店时效管理规则-添加",
   "method": "GET",
   "path": "/superm/deliverConfig/create",
@@ -171,6 +173,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3595",
   "updatedAt": "2025-08-20",
-  "_file_stem": "retail-store-superm-deliverConfig-create",
-  "cnName": "门店时效管理规则-添加"
+  "_file_stem": "retail-store-superm-deliverConfig-create"
 }

@@ -1,11 +1,12 @@
-# foodTakeout.life.getOrder
+# 生服-订单查询
 
-> 生服-订单查询接口
+> foodTakeout.life.getOrder — 生服-订单查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.home-scene.foodTakeout.life.getOrder` |
 | 中文名 | 生服-订单查询 |
+| 文档地址 | `/docs/doudian/home-scene/home-scene-foodTakeout-life-getOrder` |
+| 接口 ID | `doudian.home-scene.foodTakeout.life.getOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

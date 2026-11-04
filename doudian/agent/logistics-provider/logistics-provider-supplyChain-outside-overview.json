@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.supplyChain.outside.overview",
+  "cnName": "物流指数总览",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-overview",
+  "name": "supplyChain.outside.overview",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "supplyChain.outside.overview",
   "description": "物流指数总览",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2479",
   "updatedAt": "2022-09-26",
-  "_file_stem": "logistics-provider-supplyChain-outside-overview",
-  "cnName": "物流指数总览"
+  "_file_stem": "logistics-provider-supplyChain-outside-overview"
 }

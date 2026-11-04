@@ -1,11 +1,12 @@
-# openCloud.v1.imageVersion.rebuild
+# 镜像重新构建
 
-> 镜像重新构建
+> openCloud.v1.imageVersion.rebuild — 镜像重新构建
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.v1.imageVersion.rebuild` |
 | 中文名 | 镜像重新构建 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-v1-imageVersion-rebuild` |
+| 接口 ID | `doudian.cloud.openCloud.v1.imageVersion.rebuild` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/imageVersion/rebuild` |

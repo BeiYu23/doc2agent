@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.supplyChain.queryBrandList",
+  "cnName": "查询品牌列表",
+  "docUrl": "/docs/doudian/cross-border/cross-border-supplyChain-queryBrandList",
+  "name": "supplyChain.queryBrandList",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "supplyChain.queryBrandList",
   "description": "查询品牌列表",
   "method": "GET",
   "path": "/supplyChain/queryBrandList",
@@ -137,6 +139,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6324",
   "updatedAt": "2024-03-26",
-  "_file_stem": "cross-border-supplyChain-queryBrandList",
-  "cnName": "查询品牌列表"
+  "_file_stem": "cross-border-supplyChain-queryBrandList"
 }

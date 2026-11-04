@@ -1,11 +1,12 @@
-# bigCustomer.queryCounting
+# 查询统计销量结果
 
-> 查询统计销量结果
+> bigCustomer.queryCounting — 查询统计销量结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.bigCustomer.queryCounting` |
 | 中文名 | 查询统计销量结果 |
+| 文档地址 | `/docs/doudian/order/order-bigCustomer-queryCounting` |
+| 接口 ID | `doudian.order.bigCustomer.queryCounting` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/bigCustomer/queryCounting` |

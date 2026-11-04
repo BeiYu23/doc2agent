@@ -1,11 +1,12 @@
-# buyin.activityProductExtendApprove
+# 商家处理团长活动商品的推广延期申请
 
-> 商家处理团长活动商品的推广延期申请
+> buyin.activityProductExtendApprove — 商家处理团长活动商品的推广延期申请
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.activityProductExtendApprove` |
 | 中文名 | 商家处理团长活动商品的推广延期申请 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-activityProductExtendApprove` |
+| 接口 ID | `doudian.alliance.buyin.activityProductExtendApprove` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/activityProductExtendApprove` |

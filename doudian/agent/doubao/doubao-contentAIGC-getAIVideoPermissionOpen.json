@@ -1,8 +1,10 @@
 {
   "id": "doudian.doubao.contentAIGC.getAIVideoPermissionOpen",
+  "cnName": "查询商家成片权限",
+  "docUrl": "/docs/doudian/doubao/doubao-contentAIGC-getAIVideoPermissionOpen",
+  "name": "contentAIGC.getAIVideoPermissionOpen",
   "platform": "doudian",
   "group": "doubao",
-  "name": "contentAIGC.getAIVideoPermissionOpen",
   "description": "查询商家成片权限",
   "method": "GET",
   "path": "/contentAIGC/getAIVideoPermissionOpen",
@@ -82,6 +84,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1627/8654",
   "updatedAt": "2026-09-23",
-  "_file_stem": "doubao-contentAIGC-getAIVideoPermissionOpen",
-  "cnName": "查询商家成片权限"
+  "_file_stem": "doubao-contentAIGC-getAIVideoPermissionOpen"
 }

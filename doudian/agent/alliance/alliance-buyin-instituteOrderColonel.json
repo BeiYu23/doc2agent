@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instituteOrderColonel",
+  "cnName": "查询团长抖音",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instituteOrderColonel",
+  "name": "buyin.instituteOrderColonel",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instituteOrderColonel",
   "description": "查询团长抖音、火山、头条和西瓜订单，需要团长百应授权",
   "method": "GET",
   "path": "/buyin/instituteOrderColonel",
@@ -187,6 +189,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1603",
   "updatedAt": "2023-04-18",
-  "_file_stem": "alliance-buyin-instituteOrderColonel",
-  "cnName": "查询团长抖音"
+  "_file_stem": "alliance-buyin-instituteOrderColonel"
 }

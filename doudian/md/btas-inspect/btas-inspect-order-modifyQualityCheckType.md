@@ -1,11 +1,12 @@
-# order.modifyQualityCheckType
+# 修改可质检订单质检类型
 
-> 修改可质检订单质检类型
+> order.modifyQualityCheckType — 修改可质检订单质检类型
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.order.modifyQualityCheckType` |
 | 中文名 | 修改可质检订单质检类型 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-order-modifyQualityCheckType` |
+| 接口 ID | `doudian.btas-inspect.order.modifyQualityCheckType` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/modifyQualityCheckType` |

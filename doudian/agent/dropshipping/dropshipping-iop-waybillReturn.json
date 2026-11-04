@@ -1,8 +1,10 @@
 {
   "id": "doudian.dropshipping.iop.waybillReturn",
+  "cnName": "回传物流单号",
+  "docUrl": "/docs/doudian/dropshipping/dropshipping-iop-waybillReturn",
+  "name": "iop.waybillReturn",
   "platform": "doudian",
   "group": "dropshipping",
-  "name": "iop.waybillReturn",
   "description": "回传物流单号，实现代发订单的发货功能（注：回传成功后，原始订单也会同步更新成已发货状态）",
   "method": "GET",
   "path": "/iop/waybillReturn",
@@ -384,6 +386,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/59/676",
   "updatedAt": "2022-08-01",
-  "_file_stem": "dropshipping-iop-waybillReturn",
-  "cnName": "回传物流单号"
+  "_file_stem": "dropshipping-iop-waybillReturn"
 }

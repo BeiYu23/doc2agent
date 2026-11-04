@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierCompleteException",
+  "cnName": "服务商安装异常",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierCompleteException",
+  "name": "install.order.supplierCompleteException",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierCompleteException",
   "description": "服务商安装异常",
   "method": "GET",
   "path": "/install/order/supplierCompleteException",
@@ -101,6 +103,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5780",
   "updatedAt": "2026-08-20",
-  "_file_stem": "logistics-provider-install-order-supplierCompleteException",
-  "cnName": "服务商安装异常"
+  "_file_stem": "logistics-provider-install-order-supplierCompleteException"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.batchGetUnionIdByOpenIdList",
+  "cnName": "会员open_id转union_id",
+  "docUrl": "/docs/doudian/member/member-member-batchGetUnionIdByOpenIdList",
+  "name": "member.batchGetUnionIdByOpenIdList",
   "platform": "doudian",
   "group": "member",
-  "name": "member.batchGetUnionIdByOpenIdList",
   "description": "会员open_id转union_id",
   "method": "GET",
   "path": "/member/batchGetUnionIdByOpenIdList",
@@ -95,6 +97,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1790",
   "updatedAt": "2023-04-17",
-  "_file_stem": "member-member-batchGetUnionIdByOpenIdList",
-  "cnName": "会员open_id转union_id"
+  "_file_stem": "member-member-batchGetUnionIdByOpenIdList"
 }

@@ -1,11 +1,12 @@
-# product.createComponentTemplateV2
+# 创建尺码模板
 
-> 创建尺码模板
+> product.createComponentTemplateV2 — 创建尺码模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.createComponentTemplateV2` |
 | 中文名 | 创建尺码模板 |
+| 文档地址 | `/docs/doudian/product/product-product-createComponentTemplateV2` |
+| 接口 ID | `doudian.product.product.createComponentTemplateV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/createComponentTemplateV2` |

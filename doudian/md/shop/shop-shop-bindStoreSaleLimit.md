@@ -1,11 +1,12 @@
-# shop.bindStoreSaleLimit
+# 门店绑定限售模版
 
-> 门店绑定限售模版
+> shop.bindStoreSaleLimit — 门店绑定限售模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.bindStoreSaleLimit` |
 | 中文名 | 门店绑定限售模版 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-bindStoreSaleLimit` |
+| 接口 ID | `doudian.shop.shop.bindStoreSaleLimit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/bindStoreSaleLimit` |

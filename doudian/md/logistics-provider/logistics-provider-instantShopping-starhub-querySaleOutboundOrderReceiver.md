@@ -1,11 +1,12 @@
-# instantShopping.starhub.querySaleOutboundOrderReceiver
+# 服务商主动向抖音获取城市仓单收货信息
 
-> 服务商主动向抖音获取城市仓单收货信息
+> instantShopping.starhub.querySaleOutboundOrderReceiver — 服务商主动向抖音获取城市仓单收货信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.instantShopping.starhub.querySaleOutboundOrderReceiver` |
 | 中文名 | 服务商主动向抖音获取城市仓单收货信息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-instantShopping-starhub-querySaleOutboundOrderReceiver` |
+| 接口 ID | `doudian.logistics-provider.instantShopping.starhub.querySaleOutboundOrderReceiver` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

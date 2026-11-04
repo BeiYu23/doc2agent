@@ -1,11 +1,12 @@
-# buyin.activityProductList
+# 一级团长查询提报活动商品
 
-> 一级团长查询提报活动商品
+> buyin.activityProductList — 一级团长查询提报活动商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.activityProductList` |
 | 中文名 | 一级团长查询提报活动商品 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-activityProductList` |
+| 接口 ID | `doudian.alliance.buyin.activityProductList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/activityProductList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.sku.syncStockBatchMultiProducts",
+  "cnName": "多商品内 sku 更新库存",
+  "docUrl": "/docs/doudian/product/product-sku-syncStockBatchMultiProducts",
+  "name": "sku.syncStockBatchMultiProducts",
   "platform": "doudian",
   "group": "product",
-  "name": "sku.syncStockBatchMultiProducts",
   "description": "多商品内 sku 更新库存",
   "method": "GET",
   "path": "/sku/syncStockBatchMultiProducts",
@@ -422,6 +424,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2847",
   "updatedAt": "2025-09-08",
-  "_file_stem": "product-sku-syncStockBatchMultiProducts",
-  "cnName": "多商品内 sku 更新库存"
+  "_file_stem": "product-sku-syncStockBatchMultiProducts"
 }

@@ -1,11 +1,12 @@
-# marketing.queryShopCouponList
+# 查询店铺优惠券信息
 
-> 查询店铺优惠券信息，与商家工作台优惠券管理模块功能一致
+> marketing.queryShopCouponList — 查询店铺优惠券信息，与商家工作台优惠券管理模块功能一致
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.queryShopCouponList` |
 | 中文名 | 查询店铺优惠券信息 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-queryShopCouponList` |
+| 接口 ID | `doudian.marketing.marketing.queryShopCouponList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/queryShopCouponList` |

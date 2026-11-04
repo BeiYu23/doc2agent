@@ -1,13 +1,14 @@
-# instantShopping.productOpportunity.distributeClue
+# 商机发品流程：获取商机线索->发品传入商机参数
 
-> 商机发品流程：获取商机线索->发品传入商机参数
+> instantShopping.productOpportunity.distributeClue — 商机发品流程：获取商机线索->发品传入商机参数
 1、此接口为商机线索的分发接口，可获取线索id和线索名称；
 2、发品时（/product/addV2 & YOUR_SECRET_KEY）要填充商机线索参数recruit_inf
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-product.instantShopping.productOpportunity.distributeClue` |
 | 中文名 | 商机发品流程：获取商机线索->发品传入商机参数 |
+| 文档地址 | `/docs/doudian/retail-product/retail-product-instantShopping-productOpportunity-distributeClue` |
+| 接口 ID | `doudian.retail-product.instantShopping.productOpportunity.distributeClue` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

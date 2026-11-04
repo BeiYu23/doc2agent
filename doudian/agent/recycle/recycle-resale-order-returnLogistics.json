@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.returnLogistics",
+  "cnName": "【邮寄回收】退货物流状态",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-returnLogistics",
+  "name": "resale.order.returnLogistics",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.returnLogistics",
   "description": "【邮寄回收】退货物流状态",
   "method": "GET",
   "path": "/resale/order/returnLogistics",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4625",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-returnLogistics",
-  "cnName": "【邮寄回收】退货物流状态"
+  "_file_stem": "recycle-resale-order-returnLogistics"
 }

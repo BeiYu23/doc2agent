@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.qualityTask",
+  "cnName": "商品每日诊断任务查询",
+  "docUrl": "/docs/doudian/product/product-product-qualityTask",
+  "name": "product.qualityTask",
   "platform": "doudian",
   "group": "product",
-  "name": "product.qualityTask",
   "description": "商品每日诊断任务查询API",
   "method": "GET",
   "path": "/product/qualityTask",
@@ -186,6 +188,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1829",
   "updatedAt": "2021-09-08",
-  "_file_stem": "product-product-qualityTask",
-  "cnName": "商品每日诊断任务查询"
+  "_file_stem": "product-product-qualityTask"
 }

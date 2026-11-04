@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.buyerGetOrderList",
+  "cnName": "拉取订单列表",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-buyerGetOrderList",
+  "name": "recycle.buyerGetOrderList",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.buyerGetOrderList",
   "description": "拉取订单列表接口",
   "method": "GET",
   "path": "/recycle/buyerGetOrderList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/914",
   "updatedAt": "2021-09-07",
-  "_file_stem": "recycle-recycle-buyerGetOrderList",
-  "cnName": "拉取订单列表"
+  "_file_stem": "recycle-recycle-buyerGetOrderList"
 }

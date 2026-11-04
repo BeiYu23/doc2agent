@@ -1,11 +1,12 @@
-# resale.order.supplierForceCancel
+# 服务商强制取消订单
 
-> 服务商强制取消订单
+> resale.order.supplierForceCancel — 服务商强制取消订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.supplierForceCancel` |
 | 中文名 | 服务商强制取消订单 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-supplierForceCancel` |
+| 接口 ID | `doudian.recycle.resale.order.supplierForceCancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/supplierForceCancel` |

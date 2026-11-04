@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.trade.CreateFreightTemplate",
+  "cnName": "小时达创建运费模板",
+  "docUrl": "/docs/doudian/shop/shop-trade-CreateFreightTemplate",
+  "name": "trade.CreateFreightTemplate",
   "platform": "doudian",
   "group": "shop",
-  "name": "trade.CreateFreightTemplate",
   "description": "小时达创建运费模板",
   "method": "GET",
   "path": "/trade/CreateFreightTemplate",
@@ -320,6 +322,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/4195",
   "updatedAt": "2024-06-19",
-  "_file_stem": "shop-trade-CreateFreightTemplate",
-  "cnName": "小时达创建运费模板"
+  "_file_stem": "shop-trade-CreateFreightTemplate"
 }

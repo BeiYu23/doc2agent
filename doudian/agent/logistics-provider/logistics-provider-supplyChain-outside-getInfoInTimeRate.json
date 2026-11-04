@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.supplyChain.outside.getInfoInTimeRate",
+  "cnName": "查询信息及时量的责任机构排名",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getInfoInTimeRate",
+  "name": "supplyChain.outside.getInfoInTimeRate",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "supplyChain.outside.getInfoInTimeRate",
   "description": "查询信息及时量的责任机构排名",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2482",
   "updatedAt": "2022-09-26",
-  "_file_stem": "logistics-provider-supplyChain-outside-getInfoInTimeRate",
-  "cnName": "查询信息及时量的责任机构排名"
+  "_file_stem": "logistics-provider-supplyChain-outside-getInfoInTimeRate"
 }

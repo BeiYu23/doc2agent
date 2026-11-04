@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.getAiArbitration",
+  "cnName": "查询预校验结果",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-getAiArbitration",
+  "name": "logistics.getAiArbitration",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.getAiArbitration",
   "description": "查询预校验结果接口",
   "method": "GET",
   "path": "/logistics/getAiArbitration",
@@ -96,6 +98,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8310",
   "updatedAt": "2026-05-22",
-  "_file_stem": "logistics-provider-logistics-getAiArbitration",
-  "cnName": "查询预校验结果"
+  "_file_stem": "logistics-provider-logistics-getAiArbitration"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.order.ReportVirtualMobile",
+  "cnName": "主叫号码上报",
+  "docUrl": "/docs/doudian/industry/industry-order-ReportVirtualMobile",
+  "name": "order.ReportVirtualMobile",
   "platform": "doudian",
   "group": "industry",
-  "name": "order.ReportVirtualMobile",
   "description": "主叫号码上报接口",
   "method": "GET",
   "path": "/order/ReportVirtualMobile",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8158",
   "updatedAt": "2026-03-24",
-  "_file_stem": "industry-order-ReportVirtualMobile",
-  "cnName": "主叫号码上报"
+  "_file_stem": "industry-order-ReportVirtualMobile"
 }

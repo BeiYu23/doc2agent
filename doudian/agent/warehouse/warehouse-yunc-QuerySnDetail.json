@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.QuerySnDetail",
+  "cnName": "查询sn码细节",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-QuerySnDetail",
+  "name": "yunc.QuerySnDetail",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.QuerySnDetail",
   "description": "查询sn码细节",
   "method": "GET",
   "path": "/yunc/QuerySnDetail",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/8064",
   "updatedAt": "2026-03-10",
-  "_file_stem": "warehouse-yunc-QuerySnDetail",
-  "cnName": "查询sn码细节"
+  "_file_stem": "warehouse-yunc-QuerySnDetail"
 }

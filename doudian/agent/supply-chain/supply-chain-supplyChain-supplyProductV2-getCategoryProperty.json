@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProductV2.getCategoryProperty",
+  "cnName": "获取货品类目属性",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-getCategoryProperty",
+  "name": "supplyChain.supplyProductV2.getCategoryProperty",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProductV2.getCategoryProperty",
   "description": "获取货品类目属性",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -179,6 +181,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6672",
   "updatedAt": "2024-07-04",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getCategoryProperty",
-  "cnName": "获取货品类目属性"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getCategoryProperty"
 }

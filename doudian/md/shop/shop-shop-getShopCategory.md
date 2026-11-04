@@ -1,6 +1,6 @@
-# shop.getShopCategory
+# 请一定使用最小层级类目id，发布商品或更新商品
 
-> 请一定使用最小层级类目id，发布商品或更新商品。
+> shop.getShopCategory — 请一定使用最小层级类目id，发布商品或更新商品。
 接口使用注意点：
 1、第一次请求cid=0获取所有一级类目
 2、先判断enable=true，如果enable=false表示该类目已经失效，请勿使用。
@@ -8,8 +8,9 @@
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.getShopCategory` |
 | 中文名 | 请一定使用最小层级类目id，发布商品或更新商品 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-getShopCategory` |
+| 接口 ID | `doudian.shop.shop.getShopCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getShopCategory` |

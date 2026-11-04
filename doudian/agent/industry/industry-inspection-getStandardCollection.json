@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.getStandardCollection",
+  "cnName": "查询质检标准集",
+  "docUrl": "/docs/doudian/industry/industry-inspection-getStandardCollection",
+  "name": "inspection.getStandardCollection",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.getStandardCollection",
   "description": "查询质检标准集",
   "method": "GET",
   "path": "/inspection/getStandardCollection",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8254",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-getStandardCollection",
-  "cnName": "查询质检标准集"
+  "_file_stem": "industry-inspection-getStandardCollection"
 }

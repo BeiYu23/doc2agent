@@ -1,11 +1,12 @@
-# afterSale.fillLogistics
+# 售后商家发货
 
-> 售后商家发货
+> afterSale.fillLogistics — 售后商家发货
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.afterSale.fillLogistics` |
 | 中文名 | 售后商家发货 |
+| 文档地址 | `/docs/doudian/shop/shop-afterSale-fillLogistics` |
+| 接口 ID | `doudian.shop.afterSale.fillLogistics` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/fillLogistics` |

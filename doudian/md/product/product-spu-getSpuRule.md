@@ -1,11 +1,12 @@
-# spu.getSpuRule
+# 获取SPU发布规则和模板
 
-> 获取SPU发布规则和模板
+> spu.getSpuRule — 获取SPU发布规则和模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.spu.getSpuRule` |
 | 中文名 | 获取SPU发布规则和模板 |
+| 文档地址 | `/docs/doudian/product/product-spu-getSpuRule` |
+| 接口 ID | `doudian.product.spu.getSpuRule` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/getSpuRule` |

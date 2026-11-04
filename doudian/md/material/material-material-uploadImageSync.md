@@ -1,13 +1,14 @@
-# material.uploadImageSync
+# 素材中心同步创建图片素材
 
-> 素材中心同步创建图片素材接口
+> material.uploadImageSync — 素材中心同步创建图片素材接口
 1、如需上传多个素材，请使用批量上传图片接口：【/material/batchUploadImageSync】且单个图片最大不能超过10M；支持的格式有：png/jpg；
 3、接口上传成功，素材中心会对素材进行异步审核，审核时
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.uploadImageSync` |
 | 中文名 | 素材中心同步创建图片素材 |
+| 文档地址 | `/docs/doudian/material/material-material-uploadImageSync` |
+| 接口 ID | `doudian.material.material.uploadImageSync` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/uploadImageSync` |

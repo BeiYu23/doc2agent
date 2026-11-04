@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProductV2.createComponentTemplate",
+  "cnName": "创建尺码模板",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-createComponentTemplate",
+  "name": "supplyChain.supplyProductV2.createComponentTemplate",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProductV2.createComponentTemplate",
   "description": "创建尺码模板",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -211,6 +213,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6673",
   "updatedAt": "2024-07-04",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-createComponentTemplate",
-  "cnName": "创建尺码模板"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-createComponentTemplate"
 }

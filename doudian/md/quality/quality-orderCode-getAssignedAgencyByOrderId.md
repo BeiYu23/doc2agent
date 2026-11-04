@@ -1,11 +1,12 @@
-# orderCode.getAssignedAgencyByOrderId
+# 通过订单号获取已分配的质检信息
 
-> 通过订单号获取已分配的质检信息
+> orderCode.getAssignedAgencyByOrderId — 通过订单号获取已分配的质检信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.quality.orderCode.getAssignedAgencyByOrderId` |
 | 中文名 | 通过订单号获取已分配的质检信息 |
+| 文档地址 | `/docs/doudian/quality/quality-orderCode-getAssignedAgencyByOrderId` |
+| 接口 ID | `doudian.quality.orderCode.getAssignedAgencyByOrderId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/getAssignedAgencyByOrderId` |

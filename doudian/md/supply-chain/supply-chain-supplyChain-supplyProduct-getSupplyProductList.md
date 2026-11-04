@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.getSupplyProductList
+# 获取供销产品列表
 
-> 获取供销产品列表
+> supplyChain.supplyProduct.getSupplyProductList — 获取供销产品列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.getSupplyProductList` |
 | 中文名 | 获取供销产品列表 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-getSupplyProductList` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProduct.getSupplyProductList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

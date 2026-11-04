@@ -1,11 +1,12 @@
-# supplyChain.inspection.GetInspectionReportDetail
+# 查询验机报告
 
-> 查询验机报告详情
+> supplyChain.inspection.GetInspectionReportDetail — 查询验机报告详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-goods.supplyChain.inspection.GetInspectionReportDetail` |
 | 中文名 | 查询验机报告 |
+| 文档地址 | `/docs/doudian/supply-goods/supply-goods-supplyChain-inspection-GetInspectionReportDetail` |
+| 接口 ID | `doudian.supply-goods.supplyChain.inspection.GetInspectionReportDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

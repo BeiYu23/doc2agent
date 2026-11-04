@@ -1,6 +1,6 @@
-# shop.GetProdCateRelation
+# 即时零售
 
-> 即时零售，分类页场景，通过商品ID查询对应关联的页面分类信息。仅返回映射关系，具体生效情况，以查询到的tmp_id、cate_id查询为准。 如果页面是下线状态，仍可以查询到映射关系。
+> shop.GetProdCateRelation — 即时零售，分类页场景，通过商品ID查询对应关联的页面分类信息。仅返回映射关系，具体生效情况，以查询到的tmp_id、cate_id查询为准。 如果页面是下线状态，仍可以查询到映射关系。
 
 无法查询的原因：
 1.  绑定关系不存在。
@@ -8,8 +8,9 @@
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.GetProdCateRelation` |
 | 中文名 | 即时零售 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-GetProdCateRelation` |
+| 接口 ID | `doudian.decoration.shop.GetProdCateRelation` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/GetProdCateRelation` |

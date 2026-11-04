@@ -1,11 +1,12 @@
-# inspection.getStandardCollection
+# 查询质检标准集
 
-> 查询质检标准集
+> inspection.getStandardCollection — 查询质检标准集
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.getStandardCollection` |
 | 中文名 | 查询质检标准集 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-getStandardCollection` |
+| 接口 ID | `doudian.industry.inspection.getStandardCollection` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/getStandardCollection` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.sendHome.marketing.listActivityProduct",
+  "cnName": "查询营销活动门店绑定的商品",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-listActivityProduct",
+  "name": "sendHome.marketing.listActivityProduct",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "sendHome.marketing.listActivityProduct",
   "description": "查询营销活动门店绑定的商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -179,6 +181,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6811",
   "updatedAt": "2024-08-27",
-  "_file_stem": "retail-marketing-sendHome-marketing-listActivityProduct",
-  "cnName": "查询营销活动门店绑定的商品"
+  "_file_stem": "retail-marketing-sendHome-marketing-listActivityProduct"
 }

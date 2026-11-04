@@ -1,11 +1,12 @@
-# supplyChain.publishProduct
+# 发布货品
 
-> 发布货品
+> supplyChain.publishProduct — 发布货品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.publishProduct` |
 | 中文名 | 发布货品 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-publishProduct` |
+| 接口 ID | `doudian.cross-border.supplyChain.publishProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/publishProduct` |

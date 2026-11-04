@@ -1,11 +1,12 @@
-# supplyChain.batchGetCargoDetail
+# 批量获取货品
 
-> 批量获取货品详情
+> supplyChain.batchGetCargoDetail — 批量获取货品详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.batchGetCargoDetail` |
 | 中文名 | 批量获取货品 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-batchGetCargoDetail` |
+| 接口 ID | `doudian.cross-border.supplyChain.batchGetCargoDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/batchGetCargoDetail` |

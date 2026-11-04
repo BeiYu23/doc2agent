@@ -1,11 +1,12 @@
-# logistics.collectInfoCallback
+# 作为服务商确认接单的依据
 
-> 作为服务商确认接单的依据，在揽收前可多次更新，揽收之后取消会失败，快递员信息或者网点信息回传会驱动运单变为已接单
+> logistics.collectInfoCallback — 作为服务商确认接单的依据，在揽收前可多次更新，揽收之后取消会失败，快递员信息或者网点信息回传会驱动运单变为已接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.collectInfoCallback` |
 | 中文名 | 作为服务商确认接单的依据 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-collectInfoCallback` |
+| 接口 ID | `doudian.logistics-provider.logistics.collectInfoCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/collectInfoCallback` |

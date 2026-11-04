@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.getIMMsgDetailDailyList",
+  "cnName": "查询消息列表",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-getIMMsgDetailDailyList",
+  "name": "pigeon.getIMMsgDetailDailyList",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.getIMMsgDetailDailyList",
   "description": "查询消息列表",
   "method": "GET",
   "path": "/pigeon/getIMMsgDetailDailyList",
@@ -95,6 +97,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5348",
   "updatedAt": "2025-07-24",
-  "_file_stem": "feige-pigeon-getIMMsgDetailDailyList",
-  "cnName": "查询消息列表"
+  "_file_stem": "feige-pigeon-getIMMsgDetailDailyList"
 }

@@ -1,11 +1,12 @@
-# inspection.combinedOrder.supplierAppointment
+# 一体检测
 
-> 一体检测，服务商已预约   注意：当仅取件的情况下，本次预约时间会消耗一次改约的次数，后续仅可进行两次改约；当检测取件一体的情况下，不占用改约的次数
+> inspection.combinedOrder.supplierAppointment — 一体检测，服务商已预约   注意：当仅取件的情况下，本次预约时间会消耗一次改约的次数，后续仅可进行两次改约；当检测取件一体的情况下，不占用改约的次数
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierAppointment` |
 | 中文名 | 一体检测 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-combinedOrder-supplierAppointment` |
+| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierAppointment` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

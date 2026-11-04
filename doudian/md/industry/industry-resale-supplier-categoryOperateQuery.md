@@ -1,11 +1,12 @@
-# resale.supplier.categoryOperateQuery
+# 查询旧品类目操作结果
 
-> 查询旧品类目操作结果
+> resale.supplier.categoryOperateQuery — 查询旧品类目操作结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.resale.supplier.categoryOperateQuery` |
 | 中文名 | 查询旧品类目操作结果 |
+| 文档地址 | `/docs/doudian/industry/industry-resale-supplier-categoryOperateQuery` |
+| 接口 ID | `doudian.industry.resale.supplier.categoryOperateQuery` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

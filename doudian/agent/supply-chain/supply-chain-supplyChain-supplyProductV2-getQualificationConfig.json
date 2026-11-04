@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProductV2.getQualificationConfig",
+  "cnName": "获取类目下需要填写的资质列表",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-getQualificationConfig",
+  "name": "supplyChain.supplyProductV2.getQualificationConfig",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProductV2.getQualificationConfig",
   "description": "获取类目下需要填写的资质列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6670",
   "updatedAt": "2024-07-04",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getQualificationConfig",
-  "cnName": "获取类目下需要填写的资质列表"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getQualificationConfig"
 }

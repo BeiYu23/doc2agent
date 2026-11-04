@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.queryReturnOrderList",
+  "cnName": "根据筛选条件批量查询售后单列表",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-queryReturnOrderList",
+  "name": "supplyChain.queryReturnOrderList",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.queryReturnOrderList",
   "description": "根据筛选条件批量查询售后单列表，单次最多返回100个",
   "method": "GET",
   "path": "/supplyChain/queryReturnOrderList",
@@ -176,6 +178,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/4034",
   "updatedAt": "2026-03-05",
-  "_file_stem": "supply-chain-supplyChain-queryReturnOrderList",
-  "cnName": "根据筛选条件批量查询售后单列表"
+  "_file_stem": "supply-chain-supplyChain-queryReturnOrderList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.adjustInventory",
+  "cnName": "库存调整(盘点和转移",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-adjustInventory",
+  "name": "yunc.adjustInventory",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.adjustInventory",
   "description": "库存调整(盘点和转移)",
   "method": "GET",
   "path": "/yunc/adjustInventory",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1870",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-adjustInventory",
-  "cnName": "库存调整(盘点和转移"
+  "_file_stem": "warehouse-yunc-adjustInventory"
 }

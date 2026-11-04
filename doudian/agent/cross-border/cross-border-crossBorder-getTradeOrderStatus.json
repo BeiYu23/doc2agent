@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.getTradeOrderStatus",
+  "cnName": "获取交易订单状态",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-getTradeOrderStatus",
+  "name": "crossBorder.getTradeOrderStatus",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.getTradeOrderStatus",
   "description": "获取交易订单状态",
   "method": "GET",
   "path": "/crossBorder/getTradeOrderStatus",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/1650",
   "updatedAt": "2022-02-10",
-  "_file_stem": "cross-border-crossBorder-getTradeOrderStatus",
-  "cnName": "获取交易订单状态"
+  "_file_stem": "cross-border-crossBorder-getTradeOrderStatus"
 }

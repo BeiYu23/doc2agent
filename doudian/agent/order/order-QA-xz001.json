@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.QA.xz001",
+  "cnName": "（xz001）",
+  "docUrl": "/docs/doudian/order/order-QA-xz001",
+  "name": "QA.xz001",
   "platform": "doudian",
   "group": "order",
-  "name": "QA.xz001",
   "description": "001",
   "method": "GET",
   "path": "/QA/xz001",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2436",
   "updatedAt": "2022-08-27",
-  "_file_stem": "order-QA-xz001",
-  "cnName": "（xz001）"
+  "_file_stem": "order-QA-xz001"
 }

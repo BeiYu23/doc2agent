@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.address.getAftersaleStrategy",
+  "cnName": "根据策略ID获取单个策略信息",
+  "docUrl": "/docs/doudian/refund/refund-address-getAftersaleStrategy",
+  "name": "address.getAftersaleStrategy",
   "platform": "doudian",
   "group": "refund",
-  "name": "address.getAftersaleStrategy",
   "description": "根据策略ID获取单个策略信息",
   "method": "GET",
   "path": "/address/getAftersaleStrategy",
@@ -146,6 +148,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/6908",
   "updatedAt": "2025-08-25",
-  "_file_stem": "refund-address-getAftersaleStrategy",
-  "cnName": "根据策略ID获取单个策略信息"
+  "_file_stem": "refund-address-getAftersaleStrategy"
 }

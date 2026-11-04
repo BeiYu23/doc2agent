@@ -1,11 +1,12 @@
-# material.searchFolder
+# 搜索文件夹
 
-> 搜索文件夹
+> material.searchFolder — 搜索文件夹
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.searchFolder` |
 | 中文名 | 搜索文件夹 |
+| 文档地址 | `/docs/doudian/material/material-material-searchFolder` |
+| 接口 ID | `doudian.material.material.searchFolder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/searchFolder` |

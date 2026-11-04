@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.timeExtend",
+  "cnName": "此接口用来帮助商家进行延时收货",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-timeExtend",
+  "name": "afterSale.timeExtend",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.timeExtend",
   "description": "此接口用来帮助商家进行延时收货，商家可以在还有2天到期的时间进行操作，会在原有剩余时间的基础上增加7天。",
   "method": "GET",
   "path": "/afterSale/timeExtend",
@@ -65,6 +67,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/770",
   "updatedAt": "2021-08-03",
-  "_file_stem": "refund-afterSale-timeExtend",
-  "cnName": "此接口用来帮助商家进行延时收货"
+  "_file_stem": "refund-afterSale-timeExtend"
 }

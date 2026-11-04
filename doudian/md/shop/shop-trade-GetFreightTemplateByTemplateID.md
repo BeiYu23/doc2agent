@@ -1,11 +1,12 @@
-# trade.GetFreightTemplateByTemplateID
+# 小时达查询运费模板
 
-> 小时达查询运费模板
+> trade.GetFreightTemplateByTemplateID — 小时达查询运费模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.trade.GetFreightTemplateByTemplateID` |
 | 中文名 | 小时达查询运费模板 |
+| 文档地址 | `/docs/doudian/shop/shop-trade-GetFreightTemplateByTemplateID` |
+| 接口 ID | `doudian.shop.trade.GetFreightTemplateByTemplateID` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/GetFreightTemplateByTemplateID` |

@@ -1,11 +1,12 @@
-# member.getPhoneByOutboundId
+# 根据外呼id获取手机号（火山专用
 
-> 根据外呼id获取手机号（火山专用）
+> member.getPhoneByOutboundId — 根据外呼id获取手机号（火山专用）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.getPhoneByOutboundId` |
 | 中文名 | 根据外呼id获取手机号（火山专用 |
+| 文档地址 | `/docs/doudian/member/member-member-getPhoneByOutboundId` |
+| 接口 ID | `doudian.member.member.getPhoneByOutboundId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/getPhoneByOutboundId` |

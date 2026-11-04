@@ -1,11 +1,12 @@
-# open.QueryProductRecommendations
+# 查询商品推荐
 
-> 查询商品推荐
+> open.QueryProductRecommendations — 查询商品推荐
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.QueryProductRecommendations` |
 | 中文名 | 查询商品推荐 |
+| 文档地址 | `/docs/doudian/video/video-open-QueryProductRecommendations` |
+| 接口 ID | `doudian.video.open.QueryProductRecommendations` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/QueryProductRecommendations` |

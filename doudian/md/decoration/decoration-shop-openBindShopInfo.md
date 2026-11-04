@@ -1,11 +1,12 @@
-# shop.openBindShopInfo
+# 店铺装修-绑定门店-绑定信息
 
-> 店铺装修-绑定门店-绑定信息
+> shop.openBindShopInfo — 店铺装修-绑定门店-绑定信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.openBindShopInfo` |
 | 中文名 | 店铺装修-绑定门店-绑定信息 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-openBindShopInfo` |
+| 接口 ID | `doudian.decoration.shop.openBindShopInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/openBindShopInfo` |

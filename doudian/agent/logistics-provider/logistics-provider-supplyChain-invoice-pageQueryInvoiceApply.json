@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.supplyChain.invoice.pageQueryInvoiceApply",
+  "cnName": "分页查询开票申请",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-supplyChain-invoice-pageQueryInvoiceApply",
+  "name": "supplyChain.invoice.pageQueryInvoiceApply",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "supplyChain.invoice.pageQueryInvoiceApply",
   "description": "分页查询开票申请",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -186,6 +188,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6937",
   "updatedAt": "2024-10-17",
-  "_file_stem": "logistics-provider-supplyChain-invoice-pageQueryInvoiceApply",
-  "cnName": "分页查询开票申请"
+  "_file_stem": "logistics-provider-supplyChain-invoice-pageQueryInvoiceApply"
 }

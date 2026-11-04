@@ -1,11 +1,12 @@
-# order.logisticsAddSinglePack
+# 支持同一店铺同一收货人的多个订单发同一个物流包裹
 
-> 支持同一店铺同一收货人的多个订单发同一个物流包裹
+> order.logisticsAddSinglePack — 支持同一店铺同一收货人的多个订单发同一个物流包裹
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsAddSinglePack` |
 | 中文名 | 支持同一店铺同一收货人的多个订单发同一个物流包裹 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsAddSinglePack` |
+| 接口 ID | `doudian.logistics.order.logisticsAddSinglePack` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsAddSinglePack` |

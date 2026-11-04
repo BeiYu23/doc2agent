@@ -1,11 +1,12 @@
-# openCloud.smartFactoryInterface
+# 智造工场数据开放
 
-> 智造工场数据开放接口
+> openCloud.smartFactoryInterface — 智造工场数据开放接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.smartFactoryInterface` |
 | 中文名 | 智造工场数据开放 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-smartFactoryInterface` |
+| 接口 ID | `doudian.cloud.openCloud.smartFactoryInterface` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/smartFactoryInterface` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.recycle.sms.sendIndustrySms",
+  "cnName": "发送短信",
+  "docUrl": "/docs/doudian/sms/sms-recycle-sms-sendIndustrySms",
+  "name": "recycle.sms.sendIndustrySms",
   "platform": "doudian",
   "group": "sms",
-  "name": "recycle.sms.sendIndustrySms",
   "description": "发送短信",
   "method": "GET",
   "path": "/recycle/sms/sendIndustrySms",
@@ -139,6 +141,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7835",
   "updatedAt": "2025-11-03",
-  "_file_stem": "sms-recycle-sms-sendIndustrySms",
-  "cnName": "发送短信"
+  "_file_stem": "sms-recycle-sms-sendIndustrySms"
 }

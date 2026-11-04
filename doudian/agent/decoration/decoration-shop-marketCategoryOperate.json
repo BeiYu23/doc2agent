@@ -1,8 +1,10 @@
 {
   "id": "doudian.decoration.shop.marketCategoryOperate",
+  "cnName": "店铺装修类目操作",
+  "docUrl": "/docs/doudian/decoration/decoration-shop-marketCategoryOperate",
+  "name": "shop.marketCategoryOperate",
   "platform": "doudian",
   "group": "decoration",
-  "name": "shop.marketCategoryOperate",
   "description": "店铺装修类目操作接口",
   "method": "GET",
   "path": "/shop/marketCategoryOperate",
@@ -220,6 +222,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/2903",
   "updatedAt": "2024-11-21",
-  "_file_stem": "decoration-shop-marketCategoryOperate",
-  "cnName": "店铺装修类目操作"
+  "_file_stem": "decoration-shop-marketCategoryOperate"
 }

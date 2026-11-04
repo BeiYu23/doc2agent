@@ -1,11 +1,12 @@
-# recycle.createPrice
+# 上传估价
 
-> 上传估价
+> recycle.createPrice — 上传估价
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.createPrice` |
 | 中文名 | 上传估价 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-createPrice` |
+| 接口 ID | `doudian.recycle.recycle.createPrice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/createPrice` |

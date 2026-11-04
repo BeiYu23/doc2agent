@@ -1,11 +1,12 @@
-# supplyChain.editProduct
+# 编辑货品
 
-> 编辑货品
+> supplyChain.editProduct — 编辑货品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.editProduct` |
 | 中文名 | 编辑货品 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-editProduct` |
+| 接口 ID | `doudian.cross-border.supplyChain.editProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/editProduct` |

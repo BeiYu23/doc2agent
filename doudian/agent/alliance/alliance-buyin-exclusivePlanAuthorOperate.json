@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.exclusivePlanAuthorOperate",
+  "cnName": "店铺专属达人管理",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-exclusivePlanAuthorOperate",
+  "name": "buyin.exclusivePlanAuthorOperate",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.exclusivePlanAuthorOperate",
   "description": "店铺专属达人管理",
   "method": "GET",
   "path": "/buyin/exclusivePlanAuthorOperate",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1935",
   "updatedAt": "2023-01-05",
-  "_file_stem": "alliance-buyin-exclusivePlanAuthorOperate",
-  "cnName": "店铺专属达人管理"
+  "_file_stem": "alliance-buyin-exclusivePlanAuthorOperate"
 }

@@ -1,11 +1,12 @@
-# member.GetUserShopMemberCard
+# 电商会员卡面信息
 
-> 电商会员卡面信息
+> member.GetUserShopMemberCard — 电商会员卡面信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.GetUserShopMemberCard` |
 | 中文名 | 电商会员卡面信息 |
+| 文档地址 | `/docs/doudian/member/member-member-GetUserShopMemberCard` |
+| 接口 ID | `doudian.member.member.GetUserShopMemberCard` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/GetUserShopMemberCard` |

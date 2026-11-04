@@ -1,11 +1,12 @@
-# marketing.AbleCouponMeta
+# 作废/生效优惠券
 
-> 作废/生效优惠券
+> marketing.AbleCouponMeta — 作废/生效优惠券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.marketing.AbleCouponMeta` |
 | 中文名 | 作废/生效优惠券 |
+| 文档地址 | `/docs/doudian/shop/shop-marketing-AbleCouponMeta` |
+| 接口 ID | `doudian.shop.marketing.AbleCouponMeta` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/AbleCouponMeta` |

@@ -1,14 +1,15 @@
-# afterSale.List
+# 售后列表接口
 
-> 1、售后列表接口，可以支持多种筛选规则，详情见请求参数。
+> afterSale.List — 1、售后列表接口，可以支持多种筛选规则，详情见请求参数。
 2、时间类型参数均为以秒为单位的时间戳，金额均以分为单位。
 3、接口中page*size最多不能超过5万条数据。如果超过5万条，请使用时间参数分割数据。
 4、默认情况下，只能查到近6个月以内的数据，
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.List` |
 | 中文名 | 售后列表接口 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-List` |
+| 接口 ID | `doudian.refund.afterSale.List` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/List` |

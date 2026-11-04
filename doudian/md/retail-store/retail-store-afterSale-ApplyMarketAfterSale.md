@@ -1,11 +1,12 @@
-# afterSale.ApplyMarketAfterSale
+# 申请缺重/缺货
 
-> 申请缺重/缺货
+> afterSale.ApplyMarketAfterSale — 申请缺重/缺货
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.afterSale.ApplyMarketAfterSale` |
 | 中文名 | 申请缺重/缺货 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-afterSale-ApplyMarketAfterSale` |
+| 接口 ID | `doudian.retail-store.afterSale.ApplyMarketAfterSale` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/ApplyMarketAfterSale` |

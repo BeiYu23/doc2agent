@@ -1,13 +1,14 @@
-# coupons.CertSyncFailedCancelOrder
+# 定向开放接口
 
-> 1、定向开放接口，需商家联系行业小二加白后才可使用，联系方式https://op.jinritemai.com/docs/question-docs/45/1777。
+> coupons.CertSyncFailedCancelOrder — 1、定向开放接口，需商家联系行业小二加白后才可使用，联系方式https://op.jinritemai.com/docs/question-docs/45/1777。
 2、仅适用于三方卡券订单，其他类型的订单都不支持。
 3、订单状态等于2 处于待发码状态，
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.coupons.CertSyncFailedCancelOrder` |
 | 中文名 | 定向开放接口 |
+| 文档地址 | `/docs/doudian/order/order-coupons-CertSyncFailedCancelOrder` |
+| 接口 ID | `doudian.order.coupons.CertSyncFailedCancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/CertSyncFailedCancelOrder` |

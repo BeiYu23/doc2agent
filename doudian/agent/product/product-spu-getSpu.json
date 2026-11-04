@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.getSpu",
+  "cnName": "查询SPU（根据关键属性/SPU ID",
+  "docUrl": "/docs/doudian/product/product-spu-getSpu",
+  "name": "spu.getSpu",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.getSpu",
   "description": "查询SPU（根据关键属性/SPU ID）",
   "method": "GET",
   "path": "/spu/getSpu",
@@ -212,6 +214,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2309",
   "updatedAt": "2026-08-14",
-  "_file_stem": "product-spu-getSpu",
-  "cnName": "查询SPU（根据关键属性/SPU ID"
+  "_file_stem": "product-spu-getSpu"
 }

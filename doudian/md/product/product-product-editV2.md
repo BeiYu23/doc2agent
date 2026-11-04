@@ -1,11 +1,12 @@
-# product.editV2
+# 编辑商品
 
-> 编辑商品
+> product.editV2 — 编辑商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.editV2` |
 | 中文名 | 编辑商品 |
+| 文档地址 | `/docs/doudian/product/product-product-editV2` |
+| 接口 ID | `doudian.product.product.editV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/editV2` |

@@ -1,11 +1,12 @@
-# address.addAftersaleStrategy
+# 添加售后地址策略
 
-> 添加售后地址策略
+> address.addAftersaleStrategy — 添加售后地址策略
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.address.addAftersaleStrategy` |
 | 中文名 | 添加售后地址策略 |
+| 文档地址 | `/docs/doudian/refund/refund-address-addAftersaleStrategy` |
+| 接口 ID | `doudian.refund.address.addAftersaleStrategy` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/addAftersaleStrategy` |

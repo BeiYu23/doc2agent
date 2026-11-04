@@ -1,11 +1,12 @@
-# max.activities
+# 批量获取活动信息
 
-> 批量获取活动信息
+> max.activities — 批量获取活动信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.max.activities` |
 | 中文名 | 批量获取活动信息 |
+| 文档地址 | `/docs/doudian/shop/shop-max-activities` |
+| 接口 ID | `doudian.shop.max.activities` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/max/activities` |

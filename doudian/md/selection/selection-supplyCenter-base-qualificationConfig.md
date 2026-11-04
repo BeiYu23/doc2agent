@@ -1,11 +1,12 @@
-# supplyCenter.base.qualificationConfig
+# 查询类目下需要填写的商品资质
 
-> 查询类目下需要填写的商品资质
+> supplyCenter.base.qualificationConfig — 查询类目下需要填写的商品资质
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.base.qualificationConfig` |
 | 中文名 | 查询类目下需要填写的商品资质 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-base-qualificationConfig` |
+| 接口 ID | `doudian.selection.supplyCenter.base.qualificationConfig` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

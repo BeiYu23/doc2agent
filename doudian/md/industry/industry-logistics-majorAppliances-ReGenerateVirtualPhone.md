@@ -1,11 +1,12 @@
-# logistics.majorAppliances.ReGenerateVirtualPhone
+# 重新生成虚拟号
 
-> 重新生成虚拟号
+> logistics.majorAppliances.ReGenerateVirtualPhone — 重新生成虚拟号
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.logistics.majorAppliances.ReGenerateVirtualPhone` |
 | 中文名 | 重新生成虚拟号 |
+| 文档地址 | `/docs/doudian/industry/industry-logistics-majorAppliances-ReGenerateVirtualPhone` |
+| 接口 ID | `doudian.industry.logistics.majorAppliances.ReGenerateVirtualPhone` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

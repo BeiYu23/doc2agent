@@ -1,11 +1,12 @@
-# contentAIGC.getAIVideoTaskListOpen
+# 查询商家成片任务列表
 
-> 查询商家成片任务列表
+> contentAIGC.getAIVideoTaskListOpen — 查询商家成片任务列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.doubao.contentAIGC.getAIVideoTaskListOpen` |
 | 中文名 | 查询商家成片任务列表 |
+| 文档地址 | `/docs/doudian/doubao/doubao-contentAIGC-getAIVideoTaskListOpen` |
+| 接口 ID | `doudian.doubao.contentAIGC.getAIVideoTaskListOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/getAIVideoTaskListOpen` |

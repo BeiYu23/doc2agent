@@ -1,11 +1,12 @@
-# superm.setStoreAutoCallRider
+# 新增自动呼叫运力配置
 
-> 新增自动呼叫运力配置
+> superm.setStoreAutoCallRider — 新增自动呼叫运力配置
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.superm.setStoreAutoCallRider` |
 | 中文名 | 新增自动呼叫运力配置 |
+| 文档地址 | `/docs/doudian/logistics/logistics-superm-setStoreAutoCallRider` |
+| 接口 ID | `doudian.logistics.superm.setStoreAutoCallRider` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/setStoreAutoCallRider` |

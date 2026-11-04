@@ -1,11 +1,12 @@
-# spu.addShopSpu
+# 店铺新增SPU
 
-> 店铺新增SPU（下线接口）
+> spu.addShopSpu — 店铺新增SPU（下线接口）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.spu.addShopSpu` |
 | 中文名 | 店铺新增SPU |
+| 文档地址 | `/docs/doudian/product/product-spu-addShopSpu` |
+| 接口 ID | `doudian.product.spu.addShopSpu` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/addShopSpu` |

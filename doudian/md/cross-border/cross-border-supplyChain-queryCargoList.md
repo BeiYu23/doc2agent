@@ -1,11 +1,12 @@
-# supplyChain.queryCargoList
+# 查询货品列表
 
-> 查询货品列表
+> supplyChain.queryCargoList — 查询货品列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.supplyChain.queryCargoList` |
 | 中文名 | 查询货品列表 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-supplyChain-queryCargoList` |
+| 接口 ID | `doudian.cross-border.supplyChain.queryCargoList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryCargoList` |

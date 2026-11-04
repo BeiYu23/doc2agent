@@ -1,11 +1,12 @@
-# sms.saveCombineAudience
+# 保存生产包交互规则，获取组合人群包
 
-> 保存生产包交互规则，获取组合人群包
+> sms.saveCombineAudience — 保存生产包交互规则，获取组合人群包
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.saveCombineAudience` |
 | 中文名 | 保存生产包交互规则，获取组合人群包 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-saveCombineAudience` |
+| 接口 ID | `doudian.sms.sms.saveCombineAudience` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/saveCombineAudience` |

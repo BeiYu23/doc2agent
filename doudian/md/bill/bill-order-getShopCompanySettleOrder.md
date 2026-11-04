@@ -1,11 +1,12 @@
-# order.getShopCompanySettleOrder
+# 获取抖超小时达子公司模式结算账单明细
 
-> 获取抖超小时达子公司模式结算账单明细
+> order.getShopCompanySettleOrder — 获取抖超小时达子公司模式结算账单明细
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.getShopCompanySettleOrder` |
 | 中文名 | 获取抖超小时达子公司模式结算账单明细 |
+| 文档地址 | `/docs/doudian/bill/bill-order-getShopCompanySettleOrder` |
+| 接口 ID | `doudian.bill.order.getShopCompanySettleOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getShopCompanySettleOrder` |

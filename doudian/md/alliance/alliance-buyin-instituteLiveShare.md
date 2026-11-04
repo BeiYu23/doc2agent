@@ -1,11 +1,12 @@
-# buyin.instituteLiveShare
+# 抖客获取达人直播间分享链接
 
-> 抖客获取达人直播间分享链接
+> buyin.instituteLiveShare — 抖客获取达人直播间分享链接
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.instituteLiveShare` |
 | 中文名 | 抖客获取达人直播间分享链接 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-instituteLiveShare` |
+| 接口 ID | `doudian.alliance.buyin.instituteLiveShare` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/instituteLiveShare` |

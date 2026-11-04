@@ -1,11 +1,12 @@
-# sms.GetLabelParamList
+# 标签参数获取
 
-> 标签参数获取
+> sms.GetLabelParamList — 标签参数获取
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.GetLabelParamList` |
 | 中文名 | 标签参数获取 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-GetLabelParamList` |
+| 接口 ID | `doudian.sms.sms.GetLabelParamList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/GetLabelParamList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.erpCargoSinglePush",
+  "cnName": "货品推送接口-ERP(单个",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-erpCargoSinglePush",
+  "name": "yunc.erpCargoSinglePush",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.erpCargoSinglePush",
   "description": "货品推送接口-ERP(单个)",
   "method": "GET",
   "path": "/yunc/erpCargoSinglePush",
@@ -834,6 +836,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/932",
   "updatedAt": "2025-11-28",
-  "_file_stem": "warehouse-yunc-erpCargoSinglePush",
-  "cnName": "货品推送接口-ERP(单个"
+  "_file_stem": "warehouse-yunc-erpCargoSinglePush"
 }

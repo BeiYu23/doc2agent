@@ -1,11 +1,12 @@
-# productClue.SaveZndzSupplyInfo
+# 商机保存货源信息
 
-> 商机保存货源信息
+> productClue.SaveZndzSupplyInfo — 商机保存货源信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.productClue.SaveZndzSupplyInfo` |
 | 中文名 | 商机保存货源信息 |
+| 文档地址 | `/docs/doudian/product/product-productClue-SaveZndzSupplyInfo` |
+| 接口 ID | `doudian.product.productClue.SaveZndzSupplyInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/productClue/SaveZndzSupplyInfo` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.virtualTelAuthenticationUpload",
+  "cnName": "虚拟号主叫二次认证信息上传",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-virtualTelAuthenticationUpload",
+  "name": "logistics.virtualTelAuthenticationUpload",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.virtualTelAuthenticationUpload",
   "description": "虚拟号主叫二次认证信息上传接口",
   "method": "GET",
   "path": "/logistics/virtualTelAuthenticationUpload",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7406",
   "updatedAt": "2025-04-21",
-  "_file_stem": "logistics-provider-logistics-virtualTelAuthenticationUpload",
-  "cnName": "虚拟号主叫二次认证信息上传"
+  "_file_stem": "logistics-provider-logistics-virtualTelAuthenticationUpload"
 }

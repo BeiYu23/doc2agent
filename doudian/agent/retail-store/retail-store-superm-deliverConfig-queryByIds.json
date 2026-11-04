@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.deliverConfig.queryByIds",
+  "cnName": "时效管理查询列表",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-deliverConfig-queryByIds",
+  "name": "superm.deliverConfig.queryByIds",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.deliverConfig.queryByIds",
   "description": "时效管理查询列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3594",
   "updatedAt": "2023-09-18",
-  "_file_stem": "retail-store-superm-deliverConfig-queryByIds",
-  "cnName": "时效管理查询列表"
+  "_file_stem": "retail-store-superm-deliverConfig-queryByIds"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createVisualValidateSession",
+  "cnName": "创建活体检测链接",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createVisualValidateSession",
+  "name": "second.ecomInsight.createVisualValidateSession",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createVisualValidateSession",
   "description": "创建活体检测链接",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8220",
   "updatedAt": "2026-04-21",
-  "_file_stem": "video-second-ecomInsight-createVisualValidateSession",
-  "cnName": "创建活体检测链接"
+  "_file_stem": "video-second-ecomInsight-createVisualValidateSession"
 }

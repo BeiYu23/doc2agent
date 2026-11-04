@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instituteOrderPick",
+  "cnName": "选品订单明细查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instituteOrderPick",
+  "name": "buyin.instituteOrderPick",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instituteOrderPick",
   "description": "选品订单明细查询接口",
   "method": "GET",
   "path": "/buyin/instituteOrderPick",
@@ -182,6 +184,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2008",
   "updatedAt": "2023-03-22",
-  "_file_stem": "alliance-buyin-instituteOrderPick",
-  "cnName": "选品订单明细查询"
+  "_file_stem": "alliance-buyin-instituteOrderPick"
 }

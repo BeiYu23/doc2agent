@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.activityProductCategoryList",
+  "cnName": "创建活动时候可选择的类目",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-activityProductCategoryList",
+  "name": "alliance.activityProductCategoryList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.activityProductCategoryList",
   "description": "创建活动时候可选择的类目接口",
   "method": "GET",
   "path": "/alliance/activityProductCategoryList",
@@ -79,6 +81,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1882",
   "updatedAt": "2026-02-27",
-  "_file_stem": "alliance-alliance-activityProductCategoryList",
-  "cnName": "创建活动时候可选择的类目"
+  "_file_stem": "alliance-alliance-activityProductCategoryList"
 }

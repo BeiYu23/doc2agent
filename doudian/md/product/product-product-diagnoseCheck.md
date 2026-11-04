@@ -1,11 +1,12 @@
-# product.diagnoseCheck
+# 发布前校验
 
-> 发布前校验
+> product.diagnoseCheck — 发布前校验
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.diagnoseCheck` |
 | 中文名 | 发布前校验 |
+| 文档地址 | `/docs/doudian/product/product-product-diagnoseCheck` |
+| 接口 ID | `doudian.product.product.diagnoseCheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/diagnoseCheck` |

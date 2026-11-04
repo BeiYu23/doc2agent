@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-goods.supplyChain.inspection.GetInspectionReportDetail",
+  "cnName": "查询验机报告",
+  "docUrl": "/docs/doudian/supply-goods/supply-goods-supplyChain-inspection-GetInspectionReportDetail",
+  "name": "supplyChain.inspection.GetInspectionReportDetail",
   "platform": "doudian",
   "group": "supply-goods",
-  "name": "supplyChain.inspection.GetInspectionReportDetail",
   "description": "查询验机报告详情",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -133,6 +135,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1523/8264",
   "updatedAt": "2026-05-06",
-  "_file_stem": "supply-goods-supplyChain-inspection-GetInspectionReportDetail",
-  "cnName": "查询验机报告"
+  "_file_stem": "supply-goods-supplyChain-inspection-GetInspectionReportDetail"
 }

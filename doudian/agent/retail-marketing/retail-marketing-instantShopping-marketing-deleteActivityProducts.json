@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.deleteActivityProducts",
+  "cnName": "删除商品",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-deleteActivityProducts",
+  "name": "instantShopping.marketing.deleteActivityProducts",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.deleteActivityProducts",
   "description": "删除商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -137,6 +139,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6382",
   "updatedAt": "2024-05-22",
-  "_file_stem": "retail-marketing-instantShopping-marketing-deleteActivityProducts",
-  "cnName": "删除商品"
+  "_file_stem": "retail-marketing-instantShopping-marketing-deleteActivityProducts"
 }

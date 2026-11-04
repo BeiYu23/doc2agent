@@ -1,11 +1,12 @@
-# sku.editSupplierId
+# 修改sku对应的供应商编码ID
 
-> 修改sku对应的供应商编码ID
+> sku.editSupplierId — 修改sku对应的供应商编码ID
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.sku.editSupplierId` |
 | 中文名 | 修改sku对应的供应商编码ID |
+| 文档地址 | `/docs/doudian/product/product-sku-editSupplierId` |
+| 接口 ID | `doudian.product.sku.editSupplierId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/editSupplierId` |

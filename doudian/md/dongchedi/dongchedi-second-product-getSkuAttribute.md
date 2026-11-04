@@ -1,11 +1,12 @@
-# second.product.getSkuAttribute
+# 【二方接口】获取SKU属性
 
-> 【二方接口】获取SKU属性
+> second.product.getSkuAttribute — 【二方接口】获取SKU属性
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.product.getSkuAttribute` |
 | 中文名 | 【二方接口】获取SKU属性 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-product-getSkuAttribute` |
+| 接口 ID | `doudian.dongchedi.second.product.getSkuAttribute` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/getSkuAttribute` |

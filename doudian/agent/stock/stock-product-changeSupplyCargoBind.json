@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.product.changeSupplyCargoBind",
+  "cnName": "变更库存供给关系",
+  "docUrl": "/docs/doudian/stock/stock-product-changeSupplyCargoBind",
+  "name": "product.changeSupplyCargoBind",
   "platform": "doudian",
   "group": "stock",
-  "name": "product.changeSupplyCargoBind",
   "description": "变更库存供给关系",
   "method": "GET",
   "path": "/product/changeSupplyCargoBind",
@@ -148,6 +150,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/8330",
   "updatedAt": "2026-05-22",
-  "_file_stem": "stock-product-changeSupplyCargoBind",
-  "cnName": "变更库存供给关系"
+  "_file_stem": "stock-product-changeSupplyCargoBind"
 }

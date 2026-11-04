@@ -1,11 +1,12 @@
-# max.playinfo
+# 批量查询vid
 
-> 批量查询vid
+> max.playinfo — 批量查询vid
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.max.playinfo` |
 | 中文名 | 批量查询vid |
+| 文档地址 | `/docs/doudian/shop/shop-max-playinfo` |
+| 接口 ID | `doudian.shop.max.playinfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/max/playinfo` |

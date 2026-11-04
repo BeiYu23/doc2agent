@@ -1,11 +1,12 @@
-# topup.result
+# 商家充值结果回调
 
-> 商家充值结果回调
+> topup.result — 商家充值结果回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.topup.result` |
 | 中文名 | 商家充值结果回调 |
+| 文档地址 | `/docs/doudian/virtual/virtual-topup-result` |
+| 接口 ID | `doudian.virtual.topup.result` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/result` |

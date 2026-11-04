@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.supplyChain.queryCargoList",
+  "cnName": "查询货品列表",
+  "docUrl": "/docs/doudian/cross-border/cross-border-supplyChain-queryCargoList",
+  "name": "supplyChain.queryCargoList",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "supplyChain.queryCargoList",
   "description": "查询货品列表",
   "method": "GET",
   "path": "/supplyChain/queryCargoList",
@@ -177,6 +179,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6328",
   "updatedAt": "2026-05-28",
-  "_file_stem": "cross-border-supplyChain-queryCargoList",
-  "cnName": "查询货品列表"
+  "_file_stem": "cross-border-supplyChain-queryCargoList"
 }

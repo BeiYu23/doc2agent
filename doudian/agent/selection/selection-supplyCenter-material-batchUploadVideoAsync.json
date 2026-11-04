@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.material.batchUploadVideoAsync",
+  "cnName": "精选货源平台批量上传视频到素材中心",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-material-batchUploadVideoAsync",
+  "name": "supplyCenter.material.batchUploadVideoAsync",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.material.batchUploadVideoAsync",
   "description": "精选货源平台批量上传视频到素材中心",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -141,6 +143,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5330",
   "updatedAt": "2023-11-07",
-  "_file_stem": "selection-supplyCenter-material-batchUploadVideoAsync",
-  "cnName": "精选货源平台批量上传视频到素材中心"
+  "_file_stem": "selection-supplyCenter-material-batchUploadVideoAsync"
 }

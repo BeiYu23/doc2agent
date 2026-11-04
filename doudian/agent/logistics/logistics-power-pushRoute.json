@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.pushRoute",
+  "cnName": "用于物流轨迹接口迁移（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-pushRoute",
+  "name": "power.pushRoute",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.pushRoute",
   "description": "用于物流轨迹接口迁移（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/pushRoute",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1496",
   "updatedAt": "2022-11-29",
-  "_file_stem": "logistics-power-pushRoute",
-  "cnName": "用于物流轨迹接口迁移（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-pushRoute"
 }

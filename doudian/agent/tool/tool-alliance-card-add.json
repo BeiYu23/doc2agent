@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.alliance.card.add",
+  "cnName": "添加商品(精选联盟商品)到达人选品车",
+  "docUrl": "/docs/doudian/tool/tool-alliance-card-add",
+  "name": "alliance.card.add",
   "platform": "doudian",
   "group": "tool",
-  "name": "alliance.card.add",
   "description": "添加商品(精选联盟商品)到达人选品车",
   "method": "GET",
   "path": "/alliance/card/add",
@@ -105,6 +107,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7600",
   "updatedAt": "2025-07-16",
-  "_file_stem": "tool-alliance-card-add",
-  "cnName": "添加商品(精选联盟商品)到达人选品车"
+  "_file_stem": "tool-alliance-card-add"
 }

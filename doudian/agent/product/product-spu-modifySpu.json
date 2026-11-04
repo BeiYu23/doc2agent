@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.modifySpu",
+  "cnName": "修改spu信息",
+  "docUrl": "/docs/doudian/product/product-spu-modifySpu",
+  "name": "spu.modifySpu",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.modifySpu",
   "description": "修改spu信息",
   "method": "GET",
   "path": "/spu/modifySpu",
@@ -292,6 +294,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8481",
   "updatedAt": "2026-08-20",
-  "_file_stem": "product-spu-modifySpu",
-  "cnName": "修改spu信息"
+  "_file_stem": "product-spu-modifySpu"
 }

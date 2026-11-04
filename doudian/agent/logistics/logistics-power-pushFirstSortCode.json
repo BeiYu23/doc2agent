@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.pushFirstSortCode",
+  "cnName": "一段码推送（包含末端中心",
+  "docUrl": "/docs/doudian/logistics/logistics-power-pushFirstSortCode",
+  "name": "power.pushFirstSortCode",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.pushFirstSortCode",
   "description": "一段码推送（包含末端中心、集包地、大头笔）（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/pushFirstSortCode",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1488",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-pushFirstSortCode",
-  "cnName": "一段码推送（包含末端中心"
+  "_file_stem": "logistics-power-pushFirstSortCode"
 }

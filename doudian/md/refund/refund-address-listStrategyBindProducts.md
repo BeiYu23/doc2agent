@@ -1,11 +1,12 @@
-# address.listStrategyBindProducts
+# 分页获取地址库策略绑定的商品
 
-> 分页获取地址库策略绑定的商品
+> address.listStrategyBindProducts — 分页获取地址库策略绑定的商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.address.listStrategyBindProducts` |
 | 中文名 | 分页获取地址库策略绑定的商品 |
+| 文档地址 | `/docs/doudian/refund/refund-address-listStrategyBindProducts` |
+| 接口 ID | `doudian.refund.address.listStrategyBindProducts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/listStrategyBindProducts` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.instantShopping.GetCallRecord",
+  "cnName": "查询骑手-用户通话记录",
+  "docUrl": "/docs/doudian/logistics/logistics-instantShopping-GetCallRecord",
+  "name": "instantShopping.GetCallRecord",
   "platform": "doudian",
   "group": "logistics",
-  "name": "instantShopping.GetCallRecord",
   "description": "查询骑手-用户通话记录",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -105,6 +107,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/7155",
   "updatedAt": "2024-12-17",
-  "_file_stem": "logistics-instantShopping-GetCallRecord",
-  "cnName": "查询骑手-用户通话记录"
+  "_file_stem": "logistics-instantShopping-GetCallRecord"
 }

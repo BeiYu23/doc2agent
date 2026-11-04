@@ -1,11 +1,12 @@
-# second.tag.batchDisableProductTag
+# 【二方接口】商品批量去标
 
-> 【二方接口】商品批量去标
+> second.tag.batchDisableProductTag — 【二方接口】商品批量去标
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.tag.batchDisableProductTag` |
 | 中文名 | 【二方接口】商品批量去标 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-tag-batchDisableProductTag` |
+| 接口 ID | `doudian.dongchedi.second.tag.batchDisableProductTag` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/tag/batchDisableProductTag` |

@@ -1,11 +1,12 @@
-# power.callback
+# 轨迹回传接口（仅用于兼容老物流网关
 
-> 轨迹回传接口（仅用于兼容老物流网关）
+> power.callback — 轨迹回传接口（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.callback` |
 | 中文名 | 轨迹回传接口（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-callback` |
+| 接口 ID | `doudian.logistics.power.callback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/callback` |

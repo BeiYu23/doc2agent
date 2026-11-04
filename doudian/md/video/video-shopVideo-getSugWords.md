@@ -1,11 +1,12 @@
-# shopVideo.getSugWords
+# 查询话题信息
 
-> 查询话题信息
+> shopVideo.getSugWords — 查询话题信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.getSugWords` |
 | 中文名 | 查询话题信息 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-getSugWords` |
+| 接口 ID | `doudian.video.shopVideo.getSugWords` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/getSugWords` |

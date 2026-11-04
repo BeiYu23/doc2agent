@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.queryBookNameByISBN",
+  "cnName": "根据ISBN查询书名",
+  "docUrl": "/docs/doudian/product/product-spu-queryBookNameByISBN",
+  "name": "spu.queryBookNameByISBN",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.queryBookNameByISBN",
   "description": "根据ISBN查询书名",
   "method": "GET",
   "path": "/spu/queryBookNameByISBN",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2373",
   "updatedAt": "2026-02-28",
-  "_file_stem": "product-spu-queryBookNameByISBN",
-  "cnName": "根据ISBN查询书名"
+  "_file_stem": "product-spu-queryBookNameByISBN"
 }

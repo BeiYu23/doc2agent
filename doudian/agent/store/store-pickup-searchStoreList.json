@@ -1,8 +1,10 @@
 {
   "id": "doudian.store.pickup.searchStoreList",
+  "cnName": "门店列表搜索",
+  "docUrl": "/docs/doudian/store/store-pickup-searchStoreList",
+  "name": "pickup.searchStoreList",
   "platform": "doudian",
   "group": "store",
-  "name": "pickup.searchStoreList",
   "description": "门店列表搜索",
   "method": "GET",
   "path": "/pickup/searchStoreList",
@@ -257,6 +259,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7232",
   "updatedAt": "2026-06-23",
-  "_file_stem": "store-pickup-searchStoreList",
-  "cnName": "门店列表搜索"
+  "_file_stem": "store-pickup-searchStoreList"
 }

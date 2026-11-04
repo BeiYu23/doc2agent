@@ -1,11 +1,12 @@
-# fuwu.settle.getBizOrder
+# 获取某一笔服务市场订单的结算信息
 
-> 获取某一笔服务市场订单的结算信息
+> fuwu.settle.getBizOrder — 获取某一笔服务市场订单的结算信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.fuwu.settle.getBizOrder` |
 | 中文名 | 获取某一笔服务市场订单的结算信息 |
+| 文档地址 | `/docs/doudian/tool/tool-fuwu-settle-getBizOrder` |
+| 接口 ID | `doudian.tool.fuwu.settle.getBizOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/settle/getBizOrder` |

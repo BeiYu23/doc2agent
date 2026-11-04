@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.instantShopping.callDeliveryPlatform",
+  "cnName": "即时零售呼叫平台运力",
+  "docUrl": "/docs/doudian/logistics/logistics-instantShopping-callDeliveryPlatform",
+  "name": "instantShopping.callDeliveryPlatform",
   "platform": "doudian",
   "group": "logistics",
-  "name": "instantShopping.callDeliveryPlatform",
   "description": "即时零售呼叫平台运力",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -317,6 +319,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/7042",
   "updatedAt": "2025-09-09",
-  "_file_stem": "logistics-instantShopping-callDeliveryPlatform",
-  "cnName": "即时零售呼叫平台运力"
+  "_file_stem": "logistics-instantShopping-callDeliveryPlatform"
 }

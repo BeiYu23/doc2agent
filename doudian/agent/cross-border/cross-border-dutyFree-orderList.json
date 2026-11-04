@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.dutyFree.orderList",
+  "cnName": "商家拉单",
+  "docUrl": "/docs/doudian/cross-border/cross-border-dutyFree-orderList",
+  "name": "dutyFree.orderList",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "dutyFree.orderList",
   "description": "商家拉单",
   "method": "GET",
   "path": "/dutyFree/orderList",
@@ -187,6 +189,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/703",
   "updatedAt": "2021-07-22",
-  "_file_stem": "cross-border-dutyFree-orderList",
-  "cnName": "商家拉单"
+  "_file_stem": "cross-border-dutyFree-orderList"
 }

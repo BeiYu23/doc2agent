@@ -1,8 +1,10 @@
 {
   "id": "doudian.service.rights.getProductPrivileges",
+  "cnName": "查询商品服务权益",
+  "docUrl": "/docs/doudian/service/service-rights-getProductPrivileges",
+  "name": "rights.getProductPrivileges",
   "platform": "doudian",
   "group": "service",
-  "name": "rights.getProductPrivileges",
   "description": "查询商品服务权益",
   "method": "GET",
   "path": "/rights/getProductPrivileges",
@@ -176,6 +178,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1532/7961",
   "updatedAt": "2025-12-19",
-  "_file_stem": "service-rights-getProductPrivileges",
-  "cnName": "查询商品服务权益"
+  "_file_stem": "service-rights-getProductPrivileges"
 }

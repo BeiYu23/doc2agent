@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.trade.batchGetTradeLimitTemplateList",
+  "cnName": "批量查询限购模板",
+  "docUrl": "/docs/doudian/shop/shop-trade-batchGetTradeLimitTemplateList",
+  "name": "trade.batchGetTradeLimitTemplateList",
   "platform": "doudian",
   "group": "shop",
-  "name": "trade.batchGetTradeLimitTemplateList",
   "description": "批量查询限购模板",
   "method": "GET",
   "path": "/trade/batchGetTradeLimitTemplateList",
@@ -105,6 +107,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2438",
   "updatedAt": "2024-06-12",
-  "_file_stem": "shop-trade-batchGetTradeLimitTemplateList",
-  "cnName": "批量查询限购模板"
+  "_file_stem": "shop-trade-batchGetTradeLimitTemplateList"
 }

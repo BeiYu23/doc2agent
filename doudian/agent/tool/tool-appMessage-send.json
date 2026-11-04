@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.appMessage.send",
+  "cnName": "发送服务市场应用消息",
+  "docUrl": "/docs/doudian/tool/tool-appMessage-send",
+  "name": "appMessage.send",
   "platform": "doudian",
   "group": "tool",
-  "name": "appMessage.send",
   "description": "发送服务市场应用消息",
   "method": "GET",
   "path": "/appMessage/send",
@@ -132,6 +134,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3644",
   "updatedAt": "2023-05-17",
-  "_file_stem": "tool-appMessage-send",
-  "cnName": "发送服务市场应用消息"
+  "_file_stem": "tool-appMessage-send"
 }

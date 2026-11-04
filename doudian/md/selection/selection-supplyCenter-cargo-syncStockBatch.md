@@ -1,14 +1,15 @@
-# supplyCenter.cargo.syncStockBatch
+# 只支持批量同步归属于同一个商品的sku库存
 
-> 1、只支持批量同步归属于同一个商品的sku库存；
+> supplyCenter.cargo.syncStockBatch — 1、只支持批量同步归属于同一个商品的sku库存；
 2、接口规则全部成功或全部失败，例：批量更新10个skuid库存，其中一个skuid信息不正确，这样整个请求都会失败，10个skuid都未更新成功。
 
 返回的错误码参照 https://op.jinrite
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.cargo.syncStockBatch` |
 | 中文名 | 只支持批量同步归属于同一个商品的sku库存 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-cargo-syncStockBatch` |
+| 接口 ID | `doudian.selection.supplyCenter.cargo.syncStockBatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

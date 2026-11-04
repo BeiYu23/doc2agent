@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.changePrice",
+  "cnName": "回收商在用户确认前调整报价",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-changePrice",
+  "name": "recycle.changePrice",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.changePrice",
   "description": "回收商在用户确认前调整报价接口",
   "method": "GET",
   "path": "/recycle/changePrice",
@@ -67,6 +69,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1886",
   "updatedAt": "2021-09-03",
-  "_file_stem": "recycle-recycle-changePrice",
-  "cnName": "回收商在用户确认前调整报价"
+  "_file_stem": "recycle-recycle-changePrice"
 }

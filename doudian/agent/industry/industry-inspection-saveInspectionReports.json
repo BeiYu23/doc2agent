@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.saveInspectionReports",
+  "cnName": "创建/编辑验机报告",
+  "docUrl": "/docs/doudian/industry/industry-inspection-saveInspectionReports",
+  "name": "inspection.saveInspectionReports",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.saveInspectionReports",
   "description": "创建/编辑验机报告",
   "method": "GET",
   "path": "/inspection/saveInspectionReports",
@@ -490,6 +492,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8259",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-saveInspectionReports",
-  "cnName": "创建/编辑验机报告"
+  "_file_stem": "industry-inspection-saveInspectionReports"
 }

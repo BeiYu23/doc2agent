@@ -1,8 +1,10 @@
 {
   "id": "doudian.pickup.logistics.overSize.updateCollectInfo",
+  "cnName": "取件信息推送",
+  "docUrl": "/docs/doudian/pickup/pickup-logistics-overSize-updateCollectInfo",
+  "name": "logistics.overSize.updateCollectInfo",
   "platform": "doudian",
   "group": "pickup",
-  "name": "logistics.overSize.updateCollectInfo",
   "description": "取件信息推送",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -478,6 +480,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1526/6710",
   "updatedAt": "2026-03-18",
-  "_file_stem": "pickup-logistics-overSize-updateCollectInfo",
-  "cnName": "取件信息推送"
+  "_file_stem": "pickup-logistics-overSize-updateCollectInfo"
 }

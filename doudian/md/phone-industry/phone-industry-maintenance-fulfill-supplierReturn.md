@@ -1,11 +1,12 @@
-# maintenance.fulfill.supplierReturn
+# 维修服务商寄回主品
 
-> 维修服务商寄回主品
+> maintenance.fulfill.supplierReturn — 维修服务商寄回主品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.fulfill.supplierReturn` |
 | 中文名 | 维修服务商寄回主品 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-fulfill-supplierReturn` |
+| 接口 ID | `doudian.phone-industry.maintenance.fulfill.supplierReturn` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

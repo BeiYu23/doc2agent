@@ -1,11 +1,12 @@
-# fuwu.refundSuccessForVolc
+# 退款成功回调
 
-> 退款成功回调
+> fuwu.refundSuccessForVolc — 退款成功回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.fuwu.refundSuccessForVolc` |
 | 中文名 | 退款成功回调 |
+| 文档地址 | `/docs/doudian/tool/tool-fuwu-refundSuccessForVolc` |
+| 接口 ID | `doudian.tool.fuwu.refundSuccessForVolc` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/refundSuccessForVolc` |

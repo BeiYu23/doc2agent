@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-product.instantShopping.productOpportunity.distributeClue",
+  "cnName": "商机发品流程：获取商机线索->发品传入商机参数",
+  "docUrl": "/docs/doudian/retail-product/retail-product-instantShopping-productOpportunity-distributeClue",
+  "name": "instantShopping.productOpportunity.distributeClue",
   "platform": "doudian",
   "group": "retail-product",
-  "name": "instantShopping.productOpportunity.distributeClue",
   "description": "商机发品流程：获取商机线索->发品传入商机参数\n1、此接口为商机线索的分发接口，可获取线索id和线索名称；\n2、发品时（/product/addV2 & YOUR_SECRET_KEY）要填充商机线索参数recruit_inf",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -162,6 +164,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7476",
   "updatedAt": "2025-05-22",
-  "_file_stem": "retail-product-instantShopping-productOpportunity-distributeClue",
-  "cnName": "商机发品流程：获取商机线索->发品传入商机参数"
+  "_file_stem": "retail-product-instantShopping-productOpportunity-distributeClue"
 }

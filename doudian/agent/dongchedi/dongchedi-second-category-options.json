@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.category.options",
+  "cnName": "【二方接口】获取店铺的可选类目",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-category-options",
+  "name": "second.category.options",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.category.options",
   "description": "【二方接口】获取店铺的可选类目",
   "method": "GET",
   "path": "/second/category/options",
@@ -100,6 +102,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6838",
   "updatedAt": "2024-12-12",
-  "_file_stem": "dongchedi-second-category-options",
-  "cnName": "【二方接口】获取店铺的可选类目"
+  "_file_stem": "dongchedi-second-category-options"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.product.digest",
+  "cnName": "查询商品摘要信息",
+  "docUrl": "/docs/doudian/miniapp/miniapp-product-digest",
+  "name": "product.digest",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "product.digest",
   "description": "查询商品摘要信息",
   "method": "GET",
   "path": "/product/digest",
@@ -79,6 +81,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7513",
   "updatedAt": "2025-07-22",
-  "_file_stem": "miniapp-product-digest",
-  "cnName": "查询商品摘要信息"
+  "_file_stem": "miniapp-product-digest"
 }

@@ -1,11 +1,12 @@
-# instantShopping.product.launchProduct
+# 即时零售上架商品
 
-> 即时零售上架商品
+> instantShopping.product.launchProduct — 即时零售上架商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-product.instantShopping.product.launchProduct` |
 | 中文名 | 即时零售上架商品 |
+| 文档地址 | `/docs/doudian/retail-product/retail-product-instantShopping-product-launchProduct` |
+| 接口 ID | `doudian.retail-product.instantShopping.product.launchProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

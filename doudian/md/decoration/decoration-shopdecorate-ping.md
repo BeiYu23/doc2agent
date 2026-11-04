@@ -1,11 +1,12 @@
-# shopdecorate.ping
+# 测试
 
-> 测试
+> shopdecorate.ping — 测试
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shopdecorate.ping` |
 | 中文名 | 测试 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shopdecorate-ping` |
+| 接口 ID | `doudian.decoration.shopdecorate.ping` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopdecorate/ping` |

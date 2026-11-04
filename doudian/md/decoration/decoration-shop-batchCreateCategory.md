@@ -1,11 +1,12 @@
-# shop.batchCreateCategory
+# 批量创建类目
 
-> 批量创建类目接口
+> shop.batchCreateCategory — 批量创建类目接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.batchCreateCategory` |
 | 中文名 | 批量创建类目 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-batchCreateCategory` |
+| 接口 ID | `doudian.decoration.shop.batchCreateCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/batchCreateCategory` |

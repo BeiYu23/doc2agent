@@ -1,11 +1,12 @@
-# mini.queryLuxPreOrderCustomInfo
+# 奢品小程序-查询购前定制定制信息
 
-> 奢品小程序-查询购前定制定制信息
+> mini.queryLuxPreOrderCustomInfo — 奢品小程序-查询购前定制定制信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.mini.queryLuxPreOrderCustomInfo` |
 | 中文名 | 奢品小程序-查询购前定制定制信息 |
+| 文档地址 | `/docs/doudian/order/order-mini-queryLuxPreOrderCustomInfo` |
+| 接口 ID | `doudian.order.mini.queryLuxPreOrderCustomInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/queryLuxPreOrderCustomInfo` |

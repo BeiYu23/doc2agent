@@ -1,11 +1,12 @@
-# marketing.BatchApplyAsset
+# 资产领券
 
-> 资产领券接口
+> marketing.BatchApplyAsset — 资产领券接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.BatchApplyAsset` |
 | 中文名 | 资产领券 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-BatchApplyAsset` |
+| 接口 ID | `doudian.marketing.marketing.BatchApplyAsset` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/BatchApplyAsset` |

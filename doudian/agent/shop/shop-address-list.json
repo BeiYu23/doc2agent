@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.address.list",
+  "cnName": "批量查询地址库列表",
+  "docUrl": "/docs/doudian/shop/shop-address-list",
+  "name": "address.list",
   "platform": "doudian",
   "group": "shop",
-  "name": "address.list",
   "description": "批量查询地址库列表接口",
   "method": "GET",
   "path": "/address/list",
@@ -173,6 +175,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1435",
   "updatedAt": "2025-03-17",
-  "_file_stem": "shop-address-list",
-  "cnName": "批量查询地址库列表"
+  "_file_stem": "shop-address-list"
 }

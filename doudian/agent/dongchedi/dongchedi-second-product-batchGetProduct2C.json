@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.product.batchGetProduct2C",
+  "cnName": "【二方接口】批量获取商品信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-product-batchGetProduct2C",
+  "name": "second.product.batchGetProduct2C",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.product.batchGetProduct2C",
   "description": "【二方接口】批量获取商品信息",
   "method": "GET",
   "path": "/second/product/batchGetProduct2C",
@@ -190,6 +192,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6950",
   "updatedAt": "2024-10-18",
-  "_file_stem": "dongchedi-second-product-batchGetProduct2C",
-  "cnName": "【二方接口】批量获取商品信息"
+  "_file_stem": "dongchedi-second-product-batchGetProduct2C"
 }

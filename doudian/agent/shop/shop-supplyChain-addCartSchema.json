@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.addCartSchema",
+  "cnName": "获取加购schema",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-addCartSchema",
+  "name": "supplyChain.addCartSchema",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.addCartSchema",
   "description": "获取加购schema",
   "method": "GET",
   "path": "/supplyChain/addCartSchema",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2850",
   "updatedAt": "2023-01-16",
-  "_file_stem": "shop-supplyChain-addCartSchema",
-  "cnName": "获取加购schema"
+  "_file_stem": "shop-supplyChain-addCartSchema"
 }

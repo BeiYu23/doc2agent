@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.topup.resultCUC",
+  "cnName": "联通交费回调",
+  "docUrl": "/docs/doudian/virtual/virtual-topup-resultCUC",
+  "name": "topup.resultCUC",
   "platform": "doudian",
   "group": "virtual",
-  "name": "topup.resultCUC",
   "description": "联通交费回调接口",
   "method": "GET",
   "path": "/topup/resultCUC",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/7983",
   "updatedAt": "2025-12-25",
-  "_file_stem": "virtual-topup-resultCUC",
-  "cnName": "联通交费回调"
+  "_file_stem": "virtual-topup-resultCUC"
 }

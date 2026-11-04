@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.sendHome.settle.getShopAccountItem",
+  "cnName": "查询资金流水明细",
+  "docUrl": "/docs/doudian/bill/bill-sendHome-settle-getShopAccountItem",
+  "name": "sendHome.settle.getShopAccountItem",
   "platform": "doudian",
   "group": "bill",
-  "name": "sendHome.settle.getShopAccountItem",
   "description": "查询资金流水明细，查询方式为时间轮训方式，数据T+1生成，建议第二天15点之后查询。如因任务积压导致延迟的情况，建议重试。\n如果流水明细为订单相关，会关联门店ID与门店商家自编码。",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -195,6 +197,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/6641",
   "updatedAt": "2024-06-19",
-  "_file_stem": "bill-sendHome-settle-getShopAccountItem",
-  "cnName": "查询资金流水明细"
+  "_file_stem": "bill-sendHome-settle-getShopAccountItem"
 }

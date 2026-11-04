@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.pushLogisticsData",
+  "cnName": "推送数据",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-pushLogisticsData",
+  "name": "logistics.pushLogisticsData",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.pushLogisticsData",
   "description": "推送数据",
   "method": "GET",
   "path": "/logistics/pushLogisticsData",
@@ -120,6 +122,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6035",
   "updatedAt": "2024-01-15",
-  "_file_stem": "logistics-provider-logistics-pushLogisticsData",
-  "cnName": "推送数据"
+  "_file_stem": "logistics-provider-logistics-pushLogisticsData"
 }

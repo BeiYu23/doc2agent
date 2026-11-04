@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.instituteColonelActivityList",
+  "cnName": "团长活动查询",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-instituteColonelActivityList",
+  "name": "alliance.instituteColonelActivityList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.instituteColonelActivityList",
   "description": "团长活动查询接口",
   "method": "GET",
   "path": "/alliance/instituteColonelActivityList",
@@ -166,6 +168,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1330",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-alliance-instituteColonelActivityList",
-  "cnName": "团长活动查询"
+  "_file_stem": "alliance-alliance-instituteColonelActivityList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.createSpu",
+  "cnName": "发布SPU",
+  "docUrl": "/docs/doudian/product/product-spu-createSpu",
+  "name": "spu.createSpu",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.createSpu",
   "description": "发布SPU",
   "method": "GET",
   "path": "/spu/createSpu",
@@ -376,6 +378,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2311",
   "updatedAt": "2026-08-13",
-  "_file_stem": "product-spu-createSpu",
-  "cnName": "发布SPU"
+  "_file_stem": "product-spu-createSpu"
 }

@@ -1,11 +1,12 @@
-# btas.saveInspectionInfo
+# 商家_商家送检线下质检订单
 
-> 商家_商家送检线下质检订单
+> btas.saveInspectionInfo — 商家_商家送检线下质检订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.saveInspectionInfo` |
 | 中文名 | 商家_商家送检线下质检订单 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-saveInspectionInfo` |
+| 接口 ID | `doudian.btas-inspect.btas.saveInspectionInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/saveInspectionInfo` |

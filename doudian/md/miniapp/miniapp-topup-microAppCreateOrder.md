@@ -1,11 +1,12 @@
-# topup.microAppCreateOrder
+# 运营商小程序下单
 
-> 运营商小程序下单
+> topup.microAppCreateOrder — 运营商小程序下单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.topup.microAppCreateOrder` |
 | 中文名 | 运营商小程序下单 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-topup-microAppCreateOrder` |
+| 接口 ID | `doudian.miniapp.topup.microAppCreateOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/microAppCreateOrder` |

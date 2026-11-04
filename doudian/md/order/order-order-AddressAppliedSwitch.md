@@ -1,11 +1,12 @@
-# order.AddressAppliedSwitch
+# 支持调用后打开（或关闭）卖家针对买家收货地址变…
 
-> 支持调用后打开（或关闭）卖家针对买家收货地址变更的审核流程
+> order.AddressAppliedSwitch — 支持调用后打开（或关闭）卖家针对买家收货地址变更的审核流程
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.AddressAppliedSwitch` |
 | 中文名 | 支持调用后打开（或关闭）卖家针对买家收货地址变… |
+| 文档地址 | `/docs/doudian/order/order-order-AddressAppliedSwitch` |
+| 接口 ID | `doudian.order.order.AddressAppliedSwitch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/AddressAppliedSwitch` |

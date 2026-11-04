@@ -1,11 +1,12 @@
-# afterSale.openOutAfterSale
+# 打开超售后入口
 
-> 打开超售后入口
+> afterSale.openOutAfterSale — 打开超售后入口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.openOutAfterSale` |
 | 中文名 | 打开超售后入口 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-openOutAfterSale` |
+| 接口 ID | `doudian.refund.afterSale.openOutAfterSale` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/openOutAfterSale` |

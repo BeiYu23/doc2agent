@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.crossBorder.getIdentification",
+  "cnName": "获取跨境清关信息",
+  "docUrl": "/docs/doudian/logistics/logistics-crossBorder-getIdentification",
+  "name": "crossBorder.getIdentification",
   "platform": "doudian",
   "group": "logistics",
-  "name": "crossBorder.getIdentification",
   "description": "获取跨境清关信息",
   "method": "GET",
   "path": "/crossBorder/getIdentification",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/551",
   "updatedAt": "2021-05-27",
-  "_file_stem": "logistics-crossBorder-getIdentification",
-  "cnName": "获取跨境清关信息"
+  "_file_stem": "logistics-crossBorder-getIdentification"
 }

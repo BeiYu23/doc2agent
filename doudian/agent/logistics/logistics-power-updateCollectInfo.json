@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.updateCollectInfo",
+  "cnName": "取件信息推送（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-updateCollectInfo",
+  "name": "power.updateCollectInfo",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.updateCollectInfo",
   "description": "取件信息推送（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/updateCollectInfo",
@@ -543,6 +545,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/8526",
   "updatedAt": "2026-08-20",
-  "_file_stem": "logistics-power-updateCollectInfo",
-  "cnName": "取件信息推送（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-updateCollectInfo"
 }

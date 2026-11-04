@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.containerService.create",
+  "cnName": "创建容器服务",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-containerService-create",
+  "name": "openCloud.containerService.create",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.containerService.create",
   "description": "创建容器服务",
   "method": "GET",
   "path": "/openCloud/containerService/create",
@@ -266,6 +268,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/7609",
   "updatedAt": "2025-07-17",
-  "_file_stem": "cloud-openCloud-containerService-create",
-  "cnName": "创建容器服务"
+  "_file_stem": "cloud-openCloud-containerService-create"
 }

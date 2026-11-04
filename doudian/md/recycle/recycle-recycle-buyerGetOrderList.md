@@ -1,11 +1,12 @@
-# recycle.buyerGetOrderList
+# 拉取订单列表
 
-> 拉取订单列表接口
+> recycle.buyerGetOrderList — 拉取订单列表接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.buyerGetOrderList` |
 | 中文名 | 拉取订单列表 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-buyerGetOrderList` |
+| 接口 ID | `doudian.recycle.recycle.buyerGetOrderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/buyerGetOrderList` |

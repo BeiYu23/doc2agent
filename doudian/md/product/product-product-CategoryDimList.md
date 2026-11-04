@@ -1,11 +1,12 @@
-# product.CategoryDimList
+# 类目检索
 
-> 类目检索
+> product.CategoryDimList — 类目检索
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.CategoryDimList` |
 | 中文名 | 类目检索 |
+| 文档地址 | `/docs/doudian/product/product-product-CategoryDimList` |
+| 接口 ID | `doudian.product.product.CategoryDimList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/CategoryDimList` |

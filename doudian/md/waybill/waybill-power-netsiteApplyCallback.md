@@ -1,11 +1,12 @@
-# power.netsiteApplyCallback
+# 订购服务审核（仅用于兼容老物流网关
 
-> 订购服务审核（仅用于兼容老物流网关）
+> power.netsiteApplyCallback — 订购服务审核（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.power.netsiteApplyCallback` |
 | 中文名 | 订购服务审核（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/waybill/waybill-power-netsiteApplyCallback` |
+| 接口 ID | `doudian.waybill.power.netsiteApplyCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/netsiteApplyCallback` |

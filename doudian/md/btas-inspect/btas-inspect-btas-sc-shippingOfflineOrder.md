@@ -1,11 +1,12 @@
-# btas.sc.shippingOfflineOrder
+# 质检机构在收到实物质检商品质检完成
 
-> 质检机构在收到实物质检商品质检完成，并且同步到平台后，进行发货。 此时，如果订单已经已经取消就是发往商家（如果商家是自提则接口会报错）；如果订单未取消，则发往消费者。
+> btas.sc.shippingOfflineOrder — 质检机构在收到实物质检商品质检完成，并且同步到平台后，进行发货。 此时，如果订单已经已经取消就是发往商家（如果商家是自提则接口会报错）；如果订单未取消，则发往消费者。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sc.shippingOfflineOrder` |
 | 中文名 | 质检机构在收到实物质检商品质检完成 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sc-shippingOfflineOrder` |
+| 接口 ID | `doudian.btas-inspect.btas.sc.shippingOfflineOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/shippingOfflineOrder` |

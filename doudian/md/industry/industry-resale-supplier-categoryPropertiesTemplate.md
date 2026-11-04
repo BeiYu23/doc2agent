@@ -1,11 +1,12 @@
-# resale.supplier.categoryPropertiesTemplate
+# 推送叶子类目对应的类目属性和模版
 
-> 推送叶子类目对应的类目属性和模版
+> resale.supplier.categoryPropertiesTemplate — 推送叶子类目对应的类目属性和模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.resale.supplier.categoryPropertiesTemplate` |
 | 中文名 | 推送叶子类目对应的类目属性和模版 |
+| 文档地址 | `/docs/doudian/industry/industry-resale-supplier-categoryPropertiesTemplate` |
+| 接口 ID | `doudian.industry.resale.supplier.categoryPropertiesTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

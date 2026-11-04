@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierSyncSiteInfo",
+  "cnName": "服务商同步网点信息",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierSyncSiteInfo",
+  "name": "install.order.supplierSyncSiteInfo",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierSyncSiteInfo",
   "description": "服务商同步网点信息",
   "method": "GET",
   "path": "/install/order/supplierSyncSiteInfo",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5779",
   "updatedAt": "2023-12-21",
-  "_file_stem": "logistics-provider-install-order-supplierSyncSiteInfo",
-  "cnName": "服务商同步网点信息"
+  "_file_stem": "logistics-provider-install-order-supplierSyncSiteInfo"
 }

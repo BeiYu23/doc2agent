@@ -1,11 +1,12 @@
-# recycle.sms.sendSmsTestCode
+# 发送短信验证码
 
-> 发送短信验证码
+> recycle.sms.sendSmsTestCode — 发送短信验证码
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.recycle.sms.sendSmsTestCode` |
 | 中文名 | 发送短信验证码 |
+| 文档地址 | `/docs/doudian/sms/sms-recycle-sms-sendSmsTestCode` |
+| 接口 ID | `doudian.sms.recycle.sms.sendSmsTestCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sms/sendSmsTestCode` |

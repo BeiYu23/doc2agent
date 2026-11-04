@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.supplyProduct.getSupplyProductUpdateRule",
+  "cnName": "获取产品发布模板",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-supplyProduct-getSupplyProductUpdateRule",
+  "name": "supplyChain.supplyProduct.getSupplyProductUpdateRule",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.supplyProduct.getSupplyProductUpdateRule",
   "description": "获取产品发布模板",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -119,6 +121,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2117",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-supplyChain-supplyProduct-getSupplyProductUpdateRule",
-  "cnName": "获取产品发布模板"
+  "_file_stem": "shop-supplyChain-supplyProduct-getSupplyProductUpdateRule"
 }

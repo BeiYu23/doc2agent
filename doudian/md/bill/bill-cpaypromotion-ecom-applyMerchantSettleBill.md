@@ -1,11 +1,12 @@
-# cpaypromotion.ecom.applyMerchantSettleBill
+# 通过url方式
 
-> 1、通过url方式，下载文件生成结算账单下单接口，调用该接口生成一个download_id ，通过返回的download_id调用【YOUR_SECRET_KEY】查询下载url文件链接。如果申
+> cpaypromotion.ecom.applyMerchantSettleBill — 1、通过url方式，下载文件生成结算账单下单接口，调用该接口生成一个download_id ，通过返回的download_id调用【YOUR_SECRET_KEY】查询下载url文件链接。如果申
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.cpaypromotion.ecom.applyMerchantSettleBill` |
 | 中文名 | 通过url方式 |
+| 文档地址 | `/docs/doudian/bill/bill-cpaypromotion-ecom-applyMerchantSettleBill` |
+| 接口 ID | `doudian.bill.cpaypromotion.ecom.applyMerchantSettleBill` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

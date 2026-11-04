@@ -1,11 +1,12 @@
-# second.ecomInsight.createTask
+# 创建task任务
 
-> 创建task任务接口
+> second.ecomInsight.createTask — 创建task任务接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.createTask` |
 | 中文名 | 创建task任务 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-createTask` |
+| 接口 ID | `doudian.video.second.ecomInsight.createTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

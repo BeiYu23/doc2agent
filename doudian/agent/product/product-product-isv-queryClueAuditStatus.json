@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.isv.queryClueAuditStatus",
+  "cnName": "查询线索提报审核结果",
+  "docUrl": "/docs/doudian/product/product-product-isv-queryClueAuditStatus",
+  "name": "product.isv.queryClueAuditStatus",
   "platform": "doudian",
   "group": "product",
-  "name": "product.isv.queryClueAuditStatus",
   "description": "查询线索提报审核结果",
   "method": "GET",
   "path": "/product/isv/queryClueAuditStatus",
@@ -123,6 +125,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2148",
   "updatedAt": "2024-04-02",
-  "_file_stem": "product-product-isv-queryClueAuditStatus",
-  "cnName": "查询线索提报审核结果"
+  "_file_stem": "product-product-isv-queryClueAuditStatus"
 }

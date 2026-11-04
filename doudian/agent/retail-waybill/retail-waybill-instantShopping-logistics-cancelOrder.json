@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.logistics.cancelOrder",
+  "cnName": "取消已获取的电子面单号",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-cancelOrder",
+  "name": "instantShopping.logistics.cancelOrder",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.logistics.cancelOrder",
   "description": "取消已获取的电子面单号",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -335,6 +337,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7241",
   "updatedAt": "2025-02-08",
-  "_file_stem": "retail-waybill-instantShopping-logistics-cancelOrder",
-  "cnName": "取消已获取的电子面单号"
+  "_file_stem": "retail-waybill-instantShopping-logistics-cancelOrder"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.store.pickup.batchUpdateStoreStatus",
+  "cnName": "批量更新门店状态",
+  "docUrl": "/docs/doudian/store/store-pickup-batchUpdateStoreStatus",
+  "name": "pickup.batchUpdateStoreStatus",
   "platform": "doudian",
   "group": "store",
-  "name": "pickup.batchUpdateStoreStatus",
   "description": "批量更新门店状态",
   "method": "GET",
   "path": "/pickup/batchUpdateStoreStatus",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7235",
   "updatedAt": "2026-06-24",
-  "_file_stem": "store-pickup-batchUpdateStoreStatus",
-  "cnName": "批量更新门店状态"
+  "_file_stem": "store-pickup-batchUpdateStoreStatus"
 }

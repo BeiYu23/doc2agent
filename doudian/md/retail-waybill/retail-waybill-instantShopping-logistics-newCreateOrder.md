@@ -1,11 +1,12 @@
-# instantShopping.logistics.newCreateOrder
+# 取号接口，传入收货人密文获取运单号
 
-> 取号接口，传入收货人密文获取运单号
+> instantShopping.logistics.newCreateOrder — 取号接口，传入收货人密文获取运单号
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-waybill.instantShopping.logistics.newCreateOrder` |
 | 中文名 | 取号接口，传入收货人密文获取运单号 |
+| 文档地址 | `/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-newCreateOrder` |
+| 接口 ID | `doudian.retail-waybill.instantShopping.logistics.newCreateOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

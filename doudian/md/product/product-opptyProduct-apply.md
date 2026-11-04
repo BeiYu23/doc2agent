@@ -1,11 +1,12 @@
-# opptyProduct.apply
+# 机会品提报
 
-> 机会品提报
+> opptyProduct.apply — 机会品提报
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.opptyProduct.apply` |
 | 中文名 | 机会品提报 |
+| 文档地址 | `/docs/doudian/product/product-opptyProduct-apply` |
+| 接口 ID | `doudian.product.opptyProduct.apply` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/opptyProduct/apply` |

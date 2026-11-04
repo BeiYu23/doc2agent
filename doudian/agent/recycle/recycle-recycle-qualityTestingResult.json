@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.qualityTestingResult",
+  "cnName": "回传质检通过和价格",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-qualityTestingResult",
+  "name": "recycle.qualityTestingResult",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.qualityTestingResult",
   "description": "回传质检通过和价格",
   "method": "GET",
   "path": "/recycle/qualityTestingResult",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1885",
   "updatedAt": "2021-09-03",
-  "_file_stem": "recycle-recycle-qualityTestingResult",
-  "cnName": "回传质检通过和价格"
+  "_file_stem": "recycle-recycle-qualityTestingResult"
 }

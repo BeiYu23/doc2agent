@@ -1,8 +1,10 @@
 {
   "id": "doudian.hospital.medicine.sendSpecifyMessage",
+  "cnName": "当医生拒绝开处方单，需要将理由同步到医药行业平台",
+  "docUrl": "/docs/doudian/hospital/hospital-medicine-sendSpecifyMessage",
+  "name": "medicine.sendSpecifyMessage",
   "platform": "doudian",
   "group": "hospital",
-  "name": "medicine.sendSpecifyMessage",
   "description": "当医生拒绝开处方单，需要将理由同步到医药行业平台",
   "method": "GET",
   "path": "/medicine/sendSpecifyMessage",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/6211",
   "updatedAt": "2024-02-29",
-  "_file_stem": "hospital-medicine-sendSpecifyMessage",
-  "cnName": "当医生拒绝开处方单，需要将理由同步到医药行业平台"
+  "_file_stem": "hospital-medicine-sendSpecifyMessage"
 }

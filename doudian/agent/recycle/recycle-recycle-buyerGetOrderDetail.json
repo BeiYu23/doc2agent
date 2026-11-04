@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.buyerGetOrderDetail",
+  "cnName": "获得订单",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-buyerGetOrderDetail",
+  "name": "recycle.buyerGetOrderDetail",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.buyerGetOrderDetail",
   "description": "获得订单详情",
   "method": "GET",
   "path": "/recycle/buyerGetOrderDetail",
@@ -106,6 +108,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/915",
   "updatedAt": "2023-04-11",
-  "_file_stem": "recycle-recycle-buyerGetOrderDetail",
-  "cnName": "获得订单"
+  "_file_stem": "recycle-recycle-buyerGetOrderDetail"
 }

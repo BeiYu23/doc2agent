@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.topup.productActionCMCC",
+  "cnName": "中国移动店铺商品上下架",
+  "docUrl": "/docs/doudian/tool/tool-topup-productActionCMCC",
+  "name": "topup.productActionCMCC",
   "platform": "doudian",
   "group": "tool",
-  "name": "topup.productActionCMCC",
   "description": "中国移动店铺商品上下架",
   "method": "GET",
   "path": "/topup/productActionCMCC",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7623",
   "updatedAt": "2025-07-22",
-  "_file_stem": "tool-topup-productActionCMCC",
-  "cnName": "中国移动店铺商品上下架"
+  "_file_stem": "tool-topup-productActionCMCC"
 }

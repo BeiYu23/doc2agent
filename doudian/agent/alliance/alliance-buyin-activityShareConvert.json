@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.activityShareConvert",
+  "cnName": "活动页转链",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-activityShareConvert",
+  "name": "buyin.activityShareConvert",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.activityShareConvert",
   "description": "活动页转链接口",
   "method": "GET",
   "path": "/buyin/activityShareConvert",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2003",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-activityShareConvert",
-  "cnName": "活动页转链"
+  "_file_stem": "alliance-buyin-activityShareConvert"
 }

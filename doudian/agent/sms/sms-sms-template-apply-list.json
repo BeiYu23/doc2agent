@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.template.apply.list",
+  "cnName": "查询短信模板申请单",
+  "docUrl": "/docs/doudian/sms/sms-sms-template-apply-list",
+  "name": "sms.template.apply.list",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.template.apply.list",
   "description": "查询短信模板申请单",
   "method": "GET",
   "path": "/sms/template/apply/list",
@@ -156,6 +158,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1516",
   "updatedAt": "2025-12-18",
-  "_file_stem": "sms-sms-template-apply-list",
-  "cnName": "查询短信模板申请单"
+  "_file_stem": "sms-sms-template-apply-list"
 }

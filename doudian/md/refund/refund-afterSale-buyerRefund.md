@@ -1,11 +1,12 @@
-# afterSale.buyerRefund
+# 商家处理发货后仅退款申请
 
-> 商家处理发货后仅退款申请（831下线，可使用该接口：/afterSale/Operate）
+> afterSale.buyerRefund — 商家处理发货后仅退款申请（831下线，可使用该接口：/afterSale/Operate）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.buyerRefund` |
 | 中文名 | 商家处理发货后仅退款申请 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-buyerRefund` |
+| 接口 ID | `doudian.refund.afterSale.buyerRefund` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/buyerRefund` |

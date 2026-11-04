@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.recycle.sms.applyPartnerSmsSign",
+  "cnName": "申请短信签名",
+  "docUrl": "/docs/doudian/sms/sms-recycle-sms-applyPartnerSmsSign",
+  "name": "recycle.sms.applyPartnerSmsSign",
   "platform": "doudian",
   "group": "sms",
-  "name": "recycle.sms.applyPartnerSmsSign",
   "description": "申请短信签名",
   "method": "GET",
   "path": "/recycle/sms/applyPartnerSmsSign",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7837",
   "updatedAt": "2025-11-03",
-  "_file_stem": "sms-recycle-sms-applyPartnerSmsSign",
-  "cnName": "申请短信签名"
+  "_file_stem": "sms-recycle-sms-applyPartnerSmsSign"
 }

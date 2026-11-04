@@ -1,12 +1,13 @@
-# logistics.templateList
+# 查询物流商的标准模板
 
-> 查询物流商的标准模板。
+> logistics.templateList — 查询物流商的标准模板。
 注意：物流商模板平台会定期更新或新增，请开发者定期扫描该接口，保持和平台数据一致；
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.templateList` |
 | 中文名 | 查询物流商的标准模板 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-templateList` |
+| 接口 ID | `doudian.waybill.logistics.templateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/templateList` |

@@ -1,11 +1,12 @@
-# mini.activity.operate
+# 操作小程序活动
 
-> 操作小程序活动
+> mini.activity.operate — 操作小程序活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.operate` |
 | 中文名 | 操作小程序活动 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-operate` |
+| 接口 ID | `doudian.miniapp.mini.activity.operate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/operate` |

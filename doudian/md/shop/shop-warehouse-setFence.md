@@ -1,11 +1,12 @@
-# warehouse.setFence
+# 更新电子围栏
 
-> 更新电子围栏接口
+> warehouse.setFence — 更新电子围栏接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.warehouse.setFence` |
 | 中文名 | 更新电子围栏 |
+| 文档地址 | `/docs/doudian/shop/shop-warehouse-setFence` |
+| 接口 ID | `doudian.shop.warehouse.setFence` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/setFence` |

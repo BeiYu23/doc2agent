@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.editLiveMainProductCouponInfo",
+  "cnName": "修改直播主品券信息",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-editLiveMainProductCouponInfo",
+  "name": "instantShopping.marketing.editLiveMainProductCouponInfo",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.editLiveMainProductCouponInfo",
   "description": "修改直播主品券信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/7251",
   "updatedAt": "2025-02-10",
-  "_file_stem": "retail-marketing-instantShopping-marketing-editLiveMainProductCouponInfo",
-  "cnName": "修改直播主品券信息"
+  "_file_stem": "retail-marketing-instantShopping-marketing-editLiveMainProductCouponInfo"
 }

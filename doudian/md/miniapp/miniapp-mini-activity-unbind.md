@@ -1,11 +1,12 @@
-# mini.activity.unbind
+# 用户解绑活动
 
-> 用户解绑活动
+> mini.activity.unbind — 用户解绑活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.unbind` |
 | 中文名 | 用户解绑活动 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-unbind` |
+| 接口 ID | `doudian.miniapp.mini.activity.unbind` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/unbind` |

@@ -1,11 +1,12 @@
-# crossBorder.DeleteProductRecord
+# 删除备案
 
-> 删除备案
+> crossBorder.DeleteProductRecord — 删除备案
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossBorder.DeleteProductRecord` |
 | 中文名 | 删除备案 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossBorder-DeleteProductRecord` |
+| 接口 ID | `doudian.cross-border.crossBorder.DeleteProductRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/DeleteProductRecord` |

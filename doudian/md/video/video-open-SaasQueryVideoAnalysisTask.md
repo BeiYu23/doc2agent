@@ -1,11 +1,12 @@
-# open.SaasQueryVideoAnalysisTask
+# 查询视频分析任务 (SaaS
 
-> 查询视频分析任务 (SaaS)
+> open.SaasQueryVideoAnalysisTask — 查询视频分析任务 (SaaS)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.SaasQueryVideoAnalysisTask` |
 | 中文名 | 查询视频分析任务 (SaaS |
+| 文档地址 | `/docs/doudian/video/video-open-SaasQueryVideoAnalysisTask` |
+| 接口 ID | `doudian.video.open.SaasQueryVideoAnalysisTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/SaasQueryVideoAnalysisTask` |

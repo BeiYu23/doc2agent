@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.mini.blindbox.merchantresult",
+  "cnName": "主播在直播间抽完后把盲盒结果回传平台",
+  "docUrl": "/docs/doudian/tool/tool-mini-blindbox-merchantresult",
+  "name": "mini.blindbox.merchantresult",
   "platform": "doudian",
   "group": "tool",
-  "name": "mini.blindbox.merchantresult",
   "description": "1、使用场景说明，主播在直播间抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果",
   "method": "GET",
   "path": "/mini/blindbox/merchantresult",
@@ -146,6 +148,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7436",
   "updatedAt": "2025-04-29",
-  "_file_stem": "tool-mini-blindbox-merchantresult",
-  "cnName": "主播在直播间抽完后把盲盒结果回传平台"
+  "_file_stem": "tool-mini-blindbox-merchantresult"
 }

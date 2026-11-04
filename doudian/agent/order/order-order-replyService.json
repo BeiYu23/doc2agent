@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.replyService",
+  "cnName": "回复服务请求",
+  "docUrl": "/docs/doudian/order/order-order-replyService",
+  "name": "order.replyService",
   "platform": "doudian",
   "group": "order",
-  "name": "order.replyService",
   "description": "回复服务请求",
   "method": "GET",
   "path": "/order/replyService",
@@ -90,6 +92,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1917",
   "updatedAt": "2022-11-14",
-  "_file_stem": "order-order-replyService",
-  "cnName": "回复服务请求"
+  "_file_stem": "order-order-replyService"
 }

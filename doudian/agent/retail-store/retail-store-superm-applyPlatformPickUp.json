@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.applyPlatformPickUp",
+  "cnName": "呼叫运力售后取件",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-applyPlatformPickUp",
+  "name": "superm.applyPlatformPickUp",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.applyPlatformPickUp",
   "description": "呼叫运力售后取件",
   "method": "GET",
   "path": "/superm/applyPlatformPickUp",
@@ -144,6 +146,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2741",
   "updatedAt": "2025-12-11",
-  "_file_stem": "retail-store-superm-applyPlatformPickUp",
-  "cnName": "呼叫运力售后取件"
+  "_file_stem": "retail-store-superm-applyPlatformPickUp"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.resale.supplier.categoryOperateQuery",
+  "cnName": "查询旧品类目操作结果",
+  "docUrl": "/docs/doudian/industry/industry-resale-supplier-categoryOperateQuery",
+  "name": "resale.supplier.categoryOperateQuery",
   "platform": "doudian",
   "group": "industry",
-  "name": "resale.supplier.categoryOperateQuery",
   "description": "查询旧品类目操作结果",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8464",
   "updatedAt": "2026-08-12",
-  "_file_stem": "industry-resale-supplier-categoryOperateQuery",
-  "cnName": "查询旧品类目操作结果"
+  "_file_stem": "industry-resale-supplier-categoryOperateQuery"
 }

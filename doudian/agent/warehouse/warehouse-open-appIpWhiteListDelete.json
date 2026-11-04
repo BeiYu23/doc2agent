@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.open.appIpWhiteListDelete",
+  "cnName": "仓库解绑门店",
+  "docUrl": "/docs/doudian/warehouse/warehouse-open-appIpWhiteListDelete",
+  "name": "open.appIpWhiteListDelete",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "open.appIpWhiteListDelete",
   "description": "仓库解绑门店接口",
   "method": "GET",
   "path": "/open/appIpWhiteListDelete",
@@ -49,6 +51,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1819",
   "updatedAt": "2022-05-06",
-  "_file_stem": "warehouse-open-appIpWhiteListDelete",
-  "cnName": "仓库解绑门店"
+  "_file_stem": "warehouse-open-appIpWhiteListDelete"
 }

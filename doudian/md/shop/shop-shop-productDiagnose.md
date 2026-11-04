@@ -1,11 +1,12 @@
-# shop.productDiagnose
+# 本店商品维度诊断
 
-> 本店商品维度诊断
+> shop.productDiagnose — 本店商品维度诊断
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.productDiagnose` |
 | 中文名 | 本店商品维度诊断 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-productDiagnose` |
+| 接口 ID | `doudian.shop.shop.productDiagnose` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/productDiagnose` |

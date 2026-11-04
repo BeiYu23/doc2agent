@@ -1,11 +1,12 @@
-# gis.serviceArea.sync
+# 同步服务范围数据
 
-> 同步服务范围数据
+> gis.serviceArea.sync — 同步服务范围数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.gis.serviceArea.sync` |
 | 中文名 | 同步服务范围数据 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-gis-serviceArea-sync` |
+| 接口 ID | `doudian.logistics-provider.gis.serviceArea.sync` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/gis/serviceArea/sync` |

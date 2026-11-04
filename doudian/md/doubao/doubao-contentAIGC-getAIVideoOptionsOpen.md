@@ -1,11 +1,12 @@
-# contentAIGC.getAIVideoOptionsOpen
+# 查询商品成片配置选项
 
-> 查询商品成片配置选项
+> contentAIGC.getAIVideoOptionsOpen — 查询商品成片配置选项
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.doubao.contentAIGC.getAIVideoOptionsOpen` |
 | 中文名 | 查询商品成片配置选项 |
+| 文档地址 | `/docs/doudian/doubao/doubao-contentAIGC-getAIVideoOptionsOpen` |
+| 接口 ID | `doudian.doubao.contentAIGC.getAIVideoOptionsOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/getAIVideoOptionsOpen` |

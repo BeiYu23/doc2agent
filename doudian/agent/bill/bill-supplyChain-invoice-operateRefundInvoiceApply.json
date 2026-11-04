@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.supplyChain.invoice.operateRefundInvoiceApply",
+  "cnName": "红字确认单上传",
+  "docUrl": "/docs/doudian/bill/bill-supplyChain-invoice-operateRefundInvoiceApply",
+  "name": "supplyChain.invoice.operateRefundInvoiceApply",
   "platform": "doudian",
   "group": "bill",
-  "name": "supplyChain.invoice.operateRefundInvoiceApply",
   "description": "红字确认单上传",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -242,6 +244,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/7999",
   "updatedAt": "2026-04-23",
-  "_file_stem": "bill-supplyChain-invoice-operateRefundInvoiceApply",
-  "cnName": "红字确认单上传"
+  "_file_stem": "bill-supplyChain-invoice-operateRefundInvoiceApply"
 }

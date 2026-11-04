@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.getEnterContracts",
+  "cnName": "获取入驻需要签署的合同信息",
+  "docUrl": "/docs/doudian/shop/shop-shop-getEnterContracts",
+  "name": "shop.getEnterContracts",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.getEnterContracts",
   "description": "获取入驻需要签署的合同信息",
   "method": "GET",
   "path": "/shop/getEnterContracts",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/653",
   "updatedAt": "2021-07-05",
-  "_file_stem": "shop-shop-getEnterContracts",
-  "cnName": "获取入驻需要签署的合同信息"
+  "_file_stem": "shop-shop-getEnterContracts"
 }

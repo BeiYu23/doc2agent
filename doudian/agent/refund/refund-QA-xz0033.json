@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.QA.xz0033",
+  "cnName": "（xz0033）",
+  "docUrl": "/docs/doudian/refund/refund-QA-xz0033",
+  "name": "QA.xz0033",
   "platform": "doudian",
   "group": "refund",
-  "name": "QA.xz0033",
   "description": "6666",
   "method": "GET",
   "path": "/QA/xz0033",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/2510",
   "updatedAt": "2022-09-17",
-  "_file_stem": "refund-QA-xz0033",
-  "cnName": "（xz0033）"
+  "_file_stem": "refund-QA-xz0033"
 }

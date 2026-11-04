@@ -1,11 +1,12 @@
-# opptyProduct.clue
+# 机会品线索触达
 
-> 机会品线索触达
+> opptyProduct.clue — 机会品线索触达
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.opptyProduct.clue` |
 | 中文名 | 机会品线索触达 |
+| 文档地址 | `/docs/doudian/product/product-opptyProduct-clue` |
+| 接口 ID | `doudian.product.opptyProduct.clue` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/opptyProduct/clue` |

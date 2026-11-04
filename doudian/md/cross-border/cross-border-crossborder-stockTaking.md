@@ -1,11 +1,12 @@
-# crossborder.stockTaking
+# 库存盘点回告
 
-> 库存盘点回告
+> crossborder.stockTaking — 库存盘点回告
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossborder.stockTaking` |
 | 中文名 | 库存盘点回告 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossborder-stockTaking` |
+| 接口 ID | `doudian.cross-border.crossborder.stockTaking` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/stockTaking` |

@@ -1,11 +1,12 @@
-# test.xz008
+# 笑死我啦哈哈哈
 
-> 笑死我啦哈哈哈
+> test.xz008 — 笑死我啦哈哈哈
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.test.xz008` |
 | 中文名 | 笑死我啦哈哈哈 |
+| 文档地址 | `/docs/doudian/product/product-test-xz008` |
+| 接口 ID | `doudian.product.test.xz008` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/xz008` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.fuwu.template.add",
+  "cnName": "创建或编辑内容模版服务",
+  "docUrl": "/docs/doudian/creative/creative-fuwu-template-add",
+  "name": "fuwu.template.add",
   "platform": "doudian",
   "group": "creative",
-  "name": "fuwu.template.add",
   "description": "创建或编辑内容模版服务",
   "method": "GET",
   "path": "/fuwu/template/add",
@@ -312,6 +314,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4198",
   "updatedAt": "2024-01-03",
-  "_file_stem": "creative-fuwu-template-add",
-  "cnName": "创建或编辑内容模版服务"
+  "_file_stem": "creative-fuwu-template-add"
 }

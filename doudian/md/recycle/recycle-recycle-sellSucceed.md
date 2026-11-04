@@ -1,11 +1,12 @@
-# recycle.sellSucceed
+# 寄售成功
 
-> 寄售成功
+> recycle.sellSucceed — 寄售成功
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.sellSucceed` |
 | 中文名 | 寄售成功 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-sellSucceed` |
+| 接口 ID | `doudian.recycle.recycle.sellSucceed` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sellSucceed` |

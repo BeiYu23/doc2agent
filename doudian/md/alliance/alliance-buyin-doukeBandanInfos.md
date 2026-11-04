@@ -1,11 +1,12 @@
-# buyin.doukeBandanInfos
+# 抖客获取搬单订单信息
 
-> 抖客获取搬单订单信息
+> buyin.doukeBandanInfos — 抖客获取搬单订单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukeBandanInfos` |
 | 中文名 | 抖客获取搬单订单信息 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukeBandanInfos` |
+| 接口 ID | `doudian.alliance.buyin.doukeBandanInfos` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukeBandanInfos` |

@@ -1,11 +1,12 @@
-# shop.prodOrderCntDiagnose
+# 商品维度订单量诊断
 
-> 商品维度订单量诊断
+> shop.prodOrderCntDiagnose — 商品维度订单量诊断
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.shop.prodOrderCntDiagnose` |
 | 中文名 | 商品维度订单量诊断 |
+| 文档地址 | `/docs/doudian/product/product-shop-prodOrderCntDiagnose` |
+| 接口 ID | `doudian.product.shop.prodOrderCntDiagnose` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/prodOrderCntDiagnose` |

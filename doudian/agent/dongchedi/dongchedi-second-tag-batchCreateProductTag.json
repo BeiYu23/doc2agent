@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.tag.batchCreateProductTag",
+  "cnName": "【二方接口】商品批量打标",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-tag-batchCreateProductTag",
+  "name": "second.tag.batchCreateProductTag",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.tag.batchCreateProductTag",
   "description": "【二方接口】商品批量打标",
   "method": "GET",
   "path": "/second/tag/batchCreateProductTag",
@@ -181,6 +183,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6943",
   "updatedAt": "2024-10-15",
-  "_file_stem": "dongchedi-second-tag-batchCreateProductTag",
-  "cnName": "【二方接口】商品批量打标"
+  "_file_stem": "dongchedi-second-tag-batchCreateProductTag"
 }

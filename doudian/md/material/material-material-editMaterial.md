@@ -1,11 +1,12 @@
-# material.editMaterial
+# 编辑素材
 
-> 编辑素材
+> material.editMaterial — 编辑素材
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.editMaterial` |
 | 中文名 | 编辑素材 |
+| 文档地址 | `/docs/doudian/material/material-material-editMaterial` |
+| 接口 ID | `doudian.material.material.editMaterial` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/editMaterial` |

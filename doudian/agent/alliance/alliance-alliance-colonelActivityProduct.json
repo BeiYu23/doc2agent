@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.colonelActivityProduct",
+  "cnName": "活动商品查询",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-colonelActivityProduct",
+  "name": "alliance.colonelActivityProduct",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.colonelActivityProduct",
   "description": "活动商品查询接口",
   "method": "GET",
   "path": "/alliance/colonelActivityProduct",
@@ -268,6 +270,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/968",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-alliance-colonelActivityProduct",
-  "cnName": "活动商品查询"
+  "_file_stem": "alliance-alliance-colonelActivityProduct"
 }

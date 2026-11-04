@@ -1,11 +1,12 @@
-# instantShopping.marketing.listActivities
+# 查询活动列表
 
-> 查询活动列表
+> instantShopping.marketing.listActivities — 查询活动列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listActivities` |
 | 中文名 | 查询活动列表 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listActivities` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.listActivities` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

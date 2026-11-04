@@ -1,11 +1,12 @@
-# logistics.majorAppliances.GetUserRealPhone
+# 获取用户真实手机号
 
-> 获取用户真实手机号
+> logistics.majorAppliances.GetUserRealPhone — 获取用户真实手机号
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.logistics.majorAppliances.GetUserRealPhone` |
 | 中文名 | 获取用户真实手机号 |
+| 文档地址 | `/docs/doudian/industry/industry-logistics-majorAppliances-GetUserRealPhone` |
+| 接口 ID | `doudian.industry.logistics.majorAppliances.GetUserRealPhone` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

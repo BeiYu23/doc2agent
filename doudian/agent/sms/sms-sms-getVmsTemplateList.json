@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.getVmsTemplateList",
+  "cnName": "获取视频短信模板list",
+  "docUrl": "/docs/doudian/sms/sms-sms-getVmsTemplateList",
+  "name": "sms.getVmsTemplateList",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.getVmsTemplateList",
   "description": "获取视频短信模板list",
   "method": "GET",
   "path": "/sms/getVmsTemplateList",
@@ -201,6 +203,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/4017",
   "updatedAt": "2026-04-20",
-  "_file_stem": "sms-sms-getVmsTemplateList",
-  "cnName": "获取视频短信模板list"
+  "_file_stem": "sms-sms-getVmsTemplateList"
 }

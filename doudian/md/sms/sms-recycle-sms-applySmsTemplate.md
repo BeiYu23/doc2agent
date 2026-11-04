@@ -1,11 +1,12 @@
-# recycle.sms.applySmsTemplate
+# 申请短信模板
 
-> 申请短信模板
+> recycle.sms.applySmsTemplate — 申请短信模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.recycle.sms.applySmsTemplate` |
 | 中文名 | 申请短信模板 |
+| 文档地址 | `/docs/doudian/sms/sms-recycle-sms-applySmsTemplate` |
+| 接口 ID | `doudian.sms.recycle.sms.applySmsTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sms/applySmsTemplate` |

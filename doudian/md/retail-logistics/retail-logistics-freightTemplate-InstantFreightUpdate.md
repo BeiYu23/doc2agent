@@ -1,11 +1,12 @@
-# freightTemplate.InstantFreightUpdate
+# 即时零售运费模板更新
 
-> 即时零售运费模板更新接口
+> freightTemplate.InstantFreightUpdate — 即时零售运费模板更新接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.freightTemplate.InstantFreightUpdate` |
 | 中文名 | 即时零售运费模板更新 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-freightTemplate-InstantFreightUpdate` |
+| 接口 ID | `doudian.retail-logistics.freightTemplate.InstantFreightUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

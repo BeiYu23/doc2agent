@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.trace.checkShop",
+  "cnName": "订单链路监控检查用户是否开通",
+  "docUrl": "/docs/doudian/order/order-trace-checkShop",
+  "name": "trace.checkShop",
   "platform": "doudian",
   "group": "order",
-  "name": "trace.checkShop",
   "description": "订单链路监控检查用户是否开通",
   "method": "GET",
   "path": "/trace/checkShop",
@@ -90,6 +92,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2795",
   "updatedAt": "2022-12-13",
-  "_file_stem": "order-trace-checkShop",
-  "cnName": "订单链路监控检查用户是否开通"
+  "_file_stem": "order-trace-checkShop"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.insurance.order.insurance",
+  "cnName": "根据订单ID",
+  "docUrl": "/docs/doudian/insurance/insurance-order-insurance",
+  "name": "order.insurance",
   "platform": "doudian",
   "group": "insurance",
-  "name": "order.insurance",
   "description": "根据订单ID，获取该订单对应的运费险保单的详细信息；\n1、status<=1&status=5的情况下ins_ensured_time_begin、ins_ensured_time_end没有意义（返回的是默认时间\"1754-08-31 06:49:25\"",
   "method": "GET",
   "path": "/order/insurance",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/32/626",
   "updatedAt": "2021-06-23",
-  "_file_stem": "insurance-order-insurance",
-  "cnName": "根据订单ID"
+  "_file_stem": "insurance-order-insurance"
 }

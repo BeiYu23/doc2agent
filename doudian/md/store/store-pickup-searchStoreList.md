@@ -1,11 +1,12 @@
-# pickup.searchStoreList
+# 门店列表搜索
 
-> 门店列表搜索
+> pickup.searchStoreList — 门店列表搜索
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.store.pickup.searchStoreList` |
 | 中文名 | 门店列表搜索 |
+| 文档地址 | `/docs/doudian/store/store-pickup-searchStoreList` |
+| 接口 ID | `doudian.store.pickup.searchStoreList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/searchStoreList` |

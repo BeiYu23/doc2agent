@@ -1,11 +1,12 @@
-# marketing.disableActivity
+# 失效营销玩法
 
-> 失效营销玩法
+> marketing.disableActivity — 失效营销玩法
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.disableActivity` |
 | 中文名 | 失效营销玩法 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-disableActivity` |
+| 接口 ID | `doudian.marketing.marketing.disableActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/disableActivity` |

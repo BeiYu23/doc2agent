@@ -1,11 +1,12 @@
-# pigeon.workOrderNotify
+# 更新或者存储工单
 
-> 更新或者存储工单
+> pigeon.workOrderNotify — 更新或者存储工单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.workOrderNotify` |
 | 中文名 | 更新或者存储工单 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-workOrderNotify` |
+| 接口 ID | `doudian.feige.pigeon.workOrderNotify` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/workOrderNotify` |

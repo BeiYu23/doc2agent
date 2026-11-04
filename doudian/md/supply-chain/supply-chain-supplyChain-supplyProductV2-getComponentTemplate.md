@@ -1,11 +1,12 @@
-# supplyChain.supplyProductV2.getComponentTemplate
+# 分页查询模板列表
 
-> 分页查询模板列表
+> supplyChain.supplyProductV2.getComponentTemplate — 分页查询模板列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.getComponentTemplate` |
 | 中文名 | 分页查询模板列表 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-getComponentTemplate` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.getComponentTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

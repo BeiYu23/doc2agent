@@ -1,11 +1,12 @@
-# openCloud.v1.imageVersion.list
+# 查询镜像列表
 
-> 查询镜像列表
+> openCloud.v1.imageVersion.list — 查询镜像列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.v1.imageVersion.list` |
 | 中文名 | 查询镜像列表 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-v1-imageVersion-list` |
+| 接口 ID | `doudian.cloud.openCloud.v1.imageVersion.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/imageVersion/list` |

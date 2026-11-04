@@ -1,11 +1,12 @@
-# sku.syncStock
+# 全量/增量更新商品sku库存
 
-> 全量/增量更新商品sku库存
+> sku.syncStock — 全量/增量更新商品sku库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.sku.syncStock` |
 | 中文名 | 全量/增量更新商品sku库存 |
+| 文档地址 | `/docs/doudian/stock/stock-sku-syncStock` |
+| 接口 ID | `doudian.stock.sku.syncStock` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/syncStock` |

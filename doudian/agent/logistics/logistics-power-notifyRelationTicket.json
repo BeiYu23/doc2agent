@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.notifyRelationTicket",
+  "cnName": "物流商关联工单推送（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-notifyRelationTicket",
+  "name": "power.notifyRelationTicket",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.notifyRelationTicket",
   "description": "物流商关联工单推送（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/notifyRelationTicket",
@@ -220,6 +222,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1560",
   "updatedAt": "2021-12-27",
-  "_file_stem": "logistics-power-notifyRelationTicket",
-  "cnName": "物流商关联工单推送（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-notifyRelationTicket"
 }

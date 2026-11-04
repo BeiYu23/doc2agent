@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.liveShareCommandParse",
+  "cnName": "解析分销直播间口令",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-liveShareCommandParse",
+  "name": "buyin.liveShareCommandParse",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.liveShareCommandParse",
   "description": "解析分销直播间口令",
   "method": "GET",
   "path": "/buyin/liveShareCommandParse",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2282",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-liveShareCommandParse",
-  "cnName": "解析分销直播间口令"
+  "_file_stem": "alliance-buyin-liveShareCommandParse"
 }

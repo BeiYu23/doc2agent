@@ -1,11 +1,12 @@
-# order.deliverTimeChangeTaskInfo
+# 查询延迟发货审核单信息
 
-> 查询延迟发货审核单信息
+> order.deliverTimeChangeTaskInfo — 查询延迟发货审核单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.deliverTimeChangeTaskInfo` |
 | 中文名 | 查询延迟发货审核单信息 |
+| 文档地址 | `/docs/doudian/order/order-order-deliverTimeChangeTaskInfo` |
+| 接口 ID | `doudian.order.order.deliverTimeChangeTaskInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/deliverTimeChangeTaskInfo` |

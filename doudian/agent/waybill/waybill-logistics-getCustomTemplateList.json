@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.getCustomTemplateList",
+  "cnName": "查询商家自定义区模板（新版",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-getCustomTemplateList",
+  "name": "logistics.getCustomTemplateList",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.getCustomTemplateList",
   "description": "查询商家自定义区模板（新版）",
   "method": "GET",
   "path": "/logistics/getCustomTemplateList",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1852",
   "updatedAt": "2021-08-19",
-  "_file_stem": "waybill-logistics-getCustomTemplateList",
-  "cnName": "查询商家自定义区模板（新版"
+  "_file_stem": "waybill-logistics-getCustomTemplateList"
 }

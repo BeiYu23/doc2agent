@@ -1,11 +1,12 @@
-# supplyChain.CouponCard
+# 跨境自营店铺首页优惠券卡片
 
-> 跨境自营店铺首页优惠券卡片
+> supplyChain.CouponCard — 跨境自营店铺首页优惠券卡片
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.CouponCard` |
 | 中文名 | 跨境自营店铺首页优惠券卡片 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-CouponCard` |
+| 接口 ID | `doudian.shop.supplyChain.CouponCard` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/CouponCard` |

@@ -1,11 +1,12 @@
-# microapp.GetStaticFileUrlBatch
+# ISV批量兑换文件url
 
-> ISV批量兑换文件url
+> microapp.GetStaticFileUrlBatch — ISV批量兑换文件url
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.microapp.GetStaticFileUrlBatch` |
 | 中文名 | ISV批量兑换文件url |
+| 文档地址 | `/docs/doudian/material/material-microapp-GetStaticFileUrlBatch` |
+| 接口 ID | `doudian.material.microapp.GetStaticFileUrlBatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/microapp/GetStaticFileUrlBatch` |

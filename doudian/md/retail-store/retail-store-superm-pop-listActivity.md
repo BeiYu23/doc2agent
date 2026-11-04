@@ -1,11 +1,12 @@
-# superm.pop.listActivity
+# 查看小时达活动列表
 
-> 查看小时达活动列表
+> superm.pop.listActivity — 查看小时达活动列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.listActivity` |
 | 中文名 | 查看小时达活动列表 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-listActivity` |
+| 接口 ID | `doudian.retail-store.superm.pop.listActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/listActivity` |

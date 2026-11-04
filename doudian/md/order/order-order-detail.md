@@ -1,11 +1,12 @@
-# order.detail
+# 获取订单
 
-> 获取订单详情（6.30下线建议替换/order/orderDetail接口）
+> order.detail — 获取订单详情（6.30下线建议替换/order/orderDetail接口）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.detail` |
 | 中文名 | 获取订单 |
+| 文档地址 | `/docs/doudian/order/order-order-detail` |
+| 接口 ID | `doudian.order.order.detail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/detail` |

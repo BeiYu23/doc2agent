@@ -1,11 +1,12 @@
-# superm.getDispatcherInfo
+# 运力呼叫询价/取消呼叫询价（正向
 
-> 运力呼叫询价/取消呼叫询价（正向）
+> superm.getDispatcherInfo — 运力呼叫询价/取消呼叫询价（正向）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.superm.getDispatcherInfo` |
 | 中文名 | 运力呼叫询价/取消呼叫询价（正向 |
+| 文档地址 | `/docs/doudian/logistics/logistics-superm-getDispatcherInfo` |
+| 接口 ID | `doudian.logistics.superm.getDispatcherInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getDispatcherInfo` |

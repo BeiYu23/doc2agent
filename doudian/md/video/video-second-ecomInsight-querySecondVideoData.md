@@ -1,11 +1,12 @@
-# second.ecomInsight.querySecondVideoData
+# 获取秒级追踪数据
 
-> 获取秒级追踪数据
+> second.ecomInsight.querySecondVideoData — 获取秒级追踪数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.querySecondVideoData` |
 | 中文名 | 获取秒级追踪数据 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-querySecondVideoData` |
+| 接口 ID | `doudian.video.second.ecomInsight.querySecondVideoData` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

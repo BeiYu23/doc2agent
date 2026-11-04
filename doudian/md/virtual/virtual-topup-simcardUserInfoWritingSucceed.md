@@ -1,11 +1,12 @@
-# topup.simcardUserInfoWritingSucceed
+# 号卡商品用户信息补录完成回调
 
-> 号卡商品用户信息补录完成回调
+> topup.simcardUserInfoWritingSucceed — 号卡商品用户信息补录完成回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.topup.simcardUserInfoWritingSucceed` |
 | 中文名 | 号卡商品用户信息补录完成回调 |
+| 文档地址 | `/docs/doudian/virtual/virtual-topup-simcardUserInfoWritingSucceed` |
+| 接口 ID | `doudian.virtual.topup.simcardUserInfoWritingSucceed` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/simcardUserInfoWritingSucceed` |

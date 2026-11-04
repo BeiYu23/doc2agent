@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-order.retail.order.getOrder",
+  "cnName": "【即时零售】订单详情查询",
+  "docUrl": "/docs/doudian/retail-order/retail-order-retail-order-getOrder",
+  "name": "retail.order.getOrder",
   "platform": "doudian",
   "group": "retail-order",
-  "name": "retail.order.getOrder",
   "description": "【即时零售】订单详情查询",
   "method": "GET",
   "path": "/retail/order/getOrder",
@@ -1025,6 +1027,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1531/6727",
   "updatedAt": "2025-11-27",
-  "_file_stem": "retail-order-retail-order-getOrder",
-  "cnName": "【即时零售】订单详情查询"
+  "_file_stem": "retail-order-retail-order-getOrder"
 }

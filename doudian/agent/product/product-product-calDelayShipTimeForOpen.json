@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.calDelayShipTimeForOpen",
+  "cnName": "发货时效规则预览",
+  "docUrl": "/docs/doudian/product/product-product-calDelayShipTimeForOpen",
+  "name": "product.calDelayShipTimeForOpen",
   "platform": "doudian",
   "group": "product",
-  "name": "product.calDelayShipTimeForOpen",
   "description": "发货时效规则预览",
   "method": "GET",
   "path": "/product/calDelayShipTimeForOpen",
@@ -1783,6 +1785,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8066",
   "updatedAt": "2026-01-29",
-  "_file_stem": "product-product-calDelayShipTimeForOpen",
-  "cnName": "发货时效规则预览"
+  "_file_stem": "product-product-calDelayShipTimeForOpen"
 }

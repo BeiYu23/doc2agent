@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.batchUpdate",
+  "cnName": "会员数据更新",
+  "docUrl": "/docs/doudian/member/member-member-batchUpdate",
+  "name": "member.batchUpdate",
   "platform": "doudian",
   "group": "member",
-  "name": "member.batchUpdate",
   "description": "会员数据更新接口",
   "method": "GET",
   "path": "/member/batchUpdate",
@@ -265,6 +267,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/329",
   "updatedAt": "2024-07-22",
-  "_file_stem": "member-member-batchUpdate",
-  "cnName": "会员数据更新"
+  "_file_stem": "member-member-batchUpdate"
 }

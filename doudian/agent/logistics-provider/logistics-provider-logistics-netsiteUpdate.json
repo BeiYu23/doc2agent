@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.netsiteUpdate",
+  "cnName": "网点信息更新（新网关",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-netsiteUpdate",
+  "name": "logistics.netsiteUpdate",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.netsiteUpdate",
   "description": "网点信息更新（新网关）",
   "method": "GET",
   "path": "/logistics/netsiteUpdate",
@@ -288,6 +290,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6935",
   "updatedAt": "2024-10-15",
-  "_file_stem": "logistics-provider-logistics-netsiteUpdate",
-  "cnName": "网点信息更新（新网关"
+  "_file_stem": "logistics-provider-logistics-netsiteUpdate"
 }

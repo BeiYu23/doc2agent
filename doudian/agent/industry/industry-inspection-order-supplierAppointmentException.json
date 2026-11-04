@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.order.supplierAppointmentException",
+  "cnName": "服务商预约异常",
+  "docUrl": "/docs/doudian/industry/industry-inspection-order-supplierAppointmentException",
+  "name": "inspection.order.supplierAppointmentException",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.order.supplierAppointmentException",
   "description": "服务商预约异常",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -99,6 +101,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8323",
   "updatedAt": "2026-05-21",
-  "_file_stem": "industry-inspection-order-supplierAppointmentException",
-  "cnName": "服务商预约异常"
+  "_file_stem": "industry-inspection-order-supplierAppointmentException"
 }

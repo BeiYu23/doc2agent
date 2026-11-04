@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.valueAddedOrderCallBack",
+  "cnName": "WMS回传增值服务单数据",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-valueAddedOrderCallBack",
+  "name": "yunc.valueAddedOrderCallBack",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.valueAddedOrderCallBack",
   "description": "WMS回传增值服务单数据",
   "method": "GET",
   "path": "/yunc/valueAddedOrderCallBack",
@@ -175,6 +177,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2536",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-valueAddedOrderCallBack",
-  "cnName": "WMS回传增值服务单数据"
+  "_file_stem": "warehouse-yunc-valueAddedOrderCallBack"
 }

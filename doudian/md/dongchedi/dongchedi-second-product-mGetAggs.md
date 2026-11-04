@@ -1,11 +1,12 @@
-# second.product.mGetAggs
+# 【二方接口】获取评价信息
 
-> 【二方接口】获取评价信息
+> second.product.mGetAggs — 【二方接口】获取评价信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.product.mGetAggs` |
 | 中文名 | 【二方接口】获取评价信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-product-mGetAggs` |
+| 接口 ID | `doudian.dongchedi.second.product.mGetAggs` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/mGetAggs` |

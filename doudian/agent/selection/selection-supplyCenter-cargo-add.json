@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.cargo.add",
+  "cnName": "精选货源平台上传货品",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-cargo-add",
+  "name": "supplyCenter.cargo.add",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.cargo.add",
   "description": "精选货源平台上传货品",
   "method": "GET",
   "path": "/supplyCenter/cargo/add",
@@ -811,6 +813,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5331",
   "updatedAt": "2023-11-03",
-  "_file_stem": "selection-supplyCenter-cargo-add",
-  "cnName": "精选货源平台上传货品"
+  "_file_stem": "selection-supplyCenter-cargo-add"
 }

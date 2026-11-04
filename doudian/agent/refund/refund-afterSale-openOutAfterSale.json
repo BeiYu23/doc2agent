@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.openOutAfterSale",
+  "cnName": "打开超售后入口",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-openOutAfterSale",
+  "name": "afterSale.openOutAfterSale",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.openOutAfterSale",
   "description": "打开超售后入口",
   "method": "GET",
   "path": "/afterSale/openOutAfterSale",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/339",
   "updatedAt": "2021-03-25",
-  "_file_stem": "refund-afterSale-openOutAfterSale",
-  "cnName": "打开超售后入口"
+  "_file_stem": "refund-afterSale-openOutAfterSale"
 }

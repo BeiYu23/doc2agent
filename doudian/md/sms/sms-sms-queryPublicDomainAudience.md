@@ -1,11 +1,12 @@
-# sms.queryPublicDomainAudience
+# 查询公域标签圈选的人群包
 
-> 查询公域标签圈选的人群包
+> sms.queryPublicDomainAudience — 查询公域标签圈选的人群包
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.queryPublicDomainAudience` |
 | 中文名 | 查询公域标签圈选的人群包 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-queryPublicDomainAudience` |
+| 接口 ID | `doudian.sms.sms.queryPublicDomainAudience` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/queryPublicDomainAudience` |

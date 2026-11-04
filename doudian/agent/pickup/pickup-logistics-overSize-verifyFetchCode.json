@@ -1,8 +1,10 @@
 {
   "id": "doudian.pickup.logistics.overSize.verifyFetchCode",
+  "cnName": "大件取件码核销",
+  "docUrl": "/docs/doudian/pickup/pickup-logistics-overSize-verifyFetchCode",
+  "name": "logistics.overSize.verifyFetchCode",
   "platform": "doudian",
   "group": "pickup",
-  "name": "logistics.overSize.verifyFetchCode",
   "description": "大件取件码核销",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1526/6709",
   "updatedAt": "2024-07-19",
-  "_file_stem": "pickup-logistics-overSize-verifyFetchCode",
-  "cnName": "大件取件码核销"
+  "_file_stem": "pickup-logistics-overSize-verifyFetchCode"
 }

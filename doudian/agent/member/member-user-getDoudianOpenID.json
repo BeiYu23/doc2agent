@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.user.getDoudianOpenID",
+  "cnName": "获取抖店用户唯一标识",
+  "docUrl": "/docs/doudian/member/member-user-getDoudianOpenID",
+  "name": "user.getDoudianOpenID",
   "platform": "doudian",
   "group": "member",
-  "name": "user.getDoudianOpenID",
   "description": "获取抖店用户唯一标识",
   "method": "GET",
   "path": "/user/getDoudianOpenID",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1466",
   "updatedAt": "2021-11-17",
-  "_file_stem": "member-user-getDoudianOpenID",
-  "cnName": "获取抖店用户唯一标识"
+  "_file_stem": "member-user-getDoudianOpenID"
 }

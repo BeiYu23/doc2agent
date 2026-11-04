@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.appIpWhiteListAdd",
+  "cnName": "新增应用ip白名单",
+  "docUrl": "/docs/doudian/tool/tool-open-appIpWhiteListAdd",
+  "name": "open.appIpWhiteListAdd",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.appIpWhiteListAdd",
   "description": "新增应用ip白名单",
   "method": "GET",
   "path": "/open/appIpWhiteListAdd",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/1818",
   "updatedAt": "2022-05-06",
-  "_file_stem": "tool-open-appIpWhiteListAdd",
-  "cnName": "新增应用ip白名单"
+  "_file_stem": "tool-open-appIpWhiteListAdd"
 }

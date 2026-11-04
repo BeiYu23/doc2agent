@@ -1,11 +1,12 @@
-# logistics.getDesignTemplateList
+# 查询商家自定义模板（新版
 
-> 查询商家自定义模板（新版）
+> logistics.getDesignTemplateList — 查询商家自定义模板（新版）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.getDesignTemplateList` |
 | 中文名 | 查询商家自定义模板（新版 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-getDesignTemplateList` |
+| 接口 ID | `doudian.waybill.logistics.getDesignTemplateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getDesignTemplateList` |

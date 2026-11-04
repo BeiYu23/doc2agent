@@ -1,11 +1,12 @@
-# install.order.supplierDispatch
+# 服务商已派单
 
-> 服务商已派单
+> install.order.supplierDispatch — 服务商已派单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.supplierDispatch` |
 | 中文名 | 服务商已派单 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-supplierDispatch` |
+| 接口 ID | `doudian.logistics-provider.install.order.supplierDispatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierDispatch` |

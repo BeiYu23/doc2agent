@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.getCatePropertyV2",
+  "cnName": "调用【/product/addV2】创建商品和…",
+  "docUrl": "/docs/doudian/product/product-product-getCatePropertyV2",
+  "name": "product.getCatePropertyV2",
   "platform": "doudian",
   "group": "product",
-  "name": "product.getCatePropertyV2",
   "description": "1、调用【/product/addV2】创建商品和【/product/editV2】更新商品时，请求参数【product_format_new】字段需传入。",
   "method": "GET",
   "path": "/product/getCatePropertyV2",
@@ -293,6 +295,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1373",
   "updatedAt": "2026-05-22",
-  "_file_stem": "product-product-getCatePropertyV2",
-  "cnName": "调用【/product/addV2】创建商品和…"
+  "_file_stem": "product-product-getCatePropertyV2"
 }

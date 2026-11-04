@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.bindTrafficDrivingParams",
+  "cnName": "绑定引流链接",
+  "docUrl": "/docs/doudian/sms/sms-sms-bindTrafficDrivingParams",
+  "name": "sms.bindTrafficDrivingParams",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.bindTrafficDrivingParams",
   "description": "绑定引流链接",
   "method": "GET",
   "path": "/sms/bindTrafficDrivingParams",
@@ -131,6 +133,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/8548",
   "updatedAt": "2026-09-03",
-  "_file_stem": "sms-sms-bindTrafficDrivingParams",
-  "cnName": "绑定引流链接"
+  "_file_stem": "sms-sms-bindTrafficDrivingParams"
 }

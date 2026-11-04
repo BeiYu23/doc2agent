@@ -1,11 +1,12 @@
-# mini.riskCheck
+# 人群灰产判断使用
 
-> 人群灰产判断使用
+> mini.riskCheck — 人群灰产判断使用
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.riskCheck` |
 | 中文名 | 人群灰产判断使用 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-riskCheck` |
+| 接口 ID | `doudian.miniapp.mini.riskCheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/riskCheck` |

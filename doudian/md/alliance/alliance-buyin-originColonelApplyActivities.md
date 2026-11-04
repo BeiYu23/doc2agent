@@ -1,11 +1,12 @@
-# buyin.originColonelApplyActivities
+# 团长报名二级团长活动
 
-> 团长报名二级团长活动
+> buyin.originColonelApplyActivities — 团长报名二级团长活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.originColonelApplyActivities` |
 | 中文名 | 团长报名二级团长活动 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-originColonelApplyActivities` |
+| 接口 ID | `doudian.alliance.buyin.originColonelApplyActivities` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/originColonelApplyActivities` |

@@ -1,11 +1,12 @@
-# yunc.QuerySnDetail
+# 查询sn码细节
 
-> 查询sn码细节
+> yunc.QuerySnDetail — 查询sn码细节
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.QuerySnDetail` |
 | 中文名 | 查询sn码细节 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-QuerySnDetail` |
+| 接口 ID | `doudian.warehouse.yunc.QuerySnDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/QuerySnDetail` |

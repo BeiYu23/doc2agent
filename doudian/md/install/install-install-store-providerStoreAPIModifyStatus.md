@@ -1,11 +1,12 @@
-# install.store.providerStoreAPIModifyStatus
+# 到店安装门店状态修改
 
-> 到店安装门店状态修改
+> install.store.providerStoreAPIModifyStatus — 到店安装门店状态修改
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.providerStoreAPIModifyStatus` |
 | 中文名 | 到店安装门店状态修改 |
+| 文档地址 | `/docs/doudian/install/install-install-store-providerStoreAPIModifyStatus` |
+| 接口 ID | `doudian.install.install.store.providerStoreAPIModifyStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAPIModifyStatus` |

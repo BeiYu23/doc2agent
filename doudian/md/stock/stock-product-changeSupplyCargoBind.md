@@ -1,11 +1,12 @@
-# product.changeSupplyCargoBind
+# 变更库存供给关系
 
-> 变更库存供给关系
+> product.changeSupplyCargoBind — 变更库存供给关系
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.product.changeSupplyCargoBind` |
 | 中文名 | 变更库存供给关系 |
+| 文档地址 | `/docs/doudian/stock/stock-product-changeSupplyCargoBind` |
+| 接口 ID | `doudian.stock.product.changeSupplyCargoBind` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/changeSupplyCargoBind` |

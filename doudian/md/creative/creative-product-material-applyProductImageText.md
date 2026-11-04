@@ -1,11 +1,12 @@
-# product.material.applyProductImageText
+# 元图文创意发布
 
-> 元图文创意发布
+> product.material.applyProductImageText — 元图文创意发布
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.creative.product.material.applyProductImageText` |
 | 中文名 | 元图文创意发布 |
+| 文档地址 | `/docs/doudian/creative/creative-product-material-applyProductImageText` |
+| 接口 ID | `doudian.creative.product.material.applyProductImageText` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

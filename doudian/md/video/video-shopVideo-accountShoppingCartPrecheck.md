@@ -1,11 +1,12 @@
-# shopVideo.accountShoppingCartPrecheck
+# 挂车视频预校验
 
-> 挂车视频预校验接口
+> shopVideo.accountShoppingCartPrecheck — 挂车视频预校验接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.accountShoppingCartPrecheck` |
 | 中文名 | 挂车视频预校验 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-accountShoppingCartPrecheck` |
+| 接口 ID | `doudian.video.shopVideo.accountShoppingCartPrecheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/accountShoppingCartPrecheck` |

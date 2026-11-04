@@ -1,11 +1,12 @@
-# product.qualityDetail
+# 商品信息质量分查询
 
-> 商品信息质量分查询API
+> product.qualityDetail — 商品信息质量分查询API
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.qualityDetail` |
 | 中文名 | 商品信息质量分查询 |
+| 文档地址 | `/docs/doudian/product/product-product-qualityDetail` |
+| 接口 ID | `doudian.product.product.qualityDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/qualityDetail` |

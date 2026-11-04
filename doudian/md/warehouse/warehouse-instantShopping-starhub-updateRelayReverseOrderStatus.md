@@ -1,11 +1,12 @@
-# instantShopping.starhub.updateRelayReverseOrderStatus
+# 同步逆向接力单状态
 
-> 同步逆向接力单状态
+> instantShopping.starhub.updateRelayReverseOrderStatus — 同步逆向接力单状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.starhub.updateRelayReverseOrderStatus` |
 | 中文名 | 同步逆向接力单状态 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-starhub-updateRelayReverseOrderStatus` |
+| 接口 ID | `doudian.warehouse.instantShopping.starhub.updateRelayReverseOrderStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

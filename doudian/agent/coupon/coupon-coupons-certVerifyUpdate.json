@@ -1,8 +1,10 @@
 {
   "id": "doudian.coupon.coupons.certVerifyUpdate",
+  "cnName": "卡券核销次数更新",
+  "docUrl": "/docs/doudian/coupon/coupon-coupons-certVerifyUpdate",
+  "name": "coupons.certVerifyUpdate",
   "platform": "doudian",
   "group": "coupon",
-  "name": "coupons.certVerifyUpdate",
   "description": "卡券核销次数更新",
   "method": "GET",
   "path": "/coupons/certVerifyUpdate",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/900",
   "updatedAt": "2021-09-08",
-  "_file_stem": "coupon-coupons-certVerifyUpdate",
-  "cnName": "卡券核销次数更新"
+  "_file_stem": "coupon-coupons-certVerifyUpdate"
 }

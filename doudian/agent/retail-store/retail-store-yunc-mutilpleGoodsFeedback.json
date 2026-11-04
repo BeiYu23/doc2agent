@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.yunc.mutilpleGoodsFeedback",
+  "cnName": "无头包裹信息回传",
+  "docUrl": "/docs/doudian/retail-store/retail-store-yunc-mutilpleGoodsFeedback",
+  "name": "yunc.mutilpleGoodsFeedback",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "yunc.mutilpleGoodsFeedback",
   "description": "无头包裹信息回传",
   "method": "GET",
   "path": "/yunc/mutilpleGoodsFeedback",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2655",
   "updatedAt": "2025-12-23",
-  "_file_stem": "retail-store-yunc-mutilpleGoodsFeedback",
-  "cnName": "无头包裹信息回传"
+  "_file_stem": "retail-store-yunc-mutilpleGoodsFeedback"
 }

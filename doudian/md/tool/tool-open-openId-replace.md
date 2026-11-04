@@ -1,11 +1,12 @@
-# open.openId.replace
+# 用于将老openId替换为新openId
 
-> 用于将老openId替换为新openId
+> open.openId.replace — 用于将老openId替换为新openId
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.openId.replace` |
 | 中文名 | 用于将老openId替换为新openId |
+| 文档地址 | `/docs/doudian/tool/tool-open-openId-replace` |
+| 接口 ID | `doudian.tool.open.openId.replace` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/openId/replace` |

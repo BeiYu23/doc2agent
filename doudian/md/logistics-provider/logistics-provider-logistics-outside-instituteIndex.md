@@ -1,11 +1,12 @@
-# logistics.outside.instituteIndex
+# 按照服务商
 
-> 按照服务商、责任地区查询各服务商全国或各省份Top200的责任机构以及对应的责任运单量
+> logistics.outside.instituteIndex — 按照服务商、责任地区查询各服务商全国或各省份Top200的责任机构以及对应的责任运单量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.outside.instituteIndex` |
 | 中文名 | 按照服务商 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-outside-instituteIndex` |
+| 接口 ID | `doudian.logistics-provider.logistics.outside.instituteIndex` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# retail.aftersale.detail
+# 售后
 
-> 售后详情
+> retail.aftersale.detail — 售后详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-refund.retail.aftersale.detail` |
 | 中文名 | 售后 |
+| 文档地址 | `/docs/doudian/retail-refund/retail-refund-retail-aftersale-detail` |
+| 接口 ID | `doudian.retail-refund.retail.aftersale.detail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/retail/aftersale/detail` |

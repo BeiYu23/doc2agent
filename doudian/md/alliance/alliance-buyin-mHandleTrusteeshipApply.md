@@ -1,11 +1,12 @@
-# buyin.mHandleTrusteeshipApply
+# 团长托管商品审核
 
-> 团长托管商品审核
+> buyin.mHandleTrusteeshipApply — 团长托管商品审核
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.mHandleTrusteeshipApply` |
 | 中文名 | 团长托管商品审核 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-mHandleTrusteeshipApply` |
+| 接口 ID | `doudian.alliance.buyin.mHandleTrusteeshipApply` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/mHandleTrusteeshipApply` |

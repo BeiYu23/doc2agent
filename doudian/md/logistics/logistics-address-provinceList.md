@@ -1,11 +1,12 @@
-# address.provinceList
+# 获取省列表
 
-> 获取省列表（6.30下线）
+> address.provinceList — 获取省列表（6.30下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.address.provinceList` |
 | 中文名 | 获取省列表 |
+| 文档地址 | `/docs/doudian/logistics/logistics-address-provinceList` |
+| 接口 ID | `doudian.logistics.address.provinceList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/provinceList` |

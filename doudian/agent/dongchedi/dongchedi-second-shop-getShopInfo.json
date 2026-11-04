@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.shop.getShopInfo",
+  "cnName": "【二方接口】查询店铺信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-shop-getShopInfo",
+  "name": "second.shop.getShopInfo",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.shop.getShopInfo",
   "description": "【二方接口】查询店铺信息",
   "method": "GET",
   "path": "/second/shop/getShopInfo",
@@ -74,6 +76,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6944",
   "updatedAt": "2024-10-15",
-  "_file_stem": "dongchedi-second-shop-getShopInfo",
-  "cnName": "【二方接口】查询店铺信息"
+  "_file_stem": "dongchedi-second-shop-getShopInfo"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.wms.outboundDetailNotify_uat",
+  "cnName": "UAT环境WMS出库回调",
+  "docUrl": "/docs/doudian/warehouse/warehouse-wms-outboundDetailNotify_uat",
+  "name": "wms.outboundDetailNotify_uat",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "wms.outboundDetailNotify_uat",
   "description": "UAT环境WMS出库回调接口",
   "method": "GET",
   "path": "/wms/outboundDetailNotify_uat",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6622",
   "updatedAt": "2024-06-11",
-  "_file_stem": "warehouse-wms-outboundDetailNotify_uat",
-  "cnName": "UAT环境WMS出库回调"
+  "_file_stem": "warehouse-wms-outboundDetailNotify_uat"
 }

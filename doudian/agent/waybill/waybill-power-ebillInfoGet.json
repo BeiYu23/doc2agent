@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.power.ebillInfoGet",
+  "cnName": "面单信息查询接口（明文） （仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/waybill/waybill-power-ebillInfoGet",
+  "name": "power.ebillInfoGet",
   "platform": "doudian",
   "group": "waybill",
-  "name": "power.ebillInfoGet",
   "description": "面单信息查询接口（明文） （仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/ebillInfoGet",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1483",
   "updatedAt": "2024-06-27",
-  "_file_stem": "waybill-power-ebillInfoGet",
-  "cnName": "面单信息查询接口（明文） （仅用于兼容老物流网关"
+  "_file_stem": "waybill-power-ebillInfoGet"
 }

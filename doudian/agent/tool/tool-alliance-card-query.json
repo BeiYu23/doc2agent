@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.alliance.card.query",
+  "cnName": "查询达人选品车商品",
+  "docUrl": "/docs/doudian/tool/tool-alliance-card-query",
+  "name": "alliance.card.query",
   "platform": "doudian",
   "group": "tool",
-  "name": "alliance.card.query",
   "description": "查询达人选品车商品",
   "method": "GET",
   "path": "/alliance/card/query",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7618",
   "updatedAt": "2025-07-21",
-  "_file_stem": "tool-alliance-card-query",
-  "cnName": "查询达人选品车商品"
+  "_file_stem": "tool-alliance-card-query"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.createVirtualMobile",
+  "cnName": "隐私小号获取",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-createVirtualMobile",
+  "name": "superm.createVirtualMobile",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.createVirtualMobile",
   "description": "隐私小号获取",
   "method": "GET",
   "path": "/superm/createVirtualMobile",
@@ -114,6 +116,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2739",
   "updatedAt": "2023-09-19",
-  "_file_stem": "retail-store-superm-createVirtualMobile",
-  "cnName": "隐私小号获取"
+  "_file_stem": "retail-store-superm-createVirtualMobile"
 }

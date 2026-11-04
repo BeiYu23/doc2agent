@@ -1,11 +1,12 @@
-# product.getComponentTemplate
+# 分页查询模板列表
 
-> 分页查询模板列表
+> product.getComponentTemplate — 分页查询模板列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getComponentTemplate` |
 | 中文名 | 分页查询模板列表 |
+| 文档地址 | `/docs/doudian/product/product-product-getComponentTemplate` |
+| 接口 ID | `doudian.product.product.getComponentTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getComponentTemplate` |

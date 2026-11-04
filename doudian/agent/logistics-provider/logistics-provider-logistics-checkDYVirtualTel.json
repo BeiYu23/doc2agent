@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.checkDYVirtualTel",
+  "cnName": "查询虚拟号是否抖音平台",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-checkDYVirtualTel",
+  "name": "logistics.checkDYVirtualTel",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.checkDYVirtualTel",
   "description": "查询虚拟号是否抖音平台",
   "method": "GET",
   "path": "/logistics/checkDYVirtualTel",
@@ -141,6 +143,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8157",
   "updatedAt": "2026-03-23",
-  "_file_stem": "logistics-provider-logistics-checkDYVirtualTel",
-  "cnName": "查询虚拟号是否抖音平台"
+  "_file_stem": "logistics-provider-logistics-checkDYVirtualTel"
 }

@@ -1,11 +1,12 @@
-# supplyChain.inspection.OperateInspectionReports
+# 操作验机报告（绑定/解绑 SKU、上架/下架
 
-> 操作验机报告（绑定/解绑 SKU、上架/下架）
+> supplyChain.inspection.OperateInspectionReports — 操作验机报告（绑定/解绑 SKU、上架/下架）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-goods.supplyChain.inspection.OperateInspectionReports` |
 | 中文名 | 操作验机报告（绑定/解绑 SKU、上架/下架 |
+| 文档地址 | `/docs/doudian/supply-goods/supply-goods-supplyChain-inspection-OperateInspectionReports` |
+| 接口 ID | `doudian.supply-goods.supplyChain.inspection.OperateInspectionReports` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

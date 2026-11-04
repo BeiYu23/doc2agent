@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.superm.setStoreAutoCallRider",
+  "cnName": "新增自动呼叫运力配置",
+  "docUrl": "/docs/doudian/logistics/logistics-superm-setStoreAutoCallRider",
+  "name": "superm.setStoreAutoCallRider",
   "platform": "doudian",
   "group": "logistics",
-  "name": "superm.setStoreAutoCallRider",
   "description": "新增自动呼叫运力配置",
   "method": "GET",
   "path": "/superm/setStoreAutoCallRider",
@@ -157,6 +159,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2800",
   "updatedAt": "2023-09-15",
-  "_file_stem": "logistics-superm-setStoreAutoCallRider",
-  "cnName": "新增自动呼叫运力配置"
+  "_file_stem": "logistics-superm-setStoreAutoCallRider"
 }

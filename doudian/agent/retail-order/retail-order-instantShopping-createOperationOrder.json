@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-order.instantShopping.createOperationOrder",
+  "cnName": "创建仓内作业单",
+  "docUrl": "/docs/doudian/retail-order/retail-order-instantShopping-createOperationOrder",
+  "name": "instantShopping.createOperationOrder",
   "platform": "doudian",
   "group": "retail-order",
-  "name": "instantShopping.createOperationOrder",
   "description": "创建仓内作业单",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -221,6 +223,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1531/6946",
   "updatedAt": "2024-10-29",
-  "_file_stem": "retail-order-instantShopping-createOperationOrder",
-  "cnName": "创建仓内作业单"
+  "_file_stem": "retail-order-instantShopping-createOperationOrder"
 }

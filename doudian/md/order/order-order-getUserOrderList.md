@@ -1,11 +1,12 @@
-# order.getUserOrderList
+# 支持按抖店open_id或抖音小程序open_…
 
-> 支持按抖店open_id或抖音小程序open_id查询订单简要信息，仅电商小程序在C端面向用户呈现订单任务类场景使用
+> order.getUserOrderList — 支持按抖店open_id或抖音小程序open_id查询订单简要信息，仅电商小程序在C端面向用户呈现订单任务类场景使用
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.getUserOrderList` |
 | 中文名 | 支持按抖店open_id或抖音小程序open_… |
+| 文档地址 | `/docs/doudian/order/order-order-getUserOrderList` |
+| 接口 ID | `doudian.order.order.getUserOrderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getUserOrderList` |

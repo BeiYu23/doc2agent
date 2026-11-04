@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.ddpGetShopList",
+  "cnName": "数据推送，推送店铺列表",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-ddpGetShopList",
+  "name": "openCloud.ddpGetShopList",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.ddpGetShopList",
   "description": "数据推送，推送店铺列表",
   "method": "GET",
   "path": "/openCloud/ddpGetShopList",
@@ -230,6 +232,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/1404",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-ddpGetShopList",
-  "cnName": "数据推送，推送店铺列表"
+  "_file_stem": "cloud-openCloud-ddpGetShopList"
 }

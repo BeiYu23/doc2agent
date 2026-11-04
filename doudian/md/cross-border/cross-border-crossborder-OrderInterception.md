@@ -1,11 +1,12 @@
-# crossborder.OrderInterception
+# 服务商锁单结果回告
 
-> 服务商锁单结果回告
+> crossborder.OrderInterception — 服务商锁单结果回告
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossborder.OrderInterception` |
 | 中文名 | 服务商锁单结果回告 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossborder-OrderInterception` |
+| 接口 ID | `doudian.cross-border.crossborder.OrderInterception` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/OrderInterception` |

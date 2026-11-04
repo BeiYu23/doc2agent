@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.compass.CommonProductQueryData",
+  "cnName": "数据T+1生成，建议第二天10点之后查询",
+  "docUrl": "/docs/doudian/product/product-compass-CommonProductQueryData",
+  "name": "compass.CommonProductQueryData",
   "platform": "doudian",
   "group": "product",
-  "name": "compass.CommonProductQueryData",
   "description": "数据T+1生成，建议第二天10点之后查询",
   "method": "GET",
   "path": "/compass/CommonProductQueryData",
@@ -184,6 +186,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2768",
   "updatedAt": "2022-11-29",
-  "_file_stem": "product-compass-CommonProductQueryData",
-  "cnName": "数据T+1生成，建议第二天10点之后查询"
+  "_file_stem": "product-compass-CommonProductQueryData"
 }

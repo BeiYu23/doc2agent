@@ -1,11 +1,12 @@
-# buyin.kolLivePreviewList
+# 直播预告及商品信息列表
 
-> 直播预告及商品信息列表
+> buyin.kolLivePreviewList — 直播预告及商品信息列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.kolLivePreviewList` |
 | 中文名 | 直播预告及商品信息列表 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-kolLivePreviewList` |
+| 接口 ID | `doudian.alliance.buyin.kolLivePreviewList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolLivePreviewList` |

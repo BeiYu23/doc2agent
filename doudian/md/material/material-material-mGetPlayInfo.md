@@ -1,11 +1,12 @@
-# material.mGetPlayInfo
+# 批量获取视频信息
 
-> 批量获取视频信息
+> material.mGetPlayInfo — 批量获取视频信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.mGetPlayInfo` |
 | 中文名 | 批量获取视频信息 |
+| 文档地址 | `/docs/doudian/material/material-material-mGetPlayInfo` |
+| 接口 ID | `doudian.material.material.mGetPlayInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/mGetPlayInfo` |

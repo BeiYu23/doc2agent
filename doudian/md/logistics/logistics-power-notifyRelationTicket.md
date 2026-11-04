@@ -1,11 +1,12 @@
-# power.notifyRelationTicket
+# 物流商关联工单推送（仅用于兼容老物流网关
 
-> 物流商关联工单推送（仅用于兼容老物流网关）
+> power.notifyRelationTicket — 物流商关联工单推送（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.notifyRelationTicket` |
 | 中文名 | 物流商关联工单推送（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-notifyRelationTicket` |
+| 接口 ID | `doudian.logistics.power.notifyRelationTicket` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/notifyRelationTicket` |

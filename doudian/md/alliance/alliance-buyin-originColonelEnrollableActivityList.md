@@ -1,11 +1,12 @@
-# buyin.originColonelEnrollableActivityList
+# 接口用于团长获取可参与的二级团长活动
 
-> 接口用于团长获取可参与的二级团长活动，支持报名状态筛选，包括已提报和未提报两种状态
+> buyin.originColonelEnrollableActivityList — 接口用于团长获取可参与的二级团长活动，支持报名状态筛选，包括已提报和未提报两种状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.originColonelEnrollableActivityList` |
 | 中文名 | 接口用于团长获取可参与的二级团长活动 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-originColonelEnrollableActivityList` |
+| 接口 ID | `doudian.alliance.buyin.originColonelEnrollableActivityList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/originColonelEnrollableActivityList` |

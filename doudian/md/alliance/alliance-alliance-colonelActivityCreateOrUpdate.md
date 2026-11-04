@@ -1,11 +1,12 @@
-# alliance.colonelActivityCreateOrUpdate
+# 团长活动创建/编辑
 
-> 团长活动创建/编辑接口
+> alliance.colonelActivityCreateOrUpdate — 团长活动创建/编辑接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.colonelActivityCreateOrUpdate` |
 | 中文名 | 团长活动创建/编辑 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-colonelActivityCreateOrUpdate` |
+| 接口 ID | `doudian.alliance.alliance.colonelActivityCreateOrUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelActivityCreateOrUpdate` |

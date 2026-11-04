@@ -1,11 +1,12 @@
-# buyin.createOrUpdateOrienPlan
+# 创建/修改商品定向计划
 
-> 创建/修改商品定向计划
+> buyin.createOrUpdateOrienPlan — 创建/修改商品定向计划
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.createOrUpdateOrienPlan` |
 | 中文名 | 创建/修改商品定向计划 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-createOrUpdateOrienPlan` |
+| 接口 ID | `doudian.alliance.buyin.createOrUpdateOrienPlan` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/createOrUpdateOrienPlan` |

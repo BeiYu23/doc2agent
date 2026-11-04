@@ -1,11 +1,12 @@
-# product.delCargo
+# 删除货品
 
-> 删除货品
+> product.delCargo — 删除货品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.product.delCargo` |
 | 中文名 | 删除货品 |
+| 文档地址 | `/docs/doudian/stock/stock-product-delCargo` |
+| 接口 ID | `doudian.stock.product.delCargo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/delCargo` |

@@ -1,11 +1,12 @@
-# supplyChain.sku.syncSupplyStock
+# 设置库存
 
-> 设置库存
+> supplyChain.sku.syncSupplyStock — 设置库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.sku.syncSupplyStock` |
 | 中文名 | 设置库存 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-sku-syncSupplyStock` |
+| 接口 ID | `doudian.shop.supplyChain.sku.syncSupplyStock` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

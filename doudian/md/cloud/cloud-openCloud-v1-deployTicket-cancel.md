@@ -1,11 +1,12 @@
-# openCloud.v1.deployTicket.cancel
+# 发布取消
 
-> 发布取消
+> openCloud.v1.deployTicket.cancel — 发布取消
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.cancel` |
 | 中文名 | 发布取消 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-cancel` |
+| 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.cancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/deployTicket/cancel` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.operate",
+  "cnName": "操作小程序活动",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-operate",
+  "name": "mini.activity.operate",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.operate",
   "description": "操作小程序活动",
   "method": "GET",
   "path": "/mini/activity/operate",
@@ -123,6 +125,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/4959",
   "updatedAt": "2024-02-04",
-  "_file_stem": "miniapp-mini-activity-operate",
-  "cnName": "操作小程序活动"
+  "_file_stem": "miniapp-mini-activity-operate"
 }

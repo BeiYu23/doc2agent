@@ -1,11 +1,12 @@
-# instantShopping.GetCallRecord
+# 查询骑手-用户通话记录
 
-> 查询骑手-用户通话记录
+> instantShopping.GetCallRecord — 查询骑手-用户通话记录
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.instantShopping.GetCallRecord` |
 | 中文名 | 查询骑手-用户通话记录 |
+| 文档地址 | `/docs/doudian/logistics/logistics-instantShopping-GetCallRecord` |
+| 接口 ID | `doudian.logistics.instantShopping.GetCallRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

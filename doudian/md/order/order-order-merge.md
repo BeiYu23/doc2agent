@@ -1,14 +1,15 @@
-# order.merge
+# 判断一批待发货订单
 
-> 判断一批待发货订单，哪些可以收件人信息一致，可以使用同一个包裹进行发货：
+> order.merge — 判断一批待发货订单，哪些可以收件人信息一致，可以使用同一个包裹进行发货：
 1. 批处理上限为100
 2. 只支持近15天的代发货订单的合单判断
 3. 同一天创建的订单：open_address_id不同的，一定不可以合单；open_address_id相同
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.merge` |
 | 中文名 | 判断一批待发货订单 |
+| 文档地址 | `/docs/doudian/order/order-order-merge` |
+| 接口 ID | `doudian.order.order.merge` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/merge` |

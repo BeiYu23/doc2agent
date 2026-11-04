@@ -1,11 +1,12 @@
-# shopVideo.createShoppingCartAnchor
+# 创建挂车锚点
 
-> 创建挂车锚点
+> shopVideo.createShoppingCartAnchor — 创建挂车锚点
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.createShoppingCartAnchor` |
 | 中文名 | 创建挂车锚点 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-createShoppingCartAnchor` |
+| 接口 ID | `doudian.video.shopVideo.createShoppingCartAnchor` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/createShoppingCartAnchor` |

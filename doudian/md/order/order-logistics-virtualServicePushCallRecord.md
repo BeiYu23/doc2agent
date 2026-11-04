@@ -1,11 +1,12 @@
-# logistics.virtualServicePushCallRecord
+# 虚拟号服务商通话记录回传
 
-> 虚拟号服务商通话记录回传
+> logistics.virtualServicePushCallRecord — 虚拟号服务商通话记录回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.logistics.virtualServicePushCallRecord` |
 | 中文名 | 虚拟号服务商通话记录回传 |
+| 文档地址 | `/docs/doudian/order/order-logistics-virtualServicePushCallRecord` |
+| 接口 ID | `doudian.order.logistics.virtualServicePushCallRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/virtualServicePushCallRecord` |

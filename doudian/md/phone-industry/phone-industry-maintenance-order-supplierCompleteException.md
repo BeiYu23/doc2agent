@@ -1,11 +1,12 @@
-# maintenance.order.supplierCompleteException
+# 维修异常
 
-> 维修异常
+> maintenance.order.supplierCompleteException — 维修异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.order.supplierCompleteException` |
 | 中文名 | 维修异常 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierCompleteException` |
+| 接口 ID | `doudian.phone-industry.maintenance.order.supplierCompleteException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

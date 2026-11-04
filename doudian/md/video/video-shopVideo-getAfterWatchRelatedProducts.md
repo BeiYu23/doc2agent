@@ -1,11 +1,12 @@
-# shopVideo.getAfterWatchRelatedProducts
+# 获取搜后承接商品列表
 
-> 获取搜后承接商品列表
+> shopVideo.getAfterWatchRelatedProducts — 获取搜后承接商品列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.getAfterWatchRelatedProducts` |
 | 中文名 | 获取搜后承接商品列表 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-getAfterWatchRelatedProducts` |
+| 接口 ID | `doudian.video.shopVideo.getAfterWatchRelatedProducts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/getAfterWatchRelatedProducts` |

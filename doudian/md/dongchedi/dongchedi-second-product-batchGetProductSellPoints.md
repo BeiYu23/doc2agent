@@ -1,11 +1,12 @@
-# second.product.batchGetProductSellPoints
+# 【二方接口】查询商品卖点信息
 
-> 【二方接口】查询商品卖点信息
+> second.product.batchGetProductSellPoints — 【二方接口】查询商品卖点信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.product.batchGetProductSellPoints` |
 | 中文名 | 【二方接口】查询商品卖点信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-product-batchGetProductSellPoints` |
+| 接口 ID | `doudian.dongchedi.second.product.batchGetProductSellPoints` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/batchGetProductSellPoints` |

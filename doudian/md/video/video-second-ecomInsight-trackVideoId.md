@@ -1,11 +1,12 @@
-# second.ecomInsight.trackVideoId
+# 数据追踪
 
-> 数据追踪接口
+> second.ecomInsight.trackVideoId — 数据追踪接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.trackVideoId` |
 | 中文名 | 数据追踪 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-trackVideoId` |
+| 接口 ID | `doudian.video.second.ecomInsight.trackVideoId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

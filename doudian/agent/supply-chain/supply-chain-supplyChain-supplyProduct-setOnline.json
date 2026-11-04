@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProduct.setOnline",
+  "cnName": "上架产品",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-setOnline",
+  "name": "supplyChain.supplyProduct.setOnline",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProduct.setOnline",
   "description": "上架产品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2558",
   "updatedAt": "2022-09-28",
-  "_file_stem": "supply-chain-supplyChain-supplyProduct-setOnline",
-  "cnName": "上架产品"
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-setOnline"
 }

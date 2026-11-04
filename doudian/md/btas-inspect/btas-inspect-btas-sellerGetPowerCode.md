@@ -1,11 +1,12 @@
-# btas.sellerGetPowerCode
+# 商家_电子面单取号
 
-> 商家_电子面单取号
+> btas.sellerGetPowerCode — 商家_电子面单取号
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sellerGetPowerCode` |
 | 中文名 | 商家_电子面单取号 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sellerGetPowerCode` |
+| 接口 ID | `doudian.btas-inspect.btas.sellerGetPowerCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sellerGetPowerCode` |

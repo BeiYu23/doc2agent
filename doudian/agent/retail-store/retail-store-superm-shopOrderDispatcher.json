@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.shopOrderDispatcher",
+  "cnName": "呼叫运力或取消",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-shopOrderDispatcher",
+  "name": "superm.shopOrderDispatcher",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.shopOrderDispatcher",
   "description": "呼叫运力或取消",
   "method": "GET",
   "path": "/superm/shopOrderDispatcher",
@@ -510,6 +512,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2736",
   "updatedAt": "2025-09-09",
-  "_file_stem": "retail-store-superm-shopOrderDispatcher",
-  "cnName": "呼叫运力或取消"
+  "_file_stem": "retail-store-superm-shopOrderDispatcher"
 }

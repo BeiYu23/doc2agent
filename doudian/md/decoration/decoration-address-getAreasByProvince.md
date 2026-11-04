@@ -1,11 +1,12 @@
-# address.getAreasByProvince
+# 查询最新的四级地址用于订单售后处理
 
-> 查询最新的四级地址用于订单售后处理
+> address.getAreasByProvince — 查询最新的四级地址用于订单售后处理
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.address.getAreasByProvince` |
 | 中文名 | 查询最新的四级地址用于订单售后处理 |
+| 文档地址 | `/docs/doudian/decoration/decoration-address-getAreasByProvince` |
+| 接口 ID | `doudian.decoration.address.getAreasByProvince` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/getAreasByProvince` |

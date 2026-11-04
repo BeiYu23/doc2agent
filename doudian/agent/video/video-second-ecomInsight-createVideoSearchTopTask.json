@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createVideoSearchTopTask",
+  "cnName": "创建视频查询榜单任务",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createVideoSearchTopTask",
+  "name": "second.ecomInsight.createVideoSearchTopTask",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createVideoSearchTopTask",
   "description": "创建视频查询榜单任务",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -203,6 +205,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8378",
   "updatedAt": "2026-07-23",
-  "_file_stem": "video-second-ecomInsight-createVideoSearchTopTask",
-  "cnName": "创建视频查询榜单任务"
+  "_file_stem": "video-second-ecomInsight-createVideoSearchTopTask"
 }

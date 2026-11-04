@@ -1,11 +1,12 @@
-# install.order.supplierAppointmentException
+# 服务商预约异常
 
-> 服务商预约异常
+> install.order.supplierAppointmentException — 服务商预约异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.supplierAppointmentException` |
 | 中文名 | 服务商预约异常 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-supplierAppointmentException` |
+| 接口 ID | `doudian.logistics-provider.install.order.supplierAppointmentException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierAppointmentException` |

@@ -1,11 +1,12 @@
-# crossBorder.orderConfirm
+# 服务商接单
 
-> 服务商接单
+> crossBorder.orderConfirm — 服务商接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.crossBorder.orderConfirm` |
 | 中文名 | 服务商接单 |
+| 文档地址 | `/docs/doudian/logistics/logistics-crossBorder-orderConfirm` |
+| 接口 ID | `doudian.logistics.crossBorder.orderConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/orderConfirm` |

@@ -1,11 +1,12 @@
-# supplyCenter.order.query
+# 查询采购单信息
 
-> 查询采购单信息
+> supplyCenter.order.query — 查询采购单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.order.query` |
 | 中文名 | 查询采购单信息 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-order-query` |
+| 接口 ID | `doudian.selection.supplyCenter.order.query` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/order/query` |

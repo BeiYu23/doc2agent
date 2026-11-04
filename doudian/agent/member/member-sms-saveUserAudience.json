@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.sms.saveUserAudience",
+  "cnName": "保存(更新)人群",
+  "docUrl": "/docs/doudian/member/member-sms-saveUserAudience",
+  "name": "sms.saveUserAudience",
   "platform": "doudian",
   "group": "member",
-  "name": "sms.saveUserAudience",
   "description": "保存(更新)人群",
   "method": "GET",
   "path": "/sms/saveUserAudience",
@@ -778,6 +780,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6682",
   "updatedAt": "2024-10-22",
-  "_file_stem": "member-sms-saveUserAudience",
-  "cnName": "保存(更新)人群"
+  "_file_stem": "member-sms-saveUserAudience"
 }

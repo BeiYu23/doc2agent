@@ -1,11 +1,12 @@
-# buyin.colonelMultiSettlementOrders
+# 团长分次结算订单
 
-> 团长分次结算订单
+> buyin.colonelMultiSettlementOrders — 团长分次结算订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.colonelMultiSettlementOrders` |
 | 中文名 | 团长分次结算订单 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-colonelMultiSettlementOrders` |
+| 接口 ID | `doudian.alliance.buyin.colonelMultiSettlementOrders` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonelMultiSettlementOrders` |

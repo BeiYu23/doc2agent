@@ -1,8 +1,10 @@
 {
   "id": "doudian.hospital.medicine.doctorProducePrescription",
+  "cnName": "医生开处方单",
+  "docUrl": "/docs/doudian/hospital/hospital-medicine-doctorProducePrescription",
+  "name": "medicine.doctorProducePrescription",
   "platform": "doudian",
   "group": "hospital",
-  "name": "medicine.doctorProducePrescription",
   "description": "医生开处方单",
   "method": "GET",
   "path": "/medicine/doctorProducePrescription",
@@ -285,6 +287,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/5901",
   "updatedAt": "2024-01-17",
-  "_file_stem": "hospital-medicine-doctorProducePrescription",
-  "cnName": "医生开处方单"
+  "_file_stem": "hospital-medicine-doctorProducePrescription"
 }

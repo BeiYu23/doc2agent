@@ -1,8 +1,10 @@
 {
   "id": "doudian.phone-industry.maintenance.fulfill.supplierReceiveOrDetect",
+  "cnName": "维修服务商签收/检测通过",
+  "docUrl": "/docs/doudian/phone-industry/phone-industry-maintenance-fulfill-supplierReceiveOrDetect",
+  "name": "maintenance.fulfill.supplierReceiveOrDetect",
   "platform": "doudian",
   "group": "phone-industry",
-  "name": "maintenance.fulfill.supplierReceiveOrDetect",
   "description": "维修服务商签收/检测通过",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1520/7894",
   "updatedAt": "2025-11-27",
-  "_file_stem": "phone-industry-maintenance-fulfill-supplierReceiveOrDetect",
-  "cnName": "维修服务商签收/检测通过"
+  "_file_stem": "phone-industry-maintenance-fulfill-supplierReceiveOrDetect"
 }

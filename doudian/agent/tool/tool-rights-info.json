@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.rights.info",
+  "cnName": "订购服务权益查询接口-服务市场",
+  "docUrl": "/docs/doudian/tool/tool-rights-info",
+  "name": "rights.info",
   "platform": "doudian",
   "group": "tool",
-  "name": "rights.info",
   "description": "订购服务权益查询接口-服务市场",
   "method": "GET",
   "path": "/rights/info",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/352",
   "updatedAt": "2023-08-01",
-  "_file_stem": "tool-rights-info",
-  "cnName": "订购服务权益查询接口-服务市场"
+  "_file_stem": "tool-rights-info"
 }

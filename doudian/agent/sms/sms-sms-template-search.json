@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.template.search",
+  "cnName": "查询短信模板",
+  "docUrl": "/docs/doudian/sms/sms-sms-template-search",
+  "name": "sms.template.search",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.template.search",
   "description": "查询短信模板",
   "method": "GET",
   "path": "/sms/template/search",
@@ -165,6 +167,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1514",
   "updatedAt": "2026-04-20",
-  "_file_stem": "sms-sms-template-search",
-  "cnName": "查询短信模板"
+  "_file_stem": "sms-sms-template-search"
 }

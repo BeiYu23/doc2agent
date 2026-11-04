@@ -1,11 +1,12 @@
-# product.getCategories
+# 获取商家可选类目
 
-> 获取商家可选类目
+> product.getCategories — 获取商家可选类目
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getCategories` |
 | 中文名 | 获取商家可选类目 |
+| 文档地址 | `/docs/doudian/product/product-product-getCategories` |
+| 接口 ID | `doudian.product.product.getCategories` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getCategories` |

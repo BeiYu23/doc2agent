@@ -1,11 +1,12 @@
-# supplyCenter.cargo.createTags
+# 针对精选货源所属的货品打标
 
-> 针对精选货源所属的货品打标
+> supplyCenter.cargo.createTags — 针对精选货源所属的货品打标
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.cargo.createTags` |
 | 中文名 | 针对精选货源所属的货品打标 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-cargo-createTags` |
+| 接口 ID | `doudian.selection.supplyCenter.cargo.createTags` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

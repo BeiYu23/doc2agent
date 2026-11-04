@@ -1,11 +1,12 @@
-# iop.sellerOrderInfo
+# 【商家】查看代发订单
 
-> 【商家】查看代发订单详情
+> iop.sellerOrderInfo — 【商家】查看代发订单详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.sellerOrderInfo` |
 | 中文名 | 【商家】查看代发订单 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-sellerOrderInfo` |
+| 接口 ID | `doudian.dropshipping.iop.sellerOrderInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/sellerOrderInfo` |

@@ -1,11 +1,12 @@
-# material.editFolder
+# 编辑/移动文件夹
 
-> 编辑/移动文件夹
+> material.editFolder — 编辑/移动文件夹
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.editFolder` |
 | 中文名 | 编辑/移动文件夹 |
+| 文档地址 | `/docs/doudian/material/material-material-editFolder` |
+| 接口 ID | `doudian.material.material.editFolder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/editFolder` |

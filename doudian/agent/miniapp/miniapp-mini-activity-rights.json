@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.rights",
+  "cnName": "根据商品查询用户权益现状",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-rights",
+  "name": "mini.activity.rights",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.rights",
   "description": "根据商品查询用户权益现状",
   "method": "GET",
   "path": "/mini/activity/rights",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6746",
   "updatedAt": "2024-08-05",
-  "_file_stem": "miniapp-mini-activity-rights",
-  "cnName": "根据商品查询用户权益现状"
+  "_file_stem": "miniapp-mini-activity-rights"
 }

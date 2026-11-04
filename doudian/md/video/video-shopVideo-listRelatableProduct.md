@@ -1,11 +1,12 @@
-# shopVideo.listRelatableProduct
+# 查询短视频可关联商品列表
 
-> 查询短视频可关联商品列表
+> shopVideo.listRelatableProduct — 查询短视频可关联商品列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.listRelatableProduct` |
 | 中文名 | 查询短视频可关联商品列表 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-listRelatableProduct` |
+| 接口 ID | `doudian.video.shopVideo.listRelatableProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/listRelatableProduct` |

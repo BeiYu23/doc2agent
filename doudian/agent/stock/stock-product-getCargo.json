@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.product.getCargo",
+  "cnName": "查询货品",
+  "docUrl": "/docs/doudian/stock/stock-product-getCargo",
+  "name": "product.getCargo",
   "platform": "doudian",
   "group": "stock",
-  "name": "product.getCargo",
   "description": "查询货品",
   "method": "GET",
   "path": "/product/getCargo",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/8418",
   "updatedAt": "2026-07-16",
-  "_file_stem": "stock-product-getCargo",
-  "cnName": "查询货品"
+  "_file_stem": "stock-product-getCargo"
 }

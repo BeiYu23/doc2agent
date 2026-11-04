@@ -1,11 +1,12 @@
-# buyin.exclusivePlanAuthorOperate
+# 店铺专属达人管理
 
-> 店铺专属达人管理
+> buyin.exclusivePlanAuthorOperate — 店铺专属达人管理
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.exclusivePlanAuthorOperate` |
 | 中文名 | 店铺专属达人管理 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-exclusivePlanAuthorOperate` |
+| 接口 ID | `doudian.alliance.buyin.exclusivePlanAuthorOperate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/exclusivePlanAuthorOperate` |

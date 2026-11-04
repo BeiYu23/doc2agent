@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.setAddr",
+  "cnName": "绑定单个地址到区域仓",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-setAddr",
+  "name": "warehouse.setAddr",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.setAddr",
   "description": "绑定单个地址到区域仓",
   "method": "GET",
   "path": "/warehouse/setAddr",
@@ -110,6 +112,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1859",
   "updatedAt": "2020-11-29",
-  "_file_stem": "stock-warehouse-setAddr",
-  "cnName": "绑定单个地址到区域仓"
+  "_file_stem": "stock-warehouse-setAddr"
 }

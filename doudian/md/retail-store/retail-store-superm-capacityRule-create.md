@@ -1,11 +1,12 @@
-# superm.capacityRule.create
+# 门店时段容量添加
 
-> 门店时段容量添加
+> superm.capacityRule.create — 门店时段容量添加
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.capacityRule.create` |
 | 中文名 | 门店时段容量添加 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-capacityRule-create` |
+| 接口 ID | `doudian.retail-store.superm.capacityRule.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/capacityRule/create` |

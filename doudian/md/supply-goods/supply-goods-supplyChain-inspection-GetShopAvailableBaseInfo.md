@@ -1,11 +1,12 @@
-# supplyChain.inspection.GetShopAvailableBaseInfo
+# 查询商家可用的基础信息（类目、品牌、型号
 
-> 查询商家可用的基础信息（类目、品牌、型号）
+> supplyChain.inspection.GetShopAvailableBaseInfo — 查询商家可用的基础信息（类目、品牌、型号）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-goods.supplyChain.inspection.GetShopAvailableBaseInfo` |
 | 中文名 | 查询商家可用的基础信息（类目、品牌、型号 |
+| 文档地址 | `/docs/doudian/supply-goods/supply-goods-supplyChain-inspection-GetShopAvailableBaseInfo` |
+| 接口 ID | `doudian.supply-goods.supplyChain.inspection.GetShopAvailableBaseInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

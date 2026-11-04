@@ -1,11 +1,12 @@
-# buyin.instituteOrderAds
+# 查询抖客直播间分销订单
 
-> 查询抖客直播间分销订单
+> buyin.instituteOrderAds — 查询抖客直播间分销订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.instituteOrderAds` |
 | 中文名 | 查询抖客直播间分销订单 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-instituteOrderAds` |
+| 接口 ID | `doudian.alliance.buyin.instituteOrderAds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/instituteOrderAds` |

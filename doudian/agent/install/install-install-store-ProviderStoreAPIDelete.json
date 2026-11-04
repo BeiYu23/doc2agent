@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.ProviderStoreAPIDelete",
+  "cnName": "服务商门店删除的API",
+  "docUrl": "/docs/doudian/install/install-install-store-ProviderStoreAPIDelete",
+  "name": "install.store.ProviderStoreAPIDelete",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.ProviderStoreAPIDelete",
   "description": "服务商门店删除的API接口",
   "method": "GET",
   "path": "/install/store/ProviderStoreAPIDelete",
@@ -49,6 +51,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7678",
   "updatedAt": "2026-06-02",
-  "_file_stem": "install-install-store-ProviderStoreAPIDelete",
-  "cnName": "服务商门店删除的API"
+  "_file_stem": "install-install-store-ProviderStoreAPIDelete"
 }

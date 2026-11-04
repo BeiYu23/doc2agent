@@ -1,11 +1,12 @@
-# yunc.erpInboundCreate
+# erp创建入库单
 
-> erp创建入库单
+> yunc.erpInboundCreate — erp创建入库单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.erpInboundCreate` |
 | 中文名 | erp创建入库单 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-erpInboundCreate` |
+| 接口 ID | `doudian.warehouse.yunc.erpInboundCreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/erpInboundCreate` |

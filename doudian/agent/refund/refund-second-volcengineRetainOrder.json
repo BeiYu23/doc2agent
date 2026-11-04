@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.second.volcengineRetainOrder",
+  "cnName": "核心入口，用于对单一退货的订单进行全面评估",
+  "docUrl": "/docs/doudian/refund/refund-second-volcengineRetainOrder",
+  "name": "second.volcengineRetainOrder",
   "platform": "doudian",
   "group": "refund",
-  "name": "second.volcengineRetainOrder",
   "description": "核心入口，用于对单一退货的订单进行全面评估",
   "method": "GET",
   "path": "/second/volcengineRetainOrder",
@@ -267,6 +269,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/8135",
   "updatedAt": "2026-05-08",
-  "_file_stem": "refund-second-volcengineRetainOrder",
-  "cnName": "核心入口，用于对单一退货的订单进行全面评估"
+  "_file_stem": "refund-second-volcengineRetainOrder"
 }

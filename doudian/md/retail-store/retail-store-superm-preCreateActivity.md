@@ -1,11 +1,12 @@
-# superm.preCreateActivity
+# 通过圈选商品+门店，预创建营销活动
 
-> 通过圈选商品+门店，预创建营销活动。
+> superm.preCreateActivity — 通过圈选商品+门店，预创建营销活动。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.preCreateActivity` |
 | 中文名 | 通过圈选商品+门店，预创建营销活动 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-preCreateActivity` |
+| 接口 ID | `doudian.retail-store.superm.preCreateActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/preCreateActivity` |

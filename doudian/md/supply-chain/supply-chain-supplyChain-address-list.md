@@ -1,11 +1,12 @@
-# supplyChain.address.list
+# 供应商地址查询
 
-> 供应商地址查询
+> supplyChain.address.list — 供应商地址查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.address.list` |
 | 中文名 | 供应商地址查询 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-address-list` |
+| 接口 ID | `doudian.supply-chain.supplyChain.address.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/address/list` |

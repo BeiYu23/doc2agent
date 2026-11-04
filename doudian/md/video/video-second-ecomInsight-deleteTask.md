@@ -1,11 +1,12 @@
-# second.ecomInsight.deleteTask
+# 删除task
 
-> 删除task
+> second.ecomInsight.deleteTask — 删除task
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.deleteTask` |
 | 中文名 | 删除task |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-deleteTask` |
+| 接口 ID | `doudian.video.second.ecomInsight.deleteTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

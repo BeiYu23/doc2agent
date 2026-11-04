@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.operatorCheckInEvent",
+  "cnName": "师傅上门签到事件",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-operatorCheckInEvent",
+  "name": "logistics.operatorCheckInEvent",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.operatorCheckInEvent",
   "description": "师傅上门签到事件",
   "method": "GET",
   "path": "/logistics/operatorCheckInEvent",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3535",
   "updatedAt": "2023-04-19",
-  "_file_stem": "logistics-logistics-operatorCheckInEvent",
-  "cnName": "师傅上门签到事件"
+  "_file_stem": "logistics-logistics-operatorCheckInEvent"
 }

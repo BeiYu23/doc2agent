@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.distributionRedpackDetailList",
+  "cnName": "达人抖客红包",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-distributionRedpackDetailList",
+  "name": "buyin.distributionRedpackDetailList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.distributionRedpackDetailList",
   "description": "达人抖客红包详情",
   "method": "GET",
   "path": "/buyin/distributionRedpackDetailList",
@@ -175,6 +177,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2546",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-distributionRedpackDetailList",
-  "cnName": "达人抖客红包"
+  "_file_stem": "alliance-buyin-distributionRedpackDetailList"
 }

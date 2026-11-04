@@ -1,11 +1,12 @@
-# superm.pop.addProduct
+# 小时达营销活动添加商品
 
-> 小时达营销活动添加商品
+> superm.pop.addProduct — 小时达营销活动添加商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.pop.addProduct` |
 | 中文名 | 小时达营销活动添加商品 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-pop-addProduct` |
+| 接口 ID | `doudian.retail-store.superm.pop.addProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/addProduct` |

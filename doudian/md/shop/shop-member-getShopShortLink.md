@@ -1,11 +1,12 @@
-# member.getShopShortLink
+# 获取商家推广链接
 
-> 获取商家推广链接接口
+> member.getShopShortLink — 获取商家推广链接接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.member.getShopShortLink` |
 | 中文名 | 获取商家推广链接 |
+| 文档地址 | `/docs/doudian/shop/shop-member-getShopShortLink` |
+| 接口 ID | `doudian.shop.member.getShopShortLink` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/getShopShortLink` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.deliverConfig.update",
+  "cnName": "时效管理更新",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-deliverConfig-update",
+  "name": "superm.deliverConfig.update",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.deliverConfig.update",
   "description": "时效管理更新",
   "method": "GET",
   "path": "/superm/deliverConfig/update",
@@ -144,6 +146,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3597",
   "updatedAt": "2023-09-18",
-  "_file_stem": "retail-store-superm-deliverConfig-update",
-  "cnName": "时效管理更新"
+  "_file_stem": "retail-store-superm-deliverConfig-update"
 }

@@ -1,11 +1,12 @@
-# instantShopping.marketing.invalidActivity
+# 作废活动
 
-> 作废活动
+> instantShopping.marketing.invalidActivity — 作废活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.invalidActivity` |
 | 中文名 | 作废活动 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-invalidActivity` |
+| 接口 ID | `doudian.retail-marketing.instantShopping.marketing.invalidActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

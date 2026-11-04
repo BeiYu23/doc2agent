@@ -1,11 +1,12 @@
-# buyin.doukeProductExclusiveCoupon
+# 抖客商品专属券查询
 
-> 抖客商品专属券查询，只能查询抖客专属券，不返回商品的通用券
+> buyin.doukeProductExclusiveCoupon — 抖客商品专属券查询，只能查询抖客专属券，不返回商品的通用券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukeProductExclusiveCoupon` |
 | 中文名 | 抖客商品专属券查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukeProductExclusiveCoupon` |
+| 接口 ID | `doudian.alliance.buyin.doukeProductExclusiveCoupon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukeProductExclusiveCoupon` |

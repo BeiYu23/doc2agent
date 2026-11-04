@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.cargo.edit",
+  "cnName": "精选货源平台编辑货品",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-cargo-edit",
+  "name": "supplyCenter.cargo.edit",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.cargo.edit",
   "description": "精选货源平台编辑货品",
   "method": "GET",
   "path": "/supplyCenter/cargo/edit",
@@ -774,6 +776,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5329",
   "updatedAt": "2023-11-07",
-  "_file_stem": "selection-supplyCenter-cargo-edit",
-  "cnName": "精选货源平台编辑货品"
+  "_file_stem": "selection-supplyCenter-cargo-edit"
 }

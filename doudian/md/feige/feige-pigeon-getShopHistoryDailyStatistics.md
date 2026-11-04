@@ -1,11 +1,12 @@
-# pigeon.getShopHistoryDailyStatistics
+# 查询店铺维度统计数据
 
-> 查询店铺维度统计数据
+> pigeon.getShopHistoryDailyStatistics — 查询店铺维度统计数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.getShopHistoryDailyStatistics` |
 | 中文名 | 查询店铺维度统计数据 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-getShopHistoryDailyStatistics` |
+| 接口 ID | `doudian.feige.pigeon.getShopHistoryDailyStatistics` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/getShopHistoryDailyStatistics` |

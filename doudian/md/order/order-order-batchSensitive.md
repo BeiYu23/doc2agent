@@ -1,11 +1,12 @@
-# order.batchSensitive
+# 批量脱敏
 
-> 批量脱敏接口
+> order.batchSensitive — 批量脱敏接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.batchSensitive` |
 | 中文名 | 批量脱敏 |
+| 文档地址 | `/docs/doudian/order/order-order-batchSensitive` |
+| 接口 ID | `doudian.order.order.batchSensitive` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/batchSensitive` |

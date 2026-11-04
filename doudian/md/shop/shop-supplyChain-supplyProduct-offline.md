@@ -1,11 +1,12 @@
-# supplyChain.supplyProduct.offline
+# 下架产品
 
-> 下架产品
+> supplyChain.supplyProduct.offline — 下架产品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.supplyProduct.offline` |
 | 中文名 | 下架产品 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-supplyProduct-offline` |
+| 接口 ID | `doudian.shop.supplyChain.supplyProduct.offline` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/supplyProduct/offline` |

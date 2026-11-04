@@ -1,11 +1,12 @@
-# shop.brandList
+# 获取店铺的已授权品牌列表
 
-> 获取店铺的已授权品牌列表
+> shop.brandList — 获取店铺的已授权品牌列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.brandList` |
 | 中文名 | 获取店铺的已授权品牌列表 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-brandList` |
+| 接口 ID | `doudian.shop.shop.brandList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/brandList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.power.pushSecondSortCode",
+  "cnName": "二段码推送（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/product/product-power-pushSecondSortCode",
+  "name": "power.pushSecondSortCode",
   "platform": "doudian",
   "group": "product",
-  "name": "power.pushSecondSortCode",
   "description": "二段码推送（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/pushSecondSortCode",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1484",
   "updatedAt": "2021-11-24",
-  "_file_stem": "product-power-pushSecondSortCode",
-  "cnName": "二段码推送（仅用于兼容老物流网关"
+  "_file_stem": "product-power-pushSecondSortCode"
 }

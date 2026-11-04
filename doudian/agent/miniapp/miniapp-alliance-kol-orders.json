@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.alliance.kol.orders",
+  "cnName": "查询达人联盟订单",
+  "docUrl": "/docs/doudian/miniapp/miniapp-alliance-kol-orders",
+  "name": "alliance.kol.orders",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "alliance.kol.orders",
   "description": "查询达人联盟订单",
   "method": "GET",
   "path": "/alliance/kol/orders",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7142",
   "updatedAt": "2024-12-11",
-  "_file_stem": "miniapp-alliance-kol-orders",
-  "cnName": "查询达人联盟订单"
+  "_file_stem": "miniapp-alliance-kol-orders"
 }

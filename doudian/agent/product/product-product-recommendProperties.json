@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.recommendProperties",
+  "cnName": "商品属性推荐",
+  "docUrl": "/docs/doudian/product/product-product-recommendProperties",
+  "name": "product.recommendProperties",
   "platform": "doudian",
   "group": "product",
-  "name": "product.recommendProperties",
   "description": "商品属性推荐",
   "method": "GET",
   "path": "/product/recommendProperties",
@@ -265,6 +267,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6866",
   "updatedAt": "2024-11-28",
-  "_file_stem": "product-product-recommendProperties",
-  "cnName": "商品属性推荐"
+  "_file_stem": "product-product-recommendProperties"
 }

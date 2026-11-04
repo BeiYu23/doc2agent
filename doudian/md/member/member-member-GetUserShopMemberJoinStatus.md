@@ -1,11 +1,12 @@
-# member.GetUserShopMemberJoinStatus
+# 判断用户会员状态
 
-> 判断用户会员状态
+> member.GetUserShopMemberJoinStatus — 判断用户会员状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.GetUserShopMemberJoinStatus` |
 | 中文名 | 判断用户会员状态 |
+| 文档地址 | `/docs/doudian/member/member-member-GetUserShopMemberJoinStatus` |
+| 接口 ID | `doudian.member.member.GetUserShopMemberJoinStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/GetUserShopMemberJoinStatus` |

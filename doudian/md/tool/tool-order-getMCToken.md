@@ -1,11 +1,12 @@
-# order.getMCToken
+# 获取前端组件token
 
-> 获取前端组件token
+> order.getMCToken — 获取前端组件token
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.order.getMCToken` |
 | 中文名 | 获取前端组件token |
+| 文档地址 | `/docs/doudian/tool/tool-order-getMCToken` |
+| 接口 ID | `doudian.tool.order.getMCToken` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getMCToken` |

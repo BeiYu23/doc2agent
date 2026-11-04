@@ -1,11 +1,12 @@
-# spu.modifySpu
+# 修改spu信息
 
-> 修改spu信息
+> spu.modifySpu — 修改spu信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.spu.modifySpu` |
 | 中文名 | 修改spu信息 |
+| 文档地址 | `/docs/doudian/product/product-spu-modifySpu` |
+| 接口 ID | `doudian.product.spu.modifySpu` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/modifySpu` |

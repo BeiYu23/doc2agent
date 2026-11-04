@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.coupons.CertSyncFailedCancelOrder",
+  "cnName": "定向开放接口",
+  "docUrl": "/docs/doudian/order/order-coupons-CertSyncFailedCancelOrder",
+  "name": "coupons.CertSyncFailedCancelOrder",
   "platform": "doudian",
   "group": "order",
-  "name": "coupons.CertSyncFailedCancelOrder",
   "description": "1、定向开放接口，需商家联系行业小二加白后才可使用，联系方式https://op.jinritemai.com/docs/question-docs/45/1777。\n2、仅适用于三方卡券订单，其他类型的订单都不支持。\n3、订单状态等于2 处于待发码状态，",
   "method": "GET",
   "path": "/coupons/CertSyncFailedCancelOrder",
@@ -151,6 +153,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/6662",
   "updatedAt": "2024-07-02",
-  "_file_stem": "order-coupons-CertSyncFailedCancelOrder",
-  "cnName": "定向开放接口"
+  "_file_stem": "order-coupons-CertSyncFailedCancelOrder"
 }

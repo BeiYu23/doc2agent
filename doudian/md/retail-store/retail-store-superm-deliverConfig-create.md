@@ -1,11 +1,12 @@
-# superm.deliverConfig.create
+# 门店时效管理规则-添加
 
-> 门店时效管理规则-添加
+> superm.deliverConfig.create — 门店时效管理规则-添加
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.deliverConfig.create` |
 | 中文名 | 门店时效管理规则-添加 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-deliverConfig-create` |
+| 接口 ID | `doudian.retail-store.superm.deliverConfig.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/deliverConfig/create` |

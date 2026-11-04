@@ -1,11 +1,12 @@
-# order.checkPreDelivery
+# 查询商家/订单是否可用预发货
 
-> 查询商家/订单是否可用预发货。如果不传订单ID，则查询店铺维度预发货判定结果。如果传了订单ID，则查询订单维度预发货判定结果。
+> order.checkPreDelivery — 查询商家/订单是否可用预发货。如果不传订单ID，则查询店铺维度预发货判定结果。如果传了订单ID，则查询订单维度预发货判定结果。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.checkPreDelivery` |
 | 中文名 | 查询商家/订单是否可用预发货 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-checkPreDelivery` |
+| 接口 ID | `doudian.logistics.order.checkPreDelivery` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/checkPreDelivery` |

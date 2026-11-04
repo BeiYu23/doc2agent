@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createVideoSearchTask",
+  "cnName": "创建视频搜索子任务",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createVideoSearchTask",
+  "name": "second.ecomInsight.createVideoSearchTask",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createVideoSearchTask",
   "description": "创建视频搜索子任务",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -122,6 +124,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8352",
   "updatedAt": "2026-06-02",
-  "_file_stem": "video-second-ecomInsight-createVideoSearchTask",
-  "cnName": "创建视频搜索子任务"
+  "_file_stem": "video-second-ecomInsight-createVideoSearchTask"
 }

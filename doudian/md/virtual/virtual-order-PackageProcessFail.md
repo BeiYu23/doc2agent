@@ -1,11 +1,12 @@
-# order.PackageProcessFail
+# 套餐办理失败
 
-> 套餐办理失败
+> order.PackageProcessFail — 套餐办理失败
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.order.PackageProcessFail` |
 | 中文名 | 套餐办理失败 |
+| 文档地址 | `/docs/doudian/virtual/virtual-order-PackageProcessFail` |
+| 接口 ID | `doudian.virtual.order.PackageProcessFail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/PackageProcessFail` |

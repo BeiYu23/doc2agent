@@ -1,11 +1,12 @@
-# superm.deliverConfig.del
+# 时效管理删除
 
-> 时效管理删除
+> superm.deliverConfig.del — 时效管理删除
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.deliverConfig.del` |
 | 中文名 | 时效管理删除 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-deliverConfig-del` |
+| 接口 ID | `doudian.retail-store.superm.deliverConfig.del` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/deliverConfig/del` |

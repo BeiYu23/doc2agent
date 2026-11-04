@@ -1,11 +1,12 @@
-# openCloud.v1.imageVersion.create
+# 创建镜像
 
-> 创建镜像
+> openCloud.v1.imageVersion.create — 创建镜像
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.v1.imageVersion.create` |
 | 中文名 | 创建镜像 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-v1-imageVersion-create` |
+| 接口 ID | `doudian.cloud.openCloud.v1.imageVersion.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/imageVersion/create` |

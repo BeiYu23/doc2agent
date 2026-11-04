@@ -1,11 +1,12 @@
-# material.getFolderInfo
+# 查看文件夹
 
-> 查看文件夹详情
+> material.getFolderInfo — 查看文件夹详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.getFolderInfo` |
 | 中文名 | 查看文件夹 |
+| 文档地址 | `/docs/doudian/material/material-material-getFolderInfo` |
+| 接口 ID | `doudian.material.material.getFolderInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/getFolderInfo` |

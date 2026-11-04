@@ -1,11 +1,12 @@
-# superm.product.queryProductSyncTask
+# 查询异步执行的根任务列表
 
-> 查询异步执行的根任务列表
+> superm.product.queryProductSyncTask — 查询异步执行的根任务列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.superm.product.queryProductSyncTask` |
 | 中文名 | 查询异步执行的根任务列表 |
+| 文档地址 | `/docs/doudian/product/product-superm-product-queryProductSyncTask` |
+| 接口 ID | `doudian.product.superm.product.queryProductSyncTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/product/queryProductSyncTask` |

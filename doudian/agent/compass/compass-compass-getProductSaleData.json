@@ -1,8 +1,10 @@
 {
   "id": "doudian.compass.compass.getProductSaleData",
+  "cnName": "电商罗盘商品销售数据",
+  "docUrl": "/docs/doudian/compass/compass-compass-getProductSaleData",
+  "name": "compass.getProductSaleData",
   "platform": "doudian",
   "group": "compass",
-  "name": "compass.getProductSaleData",
   "description": "电商罗盘商品销售数据",
   "method": "GET",
   "path": "/compass/getProductSaleData",
@@ -105,6 +107,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1020/2355",
   "updatedAt": "2022-08-11",
-  "_file_stem": "compass-compass-getProductSaleData",
-  "cnName": "电商罗盘商品销售数据"
+  "_file_stem": "compass-compass-getProductSaleData"
 }

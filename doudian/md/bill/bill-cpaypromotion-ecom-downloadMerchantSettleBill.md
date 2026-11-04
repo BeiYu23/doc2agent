@@ -1,12 +1,13 @@
-# cpaypromotion.ecom.downloadMerchantSettleBill
+# 通过【/cpaypromotion/ecom/…
 
-> 1、通过【YOUR_SECRET_KEY】接口返回的download_id。调用接口生成文件下载的URL链接时效为1小时，失效后需重新调此接口获取新的链接。
+> cpaypromotion.ecom.downloadMerchantSettleBill — 1、通过【YOUR_SECRET_KEY】接口返回的download_id。调用接口生成文件下载的URL链接时效为1小时，失效后需重新调此接口获取新的链接。
 2、对应抖店的账单管理-支付补贴账单功能
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.cpaypromotion.ecom.downloadMerchantSettleBill` |
 | 中文名 | 通过【/cpaypromotion/ecom/… |
+| 文档地址 | `/docs/doudian/bill/bill-cpaypromotion-ecom-downloadMerchantSettleBill` |
+| 接口 ID | `doudian.bill.cpaypromotion.ecom.downloadMerchantSettleBill` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

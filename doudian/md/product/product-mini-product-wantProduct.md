@@ -1,11 +1,12 @@
-# mini.product.wantProduct
+# 商品收藏
 
-> 商品收藏
+> mini.product.wantProduct — 商品收藏
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.mini.product.wantProduct` |
 | 中文名 | 商品收藏 |
+| 文档地址 | `/docs/doudian/product/product-mini-product-wantProduct` |
+| 接口 ID | `doudian.product.mini.product.wantProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/product/wantProduct` |

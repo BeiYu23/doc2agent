@@ -1,11 +1,12 @@
-# shopVideo.deleteShopVideo
+# 删除短视频
 
-> 删除短视频
+> shopVideo.deleteShopVideo — 删除短视频
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.deleteShopVideo` |
 | 中文名 | 删除短视频 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-deleteShopVideo` |
+| 接口 ID | `doudian.video.shopVideo.deleteShopVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/deleteShopVideo` |

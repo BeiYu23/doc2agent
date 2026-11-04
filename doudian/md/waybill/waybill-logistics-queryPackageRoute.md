@@ -1,11 +1,12 @@
-# logistics.queryPackageRoute
+# isv轨迹查询
 
-> isv轨迹查询
+> logistics.queryPackageRoute — isv轨迹查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.queryPackageRoute` |
 | 中文名 | isv轨迹查询 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-queryPackageRoute` |
+| 接口 ID | `doudian.waybill.logistics.queryPackageRoute` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/queryPackageRoute` |

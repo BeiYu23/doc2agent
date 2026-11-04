@@ -1,11 +1,12 @@
-# maintenance.fulfill.supplierPolicyChange
+# 服务商回传保单信息
 
-> 服务商回传保单信息
+> maintenance.fulfill.supplierPolicyChange — 服务商回传保单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.maintenance.fulfill.supplierPolicyChange` |
 | 中文名 | 服务商回传保单信息 |
+| 文档地址 | `/docs/doudian/industry/industry-maintenance-fulfill-supplierPolicyChange` |
+| 接口 ID | `doudian.industry.maintenance.fulfill.supplierPolicyChange` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

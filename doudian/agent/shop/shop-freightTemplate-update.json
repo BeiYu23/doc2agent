@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.freightTemplate.update",
+  "cnName": "更新运费模板",
+  "docUrl": "/docs/doudian/shop/shop-freightTemplate-update",
+  "name": "freightTemplate.update",
   "platform": "doudian",
   "group": "shop",
-  "name": "freightTemplate.update",
   "description": "更新运费模板",
   "method": "GET",
   "path": "/freightTemplate/update",
@@ -420,6 +422,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2063",
   "updatedAt": "2022-06-30",
-  "_file_stem": "shop-freightTemplate-update",
-  "cnName": "更新运费模板"
+  "_file_stem": "shop-freightTemplate-update"
 }

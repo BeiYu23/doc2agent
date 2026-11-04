@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.supplyChain.outside.getTailRatioRate",
+  "cnName": "查询超长单的线路列表",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getTailRatioRate",
+  "name": "supplyChain.outside.getTailRatioRate",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "supplyChain.outside.getTailRatioRate",
   "description": "查询超长单的线路列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2481",
   "updatedAt": "2022-09-26",
-  "_file_stem": "logistics-provider-supplyChain-outside-getTailRatioRate",
-  "cnName": "查询超长单的线路列表"
+  "_file_stem": "logistics-provider-supplyChain-outside-getTailRatioRate"
 }

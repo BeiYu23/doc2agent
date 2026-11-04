@@ -1,11 +1,12 @@
-# pigeon.getLeaveMsgList
+# 查询留言列表
 
-> 查询留言列表
+> pigeon.getLeaveMsgList — 查询留言列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.getLeaveMsgList` |
 | 中文名 | 查询留言列表 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-getLeaveMsgList` |
+| 接口 ID | `doudian.feige.pigeon.getLeaveMsgList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/getLeaveMsgList` |

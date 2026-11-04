@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.order.queryOrderPackageInfo",
+  "cnName": "查询店铺单包裹信息",
+  "docUrl": "/docs/doudian/cross-border/cross-border-order-queryOrderPackageInfo",
+  "name": "order.queryOrderPackageInfo",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "order.queryOrderPackageInfo",
   "description": "查询店铺单包裹信息",
   "method": "GET",
   "path": "/order/queryOrderPackageInfo",
@@ -216,6 +218,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6212",
   "updatedAt": "2024-02-29",
-  "_file_stem": "cross-border-order-queryOrderPackageInfo",
-  "cnName": "查询店铺单包裹信息"
+  "_file_stem": "cross-border-order-queryOrderPackageInfo"
 }

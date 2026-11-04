@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.product.GetRecommendCategory",
+  "cnName": "商品类目预测",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-product-GetRecommendCategory",
+  "name": "supplyCenter.product.GetRecommendCategory",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.product.GetRecommendCategory",
   "description": "商品类目预测",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5538",
   "updatedAt": "2023-11-03",
-  "_file_stem": "selection-supplyCenter-product-GetRecommendCategory",
-  "cnName": "商品类目预测"
+  "_file_stem": "selection-supplyCenter-product-GetRecommendCategory"
 }

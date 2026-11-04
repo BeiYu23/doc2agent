@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.topup.simcardUserInfoWritingSucceed",
+  "cnName": "号卡商品用户信息补录完成回调",
+  "docUrl": "/docs/doudian/virtual/virtual-topup-simcardUserInfoWritingSucceed",
+  "name": "topup.simcardUserInfoWritingSucceed",
   "platform": "doudian",
   "group": "virtual",
-  "name": "topup.simcardUserInfoWritingSucceed",
   "description": "号卡商品用户信息补录完成回调",
   "method": "GET",
   "path": "/topup/simcardUserInfoWritingSucceed",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/8278",
   "updatedAt": "2026-05-12",
-  "_file_stem": "virtual-topup-simcardUserInfoWritingSucceed",
-  "cnName": "号卡商品用户信息补录完成回调"
+  "_file_stem": "virtual-topup-simcardUserInfoWritingSucceed"
 }

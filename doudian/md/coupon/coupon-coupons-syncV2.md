@@ -1,11 +1,12 @@
-# coupons.syncV2
+# 卡券同步
 
-> 卡券同步
+> coupons.syncV2 — 卡券同步
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.syncV2` |
 | 中文名 | 卡券同步 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-syncV2` |
+| 接口 ID | `doudian.coupon.coupons.syncV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/syncV2` |

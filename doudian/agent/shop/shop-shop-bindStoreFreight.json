@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.bindStoreFreight",
+  "cnName": "门店绑定运费模版",
+  "docUrl": "/docs/doudian/shop/shop-shop-bindStoreFreight",
+  "name": "shop.bindStoreFreight",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.bindStoreFreight",
   "description": "门店绑定运费模版",
   "method": "GET",
   "path": "/shop/bindStoreFreight",
@@ -74,6 +76,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2381",
   "updatedAt": "2024-02-26",
-  "_file_stem": "shop-shop-bindStoreFreight",
-  "cnName": "门店绑定运费模版"
+  "_file_stem": "shop-shop-bindStoreFreight"
 }

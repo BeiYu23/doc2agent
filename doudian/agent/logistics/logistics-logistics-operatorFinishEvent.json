@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.operatorFinishEvent",
+  "cnName": "上门回收完成事件",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-operatorFinishEvent",
+  "name": "logistics.operatorFinishEvent",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.operatorFinishEvent",
   "description": "上门回收完成事件",
   "method": "GET",
   "path": "/logistics/operatorFinishEvent",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3536",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorFinishEvent",
-  "cnName": "上门回收完成事件"
+  "_file_stem": "logistics-logistics-operatorFinishEvent"
 }

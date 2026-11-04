@@ -1,11 +1,12 @@
-# product.longTitleOptimizeResult.save
+# 回传商品长标题优化结果
 
-> 回传商品长标题优化结果
+> product.longTitleOptimizeResult.save — 回传商品长标题优化结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.innovation.product.longTitleOptimizeResult.save` |
 | 中文名 | 回传商品长标题优化结果 |
+| 文档地址 | `/docs/doudian/innovation/innovation-product-longTitleOptimizeResult-save` |
+| 接口 ID | `doudian.innovation.product.longTitleOptimizeResult.save` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/longTitleOptimizeResult/save` |

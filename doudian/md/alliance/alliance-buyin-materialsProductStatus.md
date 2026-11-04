@@ -1,11 +1,12 @@
-# buyin.materialsProductStatus
+# 商品状态查询
 
-> 商品状态查询
+> buyin.materialsProductStatus — 商品状态查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.materialsProductStatus` |
 | 中文名 | 商品状态查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-materialsProductStatus` |
+| 接口 ID | `doudian.alliance.buyin.materialsProductStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/materialsProductStatus` |

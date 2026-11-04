@@ -1,11 +1,12 @@
-# fuwu.order.search
+# 服务市场商家订购搜索
 
-> 服务市场商家订购搜索接口
+> fuwu.order.search — 服务市场商家订购搜索接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.fuwu.order.search` |
 | 中文名 | 服务市场商家订购搜索 |
+| 文档地址 | `/docs/doudian/tool/tool-fuwu-order-search` |
+| 接口 ID | `doudian.tool.fuwu.order.search` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/order/search` |

@@ -1,11 +1,12 @@
-# openCloud.ddpAddShopTask
+# 数据推送，发起店铺补偿任务
 
-> 数据推送，发起店铺补偿任务
+> openCloud.ddpAddShopTask — 数据推送，发起店铺补偿任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.ddpAddShopTask` |
 | 中文名 | 数据推送，发起店铺补偿任务 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-ddpAddShopTask` |
+| 接口 ID | `doudian.cloud.openCloud.ddpAddShopTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/ddpAddShopTask` |

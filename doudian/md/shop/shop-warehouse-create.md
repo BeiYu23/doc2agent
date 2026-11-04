@@ -1,11 +1,12 @@
-# warehouse.create
+# 创建单个区域仓
 
-> 创建单个区域仓
+> warehouse.create — 创建单个区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.warehouse.create` |
 | 中文名 | 创建单个区域仓 |
+| 文档地址 | `/docs/doudian/shop/shop-warehouse-create` |
+| 接口 ID | `doudian.shop.warehouse.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/create` |

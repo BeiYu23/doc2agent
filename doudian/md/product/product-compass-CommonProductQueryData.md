@@ -1,11 +1,12 @@
-# compass.CommonProductQueryData
+# 数据T+1生成，建议第二天10点之后查询
 
-> 数据T+1生成，建议第二天10点之后查询
+> compass.CommonProductQueryData — 数据T+1生成，建议第二天10点之后查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.compass.CommonProductQueryData` |
 | 中文名 | 数据T+1生成，建议第二天10点之后查询 |
+| 文档地址 | `/docs/doudian/product/product-compass-CommonProductQueryData` |
+| 接口 ID | `doudian.product.compass.CommonProductQueryData` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/compass/CommonProductQueryData` |

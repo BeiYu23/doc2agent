@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.serviceList",
+  "cnName": "获取服务请求列表",
+  "docUrl": "/docs/doudian/order/order-order-serviceList",
+  "name": "order.serviceList",
   "platform": "doudian",
   "group": "order",
-  "name": "order.serviceList",
   "description": "获取服务请求列表",
   "method": "GET",
   "path": "/order/serviceList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/74",
   "updatedAt": "2021-01-15",
-  "_file_stem": "order-order-serviceList",
-  "cnName": "获取服务请求列表"
+  "_file_stem": "order-order-serviceList"
 }

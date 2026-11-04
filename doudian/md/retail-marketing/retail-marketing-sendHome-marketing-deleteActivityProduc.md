@@ -1,11 +1,12 @@
-# sendHome.marketing.deleteActivityProduc
+# 为创建好的营销活动门店删除商品
 
-> 为创建好的营销活动门店删除商品
+> sendHome.marketing.deleteActivityProduc — 为创建好的营销活动门店删除商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.sendHome.marketing.deleteActivityProduc` |
 | 中文名 | 为创建好的营销活动门店删除商品 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-deleteActivityProduc` |
+| 接口 ID | `doudian.retail-marketing.sendHome.marketing.deleteActivityProduc` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

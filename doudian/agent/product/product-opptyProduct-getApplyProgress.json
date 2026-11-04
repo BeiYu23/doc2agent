@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.opptyProduct.getApplyProgress",
+  "cnName": "机会品提报进度查询",
+  "docUrl": "/docs/doudian/product/product-opptyProduct-getApplyProgress",
+  "name": "opptyProduct.getApplyProgress",
   "platform": "doudian",
   "group": "product",
-  "name": "opptyProduct.getApplyProgress",
   "description": "机会品提报进度查询",
   "method": "GET",
   "path": "/opptyProduct/getApplyProgress",
@@ -84,6 +86,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1796",
   "updatedAt": "2021-09-13",
-  "_file_stem": "product-opptyProduct-getApplyProgress",
-  "cnName": "机会品提报进度查询"
+  "_file_stem": "product-opptyProduct-getApplyProgress"
 }

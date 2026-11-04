@@ -1,7 +1,9 @@
 {
   "id": "doudian._common",
-  "platform": "doudian",
+  "cnName": "抖店开放平台公共参数",
+  "docUrl": "/docs/doudian/_common",
   "name": "抖店开放平台公共参数",
+  "platform": "doudian",
   "description": "所有接口调用都需要携带的公共参数与签名说明（来源: 文档站 publicParam）。",
   "method": "GET",
   "path": "/（网关公共参数）",
@@ -100,6 +102,5 @@
     }
   },
   "source": "https://op.jinritemai.com/docs/guide-docs/10/23",
-  "updatedAt": "2026-11-04",
-  "cnName": "抖店开放平台公共参数"
+  "updatedAt": "2026-11-04"
 }

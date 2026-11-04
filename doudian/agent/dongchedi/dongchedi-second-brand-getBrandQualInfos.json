@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.brand.getBrandQualInfos",
+  "cnName": "【二方接口】查询品牌资质信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-brand-getBrandQualInfos",
+  "name": "second.brand.getBrandQualInfos",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.brand.getBrandQualInfos",
   "description": "【二方接口】查询品牌资质信息",
   "method": "GET",
   "path": "/second/brand/getBrandQualInfos",
@@ -214,6 +216,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6941",
   "updatedAt": "2024-10-15",
-  "_file_stem": "dongchedi-second-brand-getBrandQualInfos",
-  "cnName": "【二方接口】查询品牌资质信息"
+  "_file_stem": "dongchedi-second-brand-getBrandQualInfos"
 }

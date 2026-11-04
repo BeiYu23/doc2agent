@@ -1,11 +1,12 @@
-# supplyChain.getSupplierCategory
+# 获取供应商可选类目
 
-> 获取供应商可选类目
+> supplyChain.getSupplierCategory — 获取供应商可选类目
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.getSupplierCategory` |
 | 中文名 | 获取供应商可选类目 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-getSupplierCategory` |
+| 接口 ID | `doudian.supply-chain.supplyChain.getSupplierCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/getSupplierCategory` |

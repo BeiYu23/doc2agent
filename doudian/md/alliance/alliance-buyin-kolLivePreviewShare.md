@@ -1,11 +1,12 @@
-# buyin.kolLivePreviewShare
+# 达人直播预告转链
 
-> 达人直播预告转链
+> buyin.kolLivePreviewShare — 达人直播预告转链
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.kolLivePreviewShare` |
 | 中文名 | 达人直播预告转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-kolLivePreviewShare` |
+| 接口 ID | `doudian.alliance.buyin.kolLivePreviewShare` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolLivePreviewShare` |

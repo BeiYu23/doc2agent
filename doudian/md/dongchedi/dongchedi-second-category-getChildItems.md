@@ -1,11 +1,12 @@
-# second.category.getChildItems
+# 【二方接口】根据类目ID
 
-> 【二方接口】根据类目ID，查询下级类目信息，允许指定层级
+> second.category.getChildItems — 【二方接口】根据类目ID，查询下级类目信息，允许指定层级
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.category.getChildItems` |
 | 中文名 | 【二方接口】根据类目ID |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-category-getChildItems` |
+| 接口 ID | `doudian.dongchedi.second.category.getChildItems` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

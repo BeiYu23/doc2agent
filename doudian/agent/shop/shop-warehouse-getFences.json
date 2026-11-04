@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.warehouse.getFences",
+  "cnName": "获取电子围栏信息/列表",
+  "docUrl": "/docs/doudian/shop/shop-warehouse-getFences",
+  "name": "warehouse.getFences",
   "platform": "doudian",
   "group": "shop",
-  "name": "warehouse.getFences",
   "description": "获取电子围栏信息/列表",
   "method": "GET",
   "path": "/warehouse/getFences",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1783",
   "updatedAt": "2024-06-11",
-  "_file_stem": "shop-warehouse-getFences",
-  "cnName": "获取电子围栏信息/列表"
+  "_file_stem": "shop-warehouse-getFences"
 }

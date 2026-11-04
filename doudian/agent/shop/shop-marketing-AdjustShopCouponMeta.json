@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.marketing.AdjustShopCouponMeta",
+  "cnName": "修改优惠券库存",
+  "docUrl": "/docs/doudian/shop/shop-marketing-AdjustShopCouponMeta",
+  "name": "marketing.AdjustShopCouponMeta",
   "platform": "doudian",
   "group": "shop",
-  "name": "marketing.AdjustShopCouponMeta",
   "description": "修改优惠券库存",
   "method": "GET",
   "path": "/marketing/AdjustShopCouponMeta",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/525",
   "updatedAt": "2021-05-17",
-  "_file_stem": "shop-marketing-AdjustShopCouponMeta",
-  "cnName": "修改优惠券库存"
+  "_file_stem": "shop-marketing-AdjustShopCouponMeta"
 }

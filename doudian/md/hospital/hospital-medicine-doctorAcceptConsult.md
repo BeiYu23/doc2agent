@@ -1,11 +1,12 @@
-# medicine.doctorAcceptConsult
+# 医生接诊
 
-> 医生接诊
+> medicine.doctorAcceptConsult — 医生接诊
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.hospital.medicine.doctorAcceptConsult` |
 | 中文名 | 医生接诊 |
+| 文档地址 | `/docs/doudian/hospital/hospital-medicine-doctorAcceptConsult` |
+| 接口 ID | `doudian.hospital.medicine.doctorAcceptConsult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/doctorAcceptConsult` |

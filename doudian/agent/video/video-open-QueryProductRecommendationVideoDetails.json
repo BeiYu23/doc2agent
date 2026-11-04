@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.QueryProductRecommendationVideoDetails",
+  "cnName": "查询商品推荐视频",
+  "docUrl": "/docs/doudian/video/video-open-QueryProductRecommendationVideoDetails",
+  "name": "open.QueryProductRecommendationVideoDetails",
   "platform": "doudian",
   "group": "video",
-  "name": "open.QueryProductRecommendationVideoDetails",
   "description": "查询商品推荐视频详情",
   "method": "GET",
   "path": "/open/QueryProductRecommendationVideoDetails",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8522",
   "updatedAt": "2026-08-18",
-  "_file_stem": "video-open-QueryProductRecommendationVideoDetails",
-  "cnName": "查询商品推荐视频"
+  "_file_stem": "video-open-QueryProductRecommendationVideoDetails"
 }

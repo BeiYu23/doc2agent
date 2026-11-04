@@ -1,11 +1,12 @@
-# superm.product.createSubProduct
+# 基于店铺主品创建门店子品 (同步创建
 
-> 基于店铺主品创建门店子品 (同步创建)
+> superm.product.createSubProduct — 基于店铺主品创建门店子品 (同步创建)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.superm.product.createSubProduct` |
 | 中文名 | 基于店铺主品创建门店子品 (同步创建 |
+| 文档地址 | `/docs/doudian/product/product-superm-product-createSubProduct` |
+| 接口 ID | `doudian.product.superm.product.createSubProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/product/createSubProduct` |

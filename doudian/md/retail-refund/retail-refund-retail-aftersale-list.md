@@ -1,11 +1,12 @@
-# retail.aftersale.list
+# 售后列表
 
-> 售后列表，仅到家业务(即时零售)使用，电商业务使用/aftersale/list接口
+> retail.aftersale.list — 售后列表，仅到家业务(即时零售)使用，电商业务使用/aftersale/list接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-refund.retail.aftersale.list` |
 | 中文名 | 售后列表 |
+| 文档地址 | `/docs/doudian/retail-refund/retail-refund-retail-aftersale-list` |
+| 接口 ID | `doudian.retail-refund.retail.aftersale.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/retail/aftersale/list` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.category.pageQueryCatOperationCategory",
+  "cnName": "【二方接口】分页获取垂类类目信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-category-pageQueryCatOperationCategory",
+  "name": "second.category.pageQueryCatOperationCategory",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.category.pageQueryCatOperationCategory",
   "description": "【二方接口】分页获取垂类类目信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -115,6 +117,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6837",
   "updatedAt": "2026-02-25",
-  "_file_stem": "dongchedi-second-category-pageQueryCatOperationCategory",
-  "cnName": "【二方接口】分页获取垂类类目信息"
+  "_file_stem": "dongchedi-second-category-pageQueryCatOperationCategory"
 }

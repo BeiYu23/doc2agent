@@ -1,11 +1,12 @@
-# logistics.customTemplateList
+# 查询商家自定义区域数据
 
-> 查询商家自定义区域数据
+> logistics.customTemplateList — 查询商家自定义区域数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.customTemplateList` |
 | 中文名 | 查询商家自定义区域数据 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-customTemplateList` |
+| 接口 ID | `doudian.logistics.logistics.customTemplateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/customTemplateList` |

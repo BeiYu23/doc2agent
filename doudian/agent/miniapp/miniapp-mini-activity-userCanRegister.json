@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.userCanRegister",
+  "cnName": "判断用户是否可以参加活动",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-userCanRegister",
+  "name": "mini.activity.userCanRegister",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.userCanRegister",
   "description": "判断用户是否可以参加活动",
   "method": "GET",
   "path": "/mini/activity/userCanRegister",
@@ -249,6 +251,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6659",
   "updatedAt": "2024-08-13",
-  "_file_stem": "miniapp-mini-activity-userCanRegister",
-  "cnName": "判断用户是否可以参加活动"
+  "_file_stem": "miniapp-mini-activity-userCanRegister"
 }

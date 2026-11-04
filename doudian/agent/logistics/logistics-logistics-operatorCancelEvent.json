@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.operatorCancelEvent",
+  "cnName": "服务商主动取消上门事件通知",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-operatorCancelEvent",
+  "name": "logistics.operatorCancelEvent",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.operatorCancelEvent",
   "description": "服务商主动取消上门事件通知",
   "method": "GET",
   "path": "/logistics/operatorCancelEvent",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3554",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorCancelEvent",
-  "cnName": "服务商主动取消上门事件通知"
+  "_file_stem": "logistics-logistics-operatorCancelEvent"
 }

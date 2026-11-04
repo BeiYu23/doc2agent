@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.shop.getStorePackageFee",
+  "cnName": "获取门店打包费",
+  "docUrl": "/docs/doudian/retail-store/retail-store-shop-getStorePackageFee",
+  "name": "shop.getStorePackageFee",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "shop.getStorePackageFee",
   "description": "获取门店打包费",
   "method": "GET",
   "path": "/shop/getStorePackageFee",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2634",
   "updatedAt": "2024-02-26",
-  "_file_stem": "retail-store-shop-getStorePackageFee",
-  "cnName": "获取门店打包费"
+  "_file_stem": "retail-store-shop-getStorePackageFee"
 }

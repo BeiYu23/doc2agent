@@ -1,11 +1,12 @@
-# logistics.ind.orderStatusPush
+# 订单状态回传
 
-> 订单状态回传
+> logistics.ind.orderStatusPush — 订单状态回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.ind.orderStatusPush` |
 | 中文名 | 订单状态回传 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-ind-orderStatusPush` |
+| 接口 ID | `doudian.logistics.logistics.ind.orderStatusPush` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/ind/orderStatusPush` |

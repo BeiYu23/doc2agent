@@ -1,11 +1,12 @@
-# alliance.instituteColonelActivityList
+# 团长活动查询
 
-> 团长活动查询接口
+> alliance.instituteColonelActivityList — 团长活动查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.instituteColonelActivityList` |
 | 中文名 | 团长活动查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-instituteColonelActivityList` |
+| 接口 ID | `doudian.alliance.alliance.instituteColonelActivityList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/instituteColonelActivityList` |

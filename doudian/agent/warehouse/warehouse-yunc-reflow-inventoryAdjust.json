@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.reflow.inventoryAdjust",
+  "cnName": "库存调整",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-reflow-inventoryAdjust",
+  "name": "yunc.reflow.inventoryAdjust",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.reflow.inventoryAdjust",
   "description": "库存调整接口",
   "method": "GET",
   "path": "/yunc/reflow/inventoryAdjust",
@@ -300,6 +302,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2277",
   "updatedAt": "2022-08-01",
-  "_file_stem": "warehouse-yunc-reflow-inventoryAdjust",
-  "cnName": "库存调整"
+  "_file_stem": "warehouse-yunc-reflow-inventoryAdjust"
 }

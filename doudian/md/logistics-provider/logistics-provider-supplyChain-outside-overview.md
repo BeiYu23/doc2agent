@@ -1,11 +1,12 @@
-# supplyChain.outside.overview
+# 物流指数总览
 
-> 物流指数总览
+> supplyChain.outside.overview — 物流指数总览
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.supplyChain.outside.overview` |
 | 中文名 | 物流指数总览 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-overview` |
+| 接口 ID | `doudian.logistics-provider.supplyChain.outside.overview` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.rejectOrder",
+  "cnName": "超市小时达拒单",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-rejectOrder",
+  "name": "superm.rejectOrder",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.rejectOrder",
   "description": "超市小时达拒单",
   "method": "GET",
   "path": "/superm/rejectOrder",
@@ -162,6 +164,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2960",
   "updatedAt": "2023-09-19",
-  "_file_stem": "retail-store-superm-rejectOrder",
-  "cnName": "超市小时达拒单"
+  "_file_stem": "retail-store-superm-rejectOrder"
 }

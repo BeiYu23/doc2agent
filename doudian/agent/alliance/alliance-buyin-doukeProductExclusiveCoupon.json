@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.doukeProductExclusiveCoupon",
+  "cnName": "抖客商品专属券查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-doukeProductExclusiveCoupon",
+  "name": "buyin.doukeProductExclusiveCoupon",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.doukeProductExclusiveCoupon",
   "description": "抖客商品专属券查询，只能查询抖客专属券，不返回商品的通用券",
   "method": "GET",
   "path": "/buyin/doukeProductExclusiveCoupon",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/4233",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukeProductExclusiveCoupon",
-  "cnName": "抖客商品专属券查询"
+  "_file_stem": "alliance-buyin-doukeProductExclusiveCoupon"
 }

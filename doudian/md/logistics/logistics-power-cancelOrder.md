@@ -1,11 +1,12 @@
-# power.cancelOrder
+# 物流商取消
 
-> 物流商取消接口
+> power.cancelOrder — 物流商取消接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.cancelOrder` |
 | 中文名 | 物流商取消 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-cancelOrder` |
+| 接口 ID | `doudian.logistics.power.cancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/cancelOrder` |

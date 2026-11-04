@@ -1,11 +1,12 @@
-# order.orderClose
+# 关闭订单
 
-> 关闭订单接口
+> order.orderClose — 关闭订单接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.orderClose` |
 | 中文名 | 关闭订单 |
+| 文档地址 | `/docs/doudian/order/order-order-orderClose` |
+| 接口 ID | `doudian.order.order.orderClose` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/orderClose` |

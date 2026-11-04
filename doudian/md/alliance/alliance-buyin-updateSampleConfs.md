@@ -1,11 +1,12 @@
-# buyin.updateSampleConfs
+# 批量设置达人买样返款规则
 
-> 批量设置达人买样返款规则
+> buyin.updateSampleConfs — 批量设置达人买样返款规则
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.updateSampleConfs` |
 | 中文名 | 批量设置达人买样返款规则 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-updateSampleConfs` |
+| 接口 ID | `doudian.alliance.buyin.updateSampleConfs` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/updateSampleConfs` |

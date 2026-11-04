@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.editSchema",
+  "cnName": "商品发布schema编辑",
+  "docUrl": "/docs/doudian/product/product-product-editSchema",
+  "name": "product.editSchema",
   "platform": "doudian",
   "group": "product",
-  "name": "product.editSchema",
   "description": "商品发布schema编辑接口",
   "method": "GET",
   "path": "/product/editSchema",
@@ -843,6 +845,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6371",
   "updatedAt": "2026-07-15",
-  "_file_stem": "product-product-editSchema",
-  "cnName": "商品发布schema编辑"
+  "_file_stem": "product-product-editSchema"
 }

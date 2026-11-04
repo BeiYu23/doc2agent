@@ -1,11 +1,12 @@
-# spu.createSpu
+# 发布SPU
 
-> 发布SPU
+> spu.createSpu — 发布SPU
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.spu.createSpu` |
 | 中文名 | 发布SPU |
+| 文档地址 | `/docs/doudian/product/product-spu-createSpu` |
+| 接口 ID | `doudian.product.spu.createSpu` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/createSpu` |

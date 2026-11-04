@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.batchGetOpenIdListByUnionId",
+  "cnName": "服务商可以根据品牌维度的用户唯一身份Union…",
+  "docUrl": "/docs/doudian/member/member-member-batchGetOpenIdListByUnionId",
+  "name": "member.batchGetOpenIdListByUnionId",
   "platform": "doudian",
   "group": "member",
-  "name": "member.batchGetOpenIdListByUnionId",
   "description": "服务商可以根据品牌维度的用户唯一身份UnionId来查询品牌下每个店铺的用户OpenId",
   "method": "GET",
   "path": "/member/batchGetOpenIdListByUnionId",
@@ -97,6 +99,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/2814",
   "updatedAt": "2022-12-08",
-  "_file_stem": "member-member-batchGetOpenIdListByUnionId",
-  "cnName": "服务商可以根据品牌维度的用户唯一身份Union…"
+  "_file_stem": "member-member-batchGetOpenIdListByUnionId"
 }

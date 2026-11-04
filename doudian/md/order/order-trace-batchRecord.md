@@ -1,11 +1,12 @@
-# trace.batchRecord
+# 在订单链路监控场景中
 
-> 在订单链路监控场景中，批量(最大20条)回传轨迹信息。 信息回传后能自动记录并统计监控状态信息
+> trace.batchRecord — 在订单链路监控场景中，批量(最大20条)回传轨迹信息。 信息回传后能自动记录并统计监控状态信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.trace.batchRecord` |
 | 中文名 | 在订单链路监控场景中 |
+| 文档地址 | `/docs/doudian/order/order-trace-batchRecord` |
+| 接口 ID | `doudian.order.trace.batchRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trace/batchRecord` |

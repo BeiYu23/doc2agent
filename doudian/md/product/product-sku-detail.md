@@ -1,11 +1,12 @@
-# sku.detail
+# 获取商品sku
 
-> 获取商品sku详情
+> sku.detail — 获取商品sku详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.sku.detail` |
 | 中文名 | 获取商品sku |
+| 文档地址 | `/docs/doudian/product/product-sku-detail` |
+| 接口 ID | `doudian.product.sku.detail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/detail` |

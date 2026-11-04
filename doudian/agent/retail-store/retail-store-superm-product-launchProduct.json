@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.product.launchProduct",
+  "cnName": "上架商品",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-product-launchProduct",
+  "name": "superm.product.launchProduct",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.product.launchProduct",
   "description": "上架商品",
   "method": "GET",
   "path": "/superm/product/launchProduct",
@@ -272,6 +274,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2666",
   "updatedAt": "2026-07-15",
-  "_file_stem": "retail-store-superm-product-launchProduct",
-  "cnName": "上架商品"
+  "_file_stem": "retail-store-superm-product-launchProduct"
 }

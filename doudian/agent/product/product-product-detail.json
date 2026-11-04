@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.detail",
+  "cnName": "查询商品",
+  "docUrl": "/docs/doudian/product/product-product-detail",
+  "name": "product.detail",
   "platform": "doudian",
   "group": "product",
-  "name": "product.detail",
   "description": "查询商品详情",
   "method": "GET",
   "path": "/product/detail",
@@ -1145,6 +1147,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/56",
   "updatedAt": "2026-09-09",
-  "_file_stem": "product-product-detail",
-  "cnName": "查询商品"
+  "_file_stem": "product-product-detail"
 }

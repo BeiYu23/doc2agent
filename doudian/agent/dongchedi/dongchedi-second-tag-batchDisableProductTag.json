@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.tag.batchDisableProductTag",
+  "cnName": "【二方接口】商品批量去标",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-tag-batchDisableProductTag",
+  "name": "second.tag.batchDisableProductTag",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.tag.batchDisableProductTag",
   "description": "【二方接口】商品批量去标",
   "method": "GET",
   "path": "/second/tag/batchDisableProductTag",
@@ -234,6 +236,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6942",
   "updatedAt": "2024-10-15",
-  "_file_stem": "dongchedi-second-tag-batchDisableProductTag",
-  "cnName": "【二方接口】商品批量去标"
+  "_file_stem": "dongchedi-second-tag-batchDisableProductTag"
 }

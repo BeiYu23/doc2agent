@@ -1,11 +1,12 @@
-# open.SaasQueryImageReproductionTask
+# 查询图片复刻任务 (SaaS
 
-> 查询图片复刻任务 (SaaS)
+> open.SaasQueryImageReproductionTask — 查询图片复刻任务 (SaaS)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.SaasQueryImageReproductionTask` |
 | 中文名 | 查询图片复刻任务 (SaaS |
+| 文档地址 | `/docs/doudian/video/video-open-SaasQueryImageReproductionTask` |
+| 接口 ID | `doudian.video.open.SaasQueryImageReproductionTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/SaasQueryImageReproductionTask` |

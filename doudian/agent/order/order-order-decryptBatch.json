@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.decryptBatch",
+  "cnName": "此接口用于批量解密",
+  "docUrl": "/docs/doudian/order/order-order-decryptBatch",
+  "name": "order.decryptBatch",
   "platform": "doudian",
   "group": "order",
-  "name": "order.decryptBatch",
   "description": "此接口用于批量解密",
   "method": "GET",
   "path": "/order/decryptBatch",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/481",
   "updatedAt": "2021-05-07",
-  "_file_stem": "order-order-decryptBatch",
-  "cnName": "此接口用于批量解密"
+  "_file_stem": "order-order-decryptBatch"
 }

@@ -1,11 +1,12 @@
-# second.product.list4Virtual
+# 【二方接口】获取商品列表
 
-> 【二方接口】获取商品列表
+> second.product.list4Virtual — 【二方接口】获取商品列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.product.list4Virtual` |
 | 中文名 | 【二方接口】获取商品列表 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-product-list4Virtual` |
+| 接口 ID | `doudian.dongchedi.second.product.list4Virtual` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/list4Virtual` |

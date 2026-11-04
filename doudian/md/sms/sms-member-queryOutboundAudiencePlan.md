@@ -1,11 +1,12 @@
-# member.queryOutboundAudiencePlan
+# 外呼计划生产信息查询
 
-> 外呼计划生产信息查询
+> member.queryOutboundAudiencePlan — 外呼计划生产信息查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.member.queryOutboundAudiencePlan` |
 | 中文名 | 外呼计划生产信息查询 |
+| 文档地址 | `/docs/doudian/sms/sms-member-queryOutboundAudiencePlan` |
+| 接口 ID | `doudian.sms.member.queryOutboundAudiencePlan` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/queryOutboundAudiencePlan` |

@@ -1,11 +1,12 @@
-# install.order.supplierCompleteException
+# 服务商安装异常
 
-> 服务商安装异常
+> install.order.supplierCompleteException — 服务商安装异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.supplierCompleteException` |
 | 中文名 | 服务商安装异常 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-supplierCompleteException` |
+| 接口 ID | `doudian.logistics-provider.install.order.supplierCompleteException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierCompleteException` |

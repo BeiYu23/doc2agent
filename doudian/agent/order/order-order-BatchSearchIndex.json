@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.BatchSearchIndex",
+  "cnName": "批量获取索引串",
+  "docUrl": "/docs/doudian/order/order-order-BatchSearchIndex",
+  "name": "order.BatchSearchIndex",
   "platform": "doudian",
   "group": "order",
-  "name": "order.BatchSearchIndex",
   "description": "批量获取索引串接口",
   "method": "GET",
   "path": "/order/BatchSearchIndex",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1839",
   "updatedAt": "2022-12-15",
-  "_file_stem": "order-order-BatchSearchIndex",
-  "cnName": "批量获取索引串"
+  "_file_stem": "order-order-BatchSearchIndex"
 }

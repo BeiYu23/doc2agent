@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.institutionInfo",
+  "cnName": "获取机构信息",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-institutionInfo",
+  "name": "buyin.institutionInfo",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.institutionInfo",
   "description": "获取机构信息",
   "method": "GET",
   "path": "/buyin/institutionInfo",
@@ -95,6 +97,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2305",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-institutionInfo",
-  "cnName": "获取机构信息"
+  "_file_stem": "alliance-buyin-institutionInfo"
 }

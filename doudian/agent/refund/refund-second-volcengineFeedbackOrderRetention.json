@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.second.volcengineFeedbackOrderRetention",
+  "cnName": "AI挽单回调",
+  "docUrl": "/docs/doudian/refund/refund-second-volcengineFeedbackOrderRetention",
+  "name": "second.volcengineFeedbackOrderRetention",
   "platform": "doudian",
   "group": "refund",
-  "name": "second.volcengineFeedbackOrderRetention",
   "description": "AI挽单回调接口",
   "method": "GET",
   "path": "/second/volcengineFeedbackOrderRetention",
@@ -119,6 +121,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/8136",
   "updatedAt": "2026-03-12",
-  "_file_stem": "refund-second-volcengineFeedbackOrderRetention",
-  "cnName": "AI挽单回调"
+  "_file_stem": "refund-second-volcengineFeedbackOrderRetention"
 }

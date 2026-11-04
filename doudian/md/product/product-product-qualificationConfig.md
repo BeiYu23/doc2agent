@@ -1,11 +1,12 @@
-# product.qualificationConfig
+# 获取类目下需要填写的资质列表
 
-> 获取类目下需要填写的资质列表
+> product.qualificationConfig — 获取类目下需要填写的资质列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.qualificationConfig` |
 | 中文名 | 获取类目下需要填写的资质列表 |
+| 文档地址 | `/docs/doudian/product/product-product-qualificationConfig` |
+| 接口 ID | `doudian.product.product.qualificationConfig` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/qualificationConfig` |

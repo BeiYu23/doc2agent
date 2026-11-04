@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.promise.setSkuShipTime",
+  "cnName": "【接口调用需加白，不再新增名单】",
+  "docUrl": "/docs/doudian/stock/stock-promise-setSkuShipTime",
+  "name": "promise.setSkuShipTime",
   "platform": "doudian",
   "group": "stock",
-  "name": "promise.setSkuShipTime",
   "description": "【接口调用需加白，不再新增名单】\n设置sku发货时效\n设置sku在某仓的发货时效",
   "method": "GET",
   "path": "/promise/setSkuShipTime",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1864",
   "updatedAt": "2021-08-11",
-  "_file_stem": "stock-promise-setSkuShipTime",
-  "cnName": "【接口调用需加白，不再新增名单】"
+  "_file_stem": "stock-promise-setSkuShipTime"
 }

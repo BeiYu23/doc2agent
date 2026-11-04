@@ -1,11 +1,12 @@
-# power.updateTicket
+# 工单处理回传
 
-> 工单处理回传
+> power.updateTicket — 工单处理回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.updateTicket` |
 | 中文名 | 工单处理回传 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-updateTicket` |
+| 接口 ID | `doudian.logistics.power.updateTicket` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/updateTicket` |

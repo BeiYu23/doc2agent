@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.publishPreCheck",
+  "cnName": "商品发布前置校验",
+  "docUrl": "/docs/doudian/product/product-product-publishPreCheck",
+  "name": "product.publishPreCheck",
   "platform": "doudian",
   "group": "product",
-  "name": "product.publishPreCheck",
   "description": "商品发布前置校验接口",
   "method": "GET",
   "path": "/product/publishPreCheck",
@@ -160,6 +162,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6503",
   "updatedAt": "2026-08-21",
-  "_file_stem": "product-product-publishPreCheck",
-  "cnName": "商品发布前置校验"
+  "_file_stem": "product-product-publishPreCheck"
 }

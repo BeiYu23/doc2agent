@@ -1,11 +1,12 @@
-# order.addOrderRemark
+# 为商家提供订单备注
 
-> 为商家提供订单备注接口
+> order.addOrderRemark — 为商家提供订单备注接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.addOrderRemark` |
 | 中文名 | 为商家提供订单备注 |
+| 文档地址 | `/docs/doudian/order/order-order-addOrderRemark` |
+| 接口 ID | `doudian.order.order.addOrderRemark` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/addOrderRemark` |

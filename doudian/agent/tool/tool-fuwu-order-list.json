@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.fuwu.order.list",
+  "cnName": "查询服务市场订单",
+  "docUrl": "/docs/doudian/tool/tool-fuwu-order-list",
+  "name": "fuwu.order.list",
   "platform": "doudian",
   "group": "tool",
-  "name": "fuwu.order.list",
   "description": "查询服务市场订单",
   "method": "GET",
   "path": "/fuwu/order/list",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/4524",
   "updatedAt": "2023-09-05",
-  "_file_stem": "tool-fuwu-order-list",
-  "cnName": "查询服务市场订单"
+  "_file_stem": "tool-fuwu-order-list"
 }

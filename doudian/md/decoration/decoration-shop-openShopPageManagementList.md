@@ -1,11 +1,12 @@
-# shop.openShopPageManagementList
+# 店铺装修-页面管理
 
-> 店铺装修-页面管理
+> shop.openShopPageManagementList — 店铺装修-页面管理
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.openShopPageManagementList` |
 | 中文名 | 店铺装修-页面管理 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-openShopPageManagementList` |
+| 接口 ID | `doudian.decoration.shop.openShopPageManagementList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/openShopPageManagementList` |

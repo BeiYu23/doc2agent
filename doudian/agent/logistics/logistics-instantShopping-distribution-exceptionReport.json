@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.instantShopping.distribution.exceptionReport",
+  "cnName": "骑手上报异常",
+  "docUrl": "/docs/doudian/logistics/logistics-instantShopping-distribution-exceptionReport",
+  "name": "instantShopping.distribution.exceptionReport",
   "platform": "doudian",
   "group": "logistics",
-  "name": "instantShopping.distribution.exceptionReport",
   "description": "骑手上报异常",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -208,6 +210,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/6584",
   "updatedAt": "2024-06-14",
-  "_file_stem": "logistics-instantShopping-distribution-exceptionReport",
-  "cnName": "骑手上报异常"
+  "_file_stem": "logistics-instantShopping-distribution-exceptionReport"
 }

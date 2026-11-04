@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierComplete",
+  "cnName": "服务完成",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierComplete",
+  "name": "install.order.supplierComplete",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierComplete",
   "description": "服务完成",
   "method": "GET",
   "path": "/install/order/supplierComplete",
@@ -290,6 +292,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5788",
   "updatedAt": "2026-07-23",
-  "_file_stem": "logistics-provider-install-order-supplierComplete",
-  "cnName": "服务完成"
+  "_file_stem": "logistics-provider-install-order-supplierComplete"
 }

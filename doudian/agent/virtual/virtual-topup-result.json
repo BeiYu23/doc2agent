@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.topup.result",
+  "cnName": "商家充值结果回调",
+  "docUrl": "/docs/doudian/virtual/virtual-topup-result",
+  "name": "topup.result",
   "platform": "doudian",
   "group": "virtual",
-  "name": "topup.result",
   "description": "商家充值结果回调",
   "method": "GET",
   "path": "/topup/result",
@@ -166,6 +168,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/1639",
   "updatedAt": "2024-10-21",
-  "_file_stem": "virtual-topup-result",
-  "cnName": "商家充值结果回调"
+  "_file_stem": "virtual-topup-result"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.product.addV2",
+  "cnName": "发布商品",
+  "docUrl": "/docs/doudian/shop/shop-product-addV2",
+  "name": "product.addV2",
   "platform": "doudian",
   "group": "shop",
-  "name": "product.addV2",
   "description": "发布商品",
   "method": "GET",
   "path": "/product/addV2",
@@ -1150,6 +1152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2081",
   "updatedAt": "2022-07-20",
-  "_file_stem": "shop-product-addV2",
-  "cnName": "发布商品"
+  "_file_stem": "shop-product-addV2"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.marketing.marketing.BatchApplyAsset",
+  "cnName": "资产领券",
+  "docUrl": "/docs/doudian/marketing/marketing-marketing-BatchApplyAsset",
+  "name": "marketing.BatchApplyAsset",
   "platform": "doudian",
   "group": "marketing",
-  "name": "marketing.BatchApplyAsset",
   "description": "资产领券接口",
   "method": "GET",
   "path": "/marketing/BatchApplyAsset",
@@ -133,6 +135,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/7168",
   "updatedAt": "2024-12-23",
-  "_file_stem": "marketing-marketing-BatchApplyAsset",
-  "cnName": "资产领券"
+  "_file_stem": "marketing-marketing-BatchApplyAsset"
 }

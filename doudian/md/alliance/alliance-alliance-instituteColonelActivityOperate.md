@@ -1,11 +1,12 @@
-# alliance.instituteColonelActivityOperate
+# 专属团长活动删除
 
-> 专属团长活动删除接口（下线+删除）
+> alliance.instituteColonelActivityOperate — 专属团长活动删除接口（下线+删除）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.instituteColonelActivityOperate` |
 | 中文名 | 专属团长活动删除 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-instituteColonelActivityOperate` |
+| 接口 ID | `doudian.alliance.alliance.instituteColonelActivityOperate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/instituteColonelActivityOperate` |

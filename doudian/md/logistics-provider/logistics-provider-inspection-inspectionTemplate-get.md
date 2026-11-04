@@ -1,11 +1,12 @@
-# inspection.inspectionTemplate.get
+# 获取检测模版
 
-> 获取检测模版
+> inspection.inspectionTemplate.get — 获取检测模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.inspection.inspectionTemplate.get` |
 | 中文名 | 获取检测模版 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-inspection-inspectionTemplate-get` |
+| 接口 ID | `doudian.logistics-provider.inspection.inspectionTemplate.get` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/inspectionTemplate/get` |

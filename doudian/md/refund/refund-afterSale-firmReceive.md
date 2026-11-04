@@ -1,11 +1,12 @@
-# afterSale.firmReceive
+# 商家确认是否收到退货
 
-> 商家确认是否收到退货（831下线，可使用该接口：/afterSale/Operate）
+> afterSale.firmReceive — 商家确认是否收到退货（831下线，可使用该接口：/afterSale/Operate）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.firmReceive` |
 | 中文名 | 商家确认是否收到退货 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-firmReceive` |
+| 接口 ID | `doudian.refund.afterSale.firmReceive` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/firmReceive` |

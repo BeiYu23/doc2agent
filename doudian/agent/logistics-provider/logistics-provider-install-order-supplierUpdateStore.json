@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierUpdateStore",
+  "cnName": "安装服务商更新门店",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierUpdateStore",
+  "name": "install.order.supplierUpdateStore",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierUpdateStore",
   "description": "安装服务商更新门店",
   "method": "GET",
   "path": "/install/order/supplierUpdateStore",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7524",
   "updatedAt": "2025-07-16",
-  "_file_stem": "logistics-provider-install-order-supplierUpdateStore",
-  "cnName": "安装服务商更新门店"
+  "_file_stem": "logistics-provider-install-order-supplierUpdateStore"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.operatorCompleteEvent",
+  "cnName": "服务完成事件",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-operatorCompleteEvent",
+  "name": "logistics.operatorCompleteEvent",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.operatorCompleteEvent",
   "description": "服务完成事件",
   "method": "GET",
   "path": "/logistics/operatorCompleteEvent",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3537",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorCompleteEvent",
-  "cnName": "服务完成事件"
+  "_file_stem": "logistics-logistics-operatorCompleteEvent"
 }

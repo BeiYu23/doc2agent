@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.simplePlan",
+  "cnName": "创建/修改商品普通计划",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-simplePlan",
+  "name": "buyin.simplePlan",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.simplePlan",
   "description": "创建/修改商品普通计划",
   "method": "GET",
   "path": "/buyin/simplePlan",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/923",
   "updatedAt": "2021-09-07",
-  "_file_stem": "alliance-buyin-simplePlan",
-  "cnName": "创建/修改商品普通计划"
+  "_file_stem": "alliance-buyin-simplePlan"
 }

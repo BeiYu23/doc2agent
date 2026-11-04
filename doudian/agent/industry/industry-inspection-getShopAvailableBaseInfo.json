@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.getShopAvailableBaseInfo",
+  "cnName": "查询商家可用的基础信息（类目、品牌、型号",
+  "docUrl": "/docs/doudian/industry/industry-inspection-getShopAvailableBaseInfo",
+  "name": "inspection.getShopAvailableBaseInfo",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.getShopAvailableBaseInfo",
   "description": "查询商家可用的基础信息（类目、品牌、型号）",
   "method": "GET",
   "path": "/inspection/getShopAvailableBaseInfo",
@@ -96,6 +98,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8255",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-getShopAvailableBaseInfo",
-  "cnName": "查询商家可用的基础信息（类目、品牌、型号"
+  "_file_stem": "industry-inspection-getShopAvailableBaseInfo"
 }

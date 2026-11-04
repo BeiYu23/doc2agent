@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.afterSale.fillLogistics",
+  "cnName": "售后商家发货",
+  "docUrl": "/docs/doudian/shop/shop-afterSale-fillLogistics",
+  "name": "afterSale.fillLogistics",
   "platform": "doudian",
   "group": "shop",
-  "name": "afterSale.fillLogistics",
   "description": "售后商家发货",
   "method": "GET",
   "path": "/afterSale/fillLogistics",
@@ -149,6 +151,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2068",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-afterSale-fillLogistics",
-  "cnName": "售后商家发货"
+  "_file_stem": "shop-afterSale-fillLogistics"
 }

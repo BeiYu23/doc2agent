@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.unsuspendStore",
+  "cnName": "门店恢复营业",
+  "docUrl": "/docs/doudian/shop/shop-shop-unsuspendStore",
+  "name": "shop.unsuspendStore",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.unsuspendStore",
   "description": "门店恢复营业",
   "method": "GET",
   "path": "/shop/unsuspendStore",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2384",
   "updatedAt": "2024-02-26",
-  "_file_stem": "shop-shop-unsuspendStore",
-  "cnName": "门店恢复营业"
+  "_file_stem": "shop-shop-unsuspendStore"
 }

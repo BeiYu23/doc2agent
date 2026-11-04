@@ -1,11 +1,12 @@
-# marketing.activityPreCheck
+# 玩法优惠信息创建或修改前的预校验能力
 
-> 玩法优惠信息创建或修改前的预校验能力
+> marketing.activityPreCheck — 玩法优惠信息创建或修改前的预校验能力
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.activityPreCheck` |
 | 中文名 | 玩法优惠信息创建或修改前的预校验能力 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-activityPreCheck` |
+| 接口 ID | `doudian.marketing.marketing.activityPreCheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/activityPreCheck` |

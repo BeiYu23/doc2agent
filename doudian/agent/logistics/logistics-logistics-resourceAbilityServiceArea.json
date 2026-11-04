@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.resourceAbilityServiceArea",
+  "cnName": "比如服务商送货上门的服务范围",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-resourceAbilityServiceArea",
+  "name": "logistics.resourceAbilityServiceArea",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.resourceAbilityServiceArea",
   "description": "比如服务商送货上门的服务范围",
   "method": "GET",
   "path": "/logistics/resourceAbilityServiceArea",
@@ -202,6 +204,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2147",
   "updatedAt": "2025-05-09",
-  "_file_stem": "logistics-logistics-resourceAbilityServiceArea",
-  "cnName": "比如服务商送货上门的服务范围"
+  "_file_stem": "logistics-logistics-resourceAbilityServiceArea"
 }

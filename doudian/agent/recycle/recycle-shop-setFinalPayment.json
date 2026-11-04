@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.shop.setFinalPayment",
+  "cnName": "设置尾款信息",
+  "docUrl": "/docs/doudian/recycle/recycle-shop-setFinalPayment",
+  "name": "shop.setFinalPayment",
   "platform": "doudian",
   "group": "recycle",
-  "name": "shop.setFinalPayment",
   "description": "设置尾款信息",
   "method": "GET",
   "path": "/shop/setFinalPayment",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1659",
   "updatedAt": "2022-02-17",
-  "_file_stem": "recycle-shop-setFinalPayment",
-  "cnName": "设置尾款信息"
+  "_file_stem": "recycle-shop-setFinalPayment"
 }

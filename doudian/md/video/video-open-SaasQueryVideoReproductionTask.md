@@ -1,11 +1,12 @@
-# open.SaasQueryVideoReproductionTask
+# 查询视频复刻任务 (SaaS
 
-> 查询视频复刻任务 (SaaS)
+> open.SaasQueryVideoReproductionTask — 查询视频复刻任务 (SaaS)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.SaasQueryVideoReproductionTask` |
 | 中文名 | 查询视频复刻任务 (SaaS |
+| 文档地址 | `/docs/doudian/video/video-open-SaasQueryVideoReproductionTask` |
+| 接口 ID | `doudian.video.open.SaasQueryVideoReproductionTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/SaasQueryVideoReproductionTask` |

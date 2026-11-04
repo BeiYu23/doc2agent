@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.marketing.GetCouponDetail",
+  "cnName": "优惠券详细信息查询",
+  "docUrl": "/docs/doudian/shop/shop-marketing-GetCouponDetail",
+  "name": "marketing.GetCouponDetail",
   "platform": "doudian",
   "group": "shop",
-  "name": "marketing.GetCouponDetail",
   "description": "优惠券详细信息查询",
   "method": "GET",
   "path": "/marketing/GetCouponDetail",
@@ -88,6 +90,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/518",
   "updatedAt": "2024-07-17",
-  "_file_stem": "shop-marketing-GetCouponDetail",
-  "cnName": "优惠券详细信息查询"
+  "_file_stem": "shop-marketing-GetCouponDetail"
 }

@@ -1,11 +1,12 @@
-# instantShopping.trade.freightList
+# 即时零售运费模板查询列表
 
-> 即时零售运费模板查询列表
+> instantShopping.trade.freightList — 即时零售运费模板查询列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.instantShopping.trade.freightList` |
 | 中文名 | 即时零售运费模板查询列表 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-instantShopping-trade-freightList` |
+| 接口 ID | `doudian.retail-logistics.instantShopping.trade.freightList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

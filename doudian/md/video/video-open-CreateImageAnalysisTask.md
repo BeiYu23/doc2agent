@@ -1,11 +1,12 @@
-# open.CreateImageAnalysisTask
+# 创建图片分析任务
 
-> 创建图片分析任务
+> open.CreateImageAnalysisTask — 创建图片分析任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.CreateImageAnalysisTask` |
 | 中文名 | 创建图片分析任务 |
+| 文档地址 | `/docs/doudian/video/video-open-CreateImageAnalysisTask` |
+| 接口 ID | `doudian.video.open.CreateImageAnalysisTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/CreateImageAnalysisTask` |

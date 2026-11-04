@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.updateCollectTime",
+  "cnName": "物流商推送改约时间",
+  "docUrl": "/docs/doudian/logistics/logistics-power-updateCollectTime",
+  "name": "power.updateCollectTime",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.updateCollectTime",
   "description": "物流商推送改约时间",
   "method": "GET",
   "path": "/power/updateCollectTime",
@@ -291,6 +293,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1627",
   "updatedAt": "2026-01-06",
-  "_file_stem": "logistics-power-updateCollectTime",
-  "cnName": "物流商推送改约时间"
+  "_file_stem": "logistics-power-updateCollectTime"
 }

@@ -1,11 +1,12 @@
-# logistics.getOutRange
+# 查询地址快递是否可以送达
 
-> 查询地址快递是否可以送达
+> logistics.getOutRange — 查询地址快递是否可以送达
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.getOutRange` |
 | 中文名 | 查询地址快递是否可以送达 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-getOutRange` |
+| 接口 ID | `doudian.waybill.logistics.getOutRange` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getOutRange` |

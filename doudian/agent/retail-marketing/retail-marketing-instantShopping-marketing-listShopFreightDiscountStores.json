@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.listShopFreightDiscountStores",
+  "cnName": "查询配送费满减活动下生效的门店",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listShopFreightDiscountStores",
+  "name": "instantShopping.marketing.listShopFreightDiscountStores",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.listShopFreightDiscountStores",
   "description": "查询配送费满减活动下生效的门店",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -128,6 +130,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/7552",
   "updatedAt": "2025-07-03",
-  "_file_stem": "retail-marketing-instantShopping-marketing-listShopFreightDiscountStores",
-  "cnName": "查询配送费满减活动下生效的门店"
+  "_file_stem": "retail-marketing-instantShopping-marketing-listShopFreightDiscountStores"
 }

@@ -1,11 +1,12 @@
-# instantShopping.logisticsMerchant.notifySignChange
+# 签约信息变更通知
 
-> 签约信息变更通知
+> instantShopping.logisticsMerchant.notifySignChange — 签约信息变更通知
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-express.instantShopping.logisticsMerchant.notifySignChange` |
 | 中文名 | 签约信息变更通知 |
+| 文档地址 | `/docs/doudian/retail-express/retail-express-instantShopping-logisticsMerchant-notifySignChange` |
+| 接口 ID | `doudian.retail-express.instantShopping.logisticsMerchant.notifySignChange` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

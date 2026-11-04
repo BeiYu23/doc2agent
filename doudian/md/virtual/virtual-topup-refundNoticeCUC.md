@@ -1,11 +1,12 @@
-# topup.refundNoticeCUC
+# 联通退款通知
 
-> 联通退款通知接口
+> topup.refundNoticeCUC — 联通退款通知接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.topup.refundNoticeCUC` |
 | 中文名 | 联通退款通知 |
+| 文档地址 | `/docs/doudian/virtual/virtual-topup-refundNoticeCUC` |
+| 接口 ID | `doudian.virtual.topup.refundNoticeCUC` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/refundNoticeCUC` |

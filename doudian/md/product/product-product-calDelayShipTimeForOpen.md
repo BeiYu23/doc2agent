@@ -1,11 +1,12 @@
-# product.calDelayShipTimeForOpen
+# 发货时效规则预览
 
-> 发货时效规则预览
+> product.calDelayShipTimeForOpen — 发货时效规则预览
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.calDelayShipTimeForOpen` |
 | 中文名 | 发货时效规则预览 |
+| 文档地址 | `/docs/doudian/product/product-product-calDelayShipTimeForOpen` |
+| 接口 ID | `doudian.product.product.calDelayShipTimeForOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/calDelayShipTimeForOpen` |

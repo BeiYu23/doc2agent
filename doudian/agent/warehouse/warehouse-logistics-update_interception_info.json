@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.logistics.update_interception_info",
+  "cnName": "（update_interception_in…",
+  "docUrl": "/docs/doudian/warehouse/warehouse-logistics-update_interception_info",
+  "name": "logistics.update_interception_info",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "logistics.update_interception_info",
   "description": "/logistics/update_interception_info",
   "method": "GET",
   "path": "/logistics/update_interception_info",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2080",
   "updatedAt": "2023-04-11",
-  "_file_stem": "warehouse-logistics-update_interception_info",
-  "cnName": "（update_interception_in…"
+  "_file_stem": "warehouse-logistics-update_interception_info"
 }

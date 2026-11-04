@@ -1,11 +1,12 @@
-# buyin.orienPlanAuthorsAdd
+# 向指定定向计划中添加达人
 
-> 向指定定向计划中添加达人
+> buyin.orienPlanAuthorsAdd — 向指定定向计划中添加达人
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.orienPlanAuthorsAdd` |
 | 中文名 | 向指定定向计划中添加达人 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-orienPlanAuthorsAdd` |
+| 接口 ID | `doudian.alliance.buyin.orienPlanAuthorsAdd` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/orienPlanAuthorsAdd` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.getCategories",
+  "cnName": "获取商家可选类目",
+  "docUrl": "/docs/doudian/product/product-product-getCategories",
+  "name": "product.getCategories",
   "platform": "doudian",
   "group": "product",
-  "name": "product.getCategories",
   "description": "获取商家可选类目",
   "method": "GET",
   "path": "/product/getCategories",
@@ -114,6 +116,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4649",
   "updatedAt": "2026-01-21",
-  "_file_stem": "product-product-getCategories",
-  "cnName": "获取商家可选类目"
+  "_file_stem": "product-product-getCategories"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.alliance.kol.reputation",
+  "cnName": "查询达人的带货口碑和橱窗销量",
+  "docUrl": "/docs/doudian/tool/tool-alliance-kol-reputation",
+  "name": "alliance.kol.reputation",
   "platform": "doudian",
   "group": "tool",
-  "name": "alliance.kol.reputation",
   "description": "查询达人的带货口碑和橱窗销量",
   "method": "GET",
   "path": "/alliance/kol/reputation",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7601",
   "updatedAt": "2025-07-16",
-  "_file_stem": "tool-alliance-kol-reputation",
-  "cnName": "查询达人的带货口碑和橱窗销量"
+  "_file_stem": "tool-alliance-kol-reputation"
 }

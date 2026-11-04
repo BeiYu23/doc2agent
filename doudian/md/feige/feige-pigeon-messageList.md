@@ -1,11 +1,12 @@
-# pigeon.messageList
+# 查询会话消息列表
 
-> 查询会话消息列表
+> pigeon.messageList — 查询会话消息列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.messageList` |
 | 中文名 | 查询会话消息列表 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-messageList` |
+| 接口 ID | `doudian.feige.pigeon.messageList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/messageList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.getOutboundId",
+  "cnName": "获取外呼id",
+  "docUrl": "/docs/doudian/member/member-member-getOutboundId",
+  "name": "member.getOutboundId",
   "platform": "doudian",
   "group": "member",
-  "name": "member.getOutboundId",
   "description": "获取外呼id",
   "method": "GET",
   "path": "/member/getOutboundId",
@@ -187,6 +189,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6114",
   "updatedAt": "2026-03-17",
-  "_file_stem": "member-member-getOutboundId",
-  "cnName": "获取外呼id"
+  "_file_stem": "member-member-getOutboundId"
 }

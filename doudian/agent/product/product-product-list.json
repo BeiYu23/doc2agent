@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.list",
+  "cnName": "获取商品列表",
+  "docUrl": "/docs/doudian/product/product-product-list",
+  "name": "product.list",
   "platform": "doudian",
   "group": "product",
-  "name": "product.list",
   "description": "获取商品列表（即将下线，可使用该接口：/product/listV2）",
   "method": "GET",
   "path": "/product/list",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/57",
   "updatedAt": "2021-12-08",
-  "_file_stem": "product-product-list",
-  "cnName": "获取商品列表"
+  "_file_stem": "product-product-list"
 }

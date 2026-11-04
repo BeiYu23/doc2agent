@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.pushOnlineService",
+  "cnName": "物流商推送商家的产品类型/增值服务的变更数据",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-pushOnlineService",
+  "name": "logistics.pushOnlineService",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.pushOnlineService",
   "description": "物流商推送商家的产品类型/增值服务的变更数据",
   "method": "GET",
   "path": "/logistics/pushOnlineService",
@@ -263,6 +265,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8368",
   "updatedAt": "2026-06-29",
-  "_file_stem": "logistics-provider-logistics-pushOnlineService",
-  "cnName": "物流商推送商家的产品类型/增值服务的变更数据"
+  "_file_stem": "logistics-provider-logistics-pushOnlineService"
 }

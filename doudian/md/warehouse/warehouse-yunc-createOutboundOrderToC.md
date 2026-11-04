@@ -1,11 +1,12 @@
-# yunc.createOutboundOrderToC
+# 创建出库单ToC
 
-> 创建出库单ToC
+> yunc.createOutboundOrderToC — 创建出库单ToC
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.createOutboundOrderToC` |
 | 中文名 | 创建出库单ToC |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-createOutboundOrderToC` |
+| 接口 ID | `doudian.warehouse.yunc.createOutboundOrderToC` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/createOutboundOrderToC` |

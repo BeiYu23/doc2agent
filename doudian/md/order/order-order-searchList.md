@@ -1,11 +1,12 @@
-# order.searchList
+# 根据条件检索满足要求的订单列表
 
-> 根据条件检索满足要求的订单列表，支持下单时间和更新时间排序；最大支持查询近90天的数据；注意！订单在风控中时请勿发货！
+> order.searchList — 根据条件检索满足要求的订单列表，支持下单时间和更新时间排序；最大支持查询近90天的数据；注意！订单在风控中时请勿发货！
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.searchList` |
 | 中文名 | 根据条件检索满足要求的订单列表 |
+| 文档地址 | `/docs/doudian/order/order-order-searchList` |
+| 接口 ID | `doudian.order.order.searchList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/searchList` |

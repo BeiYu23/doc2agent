@@ -1,11 +1,12 @@
-# second.ecomInsight.createAssetTask
+# 创建素材任务
 
-> 创建素材任务
+> second.ecomInsight.createAssetTask — 创建素材任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.createAssetTask` |
 | 中文名 | 创建素材任务 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-createAssetTask` |
+| 接口 ID | `doudian.video.second.ecomInsight.createAssetTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

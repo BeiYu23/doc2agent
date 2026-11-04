@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.combinedOrder.supplierCheckIn",
+  "cnName": "一体服务商上门签到",
+  "docUrl": "/docs/doudian/industry/industry-inspection-combinedOrder-supplierCheckIn",
+  "name": "inspection.combinedOrder.supplierCheckIn",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.combinedOrder.supplierCheckIn",
   "description": "一体服务商上门签到",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8410",
   "updatedAt": "2026-07-17",
-  "_file_stem": "industry-inspection-combinedOrder-supplierCheckIn",
-  "cnName": "一体服务商上门签到"
+  "_file_stem": "industry-inspection-combinedOrder-supplierCheckIn"
 }

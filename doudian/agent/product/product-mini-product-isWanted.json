@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.mini.product.isWanted",
+  "cnName": "查询是否收藏",
+  "docUrl": "/docs/doudian/product/product-mini-product-isWanted",
+  "name": "mini.product.isWanted",
   "platform": "doudian",
   "group": "product",
-  "name": "mini.product.isWanted",
   "description": "查询是否收藏",
   "method": "GET",
   "path": "/mini/product/isWanted",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4229",
   "updatedAt": "2024-07-08",
-  "_file_stem": "product-mini-product-isWanted",
-  "cnName": "查询是否收藏"
+  "_file_stem": "product-mini-product-isWanted"
 }

@@ -1,11 +1,12 @@
-# recycle.qualityTestingResult
+# 回传质检通过和价格
 
-> 回传质检通过和价格
+> recycle.qualityTestingResult — 回传质检通过和价格
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.qualityTestingResult` |
 | 中文名 | 回传质检通过和价格 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-qualityTestingResult` |
+| 接口 ID | `doudian.recycle.recycle.qualityTestingResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/qualityTestingResult` |

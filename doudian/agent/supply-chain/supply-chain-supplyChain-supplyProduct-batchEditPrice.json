@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProduct.batchEditPrice",
+  "cnName": "批量改价",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-batchEditPrice",
+  "name": "supplyChain.supplyProduct.batchEditPrice",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProduct.batchEditPrice",
   "description": "批量改价",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -139,6 +141,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6686",
   "updatedAt": "2024-08-26",
-  "_file_stem": "supply-chain-supplyChain-supplyProduct-batchEditPrice",
-  "cnName": "批量改价"
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-batchEditPrice"
 }

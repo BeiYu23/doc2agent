@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.addresSwitchConfig",
+  "cnName": "获取App对于商家订单修改地址的审核权限",
+  "docUrl": "/docs/doudian/order/order-order-addresSwitchConfig",
+  "name": "order.addresSwitchConfig",
   "platform": "doudian",
   "group": "order",
-  "name": "order.addresSwitchConfig",
   "description": "获取App对于商家订单修改地址的审核权限\n获取App对于商家订单修改地址的审核权限",
   "method": "GET",
   "path": "/order/addresSwitchConfig",
@@ -49,6 +51,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1838",
   "updatedAt": "2021-05-12",
-  "_file_stem": "order-order-addresSwitchConfig",
-  "cnName": "获取App对于商家订单修改地址的审核权限"
+  "_file_stem": "order-order-addresSwitchConfig"
 }

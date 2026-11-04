@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.combinedOrder.supplierComplete",
+  "cnName": "一体服务商服务完成",
+  "docUrl": "/docs/doudian/industry/industry-inspection-combinedOrder-supplierComplete",
+  "name": "inspection.combinedOrder.supplierComplete",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.combinedOrder.supplierComplete",
   "description": "一体服务商服务完成",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -144,6 +146,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8409",
   "updatedAt": "2026-07-17",
-  "_file_stem": "industry-inspection-combinedOrder-supplierComplete",
-  "cnName": "一体服务商服务完成"
+  "_file_stem": "industry-inspection-combinedOrder-supplierComplete"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.qualification.settle",
+  "cnName": "商家入驻提交资料",
+  "docUrl": "/docs/doudian/shop/shop-qualification-settle",
+  "name": "qualification.settle",
   "platform": "doudian",
   "group": "shop",
-  "name": "qualification.settle",
   "description": "商家入驻提交资料",
   "method": "GET",
   "path": "/qualification/settle",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/658",
   "updatedAt": "2021-07-06",
-  "_file_stem": "shop-qualification-settle",
-  "cnName": "商家入驻提交资料"
+  "_file_stem": "shop-qualification-settle"
 }

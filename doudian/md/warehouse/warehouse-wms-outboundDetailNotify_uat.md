@@ -1,11 +1,12 @@
-# wms.outboundDetailNotify_uat
+# UAT环境WMS出库回调
 
-> UAT环境WMS出库回调接口
+> wms.outboundDetailNotify_uat — UAT环境WMS出库回调接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.wms.outboundDetailNotify_uat` |
 | 中文名 | UAT环境WMS出库回调 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-wms-outboundDetailNotify_uat` |
+| 接口 ID | `doudian.warehouse.wms.outboundDetailNotify_uat` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/wms/outboundDetailNotify_uat` |

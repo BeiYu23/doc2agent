@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.applyActivities",
+  "cnName": "商品团长活动提报",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-applyActivities",
+  "name": "buyin.applyActivities",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.applyActivities",
   "description": "商品团长活动提报接口",
   "method": "GET",
   "path": "/buyin/applyActivities",
@@ -254,6 +256,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/744",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-applyActivities",
-  "cnName": "商品团长活动提报"
+  "_file_stem": "alliance-buyin-applyActivities"
 }

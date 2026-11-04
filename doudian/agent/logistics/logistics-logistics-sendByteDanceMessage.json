@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.sendByteDanceMessage",
+  "cnName": "短信代发",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-sendByteDanceMessage",
+  "name": "logistics.sendByteDanceMessage",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.sendByteDanceMessage",
   "description": "短信代发",
   "method": "GET",
   "path": "/logistics/sendByteDanceMessage",
@@ -143,6 +145,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2462",
   "updatedAt": "2024-02-21",
-  "_file_stem": "logistics-logistics-sendByteDanceMessage",
-  "cnName": "短信代发"
+  "_file_stem": "logistics-logistics-sendByteDanceMessage"
 }

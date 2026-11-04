@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.batchSyncSupplyStock",
+  "cnName": "批量同步库存",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-batchSyncSupplyStock",
+  "name": "supplyChain.batchSyncSupplyStock",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.batchSyncSupplyStock",
   "description": "批量同步库存",
   "method": "GET",
   "path": "/supplyChain/batchSyncSupplyStock",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/7335",
   "updatedAt": "2025-03-05",
-  "_file_stem": "supply-chain-supplyChain-batchSyncSupplyStock",
-  "cnName": "批量同步库存"
+  "_file_stem": "supply-chain-supplyChain-batchSyncSupplyStock"
 }

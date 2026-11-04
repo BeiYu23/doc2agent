@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.SkuBerfTowTestLast",
+  "cnName": "回归测试",
+  "docUrl": "/docs/doudian/order/order-order-SkuBerfTowTestLast",
+  "name": "order.SkuBerfTowTestLast",
   "platform": "doudian",
   "group": "order",
-  "name": "order.SkuBerfTowTestLast",
   "description": "回归测试",
   "method": "GET",
   "path": "/order/SkuBerfTowTestLast",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1441",
   "updatedAt": "2021-11-11",
-  "_file_stem": "order-order-SkuBerfTowTestLast",
-  "cnName": "回归测试"
+  "_file_stem": "order-order-SkuBerfTowTestLast"
 }

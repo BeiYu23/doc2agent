@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.sms.queryAudienceByCondition",
+  "cnName": "查询人群信息",
+  "docUrl": "/docs/doudian/member/member-sms-queryAudienceByCondition",
+  "name": "sms.queryAudienceByCondition",
   "platform": "doudian",
   "group": "member",
-  "name": "sms.queryAudienceByCondition",
   "description": "查询人群信息",
   "method": "GET",
   "path": "/sms/queryAudienceByCondition",
@@ -245,6 +247,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6681",
   "updatedAt": "2025-10-17",
-  "_file_stem": "member-sms-queryAudienceByCondition",
-  "cnName": "查询人群信息"
+  "_file_stem": "member-sms-queryAudienceByCondition"
 }

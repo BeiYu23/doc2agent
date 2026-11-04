@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.product.getDistributedStoreProduct",
+  "cnName": "根据店铺主商品ID查询已经铺品的门店及子商品",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-product-getDistributedStoreProduct",
+  "name": "superm.product.getDistributedStoreProduct",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.product.getDistributedStoreProduct",
   "description": "根据店铺主商品ID查询已经铺品的门店及子商品",
   "method": "GET",
   "path": "/superm/product/getDistributedStoreProduct",
@@ -117,6 +119,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2693",
   "updatedAt": "2022-11-02",
-  "_file_stem": "retail-store-superm-product-getDistributedStoreProduct",
-  "cnName": "根据店铺主商品ID查询已经铺品的门店及子商品"
+  "_file_stem": "retail-store-superm-product-getDistributedStoreProduct"
 }

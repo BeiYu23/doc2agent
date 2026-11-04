@@ -1,11 +1,12 @@
-# power.operateTicket
+# 服务商回复工单
 
-> 服务商回复工单
+> power.operateTicket — 服务商回复工单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.power.operateTicket` |
 | 中文名 | 服务商回复工单 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-power-operateTicket` |
+| 接口 ID | `doudian.logistics-provider.power.operateTicket` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/operateTicket` |

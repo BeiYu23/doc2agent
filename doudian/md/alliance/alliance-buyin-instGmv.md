@@ -1,12 +1,13 @@
-# buyin.instGmv
+# 【已下线，公告
 
-> 【已下线，公告https://op.jinritemai.com/docs/notice-docs/21/7407】
+> buyin.instGmv — 【已下线，公告https://op.jinritemai.com/docs/notice-docs/21/7407】
 查询机构某天的选品GMV，不包括抖音应用选品GMV数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.instGmv` |
 | 中文名 | 【已下线，公告 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-instGmv` |
+| 接口 ID | `doudian.alliance.buyin.instGmv` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/instGmv` |

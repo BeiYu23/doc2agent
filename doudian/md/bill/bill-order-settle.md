@@ -1,11 +1,12 @@
-# order.settle
+# 查询订单账单明细11.31下线
 
-> 查询订单账单明细11.31下线
+> order.settle — 查询订单账单明细11.31下线
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.settle` |
 | 中文名 | 查询订单账单明细11.31下线 |
+| 文档地址 | `/docs/doudian/bill/bill-order-settle` |
+| 接口 ID | `doudian.bill.order.settle` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/settle` |

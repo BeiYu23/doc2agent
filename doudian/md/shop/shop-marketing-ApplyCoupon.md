@@ -1,11 +1,12 @@
-# marketing.ApplyCoupon
+# 领取优惠券
 
-> 领取优惠券
+> marketing.ApplyCoupon — 领取优惠券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.marketing.ApplyCoupon` |
 | 中文名 | 领取优惠券 |
+| 文档地址 | `/docs/doudian/shop/shop-marketing-ApplyCoupon` |
+| 接口 ID | `doudian.shop.marketing.ApplyCoupon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/ApplyCoupon` |

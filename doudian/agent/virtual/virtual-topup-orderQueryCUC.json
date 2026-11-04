@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.topup.orderQueryCUC",
+  "cnName": "订单完成时间查询",
+  "docUrl": "/docs/doudian/virtual/virtual-topup-orderQueryCUC",
+  "name": "topup.orderQueryCUC",
   "platform": "doudian",
   "group": "virtual",
-  "name": "topup.orderQueryCUC",
   "description": "订单完成时间查询接口",
   "method": "GET",
   "path": "/topup/orderQueryCUC",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/7981",
   "updatedAt": "2025-12-29",
-  "_file_stem": "virtual-topup-orderQueryCUC",
-  "cnName": "订单完成时间查询"
+  "_file_stem": "virtual-topup-orderQueryCUC"
 }

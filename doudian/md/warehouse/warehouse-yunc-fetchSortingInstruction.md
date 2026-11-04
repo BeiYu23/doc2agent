@@ -1,11 +1,12 @@
-# yunc.fetchSortingInstruction
+# 获取分拣指令
 
-> 获取分拣指令
+> yunc.fetchSortingInstruction — 获取分拣指令
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.fetchSortingInstruction` |
 | 中文名 | 获取分拣指令 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-fetchSortingInstruction` |
+| 接口 ID | `doudian.warehouse.yunc.fetchSortingInstruction` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/fetchSortingInstruction` |

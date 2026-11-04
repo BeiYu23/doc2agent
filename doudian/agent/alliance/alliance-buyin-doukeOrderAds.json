@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.doukeOrderAds",
+  "cnName": "查询独立抖客分销订单",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-doukeOrderAds",
+  "name": "buyin.doukeOrderAds",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.doukeOrderAds",
   "description": "查询独立抖客分销订单",
   "method": "GET",
   "path": "/buyin/doukeOrderAds",
@@ -217,6 +219,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/3083",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukeOrderAds",
-  "cnName": "查询独立抖客分销订单"
+  "_file_stem": "alliance-buyin-doukeOrderAds"
 }

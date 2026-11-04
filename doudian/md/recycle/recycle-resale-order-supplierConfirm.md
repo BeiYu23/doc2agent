@@ -1,11 +1,12 @@
-# resale.order.supplierConfirm
+# 服务商确认
 
-> 服务商确认
+> resale.order.supplierConfirm — 服务商确认
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.supplierConfirm` |
 | 中文名 | 服务商确认 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-supplierConfirm` |
+| 接口 ID | `doudian.recycle.resale.order.supplierConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/supplierConfirm` |

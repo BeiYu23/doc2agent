@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.public.template",
+  "cnName": "公共模版查询",
+  "docUrl": "/docs/doudian/sms/sms-sms-public-template",
+  "name": "sms.public.template",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.public.template",
   "description": "公共模版查询接口",
   "method": "GET",
   "path": "/sms/public/template",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1526",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-public-template",
-  "cnName": "公共模版查询"
+  "_file_stem": "sms-sms-public-template"
 }

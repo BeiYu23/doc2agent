@@ -1,11 +1,12 @@
-# inspection.combinedOrder.supplierDispatch
+# 一体检测服务商已派单
 
-> 一体检测服务商已派单
+> inspection.combinedOrder.supplierDispatch — 一体检测服务商已派单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierDispatch` |
 | 中文名 | 一体检测服务商已派单 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-combinedOrder-supplierDispatch` |
+| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierDispatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

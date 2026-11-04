@@ -1,11 +1,12 @@
-# shop.marketCategoryOperate
+# 店铺装修类目操作
 
-> 店铺装修类目操作接口
+> shop.marketCategoryOperate — 店铺装修类目操作接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.marketCategoryOperate` |
 | 中文名 | 店铺装修类目操作 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-marketCategoryOperate` |
+| 接口 ID | `doudian.decoration.shop.marketCategoryOperate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/marketCategoryOperate` |

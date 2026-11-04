@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.moveMaterialToRecycleBin",
+  "cnName": "移动素材到回收站",
+  "docUrl": "/docs/doudian/material/material-material-moveMaterialToRecycleBin",
+  "name": "material.moveMaterialToRecycleBin",
   "platform": "doudian",
   "group": "material",
-  "name": "material.moveMaterialToRecycleBin",
   "description": "移动素材到回收站",
   "method": "GET",
   "path": "/material/moveMaterialToRecycleBin",
@@ -82,6 +84,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/951",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-moveMaterialToRecycleBin",
-  "cnName": "移动素材到回收站"
+  "_file_stem": "material-material-moveMaterialToRecycleBin"
 }

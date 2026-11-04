@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.saveCombineAudience",
+  "cnName": "保存生产包交互规则，获取组合人群包",
+  "docUrl": "/docs/doudian/sms/sms-sms-saveCombineAudience",
+  "name": "sms.saveCombineAudience",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.saveCombineAudience",
   "description": "保存生产包交互规则，获取组合人群包",
   "method": "GET",
   "path": "/sms/saveCombineAudience",
@@ -114,6 +116,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7788",
   "updatedAt": "2025-09-19",
-  "_file_stem": "sms-sms-saveCombineAudience",
-  "cnName": "保存生产包交互规则，获取组合人群包"
+  "_file_stem": "sms-sms-saveCombineAudience"
 }

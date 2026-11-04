@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.d2dUpdate",
+  "cnName": "【上门回收】服务商修改派单信息",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-d2dUpdate",
+  "name": "resale.order.d2dUpdate",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.d2dUpdate",
   "description": "【上门回收】服务商修改派单信息",
   "method": "GET",
   "path": "/resale/order/d2dUpdate",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4624",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-d2dUpdate",
-  "cnName": "【上门回收】服务商修改派单信息"
+  "_file_stem": "recycle-resale-order-d2dUpdate"
 }

@@ -1,11 +1,12 @@
-# superm.getPlatformPickUpEstimatedCharge
+# 运力呼叫询价（逆向）/运力取消询价（逆向
 
-> 运力呼叫询价（逆向）/运力取消询价（逆向）
+> superm.getPlatformPickUpEstimatedCharge — 运力呼叫询价（逆向）/运力取消询价（逆向）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.getPlatformPickUpEstimatedCharge` |
 | 中文名 | 运力呼叫询价（逆向）/运力取消询价（逆向 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-getPlatformPickUpEstimatedCharge` |
+| 接口 ID | `doudian.retail-store.superm.getPlatformPickUpEstimatedCharge` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getPlatformPickUpEstimatedCharge` |

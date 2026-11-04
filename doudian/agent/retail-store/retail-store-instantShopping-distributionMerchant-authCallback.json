@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.distributionMerchant.authCallback",
+  "cnName": "授权回调",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-distributionMerchant-authCallback",
+  "name": "instantShopping.distributionMerchant.authCallback",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.distributionMerchant.authCallback",
   "description": "授权回调",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/6515",
   "updatedAt": "2024-11-25",
-  "_file_stem": "retail-store-instantShopping-distributionMerchant-authCallback",
-  "cnName": "授权回调"
+  "_file_stem": "retail-store-instantShopping-distributionMerchant-authCallback"
 }

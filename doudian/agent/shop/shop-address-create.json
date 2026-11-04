@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.address.create",
+  "cnName": "创建店铺地址库",
+  "docUrl": "/docs/doudian/shop/shop-address-create",
+  "name": "address.create",
   "platform": "doudian",
   "group": "shop",
-  "name": "address.create",
   "description": "创建店铺地址库",
   "method": "GET",
   "path": "/address/create",
@@ -220,6 +222,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1510",
   "updatedAt": "2023-10-19",
-  "_file_stem": "shop-address-create",
-  "cnName": "创建店铺地址库"
+  "_file_stem": "shop-address-create"
 }

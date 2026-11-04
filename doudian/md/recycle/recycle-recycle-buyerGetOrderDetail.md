@@ -1,11 +1,12 @@
-# recycle.buyerGetOrderDetail
+# 获得订单
 
-> 获得订单详情
+> recycle.buyerGetOrderDetail — 获得订单详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.buyerGetOrderDetail` |
 | 中文名 | 获得订单 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-buyerGetOrderDetail` |
+| 接口 ID | `doudian.recycle.recycle.buyerGetOrderDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/buyerGetOrderDetail` |

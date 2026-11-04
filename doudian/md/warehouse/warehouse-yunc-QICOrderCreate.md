@@ -1,11 +1,12 @@
-# yunc.QICOrderCreate
+# 云仓QIC订单创建
 
-> 云仓QIC订单创建接口
+> yunc.QICOrderCreate — 云仓QIC订单创建接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.QICOrderCreate` |
 | 中文名 | 云仓QIC订单创建 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-QICOrderCreate` |
+| 接口 ID | `doudian.warehouse.yunc.QICOrderCreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/QICOrderCreate` |

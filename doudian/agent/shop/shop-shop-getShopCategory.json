@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.getShopCategory",
+  "cnName": "请一定使用最小层级类目id，发布商品或更新商品",
+  "docUrl": "/docs/doudian/shop/shop-shop-getShopCategory",
+  "name": "shop.getShopCategory",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.getShopCategory",
   "description": "请一定使用最小层级类目id，发布商品或更新商品。\n接口使用注意点：\n1、第一次请求cid=0获取所有一级类目\n2、先判断enable=true，如果enable=false表示该类目已经失效，请勿使用。\n3、循环获取最小层级类目id方式：再判断is_lea",
   "method": "GET",
   "path": "/shop/getShopCategory",
@@ -88,6 +90,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1820",
   "updatedAt": "2026-01-21",
-  "_file_stem": "shop-shop-getShopCategory",
-  "cnName": "请一定使用最小层级类目id，发布商品或更新商品"
+  "_file_stem": "shop-shop-getShopCategory"
 }

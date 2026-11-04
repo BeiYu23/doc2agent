@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.launchProduct",
+  "cnName": "上架商品（抖店店铺",
+  "docUrl": "/docs/doudian/product/product-product-launchProduct",
+  "name": "product.launchProduct",
   "platform": "doudian",
   "group": "product",
-  "name": "product.launchProduct",
   "description": "上架商品（抖店店铺）",
   "method": "GET",
   "path": "/product/launchProduct",
@@ -1040,6 +1042,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/5980",
   "updatedAt": "2026-07-15",
-  "_file_stem": "product-product-launchProduct",
-  "cnName": "上架商品（抖店店铺"
+  "_file_stem": "product-product-launchProduct"
 }

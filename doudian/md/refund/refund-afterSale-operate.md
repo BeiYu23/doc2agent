@@ -1,11 +1,12 @@
-# afterSale.operate
+# 售后审核接口聚合版
 
-> 售后审核接口聚合版
+> afterSale.operate — 售后审核接口聚合版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.operate` |
 | 中文名 | 售后审核接口聚合版 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-operate` |
+| 接口 ID | `doudian.refund.afterSale.operate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/operate` |

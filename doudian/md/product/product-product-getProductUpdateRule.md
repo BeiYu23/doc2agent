@@ -1,11 +1,12 @@
-# product.getProductUpdateRule
+# 查询商品发布规则
 
-> 查询商品发布规则
+> product.getProductUpdateRule — 查询商品发布规则
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getProductUpdateRule` |
 | 中文名 | 查询商品发布规则 |
+| 文档地址 | `/docs/doudian/product/product-product-getProductUpdateRule` |
+| 接口 ID | `doudian.product.product.getProductUpdateRule` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getProductUpdateRule` |

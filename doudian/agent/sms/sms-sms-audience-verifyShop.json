@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.audience.verifyShop",
+  "cnName": "公域标签短信商家是否符合准入门槛",
+  "docUrl": "/docs/doudian/sms/sms-sms-audience-verifyShop",
+  "name": "sms.audience.verifyShop",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.audience.verifyShop",
   "description": "公域标签短信商家是否符合准入门槛",
   "method": "GET",
   "path": "/sms/audience/verifyShop",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7660",
   "updatedAt": "2025-08-01",
-  "_file_stem": "sms-sms-audience-verifyShop",
-  "cnName": "公域标签短信商家是否符合准入门槛"
+  "_file_stem": "sms-sms-audience-verifyShop"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.createOutboundOrderToB",
+  "cnName": "toB出库单",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-createOutboundOrderToB",
+  "name": "yunc.createOutboundOrderToB",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.createOutboundOrderToB",
   "description": "toB出库单",
   "method": "GET",
   "path": "/yunc/createOutboundOrderToB",
@@ -605,6 +607,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/927",
   "updatedAt": "2023-01-18",
-  "_file_stem": "warehouse-yunc-createOutboundOrderToB",
-  "cnName": "toB出库单"
+  "_file_stem": "warehouse-yunc-createOutboundOrderToB"
 }

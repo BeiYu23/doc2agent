@@ -1,11 +1,12 @@
-# logistics.batchQueryRealNumber
+# 批量获取真实手机号
 
-> 批量获取真实手机号
+> logistics.batchQueryRealNumber — 批量获取真实手机号
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.batchQueryRealNumber` |
 | 中文名 | 批量获取真实手机号 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-batchQueryRealNumber` |
+| 接口 ID | `doudian.logistics.logistics.batchQueryRealNumber` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/batchQueryRealNumber` |

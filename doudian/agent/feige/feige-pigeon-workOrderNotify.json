@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.workOrderNotify",
+  "cnName": "更新或者存储工单",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-workOrderNotify",
+  "name": "pigeon.workOrderNotify",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.workOrderNotify",
   "description": "更新或者存储工单",
   "method": "GET",
   "path": "/pigeon/workOrderNotify",
@@ -238,6 +240,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/1974",
   "updatedAt": "2022-10-27",
-  "_file_stem": "feige-pigeon-workOrderNotify",
-  "cnName": "更新或者存储工单"
+  "_file_stem": "feige-pigeon-workOrderNotify"
 }

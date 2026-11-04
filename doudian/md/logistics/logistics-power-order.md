@@ -1,11 +1,12 @@
-# power.order
+# 下单（仅用于兼容老物流网关
 
-> 下单（仅用于兼容老物流网关）
+> power.order — 下单（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.order` |
 | 中文名 | 下单（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-order` |
+| 接口 ID | `doudian.logistics.power.order` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/order` |

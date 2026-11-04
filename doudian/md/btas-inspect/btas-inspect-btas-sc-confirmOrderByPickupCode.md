@@ -1,11 +1,12 @@
-# btas.sc.confirmOrderByPickupCode
+# 质检机构_根据自提码确认商家自提完成
 
-> 质检机构_根据自提码确认商家自提完成
+> btas.sc.confirmOrderByPickupCode — 质检机构_根据自提码确认商家自提完成
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sc.confirmOrderByPickupCode` |
 | 中文名 | 质检机构_根据自提码确认商家自提完成 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sc-confirmOrderByPickupCode` |
+| 接口 ID | `doudian.btas-inspect.btas.sc.confirmOrderByPickupCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/confirmOrderByPickupCode` |

@@ -1,11 +1,12 @@
-# supplyChain.outside.getTailRatioRate
+# 查询超长单的线路列表
 
-> 查询超长单的线路列表
+> supplyChain.outside.getTailRatioRate — 查询超长单的线路列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getTailRatioRate` |
 | 中文名 | 查询超长单的线路列表 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getTailRatioRate` |
+| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getTailRatioRate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

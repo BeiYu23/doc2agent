@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.reflow.inventoryCheck",
+  "cnName": "库存对账",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-reflow-inventoryCheck",
+  "name": "yunc.reflow.inventoryCheck",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.reflow.inventoryCheck",
   "description": "库存对账接口",
   "method": "GET",
   "path": "/yunc/reflow/inventoryCheck",
@@ -120,6 +122,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2274",
   "updatedAt": "2022-08-01",
-  "_file_stem": "warehouse-yunc-reflow-inventoryCheck",
-  "cnName": "库存对账"
+  "_file_stem": "warehouse-yunc-reflow-inventoryCheck"
 }

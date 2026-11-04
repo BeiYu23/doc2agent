@@ -1,11 +1,12 @@
-# yunc.valueAddedOrderCallBack
+# WMS回传增值服务单数据
 
-> WMS回传增值服务单数据
+> yunc.valueAddedOrderCallBack — WMS回传增值服务单数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.valueAddedOrderCallBack` |
 | 中文名 | WMS回传增值服务单数据 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-valueAddedOrderCallBack` |
+| 接口 ID | `doudian.warehouse.yunc.valueAddedOrderCallBack` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/valueAddedOrderCallBack` |

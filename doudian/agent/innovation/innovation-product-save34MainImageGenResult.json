@@ -1,8 +1,10 @@
 {
   "id": "doudian.innovation.product.save34MainImageGenResult",
+  "cnName": "回传3:4主图生成结果",
+  "docUrl": "/docs/doudian/innovation/innovation-product-save34MainImageGenResult",
+  "name": "product.save34MainImageGenResult",
   "platform": "doudian",
   "group": "innovation",
-  "name": "product.save34MainImageGenResult",
   "description": "回传3:4主图生成结果",
   "method": "GET",
   "path": "/product/save34MainImageGenResult",
@@ -110,6 +112,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1543/6831",
   "updatedAt": "2024-09-29",
-  "_file_stem": "innovation-product-save34MainImageGenResult",
-  "cnName": "回传3:4主图生成结果"
+  "_file_stem": "innovation-product-save34MainImageGenResult"
 }

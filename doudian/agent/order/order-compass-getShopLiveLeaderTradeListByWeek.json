@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.compass.getShopLiveLeaderTradeListByWeek",
+  "cnName": "罗盘周维度的直播交易榜",
+  "docUrl": "/docs/doudian/order/order-compass-getShopLiveLeaderTradeListByWeek",
+  "name": "compass.getShopLiveLeaderTradeListByWeek",
   "platform": "doudian",
   "group": "order",
-  "name": "compass.getShopLiveLeaderTradeListByWeek",
   "description": "罗盘周维度的直播交易榜",
   "method": "GET",
   "path": "/compass/getShopLiveLeaderTradeListByWeek",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2918",
   "updatedAt": "2023-02-03",
-  "_file_stem": "order-compass-getShopLiveLeaderTradeListByWeek",
-  "cnName": "罗盘周维度的直播交易榜"
+  "_file_stem": "order-compass-getShopLiveLeaderTradeListByWeek"
 }

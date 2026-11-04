@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.deployTicket.create",
+  "cnName": "创建发布单",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-create",
+  "name": "openCloud.v1.deployTicket.create",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.deployTicket.create",
   "description": "创建发布单",
   "method": "GET",
   "path": "/openCloud/v1/deployTicket/create",
@@ -250,6 +252,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4149",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-deployTicket-create",
-  "cnName": "创建发布单"
+  "_file_stem": "cloud-openCloud-v1-deployTicket-create"
 }

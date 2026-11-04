@@ -1,11 +1,12 @@
-# sms.audience.listCrowdTask
+# 获取种子人群任务列表
 
-> 获取种子人群任务列表
+> sms.audience.listCrowdTask — 获取种子人群任务列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.audience.listCrowdTask` |
 | 中文名 | 获取种子人群任务列表 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-audience-listCrowdTask` |
+| 接口 ID | `doudian.sms.sms.audience.listCrowdTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/listCrowdTask` |

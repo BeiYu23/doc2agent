@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.syncCollectInfo",
+  "cnName": "货品数据采集",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-syncCollectInfo",
+  "name": "yunc.syncCollectInfo",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.syncCollectInfo",
   "description": "货品数据采集接口",
   "method": "GET",
   "path": "/yunc/syncCollectInfo",
@@ -323,6 +325,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2159",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-syncCollectInfo",
-  "cnName": "货品数据采集"
+  "_file_stem": "warehouse-yunc-syncCollectInfo"
 }

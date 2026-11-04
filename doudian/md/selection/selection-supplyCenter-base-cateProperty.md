@@ -1,11 +1,12 @@
-# supplyCenter.base.cateProperty
+# 精选货源获取类目属性
 
-> 精选货源获取类目属性
+> supplyCenter.base.cateProperty — 精选货源获取类目属性
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.base.cateProperty` |
 | 中文名 | 精选货源获取类目属性 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-base-cateProperty` |
+| 接口 ID | `doudian.selection.supplyCenter.base.cateProperty` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

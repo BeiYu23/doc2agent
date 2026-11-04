@@ -1,11 +1,12 @@
-# instantShopping.logistics.trackNoRouteDetail
+# 运单轨迹查询
 
-> 运单轨迹查询接口
+> instantShopping.logistics.trackNoRouteDetail — 运单轨迹查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.instantShopping.logistics.trackNoRouteDetail` |
 | 中文名 | 运单轨迹查询 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-instantShopping-logistics-trackNoRouteDetail` |
+| 接口 ID | `doudian.retail-logistics.instantShopping.logistics.trackNoRouteDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# iop.waybillCancel
+# 【厂商】取消电子面单
 
-> 【厂商】取消电子面单
+> iop.waybillCancel — 【厂商】取消电子面单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.waybillCancel` |
 | 中文名 | 【厂商】取消电子面单 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-waybillCancel` |
+| 接口 ID | `doudian.dropshipping.iop.waybillCancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/waybillCancel` |

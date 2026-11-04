@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.SaasQueryImageAnalysisTask",
+  "cnName": "查询图片分析任务 (SaaS",
+  "docUrl": "/docs/doudian/video/video-open-SaasQueryImageAnalysisTask",
+  "name": "open.SaasQueryImageAnalysisTask",
   "platform": "doudian",
   "group": "video",
-  "name": "open.SaasQueryImageAnalysisTask",
   "description": "查询图片分析任务 (SaaS)",
   "method": "GET",
   "path": "/open/SaasQueryImageAnalysisTask",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8597",
   "updatedAt": "2026-09-09",
-  "_file_stem": "video-open-SaasQueryImageAnalysisTask",
-  "cnName": "查询图片分析任务 (SaaS"
+  "_file_stem": "video-open-SaasQueryImageAnalysisTask"
 }

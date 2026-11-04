@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.audience.listCrowdTask",
+  "cnName": "获取种子人群任务列表",
+  "docUrl": "/docs/doudian/sms/sms-sms-audience-listCrowdTask",
+  "name": "sms.audience.listCrowdTask",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.audience.listCrowdTask",
   "description": "获取种子人群任务列表",
   "method": "GET",
   "path": "/sms/audience/listCrowdTask",
@@ -150,6 +152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7658",
   "updatedAt": "2025-09-11",
-  "_file_stem": "sms-sms-audience-listCrowdTask",
-  "cnName": "获取种子人群任务列表"
+  "_file_stem": "sms-sms-audience-listCrowdTask"
 }

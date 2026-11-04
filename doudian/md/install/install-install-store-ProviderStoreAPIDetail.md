@@ -1,11 +1,12 @@
-# install.store.ProviderStoreAPIDetail
+# 服务商门店详情
 
-> 服务商门店详情接口
+> install.store.ProviderStoreAPIDetail — 服务商门店详情接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.ProviderStoreAPIDetail` |
 | 中文名 | 服务商门店详情 |
+| 文档地址 | `/docs/doudian/install/install-install-store-ProviderStoreAPIDetail` |
+| 接口 ID | `doudian.install.install.store.ProviderStoreAPIDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/ProviderStoreAPIDetail` |

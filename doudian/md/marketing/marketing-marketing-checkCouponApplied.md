@@ -1,11 +1,12 @@
-# marketing.checkCouponApplied
+# 查询用户已领取优惠券核销数量
 
-> 查询用户已领取优惠券核销数量
+> marketing.checkCouponApplied — 查询用户已领取优惠券核销数量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.checkCouponApplied` |
 | 中文名 | 查询用户已领取优惠券核销数量 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-checkCouponApplied` |
+| 接口 ID | `doudian.marketing.marketing.checkCouponApplied` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/checkCouponApplied` |

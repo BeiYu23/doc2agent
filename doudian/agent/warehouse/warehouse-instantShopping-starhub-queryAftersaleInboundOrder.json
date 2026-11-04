@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.instantShopping.starhub.queryAftersaleInboundOrder",
+  "cnName": "查询退供出库单状态数据",
+  "docUrl": "/docs/doudian/warehouse/warehouse-instantShopping-starhub-queryAftersaleInboundOrder",
+  "name": "instantShopping.starhub.queryAftersaleInboundOrder",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "instantShopping.starhub.queryAftersaleInboundOrder",
   "description": "查询退供出库单状态数据",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6533",
   "updatedAt": "2024-05-24",
-  "_file_stem": "warehouse-instantShopping-starhub-queryAftersaleInboundOrder",
-  "cnName": "查询退供出库单状态数据"
+  "_file_stem": "warehouse-instantShopping-starhub-queryAftersaleInboundOrder"
 }

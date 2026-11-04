@@ -1,11 +1,12 @@
-# power.register
+# 订阅物流（仅用于兼容老物流网关
 
-> 订阅物流（仅用于兼容老物流网关）
+> power.register — 订阅物流（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.register` |
 | 中文名 | 订阅物流（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-register` |
+| 接口 ID | `doudian.logistics.power.register` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/register` |

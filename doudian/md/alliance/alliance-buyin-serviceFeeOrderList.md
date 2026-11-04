@@ -1,11 +1,12 @@
-# buyin.serviceFeeOrderList
+# 可查询MCN机构绑定达人周期内百应商达合作订单…
 
-> 可查询MCN机构绑定达人周期内百应商达合作订单（包含纯佣及坑位费订单）数据情况
+> buyin.serviceFeeOrderList — 可查询MCN机构绑定达人周期内百应商达合作订单（包含纯佣及坑位费订单）数据情况
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.serviceFeeOrderList` |
 | 中文名 | 可查询MCN机构绑定达人周期内百应商达合作订单… |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-serviceFeeOrderList` |
+| 接口 ID | `doudian.alliance.buyin.serviceFeeOrderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/serviceFeeOrderList` |

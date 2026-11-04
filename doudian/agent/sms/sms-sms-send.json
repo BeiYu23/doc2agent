@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.send",
+  "cnName": "短信发送",
+  "docUrl": "/docs/doudian/sms/sms-sms-send",
+  "name": "sms.send",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.send",
   "description": "短信发送",
   "method": "GET",
   "path": "/sms/send",
@@ -331,6 +333,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1522",
   "updatedAt": "2026-09-18",
-  "_file_stem": "sms-sms-send",
-  "cnName": "短信发送"
+  "_file_stem": "sms-sms-send"
 }

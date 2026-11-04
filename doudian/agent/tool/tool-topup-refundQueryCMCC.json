@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.topup.refundQueryCMCC",
+  "cnName": "中国移动退款订单状态查询",
+  "docUrl": "/docs/doudian/tool/tool-topup-refundQueryCMCC",
+  "name": "topup.refundQueryCMCC",
   "platform": "doudian",
   "group": "tool",
-  "name": "topup.refundQueryCMCC",
   "description": "中国移动退款订单状态查询",
   "method": "GET",
   "path": "/topup/refundQueryCMCC",
@@ -158,6 +160,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7622",
   "updatedAt": "2025-07-22",
-  "_file_stem": "tool-topup-refundQueryCMCC",
-  "cnName": "中国移动退款订单状态查询"
+  "_file_stem": "tool-topup-refundQueryCMCC"
 }

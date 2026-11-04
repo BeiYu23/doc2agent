@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-product.instantShopping.product.launchProduct",
+  "cnName": "即时零售上架商品",
+  "docUrl": "/docs/doudian/retail-product/retail-product-instantShopping-product-launchProduct",
+  "name": "instantShopping.product.launchProduct",
   "platform": "doudian",
   "group": "retail-product",
-  "name": "instantShopping.product.launchProduct",
   "description": "即时零售上架商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -667,6 +669,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7446",
   "updatedAt": "2026-07-15",
-  "_file_stem": "retail-product-instantShopping-product-launchProduct",
-  "cnName": "即时零售上架商品"
+  "_file_stem": "retail-product-instantShopping-product-launchProduct"
 }

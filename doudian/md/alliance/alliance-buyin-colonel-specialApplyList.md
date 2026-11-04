@@ -1,11 +1,12 @@
-# buyin.colonel.specialApplyList
+# 查询团长活动特殊申请
 
-> 查询团长活动特殊申请
+> buyin.colonel.specialApplyList — 查询团长活动特殊申请
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.colonel.specialApplyList` |
 | 中文名 | 查询团长活动特殊申请 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-colonel-specialApplyList` |
+| 接口 ID | `doudian.alliance.buyin.colonel.specialApplyList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonel/specialApplyList` |

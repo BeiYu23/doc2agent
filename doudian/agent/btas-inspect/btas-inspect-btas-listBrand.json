@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.btas.listBrand",
+  "cnName": "获取可图片鉴定的品牌",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-btas-listBrand",
+  "name": "btas.listBrand",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "btas.listBrand",
   "description": "获取可图片鉴定的品牌",
   "method": "GET",
   "path": "/btas/listBrand",
@@ -62,6 +64,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/1865",
   "updatedAt": "2021-06-07",
-  "_file_stem": "btas-inspect-btas-listBrand",
-  "cnName": "获取可图片鉴定的品牌"
+  "_file_stem": "btas-inspect-btas-listBrand"
 }

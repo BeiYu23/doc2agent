@@ -1,11 +1,12 @@
-# install.order.queryOperationOrderCallLog
+# 服务商查询通话记录
 
-> 服务商查询通话记录
+> install.order.queryOperationOrderCallLog — 服务商查询通话记录
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.queryOperationOrderCallLog` |
 | 中文名 | 服务商查询通话记录 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-queryOperationOrderCallLog` |
+| 接口 ID | `doudian.logistics-provider.install.order.queryOperationOrderCallLog` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/queryOperationOrderCallLog` |

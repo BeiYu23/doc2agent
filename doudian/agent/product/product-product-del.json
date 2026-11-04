@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.del",
+  "cnName": "删除商品",
+  "docUrl": "/docs/doudian/product/product-product-del",
+  "name": "product.del",
   "platform": "doudian",
   "group": "product",
-  "name": "product.del",
   "description": "删除商品",
   "method": "GET",
   "path": "/product/del",
@@ -113,6 +115,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/61",
   "updatedAt": "2024-03-05",
-  "_file_stem": "product-product-del",
-  "cnName": "删除商品"
+  "_file_stem": "product-product-del"
 }

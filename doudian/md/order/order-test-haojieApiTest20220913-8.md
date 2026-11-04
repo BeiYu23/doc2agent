@@ -1,11 +1,12 @@
-# test.haojieApiTest20220913.8
+# 升级
 
-> 升级
+> test.haojieApiTest20220913.8 — 升级
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.test.haojieApiTest20220913.8` |
 | 中文名 | 升级 |
+| 文档地址 | `/docs/doudian/order/order-test-haojieApiTest20220913-8` |
+| 接口 ID | `doudian.order.test.haojieApiTest20220913.8` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/haojieApiTest20220913/8` |

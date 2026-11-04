@@ -1,11 +1,12 @@
-# buyin.instituteLivePreviewShare
+# 抖客直播预告转链
 
-> 抖客直播预告转链
+> buyin.instituteLivePreviewShare — 抖客直播预告转链
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.instituteLivePreviewShare` |
 | 中文名 | 抖客直播预告转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-instituteLivePreviewShare` |
+| 接口 ID | `doudian.alliance.buyin.instituteLivePreviewShare` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/instituteLivePreviewShare` |

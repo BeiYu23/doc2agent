@@ -1,11 +1,12 @@
-# supplyChain.returnOrder.operate
+# 供应商操作售后单
 
-> 供应商操作售后单
+> supplyChain.returnOrder.operate — 供应商操作售后单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.returnOrder.operate` |
 | 中文名 | 供应商操作售后单 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-returnOrder-operate` |
+| 接口 ID | `doudian.supply-chain.supplyChain.returnOrder.operate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/returnOrder/operate` |

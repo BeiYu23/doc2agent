@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.isv.plead",
+  "cnName": "提报申诉",
+  "docUrl": "/docs/doudian/product/product-product-isv-plead",
+  "name": "product.isv.plead",
   "platform": "doudian",
   "group": "product",
-  "name": "product.isv.plead",
   "description": "提报申诉",
   "method": "GET",
   "path": "/product/isv/plead",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2150",
   "updatedAt": "2022-07-05",
-  "_file_stem": "product-product-isv-plead",
-  "cnName": "提报申诉"
+  "_file_stem": "product-product-isv-plead"
 }

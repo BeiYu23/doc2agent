@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.qualification.getAlternativeCategory",
+  "cnName": "获取商家的可选类目",
+  "docUrl": "/docs/doudian/shop/shop-qualification-getAlternativeCategory",
+  "name": "qualification.getAlternativeCategory",
   "platform": "doudian",
   "group": "shop",
-  "name": "qualification.getAlternativeCategory",
   "description": "获取商家的可选类目",
   "method": "GET",
   "path": "/qualification/getAlternativeCategory",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/657",
   "updatedAt": "2024-07-01",
-  "_file_stem": "shop-qualification-getAlternativeCategory",
-  "cnName": "获取商家的可选类目"
+  "_file_stem": "shop-qualification-getAlternativeCategory"
 }

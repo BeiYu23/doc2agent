@@ -1,11 +1,12 @@
-# sms.submitAudienceProduce
+# 提交人群包圈选生产任务
 
-> 提交人群包圈选生产任务
+> sms.submitAudienceProduce — 提交人群包圈选生产任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.submitAudienceProduce` |
 | 中文名 | 提交人群包圈选生产任务 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-submitAudienceProduce` |
+| 接口 ID | `doudian.sms.sms.submitAudienceProduce` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/submitAudienceProduce` |

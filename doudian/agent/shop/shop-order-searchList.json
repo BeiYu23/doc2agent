@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.order.searchList",
+  "cnName": "订单列表查询",
+  "docUrl": "/docs/doudian/shop/shop-order-searchList",
+  "name": "order.searchList",
   "platform": "doudian",
   "group": "shop",
-  "name": "order.searchList",
   "description": "订单列表查询",
   "method": "GET",
   "path": "/order/searchList",
@@ -713,6 +715,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2086",
   "updatedAt": "2022-08-08",
-  "_file_stem": "shop-order-searchList",
-  "cnName": "订单列表查询"
+  "_file_stem": "shop-order-searchList"
 }

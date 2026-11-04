@@ -1,11 +1,12 @@
-# open.UploadProductAgentTasks
+# 上传任务
 
-> 上传任务
+> open.UploadProductAgentTasks — 上传任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.UploadProductAgentTasks` |
 | 中文名 | 上传任务 |
+| 文档地址 | `/docs/doudian/tool/tool-open-UploadProductAgentTasks` |
+| 接口 ID | `doudian.tool.open.UploadProductAgentTasks` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/UploadProductAgentTasks` |

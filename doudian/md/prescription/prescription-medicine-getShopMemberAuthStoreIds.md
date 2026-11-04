@@ -1,11 +1,12 @@
-# medicine.getShopMemberAuthStoreIds
+# 获取成员有权限的门店
 
-> 获取成员有权限的门店
+> medicine.getShopMemberAuthStoreIds — 获取成员有权限的门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.prescription.medicine.getShopMemberAuthStoreIds` |
 | 中文名 | 获取成员有权限的门店 |
+| 文档地址 | `/docs/doudian/prescription/prescription-medicine-getShopMemberAuthStoreIds` |
+| 接口 ID | `doudian.prescription.medicine.getShopMemberAuthStoreIds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/getShopMemberAuthStoreIds` |

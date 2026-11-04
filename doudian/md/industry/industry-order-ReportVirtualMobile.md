@@ -1,11 +1,12 @@
-# order.ReportVirtualMobile
+# 主叫号码上报
 
-> 主叫号码上报接口
+> order.ReportVirtualMobile — 主叫号码上报接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.order.ReportVirtualMobile` |
 | 中文名 | 主叫号码上报 |
+| 文档地址 | `/docs/doudian/industry/industry-order-ReportVirtualMobile` |
+| 接口 ID | `doudian.industry.order.ReportVirtualMobile` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/ReportVirtualMobile` |

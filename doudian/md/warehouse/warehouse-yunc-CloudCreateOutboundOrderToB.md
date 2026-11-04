@@ -1,11 +1,12 @@
-# yunc.CloudCreateOutboundOrderToB
+# 云仓出库接单toB
 
-> 云仓出库接单toB
+> yunc.CloudCreateOutboundOrderToB — 云仓出库接单toB
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.CloudCreateOutboundOrderToB` |
 | 中文名 | 云仓出库接单toB |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-CloudCreateOutboundOrderToB` |
+| 接口 ID | `doudian.warehouse.yunc.CloudCreateOutboundOrderToB` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/CloudCreateOutboundOrderToB` |

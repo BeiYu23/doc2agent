@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.supplyChain.blueInvoice.uploadInvoice",
+  "cnName": "上传蓝票",
+  "docUrl": "/docs/doudian/bill/bill-supplyChain-blueInvoice-uploadInvoice",
+  "name": "supplyChain.blueInvoice.uploadInvoice",
   "platform": "doudian",
   "group": "bill",
-  "name": "supplyChain.blueInvoice.uploadInvoice",
   "description": "上传蓝票",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -161,6 +163,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/8001",
   "updatedAt": "2026-04-23",
-  "_file_stem": "bill-supplyChain-blueInvoice-uploadInvoice",
-  "cnName": "上传蓝票"
+  "_file_stem": "bill-supplyChain-blueInvoice-uploadInvoice"
 }

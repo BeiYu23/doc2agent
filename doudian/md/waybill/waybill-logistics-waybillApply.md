@@ -1,11 +1,12 @@
-# logistics.waybillApply
+# 获取面单信息
 
-> 获取面单信息
+> logistics.waybillApply — 获取面单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.waybillApply` |
 | 中文名 | 获取面单信息 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-waybillApply` |
+| 接口 ID | `doudian.waybill.logistics.waybillApply` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/waybillApply` |

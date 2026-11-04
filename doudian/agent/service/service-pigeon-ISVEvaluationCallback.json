@@ -1,8 +1,10 @@
 {
   "id": "doudian.service.pigeon.ISVEvaluationCallback",
+  "cnName": "ISV评测结果回调",
+  "docUrl": "/docs/doudian/service/service-pigeon-ISVEvaluationCallback",
+  "name": "pigeon.ISVEvaluationCallback",
   "platform": "doudian",
   "group": "service",
-  "name": "pigeon.ISVEvaluationCallback",
   "description": "ISV评测结果回调接口",
   "method": "GET",
   "path": "/pigeon/ISVEvaluationCallback",
@@ -66,6 +68,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1532/7840",
   "updatedAt": "2026-03-31",
-  "_file_stem": "service-pigeon-ISVEvaluationCallback",
-  "cnName": "ISV评测结果回调"
+  "_file_stem": "service-pigeon-ISVEvaluationCallback"
 }

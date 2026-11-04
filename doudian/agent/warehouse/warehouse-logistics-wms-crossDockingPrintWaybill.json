@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.logistics.wms.crossDockingPrintWaybill",
+  "cnName": "越库单质检取号打印",
+  "docUrl": "/docs/doudian/warehouse/warehouse-logistics-wms-crossDockingPrintWaybill",
+  "name": "logistics.wms.crossDockingPrintWaybill",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "logistics.wms.crossDockingPrintWaybill",
   "description": "越库单质检取号打印接口",
   "method": "GET",
   "path": "/logistics/wms/crossDockingPrintWaybill",
@@ -178,6 +180,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6765",
   "updatedAt": "2024-08-16",
-  "_file_stem": "warehouse-logistics-wms-crossDockingPrintWaybill",
-  "cnName": "越库单质检取号打印"
+  "_file_stem": "warehouse-logistics-wms-crossDockingPrintWaybill"
 }

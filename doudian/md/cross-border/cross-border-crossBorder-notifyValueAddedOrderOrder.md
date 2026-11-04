@@ -1,11 +1,12 @@
-# crossBorder.notifyValueAddedOrderOrder
+# 跨境服务商回传增值服务单数据
 
-> 跨境服务商回传增值服务单数据
+> crossBorder.notifyValueAddedOrderOrder — 跨境服务商回传增值服务单数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossBorder.notifyValueAddedOrderOrder` |
 | 中文名 | 跨境服务商回传增值服务单数据 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossBorder-notifyValueAddedOrderOrder` |
+| 接口 ID | `doudian.cross-border.crossBorder.notifyValueAddedOrderOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/notifyValueAddedOrderOrder` |

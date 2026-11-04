@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.d2dSignIn",
+  "cnName": "【上门回收】师傅上门签到",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-d2dSignIn",
+  "name": "resale.order.d2dSignIn",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.d2dSignIn",
   "description": "【上门回收】师傅上门签到",
   "method": "GET",
   "path": "/resale/order/d2dSignIn",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4631",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-d2dSignIn",
-  "cnName": "【上门回收】师傅上门签到"
+  "_file_stem": "recycle-resale-order-d2dSignIn"
 }

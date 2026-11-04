@@ -1,11 +1,12 @@
-# buyin.productsDetail
+# 批量查询推广商品
 
-> 批量查询推广商品详情
+> buyin.productsDetail — 批量查询推广商品详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.productsDetail` |
 | 中文名 | 批量查询推广商品 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-productsDetail` |
+| 接口 ID | `doudian.alliance.buyin.productsDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/productsDetail` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.getCrossBorderFulfillInfo",
+  "cnName": "获取跨境承运单信息",
+  "docUrl": "/docs/doudian/order/order-order-getCrossBorderFulfillInfo",
+  "name": "order.getCrossBorderFulfillInfo",
   "platform": "doudian",
   "group": "order",
-  "name": "order.getCrossBorderFulfillInfo",
   "description": "获取跨境承运单信息",
   "method": "GET",
   "path": "/order/getCrossBorderFulfillInfo",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1837",
   "updatedAt": "2021-06-09",
-  "_file_stem": "order-order-getCrossBorderFulfillInfo",
-  "cnName": "获取跨境承运单信息"
+  "_file_stem": "order-order-getCrossBorderFulfillInfo"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.edit",
+  "cnName": "编辑区域仓",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-edit",
+  "name": "warehouse.edit",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.edit",
   "description": "编辑区域仓",
   "method": "GET",
   "path": "/warehouse/edit",
@@ -122,6 +124,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1856",
   "updatedAt": "2022-08-17",
-  "_file_stem": "stock-warehouse-edit",
-  "cnName": "编辑区域仓"
+  "_file_stem": "stock-warehouse-edit"
 }

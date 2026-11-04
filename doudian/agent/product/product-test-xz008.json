@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.test.xz008",
+  "cnName": "笑死我啦哈哈哈",
+  "docUrl": "/docs/doudian/product/product-test-xz008",
+  "name": "test.xz008",
   "platform": "doudian",
   "group": "product",
-  "name": "test.xz008",
   "description": "笑死我啦哈哈哈",
   "method": "GET",
   "path": "/test/xz008",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2432",
   "updatedAt": "2022-08-26",
-  "_file_stem": "product-test-xz008",
-  "cnName": "笑死我啦哈哈哈"
+  "_file_stem": "product-test-xz008"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createTask",
+  "cnName": "创建task任务",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createTask",
+  "name": "second.ecomInsight.createTask",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createTask",
   "description": "创建task任务接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -1498,6 +1500,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7935",
   "updatedAt": "2026-07-23",
-  "_file_stem": "video-second-ecomInsight-createTask",
-  "cnName": "创建task任务"
+  "_file_stem": "video-second-ecomInsight-createTask"
 }

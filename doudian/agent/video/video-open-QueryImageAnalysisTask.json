@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.QueryImageAnalysisTask",
+  "cnName": "查询图片分析任务",
+  "docUrl": "/docs/doudian/video/video-open-QueryImageAnalysisTask",
+  "name": "open.QueryImageAnalysisTask",
   "platform": "doudian",
   "group": "video",
-  "name": "open.QueryImageAnalysisTask",
   "description": "查询图片分析任务",
   "method": "GET",
   "path": "/open/QueryImageAnalysisTask",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8592",
   "updatedAt": "2026-09-09",
-  "_file_stem": "video-open-QueryImageAnalysisTask",
-  "cnName": "查询图片分析任务"
+  "_file_stem": "video-open-QueryImageAnalysisTask"
 }

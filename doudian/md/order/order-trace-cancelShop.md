@@ -1,11 +1,12 @@
-# trace.cancelShop
+# 订单链路监控删除用户
 
-> 订单链路监控删除用户
+> trace.cancelShop — 订单链路监控删除用户
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.trace.cancelShop` |
 | 中文名 | 订单链路监控删除用户 |
+| 文档地址 | `/docs/doudian/order/order-trace-cancelShop` |
+| 接口 ID | `doudian.order.trace.cancelShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trace/cancelShop` |

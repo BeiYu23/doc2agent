@@ -1,11 +1,12 @@
-# instantShopping.distributionMerchant.authCallback
+# 授权回调
 
-> 授权回调
+> instantShopping.distributionMerchant.authCallback — 授权回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.instantShopping.distributionMerchant.authCallback` |
 | 中文名 | 授权回调 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-instantShopping-distributionMerchant-authCallback` |
+| 接口 ID | `doudian.retail-store.instantShopping.distributionMerchant.authCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

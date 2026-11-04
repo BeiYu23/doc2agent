@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.fuwu.refund.search",
+  "cnName": "服务市场订单退款单查询",
+  "docUrl": "/docs/doudian/tool/tool-fuwu-refund-search",
+  "name": "fuwu.refund.search",
   "platform": "doudian",
   "group": "tool",
-  "name": "fuwu.refund.search",
   "description": "服务市场订单退款单查询",
   "method": "GET",
   "path": "/fuwu/refund/search",
@@ -207,6 +209,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/6531",
   "updatedAt": "2024-05-23",
-  "_file_stem": "tool-fuwu-refund-search",
-  "cnName": "服务市场订单退款单查询"
+  "_file_stem": "tool-fuwu-refund-search"
 }

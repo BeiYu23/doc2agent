@@ -1,11 +1,12 @@
-# sms.deleteUserAudience
+# 删除人群包
 
-> 删除人群包
+> sms.deleteUserAudience — 删除人群包
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.sms.deleteUserAudience` |
 | 中文名 | 删除人群包 |
+| 文档地址 | `/docs/doudian/member/member-sms-deleteUserAudience` |
+| 接口 ID | `doudian.member.sms.deleteUserAudience` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/deleteUserAudience` |

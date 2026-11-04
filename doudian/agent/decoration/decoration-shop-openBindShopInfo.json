@@ -1,8 +1,10 @@
 {
   "id": "doudian.decoration.shop.openBindShopInfo",
+  "cnName": "店铺装修-绑定门店-绑定信息",
+  "docUrl": "/docs/doudian/decoration/decoration-shop-openBindShopInfo",
+  "name": "shop.openBindShopInfo",
   "platform": "doudian",
   "group": "decoration",
-  "name": "shop.openBindShopInfo",
   "description": "店铺装修-绑定门店-绑定信息",
   "method": "GET",
   "path": "/shop/openBindShopInfo",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/6299",
   "updatedAt": "2026-04-01",
-  "_file_stem": "decoration-shop-openBindShopInfo",
-  "cnName": "店铺装修-绑定门店-绑定信息"
+  "_file_stem": "decoration-shop-openBindShopInfo"
 }

@@ -1,11 +1,12 @@
-# resale.supplier.quoteResult
+# 查询平台生成的询价ID对应的问卷内容
 
-> 查询平台生成的询价ID对应的问卷内容
+> resale.supplier.quoteResult — 查询平台生成的询价ID对应的问卷内容
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.resale.supplier.quoteResult` |
 | 中文名 | 查询平台生成的询价ID对应的问卷内容 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-resale-supplier-quoteResult` |
+| 接口 ID | `doudian.logistics-provider.resale.supplier.quoteResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

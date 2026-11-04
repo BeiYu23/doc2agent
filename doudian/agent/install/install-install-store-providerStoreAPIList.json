@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.providerStoreAPIList",
+  "cnName": "服务商门店列表",
+  "docUrl": "/docs/doudian/install/install-install-store-providerStoreAPIList",
+  "name": "install.store.providerStoreAPIList",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.providerStoreAPIList",
   "description": "服务商门店列表",
   "method": "GET",
   "path": "/install/store/providerStoreAPIList",
@@ -268,6 +270,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7675",
   "updatedAt": "2026-05-25",
-  "_file_stem": "install-install-store-providerStoreAPIList",
-  "cnName": "服务商门店列表"
+  "_file_stem": "install-install-store-providerStoreAPIList"
 }

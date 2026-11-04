@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.shop.editStore",
+  "cnName": "编辑门店",
+  "docUrl": "/docs/doudian/shop/shop-shop-editStore",
+  "name": "shop.editStore",
   "platform": "doudian",
   "group": "shop",
-  "name": "shop.editStore",
   "description": "编辑门店",
   "method": "GET",
   "path": "/shop/editStore",
@@ -150,6 +152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2041",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-shop-editStore",
-  "cnName": "编辑门店"
+  "_file_stem": "shop-shop-editStore"
 }

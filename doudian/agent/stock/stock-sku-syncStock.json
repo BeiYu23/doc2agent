@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.sku.syncStock",
+  "cnName": "全量/增量更新商品sku库存",
+  "docUrl": "/docs/doudian/stock/stock-sku-syncStock",
+  "name": "sku.syncStock",
   "platform": "doudian",
   "group": "stock",
-  "name": "sku.syncStock",
   "description": "全量/增量更新商品sku库存",
   "method": "GET",
   "path": "/sku/syncStock",
@@ -411,6 +413,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/155",
   "updatedAt": "2025-02-17",
-  "_file_stem": "stock-sku-syncStock",
-  "cnName": "全量/增量更新商品sku库存"
+  "_file_stem": "stock-sku-syncStock"
 }

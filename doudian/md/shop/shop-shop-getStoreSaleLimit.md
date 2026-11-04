@@ -1,11 +1,12 @@
-# shop.getStoreSaleLimit
+# 获取门店绑定的限售模版
 
-> 获取门店绑定的限售模版
+> shop.getStoreSaleLimit — 获取门店绑定的限售模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.getStoreSaleLimit` |
 | 中文名 | 获取门店绑定的限售模版 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-getStoreSaleLimit` |
+| 接口 ID | `doudian.shop.shop.getStoreSaleLimit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getStoreSaleLimit` |

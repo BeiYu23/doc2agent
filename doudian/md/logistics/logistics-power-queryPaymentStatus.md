@@ -1,11 +1,12 @@
-# power.queryPaymentStatus
+# 逆向支付信息查询
 
-> 逆向支付信息查询
+> power.queryPaymentStatus — 逆向支付信息查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.queryPaymentStatus` |
 | 中文名 | 逆向支付信息查询 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-queryPaymentStatus` |
+| 接口 ID | `doudian.logistics.power.queryPaymentStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/queryPaymentStatus` |

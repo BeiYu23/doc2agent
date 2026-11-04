@@ -1,11 +1,12 @@
-# trade.createTradeLimitTemplate
+# 创建限售规则模板
 
-> 创建限售规则模板
+> trade.createTradeLimitTemplate — 创建限售规则模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.trade.createTradeLimitTemplate` |
 | 中文名 | 创建限售规则模板 |
+| 文档地址 | `/docs/doudian/shop/shop-trade-createTradeLimitTemplate` |
+| 接口 ID | `doudian.shop.trade.createTradeLimitTemplate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/createTradeLimitTemplate` |

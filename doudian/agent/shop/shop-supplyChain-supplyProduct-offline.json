@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.supplyProduct.offline",
+  "cnName": "下架产品",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-supplyProduct-offline",
+  "name": "supplyChain.supplyProduct.offline",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.supplyProduct.offline",
   "description": "下架产品",
   "method": "GET",
   "path": "/supplyChain/supplyProduct/offline",
@@ -51,6 +53,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2124",
   "updatedAt": "2022-06-28",
-  "_file_stem": "shop-supplyChain-supplyProduct-offline",
-  "cnName": "下架产品"
+  "_file_stem": "shop-supplyChain-supplyProduct-offline"
 }

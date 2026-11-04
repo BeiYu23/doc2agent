@@ -1,11 +1,12 @@
-# shop.openGetRejectTmpInfo
+# 店铺装修-审核失败提示
 
-> 店铺装修-审核失败提示
+> shop.openGetRejectTmpInfo — 店铺装修-审核失败提示
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.openGetRejectTmpInfo` |
 | 中文名 | 店铺装修-审核失败提示 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-openGetRejectTmpInfo` |
+| 接口 ID | `doudian.decoration.shop.openGetRejectTmpInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/openGetRejectTmpInfo` |

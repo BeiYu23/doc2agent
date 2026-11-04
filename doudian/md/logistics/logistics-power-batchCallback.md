@@ -1,11 +1,12 @@
-# power.batchCallback
+# batchCallback接口（仅用于兼容老物…
 
-> batchCallback接口（仅用于兼容老物流网关）
+> power.batchCallback — batchCallback接口（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.batchCallback` |
 | 中文名 | batchCallback接口（仅用于兼容老物… |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-batchCallback` |
+| 接口 ID | `doudian.logistics.power.batchCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/batchCallback` |

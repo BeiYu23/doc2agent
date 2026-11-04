@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.createCompositeVideo",
+  "cnName": "素材元视频创意创建",
+  "docUrl": "/docs/doudian/creative/creative-product-material-createCompositeVideo",
+  "name": "product.material.createCompositeVideo",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.createCompositeVideo",
   "description": "素材元视频创意创建",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -125,6 +127,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4242",
   "updatedAt": "2023-08-01",
-  "_file_stem": "creative-product-material-createCompositeVideo",
-  "cnName": "素材元视频创意创建"
+  "_file_stem": "creative-product-material-createCompositeVideo"
 }

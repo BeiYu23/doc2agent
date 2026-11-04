@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.backendService.list",
+  "cnName": "查询service列表",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-backendService-list",
+  "name": "openCloud.backendService.list",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.backendService.list",
   "description": "查询service列表",
   "method": "GET",
   "path": "/openCloud/backendService/list",
@@ -137,6 +139,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/7608",
   "updatedAt": "2025-07-17",
-  "_file_stem": "cloud-openCloud-backendService-list",
-  "cnName": "查询service列表"
+  "_file_stem": "cloud-openCloud-backendService-list"
 }

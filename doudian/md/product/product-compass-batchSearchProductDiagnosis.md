@@ -1,11 +1,12 @@
-# compass.batchSearchProductDiagnosis
+# 批量查询商品搜索优化项
 
-> 批量查询商品搜索优化项
+> compass.batchSearchProductDiagnosis — 批量查询商品搜索优化项
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.compass.batchSearchProductDiagnosis` |
 | 中文名 | 批量查询商品搜索优化项 |
+| 文档地址 | `/docs/doudian/product/product-compass-batchSearchProductDiagnosis` |
+| 接口 ID | `doudian.product.compass.batchSearchProductDiagnosis` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/compass/batchSearchProductDiagnosis` |

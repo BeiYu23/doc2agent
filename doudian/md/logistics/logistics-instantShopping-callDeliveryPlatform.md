@@ -1,11 +1,12 @@
-# instantShopping.callDeliveryPlatform
+# 即时零售呼叫平台运力
 
-> 即时零售呼叫平台运力
+> instantShopping.callDeliveryPlatform — 即时零售呼叫平台运力
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.instantShopping.callDeliveryPlatform` |
 | 中文名 | 即时零售呼叫平台运力 |
+| 文档地址 | `/docs/doudian/logistics/logistics-instantShopping-callDeliveryPlatform` |
+| 接口 ID | `doudian.logistics.instantShopping.callDeliveryPlatform` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

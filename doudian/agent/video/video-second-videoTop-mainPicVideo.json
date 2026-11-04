@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.videoTop.mainPicVideo",
+  "cnName": "获取主图视频榜单",
+  "docUrl": "/docs/doudian/video/video-second-videoTop-mainPicVideo",
+  "name": "second.videoTop.mainPicVideo",
   "platform": "doudian",
   "group": "video",
-  "name": "second.videoTop.mainPicVideo",
   "description": "获取主图视频榜单接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -179,6 +181,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7931",
   "updatedAt": "2026-01-28",
-  "_file_stem": "video-second-videoTop-mainPicVideo",
-  "cnName": "获取主图视频榜单"
+  "_file_stem": "video-second-videoTop-mainPicVideo"
 }

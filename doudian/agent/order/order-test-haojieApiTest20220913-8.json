@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.test.haojieApiTest20220913.8",
+  "cnName": "升级",
+  "docUrl": "/docs/doudian/order/order-test-haojieApiTest20220913-8",
+  "name": "test.haojieApiTest20220913.8",
   "platform": "doudian",
   "group": "order",
-  "name": "test.haojieApiTest20220913.8",
   "description": "升级",
   "method": "GET",
   "path": "/test/haojieApiTest20220913/8",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2491",
   "updatedAt": "2022-09-14",
-  "_file_stem": "order-test-haojieApiTest20220913-8",
-  "cnName": "升级"
+  "_file_stem": "order-test-haojieApiTest20220913-8"
 }

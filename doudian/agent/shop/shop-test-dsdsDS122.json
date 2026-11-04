@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.test.dsdsDS122",
+  "cnName": "（dsdsDS122）",
+  "docUrl": "/docs/doudian/shop/shop-test-dsdsDS122",
+  "name": "test.dsdsDS122",
   "platform": "doudian",
   "group": "shop",
-  "name": "test.dsdsDS122",
   "description": "dddd",
   "method": "GET",
   "path": "/test/dsdsDS122",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/5464",
   "updatedAt": "2023-11-30",
-  "_file_stem": "shop-test-dsdsDS122",
-  "cnName": "（dsdsDS122）"
+  "_file_stem": "shop-test-dsdsDS122"
 }

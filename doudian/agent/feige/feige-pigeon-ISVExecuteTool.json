@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.ISVExecuteTool",
+  "cnName": "执行ISV客服工具的接口",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-ISVExecuteTool",
+  "name": "pigeon.ISVExecuteTool",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.ISVExecuteTool",
   "description": "执行ISV客服工具的接口，支持执行各种客服相关的自动化工具和脚本",
   "method": "GET",
   "path": "/pigeon/ISVExecuteTool",
@@ -297,6 +299,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/7670",
   "updatedAt": "2025-11-27",
-  "_file_stem": "feige-pigeon-ISVExecuteTool",
-  "cnName": "执行ISV客服工具的接口"
+  "_file_stem": "feige-pigeon-ISVExecuteTool"
 }

@@ -1,11 +1,12 @@
-# logistics.courierStation.cancelTerminalOrder
+# 驿站主动取消订单
 
-> 驿站主动取消订单
+> logistics.courierStation.cancelTerminalOrder — 驿站主动取消订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.courierStation.cancelTerminalOrder` |
 | 中文名 | 驿站主动取消订单 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-courierStation-cancelTerminalOrder` |
+| 接口 ID | `doudian.logistics-provider.logistics.courierStation.cancelTerminalOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

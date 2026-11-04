@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.fulfillStateCallback",
+  "cnName": "大客户履约节点回传",
+  "docUrl": "/docs/doudian/order/order-order-fulfillStateCallback",
+  "name": "order.fulfillStateCallback",
   "platform": "doudian",
   "group": "order",
-  "name": "order.fulfillStateCallback",
   "description": "大客户履约节点回传",
   "method": "GET",
   "path": "/order/fulfillStateCallback",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/7646",
   "updatedAt": "2025-07-30",
-  "_file_stem": "order-order-fulfillStateCallback",
-  "cnName": "大客户履约节点回传"
+  "_file_stem": "order-order-fulfillStateCallback"
 }

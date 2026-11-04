@@ -1,11 +1,12 @@
-# logistics.sendByteDanceMessage
+# 短信代发
 
-> 短信代发
+> logistics.sendByteDanceMessage — 短信代发
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.sendByteDanceMessage` |
 | 中文名 | 短信代发 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-sendByteDanceMessage` |
+| 接口 ID | `doudian.logistics.logistics.sendByteDanceMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/sendByteDanceMessage` |

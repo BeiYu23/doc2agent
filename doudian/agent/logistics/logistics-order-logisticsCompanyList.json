@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.logisticsCompanyList",
+  "cnName": "获取快递公司列表",
+  "docUrl": "/docs/doudian/logistics/logistics-order-logisticsCompanyList",
+  "name": "order.logisticsCompanyList",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.logisticsCompanyList",
   "description": "获取快递公司列表",
   "method": "GET",
   "path": "/order/logisticsCompanyList",
@@ -69,6 +71,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/541",
   "updatedAt": "2023-05-18",
-  "_file_stem": "logistics-order-logisticsCompanyList",
-  "cnName": "获取快递公司列表"
+  "_file_stem": "logistics-order-logisticsCompanyList"
 }

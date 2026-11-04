@@ -1,11 +1,12 @@
-# product.searchCargo
+# 货品检索
 
-> 货品检索
+> product.searchCargo — 货品检索
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.product.searchCargo` |
 | 中文名 | 货品检索 |
+| 文档地址 | `/docs/doudian/stock/stock-product-searchCargo` |
+| 接口 ID | `doudian.stock.product.searchCargo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/searchCargo` |

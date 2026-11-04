@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.getVisualValidateResult",
+  "cnName": "获取活体检测结果",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-getVisualValidateResult",
+  "name": "second.ecomInsight.getVisualValidateResult",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.getVisualValidateResult",
   "description": "获取活体检测结果",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8221",
   "updatedAt": "2026-04-21",
-  "_file_stem": "video-second-ecomInsight-getVisualValidateResult",
-  "cnName": "获取活体检测结果"
+  "_file_stem": "video-second-ecomInsight-getVisualValidateResult"
 }

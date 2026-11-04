@@ -1,11 +1,12 @@
-# install.abilitySignShop.backFromLp
+# 服务商商家签约回传
 
-> 服务商商家签约回传
+> install.abilitySignShop.backFromLp — 服务商商家签约回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.abilitySignShop.backFromLp` |
 | 中文名 | 服务商商家签约回传 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-abilitySignShop-backFromLp` |
+| 接口 ID | `doudian.logistics-provider.install.abilitySignShop.backFromLp` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,12 +1,13 @@
-# token.create
+# 生成token
 
-> 生成token API。创建token成功即可，可以定期调/token/refresh接口来刷新token避免过期，请不要频繁的调用！
+> token.create — 生成token API。创建token成功即可，可以定期调/token/refresh接口来刷新token避免过期，请不要频繁的调用！
 推荐使用SDK进行token获取：https://op.jinritemai.com/docs/guide-docs/1
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.token.create` |
 | 中文名 | 生成token |
+| 文档地址 | `/docs/doudian/tool/tool-token-create` |
+| 接口 ID | `doudian.tool.token.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/token/create` |

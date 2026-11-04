@@ -1,11 +1,12 @@
-# openCloud.containerService.update
+# 更新容器服务
 
-> 更新容器服务
+> openCloud.containerService.update — 更新容器服务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.containerService.update` |
 | 中文名 | 更新容器服务 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-containerService-update` |
+| 接口 ID | `doudian.cloud.openCloud.containerService.update` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/containerService/update` |

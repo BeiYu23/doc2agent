@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.getFolderInfo",
+  "cnName": "查看文件夹",
+  "docUrl": "/docs/doudian/material/material-material-getFolderInfo",
+  "name": "material.getFolderInfo",
   "platform": "doudian",
   "group": "material",
-  "name": "material.getFolderInfo",
   "description": "查看文件夹详情",
   "method": "GET",
   "path": "/material/getFolderInfo",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1150",
   "updatedAt": "2022-12-28",
-  "_file_stem": "material-material-getFolderInfo",
-  "cnName": "查看文件夹"
+  "_file_stem": "material-material-getFolderInfo"
 }

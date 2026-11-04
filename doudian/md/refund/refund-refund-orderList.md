@@ -1,11 +1,12 @@
-# refund.orderList
+# 获取备货中有退款的订单列表
 
-> 获取备货中有退款的订单列表（6.30下线）
+> refund.orderList — 获取备货中有退款的订单列表（6.30下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.refund.orderList` |
 | 中文名 | 获取备货中有退款的订单列表 |
+| 文档地址 | `/docs/doudian/refund/refund-refund-orderList` |
+| 接口 ID | `doudian.refund.refund.orderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/refund/orderList` |

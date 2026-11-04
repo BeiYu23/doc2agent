@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.imageVersion.rebuild",
+  "cnName": "镜像重新构建",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-imageVersion-rebuild",
+  "name": "openCloud.v1.imageVersion.rebuild",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.imageVersion.rebuild",
   "description": "镜像重新构建",
   "method": "GET",
   "path": "/openCloud/v1/imageVersion/rebuild",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4152",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-imageVersion-rebuild",
-  "cnName": "镜像重新构建"
+  "_file_stem": "cloud-openCloud-v1-imageVersion-rebuild"
 }

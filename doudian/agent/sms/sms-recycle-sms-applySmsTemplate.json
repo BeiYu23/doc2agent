@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.recycle.sms.applySmsTemplate",
+  "cnName": "申请短信模板",
+  "docUrl": "/docs/doudian/sms/sms-recycle-sms-applySmsTemplate",
+  "name": "recycle.sms.applySmsTemplate",
   "platform": "doudian",
   "group": "sms",
-  "name": "recycle.sms.applySmsTemplate",
   "description": "申请短信模板",
   "method": "GET",
   "path": "/recycle/sms/applySmsTemplate",
@@ -93,6 +95,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7836",
   "updatedAt": "2025-11-03",
-  "_file_stem": "sms-recycle-sms-applySmsTemplate",
-  "cnName": "申请短信模板"
+  "_file_stem": "sms-recycle-sms-applySmsTemplate"
 }

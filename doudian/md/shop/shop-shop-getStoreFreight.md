@@ -1,11 +1,12 @@
-# shop.getStoreFreight
+# 获取门店绑定的运费模版
 
-> 获取门店绑定的运费模版
+> shop.getStoreFreight — 获取门店绑定的运费模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.getStoreFreight` |
 | 中文名 | 获取门店绑定的运费模版 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-getStoreFreight` |
+| 接口 ID | `doudian.shop.shop.getStoreFreight` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getStoreFreight` |

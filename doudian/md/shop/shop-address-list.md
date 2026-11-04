@@ -1,11 +1,12 @@
-# address.list
+# 批量查询地址库列表
 
-> 批量查询地址库列表接口
+> address.list — 批量查询地址库列表接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.address.list` |
 | 中文名 | 批量查询地址库列表 |
+| 文档地址 | `/docs/doudian/shop/shop-address-list` |
+| 接口 ID | `doudian.shop.address.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/list` |

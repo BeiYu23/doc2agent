@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.instantShopping.syncGoodsOwnerStatus",
+  "cnName": "服务商回传货主状态",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-instantShopping-syncGoodsOwnerStatus",
+  "name": "instantShopping.syncGoodsOwnerStatus",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "instantShopping.syncGoodsOwnerStatus",
   "description": "服务商回传货主状态",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7022",
   "updatedAt": "2024-10-23",
-  "_file_stem": "logistics-provider-instantShopping-syncGoodsOwnerStatus",
-  "cnName": "服务商回传货主状态"
+  "_file_stem": "logistics-provider-instantShopping-syncGoodsOwnerStatus"
 }

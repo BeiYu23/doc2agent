@@ -1,11 +1,12 @@
-# logistics.getDistrict
+# 四级地址查询
 
-> 四级地址查询接口
+> logistics.getDistrict — 四级地址查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.getDistrict` |
 | 中文名 | 四级地址查询 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-getDistrict` |
+| 接口 ID | `doudian.logistics.logistics.getDistrict` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getDistrict` |

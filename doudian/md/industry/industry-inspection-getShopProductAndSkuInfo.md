@@ -1,11 +1,12 @@
-# inspection.getShopProductAndSkuInfo
+# 查询商家的商品及其 SKU
 
-> 查询商家的商品及其 SKU
+> inspection.getShopProductAndSkuInfo — 查询商家的商品及其 SKU
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.getShopProductAndSkuInfo` |
 | 中文名 | 查询商家的商品及其 SKU |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-getShopProductAndSkuInfo` |
+| 接口 ID | `doudian.industry.inspection.getShopProductAndSkuInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/getShopProductAndSkuInfo` |

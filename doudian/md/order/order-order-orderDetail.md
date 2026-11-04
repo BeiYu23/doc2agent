@@ -1,11 +1,12 @@
-# order.orderDetail
+# 订单详情查询
 
-> 订单详情查询
+> order.orderDetail — 订单详情查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.orderDetail` |
 | 中文名 | 订单详情查询 |
+| 文档地址 | `/docs/doudian/order/order-order-orderDetail` |
+| 接口 ID | `doudian.order.order.orderDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/orderDetail` |

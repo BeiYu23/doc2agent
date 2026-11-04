@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.kolPidDel",
+  "cnName": "达人PID删除",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-kolPidDel",
+  "name": "buyin.kolPidDel",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.kolPidDel",
   "description": "达人PID删除",
   "method": "GET",
   "path": "/buyin/kolPidDel",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1463",
   "updatedAt": "2022-10-11",
-  "_file_stem": "alliance-buyin-kolPidDel",
-  "cnName": "达人PID删除"
+  "_file_stem": "alliance-buyin-kolPidDel"
 }

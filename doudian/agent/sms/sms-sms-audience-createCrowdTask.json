@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.audience.createCrowdTask",
+  "cnName": "创建种子人群任务",
+  "docUrl": "/docs/doudian/sms/sms-sms-audience-createCrowdTask",
+  "name": "sms.audience.createCrowdTask",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.audience.createCrowdTask",
   "description": "创建种子人群任务",
   "method": "GET",
   "path": "/sms/audience/createCrowdTask",
@@ -203,6 +205,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7659",
   "updatedAt": "2026-03-11",
-  "_file_stem": "sms-sms-audience-createCrowdTask",
-  "cnName": "创建种子人群任务"
+  "_file_stem": "sms-sms-audience-createCrowdTask"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.queryCjAccountFLowFIleUrl",
+  "cnName": "获取物流服务商对应账户的资金日账单",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-queryCjAccountFLowFIleUrl",
+  "name": "logistics.queryCjAccountFLowFIleUrl",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.queryCjAccountFLowFIleUrl",
   "description": "获取物流服务商对应账户的资金日账单",
   "method": "GET",
   "path": "/logistics/queryCjAccountFLowFIleUrl",
@@ -118,6 +120,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8159",
   "updatedAt": "2026-03-25",
-  "_file_stem": "logistics-provider-logistics-queryCjAccountFLowFIleUrl",
-  "cnName": "获取物流服务商对应账户的资金日账单"
+  "_file_stem": "logistics-provider-logistics-queryCjAccountFLowFIleUrl"
 }

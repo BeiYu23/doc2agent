@@ -1,11 +1,12 @@
-# product.getProductSuggestionList
+# 查询诊断商品列表及其处理建议
 
-> 查询诊断商品列表及其处理建议
+> product.getProductSuggestionList — 查询诊断商品列表及其处理建议
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getProductSuggestionList` |
 | 中文名 | 查询诊断商品列表及其处理建议 |
+| 文档地址 | `/docs/doudian/product/product-product-getProductSuggestionList` |
+| 接口 ID | `doudian.product.product.getProductSuggestionList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getProductSuggestionList` |

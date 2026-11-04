@@ -1,8 +1,10 @@
 {
   "id": "doudian.marketing.marketing.queryShopCouponList",
+  "cnName": "查询店铺优惠券信息",
+  "docUrl": "/docs/doudian/marketing/marketing-marketing-queryShopCouponList",
+  "name": "marketing.queryShopCouponList",
   "platform": "doudian",
   "group": "marketing",
-  "name": "marketing.queryShopCouponList",
   "description": "查询店铺优惠券信息，与商家工作台优惠券管理模块功能一致",
   "method": "GET",
   "path": "/marketing/queryShopCouponList",
@@ -164,6 +166,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/4257",
   "updatedAt": "2023-08-04",
-  "_file_stem": "marketing-marketing-queryShopCouponList",
-  "cnName": "查询店铺优惠券信息"
+  "_file_stem": "marketing-marketing-queryShopCouponList"
 }

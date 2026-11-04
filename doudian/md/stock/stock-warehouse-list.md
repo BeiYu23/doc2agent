@@ -1,11 +1,12 @@
-# warehouse.list
+# 批量查询区域仓
 
-> 批量查询区域仓
+> warehouse.list — 批量查询区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.list` |
 | 中文名 | 批量查询区域仓 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-list` |
+| 接口 ID | `doudian.stock.warehouse.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/list` |

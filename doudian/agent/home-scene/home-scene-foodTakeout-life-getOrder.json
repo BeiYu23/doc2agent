@@ -1,8 +1,10 @@
 {
   "id": "doudian.home-scene.foodTakeout.life.getOrder",
+  "cnName": "生服-订单查询",
+  "docUrl": "/docs/doudian/home-scene/home-scene-foodTakeout-life-getOrder",
+  "name": "foodTakeout.life.getOrder",
   "platform": "doudian",
   "group": "home-scene",
-  "name": "foodTakeout.life.getOrder",
   "description": "生服-订单查询接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1525/6690",
   "updatedAt": "2024-07-11",
-  "_file_stem": "home-scene-foodTakeout-life-getOrder",
-  "cnName": "生服-订单查询"
+  "_file_stem": "home-scene-foodTakeout-life-getOrder"
 }

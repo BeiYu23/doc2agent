@@ -1,11 +1,12 @@
-# product.previewChannelProduct
+# 预览渠道品信息
 
-> 预览渠道品信息
+> product.previewChannelProduct — 预览渠道品信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.previewChannelProduct` |
 | 中文名 | 预览渠道品信息 |
+| 文档地址 | `/docs/doudian/product/product-product-previewChannelProduct` |
+| 接口 ID | `doudian.product.product.previewChannelProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/previewChannelProduct` |

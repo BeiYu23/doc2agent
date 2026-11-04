@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-product.instantShopping.sku.batchEditPrice",
+  "cnName": "批量修改SKU价格",
+  "docUrl": "/docs/doudian/retail-product/retail-product-instantShopping-sku-batchEditPrice",
+  "name": "instantShopping.sku.batchEditPrice",
   "platform": "doudian",
   "group": "retail-product",
-  "name": "instantShopping.sku.batchEditPrice",
   "description": "批量修改SKU价格",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7159",
   "updatedAt": "2025-01-14",
-  "_file_stem": "retail-product-instantShopping-sku-batchEditPrice",
-  "cnName": "批量修改SKU价格"
+  "_file_stem": "retail-product-instantShopping-sku-batchEditPrice"
 }

@@ -1,11 +1,12 @@
-# instantShopping.product.syncStockBatch
+# 库存批量同步
 
-> 库存批量同步接口
+> instantShopping.product.syncStockBatch — 库存批量同步接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-stock.instantShopping.product.syncStockBatch` |
 | 中文名 | 库存批量同步 |
+| 文档地址 | `/docs/doudian/retail-stock/retail-stock-instantShopping-product-syncStockBatch` |
+| 接口 ID | `doudian.retail-stock.instantShopping.product.syncStockBatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# marketing.queryFinalPrice
+# 查询到手价
 
-> 查询到手价
+> marketing.queryFinalPrice — 查询到手价
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.marketing.marketing.queryFinalPrice` |
 | 中文名 | 查询到手价 |
+| 文档地址 | `/docs/doudian/marketing/marketing-marketing-queryFinalPrice` |
+| 接口 ID | `doudian.marketing.marketing.queryFinalPrice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/queryFinalPrice` |

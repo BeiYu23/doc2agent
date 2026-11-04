@@ -1,13 +1,14 @@
-# material.searchMaterial
+# 不会返回已经删除的素材
 
-> 1、不会返回已经删除的素材；
+> material.searchMaterial — 1、不会返回已经删除的素材；
 2、请至少传入一个入参，如果没有任何搜索条件，即：除page_num、page_size、order_type之外的字段都为空，会返【查询失败，未上传任何查询参数】错误。
 3、2022年11月-素材接口字段变更公告：https
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.searchMaterial` |
 | 中文名 | 不会返回已经删除的素材 |
+| 文档地址 | `/docs/doudian/material/material-material-searchMaterial` |
+| 接口 ID | `doudian.material.material.searchMaterial` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/searchMaterial` |

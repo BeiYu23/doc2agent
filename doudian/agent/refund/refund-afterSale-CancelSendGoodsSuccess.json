@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.CancelSendGoodsSuccess",
+  "cnName": "商家在抖店后台售后小助手配置取消发货自动退策略",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-CancelSendGoodsSuccess",
+  "name": "afterSale.CancelSendGoodsSuccess",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.CancelSendGoodsSuccess",
   "description": "1、商家在抖店后台售后小助手配置取消发货自动退策略；\n2、当用户发起退款申请，且商家判断符合退款的场景时，可以调用取消发货接口同步平台取消发货；\n3、命中策略后该售后单自动执行退款操作；",
   "method": "GET",
   "path": "/afterSale/CancelSendGoodsSuccess",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/816",
   "updatedAt": "2021-08-11",
-  "_file_stem": "refund-afterSale-CancelSendGoodsSuccess",
-  "cnName": "商家在抖店后台售后小助手配置取消发货自动退策略"
+  "_file_stem": "refund-afterSale-CancelSendGoodsSuccess"
 }

@@ -1,11 +1,12 @@
-# second.feedChannel.getFeed
+# 【二方接口】Feed2.0
 
-> 【二方接口】Feed2.0接口
+> second.feedChannel.getFeed — 【二方接口】Feed2.0接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.feedChannel.getFeed` |
 | 中文名 | 【二方接口】Feed2.0 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-feedChannel-getFeed` |
+| 接口 ID | `doudian.dongchedi.second.feedChannel.getFeed` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/feedChannel/getFeed` |

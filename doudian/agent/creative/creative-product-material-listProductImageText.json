@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.listProductImageText",
+  "cnName": "商品元图文创意查询",
+  "docUrl": "/docs/doudian/creative/creative-product-material-listProductImageText",
+  "name": "product.material.listProductImageText",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.listProductImageText",
   "description": "商品元图文创意查询",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -128,6 +130,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4244",
   "updatedAt": "2023-08-02",
-  "_file_stem": "creative-product-material-listProductImageText",
-  "cnName": "商品元图文创意查询"
+  "_file_stem": "creative-product-material-listProductImageText"
 }

@@ -1,11 +1,12 @@
-# member.verifyPointChange
+# 对积分变更做确认
 
-> 对积分变更做确认，返回积分变更的结果、最新的积分值和额外信息。
+> member.verifyPointChange — 对积分变更做确认，返回积分变更的结果、最新的积分值和额外信息。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.verifyPointChange` |
 | 中文名 | 对积分变更做确认 |
+| 文档地址 | `/docs/doudian/member/member-member-verifyPointChange` |
+| 接口 ID | `doudian.member.member.verifyPointChange` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/verifyPointChange` |

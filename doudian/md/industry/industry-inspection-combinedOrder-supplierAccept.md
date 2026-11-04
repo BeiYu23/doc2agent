@@ -1,11 +1,12 @@
-# inspection.combinedOrder.supplierAccept
+# 检测一体，服务商接单
 
-> 检测一体，服务商接单
+> inspection.combinedOrder.supplierAccept — 检测一体，服务商接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierAccept` |
 | 中文名 | 检测一体，服务商接单 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-combinedOrder-supplierAccept` |
+| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierAccept` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.marketing.ApplyCoupon",
+  "cnName": "领取优惠券",
+  "docUrl": "/docs/doudian/shop/shop-marketing-ApplyCoupon",
+  "name": "marketing.ApplyCoupon",
   "platform": "doudian",
   "group": "shop",
-  "name": "marketing.ApplyCoupon",
   "description": "领取优惠券",
   "method": "GET",
   "path": "/marketing/ApplyCoupon",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/536",
   "updatedAt": "2024-06-11",
-  "_file_stem": "shop-marketing-ApplyCoupon",
-  "cnName": "领取优惠券"
+  "_file_stem": "shop-marketing-ApplyCoupon"
 }

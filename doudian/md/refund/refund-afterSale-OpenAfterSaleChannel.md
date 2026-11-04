@@ -1,11 +1,12 @@
-# afterSale.OpenAfterSaleChannel
+# 商家打开售后通道
 
-> 商家打开售后通道
+> afterSale.OpenAfterSaleChannel — 商家打开售后通道
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.OpenAfterSaleChannel` |
 | 中文名 | 商家打开售后通道 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-OpenAfterSaleChannel` |
+| 接口 ID | `doudian.refund.afterSale.OpenAfterSaleChannel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/OpenAfterSaleChannel` |

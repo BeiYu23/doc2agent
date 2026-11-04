@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.simplePlanList",
+  "cnName": "商品推广 普通计划查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-simplePlanList",
+  "name": "buyin.simplePlanList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.simplePlanList",
   "description": "商品推广 普通计划查询",
   "method": "GET",
   "path": "/buyin/simplePlanList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/550",
   "updatedAt": "2023-04-10",
-  "_file_stem": "alliance-buyin-simplePlanList",
-  "cnName": "商品推广 普通计划查询"
+  "_file_stem": "alliance-buyin-simplePlanList"
 }

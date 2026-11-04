@@ -1,11 +1,12 @@
-# material.recoverFolder
+# 从回收站恢复文件夹
 
-> 从回收站恢复文件夹
+> material.recoverFolder — 从回收站恢复文件夹
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.recoverFolder` |
 | 中文名 | 从回收站恢复文件夹 |
+| 文档地址 | `/docs/doudian/material/material-material-recoverFolder` |
+| 接口 ID | `doudian.material.material.recoverFolder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/recoverFolder` |

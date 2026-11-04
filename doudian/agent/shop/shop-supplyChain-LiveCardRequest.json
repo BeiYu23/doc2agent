@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.LiveCardRequest",
+  "cnName": "首页直播组件",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-LiveCardRequest",
+  "name": "supplyChain.LiveCardRequest",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.LiveCardRequest",
   "description": "首页直播组件",
   "method": "GET",
   "path": "/supplyChain/LiveCardRequest",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2851",
   "updatedAt": "2023-01-17",
-  "_file_stem": "shop-supplyChain-LiveCardRequest",
-  "cnName": "首页直播组件"
+  "_file_stem": "shop-supplyChain-LiveCardRequest"
 }

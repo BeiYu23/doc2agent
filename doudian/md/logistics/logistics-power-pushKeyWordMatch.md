@@ -1,11 +1,12 @@
-# power.pushKeyWordMatch
+# 关键词匹配
 
-> 关键词匹配
+> power.pushKeyWordMatch — 关键词匹配
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.pushKeyWordMatch` |
 | 中文名 | 关键词匹配 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-pushKeyWordMatch` |
+| 接口 ID | `doudian.logistics.power.pushKeyWordMatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushKeyWordMatch` |

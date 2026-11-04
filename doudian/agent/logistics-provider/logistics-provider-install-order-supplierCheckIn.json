@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.order.supplierCheckIn",
+  "cnName": "服务商上门签到",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-order-supplierCheckIn",
+  "name": "install.order.supplierCheckIn",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.order.supplierCheckIn",
   "description": "服务商上门签到",
   "method": "GET",
   "path": "/install/order/supplierCheckIn",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5777",
   "updatedAt": "2023-12-21",
-  "_file_stem": "logistics-provider-install-order-supplierCheckIn",
-  "cnName": "服务商上门签到"
+  "_file_stem": "logistics-provider-install-order-supplierCheckIn"
 }

@@ -1,11 +1,12 @@
-# app.checkPigeonAuth
+# 检查飞鸽鉴权
 
-> 检查飞鸽鉴权
+> app.checkPigeonAuth — 检查飞鸽鉴权
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.app.checkPigeonAuth` |
 | 中文名 | 检查飞鸽鉴权 |
+| 文档地址 | `/docs/doudian/feige/feige-app-checkPigeonAuth` |
+| 接口 ID | `doudian.feige.app.checkPigeonAuth` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/app/checkPigeonAuth` |

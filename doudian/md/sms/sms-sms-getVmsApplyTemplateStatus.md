@@ -1,11 +1,12 @@
-# sms.getVmsApplyTemplateStatus
+# 查询视频短信模板申请状态
 
-> 查询视频短信模板申请状态
+> sms.getVmsApplyTemplateStatus — 查询视频短信模板申请状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.getVmsApplyTemplateStatus` |
 | 中文名 | 查询视频短信模板申请状态 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-getVmsApplyTemplateStatus` |
+| 接口 ID | `doudian.sms.sms.getVmsApplyTemplateStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getVmsApplyTemplateStatus` |

@@ -1,11 +1,12 @@
-# product.editCbProduct
+# 编辑一个跨境/海南商品
 
-> 编辑一个跨境/海南商品
+> product.editCbProduct — 编辑一个跨境/海南商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.editCbProduct` |
 | 中文名 | 编辑一个跨境/海南商品 |
+| 文档地址 | `/docs/doudian/product/product-product-editCbProduct` |
+| 接口 ID | `doudian.product.product.editCbProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/editCbProduct` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.erpInboundCancel",
+  "cnName": "取消入库单",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-erpInboundCancel",
+  "name": "yunc.erpInboundCancel",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.erpInboundCancel",
   "description": "取消入库单",
   "method": "GET",
   "path": "/yunc/erpInboundCancel",
@@ -143,6 +145,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1869",
   "updatedAt": "2023-01-30",
-  "_file_stem": "warehouse-yunc-erpInboundCancel",
-  "cnName": "取消入库单"
+  "_file_stem": "warehouse-yunc-erpInboundCancel"
 }

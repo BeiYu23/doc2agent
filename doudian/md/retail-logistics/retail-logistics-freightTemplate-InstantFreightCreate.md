@@ -1,11 +1,12 @@
-# freightTemplate.InstantFreightCreate
+# 即时零售运费模板创建
 
-> 即时零售运费模板创建接口
+> freightTemplate.InstantFreightCreate — 即时零售运费模板创建接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.freightTemplate.InstantFreightCreate` |
 | 中文名 | 即时零售运费模板创建 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-freightTemplate-InstantFreightCreate` |
+| 接口 ID | `doudian.retail-logistics.freightTemplate.InstantFreightCreate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

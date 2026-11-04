@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.inspection.inspectionTags",
+  "cnName": "需要给外部服务商提供一些订单/商品/商家等维度…",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-inspection-inspectionTags",
+  "name": "inspection.inspectionTags",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "inspection.inspectionTags",
   "description": "需要给外部服务商提供一些订单/商品/商家等维度的标签数据查询，服务商会根据标签结果做对应的质检逻辑判定",
   "method": "GET",
   "path": "/inspection/inspectionTags",
@@ -65,6 +67,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6926",
   "updatedAt": "2024-10-16",
-  "_file_stem": "logistics-provider-inspection-inspectionTags",
-  "cnName": "需要给外部服务商提供一些订单/商品/商家等维度…"
+  "_file_stem": "logistics-provider-inspection-inspectionTags"
 }

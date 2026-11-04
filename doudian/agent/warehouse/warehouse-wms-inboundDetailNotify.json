@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.wms.inboundDetailNotify",
+  "cnName": "入库明细回传",
+  "docUrl": "/docs/doudian/warehouse/warehouse-wms-inboundDetailNotify",
+  "name": "wms.inboundDetailNotify",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "wms.inboundDetailNotify",
   "description": "入库明细回传，WMS回传入库数据时，使用该接口回传",
   "method": "GET",
   "path": "/wms/inboundDetailNotify",
@@ -265,6 +267,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1357",
   "updatedAt": "2021-09-29",
-  "_file_stem": "warehouse-wms-inboundDetailNotify",
-  "cnName": "入库明细回传"
+  "_file_stem": "warehouse-wms-inboundDetailNotify"
 }

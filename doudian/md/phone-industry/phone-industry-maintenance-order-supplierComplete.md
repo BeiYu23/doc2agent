@@ -1,11 +1,12 @@
-# maintenance.order.supplierComplete
+# 服务完成事件
 
-> 服务完成事件
+> maintenance.order.supplierComplete — 服务完成事件
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.order.supplierComplete` |
 | 中文名 | 服务完成事件 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierComplete` |
+| 接口 ID | `doudian.phone-industry.maintenance.order.supplierComplete` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

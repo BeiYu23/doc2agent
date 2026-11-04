@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.product.getPerformance",
+  "cnName": "查询商品指标信息",
+  "docUrl": "/docs/doudian/video/video-product-getPerformance",
+  "name": "product.getPerformance",
   "platform": "doudian",
   "group": "video",
-  "name": "product.getPerformance",
   "description": "查询商品指标信息",
   "method": "GET",
   "path": "/product/getPerformance",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7351",
   "updatedAt": "2025-03-11",
-  "_file_stem": "video-product-getPerformance",
-  "cnName": "查询商品指标信息"
+  "_file_stem": "video-product-getPerformance"
 }

@@ -1,11 +1,12 @@
-# logistics.pushTrackInfo
+# 异步推送面单运单信息
 
-> 异步推送面单运单信息
+> logistics.pushTrackInfo — 异步推送面单运单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.pushTrackInfo` |
 | 中文名 | 异步推送面单运单信息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-pushTrackInfo` |
+| 接口 ID | `doudian.logistics-provider.logistics.pushTrackInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/pushTrackInfo` |

@@ -1,11 +1,12 @@
-# sms.getPreviewUserAmount
+# 预估公域标签圈选人群包人群数量
 
-> 预估公域标签圈选人群包人群数量
+> sms.getPreviewUserAmount — 预估公域标签圈选人群包人群数量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.getPreviewUserAmount` |
 | 中文名 | 预估公域标签圈选人群包人群数量 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-getPreviewUserAmount` |
+| 接口 ID | `doudian.sms.sms.getPreviewUserAmount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getPreviewUserAmount` |

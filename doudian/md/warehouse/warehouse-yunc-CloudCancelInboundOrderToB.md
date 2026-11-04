@@ -1,11 +1,12 @@
-# yunc.CloudCancelInboundOrderToB
+# 普通入库取消
 
-> 普通入库取消
+> yunc.CloudCancelInboundOrderToB — 普通入库取消
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.CloudCancelInboundOrderToB` |
 | 中文名 | 普通入库取消 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-CloudCancelInboundOrderToB` |
+| 接口 ID | `doudian.warehouse.yunc.CloudCancelInboundOrderToB` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/CloudCancelInboundOrderToB` |

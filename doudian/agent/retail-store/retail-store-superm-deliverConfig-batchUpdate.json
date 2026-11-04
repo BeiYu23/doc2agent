@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.deliverConfig.batchUpdate",
+  "cnName": "小时达店铺配送配置批量更新",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-deliverConfig-batchUpdate",
+  "name": "superm.deliverConfig.batchUpdate",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.deliverConfig.batchUpdate",
   "description": "小时达店铺配送配置批量更新",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -177,6 +179,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/5270",
   "updatedAt": "2023-10-23",
-  "_file_stem": "retail-store-superm-deliverConfig-batchUpdate",
-  "cnName": "小时达店铺配送配置批量更新"
+  "_file_stem": "retail-store-superm-deliverConfig-batchUpdate"
 }

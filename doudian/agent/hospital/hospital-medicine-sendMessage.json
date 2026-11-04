@@ -1,8 +1,10 @@
 {
   "id": "doudian.hospital.medicine.sendMessage",
+  "cnName": "医生给用户发送消息",
+  "docUrl": "/docs/doudian/hospital/hospital-medicine-sendMessage",
+  "name": "medicine.sendMessage",
   "platform": "doudian",
   "group": "hospital",
-  "name": "medicine.sendMessage",
   "description": "医生给用户发送消息",
   "method": "GET",
   "path": "/medicine/sendMessage",
@@ -136,6 +138,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/5902",
   "updatedAt": "2024-01-03",
-  "_file_stem": "hospital-medicine-sendMessage",
-  "cnName": "医生给用户发送消息"
+  "_file_stem": "hospital-medicine-sendMessage"
 }

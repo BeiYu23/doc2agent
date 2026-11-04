@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.getSettleBillDetailV2",
+  "cnName": "2024年7月1日停止服务",
+  "docUrl": "/docs/doudian/bill/bill-order-getSettleBillDetailV2",
+  "name": "order.getSettleBillDetailV2",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.getSettleBillDetailV2",
   "description": "2024年7月1日停止服务。已结算的订单才会有数据，数据T+1生成，建议第二天12点之后来查询。如因任务积压导致延迟的情况，建议重试。从/order/settle接口迁移至此接口，可参考此文档:https://bytedance.feishu.cn/doc",
   "method": "GET",
   "path": "/order/getSettleBillDetailV2",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1390",
   "updatedAt": "2022-11-02",
-  "_file_stem": "bill-order-getSettleBillDetailV2",
-  "cnName": "2024年7月1日停止服务"
+  "_file_stem": "bill-order-getSettleBillDetailV2"
 }

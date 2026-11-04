@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.member.getShopShortLink",
+  "cnName": "获取商家推广链接",
+  "docUrl": "/docs/doudian/shop/shop-member-getShopShortLink",
+  "name": "member.getShopShortLink",
   "platform": "doudian",
   "group": "shop",
-  "name": "member.getShopShortLink",
   "description": "获取商家推广链接接口",
   "method": "GET",
   "path": "/member/getShopShortLink",
@@ -132,6 +134,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1455",
   "updatedAt": "2026-05-12",
-  "_file_stem": "shop-member-getShopShortLink",
-  "cnName": "获取商家推广链接"
+  "_file_stem": "shop-member-getShopShortLink"
 }

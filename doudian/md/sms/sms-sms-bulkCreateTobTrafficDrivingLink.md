@@ -1,11 +1,12 @@
-# sms.bulkCreateTobTrafficDrivingLink
+# 批量创建引流链接
 
-> 批量创建引流链接
+> sms.bulkCreateTobTrafficDrivingLink — 批量创建引流链接
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.bulkCreateTobTrafficDrivingLink` |
 | 中文名 | 批量创建引流链接 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-bulkCreateTobTrafficDrivingLink` |
+| 接口 ID | `doudian.sms.sms.bulkCreateTobTrafficDrivingLink` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/bulkCreateTobTrafficDrivingLink` |

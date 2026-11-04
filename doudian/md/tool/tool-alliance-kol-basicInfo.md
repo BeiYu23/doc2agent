@@ -1,11 +1,12 @@
-# alliance.kol.basicInfo
+# 获取达人基本信息
 
-> 获取达人基本信息
+> alliance.kol.basicInfo — 获取达人基本信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.alliance.kol.basicInfo` |
 | 中文名 | 获取达人基本信息 |
+| 文档地址 | `/docs/doudian/tool/tool-alliance-kol-basicInfo` |
+| 接口 ID | `doudian.tool.alliance.kol.basicInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/kol/basicInfo` |

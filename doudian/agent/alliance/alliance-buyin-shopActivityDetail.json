@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.shopActivityDetail",
+  "cnName": "商家侧获取团长活动",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-shopActivityDetail",
+  "name": "buyin.shopActivityDetail",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.shopActivityDetail",
   "description": "商家侧获取团长活动详情",
   "method": "GET",
   "path": "/buyin/shopActivityDetail",
@@ -257,6 +259,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1797",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-shopActivityDetail",
-  "cnName": "商家侧获取团长活动"
+  "_file_stem": "alliance-buyin-shopActivityDetail"
 }

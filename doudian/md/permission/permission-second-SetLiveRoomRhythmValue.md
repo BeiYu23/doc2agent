@@ -1,11 +1,12 @@
-# second.SetLiveRoomRhythmValue
+# 设置主播节奏大师阈值
 
-> 设置主播节奏大师阈值
+> second.SetLiveRoomRhythmValue — 设置主播节奏大师阈值
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.permission.second.SetLiveRoomRhythmValue` |
 | 中文名 | 设置主播节奏大师阈值 |
+| 文档地址 | `/docs/doudian/permission/permission-second-SetLiveRoomRhythmValue` |
+| 接口 ID | `doudian.permission.second.SetLiveRoomRhythmValue` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/SetLiveRoomRhythmValue` |

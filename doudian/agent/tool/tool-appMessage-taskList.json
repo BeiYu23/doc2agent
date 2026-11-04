@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.appMessage.taskList",
+  "cnName": "获取服务市场应用消息任务列表",
+  "docUrl": "/docs/doudian/tool/tool-appMessage-taskList",
+  "name": "appMessage.taskList",
   "platform": "doudian",
   "group": "tool",
-  "name": "appMessage.taskList",
   "description": "获取服务市场应用消息任务列表",
   "method": "GET",
   "path": "/appMessage/taskList",
@@ -101,6 +103,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3646",
   "updatedAt": "2023-05-08",
-  "_file_stem": "tool-appMessage-taskList",
-  "cnName": "获取服务市场应用消息任务列表"
+  "_file_stem": "tool-appMessage-taskList"
 }

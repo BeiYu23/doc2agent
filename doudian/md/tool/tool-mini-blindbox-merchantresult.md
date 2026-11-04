@@ -1,11 +1,12 @@
-# mini.blindbox.merchantresult
+# 主播在直播间抽完后把盲盒结果回传平台
 
-> 1、使用场景说明，主播在直播间抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果
+> mini.blindbox.merchantresult — 1、使用场景说明，主播在直播间抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.mini.blindbox.merchantresult` |
 | 中文名 | 主播在直播间抽完后把盲盒结果回传平台 |
+| 文档地址 | `/docs/doudian/tool/tool-mini-blindbox-merchantresult` |
+| 接口 ID | `doudian.tool.mini.blindbox.merchantresult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/blindbox/merchantresult` |

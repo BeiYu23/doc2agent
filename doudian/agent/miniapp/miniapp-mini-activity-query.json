@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.query",
+  "cnName": "店铺活动查询",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-query",
+  "name": "mini.activity.query",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.query",
   "description": "店铺活动查询接口",
   "method": "GET",
   "path": "/mini/activity/query",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6038",
   "updatedAt": "2024-01-09",
-  "_file_stem": "miniapp-mini-activity-query",
-  "cnName": "店铺活动查询"
+  "_file_stem": "miniapp-mini-activity-query"
 }

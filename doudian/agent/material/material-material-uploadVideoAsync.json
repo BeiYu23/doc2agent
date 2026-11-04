@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.uploadVideoAsync",
+  "cnName": "素材中心--异步上传视频",
+  "docUrl": "/docs/doudian/material/material-material-uploadVideoAsync",
+  "name": "material.uploadVideoAsync",
   "platform": "doudian",
   "group": "material",
-  "name": "material.uploadVideoAsync",
   "description": "素材中心--异步上传视频接口",
   "method": "GET",
   "path": "/material/uploadVideoAsync",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1147",
   "updatedAt": "2022-10-11",
-  "_file_stem": "material-material-uploadVideoAsync",
-  "cnName": "素材中心--异步上传视频"
+  "_file_stem": "material-material-uploadVideoAsync"
 }

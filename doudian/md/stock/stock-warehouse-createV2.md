@@ -1,11 +1,12 @@
-# warehouse.createV2
+# 单个仓创建v2版本
 
-> 单个仓创建v2版本
+> warehouse.createV2 — 单个仓创建v2版本
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.createV2` |
 | 中文名 | 单个仓创建v2版本 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-createV2` |
+| 接口 ID | `doudian.stock.warehouse.createV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/createV2` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.QuerySpu",
+  "cnName": "检索SPU",
+  "docUrl": "/docs/doudian/product/product-spu-QuerySpu",
+  "name": "spu.QuerySpu",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.QuerySpu",
   "description": "检索SPU",
   "method": "GET",
   "path": "/spu/QuerySpu",
@@ -265,6 +267,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6206",
   "updatedAt": "2026-08-14",
-  "_file_stem": "product-spu-QuerySpu",
-  "cnName": "检索SPU"
+  "_file_stem": "product-spu-QuerySpu"
 }

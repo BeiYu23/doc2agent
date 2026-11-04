@@ -1,11 +1,12 @@
-# logistics.overSize.updateCollectTime
+# 物流商推送改约时间
 
-> 物流商推送改约时间
+> logistics.overSize.updateCollectTime — 物流商推送改约时间
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.pickup.logistics.overSize.updateCollectTime` |
 | 中文名 | 物流商推送改约时间 |
+| 文档地址 | `/docs/doudian/pickup/pickup-logistics-overSize-updateCollectTime` |
+| 接口 ID | `doudian.pickup.logistics.overSize.updateCollectTime` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

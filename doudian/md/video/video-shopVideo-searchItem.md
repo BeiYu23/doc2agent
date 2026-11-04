@@ -1,11 +1,12 @@
-# shopVideo.searchItem
+# 查询视频列表
 
-> 查询视频列表
+> shopVideo.searchItem — 查询视频列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.searchItem` |
 | 中文名 | 查询视频列表 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-searchItem` |
+| 接口 ID | `doudian.video.shopVideo.searchItem` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/searchItem` |

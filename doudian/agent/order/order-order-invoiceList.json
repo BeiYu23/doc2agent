@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.invoiceList",
+  "cnName": "查看商家开票列表",
+  "docUrl": "/docs/doudian/order/order-order-invoiceList",
+  "name": "order.invoiceList",
   "platform": "doudian",
   "group": "order",
-  "name": "order.invoiceList",
   "description": "查看商家开票列表",
   "method": "GET",
   "path": "/order/invoiceList",
@@ -224,6 +226,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1842",
   "updatedAt": "2026-09-22",
-  "_file_stem": "order-order-invoiceList",
-  "cnName": "查看商家开票列表"
+  "_file_stem": "order-order-invoiceList"
 }

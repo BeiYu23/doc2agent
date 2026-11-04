@@ -1,11 +1,12 @@
-# mini.activity.register
+# 用户注册活动
 
-> 用户注册活动
+> mini.activity.register — 用户注册活动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.activity.register` |
 | 中文名 | 用户注册活动 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-activity-register` |
+| 接口 ID | `doudian.miniapp.mini.activity.register` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/register` |

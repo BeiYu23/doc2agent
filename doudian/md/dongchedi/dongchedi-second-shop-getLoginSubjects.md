@@ -1,11 +1,12 @@
-# second.shop.getLoginSubjects
+# 【二方接口】查询登陆信息
 
-> 【二方接口】查询登陆信息
+> second.shop.getLoginSubjects — 【二方接口】查询登陆信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.shop.getLoginSubjects` |
 | 中文名 | 【二方接口】查询登陆信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-shop-getLoginSubjects` |
+| 接口 ID | `doudian.dongchedi.second.shop.getLoginSubjects` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/shop/getLoginSubjects` |

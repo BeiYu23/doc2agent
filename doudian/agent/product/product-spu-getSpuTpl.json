@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.spu.getSpuTpl",
+  "cnName": "获取spu模板",
+  "docUrl": "/docs/doudian/product/product-spu-getSpuTpl",
+  "name": "spu.getSpuTpl",
   "platform": "doudian",
   "group": "product",
-  "name": "spu.getSpuTpl",
   "description": "获取spu模板",
   "method": "GET",
   "path": "/spu/getSpuTpl",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1826",
   "updatedAt": "2021-06-30",
-  "_file_stem": "product-spu-getSpuTpl",
-  "cnName": "获取spu模板"
+  "_file_stem": "product-spu-getSpuTpl"
 }

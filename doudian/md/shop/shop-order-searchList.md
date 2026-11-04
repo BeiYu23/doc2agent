@@ -1,11 +1,12 @@
-# order.searchList
+# 订单列表查询
 
-> 订单列表查询
+> order.searchList — 订单列表查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.order.searchList` |
 | 中文名 | 订单列表查询 |
+| 文档地址 | `/docs/doudian/shop/shop-order-searchList` |
+| 接口 ID | `doudian.shop.order.searchList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/searchList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.max.sellpoints",
+  "cnName": "批量获取商品卖点信息",
+  "docUrl": "/docs/doudian/shop/shop-max-sellpoints",
+  "name": "max.sellpoints",
   "platform": "doudian",
   "group": "shop",
-  "name": "max.sellpoints",
   "description": "批量获取商品卖点信息",
   "method": "GET",
   "path": "/max/sellpoints",
@@ -91,6 +93,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2838",
   "updatedAt": "2025-09-22",
-  "_file_stem": "shop-max-sellpoints",
-  "cnName": "批量获取商品卖点信息"
+  "_file_stem": "shop-max-sellpoints"
 }

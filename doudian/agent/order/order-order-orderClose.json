@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.orderClose",
+  "cnName": "关闭订单",
+  "docUrl": "/docs/doudian/order/order-order-orderClose",
+  "name": "order.orderClose",
   "platform": "doudian",
   "group": "order",
-  "name": "order.orderClose",
   "description": "关闭订单接口",
   "method": "GET",
   "path": "/order/orderClose",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/552",
   "updatedAt": "2021-05-27",
-  "_file_stem": "order-order-orderClose",
-  "cnName": "关闭订单"
+  "_file_stem": "order-order-orderClose"
 }

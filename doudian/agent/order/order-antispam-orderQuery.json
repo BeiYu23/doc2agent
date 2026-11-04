@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.antispam.orderQuery",
+  "cnName": "用户在ISV查看订单",
+  "docUrl": "/docs/doudian/order/order-antispam-orderQuery",
+  "name": "antispam.orderQuery",
   "platform": "doudian",
   "group": "order",
-  "name": "antispam.orderQuery",
   "description": "用户在ISV查看订单、下载订单时, 上报事件到风控系统",
   "method": "GET",
   "path": "/antispam/orderQuery",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1841",
   "updatedAt": "2021-07-05",
-  "_file_stem": "order-antispam-orderQuery",
-  "cnName": "用户在ISV查看订单"
+  "_file_stem": "order-antispam-orderQuery"
 }

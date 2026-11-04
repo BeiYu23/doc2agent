@@ -1,11 +1,12 @@
-# supplyChain.bannedSchema.list
+# 查询限售方案
 
-> 查询限售方案
+> supplyChain.bannedSchema.list — 查询限售方案
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.bannedSchema.list` |
 | 中文名 | 查询限售方案 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-bannedSchema-list` |
+| 接口 ID | `doudian.supply-chain.supplyChain.bannedSchema.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/bannedSchema/list` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.serviceDetail",
+  "cnName": "商家服务单",
+  "docUrl": "/docs/doudian/order/order-order-serviceDetail",
+  "name": "order.serviceDetail",
   "platform": "doudian",
   "group": "order",
-  "name": "order.serviceDetail",
   "description": "商家服务单详情",
   "method": "GET",
   "path": "/order/serviceDetail",
@@ -71,6 +73,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1832",
   "updatedAt": "2024-07-09",
-  "_file_stem": "order-order-serviceDetail",
-  "cnName": "商家服务单"
+  "_file_stem": "order-order-serviceDetail"
 }

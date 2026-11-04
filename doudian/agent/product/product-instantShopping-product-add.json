@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.instantShopping.product.add",
+  "cnName": "即时零售商家商品发布",
+  "docUrl": "/docs/doudian/product/product-instantShopping-product-add",
+  "name": "instantShopping.product.add",
   "platform": "doudian",
   "group": "product",
-  "name": "instantShopping.product.add",
   "description": "即时零售商家商品发布接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -1211,6 +1213,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6525",
   "updatedAt": "2026-09-14",
-  "_file_stem": "product-instantShopping-product-add",
-  "cnName": "即时零售商家商品发布"
+  "_file_stem": "product-instantShopping-product-add"
 }

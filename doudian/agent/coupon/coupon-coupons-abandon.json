@@ -1,8 +1,10 @@
 {
   "id": "doudian.coupon.coupons.abandon",
+  "cnName": "2024年11月28日下线",
+  "docUrl": "/docs/doudian/coupon/coupon-coupons-abandon",
+  "name": "coupons.abandon",
   "platform": "doudian",
   "group": "coupon",
-  "name": "coupons.abandon",
   "description": "2024年11月28日下线，请开发者尽快调整，详见公告：https://op.jinritemai.com/docs/notice-docs/5/7026\n卡券进行售后退款时，需要先进行卡券废弃",
   "method": "GET",
   "path": "/coupons/abandon",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/669",
   "updatedAt": "2021-07-14",
-  "_file_stem": "coupon-coupons-abandon",
-  "cnName": "2024年11月28日下线"
+  "_file_stem": "coupon-coupons-abandon"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.coupon.coupons.query",
+  "cnName": "查询卡券（无需授权",
+  "docUrl": "/docs/doudian/coupon/coupon-coupons-query",
+  "name": "coupons.query",
   "platform": "doudian",
   "group": "coupon",
-  "name": "coupons.query",
   "description": "查询卡券（无需授权）",
   "method": "GET",
   "path": "/coupons/query",
@@ -92,6 +94,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/7584",
   "updatedAt": "2025-07-10",
-  "_file_stem": "coupon-coupons-query",
-  "cnName": "查询卡券（无需授权"
+  "_file_stem": "coupon-coupons-query"
 }

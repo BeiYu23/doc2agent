@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.verifyFetchCode",
+  "cnName": "取件码核销（仅用于兼容老物流网关",
+  "docUrl": "/docs/doudian/logistics/logistics-power-verifyFetchCode",
+  "name": "power.verifyFetchCode",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.verifyFetchCode",
   "description": "取件码核销（仅用于兼容老物流网关）",
   "method": "GET",
   "path": "/power/verifyFetchCode",
@@ -152,6 +154,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1478",
   "updatedAt": "2026-10-26",
-  "_file_stem": "logistics-power-verifyFetchCode",
-  "cnName": "取件码核销（仅用于兼容老物流网关"
+  "_file_stem": "logistics-power-verifyFetchCode"
 }

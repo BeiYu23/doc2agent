@@ -1,11 +1,12 @@
-# second.category.options
+# 【二方接口】获取店铺的可选类目
 
-> 【二方接口】获取店铺的可选类目
+> second.category.options — 【二方接口】获取店铺的可选类目
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.category.options` |
 | 中文名 | 【二方接口】获取店铺的可选类目 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-category-options` |
+| 接口 ID | `doudian.dongchedi.second.category.options` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/category/options` |

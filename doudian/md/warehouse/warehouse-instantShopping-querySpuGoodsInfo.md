@@ -1,11 +1,12 @@
-# instantShopping.querySpuGoodsInfo
+# 支持仓储服务商查询货品数据
 
-> 支持仓储服务商查询货品数据
+> instantShopping.querySpuGoodsInfo — 支持仓储服务商查询货品数据
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.querySpuGoodsInfo` |
 | 中文名 | 支持仓储服务商查询货品数据 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-querySpuGoodsInfo` |
+| 接口 ID | `doudian.warehouse.instantShopping.querySpuGoodsInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

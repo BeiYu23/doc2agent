@@ -1,11 +1,12 @@
-# resale.order.d2dSetout
+# 【上门回收】师傅已出发
 
-> 【上门回收】师傅已出发
+> resale.order.d2dSetout — 【上门回收】师傅已出发
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.d2dSetout` |
 | 中文名 | 【上门回收】师傅已出发 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-d2dSetout` |
+| 接口 ID | `doudian.recycle.resale.order.d2dSetout` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/d2dSetout` |

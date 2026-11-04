@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.createOrder",
+  "cnName": "电子面单下单",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-createOrder",
+  "name": "logistics.createOrder",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.createOrder",
   "description": "电子面单下单",
   "method": "GET",
   "path": "/logistics/createOrder",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/372",
   "updatedAt": "2021-04-07",
-  "_file_stem": "logistics-logistics-createOrder",
-  "cnName": "电子面单下单"
+  "_file_stem": "logistics-logistics-createOrder"
 }

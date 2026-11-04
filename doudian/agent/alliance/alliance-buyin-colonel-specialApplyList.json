@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.colonel.specialApplyList",
+  "cnName": "查询团长活动特殊申请",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-colonel-specialApplyList",
+  "name": "buyin.colonel.specialApplyList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.colonel.specialApplyList",
   "description": "查询团长活动特殊申请",
   "method": "GET",
   "path": "/buyin/colonel/specialApplyList",
@@ -178,6 +180,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1552",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-colonel-specialApplyList",
-  "cnName": "查询团长活动特殊申请"
+  "_file_stem": "alliance-buyin-colonel-specialApplyList"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.deployTicket.rollback",
+  "cnName": "发布单回滚",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-rollback",
+  "name": "openCloud.v1.deployTicket.rollback",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.deployTicket.rollback",
   "description": "发布单回滚",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4150",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-deployTicket-rollback",
-  "cnName": "发布单回滚"
+  "_file_stem": "cloud-openCloud-v1-deployTicket-rollback"
 }

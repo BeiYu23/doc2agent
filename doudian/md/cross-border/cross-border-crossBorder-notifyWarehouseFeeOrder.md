@@ -1,11 +1,12 @@
-# crossBorder.notifyWarehouseFeeOrder
+# 服务商回传仓租计费明细
 
-> 服务商回传仓租计费明细
+> crossBorder.notifyWarehouseFeeOrder — 服务商回传仓租计费明细
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossBorder.notifyWarehouseFeeOrder` |
 | 中文名 | 服务商回传仓租计费明细 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossBorder-notifyWarehouseFeeOrder` |
+| 接口 ID | `doudian.cross-border.crossBorder.notifyWarehouseFeeOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/notifyWarehouseFeeOrder` |

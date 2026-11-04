@@ -1,11 +1,12 @@
-# power.pushFirstSortCode
+# 一段码推送（包含末端中心
 
-> 一段码推送（包含末端中心、集包地、大头笔）（仅用于兼容老物流网关）
+> power.pushFirstSortCode — 一段码推送（包含末端中心、集包地、大头笔）（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.pushFirstSortCode` |
 | 中文名 | 一段码推送（包含末端中心 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-pushFirstSortCode` |
+| 接口 ID | `doudian.logistics.power.pushFirstSortCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushFirstSortCode` |

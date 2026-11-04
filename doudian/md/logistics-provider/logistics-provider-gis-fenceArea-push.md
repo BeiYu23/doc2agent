@@ -1,11 +1,12 @@
-# gis.fenceArea.push
+# 围栏数据推送
 
-> 围栏数据推送
+> gis.fenceArea.push — 围栏数据推送
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.gis.fenceArea.push` |
 | 中文名 | 围栏数据推送 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-gis-fenceArea-push` |
+| 接口 ID | `doudian.logistics-provider.gis.fenceArea.push` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/gis/fenceArea/push` |

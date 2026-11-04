@@ -1,11 +1,12 @@
-# order.logisticsCompanyList
+# 获取快递公司列表
 
-> 获取快递公司列表
+> order.logisticsCompanyList — 获取快递公司列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsCompanyList` |
 | 中文名 | 获取快递公司列表 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsCompanyList` |
+| 接口 ID | `doudian.logistics.order.logisticsCompanyList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsCompanyList` |

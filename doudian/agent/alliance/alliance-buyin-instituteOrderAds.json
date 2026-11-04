@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instituteOrderAds",
+  "cnName": "查询抖客直播间分销订单",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instituteOrderAds",
+  "name": "buyin.instituteOrderAds",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instituteOrderAds",
   "description": "查询抖客直播间分销订单",
   "method": "GET",
   "path": "/buyin/instituteOrderAds",
@@ -214,6 +216,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1296",
   "updatedAt": "2024-06-12",
-  "_file_stem": "alliance-buyin-instituteOrderAds",
-  "cnName": "查询抖客直播间分销订单"
+  "_file_stem": "alliance-buyin-instituteOrderAds"
 }

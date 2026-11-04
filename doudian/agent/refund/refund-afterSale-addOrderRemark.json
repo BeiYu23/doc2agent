@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.addOrderRemark",
+  "cnName": "店家给售后单添加备注",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-addOrderRemark",
+  "name": "afterSale.addOrderRemark",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.addOrderRemark",
   "description": "店家给售后单添加备注",
   "method": "GET",
   "path": "/afterSale/addOrderRemark",
@@ -97,6 +99,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/585",
   "updatedAt": "2021-06-10",
-  "_file_stem": "refund-afterSale-addOrderRemark",
-  "cnName": "店家给售后单添加备注"
+  "_file_stem": "refund-afterSale-addOrderRemark"
 }

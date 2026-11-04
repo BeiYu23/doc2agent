@@ -1,11 +1,12 @@
-# product.applyMainPicVideo
+# 应用主图视频至商品
 
-> 应用主图视频至商品
+> product.applyMainPicVideo — 应用主图视频至商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.applyMainPicVideo` |
 | 中文名 | 应用主图视频至商品 |
+| 文档地址 | `/docs/doudian/product/product-product-applyMainPicVideo` |
+| 接口 ID | `doudian.product.product.applyMainPicVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/applyMainPicVideo` |

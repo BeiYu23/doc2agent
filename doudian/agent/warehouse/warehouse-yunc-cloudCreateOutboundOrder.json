@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.cloudCreateOutboundOrder",
+  "cnName": "云仓出库接单",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-cloudCreateOutboundOrder",
+  "name": "yunc.cloudCreateOutboundOrder",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.cloudCreateOutboundOrder",
   "description": "云仓出库接单",
   "method": "GET",
   "path": "/yunc/cloudCreateOutboundOrder",
@@ -916,6 +918,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/898",
   "updatedAt": "2026-08-26",
-  "_file_stem": "warehouse-yunc-cloudCreateOutboundOrder",
-  "cnName": "云仓出库接单"
+  "_file_stem": "warehouse-yunc-cloudCreateOutboundOrder"
 }

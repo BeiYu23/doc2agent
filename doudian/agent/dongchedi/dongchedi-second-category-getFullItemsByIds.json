@@ -1,8 +1,10 @@
 {
   "id": "doudian.dongchedi.second.category.getFullItemsByIds",
+  "cnName": "【二方接口】根据类目ID查询本级类目信息",
+  "docUrl": "/docs/doudian/dongchedi/dongchedi-second-category-getFullItemsByIds",
+  "name": "second.category.getFullItemsByIds",
   "platform": "doudian",
   "group": "dongchedi",
-  "name": "second.category.getFullItemsByIds",
   "description": "【二方接口】根据类目ID查询本级类目信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6839",
   "updatedAt": "2024-09-03",
-  "_file_stem": "dongchedi-second-category-getFullItemsByIds",
-  "cnName": "【二方接口】根据类目ID查询本级类目信息"
+  "_file_stem": "dongchedi-second-category-getFullItemsByIds"
 }

@@ -1,11 +1,12 @@
-# buyin.getAllianceProductDetails
+# 【二方接口】联盟商品
 
-> 【二方接口】联盟商品详情
+> buyin.getAllianceProductDetails — 【二方接口】联盟商品详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.permission.buyin.getAllianceProductDetails` |
 | 中文名 | 【二方接口】联盟商品 |
+| 文档地址 | `/docs/doudian/permission/permission-buyin-getAllianceProductDetails` |
+| 接口 ID | `doudian.permission.buyin.getAllianceProductDetails` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/getAllianceProductDetails` |

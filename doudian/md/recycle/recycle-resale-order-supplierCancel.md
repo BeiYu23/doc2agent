@@ -1,11 +1,12 @@
-# resale.order.supplierCancel
+# 服务商取消回收
 
-> 服务商取消回收
+> resale.order.supplierCancel — 服务商取消回收
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.supplierCancel` |
 | 中文名 | 服务商取消回收 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-supplierCancel` |
+| 接口 ID | `doudian.recycle.resale.order.supplierCancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/supplierCancel` |

@@ -1,11 +1,12 @@
-# QA.xz0033
+# （xz0033）
 
-> 6666
+> QA.xz0033 — 6666
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.QA.xz0033` |
 | 中文名 | （xz0033） |
+| 文档地址 | `/docs/doudian/refund/refund-QA-xz0033` |
+| 接口 ID | `doudian.refund.QA.xz0033` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/QA/xz0033` |

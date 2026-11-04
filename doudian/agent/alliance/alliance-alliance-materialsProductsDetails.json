@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.materialsProductsDetails",
+  "cnName": "批量查询推广商品",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-materialsProductsDetails",
+  "name": "alliance.materialsProductsDetails",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.materialsProductsDetails",
   "description": "批量查询推广商品详情",
   "method": "GET",
   "path": "/alliance/materialsProductsDetails",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1356",
   "updatedAt": "2024-04-11",
-  "_file_stem": "alliance-alliance-materialsProductsDetails",
-  "cnName": "批量查询推广商品"
+  "_file_stem": "alliance-alliance-materialsProductsDetails"
 }

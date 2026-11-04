@@ -1,11 +1,12 @@
-# sku.syncStockBatchMultiProducts
+# 多商品内 sku 更新库存
 
-> 多商品内 sku 更新库存
+> sku.syncStockBatchMultiProducts — 多商品内 sku 更新库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.sku.syncStockBatchMultiProducts` |
 | 中文名 | 多商品内 sku 更新库存 |
+| 文档地址 | `/docs/doudian/product/product-sku-syncStockBatchMultiProducts` |
+| 接口 ID | `doudian.product.sku.syncStockBatchMultiProducts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/syncStockBatchMultiProducts` |

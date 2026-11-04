@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.publishVideo",
+  "cnName": "投稿短视频",
+  "docUrl": "/docs/doudian/video/video-shopVideo-publishVideo",
+  "name": "shopVideo.publishVideo",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.publishVideo",
   "description": "投稿短视频",
   "method": "GET",
   "path": "/shopVideo/publishVideo",
@@ -181,6 +183,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7145",
   "updatedAt": "2025-01-13",
-  "_file_stem": "video-shopVideo-publishVideo",
-  "cnName": "投稿短视频"
+  "_file_stem": "video-shopVideo-publishVideo"
 }

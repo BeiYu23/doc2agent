@@ -1,11 +1,12 @@
-# appMessage.templateList
+# 获取消息模版列表
 
-> 获取消息模版列表
+> appMessage.templateList — 获取消息模版列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.appMessage.templateList` |
 | 中文名 | 获取消息模版列表 |
+| 文档地址 | `/docs/doudian/tool/tool-appMessage-templateList` |
+| 接口 ID | `doudian.tool.appMessage.templateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/appMessage/templateList` |

@@ -1,11 +1,12 @@
-# topup.resultCUC
+# 联通交费回调
 
-> 联通交费回调接口
+> topup.resultCUC — 联通交费回调接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.virtual.topup.resultCUC` |
 | 中文名 | 联通交费回调 |
+| 文档地址 | `/docs/doudian/virtual/virtual-topup-resultCUC` |
+| 接口 ID | `doudian.virtual.topup.resultCUC` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/resultCUC` |

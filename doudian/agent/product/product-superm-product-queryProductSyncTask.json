@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.superm.product.queryProductSyncTask",
+  "cnName": "查询异步执行的根任务列表",
+  "docUrl": "/docs/doudian/product/product-superm-product-queryProductSyncTask",
+  "name": "superm.product.queryProductSyncTask",
   "platform": "doudian",
   "group": "product",
-  "name": "superm.product.queryProductSyncTask",
   "description": "查询异步执行的根任务列表",
   "method": "GET",
   "path": "/superm/product/queryProductSyncTask",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2696",
   "updatedAt": "2023-04-10",
-  "_file_stem": "product-superm-product-queryProductSyncTask",
-  "cnName": "查询异步执行的根任务列表"
+  "_file_stem": "product-superm-product-queryProductSyncTask"
 }

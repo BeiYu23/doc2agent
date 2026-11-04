@@ -1,11 +1,12 @@
-# promise.pushProductExp
+# 推送(商品SKU)过期时间
 
-> 推送(商品SKU)过期时间
+> promise.pushProductExp — 推送(商品SKU)过期时间
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.promise.pushProductExp` |
 | 中文名 | 推送(商品SKU)过期时间 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-promise-pushProductExp` |
+| 接口 ID | `doudian.retail-store.promise.pushProductExp` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/pushProductExp` |

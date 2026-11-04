@@ -1,11 +1,12 @@
-# shopVideo.publishVideo
+# 投稿短视频
 
-> 投稿短视频
+> shopVideo.publishVideo — 投稿短视频
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.publishVideo` |
 | 中文名 | 投稿短视频 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-publishVideo` |
+| 接口 ID | `doudian.video.shopVideo.publishVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/publishVideo` |

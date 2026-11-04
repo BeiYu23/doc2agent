@@ -1,11 +1,12 @@
-# medicine.sendMessage
+# 医生给用户发送消息
 
-> 医生给用户发送消息
+> medicine.sendMessage — 医生给用户发送消息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.hospital.medicine.sendMessage` |
 | 中文名 | 医生给用户发送消息 |
+| 文档地址 | `/docs/doudian/hospital/hospital-medicine-sendMessage` |
+| 接口 ID | `doudian.hospital.medicine.sendMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/sendMessage` |

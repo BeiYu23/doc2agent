@@ -1,11 +1,12 @@
-# address.listAftersaleStrategy
+# 地址策略列表
 
-> 地址策略列表接口
+> address.listAftersaleStrategy — 地址策略列表接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.address.listAftersaleStrategy` |
 | 中文名 | 地址策略列表 |
+| 文档地址 | `/docs/doudian/refund/refund-address-listAftersaleStrategy` |
+| 接口 ID | `doudian.refund.address.listAftersaleStrategy` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/listAftersaleStrategy` |

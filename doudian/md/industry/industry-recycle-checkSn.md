@@ -1,11 +1,12 @@
-# recycle.checkSn
+# 国补SN校验
 
-> 国补SN校验
+> recycle.checkSn — 国补SN校验
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.recycle.checkSn` |
 | 中文名 | 国补SN校验 |
+| 文档地址 | `/docs/doudian/industry/industry-recycle-checkSn` |
+| 接口 ID | `doudian.industry.recycle.checkSn` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/checkSn` |

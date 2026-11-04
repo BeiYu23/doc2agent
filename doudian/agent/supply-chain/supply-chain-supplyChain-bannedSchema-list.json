@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.bannedSchema.list",
+  "cnName": "查询限售方案",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-bannedSchema-list",
+  "name": "supplyChain.bannedSchema.list",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.bannedSchema.list",
   "description": "查询限售方案",
   "method": "GET",
   "path": "/supplyChain/bannedSchema/list",
@@ -106,6 +108,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6474",
   "updatedAt": "2024-04-26",
-  "_file_stem": "supply-chain-supplyChain-bannedSchema-list",
-  "cnName": "查询限售方案"
+  "_file_stem": "supply-chain-supplyChain-bannedSchema-list"
 }

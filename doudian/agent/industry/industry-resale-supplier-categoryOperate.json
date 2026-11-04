@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.resale.supplier.categoryOperate",
+  "cnName": "服务商推送旧品类目变更",
+  "docUrl": "/docs/doudian/industry/industry-resale-supplier-categoryOperate",
+  "name": "resale.supplier.categoryOperate",
   "platform": "doudian",
   "group": "industry",
-  "name": "resale.supplier.categoryOperate",
   "description": "服务商推送旧品类目变更",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -156,6 +158,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8466",
   "updatedAt": "2026-08-12",
-  "_file_stem": "industry-resale-supplier-categoryOperate",
-  "cnName": "服务商推送旧品类目变更"
+  "_file_stem": "industry-resale-supplier-categoryOperate"
 }

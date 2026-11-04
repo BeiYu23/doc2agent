@@ -1,11 +1,12 @@
-# buyin.getDistributionLiveProductList
+# 【二方接口】直播间商品列表
 
-> 【二方接口】直播间商品列表
+> buyin.getDistributionLiveProductList — 【二方接口】直播间商品列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.permission.buyin.getDistributionLiveProductList` |
 | 中文名 | 【二方接口】直播间商品列表 |
+| 文档地址 | `/docs/doudian/permission/permission-buyin-getDistributionLiveProductList` |
+| 接口 ID | `doudian.permission.buyin.getDistributionLiveProductList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/getDistributionLiveProductList` |

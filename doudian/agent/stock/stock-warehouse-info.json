@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.info",
+  "cnName": "查询区域仓",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-info",
+  "name": "warehouse.info",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.info",
   "description": "查询区域仓",
   "method": "GET",
   "path": "/warehouse/info",
@@ -98,6 +100,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1857",
   "updatedAt": "2022-08-18",
-  "_file_stem": "stock-warehouse-info",
-  "cnName": "查询区域仓"
+  "_file_stem": "stock-warehouse-info"
 }

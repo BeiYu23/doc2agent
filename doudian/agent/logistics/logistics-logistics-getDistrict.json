@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.getDistrict",
+  "cnName": "四级地址查询",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-getDistrict",
+  "name": "logistics.getDistrict",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.getDistrict",
   "description": "四级地址查询接口",
   "method": "GET",
   "path": "/logistics/getDistrict",
@@ -158,6 +160,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2905",
   "updatedAt": "2023-09-15",
-  "_file_stem": "logistics-logistics-getDistrict",
-  "cnName": "四级地址查询"
+  "_file_stem": "logistics-logistics-getDistrict"
 }

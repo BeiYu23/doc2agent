@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.order.stockingCompleted",
+  "cnName": "自提订单商家上报备货完成",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-order-stockingCompleted",
+  "name": "instantShopping.order.stockingCompleted",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.order.stockingCompleted",
   "description": "自提订单商家上报备货完成",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -240,6 +242,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7258",
   "updatedAt": "2025-08-14",
-  "_file_stem": "retail-waybill-instantShopping-order-stockingCompleted",
-  "cnName": "自提订单商家上报备货完成"
+  "_file_stem": "retail-waybill-instantShopping-order-stockingCompleted"
 }

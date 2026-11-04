@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.getStoreDetail",
+  "cnName": "小程序c端获取门店信息",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-getStoreDetail",
+  "name": "mini.getStoreDetail",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.getStoreDetail",
   "description": "小程序c端获取门店信息",
   "method": "GET",
   "path": "/mini/getStoreDetail",
@@ -153,6 +155,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7261",
   "updatedAt": "2025-02-21",
-  "_file_stem": "miniapp-mini-getStoreDetail",
-  "cnName": "小程序c端获取门店信息"
+  "_file_stem": "miniapp-mini-getStoreDetail"
 }

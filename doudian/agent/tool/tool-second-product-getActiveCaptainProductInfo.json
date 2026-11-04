@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.second.product.getActiveCaptainProductInfo",
+  "cnName": "【二方接口】查询生效的团长商品信息",
+  "docUrl": "/docs/doudian/tool/tool-second-product-getActiveCaptainProductInfo",
+  "name": "second.product.getActiveCaptainProductInfo",
   "platform": "doudian",
   "group": "tool",
-  "name": "second.product.getActiveCaptainProductInfo",
   "description": "【二方接口】查询生效的团长商品信息",
   "method": "GET",
   "path": "/second/product/getActiveCaptainProductInfo",
@@ -198,6 +200,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7606",
   "updatedAt": "2025-07-17",
-  "_file_stem": "tool-second-product-getActiveCaptainProductInfo",
-  "cnName": "【二方接口】查询生效的团长商品信息"
+  "_file_stem": "tool-second-product-getActiveCaptainProductInfo"
 }

@@ -1,11 +1,12 @@
-# product.save34MainImageGenResult
+# 回传3:4主图生成结果
 
-> 回传3:4主图生成结果
+> product.save34MainImageGenResult — 回传3:4主图生成结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.innovation.product.save34MainImageGenResult` |
 | 中文名 | 回传3:4主图生成结果 |
+| 文档地址 | `/docs/doudian/innovation/innovation-product-save34MainImageGenResult` |
+| 接口 ID | `doudian.innovation.product.save34MainImageGenResult` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/save34MainImageGenResult` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.genUploadAuth",
+  "cnName": "获取SDK上传视频的授权",
+  "docUrl": "/docs/doudian/video/video-shopVideo-genUploadAuth",
+  "name": "shopVideo.genUploadAuth",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.genUploadAuth",
   "description": "获取SDK上传视频的授权",
   "method": "GET",
   "path": "/shopVideo/genUploadAuth",
@@ -110,6 +112,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7150",
   "updatedAt": "2024-12-12",
-  "_file_stem": "video-shopVideo-genUploadAuth",
-  "cnName": "获取SDK上传视频的授权"
+  "_file_stem": "video-shopVideo-genUploadAuth"
 }

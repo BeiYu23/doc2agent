@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.listAudienceProduce",
+  "cnName": "获取人群生产包列表",
+  "docUrl": "/docs/doudian/sms/sms-sms-listAudienceProduce",
+  "name": "sms.listAudienceProduce",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.listAudienceProduce",
   "description": "获取人群生产包列表",
   "method": "GET",
   "path": "/sms/listAudienceProduce",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7787",
   "updatedAt": "2025-09-19",
-  "_file_stem": "sms-sms-listAudienceProduce",
-  "cnName": "获取人群生产包列表"
+  "_file_stem": "sms-sms-listAudienceProduce"
 }

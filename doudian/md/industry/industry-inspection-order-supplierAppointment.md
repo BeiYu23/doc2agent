@@ -1,11 +1,12 @@
-# inspection.order.supplierAppointment
+# 服务商已预约
 
-> 服务商已预约
+> inspection.order.supplierAppointment — 服务商已预约
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierAppointment` |
 | 中文名 | 服务商已预约 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierAppointment` |
+| 接口 ID | `doudian.industry.inspection.order.supplierAppointment` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

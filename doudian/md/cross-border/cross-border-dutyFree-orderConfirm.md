@@ -1,11 +1,12 @@
-# dutyFree.orderConfirm
+# 商家接单
 
-> 商家接单
+> dutyFree.orderConfirm — 商家接单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.dutyFree.orderConfirm` |
 | 中文名 | 商家接单 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-dutyFree-orderConfirm` |
+| 接口 ID | `doudian.cross-border.dutyFree.orderConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/dutyFree/orderConfirm` |

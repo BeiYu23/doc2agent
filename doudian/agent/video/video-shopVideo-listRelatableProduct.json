@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.listRelatableProduct",
+  "cnName": "查询短视频可关联商品列表",
+  "docUrl": "/docs/doudian/video/video-shopVideo-listRelatableProduct",
+  "name": "shopVideo.listRelatableProduct",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.listRelatableProduct",
   "description": "查询短视频可关联商品列表",
   "method": "GET",
   "path": "/shopVideo/listRelatableProduct",
@@ -161,6 +163,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7149",
   "updatedAt": "2024-12-19",
-  "_file_stem": "video-shopVideo-listRelatableProduct",
-  "cnName": "查询短视频可关联商品列表"
+  "_file_stem": "video-shopVideo-listRelatableProduct"
 }

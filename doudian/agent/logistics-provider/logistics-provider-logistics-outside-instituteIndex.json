@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.outside.instituteIndex",
+  "cnName": "按照服务商",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-outside-instituteIndex",
+  "name": "logistics.outside.instituteIndex",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.outside.instituteIndex",
   "description": "按照服务商、责任地区查询各服务商全国或各省份Top200的责任机构以及对应的责任运单量",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -156,6 +158,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2924",
   "updatedAt": "2023-02-03",
-  "_file_stem": "logistics-provider-logistics-outside-instituteIndex",
-  "cnName": "按照服务商"
+  "_file_stem": "logistics-provider-logistics-outside-instituteIndex"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.opptyProduct.apply",
+  "cnName": "机会品提报",
+  "docUrl": "/docs/doudian/product/product-opptyProduct-apply",
+  "name": "opptyProduct.apply",
   "platform": "doudian",
   "group": "product",
-  "name": "opptyProduct.apply",
   "description": "机会品提报",
   "method": "GET",
   "path": "/opptyProduct/apply",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1798",
   "updatedAt": "2021-09-13",
-  "_file_stem": "product-opptyProduct-apply",
-  "cnName": "机会品提报"
+  "_file_stem": "product-opptyProduct-apply"
 }

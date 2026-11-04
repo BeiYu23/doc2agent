@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.bindFences",
+  "cnName": "仓绑定电子围栏",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-bindFences",
+  "name": "warehouse.bindFences",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.bindFences",
   "description": "仓绑定电子围栏",
   "method": "GET",
   "path": "/warehouse/bindFences",
@@ -74,6 +76,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/2062",
   "updatedAt": "2022-08-10",
-  "_file_stem": "stock-warehouse-bindFences",
-  "cnName": "仓绑定电子围栏"
+  "_file_stem": "stock-warehouse-bindFences"
 }

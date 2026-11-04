@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.addSchema",
+  "cnName": "商品发布schema提交",
+  "docUrl": "/docs/doudian/product/product-product-addSchema",
+  "name": "product.addSchema",
   "platform": "doudian",
   "group": "product",
-  "name": "product.addSchema",
   "description": "商品发布schema提交",
   "method": "GET",
   "path": "/product/addSchema",
@@ -1190,6 +1192,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6370",
   "updatedAt": "2026-07-15",
-  "_file_stem": "product-product-addSchema",
-  "cnName": "商品发布schema提交"
+  "_file_stem": "product-product-addSchema"
 }

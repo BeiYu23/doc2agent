@@ -1,11 +1,12 @@
-# afterSale.addOrderRemark
+# 店家给售后单添加备注
 
-> 店家给售后单添加备注
+> afterSale.addOrderRemark — 店家给售后单添加备注
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.addOrderRemark` |
 | 中文名 | 店家给售后单添加备注 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-addOrderRemark` |
+| 接口 ID | `doudian.refund.afterSale.addOrderRemark` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/addOrderRemark` |

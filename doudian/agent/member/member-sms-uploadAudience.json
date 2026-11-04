@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.sms.uploadAudience",
+  "cnName": "上传人群",
+  "docUrl": "/docs/doudian/member/member-sms-uploadAudience",
+  "name": "sms.uploadAudience",
   "platform": "doudian",
   "group": "member",
-  "name": "sms.uploadAudience",
   "description": "上传人群",
   "method": "GET",
   "path": "/sms/uploadAudience",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6680",
   "updatedAt": "2024-10-14",
-  "_file_stem": "member-sms-uploadAudience",
-  "cnName": "上传人群"
+  "_file_stem": "member-sms-uploadAudience"
 }

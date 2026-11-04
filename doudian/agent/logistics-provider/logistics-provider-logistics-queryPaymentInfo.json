@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.queryPaymentInfo",
+  "cnName": "查询支付结果",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-queryPaymentInfo",
+  "name": "logistics.queryPaymentInfo",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.queryPaymentInfo",
   "description": "查询支付结果",
   "method": "GET",
   "path": "/logistics/queryPaymentInfo",
@@ -165,6 +167,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2937",
   "updatedAt": "2026-05-23",
-  "_file_stem": "logistics-provider-logistics-queryPaymentInfo",
-  "cnName": "查询支付结果"
+  "_file_stem": "logistics-provider-logistics-queryPaymentInfo"
 }

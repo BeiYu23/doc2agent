@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-product.instantShopping.product.editv2",
+  "cnName": "编辑商品",
+  "docUrl": "/docs/doudian/retail-product/retail-product-instantShopping-product-editv2",
+  "name": "instantShopping.product.editv2",
   "platform": "doudian",
   "group": "retail-product",
-  "name": "instantShopping.product.editv2",
   "description": "编辑商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -6011,6 +6013,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7448",
   "updatedAt": "2026-09-09",
-  "_file_stem": "retail-product-instantShopping-product-editv2",
-  "cnName": "编辑商品"
+  "_file_stem": "retail-product-instantShopping-product-editv2"
 }

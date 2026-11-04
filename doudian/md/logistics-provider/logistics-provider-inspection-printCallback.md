@@ -1,11 +1,12 @@
-# inspection.printCallback
+# qic外部系统打印回调
 
-> qic外部系统打印回调
+> inspection.printCallback — qic外部系统打印回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.inspection.printCallback` |
 | 中文名 | qic外部系统打印回调 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-inspection-printCallback` |
+| 接口 ID | `doudian.logistics-provider.inspection.printCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/printCallback` |

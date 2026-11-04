@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.sku.detail",
+  "cnName": "获取商品sku",
+  "docUrl": "/docs/doudian/product/product-sku-detail",
+  "name": "sku.detail",
   "platform": "doudian",
   "group": "product",
-  "name": "sku.detail",
   "description": "获取商品sku详情",
   "method": "GET",
   "path": "/sku/detail",
@@ -391,6 +393,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/566",
   "updatedAt": "2026-08-28",
-  "_file_stem": "product-sku-detail",
-  "cnName": "获取商品sku"
+  "_file_stem": "product-sku-detail"
 }

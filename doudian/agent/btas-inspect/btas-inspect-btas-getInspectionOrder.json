@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.btas.getInspectionOrder",
+  "cnName": "⁣商家_查询订单的质检信息",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-btas-getInspectionOrder",
+  "name": "btas.getInspectionOrder",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "btas.getInspectionOrder",
   "description": "⁣商家_查询订单的质检信息",
   "method": "GET",
   "path": "/btas/getInspectionOrder",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/473",
   "updatedAt": "2024-06-12",
-  "_file_stem": "btas-inspect-btas-getInspectionOrder",
-  "cnName": "⁣商家_查询订单的质检信息"
+  "_file_stem": "btas-inspect-btas-getInspectionOrder"
 }

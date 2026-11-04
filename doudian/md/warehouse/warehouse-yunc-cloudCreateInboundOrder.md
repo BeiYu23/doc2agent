@@ -1,11 +1,12 @@
-# yunc.cloudCreateInboundOrder
+# 销退单入库
 
-> 销退单入库
+> yunc.cloudCreateInboundOrder — 销退单入库
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.cloudCreateInboundOrder` |
 | 中文名 | 销退单入库 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-cloudCreateInboundOrder` |
+| 接口 ID | `doudian.warehouse.yunc.cloudCreateInboundOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/cloudCreateInboundOrder` |

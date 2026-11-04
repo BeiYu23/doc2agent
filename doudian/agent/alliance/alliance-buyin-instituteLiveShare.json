@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instituteLiveShare",
+  "cnName": "抖客获取达人直播间分享链接",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instituteLiveShare",
+  "name": "buyin.instituteLiveShare",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instituteLiveShare",
   "description": "抖客获取达人直播间分享链接",
   "method": "GET",
   "path": "/buyin/instituteLiveShare",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1297",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-instituteLiveShare",
-  "cnName": "抖客获取达人直播间分享链接"
+  "_file_stem": "alliance-buyin-instituteLiveShare"
 }

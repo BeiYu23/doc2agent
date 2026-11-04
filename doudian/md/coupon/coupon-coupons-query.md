@@ -1,11 +1,12 @@
-# coupons.query
+# 查询卡券（无需授权
 
-> 查询卡券（无需授权）
+> coupons.query — 查询卡券（无需授权）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.query` |
 | 中文名 | 查询卡券（无需授权 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-query` |
+| 接口 ID | `doudian.coupon.coupons.query` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/query` |

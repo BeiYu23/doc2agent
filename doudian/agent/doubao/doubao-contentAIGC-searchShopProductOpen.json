@@ -1,8 +1,10 @@
 {
   "id": "doudian.doubao.contentAIGC.searchShopProductOpen",
+  "cnName": "查询店铺商品",
+  "docUrl": "/docs/doudian/doubao/doubao-contentAIGC-searchShopProductOpen",
+  "name": "contentAIGC.searchShopProductOpen",
   "platform": "doudian",
   "group": "doubao",
-  "name": "contentAIGC.searchShopProductOpen",
   "description": "查询店铺商品",
   "method": "GET",
   "path": "/contentAIGC/searchShopProductOpen",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1627/8670",
   "updatedAt": "2026-10-19",
-  "_file_stem": "doubao-contentAIGC-searchShopProductOpen",
-  "cnName": "查询店铺商品"
+  "_file_stem": "doubao-contentAIGC-searchShopProductOpen"
 }

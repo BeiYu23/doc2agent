@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-express.instantShopping.logisticsMerchant.getOrganizeAndStaff",
+  "cnName": "获取组织架构&人员信息",
+  "docUrl": "/docs/doudian/retail-express/retail-express-instantShopping-logisticsMerchant-getOrganizeAndStaff",
+  "name": "instantShopping.logisticsMerchant.getOrganizeAndStaff",
   "platform": "doudian",
   "group": "retail-express",
-  "name": "instantShopping.logisticsMerchant.getOrganizeAndStaff",
   "description": "获取组织架构&人员信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -100,6 +102,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1584/7299",
   "updatedAt": "2025-02-24",
-  "_file_stem": "retail-express-instantShopping-logisticsMerchant-getOrganizeAndStaff",
-  "cnName": "获取组织架构&人员信息"
+  "_file_stem": "retail-express-instantShopping-logisticsMerchant-getOrganizeAndStaff"
 }

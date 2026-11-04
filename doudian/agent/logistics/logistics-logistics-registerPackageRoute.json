@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.registerPackageRoute",
+  "cnName": "isv轨迹订阅",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-registerPackageRoute",
+  "name": "logistics.registerPackageRoute",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.registerPackageRoute",
   "description": "isv轨迹订阅",
   "method": "GET",
   "path": "/logistics/registerPackageRoute",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1631",
   "updatedAt": "2026-08-12",
-  "_file_stem": "logistics-logistics-registerPackageRoute",
-  "cnName": "isv轨迹订阅"
+  "_file_stem": "logistics-logistics-registerPackageRoute"
 }

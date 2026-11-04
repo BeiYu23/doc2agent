@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.outside.lineRouteIndex",
+  "cnName": "查询Top200的责任线路",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-outside-lineRouteIndex",
+  "name": "logistics.outside.lineRouteIndex",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.outside.lineRouteIndex",
   "description": "查询Top200的责任线路",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -187,6 +189,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2925",
   "updatedAt": "2023-02-03",
-  "_file_stem": "logistics-provider-logistics-outside-lineRouteIndex",
-  "cnName": "查询Top200的责任线路"
+  "_file_stem": "logistics-provider-logistics-outside-lineRouteIndex"
 }

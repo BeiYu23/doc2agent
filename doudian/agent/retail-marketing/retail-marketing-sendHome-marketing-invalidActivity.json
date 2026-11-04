@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.sendHome.marketing.invalidActivity",
+  "cnName": "异步将营销活动置为失效，任务结果将通过spi通知",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-invalidActivity",
+  "name": "sendHome.marketing.invalidActivity",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "sendHome.marketing.invalidActivity",
   "description": "异步将营销活动置为失效，任务结果将通过spi通知",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6808",
   "updatedAt": "2024-08-27",
-  "_file_stem": "retail-marketing-sendHome-marketing-invalidActivity",
-  "cnName": "异步将营销活动置为失效，任务结果将通过spi通知"
+  "_file_stem": "retail-marketing-sendHome-marketing-invalidActivity"
 }

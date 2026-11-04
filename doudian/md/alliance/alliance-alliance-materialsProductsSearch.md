@@ -1,11 +1,12 @@
-# alliance.materialsProductsSearch
+# 检索精选联盟商品
 
-> 检索精选联盟商品
+> alliance.materialsProductsSearch — 检索精选联盟商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.alliance.materialsProductsSearch` |
 | 中文名 | 检索精选联盟商品 |
+| 文档地址 | `/docs/doudian/alliance/alliance-alliance-materialsProductsSearch` |
+| 接口 ID | `doudian.alliance.alliance.materialsProductsSearch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/materialsProductsSearch` |

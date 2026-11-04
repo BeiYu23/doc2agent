@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.partialEdit",
+  "cnName": "部分编辑商品信息",
+  "docUrl": "/docs/doudian/product/product-product-partialEdit",
+  "name": "product.partialEdit",
   "platform": "doudian",
   "group": "product",
-  "name": "product.partialEdit",
   "description": "部分编辑商品信息",
   "method": "GET",
   "path": "/product/partialEdit",
@@ -632,6 +634,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2694",
   "updatedAt": "2026-07-14",
-  "_file_stem": "product-product-partialEdit",
-  "cnName": "部分编辑商品信息"
+  "_file_stem": "product-product-partialEdit"
 }

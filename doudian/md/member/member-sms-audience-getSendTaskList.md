@@ -1,11 +1,12 @@
-# sms.audience.getSendTaskList
+# 按人群包发送短信任务列表
 
-> 按人群包发送短信任务列表
+> sms.audience.getSendTaskList — 按人群包发送短信任务列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.sms.audience.getSendTaskList` |
 | 中文名 | 按人群包发送短信任务列表 |
+| 文档地址 | `/docs/doudian/member/member-sms-audience-getSendTaskList` |
+| 接口 ID | `doudian.member.sms.audience.getSendTaskList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/getSendTaskList` |

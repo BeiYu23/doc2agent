@@ -1,11 +1,12 @@
-# shop.getStoreList
+# 门店列表分页查询
 
-> 门店列表分页查询
+> shop.getStoreList — 门店列表分页查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.getStoreList` |
 | 中文名 | 门店列表分页查询 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-getStoreList` |
+| 接口 ID | `doudian.shop.shop.getStoreList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getStoreList` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.supplyChain.redInvoice.uploadInvoice",
+  "cnName": "上传红票",
+  "docUrl": "/docs/doudian/bill/bill-supplyChain-redInvoice-uploadInvoice",
+  "name": "supplyChain.redInvoice.uploadInvoice",
   "platform": "doudian",
   "group": "bill",
-  "name": "supplyChain.redInvoice.uploadInvoice",
   "description": "上传红票",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -233,6 +235,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/8000",
   "updatedAt": "2026-04-23",
-  "_file_stem": "bill-supplyChain-redInvoice-uploadInvoice",
-  "cnName": "上传红票"
+  "_file_stem": "bill-supplyChain-redInvoice-uploadInvoice"
 }

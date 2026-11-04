@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.addOrderRemark",
+  "cnName": "为商家提供订单备注",
+  "docUrl": "/docs/doudian/order/order-order-addOrderRemark",
+  "name": "order.addOrderRemark",
   "platform": "doudian",
   "group": "order",
-  "name": "order.addOrderRemark",
   "description": "为商家提供订单备注接口",
   "method": "GET",
   "path": "/order/addOrderRemark",
@@ -127,6 +129,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/568",
   "updatedAt": "2024-08-15",
-  "_file_stem": "order-order-addOrderRemark",
-  "cnName": "为商家提供订单备注"
+  "_file_stem": "order-order-addOrderRemark"
 }

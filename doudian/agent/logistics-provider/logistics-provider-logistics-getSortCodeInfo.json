@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.getSortCodeInfo",
+  "cnName": "获取面单段码信息",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-getSortCodeInfo",
+  "name": "logistics.getSortCodeInfo",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.getSortCodeInfo",
   "description": "获取面单段码信息",
   "method": "GET",
   "path": "/logistics/getSortCodeInfo",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6823",
   "updatedAt": "2026-06-10",
-  "_file_stem": "logistics-provider-logistics-getSortCodeInfo",
-  "cnName": "获取面单段码信息"
+  "_file_stem": "logistics-provider-logistics-getSortCodeInfo"
 }

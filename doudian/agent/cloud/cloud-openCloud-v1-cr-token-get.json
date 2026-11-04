@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.cr.token.get",
+  "cnName": "获取上传镜像仓库的临时token",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-cr-token-get",
+  "name": "openCloud.v1.cr.token.get",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.cr.token.get",
   "description": "获取上传镜像仓库的临时token",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -66,6 +68,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4153",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-cr-token-get",
-  "cnName": "获取上传镜像仓库的临时token"
+  "_file_stem": "cloud-openCloud-v1-cr-token-get"
 }

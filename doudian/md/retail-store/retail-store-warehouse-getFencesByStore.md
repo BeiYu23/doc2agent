@@ -1,11 +1,12 @@
-# warehouse.getFencesByStore
+# 根据门店查询围栏
 
-> 根据门店查询围栏
+> warehouse.getFencesByStore — 根据门店查询围栏
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.warehouse.getFencesByStore` |
 | 中文名 | 根据门店查询围栏 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-warehouse-getFencesByStore` |
+| 接口 ID | `doudian.retail-store.warehouse.getFencesByStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/getFencesByStore` |

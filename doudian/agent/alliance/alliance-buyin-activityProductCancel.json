@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.activityProductCancel",
+  "cnName": "一级团长取消活动提报申请",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-activityProductCancel",
+  "name": "buyin.activityProductCancel",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.activityProductCancel",
   "description": "一级团长取消活动提报申请接口",
   "method": "GET",
   "path": "/buyin/activityProductCancel",
@@ -93,6 +95,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1927",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-activityProductCancel",
-  "cnName": "一级团长取消活动提报申请"
+  "_file_stem": "alliance-buyin-activityProductCancel"
 }

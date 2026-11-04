@@ -1,11 +1,12 @@
-# order.SkuBerfTowTestLast
+# 回归测试
 
-> 回归测试
+> order.SkuBerfTowTestLast — 回归测试
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.SkuBerfTowTestLast` |
 | 中文名 | 回归测试 |
+| 文档地址 | `/docs/doudian/order/order-order-SkuBerfTowTestLast` |
+| 接口 ID | `doudian.order.order.SkuBerfTowTestLast` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/SkuBerfTowTestLast` |

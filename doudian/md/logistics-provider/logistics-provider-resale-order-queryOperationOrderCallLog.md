@@ -1,11 +1,12 @@
-# resale.order.queryOperationOrderCallLog
+# 以旧换新隐私号接通信息查询
 
-> 以旧换新隐私号接通信息查询
+> resale.order.queryOperationOrderCallLog — 以旧换新隐私号接通信息查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.resale.order.queryOperationOrderCallLog` |
 | 中文名 | 以旧换新隐私号接通信息查询 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-resale-order-queryOperationOrderCallLog` |
+| 接口 ID | `doudian.logistics-provider.resale.order.queryOperationOrderCallLog` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/queryOperationOrderCallLog` |

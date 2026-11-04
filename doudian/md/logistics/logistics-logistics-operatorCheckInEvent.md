@@ -1,11 +1,12 @@
-# logistics.operatorCheckInEvent
+# 师傅上门签到事件
 
-> 师傅上门签到事件
+> logistics.operatorCheckInEvent — 师傅上门签到事件
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.operatorCheckInEvent` |
 | 中文名 | 师傅上门签到事件 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-operatorCheckInEvent` |
+| 接口 ID | `doudian.logistics.logistics.operatorCheckInEvent` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/operatorCheckInEvent` |

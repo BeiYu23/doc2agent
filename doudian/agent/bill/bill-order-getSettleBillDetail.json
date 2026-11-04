@@ -1,8 +1,10 @@
 {
   "id": "doudian.bill.order.getSettleBillDetail",
+  "cnName": "查询账单明细",
+  "docUrl": "/docs/doudian/bill/bill-order-getSettleBillDetail",
+  "name": "order.getSettleBillDetail",
   "platform": "doudian",
   "group": "bill",
-  "name": "order.getSettleBillDetail",
   "description": "查询账单明细",
   "method": "GET",
   "path": "/order/getSettleBillDetail",
@@ -218,6 +220,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1192",
   "updatedAt": "2022-09-28",
-  "_file_stem": "bill-order-getSettleBillDetail",
-  "cnName": "查询账单明细"
+  "_file_stem": "bill-order-getSettleBillDetail"
 }

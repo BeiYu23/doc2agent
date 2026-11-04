@@ -1,11 +1,12 @@
-# shopVideo.getShopAccountInfo
+# 查询店铺下所有账号信息
 
-> 查询店铺下所有账号信息
+> shopVideo.getShopAccountInfo — 查询店铺下所有账号信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.getShopAccountInfo` |
 | 中文名 | 查询店铺下所有账号信息 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-getShopAccountInfo` |
+| 接口 ID | `doudian.video.shopVideo.getShopAccountInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/getShopAccountInfo` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.sku.stockNum",
+  "cnName": "查询sku库存",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-sku-stockNum",
+  "name": "supplyChain.sku.stockNum",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.sku.stockNum",
   "description": "查询sku库存",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2554",
   "updatedAt": "2025-02-17",
-  "_file_stem": "supply-chain-supplyChain-sku-stockNum",
-  "cnName": "查询sku库存"
+  "_file_stem": "supply-chain-supplyChain-sku-stockNum"
 }

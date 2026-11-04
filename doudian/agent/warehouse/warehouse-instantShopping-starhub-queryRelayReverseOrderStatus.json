@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.instantShopping.starhub.queryRelayReverseOrderStatus",
+  "cnName": "逆向接力单状态查询",
+  "docUrl": "/docs/doudian/warehouse/warehouse-instantShopping-starhub-queryRelayReverseOrderStatus",
+  "name": "instantShopping.starhub.queryRelayReverseOrderStatus",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "instantShopping.starhub.queryRelayReverseOrderStatus",
   "description": "逆向接力单状态查询",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6544",
   "updatedAt": "2024-05-27",
-  "_file_stem": "warehouse-instantShopping-starhub-queryRelayReverseOrderStatus",
-  "cnName": "逆向接力单状态查询"
+  "_file_stem": "warehouse-instantShopping-starhub-queryRelayReverseOrderStatus"
 }

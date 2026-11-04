@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.doukeCommandParseAndShare",
+  "cnName": "口令解析&转链",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-doukeCommandParseAndShare",
+  "name": "buyin.doukeCommandParseAndShare",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.doukeCommandParseAndShare",
   "description": "口令解析&转链",
   "method": "GET",
   "path": "/buyin/doukeCommandParseAndShare",
@@ -346,6 +348,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/4010",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukeCommandParseAndShare",
-  "cnName": "口令解析&转链"
+  "_file_stem": "alliance-buyin-doukeCommandParseAndShare"
 }

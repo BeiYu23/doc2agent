@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.listInspectionReports",
+  "cnName": "验机报告列表页查询",
+  "docUrl": "/docs/doudian/industry/industry-inspection-listInspectionReports",
+  "name": "inspection.listInspectionReports",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.listInspectionReports",
   "description": "验机报告列表页查询",
   "method": "GET",
   "path": "/inspection/listInspectionReports",
@@ -254,6 +256,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8257",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-listInspectionReports",
-  "cnName": "验机报告列表页查询"
+  "_file_stem": "industry-inspection-listInspectionReports"
 }

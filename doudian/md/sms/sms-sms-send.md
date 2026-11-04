@@ -1,11 +1,12 @@
-# sms.send
+# 短信发送
 
-> 短信发送
+> sms.send — 短信发送
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.send` |
 | 中文名 | 短信发送 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-send` |
+| 接口 ID | `doudian.sms.sms.send` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/send` |

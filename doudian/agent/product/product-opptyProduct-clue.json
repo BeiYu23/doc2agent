@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.opptyProduct.clue",
+  "cnName": "机会品线索触达",
+  "docUrl": "/docs/doudian/product/product-opptyProduct-clue",
+  "name": "opptyProduct.clue",
   "platform": "doudian",
   "group": "product",
-  "name": "opptyProduct.clue",
   "description": "机会品线索触达",
   "method": "GET",
   "path": "/opptyProduct/clue",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1828",
   "updatedAt": "2021-08-03",
-  "_file_stem": "product-opptyProduct-clue",
-  "cnName": "机会品线索触达"
+  "_file_stem": "product-opptyProduct-clue"
 }

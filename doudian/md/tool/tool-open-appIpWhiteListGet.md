@@ -1,11 +1,12 @@
-# open.appIpWhiteListGet
+# 应用ip白名单查询
 
-> 应用ip白名单查询
+> open.appIpWhiteListGet — 应用ip白名单查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.appIpWhiteListGet` |
 | 中文名 | 应用ip白名单查询 |
+| 文档地址 | `/docs/doudian/tool/tool-open-appIpWhiteListGet` |
+| 接口 ID | `doudian.tool.open.appIpWhiteListGet` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/appIpWhiteListGet` |

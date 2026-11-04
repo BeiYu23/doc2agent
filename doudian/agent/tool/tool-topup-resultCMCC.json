@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.topup.resultCMCC",
+  "cnName": "中国移动话费充值结果回传",
+  "docUrl": "/docs/doudian/tool/tool-topup-resultCMCC",
+  "name": "topup.resultCMCC",
   "platform": "doudian",
   "group": "tool",
-  "name": "topup.resultCMCC",
   "description": "中国移动话费充值结果回传",
   "method": "GET",
   "path": "/topup/resultCMCC",
@@ -167,6 +169,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7620",
   "updatedAt": "2025-07-22",
-  "_file_stem": "tool-topup-resultCMCC",
-  "cnName": "中国移动话费充值结果回传"
+  "_file_stem": "tool-topup-resultCMCC"
 }

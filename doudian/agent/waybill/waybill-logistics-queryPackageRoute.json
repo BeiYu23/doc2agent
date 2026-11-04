@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.queryPackageRoute",
+  "cnName": "isv轨迹查询",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-queryPackageRoute",
+  "name": "logistics.queryPackageRoute",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.queryPackageRoute",
   "description": "isv轨迹查询",
   "method": "GET",
   "path": "/logistics/queryPackageRoute",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1632",
   "updatedAt": "2022-01-20",
-  "_file_stem": "waybill-logistics-queryPackageRoute",
-  "cnName": "isv轨迹查询"
+  "_file_stem": "waybill-logistics-queryPackageRoute"
 }

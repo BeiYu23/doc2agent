@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.instantShopping.starhub.updateReturnOutboundOrder",
+  "cnName": "退供出库场景，服务商通知抖音退仓出库单状态",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-instantShopping-starhub-updateReturnOutboundOrder",
+  "name": "instantShopping.starhub.updateReturnOutboundOrder",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "instantShopping.starhub.updateReturnOutboundOrder",
   "description": "退供出库场景，服务商通知抖音退仓出库单状态",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -193,6 +195,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7023",
   "updatedAt": "2024-10-23",
-  "_file_stem": "logistics-provider-instantShopping-starhub-updateReturnOutboundOrder",
-  "cnName": "退供出库场景，服务商通知抖音退仓出库单状态"
+  "_file_stem": "logistics-provider-instantShopping-starhub-updateReturnOutboundOrder"
 }

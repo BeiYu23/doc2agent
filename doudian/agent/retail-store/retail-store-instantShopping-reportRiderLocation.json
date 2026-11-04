@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.reportRiderLocation",
+  "cnName": "用于自配送场景中",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-reportRiderLocation",
+  "name": "instantShopping.reportRiderLocation",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.reportRiderLocation",
   "description": "用于自配送场景中，商家向抖音回传骑手位置信息，抖音会向用户展示骑手位置",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -198,6 +200,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/4775",
   "updatedAt": "2024-04-09",
-  "_file_stem": "retail-store-instantShopping-reportRiderLocation",
-  "cnName": "用于自配送场景中"
+  "_file_stem": "retail-store-instantShopping-reportRiderLocation"
 }

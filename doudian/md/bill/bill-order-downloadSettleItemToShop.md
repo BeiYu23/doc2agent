@@ -1,12 +1,13 @@
-# order.downloadSettleItemToShop
+# 通过url方式
 
-> 1、通过url方式，下载文件生成结算账单下单接口，调用接口生成个download_id ，通过返回的download_id调用【/order/downloadToShop】查询下载url文件链接。如果当天账单数据未完全生成会拦截下载请求。
+> order.downloadSettleItemToShop — 1、通过url方式，下载文件生成结算账单下单接口，调用接口生成个download_id ，通过返回的download_id调用【/order/downloadToShop】查询下载url文件链接。如果当天账单数据未完全生成会拦截下载请求。
 2、如需非url
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.downloadSettleItemToShop` |
 | 中文名 | 通过url方式 |
+| 文档地址 | `/docs/doudian/bill/bill-order-downloadSettleItemToShop` |
+| 接口 ID | `doudian.bill.order.downloadSettleItemToShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/downloadSettleItemToShop` |

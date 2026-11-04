@@ -1,11 +1,12 @@
-# logistics.overSize.queryPaymentStatus
+# 大件逆向支付信息查询
 
-> 大件逆向支付信息查询
+> logistics.overSize.queryPaymentStatus — 大件逆向支付信息查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.pickup.logistics.overSize.queryPaymentStatus` |
 | 中文名 | 大件逆向支付信息查询 |
+| 文档地址 | `/docs/doudian/pickup/pickup-logistics-overSize-queryPaymentStatus` |
+| 接口 ID | `doudian.pickup.logistics.overSize.queryPaymentStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

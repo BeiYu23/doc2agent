@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.open.SaasQueryVideoAnalysisTask",
+  "cnName": "查询视频分析任务 (SaaS",
+  "docUrl": "/docs/doudian/video/video-open-SaasQueryVideoAnalysisTask",
+  "name": "open.SaasQueryVideoAnalysisTask",
   "platform": "doudian",
   "group": "video",
-  "name": "open.SaasQueryVideoAnalysisTask",
   "description": "查询视频分析任务 (SaaS)",
   "method": "GET",
   "path": "/open/SaasQueryVideoAnalysisTask",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8512",
   "updatedAt": "2026-08-18",
-  "_file_stem": "video-open-SaasQueryVideoAnalysisTask",
-  "cnName": "查询视频分析任务 (SaaS"
+  "_file_stem": "video-open-SaasQueryVideoAnalysisTask"
 }

@@ -1,11 +1,12 @@
-# product.getPerformance
+# 查询商品指标信息
 
-> 查询商品指标信息
+> product.getPerformance — 查询商品指标信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.product.getPerformance` |
 | 中文名 | 查询商品指标信息 |
+| 文档地址 | `/docs/doudian/video/video-product-getPerformance` |
+| 接口 ID | `doudian.video.product.getPerformance` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getPerformance` |

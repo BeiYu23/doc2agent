@@ -1,11 +1,12 @@
-# order.getSettleBillDetailV2
+# 2024年7月1日停止服务
 
-> 2024年7月1日停止服务。已结算的订单才会有数据，数据T+1生成，建议第二天12点之后来查询。如因任务积压导致延迟的情况，建议重试。从/order/settle接口迁移至此接口，可参考此文档:https://bytedance.feishu.cn/doc
+> order.getSettleBillDetailV2 — 2024年7月1日停止服务。已结算的订单才会有数据，数据T+1生成，建议第二天12点之后来查询。如因任务积压导致延迟的情况，建议重试。从/order/settle接口迁移至此接口，可参考此文档:https://bytedance.feishu.cn/doc
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.getSettleBillDetailV2` |
 | 中文名 | 2024年7月1日停止服务 |
+| 文档地址 | `/docs/doudian/bill/bill-order-getSettleBillDetailV2` |
+| 接口 ID | `doudian.bill.order.getSettleBillDetailV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getSettleBillDetailV2` |

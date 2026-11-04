@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.previewChannelProduct",
+  "cnName": "预览渠道品信息",
+  "docUrl": "/docs/doudian/product/product-product-previewChannelProduct",
+  "name": "product.previewChannelProduct",
   "platform": "doudian",
   "group": "product",
-  "name": "product.previewChannelProduct",
   "description": "预览渠道品信息",
   "method": "GET",
   "path": "/product/previewChannelProduct",
@@ -273,6 +275,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4467",
   "updatedAt": "2025-09-08",
-  "_file_stem": "product-product-previewChannelProduct",
-  "cnName": "预览渠道品信息"
+  "_file_stem": "product-product-previewChannelProduct"
 }

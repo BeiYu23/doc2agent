@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.trace.addShop",
+  "cnName": "订单链路监控添加用户",
+  "docUrl": "/docs/doudian/order/order-trace-addShop",
+  "name": "trace.addShop",
   "platform": "doudian",
   "group": "order",
-  "name": "trace.addShop",
   "description": "订单链路监控添加用户",
   "method": "GET",
   "path": "/trace/addShop",
@@ -86,6 +88,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2794",
   "updatedAt": "2022-12-13",
-  "_file_stem": "order-trace-addShop",
-  "cnName": "订单链路监控添加用户"
+  "_file_stem": "order-trace-addShop"
 }

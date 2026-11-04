@@ -1,11 +1,12 @@
-# sms.template.apply.list
+# 查询短信模板申请单
 
-> 查询短信模板申请单
+> sms.template.apply.list — 查询短信模板申请单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.template.apply.list` |
 | 中文名 | 查询短信模板申请单 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-template-apply-list` |
+| 接口 ID | `doudian.sms.sms.template.apply.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/template/apply/list` |

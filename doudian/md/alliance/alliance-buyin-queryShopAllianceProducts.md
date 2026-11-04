@@ -1,11 +1,12 @@
-# buyin.queryShopAllianceProducts
+# 联盟商家-查询店铺联盟推广
 
-> 联盟商家-查询店铺联盟推广
+> buyin.queryShopAllianceProducts — 联盟商家-查询店铺联盟推广
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.queryShopAllianceProducts` |
 | 中文名 | 联盟商家-查询店铺联盟推广 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-queryShopAllianceProducts` |
+| 接口 ID | `doudian.alliance.buyin.queryShopAllianceProducts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/queryShopAllianceProducts` |

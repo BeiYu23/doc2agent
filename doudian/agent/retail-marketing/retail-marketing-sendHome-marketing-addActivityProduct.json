@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.sendHome.marketing.addActivityProduct",
+  "cnName": "为创建好的营销活动门店绑定商品",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-addActivityProduct",
+  "name": "sendHome.marketing.addActivityProduct",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "sendHome.marketing.addActivityProduct",
   "description": "为创建好的营销活动门店绑定商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -150,6 +152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6807",
   "updatedAt": "2024-08-28",
-  "_file_stem": "retail-marketing-sendHome-marketing-addActivityProduct",
-  "cnName": "为创建好的营销活动门店绑定商品"
+  "_file_stem": "retail-marketing-sendHome-marketing-addActivityProduct"
 }

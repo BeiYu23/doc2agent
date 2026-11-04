@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.fuwu.refundSuccessForVolc",
+  "cnName": "退款成功回调",
+  "docUrl": "/docs/doudian/tool/tool-fuwu-refundSuccessForVolc",
+  "name": "fuwu.refundSuccessForVolc",
   "platform": "doudian",
   "group": "tool",
-  "name": "fuwu.refundSuccessForVolc",
   "description": "退款成功回调",
   "method": "GET",
   "path": "/fuwu/refundSuccessForVolc",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/8381",
   "updatedAt": "2026-08-17",
-  "_file_stem": "tool-fuwu-refundSuccessForVolc",
-  "cnName": "退款成功回调"
+  "_file_stem": "tool-fuwu-refundSuccessForVolc"
 }

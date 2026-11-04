@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.ShopActivityList",
+  "cnName": "接口用于商家获取可参与的团长活动",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-ShopActivityList",
+  "name": "buyin.ShopActivityList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.ShopActivityList",
   "description": "接口用于商家获取可参与的团长活动，支持报名状态筛选，包括已提报和未提报两种状态",
   "method": "GET",
   "path": "/buyin/ShopActivityList",
@@ -242,6 +244,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1671",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-ShopActivityList",
-  "cnName": "接口用于商家获取可参与的团长活动"
+  "_file_stem": "alliance-buyin-ShopActivityList"
 }

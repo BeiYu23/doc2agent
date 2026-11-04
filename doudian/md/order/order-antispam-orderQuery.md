@@ -1,11 +1,12 @@
-# antispam.orderQuery
+# 用户在ISV查看订单
 
-> 用户在ISV查看订单、下载订单时, 上报事件到风控系统
+> antispam.orderQuery — 用户在ISV查看订单、下载订单时, 上报事件到风控系统
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.antispam.orderQuery` |
 | 中文名 | 用户在ISV查看订单 |
+| 文档地址 | `/docs/doudian/order/order-antispam-orderQuery` |
+| 接口 ID | `doudian.order.antispam.orderQuery` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/antispam/orderQuery` |

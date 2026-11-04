@@ -1,8 +1,10 @@
 {
   "id": "doudian.decoration.shop.batchCreateCategory",
+  "cnName": "批量创建类目",
+  "docUrl": "/docs/doudian/decoration/decoration-shop-batchCreateCategory",
+  "name": "shop.batchCreateCategory",
   "platform": "doudian",
   "group": "decoration",
-  "name": "shop.batchCreateCategory",
   "description": "批量创建类目接口",
   "method": "GET",
   "path": "/shop/batchCreateCategory",
@@ -171,6 +173,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/6439",
   "updatedAt": "2024-04-18",
-  "_file_stem": "decoration-shop-batchCreateCategory",
-  "cnName": "批量创建类目"
+  "_file_stem": "decoration-shop-batchCreateCategory"
 }

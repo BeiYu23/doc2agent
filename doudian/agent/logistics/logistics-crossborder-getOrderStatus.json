@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.crossborder.getOrderStatus",
+  "cnName": "跨境查询订单状态",
+  "docUrl": "/docs/doudian/logistics/logistics-crossborder-getOrderStatus",
+  "name": "crossborder.getOrderStatus",
   "platform": "doudian",
   "group": "logistics",
-  "name": "crossborder.getOrderStatus",
   "description": "跨境查询订单状态",
   "method": "GET",
   "path": "/crossborder/getOrderStatus",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/522",
   "updatedAt": "2022-12-22",
-  "_file_stem": "logistics-crossborder-getOrderStatus",
-  "cnName": "跨境查询订单状态"
+  "_file_stem": "logistics-crossborder-getOrderStatus"
 }

@@ -1,11 +1,12 @@
-# instantShopping.product.getSchema
+# 商品发布schema-渲染
 
-> 商品发布schema-渲染接口
+> instantShopping.product.getSchema — 商品发布schema-渲染接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-product.instantShopping.product.getSchema` |
 | 中文名 | 商品发布schema-渲染 |
+| 文档地址 | `/docs/doudian/retail-product/retail-product-instantShopping-product-getSchema` |
+| 接口 ID | `doudian.retail-product.instantShopping.product.getSchema` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

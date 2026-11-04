@@ -1,8 +1,10 @@
 {
   "id": "doudian.store.pickup.updateStore",
+  "cnName": "更新门店",
+  "docUrl": "/docs/doudian/store/store-pickup-updateStore",
+  "name": "pickup.updateStore",
   "platform": "doudian",
   "group": "store",
-  "name": "pickup.updateStore",
   "description": "更新门店",
   "method": "GET",
   "path": "/pickup/updateStore",
@@ -264,6 +266,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7236",
   "updatedAt": "2026-06-24",
-  "_file_stem": "store-pickup-updateStore",
-  "cnName": "更新门店"
+  "_file_stem": "store-pickup-updateStore"
 }

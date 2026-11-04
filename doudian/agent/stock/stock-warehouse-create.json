@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.create",
+  "cnName": "创建单个区域仓",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-create",
+  "name": "warehouse.create",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.create",
   "description": "创建单个区域仓",
   "method": "GET",
   "path": "/warehouse/create",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1855",
   "updatedAt": "2020-11-29",
-  "_file_stem": "stock-warehouse-create",
-  "cnName": "创建单个区域仓"
+  "_file_stem": "stock-warehouse-create"
 }

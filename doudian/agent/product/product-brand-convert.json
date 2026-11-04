@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.brand.convert",
+  "cnName": "兼容老品牌id转为新品牌id",
+  "docUrl": "/docs/doudian/product/product-brand-convert",
+  "name": "brand.convert",
   "platform": "doudian",
   "group": "product",
-  "name": "brand.convert",
   "description": "兼容老品牌id转为新品牌id",
   "method": "GET",
   "path": "/brand/convert",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1500",
   "updatedAt": "2021-11-26",
-  "_file_stem": "product-brand-convert",
-  "cnName": "兼容老品牌id转为新品牌id"
+  "_file_stem": "product-brand-convert"
 }

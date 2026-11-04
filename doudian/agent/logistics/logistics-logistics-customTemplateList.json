@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.logistics.customTemplateList",
+  "cnName": "查询商家自定义区域数据",
+  "docUrl": "/docs/doudian/logistics/logistics-logistics-customTemplateList",
+  "name": "logistics.customTemplateList",
   "platform": "doudian",
   "group": "logistics",
-  "name": "logistics.customTemplateList",
   "description": "查询商家自定义区域数据",
   "method": "GET",
   "path": "/logistics/customTemplateList",
@@ -80,6 +82,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/549",
   "updatedAt": "2021-06-23",
-  "_file_stem": "logistics-logistics-customTemplateList",
-  "cnName": "查询商家自定义区域数据"
+  "_file_stem": "logistics-logistics-customTemplateList"
 }

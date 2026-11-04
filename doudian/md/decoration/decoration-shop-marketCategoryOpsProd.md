@@ -1,11 +1,12 @@
-# shop.marketCategoryOpsProd
+# 基于商品维度更新分类页绑定关系
 
-> 基于商品维度更新分类页绑定关系
+> shop.marketCategoryOpsProd — 基于商品维度更新分类页绑定关系
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.marketCategoryOpsProd` |
 | 中文名 | 基于商品维度更新分类页绑定关系 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-marketCategoryOpsProd` |
+| 接口 ID | `doudian.decoration.shop.marketCategoryOpsProd` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/marketCategoryOpsProd` |

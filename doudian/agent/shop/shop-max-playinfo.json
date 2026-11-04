@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.max.playinfo",
+  "cnName": "批量查询vid",
+  "docUrl": "/docs/doudian/shop/shop-max-playinfo",
+  "name": "max.playinfo",
   "platform": "doudian",
   "group": "shop",
-  "name": "max.playinfo",
   "description": "批量查询vid",
   "method": "GET",
   "path": "/max/playinfo",
@@ -106,6 +108,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2832",
   "updatedAt": "2025-09-18",
-  "_file_stem": "shop-max-playinfo",
-  "cnName": "批量查询vid"
+  "_file_stem": "shop-max-playinfo"
 }

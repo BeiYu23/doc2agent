@@ -1,12 +1,13 @@
-# order.downloadToShop
+# 通过【/order/downloadSettl…
 
-> 1、通过【/order/downloadSettleItemToShop】接口返回的download_id。调用接口生成文件下载的URL链接时效为1小时，失效后需重新调此接口获取新的链接。
+> order.downloadToShop — 1、通过【/order/downloadSettleItemToShop】接口返回的download_id。调用接口生成文件下载的URL链接时效为1小时，失效后需重新调此接口获取新的链接。
 2、如需非url下载方式请调用【/order/getSettleB
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.downloadToShop` |
 | 中文名 | 通过【/order/downloadSettl… |
+| 文档地址 | `/docs/doudian/bill/bill-order-downloadToShop` |
+| 接口 ID | `doudian.bill.order.downloadToShop` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/downloadToShop` |

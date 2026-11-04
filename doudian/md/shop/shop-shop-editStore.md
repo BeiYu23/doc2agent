@@ -1,11 +1,12 @@
-# shop.editStore
+# 编辑门店
 
-> 编辑门店
+> shop.editStore — 编辑门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.editStore` |
 | 中文名 | 编辑门店 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-editStore` |
+| 接口 ID | `doudian.shop.shop.editStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/editStore` |

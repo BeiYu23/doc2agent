@@ -1,11 +1,12 @@
-# logistics.netsiteApplyCallback
+# 电子面单服务订购审核回调函数
 
-> 电子面单服务订购审核回调函数；
+> logistics.netsiteApplyCallback — 电子面单服务订购审核回调函数；
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.netsiteApplyCallback` |
 | 中文名 | 电子面单服务订购审核回调函数 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-netsiteApplyCallback` |
+| 接口 ID | `doudian.logistics-provider.logistics.netsiteApplyCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/netsiteApplyCallback` |

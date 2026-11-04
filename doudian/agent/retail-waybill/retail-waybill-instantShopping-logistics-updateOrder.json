@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.logistics.updateOrder",
+  "cnName": "更新收件人信息",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-updateOrder",
+  "name": "instantShopping.logistics.updateOrder",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.logistics.updateOrder",
   "description": "更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -648,6 +650,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7244",
   "updatedAt": "2026-08-13",
-  "_file_stem": "retail-waybill-instantShopping-logistics-updateOrder",
-  "cnName": "更新收件人信息"
+  "_file_stem": "retail-waybill-instantShopping-logistics-updateOrder"
 }

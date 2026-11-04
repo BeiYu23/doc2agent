@@ -1,6 +1,6 @@
-# afterSale.rejectReasonCodeList
+# 不传aftersale_id查询抖店支持的全量…
 
-> 使用场景：
+> afterSale.rejectReasonCodeList — 使用场景：
 1、不传aftersale_id查询抖店支持的全量拒绝原因列表
 2、传aftersale_id，商家查询该笔售后单可选的拒绝原因列表，注意：仅支持已发货的售后查询，备货中未发货订单返回为空。
 3、如返回为空,有如下场景：
@@ -8,8 +8,9 @@
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.rejectReasonCodeList` |
 | 中文名 | 不传aftersale_id查询抖店支持的全量… |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-rejectReasonCodeList` |
+| 接口 ID | `doudian.refund.afterSale.rejectReasonCodeList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/rejectReasonCodeList` |

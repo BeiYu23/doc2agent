@@ -1,11 +1,12 @@
-# bigCustomer.setCountingRules
+# 设置统计销量规则
 
-> 设置统计销量规则
+> bigCustomer.setCountingRules — 设置统计销量规则
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.bigCustomer.setCountingRules` |
 | 中文名 | 设置统计销量规则 |
+| 文档地址 | `/docs/doudian/order/order-bigCustomer-setCountingRules` |
+| 接口 ID | `doudian.order.bigCustomer.setCountingRules` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/bigCustomer/setCountingRules` |

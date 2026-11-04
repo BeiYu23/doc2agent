@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.supplyChain.batchGetCargoDetail",
+  "cnName": "批量获取货品",
+  "docUrl": "/docs/doudian/cross-border/cross-border-supplyChain-batchGetCargoDetail",
+  "name": "supplyChain.batchGetCargoDetail",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "supplyChain.batchGetCargoDetail",
   "description": "批量获取货品详情",
   "method": "GET",
   "path": "/supplyChain/batchGetCargoDetail",
@@ -174,6 +176,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6322",
   "updatedAt": "2024-03-26",
-  "_file_stem": "cross-border-supplyChain-batchGetCargoDetail",
-  "cnName": "批量获取货品"
+  "_file_stem": "cross-border-supplyChain-batchGetCargoDetail"
 }

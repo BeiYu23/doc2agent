@@ -1,11 +1,12 @@
-# product.getCargo
+# 查询货品
 
-> 查询货品
+> product.getCargo — 查询货品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.product.getCargo` |
 | 中文名 | 查询货品 |
+| 文档地址 | `/docs/doudian/stock/stock-product-getCargo` |
+| 接口 ID | `doudian.stock.product.getCargo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getCargo` |

@@ -1,11 +1,12 @@
-# material.queryMaterialDetail
+# 根据素材id查素材
 
-> 根据素材id查素材详情
+> material.queryMaterialDetail — 根据素材id查素材详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.queryMaterialDetail` |
 | 中文名 | 根据素材id查素材 |
+| 文档地址 | `/docs/doudian/material/material-material-queryMaterialDetail` |
+| 接口 ID | `doudian.material.material.queryMaterialDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/queryMaterialDetail` |

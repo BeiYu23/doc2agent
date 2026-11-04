@@ -1,11 +1,12 @@
-# recycle.changePrice
+# 回收商在用户确认前调整报价
 
-> 回收商在用户确认前调整报价接口
+> recycle.changePrice — 回收商在用户确认前调整报价接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.recycle.changePrice` |
 | 中文名 | 回收商在用户确认前调整报价 |
+| 文档地址 | `/docs/doudian/recycle/recycle-recycle-changePrice` |
+| 接口 ID | `doudian.recycle.recycle.changePrice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/changePrice` |

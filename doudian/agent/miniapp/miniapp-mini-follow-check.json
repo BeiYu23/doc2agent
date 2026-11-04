@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.follow.check",
+  "cnName": "检查小程序是否允许关注店铺",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-follow-check",
+  "name": "mini.follow.check",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.follow.check",
   "description": "检查小程序是否允许关注店铺",
   "method": "GET",
   "path": "/mini/follow/check",
@@ -131,6 +133,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/5083",
   "updatedAt": "2023-11-06",
-  "_file_stem": "miniapp-mini-follow-check",
-  "cnName": "检查小程序是否允许关注店铺"
+  "_file_stem": "miniapp-mini-follow-check"
 }

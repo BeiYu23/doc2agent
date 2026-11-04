@@ -1,11 +1,12 @@
-# second.doEcomSearchForVolcengineAgent
+# 电商搜索for 火山联网引擎
 
-> 电商搜索for 火山联网引擎
+> second.doEcomSearchForVolcengineAgent — 电商搜索for 火山联网引擎
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.permission.second.doEcomSearchForVolcengineAgent` |
 | 中文名 | 电商搜索for 火山联网引擎 |
+| 文档地址 | `/docs/doudian/permission/permission-second-doEcomSearchForVolcengineAgent` |
+| 接口 ID | `doudian.permission.second.doEcomSearchForVolcengineAgent` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/doEcomSearchForVolcengineAgent` |

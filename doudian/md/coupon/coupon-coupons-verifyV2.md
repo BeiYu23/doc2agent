@@ -1,11 +1,12 @@
-# coupons.verifyV2
+# 卡券核销接口V2版本
 
-> 卡券核销接口V2版本
+> coupons.verifyV2 — 卡券核销接口V2版本
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.verifyV2` |
 | 中文名 | 卡券核销接口V2版本 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-verifyV2` |
+| 接口 ID | `doudian.coupon.coupons.verifyV2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/verifyV2` |

@@ -1,11 +1,12 @@
-# buyin.doukeCommandParseAndShare
+# 口令解析&转链
 
-> 口令解析&转链
+> buyin.doukeCommandParseAndShare — 口令解析&转链
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.doukeCommandParseAndShare` |
 | 中文名 | 口令解析&转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-doukeCommandParseAndShare` |
+| 接口 ID | `doudian.alliance.buyin.doukeCommandParseAndShare` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/doukeCommandParseAndShare` |

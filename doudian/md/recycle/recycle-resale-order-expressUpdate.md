@@ -1,11 +1,12 @@
-# resale.order.expressUpdate
+# 【邮寄回收】服务商修改派单信息
 
-> 【邮寄回收】服务商修改派单信息
+> resale.order.expressUpdate — 【邮寄回收】服务商修改派单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.expressUpdate` |
 | 中文名 | 【邮寄回收】服务商修改派单信息 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-expressUpdate` |
+| 接口 ID | `doudian.recycle.resale.order.expressUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/expressUpdate` |

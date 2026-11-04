@@ -1,11 +1,12 @@
-# iop.sellerDistribute
+# 【商家】分配代发订单
 
-> 【商家】分配代发订单
+> iop.sellerDistribute — 【商家】分配代发订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.sellerDistribute` |
 | 中文名 | 【商家】分配代发订单 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-sellerDistribute` |
+| 接口 ID | `doudian.dropshipping.iop.sellerDistribute` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/sellerDistribute` |

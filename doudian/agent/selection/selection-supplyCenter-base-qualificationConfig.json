@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.base.qualificationConfig",
+  "cnName": "查询类目下需要填写的商品资质",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-base-qualificationConfig",
+  "name": "supplyCenter.base.qualificationConfig",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.base.qualificationConfig",
   "description": "查询类目下需要填写的商品资质",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -81,6 +83,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5327",
   "updatedAt": "2023-10-25",
-  "_file_stem": "selection-supplyCenter-base-qualificationConfig",
-  "cnName": "查询类目下需要填写的商品资质"
+  "_file_stem": "selection-supplyCenter-base-qualificationConfig"
 }

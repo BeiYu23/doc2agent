@@ -1,11 +1,12 @@
-# inspection.inspectionTags
+# 需要给外部服务商提供一些订单/商品/商家等维度…
 
-> 需要给外部服务商提供一些订单/商品/商家等维度的标签数据查询，服务商会根据标签结果做对应的质检逻辑判定
+> inspection.inspectionTags — 需要给外部服务商提供一些订单/商品/商家等维度的标签数据查询，服务商会根据标签结果做对应的质检逻辑判定
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.inspection.inspectionTags` |
 | 中文名 | 需要给外部服务商提供一些订单/商品/商家等维度… |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-inspection-inspectionTags` |
+| 接口 ID | `doudian.logistics-provider.inspection.inspectionTags` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/inspectionTags` |

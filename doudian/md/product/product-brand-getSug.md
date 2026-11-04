@@ -1,11 +1,12 @@
-# brand.getSug
+# 通过前缀匹配召回品牌信息
 
-> 通过前缀匹配召回品牌信息
+> brand.getSug — 通过前缀匹配召回品牌信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.brand.getSug` |
 | 中文名 | 通过前缀匹配召回品牌信息 |
+| 文档地址 | `/docs/doudian/product/product-brand-getSug` |
+| 接口 ID | `doudian.product.brand.getSug` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/brand/getSug` |

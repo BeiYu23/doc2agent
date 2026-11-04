@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.power.callBackSessionResult",
+  "cnName": "会话创建响应",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-power-callBackSessionResult",
+  "name": "power.callBackSessionResult",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "power.callBackSessionResult",
   "description": "会话创建响应",
   "method": "GET",
   "path": "/power/callBackSessionResult",
@@ -149,6 +151,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2994",
   "updatedAt": "2023-02-27",
-  "_file_stem": "logistics-provider-power-callBackSessionResult",
-  "cnName": "会话创建响应"
+  "_file_stem": "logistics-provider-power-callBackSessionResult"
 }

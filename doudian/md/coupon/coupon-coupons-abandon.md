@@ -1,12 +1,13 @@
-# coupons.abandon
+# 2024年11月28日下线
 
-> 2024年11月28日下线，请开发者尽快调整，详见公告：https://op.jinritemai.com/docs/notice-docs/5/7026
+> coupons.abandon — 2024年11月28日下线，请开发者尽快调整，详见公告：https://op.jinritemai.com/docs/notice-docs/5/7026
 卡券进行售后退款时，需要先进行卡券废弃
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.abandon` |
 | 中文名 | 2024年11月28日下线 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-abandon` |
+| 接口 ID | `doudian.coupon.coupons.abandon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/abandon` |

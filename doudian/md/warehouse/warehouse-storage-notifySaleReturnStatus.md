@@ -1,11 +1,12 @@
-# storage.notifySaleReturnStatus
+# 回告销退单状态
 
-> 回告销退单状态
+> storage.notifySaleReturnStatus — 回告销退单状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.storage.notifySaleReturnStatus` |
 | 中文名 | 回告销退单状态 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-storage-notifySaleReturnStatus` |
+| 接口 ID | `doudian.warehouse.storage.notifySaleReturnStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/storage/notifySaleReturnStatus` |

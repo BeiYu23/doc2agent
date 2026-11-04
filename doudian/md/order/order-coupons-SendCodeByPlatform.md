@@ -1,11 +1,12 @@
-# coupons.SendCodeByPlatform
+# 商家接单（触发平台发码
 
-> 商家接单（触发平台发码）
+> coupons.SendCodeByPlatform — 商家接单（触发平台发码）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.coupons.SendCodeByPlatform` |
 | 中文名 | 商家接单（触发平台发码 |
+| 文档地址 | `/docs/doudian/order/order-coupons-SendCodeByPlatform` |
+| 接口 ID | `doudian.order.coupons.SendCodeByPlatform` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/SendCodeByPlatform` |

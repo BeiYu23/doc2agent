@@ -1,11 +1,12 @@
-# afterSale.refundProcessDetail
+# 根据子订单ID查询退款
 
-> 根据子订单ID查询退款详情（831下线，可使用该接口：/afterSale/Detail）
+> afterSale.refundProcessDetail — 根据子订单ID查询退款详情（831下线，可使用该接口：/afterSale/Detail）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.refundProcessDetail` |
 | 中文名 | 根据子订单ID查询退款 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-refundProcessDetail` |
+| 接口 ID | `doudian.refund.afterSale.refundProcessDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/refundProcessDetail` |

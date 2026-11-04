@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-waybill.instantShopping.logistics.listShopNetsite",
+  "cnName": "查询商家和物流商的订购关系以及物流单号使用情况",
+  "docUrl": "/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-listShopNetsite",
+  "name": "instantShopping.logistics.listShopNetsite",
   "platform": "doudian",
   "group": "retail-waybill",
-  "name": "instantShopping.logistics.listShopNetsite",
   "description": "查询商家和物流商的订购关系以及物流单号使用情况",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -155,6 +157,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7240",
   "updatedAt": "2025-04-23",
-  "_file_stem": "retail-waybill-instantShopping-logistics-listShopNetsite",
-  "cnName": "查询商家和物流商的订购关系以及物流单号使用情况"
+  "_file_stem": "retail-waybill-instantShopping-logistics-listShopNetsite"
 }

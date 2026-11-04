@@ -1,11 +1,12 @@
-# superm.createVirtualMobile
+# 隐私小号获取
 
-> 隐私小号获取
+> superm.createVirtualMobile — 隐私小号获取
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.createVirtualMobile` |
 | 中文名 | 隐私小号获取 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-createVirtualMobile` |
+| 接口 ID | `doudian.retail-store.superm.createVirtualMobile` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/createVirtualMobile` |

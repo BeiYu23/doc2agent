@@ -1,11 +1,12 @@
-# supplyChain.batchGetSupplyStock
+# 批量获取库存
 
-> 批量获取库存
+> supplyChain.batchGetSupplyStock — 批量获取库存
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.batchGetSupplyStock` |
 | 中文名 | 批量获取库存 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-batchGetSupplyStock` |
+| 接口 ID | `doudian.supply-chain.supplyChain.batchGetSupplyStock` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/batchGetSupplyStock` |

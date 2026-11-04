@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.orderCancel",
+  "cnName": "商家取消待支付订单",
+  "docUrl": "/docs/doudian/order/order-order-orderCancel",
+  "name": "order.orderCancel",
   "platform": "doudian",
   "group": "order",
-  "name": "order.orderCancel",
   "description": "商家取消待支付订单",
   "method": "GET",
   "path": "/order/orderCancel",
@@ -207,6 +209,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/3381",
   "updatedAt": "2023-03-30",
-  "_file_stem": "order-order-orderCancel",
-  "cnName": "商家取消待支付订单"
+  "_file_stem": "order-order-orderCancel"
 }

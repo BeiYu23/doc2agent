@@ -1,11 +1,12 @@
-# foodTakeout.life.rejectOrder
+# 生服-订单拒绝
 
-> 生服-订单拒绝
+> foodTakeout.life.rejectOrder — 生服-订单拒绝
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.home-scene.foodTakeout.life.rejectOrder` |
 | 中文名 | 生服-订单拒绝 |
+| 文档地址 | `/docs/doudian/home-scene/home-scene-foodTakeout-life-rejectOrder` |
+| 接口 ID | `doudian.home-scene.foodTakeout.life.rejectOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

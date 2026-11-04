@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.openId.replace",
+  "cnName": "用于将老openId替换为新openId",
+  "docUrl": "/docs/doudian/tool/tool-open-openId-replace",
+  "name": "open.openId.replace",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.openId.replace",
   "description": "用于将老openId替换为新openId",
   "method": "GET",
   "path": "/open/openId/replace",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/2755",
   "updatedAt": "2022-11-17",
-  "_file_stem": "tool-open-openId-replace",
-  "cnName": "用于将老openId替换为新openId"
+  "_file_stem": "tool-open-openId-replace"
 }

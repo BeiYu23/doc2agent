@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.fuwu.settle.getBizOrder",
+  "cnName": "获取某一笔服务市场订单的结算信息",
+  "docUrl": "/docs/doudian/tool/tool-fuwu-settle-getBizOrder",
+  "name": "fuwu.settle.getBizOrder",
   "platform": "doudian",
   "group": "tool",
-  "name": "fuwu.settle.getBizOrder",
   "description": "获取某一笔服务市场订单的结算信息",
   "method": "GET",
   "path": "/fuwu/settle/getBizOrder",
@@ -87,6 +89,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/6530",
   "updatedAt": "2024-12-23",
-  "_file_stem": "tool-fuwu-settle-getBizOrder",
-  "cnName": "获取某一笔服务市场订单的结算信息"
+  "_file_stem": "tool-fuwu-settle-getBizOrder"
 }

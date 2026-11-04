@@ -1,11 +1,12 @@
-# btas.getInspectionOrder
+# ⁣商家_查询订单的质检信息
 
-> ⁣商家_查询订单的质检信息
+> btas.getInspectionOrder — ⁣商家_查询订单的质检信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.getInspectionOrder` |
 | 中文名 | ⁣商家_查询订单的质检信息 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-getInspectionOrder` |
+| 接口 ID | `doudian.btas-inspect.btas.getInspectionOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/getInspectionOrder` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.product.batchRedistributeStoreProduct",
+  "cnName": "重新分配店铺主品对应的门店子品 (异步执行",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-product-batchRedistributeStoreProduct",
+  "name": "superm.product.batchRedistributeStoreProduct",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.product.batchRedistributeStoreProduct",
   "description": "重新分配店铺主品对应的门店子品 (异步执行)",
   "method": "GET",
   "path": "/superm/product/batchRedistributeStoreProduct",
@@ -111,6 +113,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2697",
   "updatedAt": "2024-12-19",
-  "_file_stem": "retail-store-superm-product-batchRedistributeStoreProduct",
-  "cnName": "重新分配店铺主品对应的门店子品 (异步执行"
+  "_file_stem": "retail-store-superm-product-batchRedistributeStoreProduct"
 }

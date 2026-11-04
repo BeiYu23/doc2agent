@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.getTemplateBizType",
+  "cnName": "获取模板类型",
+  "docUrl": "/docs/doudian/sms/sms-sms-getTemplateBizType",
+  "name": "sms.getTemplateBizType",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.getTemplateBizType",
   "description": "获取模板类型",
   "method": "GET",
   "path": "/sms/getTemplateBizType",
@@ -60,6 +62,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/8219",
   "updatedAt": "2026-04-21",
-  "_file_stem": "sms-sms-getTemplateBizType",
-  "cnName": "获取模板类型"
+  "_file_stem": "sms-sms-getTemplateBizType"
 }

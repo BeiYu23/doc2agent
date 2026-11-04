@@ -1,11 +1,12 @@
-# qualification.getAlternativeCategory
+# 获取商家的可选类目
 
-> 获取商家的可选类目
+> qualification.getAlternativeCategory — 获取商家的可选类目
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.qualification.getAlternativeCategory` |
 | 中文名 | 获取商家的可选类目 |
+| 文档地址 | `/docs/doudian/shop/shop-qualification-getAlternativeCategory` |
+| 接口 ID | `doudian.shop.qualification.getAlternativeCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/qualification/getAlternativeCategory` |

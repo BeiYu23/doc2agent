@@ -1,11 +1,12 @@
-# qualification.settle
+# 商家入驻提交资料
 
-> 商家入驻提交资料
+> qualification.settle — 商家入驻提交资料
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.qualification.settle` |
 | 中文名 | 商家入驻提交资料 |
+| 文档地址 | `/docs/doudian/shop/shop-qualification-settle` |
+| 接口 ID | `doudian.shop.qualification.settle` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/qualification/settle` |

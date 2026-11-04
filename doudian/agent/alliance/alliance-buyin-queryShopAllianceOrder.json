@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.queryShopAllianceOrder",
+  "cnName": "获取商家的联盟订单",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-queryShopAllianceOrder",
+  "name": "buyin.queryShopAllianceOrder",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.queryShopAllianceOrder",
   "description": "获取商家的联盟订单",
   "method": "GET",
   "path": "/buyin/queryShopAllianceOrder",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2407",
   "updatedAt": "2023-04-18",
-  "_file_stem": "alliance-buyin-queryShopAllianceOrder",
-  "cnName": "获取商家的联盟订单"
+  "_file_stem": "alliance-buyin-queryShopAllianceOrder"
 }

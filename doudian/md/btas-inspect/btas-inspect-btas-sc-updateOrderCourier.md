@@ -1,11 +1,12 @@
-# btas.sc.updateOrderCourier
+# 质检机构_更新订单物流信息
 
-> 质检机构_更新订单物流信息
+> btas.sc.updateOrderCourier — 质检机构_更新订单物流信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sc.updateOrderCourier` |
 | 中文名 | 质检机构_更新订单物流信息 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sc-updateOrderCourier` |
+| 接口 ID | `doudian.btas-inspect.btas.sc.updateOrderCourier` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/updateOrderCourier` |

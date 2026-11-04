@@ -1,11 +1,12 @@
-# shopVideo.listVideo
+# 查询已投稿短视频列表
 
-> 查询已投稿短视频列表
+> shopVideo.listVideo — 查询已投稿短视频列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.listVideo` |
 | 中文名 | 查询已投稿短视频列表 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-listVideo` |
+| 接口 ID | `doudian.video.shopVideo.listVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/listVideo` |

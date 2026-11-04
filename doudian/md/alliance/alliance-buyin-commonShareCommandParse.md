@@ -1,11 +1,12 @@
-# buyin.commonShareCommandParse
+# 该接口用于解析抖口令和短链获取口令类型及对应口…
 
-> 该接口用于解析抖口令和短链获取口令类型及对应口令信息，可用于解析已经转链过的抖口令和抖音分享的短链。
+> buyin.commonShareCommandParse — 该接口用于解析抖口令和短链获取口令类型及对应口令信息，可用于解析已经转链过的抖口令和抖音分享的短链。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.commonShareCommandParse` |
 | 中文名 | 该接口用于解析抖口令和短链获取口令类型及对应口… |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-commonShareCommandParse` |
+| 接口 ID | `doudian.alliance.buyin.commonShareCommandParse` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/commonShareCommandParse` |

@@ -1,11 +1,12 @@
-# open.getAuthInfo
+# 查询授权信息
 
-> 查询授权信息
+> open.getAuthInfo — 查询授权信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.getAuthInfo` |
 | 中文名 | 查询授权信息 |
+| 文档地址 | `/docs/doudian/tool/tool-open-getAuthInfo` |
+| 接口 ID | `doudian.tool.open.getAuthInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/getAuthInfo` |

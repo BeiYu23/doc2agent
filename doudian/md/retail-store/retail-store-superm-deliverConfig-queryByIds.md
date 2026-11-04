@@ -1,11 +1,12 @@
-# superm.deliverConfig.queryByIds
+# 时效管理查询列表
 
-> 时效管理查询列表
+> superm.deliverConfig.queryByIds — 时效管理查询列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.deliverConfig.queryByIds` |
 | 中文名 | 时效管理查询列表 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-deliverConfig-queryByIds` |
+| 接口 ID | `doudian.retail-store.superm.deliverConfig.queryByIds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

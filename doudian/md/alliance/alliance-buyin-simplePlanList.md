@@ -1,11 +1,12 @@
-# buyin.simplePlanList
+# 商品推广 普通计划查询
 
-> 商品推广 普通计划查询
+> buyin.simplePlanList — 商品推广 普通计划查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.simplePlanList` |
 | 中文名 | 商品推广 普通计划查询 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-simplePlanList` |
+| 接口 ID | `doudian.alliance.buyin.simplePlanList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/simplePlanList` |

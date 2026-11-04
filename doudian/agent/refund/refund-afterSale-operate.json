@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.operate",
+  "cnName": "售后审核接口聚合版",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-operate",
+  "name": "afterSale.operate",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.operate",
   "description": "售后审核接口聚合版",
   "method": "GET",
   "path": "/afterSale/operate",
@@ -993,6 +995,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/560",
   "updatedAt": "2026-09-22",
-  "_file_stem": "refund-afterSale-operate",
-  "cnName": "售后审核接口聚合版"
+  "_file_stem": "refund-afterSale-operate"
 }

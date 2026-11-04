@@ -1,11 +1,12 @@
-# logistics.voiceNotifyCallRecordCallback
+# 火山引擎语音通知回调
 
-> 火山引擎语音通知回调
+> logistics.voiceNotifyCallRecordCallback — 火山引擎语音通知回调
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.voiceNotifyCallRecordCallback` |
 | 中文名 | 火山引擎语音通知回调 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-voiceNotifyCallRecordCallback` |
+| 接口 ID | `doudian.logistics.logistics.voiceNotifyCallRecordCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/voiceNotifyCallRecordCallback` |

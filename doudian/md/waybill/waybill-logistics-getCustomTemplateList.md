@@ -1,11 +1,12 @@
-# logistics.getCustomTemplateList
+# 查询商家自定义区模板（新版
 
-> 查询商家自定义区模板（新版）
+> logistics.getCustomTemplateList — 查询商家自定义区模板（新版）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.getCustomTemplateList` |
 | 中文名 | 查询商家自定义区模板（新版 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-getCustomTemplateList` |
+| 接口 ID | `doudian.waybill.logistics.getCustomTemplateList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getCustomTemplateList` |

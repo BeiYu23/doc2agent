@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-bill.retail.downloadSupermarketTradeBillItem",
+  "cnName": "即时零售交易账单下载",
+  "docUrl": "/docs/doudian/retail-bill/retail-bill-retail-downloadSupermarketTradeBillItem",
+  "name": "retail.downloadSupermarketTradeBillItem",
   "platform": "doudian",
   "group": "retail-bill",
-  "name": "retail.downloadSupermarketTradeBillItem",
   "description": "即时零售交易账单下载",
   "method": "GET",
   "path": "/retail/downloadSupermarketTradeBillItem",
@@ -109,6 +111,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1518/7184",
   "updatedAt": "2024-12-30",
-  "_file_stem": "retail-bill-retail-downloadSupermarketTradeBillItem",
-  "cnName": "即时零售交易账单下载"
+  "_file_stem": "retail-bill-retail-downloadSupermarketTradeBillItem"
 }

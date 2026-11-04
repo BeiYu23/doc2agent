@@ -1,11 +1,12 @@
-# openCloud.containerService.create
+# 创建容器服务
 
-> 创建容器服务
+> openCloud.containerService.create — 创建容器服务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.containerService.create` |
 | 中文名 | 创建容器服务 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-containerService-create` |
+| 接口 ID | `doudian.cloud.openCloud.containerService.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/containerService/create` |

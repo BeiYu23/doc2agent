@@ -1,11 +1,12 @@
-# logistics.createOrder
+# 电子面单下单
 
-> 电子面单下单
+> logistics.createOrder — 电子面单下单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.createOrder` |
 | 中文名 | 电子面单下单 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-createOrder` |
+| 接口 ID | `doudian.logistics.logistics.createOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/createOrder` |

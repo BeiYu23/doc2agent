@@ -1,11 +1,12 @@
-# sendHome.marketing.creatFullDiscountActivity
+# 创建满减营销活动
 
-> 创建满减营销活动，支持创建：满x元减x元，满x件减x元，满x件打x折
+> sendHome.marketing.creatFullDiscountActivity — 创建满减营销活动，支持创建：满x元减x元，满x件减x元，满x件打x折
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-marketing.sendHome.marketing.creatFullDiscountActivity` |
 | 中文名 | 创建满减营销活动 |
+| 文档地址 | `/docs/doudian/retail-marketing/retail-marketing-sendHome-marketing-creatFullDiscountActivity` |
+| 接口 ID | `doudian.retail-marketing.sendHome.marketing.creatFullDiscountActivity` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

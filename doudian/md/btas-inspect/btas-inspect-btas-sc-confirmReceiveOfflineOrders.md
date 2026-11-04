@@ -1,11 +1,12 @@
-# btas.sc.confirmReceiveOfflineOrders
+# 质检机构_确认收货(实物质检订单
 
-> 质检机构_确认收货(实物质检订单）
+> btas.sc.confirmReceiveOfflineOrders — 质检机构_确认收货(实物质检订单）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.sc.confirmReceiveOfflineOrders` |
 | 中文名 | 质检机构_确认收货(实物质检订单 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-sc-confirmReceiveOfflineOrders` |
+| 接口 ID | `doudian.btas-inspect.btas.sc.confirmReceiveOfflineOrders` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/confirmReceiveOfflineOrders` |

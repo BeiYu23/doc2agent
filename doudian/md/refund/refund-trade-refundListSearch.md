@@ -1,11 +1,12 @@
-# trade.refundListSearch
+# 查询退款单列表
 
-> 查询退款单列表
+> trade.refundListSearch — 查询退款单列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.trade.refundListSearch` |
 | 中文名 | 查询退款单列表 |
+| 文档地址 | `/docs/doudian/refund/refund-trade-refundListSearch` |
+| 接口 ID | `doudian.refund.trade.refundListSearch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/refundListSearch` |

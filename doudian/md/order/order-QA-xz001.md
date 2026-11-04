@@ -1,11 +1,12 @@
-# QA.xz001
+# （xz001）
 
-> 001
+> QA.xz001 — 001
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.QA.xz001` |
 | 中文名 | （xz001） |
+| 文档地址 | `/docs/doudian/order/order-QA-xz001` |
+| 接口 ID | `doudian.order.QA.xz001` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/QA/xz001` |

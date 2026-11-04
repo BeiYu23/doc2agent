@@ -1,11 +1,12 @@
-# open.CreateVideoReproductionTask
+# 创建视频复刻任务
 
-> 创建视频复刻任务
+> open.CreateVideoReproductionTask — 创建视频复刻任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.CreateVideoReproductionTask` |
 | 中文名 | 创建视频复刻任务 |
+| 文档地址 | `/docs/doudian/video/video-open-CreateVideoReproductionTask` |
+| 接口 ID | `doudian.video.open.CreateVideoReproductionTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/CreateVideoReproductionTask` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.GetUserShopMemberCard",
+  "cnName": "电商会员卡面信息",
+  "docUrl": "/docs/doudian/member/member-member-GetUserShopMemberCard",
+  "name": "member.GetUserShopMemberCard",
   "platform": "doudian",
   "group": "member",
-  "name": "member.GetUserShopMemberCard",
   "description": "电商会员卡面信息",
   "method": "GET",
   "path": "/member/GetUserShopMemberCard",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1803",
   "updatedAt": "2022-04-29",
-  "_file_stem": "member-member-GetUserShopMemberCard",
-  "cnName": "电商会员卡面信息"
+  "_file_stem": "member-member-GetUserShopMemberCard"
 }

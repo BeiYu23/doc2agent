@@ -1,11 +1,12 @@
-# logistics.createSFOrder
+# 顺丰新下单接口
 
-> 顺丰新下单接口，建议顺丰下单都走该接口，功能更齐全
+> logistics.createSFOrder — 顺丰新下单接口，建议顺丰下单都走该接口，功能更齐全
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.createSFOrder` |
 | 中文名 | 顺丰新下单接口 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-createSFOrder` |
+| 接口 ID | `doudian.waybill.logistics.createSFOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/createSFOrder` |

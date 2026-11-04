@@ -1,11 +1,12 @@
-# inspection.order.supplierDispatch
+# 服务商已派单
 
-> 服务商已派单
+> inspection.order.supplierDispatch — 服务商已派单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierDispatch` |
 | 中文名 | 服务商已派单 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierDispatch` |
+| 接口 ID | `doudian.industry.inspection.order.supplierDispatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.setPriority",
+  "cnName": "设置指定地址下的仓的优先级",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-setPriority",
+  "name": "warehouse.setPriority",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.setPriority",
   "description": "设置指定地址下的仓的优先级",
   "method": "GET",
   "path": "/warehouse/setPriority",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1863",
   "updatedAt": "2020-11-29",
-  "_file_stem": "stock-warehouse-setPriority",
-  "cnName": "设置指定地址下的仓的优先级"
+  "_file_stem": "stock-warehouse-setPriority"
 }

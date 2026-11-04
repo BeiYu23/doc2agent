@@ -1,11 +1,12 @@
-# pigeon.ISVEvaluationCallback
+# ISV评测结果回调
 
-> ISV评测结果回调接口
+> pigeon.ISVEvaluationCallback — ISV评测结果回调接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.service.pigeon.ISVEvaluationCallback` |
 | 中文名 | ISV评测结果回调 |
+| 文档地址 | `/docs/doudian/service/service-pigeon-ISVEvaluationCallback` |
+| 接口 ID | `doudian.service.pigeon.ISVEvaluationCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/ISVEvaluationCallback` |

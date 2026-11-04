@@ -1,11 +1,12 @@
-# logistics.pushAbilityArea
+# 能力服务范围推送
 
-> 能力服务范围推送
+> logistics.pushAbilityArea — 能力服务范围推送
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.pushAbilityArea` |
 | 中文名 | 能力服务范围推送 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-pushAbilityArea` |
+| 接口 ID | `doudian.logistics-provider.logistics.pushAbilityArea` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/pushAbilityArea` |

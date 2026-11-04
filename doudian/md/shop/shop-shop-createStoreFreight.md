@@ -1,11 +1,12 @@
-# shop.createStoreFreight
+# 门店绑定运费模版
 
-> 门店绑定运费模版
+> shop.createStoreFreight — 门店绑定运费模版
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.createStoreFreight` |
 | 中文名 | 门店绑定运费模版 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-createStoreFreight` |
+| 接口 ID | `doudian.shop.shop.createStoreFreight` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/createStoreFreight` |

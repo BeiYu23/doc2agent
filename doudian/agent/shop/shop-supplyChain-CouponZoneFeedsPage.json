@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.CouponZoneFeedsPage",
+  "cnName": "二级承接页商品卡片分页",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-CouponZoneFeedsPage",
+  "name": "supplyChain.CouponZoneFeedsPage",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.CouponZoneFeedsPage",
   "description": "二级承接页商品卡片分页",
   "method": "GET",
   "path": "/supplyChain/CouponZoneFeedsPage",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2853",
   "updatedAt": "2023-01-16",
-  "_file_stem": "shop-supplyChain-CouponZoneFeedsPage",
-  "cnName": "二级承接页商品卡片分页"
+  "_file_stem": "shop-supplyChain-CouponZoneFeedsPage"
 }

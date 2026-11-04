@@ -1,11 +1,12 @@
-# alliance.card.add
+# 添加商品(精选联盟商品)到达人选品车
 
-> 添加商品(精选联盟商品)到达人选品车
+> alliance.card.add — 添加商品(精选联盟商品)到达人选品车
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.alliance.card.add` |
 | 中文名 | 添加商品(精选联盟商品)到达人选品车 |
+| 文档地址 | `/docs/doudian/tool/tool-alliance-card-add` |
+| 接口 ID | `doudian.tool.alliance.card.add` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/card/add` |

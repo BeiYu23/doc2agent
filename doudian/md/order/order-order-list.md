@@ -1,11 +1,12 @@
-# order.list
+# 获取订单列表
 
-> 获取订单列表（6.30下线建议替换/order/searchList接口）
+> order.list — 获取订单列表（6.30下线建议替换/order/searchList接口）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.list` |
 | 中文名 | 获取订单列表 |
+| 文档地址 | `/docs/doudian/order/order-order-list` |
+| 接口 ID | `doudian.order.order.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/list` |

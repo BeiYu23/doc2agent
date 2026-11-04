@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.v1.imageVersion.create",
+  "cnName": "创建镜像",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-v1-imageVersion-create",
+  "name": "openCloud.v1.imageVersion.create",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.v1.imageVersion.create",
   "description": "创建镜像",
   "method": "GET",
   "path": "/openCloud/v1/imageVersion/create",
@@ -113,6 +115,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4155",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-imageVersion-create",
-  "cnName": "创建镜像"
+  "_file_stem": "cloud-openCloud-v1-imageVersion-create"
 }

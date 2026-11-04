@@ -1,11 +1,12 @@
-# supplyChain.updateConsign
+# 供货单更新发货物流
 
-> 供货单更新发货物流
+> supplyChain.updateConsign — 供货单更新发货物流
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.updateConsign` |
 | 中文名 | 供货单更新发货物流 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-updateConsign` |
+| 接口 ID | `doudian.supply-chain.supplyChain.updateConsign` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/updateConsign` |

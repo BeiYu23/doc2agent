@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.getOnlineSendExpressInfos",
+  "cnName": "在线寄件询价",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-getOnlineSendExpressInfos",
+  "name": "logistics.getOnlineSendExpressInfos",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.getOnlineSendExpressInfos",
   "description": "在线寄件询价接口",
   "method": "GET",
   "path": "/logistics/getOnlineSendExpressInfos",
@@ -196,6 +198,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/4831",
   "updatedAt": "2023-10-09",
-  "_file_stem": "waybill-logistics-getOnlineSendExpressInfos",
-  "cnName": "在线寄件询价"
+  "_file_stem": "waybill-logistics-getOnlineSendExpressInfos"
 }

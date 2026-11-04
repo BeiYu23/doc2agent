@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.combinedOrder.supplierDispatch",
+  "cnName": "一体检测服务商已派单",
+  "docUrl": "/docs/doudian/industry/industry-inspection-combinedOrder-supplierDispatch",
+  "name": "inspection.combinedOrder.supplierDispatch",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.combinedOrder.supplierDispatch",
   "description": "一体检测服务商已派单",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -108,6 +110,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8413",
   "updatedAt": "2026-07-17",
-  "_file_stem": "industry-inspection-combinedOrder-supplierDispatch",
-  "cnName": "一体检测服务商已派单"
+  "_file_stem": "industry-inspection-combinedOrder-supplierDispatch"
 }

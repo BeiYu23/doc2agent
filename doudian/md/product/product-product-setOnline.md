@@ -1,11 +1,12 @@
-# product.setOnline
+# 拍卖商品上架接口-仅限拍卖商品使用
 
-> 拍卖商品上架接口-仅限拍卖商品使用
+> product.setOnline — 拍卖商品上架接口-仅限拍卖商品使用
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.setOnline` |
 | 中文名 | 拍卖商品上架接口-仅限拍卖商品使用 |
+| 文档地址 | `/docs/doudian/product/product-product-setOnline` |
+| 接口 ID | `doudian.product.product.setOnline` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/setOnline` |

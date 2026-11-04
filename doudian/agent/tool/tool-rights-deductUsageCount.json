@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.rights.deductUsageCount",
+  "cnName": "扣减权益可使用次数",
+  "docUrl": "/docs/doudian/tool/tool-rights-deductUsageCount",
+  "name": "rights.deductUsageCount",
   "platform": "doudian",
   "group": "tool",
-  "name": "rights.deductUsageCount",
   "description": "扣减权益可使用次数",
   "method": "GET",
   "path": "/rights/deductUsageCount",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/6060",
   "updatedAt": "2026-06-23",
-  "_file_stem": "tool-rights-deductUsageCount",
-  "cnName": "扣减权益可使用次数"
+  "_file_stem": "tool-rights-deductUsageCount"
 }

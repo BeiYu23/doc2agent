@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.template.delete",
+  "cnName": "删除短信模板",
+  "docUrl": "/docs/doudian/sms/sms-sms-template-delete",
+  "name": "sms.template.delete",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.template.delete",
   "description": "删除短信模板",
   "method": "GET",
   "path": "/sms/template/delete",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1518",
   "updatedAt": "2026-04-17",
-  "_file_stem": "sms-sms-template-delete",
-  "cnName": "删除短信模板"
+  "_file_stem": "sms-sms-template-delete"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.batchDecryptNoAuth",
+  "cnName": "接口支持解密在文档字段有“密文”红色标识字段值…",
+  "docUrl": "/docs/doudian/order/order-order-batchDecryptNoAuth",
+  "name": "order.batchDecryptNoAuth",
   "platform": "doudian",
   "group": "order",
-  "name": "order.batchDecryptNoAuth",
   "description": "1、接口支持解密在文档字段有“密文”红色标识字段值：收件人电话收件人姓名；详细地址；账号值；证件号；证件姓名 2、不支持解密doudian_open_id字段加密用户ID串 3、最大支持一次解密50条数据 4、cipher_infos字段待解密的密文列表示",
   "method": "GET",
   "path": "/order/batchDecryptNoAuth",
@@ -121,6 +123,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/4685",
   "updatedAt": "2023-09-11",
-  "_file_stem": "order-order-batchDecryptNoAuth",
-  "cnName": "接口支持解密在文档字段有“密文”红色标识字段值…"
+  "_file_stem": "order-order-batchDecryptNoAuth"
 }

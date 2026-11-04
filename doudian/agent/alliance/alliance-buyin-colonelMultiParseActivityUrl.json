@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.colonelMultiParseActivityUrl",
+  "cnName": "批量解析团长活动推广链接",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-colonelMultiParseActivityUrl",
+  "name": "buyin.colonelMultiParseActivityUrl",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.colonelMultiParseActivityUrl",
   "description": "批量解析团长活动推广链接",
   "method": "GET",
   "path": "/buyin/colonelMultiParseActivityUrl",
@@ -68,6 +70,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2429",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-colonelMultiParseActivityUrl",
-  "cnName": "批量解析团长活动推广链接"
+  "_file_stem": "alliance-buyin-colonelMultiParseActivityUrl"
 }

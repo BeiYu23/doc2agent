@@ -1,11 +1,12 @@
-# product.getSchema
+# 商品发布schema-渲染
 
-> 商品发布schema-渲染接口
+> product.getSchema — 商品发布schema-渲染接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getSchema` |
 | 中文名 | 商品发布schema-渲染 |
+| 文档地址 | `/docs/doudian/product/product-product-getSchema` |
+| 接口 ID | `doudian.product.product.getSchema` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getSchema` |

@@ -1,11 +1,12 @@
-# power.verifyFetchCode
+# 取件码核销（仅用于兼容老物流网关
 
-> 取件码核销（仅用于兼容老物流网关）
+> power.verifyFetchCode — 取件码核销（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.verifyFetchCode` |
 | 中文名 | 取件码核销（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-verifyFetchCode` |
+| 接口 ID | `doudian.logistics.power.verifyFetchCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/verifyFetchCode` |

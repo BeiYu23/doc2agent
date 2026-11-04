@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.mGetMemberInfoByOpenIdList",
+  "cnName": "【会员通商家】获取会员信息",
+  "docUrl": "/docs/doudian/member/member-member-mGetMemberInfoByOpenIdList",
+  "name": "member.mGetMemberInfoByOpenIdList",
   "platform": "doudian",
   "group": "member",
-  "name": "member.mGetMemberInfoByOpenIdList",
   "description": "【会员通商家】获取会员信息",
   "method": "GET",
   "path": "/member/mGetMemberInfoByOpenIdList",
@@ -188,6 +190,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/2750",
   "updatedAt": "2024-11-20",
-  "_file_stem": "member-member-mGetMemberInfoByOpenIdList",
-  "cnName": "【会员通商家】获取会员信息"
+  "_file_stem": "member-member-mGetMemberInfoByOpenIdList"
 }

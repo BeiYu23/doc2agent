@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.searchByReceiver",
+  "cnName": "根据收件人姓名、手机号查询订单",
+  "docUrl": "/docs/doudian/order/order-order-searchByReceiver",
+  "name": "order.searchByReceiver",
   "platform": "doudian",
   "group": "order",
-  "name": "order.searchByReceiver",
   "description": "根据收件人姓名、手机号查询订单",
   "method": "GET",
   "path": "/order/searchByReceiver",
@@ -217,6 +219,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/3615",
   "updatedAt": "2023-05-26",
-  "_file_stem": "order-order-searchByReceiver",
-  "cnName": "根据收件人姓名、手机号查询订单"
+  "_file_stem": "order-order-searchByReceiver"
 }

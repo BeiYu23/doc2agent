@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-express.instantShopping.logisticsMerchant.syncStaffInfo",
+  "cnName": "同步部门员工信息",
+  "docUrl": "/docs/doudian/retail-express/retail-express-instantShopping-logisticsMerchant-syncStaffInfo",
+  "name": "instantShopping.logisticsMerchant.syncStaffInfo",
   "platform": "doudian",
   "group": "retail-express",
-  "name": "instantShopping.logisticsMerchant.syncStaffInfo",
   "description": "同步部门员工信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -139,6 +141,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1584/7302",
   "updatedAt": "2025-02-27",
-  "_file_stem": "retail-express-instantShopping-logisticsMerchant-syncStaffInfo",
-  "cnName": "同步部门员工信息"
+  "_file_stem": "retail-express-instantShopping-logisticsMerchant-syncStaffInfo"
 }

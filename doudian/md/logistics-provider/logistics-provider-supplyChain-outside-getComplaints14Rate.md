@@ -1,11 +1,12 @@
-# supplyChain.outside.getComplaints14Rate
+# 查询投诉工单量最多的相关网点
 
-> 查询投诉工单量最多的相关网点
+> supplyChain.outside.getComplaints14Rate — 查询投诉工单量最多的相关网点
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getComplaints14Rate` |
 | 中文名 | 查询投诉工单量最多的相关网点 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-supplyChain-outside-getComplaints14Rate` |
+| 接口 ID | `doudian.logistics-provider.supplyChain.outside.getComplaints14Rate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

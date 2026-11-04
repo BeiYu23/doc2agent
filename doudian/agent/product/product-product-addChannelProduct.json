@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.addChannelProduct",
+  "cnName": "创建销售渠道品",
+  "docUrl": "/docs/doudian/product/product-product-addChannelProduct",
+  "name": "product.addChannelProduct",
   "platform": "doudian",
   "group": "product",
-  "name": "product.addChannelProduct",
   "description": "创建销售渠道品",
   "method": "GET",
   "path": "/product/addChannelProduct",
@@ -424,6 +426,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4462",
   "updatedAt": "2025-09-08",
-  "_file_stem": "product-product-addChannelProduct",
-  "cnName": "创建销售渠道品"
+  "_file_stem": "product-product-addChannelProduct"
 }

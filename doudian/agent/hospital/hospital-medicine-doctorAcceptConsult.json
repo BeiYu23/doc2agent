@@ -1,8 +1,10 @@
 {
   "id": "doudian.hospital.medicine.doctorAcceptConsult",
+  "cnName": "医生接诊",
+  "docUrl": "/docs/doudian/hospital/hospital-medicine-doctorAcceptConsult",
+  "name": "medicine.doctorAcceptConsult",
   "platform": "doudian",
   "group": "hospital",
-  "name": "medicine.doctorAcceptConsult",
   "description": "医生接诊",
   "method": "GET",
   "path": "/medicine/doctorAcceptConsult",
@@ -135,6 +137,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/5899",
   "updatedAt": "2024-05-06",
-  "_file_stem": "hospital-medicine-doctorAcceptConsult",
-  "cnName": "医生接诊"
+  "_file_stem": "hospital-medicine-doctorAcceptConsult"
 }

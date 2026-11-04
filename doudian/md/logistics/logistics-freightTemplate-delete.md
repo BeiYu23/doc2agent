@@ -1,11 +1,12 @@
-# freightTemplate.delete
+# 删除运费模板
 
-> 删除运费模板
+> freightTemplate.delete — 删除运费模板
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.freightTemplate.delete` |
 | 中文名 | 删除运费模板 |
+| 文档地址 | `/docs/doudian/logistics/logistics-freightTemplate-delete` |
+| 接口 ID | `doudian.logistics.freightTemplate.delete` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/freightTemplate/delete` |

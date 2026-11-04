@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.fuwu.service.downshelf",
+  "cnName": "下架服务市场服务",
+  "docUrl": "/docs/doudian/creative/creative-fuwu-service-downshelf",
+  "name": "fuwu.service.downshelf",
   "platform": "doudian",
   "group": "creative",
-  "name": "fuwu.service.downshelf",
   "description": "下架服务市场服务接口",
   "method": "GET",
   "path": "/fuwu/service/downshelf",
@@ -58,6 +60,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4765",
   "updatedAt": "2023-09-19",
-  "_file_stem": "creative-fuwu-service-downshelf",
-  "cnName": "下架服务市场服务"
+  "_file_stem": "creative-fuwu-service-downshelf"
 }

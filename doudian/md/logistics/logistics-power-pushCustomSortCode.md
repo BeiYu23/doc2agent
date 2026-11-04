@@ -1,11 +1,12 @@
-# power.pushCustomSortCode
+# 个性化集包编码推送（仅用于兼容老物流网关
 
-> 个性化集包编码推送（仅用于兼容老物流网关）
+> power.pushCustomSortCode — 个性化集包编码推送（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.pushCustomSortCode` |
 | 中文名 | 个性化集包编码推送（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-pushCustomSortCode` |
+| 接口 ID | `doudian.logistics.power.pushCustomSortCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushCustomSortCode` |

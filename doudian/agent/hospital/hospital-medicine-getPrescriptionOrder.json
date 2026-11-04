@@ -1,8 +1,10 @@
 {
   "id": "doudian.hospital.medicine.getPrescriptionOrder",
+  "cnName": "基于处方单查询订单状态",
+  "docUrl": "/docs/doudian/hospital/hospital-medicine-getPrescriptionOrder",
+  "name": "medicine.getPrescriptionOrder",
   "platform": "doudian",
   "group": "hospital",
-  "name": "medicine.getPrescriptionOrder",
   "description": "基于处方单查询订单状态",
   "method": "GET",
   "path": "/medicine/getPrescriptionOrder",
@@ -80,6 +82,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/5993",
   "updatedAt": "2023-12-28",
-  "_file_stem": "hospital-medicine-getPrescriptionOrder",
-  "cnName": "基于处方单查询订单状态"
+  "_file_stem": "hospital-medicine-getPrescriptionOrder"
 }

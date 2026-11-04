@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.delProductMainPicVideo",
+  "cnName": "删除商品上的主图视频",
+  "docUrl": "/docs/doudian/product/product-product-delProductMainPicVideo",
+  "name": "product.delProductMainPicVideo",
   "platform": "doudian",
   "group": "product",
-  "name": "product.delProductMainPicVideo",
   "description": "删除商品上的主图视频",
   "method": "GET",
   "path": "/product/delProductMainPicVideo",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/7049",
   "updatedAt": "2024-11-19",
-  "_file_stem": "product-product-delProductMainPicVideo",
-  "cnName": "删除商品上的主图视频"
+  "_file_stem": "product-product-delProductMainPicVideo"
 }

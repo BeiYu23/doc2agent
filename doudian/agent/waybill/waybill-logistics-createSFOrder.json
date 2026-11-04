@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.createSFOrder",
+  "cnName": "顺丰新下单接口",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-createSFOrder",
+  "name": "logistics.createSFOrder",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.createSFOrder",
   "description": "顺丰新下单接口，建议顺丰下单都走该接口，功能更齐全",
   "method": "GET",
   "path": "/logistics/createSFOrder",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1847",
   "updatedAt": "2021-03-15",
-  "_file_stem": "waybill-logistics-createSFOrder",
-  "cnName": "顺丰新下单接口"
+  "_file_stem": "waybill-logistics-createSFOrder"
 }

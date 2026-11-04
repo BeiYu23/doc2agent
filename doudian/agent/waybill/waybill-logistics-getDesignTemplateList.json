@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.getDesignTemplateList",
+  "cnName": "查询商家自定义模板（新版",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-getDesignTemplateList",
+  "name": "logistics.getDesignTemplateList",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.getDesignTemplateList",
   "description": "查询商家自定义模板（新版）",
   "method": "GET",
   "path": "/logistics/getDesignTemplateList",
@@ -56,6 +58,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1737",
   "updatedAt": "2022-03-28",
-  "_file_stem": "waybill-logistics-getDesignTemplateList",
-  "cnName": "查询商家自定义模板（新版"
+  "_file_stem": "waybill-logistics-getDesignTemplateList"
 }

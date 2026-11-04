@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.listLiveMainProductCoupon",
+  "cnName": "批量查询直播主品券活动",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listLiveMainProductCoupon",
+  "name": "instantShopping.marketing.listLiveMainProductCoupon",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.listLiveMainProductCoupon",
   "description": "批量查询直播主品券活动",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -154,6 +156,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/7253",
   "updatedAt": "2025-02-10",
-  "_file_stem": "retail-marketing-instantShopping-marketing-listLiveMainProductCoupon",
-  "cnName": "批量查询直播主品券活动"
+  "_file_stem": "retail-marketing-instantShopping-marketing-listLiveMainProductCoupon"
 }

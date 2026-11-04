@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.warehouse.createBatch",
+  "cnName": "批量创建区域仓",
+  "docUrl": "/docs/doudian/warehouse/warehouse-warehouse-createBatch",
+  "name": "warehouse.createBatch",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "warehouse.createBatch",
   "description": "批量创建区域仓",
   "method": "GET",
   "path": "/warehouse/createBatch",
@@ -158,6 +160,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2076",
   "updatedAt": "2022-06-23",
-  "_file_stem": "warehouse-warehouse-createBatch",
-  "cnName": "批量创建区域仓"
+  "_file_stem": "warehouse-warehouse-createBatch"
 }

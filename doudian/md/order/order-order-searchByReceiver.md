@@ -1,11 +1,12 @@
-# order.searchByReceiver
+# 根据收件人姓名、手机号查询订单
 
-> 根据收件人姓名、手机号查询订单
+> order.searchByReceiver — 根据收件人姓名、手机号查询订单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.searchByReceiver` |
 | 中文名 | 根据收件人姓名、手机号查询订单 |
+| 文档地址 | `/docs/doudian/order/order-order-searchByReceiver` |
+| 接口 ID | `doudian.order.order.searchByReceiver` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/searchByReceiver` |

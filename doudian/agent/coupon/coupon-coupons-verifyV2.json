@@ -1,8 +1,10 @@
 {
   "id": "doudian.coupon.coupons.verifyV2",
+  "cnName": "卡券核销接口V2版本",
+  "docUrl": "/docs/doudian/coupon/coupon-coupons-verifyV2",
+  "name": "coupons.verifyV2",
   "platform": "doudian",
   "group": "coupon",
-  "name": "coupons.verifyV2",
   "description": "卡券核销接口V2版本",
   "method": "GET",
   "path": "/coupons/verifyV2",
@@ -300,6 +302,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/797",
   "updatedAt": "2026-10-20",
-  "_file_stem": "coupon-coupons-verifyV2",
-  "cnName": "卡券核销接口V2版本"
+  "_file_stem": "coupon-coupons-verifyV2"
 }

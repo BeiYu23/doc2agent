@@ -1,8 +1,10 @@
 {
   "id": "doudian.phone-industry.maintenance.order.supplierSyncServiceUsageStatus",
+  "cnName": "服务使用状态同步",
+  "docUrl": "/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierSyncServiceUsageStatus",
+  "name": "maintenance.order.supplierSyncServiceUsageStatus",
   "platform": "doudian",
   "group": "phone-industry",
-  "name": "maintenance.order.supplierSyncServiceUsageStatus",
   "description": "服务使用状态同步",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1520/6646",
   "updatedAt": "2024-07-04",
-  "_file_stem": "phone-industry-maintenance-order-supplierSyncServiceUsageStatus",
-  "cnName": "服务使用状态同步"
+  "_file_stem": "phone-industry-maintenance-order-supplierSyncServiceUsageStatus"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.combinedOrder.queryOperationOrderCallLog",
+  "cnName": "一体服务商查询通话记录",
+  "docUrl": "/docs/doudian/industry/industry-inspection-combinedOrder-queryOperationOrderCallLog",
+  "name": "inspection.combinedOrder.queryOperationOrderCallLog",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.combinedOrder.queryOperationOrderCallLog",
   "description": "一体服务商查询通话记录",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -92,6 +94,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8408",
   "updatedAt": "2026-07-17",
-  "_file_stem": "industry-inspection-combinedOrder-queryOperationOrderCallLog",
-  "cnName": "一体服务商查询通话记录"
+  "_file_stem": "industry-inspection-combinedOrder-queryOperationOrderCallLog"
 }

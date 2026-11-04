@@ -1,11 +1,12 @@
-# warehouse.info
+# 查询区域仓
 
-> 查询区域仓
+> warehouse.info — 查询区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.info` |
 | 中文名 | 查询区域仓 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-info` |
+| 接口 ID | `doudian.stock.warehouse.info` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/info` |

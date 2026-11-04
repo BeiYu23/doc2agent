@@ -1,8 +1,10 @@
 {
   "id": "doudian.phone-industry.maintenance.order.supplierComplete",
+  "cnName": "服务完成事件",
+  "docUrl": "/docs/doudian/phone-industry/phone-industry-maintenance-order-supplierComplete",
+  "name": "maintenance.order.supplierComplete",
   "platform": "doudian",
   "group": "phone-industry",
-  "name": "maintenance.order.supplierComplete",
   "description": "服务完成事件",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1520/6644",
   "updatedAt": "2024-06-20",
-  "_file_stem": "phone-industry-maintenance-order-supplierComplete",
-  "cnName": "服务完成事件"
+  "_file_stem": "phone-industry-maintenance-order-supplierComplete"
 }

@@ -1,11 +1,12 @@
-# product.getRecommendName
+# 根据商品信息推荐商品标题相关信息
 
-> 根据商品信息推荐商品标题相关信息
+> product.getRecommendName — 根据商品信息推荐商品标题相关信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getRecommendName` |
 | 中文名 | 根据商品信息推荐商品标题相关信息 |
+| 文档地址 | `/docs/doudian/product/product-product-getRecommendName` |
+| 接口 ID | `doudian.product.product.getRecommendName` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getRecommendName` |

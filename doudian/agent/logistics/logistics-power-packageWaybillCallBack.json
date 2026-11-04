@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.packageWaybillCallBack",
+  "cnName": "包裹运单信息推送",
+  "docUrl": "/docs/doudian/logistics/logistics-power-packageWaybillCallBack",
+  "name": "power.packageWaybillCallBack",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.packageWaybillCallBack",
   "description": "包裹运单信息推送",
   "method": "GET",
   "path": "/power/packageWaybillCallBack",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1604",
   "updatedAt": "2025-11-18",
-  "_file_stem": "logistics-power-packageWaybillCallBack",
-  "cnName": "包裹运单信息推送"
+  "_file_stem": "logistics-power-packageWaybillCallBack"
 }

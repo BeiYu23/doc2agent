@@ -1,11 +1,12 @@
-# supplyChain.redInvoice.uploadInvoice
+# 上传红票
 
-> 上传红票
+> supplyChain.redInvoice.uploadInvoice — 上传红票
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.supplyChain.redInvoice.uploadInvoice` |
 | 中文名 | 上传红票 |
+| 文档地址 | `/docs/doudian/bill/bill-supplyChain-redInvoice-uploadInvoice` |
+| 接口 ID | `doudian.bill.supplyChain.redInvoice.uploadInvoice` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

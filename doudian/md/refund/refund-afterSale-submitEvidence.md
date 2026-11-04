@@ -1,11 +1,12 @@
-# afterSale.submitEvidence
+# 卖家提交举证信息
 
-> 卖家提交举证信息
+> afterSale.submitEvidence — 卖家提交举证信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.submitEvidence` |
 | 中文名 | 卖家提交举证信息 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-submitEvidence` |
+| 接口 ID | `doudian.refund.afterSale.submitEvidence` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/submitEvidence` |

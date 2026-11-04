@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.ebillInfoGet",
+  "cnName": "面单明文信息查询",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-ebillInfoGet",
+  "name": "logistics.ebillInfoGet",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.ebillInfoGet",
   "description": "面单明文信息查询接口",
   "method": "GET",
   "path": "/logistics/ebillInfoGet",
@@ -168,6 +170,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2886",
   "updatedAt": "2024-08-07",
-  "_file_stem": "logistics-provider-logistics-ebillInfoGet",
-  "cnName": "面单明文信息查询"
+  "_file_stem": "logistics-provider-logistics-ebillInfoGet"
 }

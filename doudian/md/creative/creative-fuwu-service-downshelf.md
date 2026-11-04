@@ -1,11 +1,12 @@
-# fuwu.service.downshelf
+# 下架服务市场服务
 
-> 下架服务市场服务接口
+> fuwu.service.downshelf — 下架服务市场服务接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.creative.fuwu.service.downshelf` |
 | 中文名 | 下架服务市场服务 |
+| 文档地址 | `/docs/doudian/creative/creative-fuwu-service-downshelf` |
+| 接口 ID | `doudian.creative.fuwu.service.downshelf` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/service/downshelf` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.get_cap_info",
+  "cnName": "获取商家容量",
+  "docUrl": "/docs/doudian/material/material-material-get_cap_info",
+  "name": "material.get_cap_info",
   "platform": "doudian",
   "group": "material",
-  "name": "material.get_cap_info",
   "description": "获取商家容量详情",
   "method": "GET",
   "path": "/material/get_cap_info",
@@ -124,6 +126,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1694",
   "updatedAt": "2022-11-17",
-  "_file_stem": "material-material-get_cap_info",
-  "cnName": "获取商家容量"
+  "_file_stem": "material-material-get_cap_info"
 }

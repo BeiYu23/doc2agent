@@ -1,11 +1,12 @@
-# supplyChain.brand.list
+# 获取品牌信息
 
-> 获取品牌信息
+> supplyChain.brand.list — 获取品牌信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.brand.list` |
 | 中文名 | 获取品牌信息 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-brand-list` |
+| 接口 ID | `doudian.supply-chain.supplyChain.brand.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/brand/list` |

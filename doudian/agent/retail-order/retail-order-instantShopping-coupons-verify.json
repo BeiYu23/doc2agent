@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-order.instantShopping.coupons.verify",
+  "cnName": "即时零售验券",
+  "docUrl": "/docs/doudian/retail-order/retail-order-instantShopping-coupons-verify",
+  "name": "instantShopping.coupons.verify",
   "platform": "doudian",
   "group": "retail-order",
-  "name": "instantShopping.coupons.verify",
   "description": "即时零售验券",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -204,6 +206,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1531/7692",
   "updatedAt": "2025-08-11",
-  "_file_stem": "retail-order-instantShopping-coupons-verify",
-  "cnName": "即时零售验券"
+  "_file_stem": "retail-order-instantShopping-coupons-verify"
 }

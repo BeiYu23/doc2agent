@@ -1,12 +1,13 @@
-# coupons.list
+# 平台卡券和三方卡券的status枚举不一样
 
-> 平台卡券和三方卡券的status枚举不一样。平台卡券状态码status的枚举是1:未使用，2:已使用，3：已失效，查询时需入参cert_type=1；
+> coupons.list — 平台卡券和三方卡券的status枚举不一样。平台卡券状态码status的枚举是1:未使用，2:已使用，3：已失效，查询时需入参cert_type=1；
 商家(三方)卡券状态码status的枚举是1 //未激活（表示初始状态）； 2 //未使用； 3 //已
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.list` |
 | 中文名 | 平台卡券和三方卡券的status枚举不一样 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-list` |
+| 接口 ID | `doudian.coupon.coupons.list` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/list` |

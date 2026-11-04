@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.sms.audience.getSendTaskList",
+  "cnName": "按人群包发送短信任务列表",
+  "docUrl": "/docs/doudian/member/member-sms-audience-getSendTaskList",
+  "name": "sms.audience.getSendTaskList",
   "platform": "doudian",
   "group": "member",
-  "name": "sms.audience.getSendTaskList",
   "description": "按人群包发送短信任务列表",
   "method": "GET",
   "path": "/sms/audience/getSendTaskList",
@@ -150,6 +152,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6752",
   "updatedAt": "2026-05-26",
-  "_file_stem": "member-sms-audience-getSendTaskList",
-  "cnName": "按人群包发送短信任务列表"
+  "_file_stem": "member-sms-audience-getSendTaskList"
 }

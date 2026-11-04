@@ -1,11 +1,12 @@
-# logistics.courierStation.updateTerminalOrder
+# 信息推送
 
-> 信息推送
+> logistics.courierStation.updateTerminalOrder — 信息推送
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.courierStation.updateTerminalOrder` |
 | 中文名 | 信息推送 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-courierStation-updateTerminalOrder` |
+| 接口 ID | `doudian.logistics-provider.logistics.courierStation.updateTerminalOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

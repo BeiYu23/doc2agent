@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.editProductImageText",
+  "cnName": "商品元图文创意编辑",
+  "docUrl": "/docs/doudian/creative/creative-product-material-editProductImageText",
+  "name": "product.material.editProductImageText",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.editProductImageText",
   "description": "商品元图文创意编辑",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4241",
   "updatedAt": "2023-12-28",
-  "_file_stem": "creative-product-material-editProductImageText",
-  "cnName": "商品元图文创意编辑"
+  "_file_stem": "creative-product-material-editProductImageText"
 }

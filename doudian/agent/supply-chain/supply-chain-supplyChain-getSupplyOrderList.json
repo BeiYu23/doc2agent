@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.getSupplyOrderList",
+  "cnName": "供销平台供货单的分页查询",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-getSupplyOrderList",
+  "name": "supplyChain.getSupplyOrderList",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.getSupplyOrderList",
   "description": "供销平台供货单的分页查询接口。",
   "method": "GET",
   "path": "/supplyChain/getSupplyOrderList",
@@ -166,6 +168,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/1732",
   "updatedAt": "2025-11-28",
-  "_file_stem": "supply-chain-supplyChain-getSupplyOrderList",
-  "cnName": "供销平台供货单的分页查询"
+  "_file_stem": "supply-chain-supplyChain-getSupplyOrderList"
 }

@@ -1,11 +1,12 @@
-# afterSale.uploadCompensation
+# 货到付款订单上传赔付凭证
 
-> 货到付款订单上传赔付凭证（6.30下线）
+> afterSale.uploadCompensation — 货到付款订单上传赔付凭证（6.30下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.uploadCompensation` |
 | 中文名 | 货到付款订单上传赔付凭证 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-uploadCompensation` |
+| 接口 ID | `doudian.refund.afterSale.uploadCompensation` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/uploadCompensation` |

@@ -1,11 +1,12 @@
-# logistics.newCreateOrder
+# 商家ERP/ISV
 
-> 商家ERP/ISV 向字节电子面单系统获取单号和打印信息
+> logistics.newCreateOrder — 商家ERP/ISV 向字节电子面单系统获取单号和打印信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.newCreateOrder` |
 | 中文名 | 商家ERP/ISV |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-newCreateOrder` |
+| 接口 ID | `doudian.waybill.logistics.newCreateOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/newCreateOrder` |

@@ -1,11 +1,12 @@
-# product.recommendProperties
+# 商品属性推荐
 
-> 商品属性推荐
+> product.recommendProperties — 商品属性推荐
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.recommendProperties` |
 | 中文名 | 商品属性推荐 |
+| 文档地址 | `/docs/doudian/product/product-product-recommendProperties` |
+| 接口 ID | `doudian.product.product.recommendProperties` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/recommendProperties` |

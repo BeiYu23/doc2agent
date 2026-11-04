@@ -1,11 +1,12 @@
-# instantShopping.product.add
+# 即时零售商家商品发布
 
-> 即时零售商家商品发布接口
+> instantShopping.product.add — 即时零售商家商品发布接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.instantShopping.product.add` |
 | 中文名 | 即时零售商家商品发布 |
+| 文档地址 | `/docs/doudian/product/product-instantShopping-product-add` |
+| 接口 ID | `doudian.product.instantShopping.product.add` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

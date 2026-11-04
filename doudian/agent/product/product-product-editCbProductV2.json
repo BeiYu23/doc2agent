@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.editCbProductV2",
+  "cnName": "编辑一个跨境/海南商品",
+  "docUrl": "/docs/doudian/product/product-product-editCbProductV2",
+  "name": "product.editCbProductV2",
   "platform": "doudian",
   "group": "product",
-  "name": "product.editCbProductV2",
   "description": "编辑一个跨境/海南商品",
   "method": "GET",
   "path": "/product/editCbProductV2",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1684",
   "updatedAt": "2024-06-11",
-  "_file_stem": "product-product-editCbProductV2",
-  "cnName": "编辑一个跨境/海南商品"
+  "_file_stem": "product-product-editCbProductV2"
 }

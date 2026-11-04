@@ -1,11 +1,12 @@
-# topup.refundQueryCMCC
+# 中国移动退款订单状态查询
 
-> 中国移动退款订单状态查询
+> topup.refundQueryCMCC — 中国移动退款订单状态查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.topup.refundQueryCMCC` |
 | 中文名 | 中国移动退款订单状态查询 |
+| 文档地址 | `/docs/doudian/tool/tool-topup-refundQueryCMCC` |
+| 接口 ID | `doudian.tool.topup.refundQueryCMCC` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/refundQueryCMCC` |

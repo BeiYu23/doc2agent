@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.JoinShopMemberWithMobileId",
+  "cnName": "加入会员",
+  "docUrl": "/docs/doudian/member/member-member-JoinShopMemberWithMobileId",
+  "name": "member.JoinShopMemberWithMobileId",
   "platform": "doudian",
   "group": "member",
-  "name": "member.JoinShopMemberWithMobileId",
   "description": "加入会员接口",
   "method": "GET",
   "path": "/member/JoinShopMemberWithMobileId",
@@ -198,6 +200,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1806",
   "updatedAt": "2022-04-29",
-  "_file_stem": "member-member-JoinShopMemberWithMobileId",
-  "cnName": "加入会员"
+  "_file_stem": "member-member-JoinShopMemberWithMobileId"
 }

@@ -1,11 +1,12 @@
-# shop.setFinalPayment
+# 设置尾款信息
 
-> 设置尾款信息
+> shop.setFinalPayment — 设置尾款信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.shop.setFinalPayment` |
 | 中文名 | 设置尾款信息 |
+| 文档地址 | `/docs/doudian/recycle/recycle-shop-setFinalPayment` |
+| 接口 ID | `doudian.recycle.shop.setFinalPayment` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/setFinalPayment` |

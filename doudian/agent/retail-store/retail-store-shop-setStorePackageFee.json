@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.shop.setStorePackageFee",
+  "cnName": "设置门店打包费",
+  "docUrl": "/docs/doudian/retail-store/retail-store-shop-setStorePackageFee",
+  "name": "shop.setStorePackageFee",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "shop.setStorePackageFee",
   "description": "设置门店打包费",
   "method": "GET",
   "path": "/shop/setStorePackageFee",
@@ -102,6 +104,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2635",
   "updatedAt": "2024-02-26",
-  "_file_stem": "retail-store-shop-setStorePackageFee",
-  "cnName": "设置门店打包费"
+  "_file_stem": "retail-store-shop-setStorePackageFee"
 }

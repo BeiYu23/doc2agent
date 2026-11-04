@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.microapp.generateCombination",
+  "cnName": "生成组合购",
+  "docUrl": "/docs/doudian/product/product-microapp-generateCombination",
+  "name": "microapp.generateCombination",
   "platform": "doudian",
   "group": "product",
-  "name": "microapp.generateCombination",
   "description": "生成组合购",
   "method": "GET",
   "path": "/microapp/generateCombination",
@@ -197,6 +199,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2787",
   "updatedAt": "2022-12-12",
-  "_file_stem": "product-microapp-generateCombination",
-  "cnName": "生成组合购"
+  "_file_stem": "product-microapp-generateCombination"
 }

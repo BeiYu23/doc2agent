@@ -1,11 +1,12 @@
-# crossBorder.getCbShopWarehouse
+# （getCbShopWarehouse）
 
-> get
+> crossBorder.getCbShopWarehouse — get
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossBorder.getCbShopWarehouse` |
 | 中文名 | （getCbShopWarehouse） |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossBorder-getCbShopWarehouse` |
+| 接口 ID | `doudian.cross-border.crossBorder.getCbShopWarehouse` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/getCbShopWarehouse` |

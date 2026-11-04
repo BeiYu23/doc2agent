@@ -1,11 +1,12 @@
-# retail.afterSale.applyNegotiate
+# 商家发起协商
 
-> 商家发起协商
+> retail.afterSale.applyNegotiate — 商家发起协商
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-refund.retail.afterSale.applyNegotiate` |
 | 中文名 | 商家发起协商 |
+| 文档地址 | `/docs/doudian/retail-refund/retail-refund-retail-afterSale-applyNegotiate` |
+| 接口 ID | `doudian.retail-refund.retail.afterSale.applyNegotiate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# order.batchDecryptNoAuth
+# 接口支持解密在文档字段有“密文”红色标识字段值…
 
-> 1、接口支持解密在文档字段有“密文”红色标识字段值：收件人电话收件人姓名；详细地址；账号值；证件号；证件姓名 2、不支持解密doudian_open_id字段加密用户ID串 3、最大支持一次解密50条数据 4、cipher_infos字段待解密的密文列表示
+> order.batchDecryptNoAuth — 1、接口支持解密在文档字段有“密文”红色标识字段值：收件人电话收件人姓名；详细地址；账号值；证件号；证件姓名 2、不支持解密doudian_open_id字段加密用户ID串 3、最大支持一次解密50条数据 4、cipher_infos字段待解密的密文列表示
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.batchDecryptNoAuth` |
 | 中文名 | 接口支持解密在文档字段有“密文”红色标识字段值… |
+| 文档地址 | `/docs/doudian/order/order-order-batchDecryptNoAuth` |
+| 接口 ID | `doudian.order.order.batchDecryptNoAuth` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/batchDecryptNoAuth` |

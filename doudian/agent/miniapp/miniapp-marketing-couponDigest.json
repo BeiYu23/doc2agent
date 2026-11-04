@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.marketing.couponDigest",
+  "cnName": "查询优惠券摘要信息",
+  "docUrl": "/docs/doudian/miniapp/miniapp-marketing-couponDigest",
+  "name": "marketing.couponDigest",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "marketing.couponDigest",
   "description": "查询优惠券摘要信息",
   "method": "GET",
   "path": "/marketing/couponDigest",
@@ -92,6 +94,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7518",
   "updatedAt": "2025-06-16",
-  "_file_stem": "miniapp-marketing-couponDigest",
-  "cnName": "查询优惠券摘要信息"
+  "_file_stem": "miniapp-marketing-couponDigest"
 }

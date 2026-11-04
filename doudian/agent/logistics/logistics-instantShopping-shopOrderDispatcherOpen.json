@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.instantShopping.shopOrderDispatcherOpen",
+  "cnName": "呼叫运力或取消",
+  "docUrl": "/docs/doudian/logistics/logistics-instantShopping-shopOrderDispatcherOpen",
+  "name": "instantShopping.shopOrderDispatcherOpen",
   "platform": "doudian",
   "group": "logistics",
-  "name": "instantShopping.shopOrderDispatcherOpen",
   "description": "呼叫运力或取消",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/7043",
   "updatedAt": "2025-09-09",
-  "_file_stem": "logistics-instantShopping-shopOrderDispatcherOpen",
-  "cnName": "呼叫运力或取消"
+  "_file_stem": "logistics-instantShopping-shopOrderDispatcherOpen"
 }

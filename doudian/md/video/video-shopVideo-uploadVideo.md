@@ -1,11 +1,12 @@
-# shopVideo.uploadVideo
+# 商家短视频上传
 
-> 商家短视频上传
+> shopVideo.uploadVideo — 商家短视频上传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.uploadVideo` |
 | 中文名 | 商家短视频上传 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-uploadVideo` |
+| 接口 ID | `doudian.video.shopVideo.uploadVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/uploadVideo` |

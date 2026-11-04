@@ -1,11 +1,12 @@
-# shopVideo.reportVideoPublishRecord
+# 上报短视频上传记录
 
-> 上报短视频上传记录
+> shopVideo.reportVideoPublishRecord — 上报短视频上传记录
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.reportVideoPublishRecord` |
 | 中文名 | 上报短视频上传记录 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-reportVideoPublishRecord` |
+| 接口 ID | `doudian.video.shopVideo.reportVideoPublishRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/reportVideoPublishRecord` |

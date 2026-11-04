@@ -1,11 +1,12 @@
-# order.addSerialNumber
+# 订单发货后
 
-> 订单发货后，如需修改商品序列号或补充上传商品序列号，可调用此接口进行修改或上传
+> order.addSerialNumber — 订单发货后，如需修改商品序列号或补充上传商品序列号，可调用此接口进行修改或上传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.addSerialNumber` |
 | 中文名 | 订单发货后 |
+| 文档地址 | `/docs/doudian/order/order-order-addSerialNumber` |
+| 接口 ID | `doudian.order.order.addSerialNumber` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/addSerialNumber` |

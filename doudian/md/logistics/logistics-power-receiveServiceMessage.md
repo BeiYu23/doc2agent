@@ -1,11 +1,12 @@
-# power.receiveServiceMessage
+# 客服发送消息
 
-> 客服发送消息
+> power.receiveServiceMessage — 客服发送消息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.receiveServiceMessage` |
 | 中文名 | 客服发送消息 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-receiveServiceMessage` |
+| 接口 ID | `doudian.logistics.power.receiveServiceMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/receiveServiceMessage` |

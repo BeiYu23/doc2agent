@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.instantShopping.notifyDeliveryStatus",
+  "cnName": "即时零售自配订单同步配送信息",
+  "docUrl": "/docs/doudian/retail-store/retail-store-instantShopping-notifyDeliveryStatus",
+  "name": "instantShopping.notifyDeliveryStatus",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "instantShopping.notifyDeliveryStatus",
   "description": "即时零售自配订单同步配送信息",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -243,6 +245,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/4774",
   "updatedAt": "2024-05-23",
-  "_file_stem": "retail-store-instantShopping-notifyDeliveryStatus",
-  "cnName": "即时零售自配订单同步配送信息"
+  "_file_stem": "retail-store-instantShopping-notifyDeliveryStatus"
 }

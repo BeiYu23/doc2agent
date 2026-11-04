@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProduct.edit",
+  "cnName": "编辑产品",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProduct-edit",
+  "name": "supplyChain.supplyProduct.edit",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProduct.edit",
   "description": "编辑产品",
   "method": "GET",
   "path": "/supplyChain/supplyProduct/edit",
@@ -319,6 +321,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2552",
   "updatedAt": "2023-04-12",
-  "_file_stem": "supply-chain-supplyChain-supplyProduct-edit",
-  "cnName": "编辑产品"
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-edit"
 }

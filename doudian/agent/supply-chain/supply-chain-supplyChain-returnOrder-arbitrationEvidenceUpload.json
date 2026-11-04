@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.returnOrder.arbitrationEvidenceUpload",
+  "cnName": "供应商上传仲裁举证",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-returnOrder-arbitrationEvidenceUpload",
+  "name": "supplyChain.returnOrder.arbitrationEvidenceUpload",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.returnOrder.arbitrationEvidenceUpload",
   "description": "供应商上传仲裁举证",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -111,6 +113,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6475",
   "updatedAt": "2024-04-26",
-  "_file_stem": "supply-chain-supplyChain-returnOrder-arbitrationEvidenceUpload",
-  "cnName": "供应商上传仲裁举证"
+  "_file_stem": "supply-chain-supplyChain-returnOrder-arbitrationEvidenceUpload"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.marketing.createCoupon",
+  "cnName": "营销中心-创建优惠券",
+  "docUrl": "/docs/doudian/shop/shop-marketing-createCoupon",
+  "name": "marketing.createCoupon",
   "platform": "doudian",
   "group": "shop",
-  "name": "marketing.createCoupon",
   "description": "营销中心-创建优惠券",
   "method": "GET",
   "path": "/marketing/createCoupon",
@@ -212,6 +214,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/523",
   "updatedAt": "2024-06-11",
-  "_file_stem": "shop-marketing-createCoupon",
-  "cnName": "营销中心-创建优惠券"
+  "_file_stem": "shop-marketing-createCoupon"
 }

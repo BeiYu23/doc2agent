@@ -1,11 +1,12 @@
-# supplyChain.returnOrder.arbitrationEvidenceUpload
+# 供应商上传仲裁举证
 
-> 供应商上传仲裁举证
+> supplyChain.returnOrder.arbitrationEvidenceUpload — 供应商上传仲裁举证
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.returnOrder.arbitrationEvidenceUpload` |
 | 中文名 | 供应商上传仲裁举证 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-returnOrder-arbitrationEvidenceUpload` |
+| 接口 ID | `doudian.supply-chain.supplyChain.returnOrder.arbitrationEvidenceUpload` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

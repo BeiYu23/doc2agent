@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.tokenExchange",
+  "cnName": "飞鸽token换取登录参数",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-tokenExchange",
+  "name": "pigeon.tokenExchange",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.tokenExchange",
   "description": "飞鸽token换取登录参数",
   "method": "GET",
   "path": "/pigeon/tokenExchange",
@@ -89,6 +91,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/1971",
   "updatedAt": "2022-06-01",
-  "_file_stem": "feige-pigeon-tokenExchange",
-  "cnName": "飞鸽token换取登录参数"
+  "_file_stem": "feige-pigeon-tokenExchange"
 }

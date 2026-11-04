@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.deliverTimeChangeTaskInfo",
+  "cnName": "查询延迟发货审核单信息",
+  "docUrl": "/docs/doudian/order/order-order-deliverTimeChangeTaskInfo",
+  "name": "order.deliverTimeChangeTaskInfo",
   "platform": "doudian",
   "group": "order",
-  "name": "order.deliverTimeChangeTaskInfo",
   "description": "查询延迟发货审核单信息",
   "method": "GET",
   "path": "/order/deliverTimeChangeTaskInfo",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/7097",
   "updatedAt": "2024-11-28",
-  "_file_stem": "order-order-deliverTimeChangeTaskInfo",
-  "cnName": "查询延迟发货审核单信息"
+  "_file_stem": "order-order-deliverTimeChangeTaskInfo"
 }

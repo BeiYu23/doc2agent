@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.activityProductExtendApprove",
+  "cnName": "商家处理团长活动商品的推广延期申请",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-activityProductExtendApprove",
+  "name": "buyin.activityProductExtendApprove",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.activityProductExtendApprove",
   "description": "商家处理团长活动商品的推广延期申请",
   "method": "GET",
   "path": "/buyin/activityProductExtendApprove",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1673",
   "updatedAt": "2022-02-24",
-  "_file_stem": "alliance-buyin-activityProductExtendApprove",
-  "cnName": "商家处理团长活动商品的推广延期申请"
+  "_file_stem": "alliance-buyin-activityProductExtendApprove"
 }

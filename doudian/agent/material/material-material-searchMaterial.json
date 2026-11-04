@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.searchMaterial",
+  "cnName": "不会返回已经删除的素材",
+  "docUrl": "/docs/doudian/material/material-material-searchMaterial",
+  "name": "material.searchMaterial",
   "platform": "doudian",
   "group": "material",
-  "name": "material.searchMaterial",
   "description": "1、不会返回已经删除的素材；\n2、请至少传入一个入参，如果没有任何搜索条件，即：除page_num、page_size、order_type之外的字段都为空，会返【查询失败，未上传任何查询参数】错误。\n3、2022年11月-素材接口字段变更公告：https",
   "method": "GET",
   "path": "/material/searchMaterial",
@@ -198,6 +200,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1148",
   "updatedAt": "2022-11-17",
-  "_file_stem": "material-material-searchMaterial",
-  "cnName": "不会返回已经删除的素材"
+  "_file_stem": "material-material-searchMaterial"
 }

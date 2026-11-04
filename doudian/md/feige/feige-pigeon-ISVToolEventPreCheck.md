@@ -1,11 +1,12 @@
-# pigeon.ISVToolEventPreCheck
+# ISV客服工具可用性预检查接口
 
-> ISV客服工具可用性预检查接口，用于查询指定会话中各个客服工具的可执行状态和频控限制
+> pigeon.ISVToolEventPreCheck — ISV客服工具可用性预检查接口，用于查询指定会话中各个客服工具的可执行状态和频控限制
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.ISVToolEventPreCheck` |
 | 中文名 | ISV客服工具可用性预检查接口 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-ISVToolEventPreCheck` |
+| 接口 ID | `doudian.feige.pigeon.ISVToolEventPreCheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/ISVToolEventPreCheck` |

@@ -1,11 +1,12 @@
-# shop.getStorePackageFee
+# 获取门店打包费
 
-> 获取门店打包费
+> shop.getStorePackageFee — 获取门店打包费
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.shop.getStorePackageFee` |
 | 中文名 | 获取门店打包费 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-shop-getStorePackageFee` |
+| 接口 ID | `doudian.retail-store.shop.getStorePackageFee` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getStorePackageFee` |

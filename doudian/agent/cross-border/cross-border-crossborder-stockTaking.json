@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossborder.stockTaking",
+  "cnName": "库存盘点回告",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossborder-stockTaking",
+  "name": "crossborder.stockTaking",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossborder.stockTaking",
   "description": "库存盘点回告",
   "method": "GET",
   "path": "/crossborder/stockTaking",
@@ -269,6 +271,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/883",
   "updatedAt": "2024-03-20",
-  "_file_stem": "cross-border-crossborder-stockTaking",
-  "cnName": "库存盘点回告"
+  "_file_stem": "cross-border-crossborder-stockTaking"
 }

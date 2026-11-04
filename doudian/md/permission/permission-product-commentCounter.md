@@ -1,11 +1,12 @@
-# product.commentCounter
+# 获取商品维度或者店铺维度的评价计数信息
 
-> 获取商品维度或者店铺维度的评价计数信息、或者是印象词信息
+> product.commentCounter — 获取商品维度或者店铺维度的评价计数信息、或者是印象词信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.permission.product.commentCounter` |
 | 中文名 | 获取商品维度或者店铺维度的评价计数信息 |
+| 文档地址 | `/docs/doudian/permission/permission-product-commentCounter` |
+| 接口 ID | `doudian.permission.product.commentCounter` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/commentCounter` |

@@ -1,11 +1,12 @@
-# product.getGoodsCategory
+# 获取商品分类列表
 
-> 获取商品分类列表（12.26下线）
+> product.getGoodsCategory — 获取商品分类列表（12.26下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.getGoodsCategory` |
 | 中文名 | 获取商品分类列表 |
+| 文档地址 | `/docs/doudian/product/product-product-getGoodsCategory` |
+| 接口 ID | `doudian.product.product.getGoodsCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getGoodsCategory` |

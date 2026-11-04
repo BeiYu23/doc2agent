@@ -1,11 +1,12 @@
-# product.isv.createProductFromSupplyPlatform
+# 搜索线索提报 (三方货源发品场景
 
-> 搜索线索提报 (三方货源发品场景)
+> product.isv.createProductFromSupplyPlatform — 搜索线索提报 (三方货源发品场景)
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.isv.createProductFromSupplyPlatform` |
 | 中文名 | 搜索线索提报 (三方货源发品场景 |
+| 文档地址 | `/docs/doudian/product/product-product-isv-createProductFromSupplyPlatform` |
+| 接口 ID | `doudian.product.product.isv.createProductFromSupplyPlatform` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/createProductFromSupplyPlatform` |

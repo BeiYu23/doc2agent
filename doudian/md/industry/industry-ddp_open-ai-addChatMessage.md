@@ -1,11 +1,12 @@
-# ddp_open.ai.addChatMessage
+# 主动推送消息
 
-> 主动推送消息
+> ddp_open.ai.addChatMessage — 主动推送消息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.ddp_open.ai.addChatMessage` |
 | 中文名 | 主动推送消息 |
+| 文档地址 | `/docs/doudian/industry/industry-ddp_open-ai-addChatMessage` |
+| 接口 ID | `doudian.industry.ddp_open.ai.addChatMessage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/ddp_open/ai/addChatMessage` |

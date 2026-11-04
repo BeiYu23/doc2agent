@@ -1,11 +1,12 @@
-# inspection.listInspectionReports
+# 验机报告列表页查询
 
-> 验机报告列表页查询
+> inspection.listInspectionReports — 验机报告列表页查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.listInspectionReports` |
 | 中文名 | 验机报告列表页查询 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-listInspectionReports` |
+| 接口 ID | `doudian.industry.inspection.listInspectionReports` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/listInspectionReports` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.cloud.openCloud.ddpAddShop",
+  "cnName": "数据推送，添加数据推送店铺",
+  "docUrl": "/docs/doudian/cloud/cloud-openCloud-ddpAddShop",
+  "name": "openCloud.ddpAddShop",
   "platform": "doudian",
   "group": "cloud",
-  "name": "openCloud.ddpAddShop",
   "description": "数据推送，添加数据推送店铺",
   "method": "GET",
   "path": "/openCloud/ddpAddShop",
@@ -190,6 +192,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/1402",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-ddpAddShop",
-  "cnName": "数据推送，添加数据推送店铺"
+  "_file_stem": "cloud-openCloud-ddpAddShop"
 }

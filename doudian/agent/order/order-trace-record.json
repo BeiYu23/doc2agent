@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.trace.record",
+  "cnName": "在订单链路监控场景中，回传轨迹信息",
+  "docUrl": "/docs/doudian/order/order-trace-record",
+  "name": "trace.record",
   "platform": "doudian",
   "group": "order",
-  "name": "trace.record",
   "description": "在订单链路监控场景中，回传轨迹信息。 信息回传后能自动记录并统计监控状态信息",
   "method": "GET",
   "path": "/trace/record",
@@ -270,6 +272,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2796",
   "updatedAt": "2022-12-19",
-  "_file_stem": "order-trace-record",
-  "cnName": "在订单链路监控场景中，回传轨迹信息"
+  "_file_stem": "order-trace-record"
 }

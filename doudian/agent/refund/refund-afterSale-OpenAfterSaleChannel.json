@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.OpenAfterSaleChannel",
+  "cnName": "商家打开售后通道",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-OpenAfterSaleChannel",
+  "name": "afterSale.OpenAfterSaleChannel",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.OpenAfterSaleChannel",
   "description": "商家打开售后通道",
   "method": "GET",
   "path": "/afterSale/OpenAfterSaleChannel",
@@ -94,6 +96,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/764",
   "updatedAt": "2021-08-13",
-  "_file_stem": "refund-afterSale-OpenAfterSaleChannel",
-  "cnName": "商家打开售后通道"
+  "_file_stem": "refund-afterSale-OpenAfterSaleChannel"
 }

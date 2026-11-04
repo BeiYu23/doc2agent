@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.colonelBatchAddCaptainGoods",
+  "cnName": "批量加商品到指定活动",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-colonelBatchAddCaptainGoods",
+  "name": "alliance.colonelBatchAddCaptainGoods",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.colonelBatchAddCaptainGoods",
   "description": "批量加商品到指定活动",
   "method": "GET",
   "path": "/alliance/colonelBatchAddCaptainGoods",
@@ -111,6 +113,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/8228",
   "updatedAt": "2026-06-09",
-  "_file_stem": "alliance-alliance-colonelBatchAddCaptainGoods",
-  "cnName": "批量加商品到指定活动"
+  "_file_stem": "alliance-alliance-colonelBatchAddCaptainGoods"
 }

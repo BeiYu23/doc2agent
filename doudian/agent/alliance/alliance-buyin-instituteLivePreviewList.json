@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.instituteLivePreviewList",
+  "cnName": "获取直播预告及商品信息列表",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-instituteLivePreviewList",
+  "name": "buyin.instituteLivePreviewList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.instituteLivePreviewList",
   "description": "获取直播预告及商品信息列表",
   "method": "GET",
   "path": "/buyin/instituteLivePreviewList",
@@ -173,6 +175,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2224",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-instituteLivePreviewList",
-  "cnName": "获取直播预告及商品信息列表"
+  "_file_stem": "alliance-buyin-instituteLivePreviewList"
 }

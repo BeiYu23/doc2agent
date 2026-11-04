@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.updateOrderAmount",
+  "cnName": "未支付订单改货款",
+  "docUrl": "/docs/doudian/order/order-order-updateOrderAmount",
+  "name": "order.updateOrderAmount",
   "platform": "doudian",
   "group": "order",
-  "name": "order.updateOrderAmount",
   "description": "未支付订单改货款",
   "method": "GET",
   "path": "/order/updateOrderAmount",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1833",
   "updatedAt": "2021-04-02",
-  "_file_stem": "order-order-updateOrderAmount",
-  "cnName": "未支付订单改货款"
+  "_file_stem": "order-order-updateOrderAmount"
 }

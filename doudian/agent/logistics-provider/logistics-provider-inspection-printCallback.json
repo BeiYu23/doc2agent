@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.inspection.printCallback",
+  "cnName": "qic外部系统打印回调",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-inspection-printCallback",
+  "name": "inspection.printCallback",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "inspection.printCallback",
   "description": "qic外部系统打印回调",
   "method": "GET",
   "path": "/inspection/printCallback",
@@ -138,6 +140,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8646",
   "updatedAt": "2026-10-08",
-  "_file_stem": "logistics-provider-inspection-printCallback",
-  "cnName": "qic外部系统打印回调"
+  "_file_stem": "logistics-provider-inspection-printCallback"
 }

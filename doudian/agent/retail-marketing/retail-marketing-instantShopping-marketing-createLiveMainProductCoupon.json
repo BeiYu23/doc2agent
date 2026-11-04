@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.createLiveMainProductCoupon",
+  "cnName": "创建直播主品券",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-createLiveMainProductCoupon",
+  "name": "instantShopping.marketing.createLiveMainProductCoupon",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.createLiveMainProductCoupon",
   "description": "创建直播主品券",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -257,6 +259,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/7250",
   "updatedAt": "2025-02-10",
-  "_file_stem": "retail-marketing-instantShopping-marketing-createLiveMainProductCoupon",
-  "cnName": "创建直播主品券"
+  "_file_stem": "retail-marketing-instantShopping-marketing-createLiveMainProductCoupon"
 }

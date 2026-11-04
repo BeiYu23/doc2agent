@@ -1,11 +1,12 @@
-# install.order.supplierUpdateStore
+# 安装服务商更新门店
 
-> 安装服务商更新门店
+> install.order.supplierUpdateStore — 安装服务商更新门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.supplierUpdateStore` |
 | 中文名 | 安装服务商更新门店 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-supplierUpdateStore` |
+| 接口 ID | `doudian.logistics-provider.install.order.supplierUpdateStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierUpdateStore` |

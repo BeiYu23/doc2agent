@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.editComponentTemplate",
+  "cnName": "编辑尺码模板",
+  "docUrl": "/docs/doudian/product/product-product-editComponentTemplate",
+  "name": "product.editComponentTemplate",
   "platform": "doudian",
   "group": "product",
-  "name": "product.editComponentTemplate",
   "description": "编辑尺码模板",
   "method": "GET",
   "path": "/product/editComponentTemplate",
@@ -134,6 +136,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1993",
   "updatedAt": "2022-06-11",
-  "_file_stem": "product-product-editComponentTemplate",
-  "cnName": "编辑尺码模板"
+  "_file_stem": "product-product-editComponentTemplate"
 }

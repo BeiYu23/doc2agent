@@ -1,12 +1,13 @@
-# mini.blindbox.result
+# 小程序用户抽盒，同步抽盒结果平台
 
-> 小程序用户抽盒，同步抽盒结果平台
+> mini.blindbox.result — 小程序用户抽盒，同步抽盒结果平台
 1、使用场景说明，用户下单后在小程序抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.blindbox.result` |
 | 中文名 | 小程序用户抽盒，同步抽盒结果平台 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-blindbox-result` |
+| 接口 ID | `doudian.miniapp.mini.blindbox.result` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/blindbox/result` |

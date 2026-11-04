@@ -1,11 +1,12 @@
-# sms.sendSmsTestCode
+# 给测试手机号发送验证码
 
-> 给测试手机号发送验证码
+> sms.sendSmsTestCode — 给测试手机号发送验证码
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.sendSmsTestCode` |
 | 中文名 | 给测试手机号发送验证码 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-sendSmsTestCode` |
+| 接口 ID | `doudian.sms.sms.sendSmsTestCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/sendSmsTestCode` |

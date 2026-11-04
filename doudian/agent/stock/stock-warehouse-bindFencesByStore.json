@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.warehouse.bindFencesByStore",
+  "cnName": "绑定门店和电子围栏",
+  "docUrl": "/docs/doudian/stock/stock-warehouse-bindFencesByStore",
+  "name": "warehouse.bindFencesByStore",
   "platform": "doudian",
   "group": "stock",
-  "name": "warehouse.bindFencesByStore",
   "description": "绑定门店和电子围栏",
   "method": "GET",
   "path": "/warehouse/bindFencesByStore",
@@ -132,6 +134,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/2535",
   "updatedAt": "2024-12-17",
-  "_file_stem": "stock-warehouse-bindFencesByStore",
-  "cnName": "绑定门店和电子围栏"
+  "_file_stem": "stock-warehouse-bindFencesByStore"
 }

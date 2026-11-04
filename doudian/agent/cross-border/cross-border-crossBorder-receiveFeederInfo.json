@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.receiveFeederInfo",
+  "cnName": "分拨直送服务商回传支线单据",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-receiveFeederInfo",
+  "name": "crossBorder.receiveFeederInfo",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.receiveFeederInfo",
   "description": "分拨直送服务商回传支线单据",
   "method": "GET",
   "path": "/crossBorder/receiveFeederInfo",
@@ -184,6 +186,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/4140",
   "updatedAt": "2023-06-27",
-  "_file_stem": "cross-border-crossBorder-receiveFeederInfo",
-  "cnName": "分拨直送服务商回传支线单据"
+  "_file_stem": "cross-border-crossBorder-receiveFeederInfo"
 }

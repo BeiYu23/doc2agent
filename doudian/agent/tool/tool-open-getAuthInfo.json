@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.open.getAuthInfo",
+  "cnName": "查询授权信息",
+  "docUrl": "/docs/doudian/tool/tool-open-getAuthInfo",
+  "name": "open.getAuthInfo",
   "platform": "doudian",
   "group": "tool",
-  "name": "open.getAuthInfo",
   "description": "查询授权信息",
   "method": "GET",
   "path": "/open/getAuthInfo",
@@ -112,6 +114,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3582",
   "updatedAt": "2023-04-18",
-  "_file_stem": "tool-open-getAuthInfo",
-  "cnName": "查询授权信息"
+  "_file_stem": "tool-open-getAuthInfo"
 }

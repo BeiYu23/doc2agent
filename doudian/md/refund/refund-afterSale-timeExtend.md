@@ -1,11 +1,12 @@
-# afterSale.timeExtend
+# 此接口用来帮助商家进行延时收货
 
-> 此接口用来帮助商家进行延时收货，商家可以在还有2天到期的时间进行操作，会在原有剩余时间的基础上增加7天。
+> afterSale.timeExtend — 此接口用来帮助商家进行延时收货，商家可以在还有2天到期的时间进行操作，会在原有剩余时间的基础上增加7天。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.timeExtend` |
 | 中文名 | 此接口用来帮助商家进行延时收货 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-timeExtend` |
+| 接口 ID | `doudian.refund.afterSale.timeExtend` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/timeExtend` |

@@ -1,11 +1,12 @@
-# max.coupons
+# 批量获取优惠券信息
 
-> 批量获取优惠券信息
+> max.coupons — 批量获取优惠券信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.max.coupons` |
 | 中文名 | 批量获取优惠券信息 |
+| 文档地址 | `/docs/doudian/shop/shop-max-coupons` |
+| 接口 ID | `doudian.shop.max.coupons` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/max/coupons` |

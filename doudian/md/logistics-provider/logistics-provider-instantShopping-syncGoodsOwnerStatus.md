@@ -1,11 +1,12 @@
-# instantShopping.syncGoodsOwnerStatus
+# 服务商回传货主状态
 
-> 服务商回传货主状态
+> instantShopping.syncGoodsOwnerStatus — 服务商回传货主状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.instantShopping.syncGoodsOwnerStatus` |
 | 中文名 | 服务商回传货主状态 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-instantShopping-syncGoodsOwnerStatus` |
+| 接口 ID | `doudian.logistics-provider.instantShopping.syncGoodsOwnerStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

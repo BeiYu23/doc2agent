@@ -1,11 +1,12 @@
-# instantShopping.starhub.queryRelayOrderStatus
+# 接力单状态查询
 
-> 接力单状态查询
+> instantShopping.starhub.queryRelayOrderStatus — 接力单状态查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.instantShopping.starhub.queryRelayOrderStatus` |
 | 中文名 | 接力单状态查询 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-instantShopping-starhub-queryRelayOrderStatus` |
+| 接口 ID | `doudian.warehouse.instantShopping.starhub.queryRelayOrderStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

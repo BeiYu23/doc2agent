@@ -1,11 +1,12 @@
-# second.category.getFullItemsByIds
+# 【二方接口】根据类目ID查询本级类目信息
 
-> 【二方接口】根据类目ID查询本级类目信息
+> second.category.getFullItemsByIds — 【二方接口】根据类目ID查询本级类目信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.category.getFullItemsByIds` |
 | 中文名 | 【二方接口】根据类目ID查询本级类目信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-category-getFullItemsByIds` |
+| 接口 ID | `doudian.dongchedi.second.category.getFullItemsByIds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

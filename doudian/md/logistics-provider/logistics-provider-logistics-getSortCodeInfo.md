@@ -1,11 +1,12 @@
-# logistics.getSortCodeInfo
+# 获取面单段码信息
 
-> 获取面单段码信息
+> logistics.getSortCodeInfo — 获取面单段码信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.getSortCodeInfo` |
 | 中文名 | 获取面单段码信息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-getSortCodeInfo` |
+| 接口 ID | `doudian.logistics-provider.logistics.getSortCodeInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getSortCodeInfo` |

@@ -1,11 +1,12 @@
-# product.updateChannelProduct
+# 编辑渠道商品
 
-> 编辑渠道商品
+> product.updateChannelProduct — 编辑渠道商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.updateChannelProduct` |
 | 中文名 | 编辑渠道商品 |
+| 文档地址 | `/docs/doudian/product/product-product-updateChannelProduct` |
+| 接口 ID | `doudian.product.product.updateChannelProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/updateChannelProduct` |

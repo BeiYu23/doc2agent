@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-marketing.instantShopping.marketing.listActivityMainProducts",
+  "cnName": "批量查询活动下报名的主商品",
+  "docUrl": "/docs/doudian/retail-marketing/retail-marketing-instantShopping-marketing-listActivityMainProducts",
+  "name": "instantShopping.marketing.listActivityMainProducts",
   "platform": "doudian",
   "group": "retail-marketing",
-  "name": "instantShopping.marketing.listActivityMainProducts",
   "description": "批量查询活动下报名的主商品",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -144,6 +146,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/7254",
   "updatedAt": "2025-02-10",
-  "_file_stem": "retail-marketing-instantShopping-marketing-listActivityMainProducts",
-  "cnName": "批量查询活动下报名的主商品"
+  "_file_stem": "retail-marketing-instantShopping-marketing-listActivityMainProducts"
 }

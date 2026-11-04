@@ -1,11 +1,12 @@
-# power.netsiteQuery
+# 网点信息查询
 
-> 网点信息查询
+> power.netsiteQuery — 网点信息查询
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.netsiteQuery` |
 | 中文名 | 网点信息查询 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-netsiteQuery` |
+| 接口 ID | `doudian.logistics.power.netsiteQuery` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/netsiteQuery` |

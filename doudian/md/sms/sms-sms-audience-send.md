@@ -1,11 +1,12 @@
-# sms.audience.send
+# 按人群包发送短信
 
-> 按人群包发送短信
+> sms.audience.send — 按人群包发送短信
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.audience.send` |
 | 中文名 | 按人群包发送短信 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-audience-send` |
+| 接口 ID | `doudian.sms.sms.audience.send` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/send` |

@@ -1,11 +1,12 @@
-# product.getBindBySaleProduct
+# 通过前台销售商品查供货商品
 
-> 通过前台销售商品查供货商品
+> product.getBindBySaleProduct — 通过前台销售商品查供货商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.product.getBindBySaleProduct` |
 | 中文名 | 通过前台销售商品查供货商品 |
+| 文档地址 | `/docs/doudian/stock/stock-product-getBindBySaleProduct` |
+| 接口 ID | `doudian.stock.product.getBindBySaleProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getBindBySaleProduct` |

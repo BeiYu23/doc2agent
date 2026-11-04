@@ -1,8 +1,10 @@
 {
   "id": "doudian.permission.buyin.getDistributionLiveProductList",
+  "cnName": "【二方接口】直播间商品列表",
+  "docUrl": "/docs/doudian/permission/permission-buyin-getDistributionLiveProductList",
+  "name": "buyin.getDistributionLiveProductList",
   "platform": "doudian",
   "group": "permission",
-  "name": "buyin.getDistributionLiveProductList",
   "description": "【二方接口】直播间商品列表",
   "method": "GET",
   "path": "/buyin/getDistributionLiveProductList",
@@ -308,6 +310,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1506/6582",
   "updatedAt": "2025-06-26",
-  "_file_stem": "permission-buyin-getDistributionLiveProductList",
-  "cnName": "【二方接口】直播间商品列表"
+  "_file_stem": "permission-buyin-getDistributionLiveProductList"
 }

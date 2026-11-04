@@ -1,11 +1,12 @@
-# shop.delStore
+# 删除门店
 
-> 删除门店
+> shop.delStore — 删除门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.delStore` |
 | 中文名 | 删除门店 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-delStore` |
+| 接口 ID | `doudian.shop.shop.delStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/delStore` |

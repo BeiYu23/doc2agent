@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.createCall",
+  "cnName": "派前电联创建呼叫",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-createCall",
+  "name": "logistics.createCall",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.createCall",
   "description": "派前电联创建呼叫接口",
   "method": "GET",
   "path": "/logistics/createCall",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2876",
   "updatedAt": "2023-01-09",
-  "_file_stem": "logistics-provider-logistics-createCall",
-  "cnName": "派前电联创建呼叫"
+  "_file_stem": "logistics-provider-logistics-createCall"
 }

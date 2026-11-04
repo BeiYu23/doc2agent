@@ -1,8 +1,10 @@
 {
   "id": "doudian.bic-inspect.orderCode.getWarehouseAndAgencyList",
+  "cnName": "获取全量QIC质检仓和机构的信息",
+  "docUrl": "/docs/doudian/bic-inspect/bic-inspect-orderCode-getWarehouseAndAgencyList",
+  "name": "orderCode.getWarehouseAndAgencyList",
   "platform": "doudian",
   "group": "bic-inspect",
-  "name": "orderCode.getWarehouseAndAgencyList",
   "description": "获取全量QIC质检仓和机构的信息",
   "method": "GET",
   "path": "/orderCode/getWarehouseAndAgencyList",
@@ -77,6 +79,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/6733",
   "updatedAt": "2024-07-30",
-  "_file_stem": "bic-inspect-orderCode-getWarehouseAndAgencyList",
-  "cnName": "获取全量QIC质检仓和机构的信息"
+  "_file_stem": "bic-inspect-orderCode-getWarehouseAndAgencyList"
 }

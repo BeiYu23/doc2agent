@@ -1,11 +1,12 @@
-# logistics.queryCjAccountFLowFIleUrl
+# 获取物流服务商对应账户的资金日账单
 
-> 获取物流服务商对应账户的资金日账单
+> logistics.queryCjAccountFLowFIleUrl — 获取物流服务商对应账户的资金日账单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.queryCjAccountFLowFIleUrl` |
 | 中文名 | 获取物流服务商对应账户的资金日账单 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-queryCjAccountFLowFIleUrl` |
+| 接口 ID | `doudian.logistics-provider.logistics.queryCjAccountFLowFIleUrl` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/queryCjAccountFLowFIleUrl` |

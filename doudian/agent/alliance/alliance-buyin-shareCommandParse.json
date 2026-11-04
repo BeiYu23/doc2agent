@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.shareCommandParse",
+  "cnName": "商品口令转商品解析",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-shareCommandParse",
+  "name": "buyin.shareCommandParse",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.shareCommandParse",
   "description": "商品口令转商品解析",
   "method": "GET",
   "path": "/buyin/shareCommandParse",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1726",
   "updatedAt": "2024-04-11",
-  "_file_stem": "alliance-buyin-shareCommandParse",
-  "cnName": "商品口令转商品解析"
+  "_file_stem": "alliance-buyin-shareCommandParse"
 }

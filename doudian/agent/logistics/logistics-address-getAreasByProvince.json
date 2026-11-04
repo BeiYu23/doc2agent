@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.address.getAreasByProvince",
+  "cnName": "查询最新的四级地址用于订单售后处理",
+  "docUrl": "/docs/doudian/logistics/logistics-address-getAreasByProvince",
+  "name": "address.getAreasByProvince",
   "platform": "doudian",
   "group": "logistics",
-  "name": "address.getAreasByProvince",
   "description": "查询最新的四级地址用于订单售后处理",
   "method": "GET",
   "path": "/address/getAreasByProvince",
@@ -99,6 +101,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1844",
   "updatedAt": "2022-08-08",
-  "_file_stem": "logistics-address-getAreasByProvince",
-  "cnName": "查询最新的四级地址用于订单售后处理"
+  "_file_stem": "logistics-address-getAreasByProvince"
 }

@@ -1,11 +1,12 @@
-# install.order.supplierSyncSiteInfo
+# 服务商同步网点信息
 
-> 服务商同步网点信息
+> install.order.supplierSyncSiteInfo — 服务商同步网点信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.install.order.supplierSyncSiteInfo` |
 | 中文名 | 服务商同步网点信息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-install-order-supplierSyncSiteInfo` |
+| 接口 ID | `doudian.logistics-provider.install.order.supplierSyncSiteInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierSyncSiteInfo` |

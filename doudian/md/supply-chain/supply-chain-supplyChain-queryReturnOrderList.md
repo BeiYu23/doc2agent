@@ -1,11 +1,12 @@
-# supplyChain.queryReturnOrderList
+# 根据筛选条件批量查询售后单列表
 
-> 根据筛选条件批量查询售后单列表，单次最多返回100个
+> supplyChain.queryReturnOrderList — 根据筛选条件批量查询售后单列表，单次最多返回100个
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.queryReturnOrderList` |
 | 中文名 | 根据筛选条件批量查询售后单列表 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-queryReturnOrderList` |
+| 接口 ID | `doudian.supply-chain.supplyChain.queryReturnOrderList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryReturnOrderList` |

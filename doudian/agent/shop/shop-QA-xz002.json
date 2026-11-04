@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.QA.xz002",
+  "cnName": "接口描述11",
+  "docUrl": "/docs/doudian/shop/shop-QA-xz002",
+  "name": "QA.xz002",
   "platform": "doudian",
   "group": "shop",
-  "name": "QA.xz002",
   "description": "接口描述11",
   "method": "GET",
   "path": "/QA/xz002",
@@ -80,6 +82,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2494",
   "updatedAt": "2022-09-15",
-  "_file_stem": "shop-QA-xz002",
-  "cnName": "接口描述11"
+  "_file_stem": "shop-QA-xz002"
 }

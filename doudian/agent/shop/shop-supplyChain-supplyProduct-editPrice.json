@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.supplyProduct.editPrice",
+  "cnName": "编辑价格",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-supplyProduct-editPrice",
+  "name": "supplyChain.supplyProduct.editPrice",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.supplyProduct.editPrice",
   "description": "编辑价格",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -96,6 +98,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2127",
   "updatedAt": "2022-06-28",
-  "_file_stem": "shop-supplyChain-supplyProduct-editPrice",
-  "cnName": "编辑价格"
+  "_file_stem": "shop-supplyChain-supplyProduct-editPrice"
 }

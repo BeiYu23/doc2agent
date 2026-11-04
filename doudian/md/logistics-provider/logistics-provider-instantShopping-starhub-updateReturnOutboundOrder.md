@@ -1,11 +1,12 @@
-# instantShopping.starhub.updateReturnOutboundOrder
+# 退供出库场景，服务商通知抖音退仓出库单状态
 
-> 退供出库场景，服务商通知抖音退仓出库单状态
+> instantShopping.starhub.updateReturnOutboundOrder — 退供出库场景，服务商通知抖音退仓出库单状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.instantShopping.starhub.updateReturnOutboundOrder` |
 | 中文名 | 退供出库场景，服务商通知抖音退仓出库单状态 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-instantShopping-starhub-updateReturnOutboundOrder` |
+| 接口 ID | `doudian.logistics-provider.instantShopping.starhub.updateReturnOutboundOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

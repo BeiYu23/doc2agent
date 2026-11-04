@@ -1,11 +1,12 @@
-# logistics.virtualServicePushSms
+# 短信回传
 
-> 短信回传
+> logistics.virtualServicePushSms — 短信回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.logistics.virtualServicePushSms` |
 | 中文名 | 短信回传 |
+| 文档地址 | `/docs/doudian/order/order-logistics-virtualServicePushSms` |
+| 接口 ID | `doudian.order.logistics.virtualServicePushSms` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/virtualServicePushSms` |

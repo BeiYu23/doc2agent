@@ -1,11 +1,12 @@
-# supplyChain.freightUpdate
+# 运费模版变更
 
-> 运费模版变更
+> supplyChain.freightUpdate — 运费模版变更
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-goods.supplyChain.freightUpdate` |
 | 中文名 | 运费模版变更 |
+| 文档地址 | `/docs/doudian/supply-goods/supply-goods-supplyChain-freightUpdate` |
+| 接口 ID | `doudian.supply-goods.supplyChain.freightUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/freightUpdate` |

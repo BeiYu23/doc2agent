@@ -1,8 +1,10 @@
 {
   "id": "doudian.marketing.marketing.disableActivity",
+  "cnName": "失效营销玩法",
+  "docUrl": "/docs/doudian/marketing/marketing-marketing-disableActivity",
+  "name": "marketing.disableActivity",
   "platform": "doudian",
   "group": "marketing",
-  "name": "marketing.disableActivity",
   "description": "失效营销玩法",
   "method": "GET",
   "path": "/marketing/disableActivity",
@@ -163,6 +165,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/7780",
   "updatedAt": "2025-09-16",
-  "_file_stem": "marketing-marketing-disableActivity",
-  "cnName": "失效营销玩法"
+  "_file_stem": "marketing-marketing-disableActivity"
 }

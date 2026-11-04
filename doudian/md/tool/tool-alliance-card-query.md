@@ -1,11 +1,12 @@
-# alliance.card.query
+# 查询达人选品车商品
 
-> 查询达人选品车商品
+> alliance.card.query — 查询达人选品车商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.alliance.card.query` |
 | 中文名 | 查询达人选品车商品 |
+| 文档地址 | `/docs/doudian/tool/tool-alliance-card-query` |
+| 接口 ID | `doudian.tool.alliance.card.query` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/card/query` |

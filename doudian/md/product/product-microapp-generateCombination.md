@@ -1,11 +1,12 @@
-# microapp.generateCombination
+# 生成组合购
 
-> 生成组合购
+> microapp.generateCombination — 生成组合购
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.microapp.generateCombination` |
 | 中文名 | 生成组合购 |
+| 文档地址 | `/docs/doudian/product/product-microapp-generateCombination` |
+| 接口 ID | `doudian.product.microapp.generateCombination` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/microapp/generateCombination` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.order.order.list",
+  "cnName": "获取订单列表",
+  "docUrl": "/docs/doudian/order/order-order-list",
+  "name": "order.list",
   "platform": "doudian",
   "group": "order",
-  "name": "order.list",
   "description": "获取订单列表（6.30下线建议替换/order/searchList接口）",
   "method": "GET",
   "path": "/order/list",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/55",
   "updatedAt": "2021-05-17",
-  "_file_stem": "order-order-list",
-  "cnName": "获取订单列表"
+  "_file_stem": "order-order-list"
 }

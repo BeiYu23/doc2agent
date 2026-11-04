@@ -1,11 +1,12 @@
-# instantShopping.VirtualTelAuthenticationUpload
+# 骑手隐私号实名认证
 
-> 骑手隐私号实名认证
+> instantShopping.VirtualTelAuthenticationUpload — 骑手隐私号实名认证
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-logistics.instantShopping.VirtualTelAuthenticationUpload` |
 | 中文名 | 骑手隐私号实名认证 |
+| 文档地址 | `/docs/doudian/retail-logistics/retail-logistics-instantShopping-VirtualTelAuthenticationUpload` |
+| 接口 ID | `doudian.retail-logistics.instantShopping.VirtualTelAuthenticationUpload` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.power.closeSession",
+  "cnName": "客服关闭会话",
+  "docUrl": "/docs/doudian/logistics/logistics-power-closeSession",
+  "name": "power.closeSession",
   "platform": "doudian",
   "group": "logistics",
-  "name": "power.closeSession",
   "description": "客服关闭会话",
   "method": "GET",
   "path": "/power/closeSession",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1562",
   "updatedAt": "2023-02-24",
-  "_file_stem": "logistics-power-closeSession",
-  "cnName": "客服关闭会话"
+  "_file_stem": "logistics-power-closeSession"
 }

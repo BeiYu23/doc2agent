@@ -1,8 +1,10 @@
 {
   "id": "doudian.bic-inspect.orderCode.erpShopBindOrderCode",
+  "cnName": "质检/查验订单商家发货接口",
+  "docUrl": "/docs/doudian/bic-inspect/bic-inspect-orderCode-erpShopBindOrderCode",
+  "name": "orderCode.erpShopBindOrderCode",
   "platform": "doudian",
   "group": "bic-inspect",
-  "name": "orderCode.erpShopBindOrderCode",
   "description": "质检/查验订单商家发货接口，调用后会绑定订单和订单码，并生成qic入库单，\ndelivery_type 是 【0】&& ship_type 是【1】，对应一单一包裹模式；\ndelivery_type 是 【0】&& ship_type 是【3】，对应混订单",
   "method": "GET",
   "path": "/orderCode/erpShopBindOrderCode",
@@ -321,6 +323,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/806",
   "updatedAt": "2024-08-01",
-  "_file_stem": "bic-inspect-orderCode-erpShopBindOrderCode",
-  "cnName": "质检/查验订单商家发货接口"
+  "_file_stem": "bic-inspect-orderCode-erpShopBindOrderCode"
 }

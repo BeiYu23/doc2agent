@@ -1,11 +1,12 @@
-# power.query
+# 查询物流（仅用于兼容老物流网关
 
-> 查询物流（仅用于兼容老物流网关）
+> power.query — 查询物流（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.query` |
 | 中文名 | 查询物流（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-query` |
+| 接口 ID | `doudian.logistics.power.query` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/query` |

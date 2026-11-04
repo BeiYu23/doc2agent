@@ -1,11 +1,12 @@
-# spu.getSpuInfoBySpuId
+# SPU信息查看
 
-> SPU信息查看
+> spu.getSpuInfoBySpuId — SPU信息查看
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.spu.getSpuInfoBySpuId` |
 | 中文名 | SPU信息查看 |
+| 文档地址 | `/docs/doudian/product/product-spu-getSpuInfoBySpuId` |
+| 接口 ID | `doudian.product.spu.getSpuInfoBySpuId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/getSpuInfoBySpuId` |

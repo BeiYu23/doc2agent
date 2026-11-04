@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.product.CategoryDimList",
+  "cnName": "类目检索",
+  "docUrl": "/docs/doudian/product/product-product-CategoryDimList",
+  "name": "product.CategoryDimList",
   "platform": "doudian",
   "group": "product",
-  "name": "product.CategoryDimList",
   "description": "类目检索",
   "method": "GET",
   "path": "/product/CategoryDimList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2241",
   "updatedAt": "2022-07-27",
-  "_file_stem": "product-product-CategoryDimList",
-  "cnName": "类目检索"
+  "_file_stem": "product-product-CategoryDimList"
 }

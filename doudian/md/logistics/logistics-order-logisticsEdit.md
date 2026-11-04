@@ -1,11 +1,12 @@
-# order.logisticsEdit
+# 更新整单发货物流信息
 
-> 更新整单发货物流信息
+> order.logisticsEdit — 更新整单发货物流信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.logisticsEdit` |
 | 中文名 | 更新整单发货物流信息 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-logisticsEdit` |
+| 接口 ID | `doudian.logistics.order.logisticsEdit` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsEdit` |

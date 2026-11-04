@@ -1,11 +1,12 @@
-# supplyChain.warehouse.editAddr
+# 编辑区域仓地址
 
-> 编辑区域仓地址
+> supplyChain.warehouse.editAddr — 编辑区域仓地址
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.warehouse.editAddr` |
 | 中文名 | 编辑区域仓地址 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-warehouse-editAddr` |
+| 接口 ID | `doudian.supply-chain.supplyChain.warehouse.editAddr` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

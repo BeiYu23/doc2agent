@@ -1,11 +1,12 @@
-# address.update
+# 该接口支持店铺修改单条售后地址信息
 
-> 该接口支持店铺修改单条售后地址信息
+> address.update — 该接口支持店铺修改单条售后地址信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.address.update` |
 | 中文名 | 该接口支持店铺修改单条售后地址信息 |
+| 文档地址 | `/docs/doudian/shop/shop-address-update` |
+| 接口 ID | `doudian.shop.address.update` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/update` |

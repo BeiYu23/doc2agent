@@ -1,11 +1,12 @@
-# buyin.getDeliveryActivityProds
+# 三方获取活动页商品货池
 
-> 三方获取活动页商品货池
+> buyin.getDeliveryActivityProds — 三方获取活动页商品货池
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.getDeliveryActivityProds` |
 | 中文名 | 三方获取活动页商品货池 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-getDeliveryActivityProds` |
+| 接口 ID | `doudian.alliance.buyin.getDeliveryActivityProds` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/getDeliveryActivityProds` |

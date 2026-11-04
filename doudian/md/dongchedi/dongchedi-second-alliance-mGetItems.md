@@ -1,11 +1,12 @@
-# second.alliance.mGetItems
+# 【二方接口】根据推广id列表获取推广
 
-> 【二方接口】根据推广id列表获取推广详情
+> second.alliance.mGetItems — 【二方接口】根据推广id列表获取推广详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.alliance.mGetItems` |
 | 中文名 | 【二方接口】根据推广id列表获取推广 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-alliance-mGetItems` |
+| 接口 ID | `doudian.dongchedi.second.alliance.mGetItems` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

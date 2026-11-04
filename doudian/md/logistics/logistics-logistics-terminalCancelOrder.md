@@ -1,11 +1,12 @@
-# logistics.terminalCancelOrder
+# 物流商取消
 
-> 物流商取消
+> logistics.terminalCancelOrder — 物流商取消
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.terminalCancelOrder` |
 | 中文名 | 物流商取消 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-terminalCancelOrder` |
+| 接口 ID | `doudian.logistics.logistics.terminalCancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/terminalCancelOrder` |

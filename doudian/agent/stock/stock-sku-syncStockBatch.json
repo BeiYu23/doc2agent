@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.sku.syncStockBatch",
+  "cnName": "库存批量同步",
+  "docUrl": "/docs/doudian/stock/stock-sku-syncStockBatch",
+  "name": "sku.syncStockBatch",
   "platform": "doudian",
   "group": "stock",
-  "name": "sku.syncStockBatch",
   "description": "库存批量同步接口",
   "method": "GET",
   "path": "/sku/syncStockBatch",
@@ -418,6 +420,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/298",
   "updatedAt": "2025-02-17",
-  "_file_stem": "stock-sku-syncStockBatch",
-  "cnName": "库存批量同步"
+  "_file_stem": "stock-sku-syncStockBatch"
 }

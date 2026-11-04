@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.shopVideo.listVideo",
+  "cnName": "查询已投稿短视频列表",
+  "docUrl": "/docs/doudian/video/video-shopVideo-listVideo",
+  "name": "shopVideo.listVideo",
   "platform": "doudian",
   "group": "video",
-  "name": "shopVideo.listVideo",
   "description": "查询已投稿短视频列表",
   "method": "GET",
   "path": "/shopVideo/listVideo",
@@ -159,6 +161,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7146",
   "updatedAt": "2024-12-12",
-  "_file_stem": "video-shopVideo-listVideo",
-  "cnName": "查询已投稿短视频列表"
+  "_file_stem": "video-shopVideo-listVideo"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.resale.order.supplierConfirm",
+  "cnName": "服务商确认",
+  "docUrl": "/docs/doudian/recycle/recycle-resale-order-supplierConfirm",
+  "name": "resale.order.supplierConfirm",
   "platform": "doudian",
   "group": "recycle",
-  "name": "resale.order.supplierConfirm",
   "description": "服务商确认",
   "method": "GET",
   "path": "/resale/order/supplierConfirm",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/4626",
   "updatedAt": "2024-06-19",
-  "_file_stem": "recycle-resale-order-supplierConfirm",
-  "cnName": "服务商确认"
+  "_file_stem": "recycle-resale-order-supplierConfirm"
 }

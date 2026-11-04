@@ -1,11 +1,12 @@
-# supplyCenter.refund.operate
+# 退款驱动
 
-> 退款驱动
+> supplyCenter.refund.operate — 退款驱动
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.refund.operate` |
 | 中文名 | 退款驱动 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-refund-operate` |
+| 接口 ID | `doudian.selection.supplyCenter.refund.operate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/refund/operate` |

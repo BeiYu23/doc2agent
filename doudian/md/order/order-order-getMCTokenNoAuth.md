@@ -1,11 +1,12 @@
-# order.getMCTokenNoAuth
+# 获取前端明文解密token
 
-> 获取前端明文解密token
+> order.getMCTokenNoAuth — 获取前端明文解密token
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.getMCTokenNoAuth` |
 | 中文名 | 获取前端明文解密token |
+| 文档地址 | `/docs/doudian/order/order-order-getMCTokenNoAuth` |
+| 接口 ID | `doudian.order.order.getMCTokenNoAuth` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getMCTokenNoAuth` |

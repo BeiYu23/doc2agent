@@ -1,11 +1,12 @@
-# product.publishPreCheck
+# 商品发布前置校验
 
-> 商品发布前置校验接口
+> product.publishPreCheck — 商品发布前置校验接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.publishPreCheck` |
 | 中文名 | 商品发布前置校验 |
+| 文档地址 | `/docs/doudian/product/product-product-publishPreCheck` |
+| 接口 ID | `doudian.product.product.publishPreCheck` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/publishPreCheck` |

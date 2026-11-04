@@ -1,11 +1,12 @@
-# logistics.outside.payAndCollectIndex
+# 按照服务商
 
-> 按照服务商、揽收地区、收货地区查询各服务商全国或各省份流向上Top200的责任线路以及对应的责任运单量
+> logistics.outside.payAndCollectIndex — 按照服务商、揽收地区、收货地区查询各服务商全国或各省份流向上Top200的责任线路以及对应的责任运单量
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.outside.payAndCollectIndex` |
 | 中文名 | 按照服务商 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-outside-payAndCollectIndex` |
+| 接口 ID | `doudian.logistics-provider.logistics.outside.payAndCollectIndex` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# contentAIGC.createAIVideoTaskOpen
+# 创建成片任务
 
-> 创建成片任务，同次提交按 requestId 幂等
+> contentAIGC.createAIVideoTaskOpen — 创建成片任务，同次提交按 requestId 幂等
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.doubao.contentAIGC.createAIVideoTaskOpen` |
 | 中文名 | 创建成片任务 |
+| 文档地址 | `/docs/doudian/doubao/doubao-contentAIGC-createAIVideoTaskOpen` |
+| 接口 ID | `doudian.doubao.contentAIGC.createAIVideoTaskOpen` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/createAIVideoTaskOpen` |

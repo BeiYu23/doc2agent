@@ -1,8 +1,10 @@
 {
   "id": "doudian.btas-inspect.btas.updateOrderCourier",
+  "cnName": "更新订单的物流面单信息",
+  "docUrl": "/docs/doudian/btas-inspect/btas-inspect-btas-updateOrderCourier",
+  "name": "btas.updateOrderCourier",
   "platform": "doudian",
   "group": "btas-inspect",
-  "name": "btas.updateOrderCourier",
   "description": "更新订单的物流面单信息",
   "method": "GET",
   "path": "/btas/updateOrderCourier",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/3528",
   "updatedAt": "2023-04-12",
-  "_file_stem": "btas-inspect-btas-updateOrderCourier",
-  "cnName": "更新订单的物流面单信息"
+  "_file_stem": "btas-inspect-btas-updateOrderCourier"
 }

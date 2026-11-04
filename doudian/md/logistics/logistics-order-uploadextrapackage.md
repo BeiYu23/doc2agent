@@ -1,11 +1,12 @@
-# order.uploadextrapackage
+# 订单额外运单信息上传接口
 
-> 订单额外运单信息上传接口，适用于商品件数小于运单数量场景或者补发场景。商家通过发货接口上传运单号后，ISV通过接入该接口将多余的运单号回传到抖店系统，并展示给买家。
+> order.uploadextrapackage — 订单额外运单信息上传接口，适用于商品件数小于运单数量场景或者补发场景。商家通过发货接口上传运单号后，ISV通过接入该接口将多余的运单号回传到抖店系统，并展示给买家。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.order.uploadextrapackage` |
 | 中文名 | 订单额外运单信息上传接口 |
+| 文档地址 | `/docs/doudian/logistics/logistics-order-uploadextrapackage` |
+| 接口 ID | `doudian.logistics.order.uploadextrapackage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/uploadextrapackage` |

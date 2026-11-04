@@ -1,11 +1,12 @@
-# instantShopping.logisticsMerchant.getOrganizeAndStaff
+# 获取组织架构&人员信息
 
-> 获取组织架构&人员信息
+> instantShopping.logisticsMerchant.getOrganizeAndStaff — 获取组织架构&人员信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-express.instantShopping.logisticsMerchant.getOrganizeAndStaff` |
 | 中文名 | 获取组织架构&人员信息 |
+| 文档地址 | `/docs/doudian/retail-express/retail-express-instantShopping-logisticsMerchant-getOrganizeAndStaff` |
+| 接口 ID | `doudian.retail-express.instantShopping.logisticsMerchant.getOrganizeAndStaff` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

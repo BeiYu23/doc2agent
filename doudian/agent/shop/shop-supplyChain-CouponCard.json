@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.CouponCard",
+  "cnName": "跨境自营店铺首页优惠券卡片",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-CouponCard",
+  "name": "supplyChain.CouponCard",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.CouponCard",
   "description": "跨境自营店铺首页优惠券卡片",
   "method": "GET",
   "path": "/supplyChain/CouponCard",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2849",
   "updatedAt": "2023-01-17",
-  "_file_stem": "shop-supplyChain-CouponCard",
-  "cnName": "跨境自营店铺首页优惠券卡片"
+  "_file_stem": "shop-supplyChain-CouponCard"
 }

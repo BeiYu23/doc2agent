@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.kolMaterialsProductsSearch",
+  "cnName": "检索精选联盟商品，需达人/抖客授权",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-kolMaterialsProductsSearch",
+  "name": "buyin.kolMaterialsProductsSearch",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.kolMaterialsProductsSearch",
   "description": "检索精选联盟商品，需达人/抖客授权",
   "method": "GET",
   "path": "/buyin/kolMaterialsProductsSearch",
@@ -313,6 +315,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1725",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-kolMaterialsProductsSearch",
-  "cnName": "检索精选联盟商品，需达人/抖客授权"
+  "_file_stem": "alliance-buyin-kolMaterialsProductsSearch"
 }

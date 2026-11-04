@@ -1,11 +1,12 @@
-# crossBorder.orderOperate
+# 服务商回传仓储
 
-> 服务商回传仓储
+> crossBorder.orderOperate — 服务商回传仓储
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.crossBorder.orderOperate` |
 | 中文名 | 服务商回传仓储 |
+| 文档地址 | `/docs/doudian/logistics/logistics-crossBorder-orderOperate` |
+| 接口 ID | `doudian.logistics.crossBorder.orderOperate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/orderOperate` |

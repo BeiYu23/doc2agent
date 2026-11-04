@@ -1,11 +1,12 @@
-# shop.batchUpdateCategory
+# 批量更新分类
 
-> 批量更新分类
+> shop.batchUpdateCategory — 批量更新分类
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.decoration.shop.batchUpdateCategory` |
 | 中文名 | 批量更新分类 |
+| 文档地址 | `/docs/doudian/decoration/decoration-shop-batchUpdateCategory` |
+| 接口 ID | `doudian.decoration.shop.batchUpdateCategory` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/batchUpdateCategory` |

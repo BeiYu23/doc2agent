@@ -1,11 +1,12 @@
-# sms.sign.getShopSign
+# 获取商家在抖店的最新审核通过签名
 
-> 获取商家在抖店的最新审核通过签名
+> sms.sign.getShopSign — 获取商家在抖店的最新审核通过签名
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.sign.getShopSign` |
 | 中文名 | 获取商家在抖店的最新审核通过签名 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-sign-getShopSign` |
+| 接口 ID | `doudian.sms.sms.sign.getShopSign` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/sign/getShopSign` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.yunc.syncInventoryLogFlowV2",
+  "cnName": "外部同步库存流水V2",
+  "docUrl": "/docs/doudian/warehouse/warehouse-yunc-syncInventoryLogFlowV2",
+  "name": "yunc.syncInventoryLogFlowV2",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "yunc.syncInventoryLogFlowV2",
   "description": "外部同步库存流水V2",
   "method": "GET",
   "path": "/yunc/syncInventoryLogFlowV2",
@@ -338,6 +340,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2400",
   "updatedAt": "2022-11-04",
-  "_file_stem": "warehouse-yunc-syncInventoryLogFlowV2",
-  "cnName": "外部同步库存流水V2"
+  "_file_stem": "warehouse-yunc-syncInventoryLogFlowV2"
 }

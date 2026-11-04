@@ -1,11 +1,12 @@
-# antispam.orderSend
+# 支持使用在ISV系统商户发送（外部系统或模块
 
-> 支持使用在ISV系统商户发送（外部系统或模块，如快递平台）场景
+> antispam.orderSend — 支持使用在ISV系统商户发送（外部系统或模块，如快递平台）场景
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.antispam.orderSend` |
 | 中文名 | 支持使用在ISV系统商户发送（外部系统或模块 |
+| 文档地址 | `/docs/doudian/order/order-antispam-orderSend` |
+| 接口 ID | `doudian.order.antispam.orderSend` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/antispam/orderSend` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.home-scene.foodTakeout.life.operateAfterSale",
+  "cnName": "生服-退款处理",
+  "docUrl": "/docs/doudian/home-scene/home-scene-foodTakeout-life-operateAfterSale",
+  "name": "foodTakeout.life.operateAfterSale",
   "platform": "doudian",
   "group": "home-scene",
-  "name": "foodTakeout.life.operateAfterSale",
   "description": "生服-退款处理",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1525/6694",
   "updatedAt": "2024-07-11",
-  "_file_stem": "home-scene-foodTakeout-life-operateAfterSale",
-  "cnName": "生服-退款处理"
+  "_file_stem": "home-scene-foodTakeout-life-operateAfterSale"
 }

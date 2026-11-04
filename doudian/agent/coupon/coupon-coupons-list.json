@@ -1,8 +1,10 @@
 {
   "id": "doudian.coupon.coupons.list",
+  "cnName": "平台卡券和三方卡券的status枚举不一样",
+  "docUrl": "/docs/doudian/coupon/coupon-coupons-list",
+  "name": "coupons.list",
   "platform": "doudian",
   "group": "coupon",
-  "name": "coupons.list",
   "description": "平台卡券和三方卡券的status枚举不一样。平台卡券状态码status的枚举是1:未使用，2:已使用，3：已失效，查询时需入参cert_type=1；\n商家(三方)卡券状态码status的枚举是1 //未激活（表示初始状态）； 2 //未使用； 3 //已",
   "method": "GET",
   "path": "/coupons/list",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/369",
   "updatedAt": "2024-03-21",
-  "_file_stem": "coupon-coupons-list",
-  "cnName": "平台卡券和三方卡券的status枚举不一样"
+  "_file_stem": "coupon-coupons-list"
 }

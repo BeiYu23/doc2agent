@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.install.abilitySignShop.backFromLp",
+  "cnName": "服务商商家签约回传",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-install-abilitySignShop-backFromLp",
+  "name": "install.abilitySignShop.backFromLp",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "install.abilitySignShop.backFromLp",
   "description": "服务商商家签约回传",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -142,6 +144,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5861",
   "updatedAt": "2023-12-07",
-  "_file_stem": "logistics-provider-install-abilitySignShop-backFromLp",
-  "cnName": "服务商商家签约回传"
+  "_file_stem": "logistics-provider-install-abilitySignShop-backFromLp"
 }

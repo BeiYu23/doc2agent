@@ -1,8 +1,10 @@
 {
   "id": "doudian.tool.second.liveroom.getUserProfile",
+  "cnName": "查询直播间用户画像",
+  "docUrl": "/docs/doudian/tool/tool-second-liveroom-getUserProfile",
+  "name": "second.liveroom.getUserProfile",
   "platform": "doudian",
   "group": "tool",
-  "name": "second.liveroom.getUserProfile",
   "description": "查询直播间用户画像",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -59,6 +61,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7590",
   "updatedAt": "2025-08-25",
-  "_file_stem": "tool-second-liveroom-getUserProfile",
-  "cnName": "查询直播间用户画像"
+  "_file_stem": "tool-second-liveroom-getUserProfile"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.cargo.editComponentTemplate",
+  "cnName": "编辑尺码模板",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-cargo-editComponentTemplate",
+  "name": "supplyCenter.cargo.editComponentTemplate",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.cargo.editComponentTemplate",
   "description": "编辑尺码模板",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5319",
   "updatedAt": "2023-10-25",
-  "_file_stem": "selection-supplyCenter-cargo-editComponentTemplate",
-  "cnName": "编辑尺码模板"
+  "_file_stem": "selection-supplyCenter-cargo-editComponentTemplate"
 }

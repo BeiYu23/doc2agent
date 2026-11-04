@@ -1,8 +1,10 @@
 {
   "id": "doudian.virtual.topup.accountTemplateList",
+  "cnName": "获取叶子类目可选的账号模板id",
+  "docUrl": "/docs/doudian/virtual/virtual-topup-accountTemplateList",
+  "name": "topup.accountTemplateList",
   "platform": "doudian",
   "group": "virtual",
-  "name": "topup.accountTemplateList",
   "description": "获取叶子类目可选的账号模板id",
   "method": "GET",
   "path": "/topup/accountTemplateList",
@@ -64,6 +66,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/1638",
   "updatedAt": "2022-01-21",
-  "_file_stem": "virtual-topup-accountTemplateList",
-  "cnName": "获取叶子类目可选的账号模板id"
+  "_file_stem": "virtual-topup-accountTemplateList"
 }

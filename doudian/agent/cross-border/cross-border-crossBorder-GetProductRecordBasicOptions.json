@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.GetProductRecordBasicOptions",
+  "cnName": "获取备案基础信息",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-GetProductRecordBasicOptions",
+  "name": "crossBorder.GetProductRecordBasicOptions",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.GetProductRecordBasicOptions",
   "description": "获取备案基础信息",
   "method": "GET",
   "path": "/crossBorder/GetProductRecordBasicOptions",
@@ -129,6 +131,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6320",
   "updatedAt": "2024-03-26",
-  "_file_stem": "cross-border-crossBorder-GetProductRecordBasicOptions",
-  "cnName": "获取备案基础信息"
+  "_file_stem": "cross-border-crossBorder-GetProductRecordBasicOptions"
 }

@@ -1,11 +1,12 @@
-# order.serviceDetail
+# 商家服务单
 
-> 商家服务单详情
+> order.serviceDetail — 商家服务单详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.serviceDetail` |
 | 中文名 | 商家服务单 |
+| 文档地址 | `/docs/doudian/order/order-order-serviceDetail` |
+| 接口 ID | `doudian.order.order.serviceDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/serviceDetail` |

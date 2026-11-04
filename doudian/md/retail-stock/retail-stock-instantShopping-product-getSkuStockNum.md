@@ -1,11 +1,12 @@
-# instantShopping.product.getSkuStockNum
+# 查询sku库存信息
 
-> 查询sku库存信息
+> instantShopping.product.getSkuStockNum — 查询sku库存信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-stock.instantShopping.product.getSkuStockNum` |
 | 中文名 | 查询sku库存信息 |
+| 文档地址 | `/docs/doudian/retail-stock/retail-stock-instantShopping-product-getSkuStockNum` |
+| 接口 ID | `doudian.retail-stock.instantShopping.product.getSkuStockNum` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

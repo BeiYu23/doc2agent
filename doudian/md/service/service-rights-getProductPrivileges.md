@@ -1,11 +1,12 @@
-# rights.getProductPrivileges
+# 查询商品服务权益
 
-> 查询商品服务权益
+> rights.getProductPrivileges — 查询商品服务权益
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.service.rights.getProductPrivileges` |
 | 中文名 | 查询商品服务权益 |
+| 文档地址 | `/docs/doudian/service/service-rights-getProductPrivileges` |
+| 接口 ID | `doudian.service.rights.getProductPrivileges` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/getProductPrivileges` |

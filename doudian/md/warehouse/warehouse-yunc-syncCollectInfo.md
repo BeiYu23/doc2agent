@@ -1,11 +1,12 @@
-# yunc.syncCollectInfo
+# 货品数据采集
 
-> 货品数据采集接口
+> yunc.syncCollectInfo — 货品数据采集接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.syncCollectInfo` |
 | 中文名 | 货品数据采集 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-syncCollectInfo` |
+| 接口 ID | `doudian.warehouse.yunc.syncCollectInfo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/syncCollectInfo` |

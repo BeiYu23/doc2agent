@@ -1,11 +1,12 @@
-# supplyChain.supplyCombineConsign
+# 供货单合单发货
 
-> 供货单合单发货
+> supplyChain.supplyCombineConsign — 供货单合单发货
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.supply-chain.supplyChain.supplyCombineConsign` |
 | 中文名 | 供货单合单发货 |
+| 文档地址 | `/docs/doudian/supply-chain/supply-chain-supplyChain-supplyCombineConsign` |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyCombineConsign` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/supplyCombineConsign` |

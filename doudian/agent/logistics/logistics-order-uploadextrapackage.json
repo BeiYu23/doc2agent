@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.uploadextrapackage",
+  "cnName": "订单额外运单信息上传接口",
+  "docUrl": "/docs/doudian/logistics/logistics-order-uploadextrapackage",
+  "name": "order.uploadextrapackage",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.uploadextrapackage",
   "description": "订单额外运单信息上传接口，适用于商品件数小于运单数量场景或者补发场景。商家通过发货接口上传运单号后，ISV通过接入该接口将多余的运单号回传到抖店系统，并展示给买家。",
   "method": "GET",
   "path": "/order/uploadextrapackage",
@@ -666,6 +668,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/4182",
   "updatedAt": "2023-07-11",
-  "_file_stem": "logistics-order-uploadextrapackage",
-  "cnName": "订单额外运单信息上传接口"
+  "_file_stem": "logistics-order-uploadextrapackage"
 }

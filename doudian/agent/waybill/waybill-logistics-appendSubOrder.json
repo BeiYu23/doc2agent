@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.appendSubOrder",
+  "cnName": "电子面单追加子单号场景",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-appendSubOrder",
+  "name": "logistics.appendSubOrder",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.appendSubOrder",
   "description": "电子面单追加子单号场景；",
   "method": "GET",
   "path": "/logistics/appendSubOrder",
@@ -193,6 +195,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1075",
   "updatedAt": "2021-09-14",
-  "_file_stem": "waybill-logistics-appendSubOrder",
-  "cnName": "电子面单追加子单号场景"
+  "_file_stem": "waybill-logistics-appendSubOrder"
 }

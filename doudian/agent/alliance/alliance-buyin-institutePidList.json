@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.institutePidList",
+  "cnName": "抖客PID查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-institutePidList",
+  "name": "buyin.institutePidList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.institutePidList",
   "description": "抖客PID查询接口",
   "method": "GET",
   "path": "/buyin/institutePidList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1269",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-institutePidList",
-  "cnName": "抖客PID查询"
+  "_file_stem": "alliance-buyin-institutePidList"
 }

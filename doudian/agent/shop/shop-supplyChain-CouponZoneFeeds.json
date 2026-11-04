@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.supplyChain.CouponZoneFeeds",
+  "cnName": "二级承接页初始化",
+  "docUrl": "/docs/doudian/shop/shop-supplyChain-CouponZoneFeeds",
+  "name": "supplyChain.CouponZoneFeeds",
   "platform": "doudian",
   "group": "shop",
-  "name": "supplyChain.CouponZoneFeeds",
   "description": "二级承接页初始化",
   "method": "GET",
   "path": "/supplyChain/CouponZoneFeeds",
@@ -129,6 +131,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2854",
   "updatedAt": "2023-03-09",
-  "_file_stem": "shop-supplyChain-CouponZoneFeeds",
-  "cnName": "二级承接页初始化"
+  "_file_stem": "shop-supplyChain-CouponZoneFeeds"
 }

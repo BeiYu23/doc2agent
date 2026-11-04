@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.orderCode.crossdockingCallback",
+  "cnName": "仓储中心越库单状态回告",
+  "docUrl": "/docs/doudian/warehouse/warehouse-orderCode-crossdockingCallback",
+  "name": "orderCode.crossdockingCallback",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "orderCode.crossdockingCallback",
   "description": "仓储中心越库单状态回告接口",
   "method": "GET",
   "path": "/orderCode/crossdockingCallback",
@@ -317,6 +319,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6758",
   "updatedAt": "2025-07-22",
-  "_file_stem": "warehouse-orderCode-crossdockingCallback",
-  "cnName": "仓储中心越库单状态回告"
+  "_file_stem": "warehouse-orderCode-crossdockingCallback"
 }

@@ -1,11 +1,12 @@
-# shopVideo.searchImageText
+# 搜索图文
 
-> 搜索图文
+> shopVideo.searchImageText — 搜索图文
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.shopVideo.searchImageText` |
 | 中文名 | 搜索图文 |
+| 文档地址 | `/docs/doudian/video/video-shopVideo-searchImageText` |
+| 接口 ID | `doudian.video.shopVideo.searchImageText` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/searchImageText` |

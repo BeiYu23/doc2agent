@@ -1,11 +1,12 @@
-# power.SubscribeVirtualTelCallStatus
+# isv获取虚拟号通话状态申请
 
-> isv获取虚拟号通话状态申请
+> power.SubscribeVirtualTelCallStatus — isv获取虚拟号通话状态申请
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.power.SubscribeVirtualTelCallStatus` |
 | 中文名 | isv获取虚拟号通话状态申请 |
+| 文档地址 | `/docs/doudian/order/order-power-SubscribeVirtualTelCallStatus` |
+| 接口 ID | `doudian.order.power.SubscribeVirtualTelCallStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/SubscribeVirtualTelCallStatus` |

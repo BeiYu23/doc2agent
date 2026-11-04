@@ -1,11 +1,12 @@
-# crossborder.orderCustomClearance
+# 服务商回告清关状态
 
-> 服务商回告清关状态
+> crossborder.orderCustomClearance — 服务商回告清关状态
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.crossborder.orderCustomClearance` |
 | 中文名 | 服务商回告清关状态 |
+| 文档地址 | `/docs/doudian/logistics/logistics-crossborder-orderCustomClearance` |
+| 接口 ID | `doudian.logistics.crossborder.orderCustomClearance` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/orderCustomClearance` |

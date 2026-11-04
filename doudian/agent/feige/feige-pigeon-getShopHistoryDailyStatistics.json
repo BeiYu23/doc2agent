@@ -1,8 +1,10 @@
 {
   "id": "doudian.feige.pigeon.getShopHistoryDailyStatistics",
+  "cnName": "查询店铺维度统计数据",
+  "docUrl": "/docs/doudian/feige/feige-pigeon-getShopHistoryDailyStatistics",
+  "name": "pigeon.getShopHistoryDailyStatistics",
   "platform": "doudian",
   "group": "feige",
-  "name": "pigeon.getShopHistoryDailyStatistics",
   "description": "查询店铺维度统计数据",
   "method": "GET",
   "path": "/pigeon/getShopHistoryDailyStatistics",
@@ -111,6 +113,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5346",
   "updatedAt": "2023-11-28",
-  "_file_stem": "feige-pigeon-getShopHistoryDailyStatistics",
-  "cnName": "查询店铺维度统计数据"
+  "_file_stem": "feige-pigeon-getShopHistoryDailyStatistics"
 }

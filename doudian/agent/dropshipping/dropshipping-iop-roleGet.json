@@ -1,8 +1,10 @@
 {
   "id": "doudian.dropshipping.iop.roleGet",
+  "cnName": "【厂商】查询店铺身份",
+  "docUrl": "/docs/doudian/dropshipping/dropshipping-iop-roleGet",
+  "name": "iop.roleGet",
   "platform": "doudian",
   "group": "dropshipping",
-  "name": "iop.roleGet",
   "description": "【厂商】查询店铺身份",
   "method": "GET",
   "path": "/iop/roleGet",
@@ -51,6 +53,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/59/1874",
   "updatedAt": "2021-09-15",
-  "_file_stem": "dropshipping-iop-roleGet",
-  "cnName": "【厂商】查询店铺身份"
+  "_file_stem": "dropshipping-iop-roleGet"
 }

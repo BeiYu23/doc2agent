@@ -1,8 +1,10 @@
 {
   "id": "doudian.member.member.ChangePoint",
+  "cnName": "会员侧对外积分变更",
+  "docUrl": "/docs/doudian/member/member-member-ChangePoint",
+  "name": "member.ChangePoint",
   "platform": "doudian",
   "group": "member",
-  "name": "member.ChangePoint",
   "description": "会员侧对外积分变更接口",
   "method": "GET",
   "path": "/member/ChangePoint",
@@ -182,6 +184,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/2433",
   "updatedAt": "2022-08-26",
-  "_file_stem": "member-member-ChangePoint",
-  "cnName": "会员侧对外积分变更"
+  "_file_stem": "member-member-ChangePoint"
 }

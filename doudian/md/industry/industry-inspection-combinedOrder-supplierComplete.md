@@ -1,11 +1,12 @@
-# inspection.combinedOrder.supplierComplete
+# 一体服务商服务完成
 
-> 一体服务商服务完成
+> inspection.combinedOrder.supplierComplete — 一体服务商服务完成
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierComplete` |
 | 中文名 | 一体服务商服务完成 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-combinedOrder-supplierComplete` |
+| 接口 ID | `doudian.industry.inspection.combinedOrder.supplierComplete` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -1,11 +1,12 @@
-# yunc.erpInboundCancel
+# 取消入库单
 
-> 取消入库单
+> yunc.erpInboundCancel — 取消入库单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.erpInboundCancel` |
 | 中文名 | 取消入库单 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-erpInboundCancel` |
+| 接口 ID | `doudian.warehouse.yunc.erpInboundCancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/erpInboundCancel` |

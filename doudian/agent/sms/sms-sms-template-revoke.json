@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.template.revoke",
+  "cnName": "撤销短信模板申请单",
+  "docUrl": "/docs/doudian/sms/sms-sms-template-revoke",
+  "name": "sms.template.revoke",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.template.revoke",
   "description": "撤销短信模板申请单",
   "method": "GET",
   "path": "/sms/template/revoke",
@@ -84,6 +86,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1524",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-template-revoke",
-  "cnName": "撤销短信模板申请单"
+  "_file_stem": "sms-sms-template-revoke"
 }

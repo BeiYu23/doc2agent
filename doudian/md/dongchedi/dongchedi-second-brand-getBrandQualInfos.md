@@ -1,11 +1,12 @@
-# second.brand.getBrandQualInfos
+# 【二方接口】查询品牌资质信息
 
-> 【二方接口】查询品牌资质信息
+> second.brand.getBrandQualInfos — 【二方接口】查询品牌资质信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dongchedi.second.brand.getBrandQualInfos` |
 | 中文名 | 【二方接口】查询品牌资质信息 |
+| 文档地址 | `/docs/doudian/dongchedi/dongchedi-second-brand-getBrandQualInfos` |
+| 接口 ID | `doudian.dongchedi.second.brand.getBrandQualInfos` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/brand/getBrandQualInfos` |

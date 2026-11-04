@@ -1,11 +1,12 @@
-# second.ecomInsight.getTaskBillDetail
+# 获取任务账单
 
-> 获取任务账单详情
+> second.ecomInsight.getTaskBillDetail — 获取任务账单详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.second.ecomInsight.getTaskBillDetail` |
 | 中文名 | 获取任务账单 |
+| 文档地址 | `/docs/doudian/video/video-second-ecomInsight-getTaskBillDetail` |
+| 接口 ID | `doudian.video.second.ecomInsight.getTaskBillDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

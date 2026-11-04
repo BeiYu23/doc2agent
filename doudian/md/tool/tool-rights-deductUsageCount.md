@@ -1,11 +1,12 @@
-# rights.deductUsageCount
+# 扣减权益可使用次数
 
-> 扣减权益可使用次数
+> rights.deductUsageCount — 扣减权益可使用次数
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.rights.deductUsageCount` |
 | 中文名 | 扣减权益可使用次数 |
+| 文档地址 | `/docs/doudian/tool/tool-rights-deductUsageCount` |
+| 接口 ID | `doudian.tool.rights.deductUsageCount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/deductUsageCount` |

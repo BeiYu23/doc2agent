@@ -1,11 +1,12 @@
-# openCloud.csInstance.restart
+# 批量重启容器服务下的实例
 
-> 批量重启容器服务下的实例
+> openCloud.csInstance.restart — 批量重启容器服务下的实例
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.csInstance.restart` |
 | 中文名 | 批量重启容器服务下的实例 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-csInstance-restart` |
+| 接口 ID | `doudian.cloud.openCloud.csInstance.restart` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/csInstance/restart` |

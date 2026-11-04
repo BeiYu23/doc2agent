@@ -1,13 +1,14 @@
-# member.batchGetHistoryMemberUnionId
+# 该接口可以根据店铺会员的openId获取品牌维…
 
-> 该接口可以根据店铺会员的openId获取品牌维度的用户身份标识unionId。同品牌下跨店铺中存量的抖音会员，可以用这个接口查询unionId，相同的unionId表示是同一个用户。
+> member.batchGetHistoryMemberUnionId — 该接口可以根据店铺会员的openId获取品牌维度的用户身份标识unionId。同品牌下跨店铺中存量的抖音会员，可以用这个接口查询unionId，相同的unionId表示是同一个用户。
 注1：店铺如果不是品牌店铺，将无法获取unionId
 注2：用户如果不是
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.member.batchGetHistoryMemberUnionId` |
 | 中文名 | 该接口可以根据店铺会员的openId获取品牌维… |
+| 文档地址 | `/docs/doudian/member/member-member-batchGetHistoryMemberUnionId` |
+| 接口 ID | `doudian.member.member.batchGetHistoryMemberUnionId` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/batchGetHistoryMemberUnionId` |

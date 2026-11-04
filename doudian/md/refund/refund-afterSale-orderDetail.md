@@ -1,11 +1,12 @@
-# afterSale.orderDetail
+# 获取售后
 
-> 获取售后详情（6.30下线）
+> afterSale.orderDetail — 获取售后详情（6.30下线）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.orderDetail` |
 | 中文名 | 获取售后 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-orderDetail` |
+| 接口 ID | `doudian.refund.afterSale.orderDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/orderDetail` |

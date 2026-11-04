@@ -1,11 +1,12 @@
-# instantShopping.logistics.cancelOrder
+# 取消已获取的电子面单号
 
-> 取消已获取的电子面单号
+> instantShopping.logistics.cancelOrder — 取消已获取的电子面单号
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-waybill.instantShopping.logistics.cancelOrder` |
 | 中文名 | 取消已获取的电子面单号 |
+| 文档地址 | `/docs/doudian/retail-waybill/retail-waybill-instantShopping-logistics-cancelOrder` |
+| 接口 ID | `doudian.retail-waybill.instantShopping.logistics.cancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

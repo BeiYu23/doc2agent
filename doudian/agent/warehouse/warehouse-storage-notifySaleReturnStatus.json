@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.storage.notifySaleReturnStatus",
+  "cnName": "回告销退单状态",
+  "docUrl": "/docs/doudian/warehouse/warehouse-storage-notifySaleReturnStatus",
+  "name": "storage.notifySaleReturnStatus",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "storage.notifySaleReturnStatus",
   "description": "回告销退单状态",
   "method": "GET",
   "path": "/storage/notifySaleReturnStatus",
@@ -154,6 +156,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1866",
   "updatedAt": "2023-01-04",
-  "_file_stem": "warehouse-storage-notifySaleReturnStatus",
-  "cnName": "回告销退单状态"
+  "_file_stem": "warehouse-storage-notifySaleReturnStatus"
 }

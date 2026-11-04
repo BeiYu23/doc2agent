@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.cargo.syncStockBatch",
+  "cnName": "只支持批量同步归属于同一个商品的sku库存",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-cargo-syncStockBatch",
+  "name": "supplyCenter.cargo.syncStockBatch",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.cargo.syncStockBatch",
   "description": "1、只支持批量同步归属于同一个商品的sku库存；\n2、接口规则全部成功或全部失败，例：批量更新10个skuid库存，其中一个skuid信息不正确，这样整个请求都会失败，10个skuid都未更新成功。\n\n返回的错误码参照 https://op.jinrite",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5337",
   "updatedAt": "2023-10-25",
-  "_file_stem": "selection-supplyCenter-cargo-syncStockBatch",
-  "cnName": "只支持批量同步归属于同一个商品的sku库存"
+  "_file_stem": "selection-supplyCenter-cargo-syncStockBatch"
 }

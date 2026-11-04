@@ -1,12 +1,13 @@
-# logistics.cancelOrder
+# 用于ISV/商家ERP系统
 
-> 用于ISV/商家ERP系统 端发起取消已获取的电子面单号；
+> logistics.cancelOrder — 用于ISV/商家ERP系统 端发起取消已获取的电子面单号；
 面单有任何物流轨迹之后不允许取消。
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.cancelOrder` |
 | 中文名 | 用于ISV/商家ERP系统 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-cancelOrder` |
+| 接口 ID | `doudian.waybill.logistics.cancelOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/cancelOrder` |

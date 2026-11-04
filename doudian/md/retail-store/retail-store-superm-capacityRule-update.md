@@ -1,11 +1,12 @@
-# superm.capacityRule.update
+# 门店时段容量更新
 
-> 门店时段容量更新
+> superm.capacityRule.update — 门店时段容量更新
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.capacityRule.update` |
 | 中文名 | 门店时段容量更新 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-capacityRule-update` |
+| 接口 ID | `doudian.retail-store.superm.capacityRule.update` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/capacityRule/update` |

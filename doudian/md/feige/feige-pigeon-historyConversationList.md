@@ -1,11 +1,12 @@
-# pigeon.historyConversationList
+# 飞鸽历史会话列表
 
-> 飞鸽历史会话列表
+> pigeon.historyConversationList — 飞鸽历史会话列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.historyConversationList` |
 | 中文名 | 飞鸽历史会话列表 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-historyConversationList` |
+| 接口 ID | `doudian.feige.pigeon.historyConversationList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/historyConversationList` |

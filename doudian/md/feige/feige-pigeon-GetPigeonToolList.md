@@ -1,6 +1,6 @@
-# pigeon.GetPigeonToolList
+# 该接口用于根据业务身份和相关参数获取可用的客服…
 
-> 该接口用于根据业务身份和相关参数获取可用的客服工具列表。主要应用场景包括：
+> pigeon.GetPigeonToolList — 该接口用于根据业务身份和相关参数获取可用的客服工具列表。主要应用场景包括：
 
 1. 初始化时获取可用工具
 2. 根据不同业务场景动态展示工具列表
@@ -11,8 +11,9 @@
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.GetPigeonToolList` |
 | 中文名 | 该接口用于根据业务身份和相关参数获取可用的客服… |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-GetPigeonToolList` |
+| 接口 ID | `doudian.feige.pigeon.GetPigeonToolList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/GetPigeonToolList` |

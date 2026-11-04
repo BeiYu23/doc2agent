@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.sms.bindSignatures",
+  "cnName": "模板绑定商家签名",
+  "docUrl": "/docs/doudian/sms/sms-sms-bindSignatures",
+  "name": "sms.bindSignatures",
   "platform": "doudian",
   "group": "sms",
-  "name": "sms.bindSignatures",
   "description": "模板绑定商家签名",
   "method": "GET",
   "path": "/sms/bindSignatures",
@@ -134,6 +136,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/8439",
   "updatedAt": "2026-07-28",
-  "_file_stem": "sms-sms-bindSignatures",
-  "cnName": "模板绑定商家签名"
+  "_file_stem": "sms-sms-bindSignatures"
 }

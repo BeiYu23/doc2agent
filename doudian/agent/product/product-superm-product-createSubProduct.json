@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.superm.product.createSubProduct",
+  "cnName": "基于店铺主品创建门店子品 (同步创建",
+  "docUrl": "/docs/doudian/product/product-superm-product-createSubProduct",
+  "name": "superm.product.createSubProduct",
   "platform": "doudian",
   "group": "product",
-  "name": "superm.product.createSubProduct",
   "description": "基于店铺主品创建门店子品 (同步创建)",
   "method": "GET",
   "path": "/superm/product/createSubProduct",
@@ -307,6 +309,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2698",
   "updatedAt": "2024-11-22",
-  "_file_stem": "product-superm-product-createSubProduct",
-  "cnName": "基于店铺主品创建门店子品 (同步创建"
+  "_file_stem": "product-superm-product-createSubProduct"
 }

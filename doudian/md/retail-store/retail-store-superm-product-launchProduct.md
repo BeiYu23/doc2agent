@@ -1,11 +1,12 @@
-# superm.product.launchProduct
+# 上架商品
 
-> 上架商品
+> superm.product.launchProduct — 上架商品
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.product.launchProduct` |
 | 中文名 | 上架商品 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-product-launchProduct` |
+| 接口 ID | `doudian.retail-store.superm.product.launchProduct` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/product/launchProduct` |

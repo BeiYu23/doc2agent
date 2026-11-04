@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.recycle.sms.sendSmsTestCode",
+  "cnName": "发送短信验证码",
+  "docUrl": "/docs/doudian/sms/sms-recycle-sms-sendSmsTestCode",
+  "name": "recycle.sms.sendSmsTestCode",
   "platform": "doudian",
   "group": "sms",
-  "name": "recycle.sms.sendSmsTestCode",
   "description": "发送短信验证码",
   "method": "GET",
   "path": "/recycle/sms/sendSmsTestCode",
@@ -85,6 +87,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7865",
   "updatedAt": "2025-11-13",
-  "_file_stem": "sms-recycle-sms-sendSmsTestCode",
-  "cnName": "发送短信验证码"
+  "_file_stem": "sms-recycle-sms-sendSmsTestCode"
 }

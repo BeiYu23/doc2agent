@@ -1,11 +1,12 @@
-# buyin.shopActivityDetail
+# 商家侧获取团长活动
 
-> 商家侧获取团长活动详情
+> buyin.shopActivityDetail — 商家侧获取团长活动详情
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.shopActivityDetail` |
 | 中文名 | 商家侧获取团长活动 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-shopActivityDetail` |
+| 接口 ID | `doudian.alliance.buyin.shopActivityDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/shopActivityDetail` |

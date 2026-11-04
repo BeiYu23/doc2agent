@@ -1,11 +1,12 @@
-# resale.order.expressPost
+# 【邮寄回收】快递员上门取件完成（邮寄中
 
-> 【邮寄回收】快递员上门取件完成（邮寄中）
+> resale.order.expressPost — 【邮寄回收】快递员上门取件完成（邮寄中）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.expressPost` |
 | 中文名 | 【邮寄回收】快递员上门取件完成（邮寄中 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-expressPost` |
+| 接口 ID | `doudian.recycle.resale.order.expressPost` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/expressPost` |

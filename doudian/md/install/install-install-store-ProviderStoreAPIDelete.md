@@ -1,11 +1,12 @@
-# install.store.ProviderStoreAPIDelete
+# 服务商门店删除的API
 
-> 服务商门店删除的API接口
+> install.store.ProviderStoreAPIDelete — 服务商门店删除的API接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.install.install.store.ProviderStoreAPIDelete` |
 | 中文名 | 服务商门店删除的API |
+| 文档地址 | `/docs/doudian/install/install-install-store-ProviderStoreAPIDelete` |
+| 接口 ID | `doudian.install.install.store.ProviderStoreAPIDelete` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/ProviderStoreAPIDelete` |

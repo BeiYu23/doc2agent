@@ -1,11 +1,12 @@
-# coupons.certVerifyUpdate
+# 卡券核销次数更新
 
-> 卡券核销次数更新
+> coupons.certVerifyUpdate — 卡券核销次数更新
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.certVerifyUpdate` |
 | 中文名 | 卡券核销次数更新 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-certVerifyUpdate` |
+| 接口 ID | `doudian.coupon.coupons.certVerifyUpdate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/certVerifyUpdate` |

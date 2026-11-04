@@ -1,11 +1,12 @@
-# order.fulfillStateCallback
+# 大客户履约节点回传
 
-> 大客户履约节点回传
+> order.fulfillStateCallback — 大客户履约节点回传
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.fulfillStateCallback` |
 | 中文名 | 大客户履约节点回传 |
+| 文档地址 | `/docs/doudian/order/order-order-fulfillStateCallback` |
+| 接口 ID | `doudian.order.order.fulfillStateCallback` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/fulfillStateCallback` |

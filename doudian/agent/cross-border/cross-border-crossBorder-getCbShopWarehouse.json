@@ -1,8 +1,10 @@
 {
   "id": "doudian.cross-border.crossBorder.getCbShopWarehouse",
+  "cnName": "（getCbShopWarehouse）",
+  "docUrl": "/docs/doudian/cross-border/cross-border-crossBorder-getCbShopWarehouse",
+  "name": "crossBorder.getCbShopWarehouse",
   "platform": "doudian",
   "group": "cross-border",
-  "name": "crossBorder.getCbShopWarehouse",
   "description": "get",
   "method": "GET",
   "path": "/crossBorder/getCbShopWarehouse",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6621",
   "updatedAt": "2024-06-11",
-  "_file_stem": "cross-border-crossBorder-getCbShopWarehouse",
-  "cnName": "（getCbShopWarehouse）"
+  "_file_stem": "cross-border-crossBorder-getCbShopWarehouse"
 }

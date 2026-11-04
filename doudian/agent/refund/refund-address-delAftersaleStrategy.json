@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.address.delAftersaleStrategy",
+  "cnName": "删除售后地址策略",
+  "docUrl": "/docs/doudian/refund/refund-address-delAftersaleStrategy",
+  "name": "address.delAftersaleStrategy",
   "platform": "doudian",
   "group": "refund",
-  "name": "address.delAftersaleStrategy",
   "description": "删除售后地址策略",
   "method": "GET",
   "path": "/address/delAftersaleStrategy",
@@ -72,6 +74,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/6909",
   "updatedAt": "2024-09-25",
-  "_file_stem": "refund-address-delAftersaleStrategy",
-  "cnName": "删除售后地址策略"
+  "_file_stem": "refund-address-delAftersaleStrategy"
 }

@@ -1,11 +1,12 @@
-# buyin.shareRedpack
+# 抖客红包转链
 
-> 抖客红包转链
+> buyin.shareRedpack — 抖客红包转链
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.shareRedpack` |
 | 中文名 | 抖客红包转链 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-shareRedpack` |
+| 接口 ID | `doudian.alliance.buyin.shareRedpack` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/shareRedpack` |

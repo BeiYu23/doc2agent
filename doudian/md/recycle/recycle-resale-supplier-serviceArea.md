@@ -1,11 +1,12 @@
-# resale.supplier.serviceArea
+# 【上门回收】更新上门服务范围信息同步
 
-> 【上门回收】更新上门服务范围信息同步
+> resale.supplier.serviceArea — 【上门回收】更新上门服务范围信息同步
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.supplier.serviceArea` |
 | 中文名 | 【上门回收】更新上门服务范围信息同步 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-supplier-serviceArea` |
+| 接口 ID | `doudian.recycle.resale.supplier.serviceArea` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

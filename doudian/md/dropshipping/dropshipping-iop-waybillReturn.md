@@ -1,11 +1,12 @@
-# iop.waybillReturn
+# 回传物流单号
 
-> 回传物流单号，实现代发订单的发货功能（注：回传成功后，原始订单也会同步更新成已发货状态）
+> iop.waybillReturn — 回传物流单号，实现代发订单的发货功能（注：回传成功后，原始订单也会同步更新成已发货状态）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.dropshipping.iop.waybillReturn` |
 | 中文名 | 回传物流单号 |
+| 文档地址 | `/docs/doudian/dropshipping/dropshipping-iop-waybillReturn` |
+| 接口 ID | `doudian.dropshipping.iop.waybillReturn` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/waybillReturn` |

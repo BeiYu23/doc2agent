@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.alliance.instituteColonelActivityOperate",
+  "cnName": "专属团长活动删除",
+  "docUrl": "/docs/doudian/alliance/alliance-alliance-instituteColonelActivityOperate",
+  "name": "alliance.instituteColonelActivityOperate",
   "platform": "doudian",
   "group": "alliance",
-  "name": "alliance.instituteColonelActivityOperate",
   "description": "专属团长活动删除接口（下线+删除）",
   "method": "GET",
   "path": "/alliance/instituteColonelActivityOperate",
@@ -102,6 +104,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/972",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-alliance-instituteColonelActivityOperate",
-  "cnName": "专属团长活动删除"
+  "_file_stem": "alliance-alliance-instituteColonelActivityOperate"
 }

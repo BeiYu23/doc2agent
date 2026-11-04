@@ -1,11 +1,12 @@
-# buyin.orienPlanAuthors
+# 查询定向计划作者列表
 
-> 查询定向计划作者列表
+> buyin.orienPlanAuthors — 查询定向计划作者列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.orienPlanAuthors` |
 | 中文名 | 查询定向计划作者列表 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-orienPlanAuthors` |
+| 接口 ID | `doudian.alliance.buyin.orienPlanAuthors` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/orienPlanAuthors` |

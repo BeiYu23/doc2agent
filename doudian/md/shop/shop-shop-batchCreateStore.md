@@ -1,11 +1,12 @@
-# shop.batchCreateStore
+# 批量创建门店
 
-> 批量创建门店
+> shop.batchCreateStore — 批量创建门店
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.batchCreateStore` |
 | 中文名 | 批量创建门店 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-batchCreateStore` |
+| 接口 ID | `doudian.shop.shop.batchCreateStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/batchCreateStore` |

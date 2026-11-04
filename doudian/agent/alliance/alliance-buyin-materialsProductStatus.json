@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.materialsProductStatus",
+  "cnName": "商品状态查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-materialsProductStatus",
+  "name": "buyin.materialsProductStatus",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.materialsProductStatus",
   "description": "商品状态查询",
   "method": "GET",
   "path": "/buyin/materialsProductStatus",
@@ -83,6 +85,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1497",
   "updatedAt": "2023-03-02",
-  "_file_stem": "alliance-buyin-materialsProductStatus",
-  "cnName": "商品状态查询"
+  "_file_stem": "alliance-buyin-materialsProductStatus"
 }

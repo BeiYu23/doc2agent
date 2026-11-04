@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.originColonelUnappliedProductList",
+  "cnName": "团长获取可提报二级团长活动的商品列表",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-originColonelUnappliedProductList",
+  "name": "buyin.originColonelUnappliedProductList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.originColonelUnappliedProductList",
   "description": "团长获取可提报二级团长活动的商品列表",
   "method": "GET",
   "path": "/buyin/originColonelUnappliedProductList",
@@ -172,6 +174,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1677",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-originColonelUnappliedProductList",
-  "cnName": "团长获取可提报二级团长活动的商品列表"
+  "_file_stem": "alliance-buyin-originColonelUnappliedProductList"
 }

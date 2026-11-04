@@ -1,8 +1,10 @@
 {
   "id": "doudian.home-order.retailCustom.order.searchList",
+  "cnName": "即时零售定制接口-订单详情列表",
+  "docUrl": "/docs/doudian/home-order/home-order-retailCustom-order-searchList",
+  "name": "retailCustom.order.searchList",
   "platform": "doudian",
   "group": "home-order",
-  "name": "retailCustom.order.searchList",
   "description": "即时零售定制接口-订单详情列表",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -888,6 +890,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1522/6661",
   "updatedAt": "2024-07-02",
-  "_file_stem": "home-order-retailCustom-order-searchList",
-  "cnName": "即时零售定制接口-订单详情列表"
+  "_file_stem": "home-order-retailCustom-order-searchList"
 }

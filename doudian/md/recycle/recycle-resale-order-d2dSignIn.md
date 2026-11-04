@@ -1,11 +1,12 @@
-# resale.order.d2dSignIn
+# 【上门回收】师傅上门签到
 
-> 【上门回收】师傅上门签到
+> resale.order.d2dSignIn — 【上门回收】师傅上门签到
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.recycle.resale.order.d2dSignIn` |
 | 中文名 | 【上门回收】师傅上门签到 |
+| 文档地址 | `/docs/doudian/recycle/recycle-resale-order-d2dSignIn` |
+| 接口 ID | `doudian.recycle.resale.order.d2dSignIn` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/d2dSignIn` |

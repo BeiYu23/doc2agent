@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics.order.logisticsEditByPack",
+  "cnName": "调用场景",
+  "docUrl": "/docs/doudian/logistics/logistics-order-logisticsEditByPack",
+  "name": "order.logisticsEditByPack",
   "platform": "doudian",
   "group": "logistics",
-  "name": "order.logisticsEditByPack",
   "description": "调用场景：\n1、支持修改一单多包（拆单发货）【/order/logisticsAddMultiPack】和合单发货【/order/logisticsAddSinglePack】接口，发货成功的订单；\n2、注意：整单发货修改物流请使用【/order/logi",
   "method": "GET",
   "path": "/order/logisticsEditByPack",
@@ -196,6 +198,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/539",
   "updatedAt": "2022-12-05",
-  "_file_stem": "logistics-order-logisticsEditByPack",
-  "cnName": "调用场景"
+  "_file_stem": "logistics-order-logisticsEditByPack"
 }

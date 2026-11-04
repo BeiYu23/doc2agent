@@ -1,11 +1,12 @@
-# order.ordeReportList
+# 明文手机号报备
 
-> 明文手机号报备接口
+> order.ordeReportList — 明文手机号报备接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.ordeReportList` |
 | 中文名 | 明文手机号报备 |
+| 文档地址 | `/docs/doudian/order/order-order-ordeReportList` |
+| 接口 ID | `doudian.order.order.ordeReportList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/ordeReportList` |

@@ -1,11 +1,12 @@
-# coupons.verifyV3
+# 核销接口（无需授权
 
-> 核销接口（无需授权）
+> coupons.verifyV3 — 核销接口（无需授权）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.coupon.coupons.verifyV3` |
 | 中文名 | 核销接口（无需授权 |
+| 文档地址 | `/docs/doudian/coupon/coupon-coupons-verifyV3` |
+| 接口 ID | `doudian.coupon.coupons.verifyV3` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/verifyV3` |

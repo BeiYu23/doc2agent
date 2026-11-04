@@ -1,11 +1,12 @@
-# warehouse.setAddrBatch
+# 批量绑定地址与区域仓
 
-> 批量绑定地址与区域仓
+> warehouse.setAddrBatch — 批量绑定地址与区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.setAddrBatch` |
 | 中文名 | 批量绑定地址与区域仓 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-setAddrBatch` |
+| 接口 ID | `doudian.stock.warehouse.setAddrBatch` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/setAddrBatch` |

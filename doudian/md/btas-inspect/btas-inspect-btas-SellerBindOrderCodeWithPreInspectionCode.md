@@ -1,11 +1,12 @@
-# btas.SellerBindOrderCodeWithPreInspectionCode
+# 商家_商家针对前置质检订单进行绑码或者换绑
 
-> 商家_商家针对前置质检订单进行绑码或者换绑
+> btas.SellerBindOrderCodeWithPreInspectionCode — 商家_商家针对前置质检订单进行绑码或者换绑
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.btas-inspect.btas.SellerBindOrderCodeWithPreInspectionCode` |
 | 中文名 | 商家_商家针对前置质检订单进行绑码或者换绑 |
+| 文档地址 | `/docs/doudian/btas-inspect/btas-inspect-btas-SellerBindOrderCodeWithPreInspectionCode` |
+| 接口 ID | `doudian.btas-inspect.btas.SellerBindOrderCodeWithPreInspectionCode` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/SellerBindOrderCodeWithPreInspectionCode` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.easyShuttle",
+  "cnName": "一键删除",
+  "docUrl": "/docs/doudian/material/material-material-easyShuttle",
+  "name": "material.easyShuttle",
   "platform": "doudian",
   "group": "material",
-  "name": "material.easyShuttle",
   "description": "一键删除",
   "method": "GET",
   "path": "/material/easyShuttle",
@@ -122,6 +124,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1955",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-easyShuttle",
-  "cnName": "一键删除"
+  "_file_stem": "material-material-easyShuttle"
 }

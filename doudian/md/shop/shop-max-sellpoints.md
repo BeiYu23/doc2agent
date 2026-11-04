@@ -1,11 +1,12 @@
-# max.sellpoints
+# 批量获取商品卖点信息
 
-> 批量获取商品卖点信息
+> max.sellpoints — 批量获取商品卖点信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.max.sellpoints` |
 | 中文名 | 批量获取商品卖点信息 |
+| 文档地址 | `/docs/doudian/shop/shop-max-sellpoints` |
+| 接口 ID | `doudian.shop.max.sellpoints` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/max/sellpoints` |

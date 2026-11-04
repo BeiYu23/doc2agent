@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.buyerExchange",
+  "cnName": "商家处理换货请求",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-buyerExchange",
+  "name": "afterSale.buyerExchange",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.buyerExchange",
   "description": "商家处理换货请求接口",
   "method": "GET",
   "path": "/afterSale/buyerExchange",
@@ -126,6 +128,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/769",
   "updatedAt": "2021-08-03",
-  "_file_stem": "refund-afterSale-buyerExchange",
-  "cnName": "商家处理换货请求"
+  "_file_stem": "refund-afterSale-buyerExchange"
 }

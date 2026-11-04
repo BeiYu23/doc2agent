@@ -1,8 +1,10 @@
 {
   "id": "doudian.sms.recycle.sms.uploadIdentification",
+  "cnName": "上传服务商资质",
+  "docUrl": "/docs/doudian/sms/sms-recycle-sms-uploadIdentification",
+  "name": "recycle.sms.uploadIdentification",
   "platform": "doudian",
   "group": "sms",
-  "name": "recycle.sms.uploadIdentification",
   "description": "上传服务商资质",
   "method": "GET",
   "path": "/recycle/sms/uploadIdentification",
@@ -49,6 +51,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7834",
   "updatedAt": "2025-11-03",
-  "_file_stem": "sms-recycle-sms-uploadIdentification",
-  "cnName": "上传服务商资质"
+  "_file_stem": "sms-recycle-sms-uploadIdentification"
 }

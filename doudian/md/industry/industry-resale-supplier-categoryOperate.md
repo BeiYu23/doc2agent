@@ -1,11 +1,12 @@
-# resale.supplier.categoryOperate
+# 服务商推送旧品类目变更
 
-> 服务商推送旧品类目变更
+> resale.supplier.categoryOperate — 服务商推送旧品类目变更
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.resale.supplier.categoryOperate` |
 | 中文名 | 服务商推送旧品类目变更 |
+| 文档地址 | `/docs/doudian/industry/industry-resale-supplier-categoryOperate` |
+| 接口 ID | `doudian.industry.resale.supplier.categoryOperate` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

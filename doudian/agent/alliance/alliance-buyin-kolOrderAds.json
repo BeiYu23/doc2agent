@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.kolOrderAds",
+  "cnName": "查询达人的直播间分销、商品分销、活动页分销订单",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-kolOrderAds",
+  "name": "buyin.kolOrderAds",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.kolOrderAds",
   "description": "查询达人的直播间分销、商品分销、活动页分销订单",
   "method": "GET",
   "path": "/buyin/kolOrderAds",
@@ -283,6 +285,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/5489",
   "updatedAt": "2023-10-31",
-  "_file_stem": "alliance-buyin-kolOrderAds",
-  "cnName": "查询达人的直播间分销、商品分销、活动页分销订单"
+  "_file_stem": "alliance-buyin-kolOrderAds"
 }

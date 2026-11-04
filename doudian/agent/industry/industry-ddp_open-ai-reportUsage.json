@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.ddp_open.ai.reportUsage",
+  "cnName": "上报商家用量",
+  "docUrl": "/docs/doudian/industry/industry-ddp_open-ai-reportUsage",
+  "name": "ddp_open.ai.reportUsage",
   "platform": "doudian",
   "group": "industry",
-  "name": "ddp_open.ai.reportUsage",
   "description": "上报商家用量",
   "method": "GET",
   "path": "/ddp_open/ai/reportUsage",
@@ -76,6 +78,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8357",
   "updatedAt": "2026-06-04",
-  "_file_stem": "industry-ddp_open-ai-reportUsage",
-  "cnName": "上报商家用量"
+  "_file_stem": "industry-ddp_open-ai-reportUsage"
 }

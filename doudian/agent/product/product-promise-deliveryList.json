@@ -1,8 +1,10 @@
 {
   "id": "doudian.product.promise.deliveryList",
+  "cnName": "商家发货时效配置推荐",
+  "docUrl": "/docs/doudian/product/product-promise-deliveryList",
+  "name": "promise.deliveryList",
   "platform": "doudian",
   "group": "product",
-  "name": "promise.deliveryList",
   "description": "商家发货时效配置推荐",
   "method": "GET",
   "path": "/promise/deliveryList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1529",
   "updatedAt": "2021-12-02",
-  "_file_stem": "product-promise-deliveryList",
-  "cnName": "商家发货时效配置推荐"
+  "_file_stem": "product-promise-deliveryList"
 }

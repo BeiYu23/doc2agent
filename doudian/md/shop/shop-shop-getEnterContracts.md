@@ -1,11 +1,12 @@
-# shop.getEnterContracts
+# 获取入驻需要签署的合同信息
 
-> 获取入驻需要签署的合同信息
+> shop.getEnterContracts — 获取入驻需要签署的合同信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.shop.getEnterContracts` |
 | 中文名 | 获取入驻需要签署的合同信息 |
+| 文档地址 | `/docs/doudian/shop/shop-shop-getEnterContracts` |
+| 接口 ID | `doudian.shop.shop.getEnterContracts` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getEnterContracts` |

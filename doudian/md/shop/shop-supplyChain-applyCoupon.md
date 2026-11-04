@@ -1,11 +1,12 @@
-# supplyChain.applyCoupon
+# 领券
 
-> 领券
+> supplyChain.applyCoupon — 领券
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.supplyChain.applyCoupon` |
 | 中文名 | 领券 |
+| 文档地址 | `/docs/doudian/shop/shop-supplyChain-applyCoupon` |
+| 接口 ID | `doudian.shop.supplyChain.applyCoupon` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/applyCoupon` |

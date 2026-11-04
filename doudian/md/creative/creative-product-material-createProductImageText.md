@@ -1,11 +1,12 @@
-# product.material.createProductImageText
+# 商品元图文创意创建
 
-> 商品元图文创意创建
+> product.material.createProductImageText — 商品元图文创意创建
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.creative.product.material.createProductImageText` |
 | 中文名 | 商品元图文创意创建 |
+| 文档地址 | `/docs/doudian/creative/creative-product-material-createProductImageText` |
+| 接口 ID | `doudian.creative.product.material.createProductImageText` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

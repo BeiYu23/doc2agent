@@ -1,8 +1,10 @@
 {
   "id": "doudian.supply-chain.supplyChain.supplyProductV2.previewProduct",
+  "cnName": "预览货品",
+  "docUrl": "/docs/doudian/supply-chain/supply-chain-supplyChain-supplyProductV2-previewProduct",
+  "name": "supplyChain.supplyProductV2.previewProduct",
   "platform": "doudian",
   "group": "supply-chain",
-  "name": "supplyChain.supplyProductV2.previewProduct",
   "description": "预览货品详情",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -313,6 +315,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6678",
   "updatedAt": "2026-08-05",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-previewProduct",
-  "cnName": "预览货品"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-previewProduct"
 }

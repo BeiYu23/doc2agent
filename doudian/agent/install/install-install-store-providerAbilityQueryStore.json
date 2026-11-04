@@ -1,8 +1,10 @@
 {
   "id": "doudian.install.install.store.providerAbilityQueryStore",
+  "cnName": "到店安装通过服务能力反查门店id列表",
+  "docUrl": "/docs/doudian/install/install-install-store-providerAbilityQueryStore",
+  "name": "install.store.providerAbilityQueryStore",
   "platform": "doudian",
   "group": "install",
-  "name": "install.store.providerAbilityQueryStore",
   "description": "到店安装通过服务能力反查门店id列表",
   "method": "GET",
   "path": "/install/store/providerAbilityQueryStore",
@@ -107,6 +109,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7843",
   "updatedAt": "2025-11-05",
-  "_file_stem": "install-install-store-providerAbilityQueryStore",
-  "cnName": "到店安装通过服务能力反查门店id列表"
+  "_file_stem": "install-install-store-providerAbilityQueryStore"
 }

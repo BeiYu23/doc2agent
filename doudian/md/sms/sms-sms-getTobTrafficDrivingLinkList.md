@@ -1,11 +1,12 @@
-# sms.getTobTrafficDrivingLinkList
+# 查询引流链接
 
-> 查询引流链接
+> sms.getTobTrafficDrivingLinkList — 查询引流链接
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.sms.sms.getTobTrafficDrivingLinkList` |
 | 中文名 | 查询引流链接 |
+| 文档地址 | `/docs/doudian/sms/sms-sms-getTobTrafficDrivingLinkList` |
+| 接口 ID | `doudian.sms.sms.getTobTrafficDrivingLinkList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getTobTrafficDrivingLinkList` |

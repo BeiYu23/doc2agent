@@ -1,11 +1,12 @@
-# inspection.order.supplierAppointmentException
+# 服务商预约异常
 
-> 服务商预约异常
+> inspection.order.supplierAppointmentException — 服务商预约异常
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.industry.inspection.order.supplierAppointmentException` |
 | 中文名 | 服务商预约异常 |
+| 文档地址 | `/docs/doudian/industry/industry-inspection-order-supplierAppointmentException` |
+| 接口 ID | `doudian.industry.inspection.order.supplierAppointmentException` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

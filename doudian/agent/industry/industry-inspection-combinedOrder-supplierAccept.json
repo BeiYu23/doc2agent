@@ -1,8 +1,10 @@
 {
   "id": "doudian.industry.inspection.combinedOrder.supplierAccept",
+  "cnName": "检测一体，服务商接单",
+  "docUrl": "/docs/doudian/industry/industry-inspection-combinedOrder-supplierAccept",
+  "name": "inspection.combinedOrder.supplierAccept",
   "platform": "doudian",
   "group": "industry",
-  "name": "inspection.combinedOrder.supplierAccept",
   "description": "检测一体，服务商接单",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -90,6 +92,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8412",
   "updatedAt": "2026-07-17",
-  "_file_stem": "industry-inspection-combinedOrder-supplierAccept",
-  "cnName": "检测一体，服务商接单"
+  "_file_stem": "industry-inspection-combinedOrder-supplierAccept"
 }

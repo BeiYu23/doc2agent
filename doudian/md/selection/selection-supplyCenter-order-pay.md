@@ -1,11 +1,12 @@
-# supplyCenter.order.pay
+# 支付成功状态推进
 
-> 支付成功状态推进
+> supplyCenter.order.pay — 支付成功状态推进
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.selection.supplyCenter.order.pay` |
 | 中文名 | 支付成功状态推进 |
+| 文档地址 | `/docs/doudian/selection/selection-supplyCenter-order-pay` |
+| 接口 ID | `doudian.selection.supplyCenter.order.pay` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/order/pay` |

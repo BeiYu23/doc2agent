@@ -1,11 +1,12 @@
-# material.createFolder
+# 创建文件夹
 
-> 创建文件夹
+> material.createFolder — 创建文件夹
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.material.material.createFolder` |
 | 中文名 | 创建文件夹 |
+| 文档地址 | `/docs/doudian/material/material-material-createFolder` |
+| 接口 ID | `doudian.material.material.createFolder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/createFolder` |

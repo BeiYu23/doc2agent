@@ -1,8 +1,10 @@
 {
   "id": "doudian.stock.product.setCargoStock",
+  "cnName": "设置货品库存",
+  "docUrl": "/docs/doudian/stock/stock-product-setCargoStock",
+  "name": "product.setCargoStock",
   "platform": "doudian",
   "group": "stock",
-  "name": "product.setCargoStock",
   "description": "设置货品库存",
   "method": "GET",
   "path": "/product/setCargoStock",
@@ -104,6 +106,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/8417",
   "updatedAt": "2026-07-16",
-  "_file_stem": "stock-product-setCargoStock",
-  "cnName": "设置货品库存"
+  "_file_stem": "stock-product-setCargoStock"
 }

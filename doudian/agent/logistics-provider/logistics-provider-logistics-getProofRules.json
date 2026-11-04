@@ -1,8 +1,10 @@
 {
   "id": "doudian.logistics-provider.logistics.getProofRules",
+  "cnName": "查询举证规则",
+  "docUrl": "/docs/doudian/logistics-provider/logistics-provider-logistics-getProofRules",
+  "name": "logistics.getProofRules",
   "platform": "doudian",
   "group": "logistics-provider",
-  "name": "logistics.getProofRules",
   "description": "查询举证规则",
   "method": "GET",
   "path": "/logistics/getProofRules",
@@ -84,6 +86,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8391",
   "updatedAt": "2026-07-13",
-  "_file_stem": "logistics-provider-logistics-getProofRules",
-  "cnName": "查询举证规则"
+  "_file_stem": "logistics-provider-logistics-getProofRules"
 }

@@ -1,8 +1,10 @@
 {
   "id": "doudian.warehouse.warehouse.list",
+  "cnName": "批量查询区域仓",
+  "docUrl": "/docs/doudian/warehouse/warehouse-warehouse-list",
+  "name": "warehouse.list",
   "platform": "doudian",
   "group": "warehouse",
-  "name": "warehouse.list",
   "description": "批量查询区域仓",
   "method": "GET",
   "path": "/warehouse/list",
@@ -204,6 +206,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2079",
   "updatedAt": "2022-06-23",
-  "_file_stem": "warehouse-warehouse-list",
-  "cnName": "批量查询区域仓"
+  "_file_stem": "warehouse-warehouse-list"
 }

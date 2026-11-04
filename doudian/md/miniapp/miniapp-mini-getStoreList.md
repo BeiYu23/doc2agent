@@ -1,11 +1,12 @@
-# mini.getStoreList
+# C端小程序获取门店列表
 
-> C端小程序获取门店列表
+> mini.getStoreList — C端小程序获取门店列表
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.miniapp.mini.getStoreList` |
 | 中文名 | C端小程序获取门店列表 |
+| 文档地址 | `/docs/doudian/miniapp/miniapp-mini-getStoreList` |
+| 接口 ID | `doudian.miniapp.mini.getStoreList` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/getStoreList` |

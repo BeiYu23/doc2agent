@@ -1,8 +1,10 @@
 {
   "id": "doudian.creative.product.material.listCompositeVideo",
+  "cnName": "商品元视频创意查询",
+  "docUrl": "/docs/doudian/creative/creative-product-material-listCompositeVideo",
+  "name": "product.material.listCompositeVideo",
   "platform": "doudian",
   "group": "creative",
-  "name": "product.material.listCompositeVideo",
   "description": "商品元视频创意查询",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -137,6 +139,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1358/4220",
   "updatedAt": "2023-08-24",
-  "_file_stem": "creative-product-material-listCompositeVideo",
-  "cnName": "商品元视频创意查询"
+  "_file_stem": "creative-product-material-listCompositeVideo"
 }

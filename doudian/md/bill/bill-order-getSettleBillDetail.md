@@ -1,11 +1,12 @@
-# order.getSettleBillDetail
+# 查询账单明细
 
-> 查询账单明细
+> order.getSettleBillDetail — 查询账单明细
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.bill.order.getSettleBillDetail` |
 | 中文名 | 查询账单明细 |
+| 文档地址 | `/docs/doudian/bill/bill-order-getSettleBillDetail` |
+| 接口 ID | `doudian.bill.order.getSettleBillDetail` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getSettleBillDetail` |

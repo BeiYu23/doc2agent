@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.cancelOrder",
+  "cnName": "用于ISV/商家ERP系统",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-cancelOrder",
+  "name": "logistics.cancelOrder",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.cancelOrder",
   "description": "用于ISV/商家ERP系统 端发起取消已获取的电子面单号；\n面单有任何物流轨迹之后不允许取消。",
   "method": "GET",
   "path": "/logistics/cancelOrder",
@@ -326,6 +328,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/397",
   "updatedAt": "2021-04-22",
-  "_file_stem": "waybill-logistics-cancelOrder",
-  "cnName": "用于ISV/商家ERP系统"
+  "_file_stem": "waybill-logistics-cancelOrder"
 }

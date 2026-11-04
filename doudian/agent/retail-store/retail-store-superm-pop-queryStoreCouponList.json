@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-store.superm.pop.queryStoreCouponList",
+  "cnName": "小时达-查询门店优惠列表",
+  "docUrl": "/docs/doudian/retail-store/retail-store-superm-pop-queryStoreCouponList",
+  "name": "superm.pop.queryStoreCouponList",
   "platform": "doudian",
   "group": "retail-store",
-  "name": "superm.pop.queryStoreCouponList",
   "description": "小时达-查询门店优惠列表",
   "method": "GET",
   "path": "/superm/pop/queryStoreCouponList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/3919",
   "updatedAt": "2024-06-19",
-  "_file_stem": "retail-store-superm-pop-queryStoreCouponList",
-  "cnName": "小时达-查询门店优惠列表"
+  "_file_stem": "retail-store-superm-pop-queryStoreCouponList"
 }

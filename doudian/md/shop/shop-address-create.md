@@ -1,11 +1,12 @@
-# address.create
+# 创建店铺地址库
 
-> 创建店铺地址库
+> address.create — 创建店铺地址库
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.shop.address.create` |
 | 中文名 | 创建店铺地址库 |
+| 文档地址 | `/docs/doudian/shop/shop-address-create` |
+| 接口 ID | `doudian.shop.address.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/create` |

@@ -1,8 +1,10 @@
 {
   "id": "doudian.miniapp.mini.activity.queryUserRights",
+  "cnName": "查询用户店铺下的权益列表",
+  "docUrl": "/docs/doudian/miniapp/miniapp-mini-activity-queryUserRights",
+  "name": "mini.activity.queryUserRights",
   "platform": "doudian",
   "group": "miniapp",
-  "name": "mini.activity.queryUserRights",
   "description": "查询用户店铺下的权益列表",
   "method": "GET",
   "path": "/mini/activity/queryUserRights",
@@ -115,6 +117,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6039",
   "updatedAt": "2024-04-25",
-  "_file_stem": "miniapp-mini-activity-queryUserRights",
-  "cnName": "查询用户店铺下的权益列表"
+  "_file_stem": "miniapp-mini-activity-queryUserRights"
 }

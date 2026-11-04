@@ -1,11 +1,12 @@
-# yunc.queryTransportCapabilityStatus
+# 运力配送状态查询
 
-> 运力配送状态查询接口
+> yunc.queryTransportCapabilityStatus — 运力配送状态查询接口
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.warehouse.yunc.queryTransportCapabilityStatus` |
 | 中文名 | 运力配送状态查询 |
+| 文档地址 | `/docs/doudian/warehouse/warehouse-yunc-queryTransportCapabilityStatus` |
+| 接口 ID | `doudian.warehouse.yunc.queryTransportCapabilityStatus` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/queryTransportCapabilityStatus` |

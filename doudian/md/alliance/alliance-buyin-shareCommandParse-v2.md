@@ -1,11 +1,12 @@
-# buyin.shareCommandParse.v2
+# 商品口令转商品解析
 
-> 商品口令转商品解析
+> buyin.shareCommandParse.v2 — 商品口令转商品解析
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.alliance.buyin.shareCommandParse.v2` |
 | 中文名 | 商品口令转商品解析 |
+| 文档地址 | `/docs/doudian/alliance/alliance-buyin-shareCommandParse-v2` |
+| 接口 ID | `doudian.alliance.buyin.shareCommandParse.v2` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/shareCommandParse/v2` |

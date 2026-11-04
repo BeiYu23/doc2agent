@@ -1,11 +1,12 @@
-# logistics.appendSubOrder
+# 电子面单追加子单号场景
 
-> 电子面单追加子单号场景；
+> logistics.appendSubOrder — 电子面单追加子单号场景；
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.waybill.logistics.appendSubOrder` |
 | 中文名 | 电子面单追加子单号场景 |
+| 文档地址 | `/docs/doudian/waybill/waybill-logistics-appendSubOrder` |
+| 接口 ID | `doudian.waybill.logistics.appendSubOrder` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/appendSubOrder` |

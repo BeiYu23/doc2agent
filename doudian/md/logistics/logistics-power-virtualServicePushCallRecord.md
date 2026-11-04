@@ -1,11 +1,12 @@
-# power.virtualServicePushCallRecord
+# 虚拟号服务商通话记录回传（仅用于兼容老物流网关
 
-> 虚拟号服务商通话记录回传（仅用于兼容老物流网关）
+> power.virtualServicePushCallRecord — 虚拟号服务商通话记录回传（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.virtualServicePushCallRecord` |
 | 中文名 | 虚拟号服务商通话记录回传（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-virtualServicePushCallRecord` |
+| 接口 ID | `doudian.logistics.power.virtualServicePushCallRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/virtualServicePushCallRecord` |

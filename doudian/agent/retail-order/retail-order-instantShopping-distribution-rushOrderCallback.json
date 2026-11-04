@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-order.instantShopping.distribution.rushOrderCallback",
+  "cnName": "配送商催单结果回调",
+  "docUrl": "/docs/doudian/retail-order/retail-order-instantShopping-distribution-rushOrderCallback",
+  "name": "instantShopping.distribution.rushOrderCallback",
   "platform": "doudian",
   "group": "retail-order",
-  "name": "instantShopping.distribution.rushOrderCallback",
   "description": "配送商催单结果回调",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -67,6 +69,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1531/7031",
   "updatedAt": "2024-10-30",
-  "_file_stem": "retail-order-instantShopping-distribution-rushOrderCallback",
-  "cnName": "配送商催单结果回调"
+  "_file_stem": "retail-order-instantShopping-distribution-rushOrderCallback"
 }

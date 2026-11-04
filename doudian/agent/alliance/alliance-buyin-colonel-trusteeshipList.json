@@ -1,8 +1,10 @@
 {
   "id": "doudian.alliance.buyin.colonel.trusteeshipList",
+  "cnName": "团长托管商品查询",
+  "docUrl": "/docs/doudian/alliance/alliance-buyin-colonel-trusteeshipList",
+  "name": "buyin.colonel.trusteeshipList",
   "platform": "doudian",
   "group": "alliance",
-  "name": "buyin.colonel.trusteeshipList",
   "description": "团长托管商品查询",
   "method": "GET",
   "path": "/buyin/colonel/trusteeshipList",
@@ -191,6 +193,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2137",
   "updatedAt": "2023-06-20",
-  "_file_stem": "alliance-buyin-colonel-trusteeshipList",
-  "cnName": "团长托管商品查询"
+  "_file_stem": "alliance-buyin-colonel-trusteeshipList"
 }

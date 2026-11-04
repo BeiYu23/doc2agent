@@ -1,11 +1,12 @@
-# pigeon.getStaffHistoryDailyStatistics
+# 查询客服每日指标结果值
 
-> 查询客服每日指标结果值
+> pigeon.getStaffHistoryDailyStatistics — 查询客服每日指标结果值
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.feige.pigeon.getStaffHistoryDailyStatistics` |
 | 中文名 | 查询客服每日指标结果值 |
+| 文档地址 | `/docs/doudian/feige/feige-pigeon-getStaffHistoryDailyStatistics` |
+| 接口 ID | `doudian.feige.pigeon.getStaffHistoryDailyStatistics` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/getStaffHistoryDailyStatistics` |

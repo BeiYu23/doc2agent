@@ -1,11 +1,12 @@
-# open.materialToken
+# 素材上传接口访问token
 
-> 素材上传接口访问token
+> open.materialToken — 素材上传接口访问token
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.tool.open.materialToken` |
 | 中文名 | 素材上传接口访问token |
+| 文档地址 | `/docs/doudian/tool/tool-open-materialToken` |
+| 接口 ID | `doudian.tool.open.materialToken` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/materialToken` |

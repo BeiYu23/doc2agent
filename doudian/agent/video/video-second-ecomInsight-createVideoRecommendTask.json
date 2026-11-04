@@ -1,8 +1,10 @@
 {
   "id": "doudian.video.second.ecomInsight.createVideoRecommendTask",
+  "cnName": "创建视频推荐子任务",
+  "docUrl": "/docs/doudian/video/video-second-ecomInsight-createVideoRecommendTask",
+  "name": "second.ecomInsight.createVideoRecommendTask",
   "platform": "doudian",
   "group": "video",
-  "name": "second.ecomInsight.createVideoRecommendTask",
   "description": "创建视频推荐子任务",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -122,6 +124,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8355",
   "updatedAt": "2026-07-07",
-  "_file_stem": "video-second-ecomInsight-createVideoRecommendTask",
-  "cnName": "创建视频推荐子任务"
+  "_file_stem": "video-second-ecomInsight-createVideoRecommendTask"
 }

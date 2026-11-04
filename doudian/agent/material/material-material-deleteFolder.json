@@ -1,8 +1,10 @@
 {
   "id": "doudian.material.material.deleteFolder",
+  "cnName": "彻底删除文件夹",
+  "docUrl": "/docs/doudian/material/material-material-deleteFolder",
+  "name": "material.deleteFolder",
   "platform": "doudian",
   "group": "material",
-  "name": "material.deleteFolder",
   "description": "彻底删除文件夹，包括当前文件夹和当前文件夹包含的所有子文件夹和素材。删除后不可查询。\n批量操作时，要求入参中的所有文件夹在同一个父文件夹下。",
   "method": "GET",
   "path": "/material/deleteFolder",
@@ -75,6 +77,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1139",
   "updatedAt": "2022-09-06",
-  "_file_stem": "material-material-deleteFolder",
-  "cnName": "彻底删除文件夹"
+  "_file_stem": "material-material-deleteFolder"
 }

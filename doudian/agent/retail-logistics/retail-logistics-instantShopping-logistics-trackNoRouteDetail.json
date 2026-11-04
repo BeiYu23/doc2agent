@@ -1,8 +1,10 @@
 {
   "id": "doudian.retail-logistics.instantShopping.logistics.trackNoRouteDetail",
+  "cnName": "运单轨迹查询",
+  "docUrl": "/docs/doudian/retail-logistics/retail-logistics-instantShopping-logistics-trackNoRouteDetail",
+  "name": "instantShopping.logistics.trackNoRouteDetail",
   "platform": "doudian",
   "group": "retail-logistics",
-  "name": "instantShopping.logistics.trackNoRouteDetail",
   "description": "运单轨迹查询接口",
   "method": "GET",
   "path": "YOUR_SECRET_KEY",
@@ -116,6 +118,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1530/7381",
   "updatedAt": "2025-03-25",
-  "_file_stem": "retail-logistics-instantShopping-logistics-trackNoRouteDetail",
-  "cnName": "运单轨迹查询"
+  "_file_stem": "retail-logistics-instantShopping-logistics-trackNoRouteDetail"
 }

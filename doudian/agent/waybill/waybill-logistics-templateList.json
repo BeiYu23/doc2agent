@@ -1,8 +1,10 @@
 {
   "id": "doudian.waybill.logistics.templateList",
+  "cnName": "查询物流商的标准模板",
+  "docUrl": "/docs/doudian/waybill/waybill-logistics-templateList",
+  "name": "logistics.templateList",
   "platform": "doudian",
   "group": "waybill",
-  "name": "logistics.templateList",
   "description": "查询物流商的标准模板。\n注意：物流商模板平台会定期更新或新增，请开发者定期扫描该接口，保持和平台数据一致；",
   "method": "GET",
   "path": "/logistics/templateList",
@@ -73,6 +75,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/476",
   "updatedAt": "2021-06-22",
-  "_file_stem": "waybill-logistics-templateList",
-  "cnName": "查询物流商的标准模板"
+  "_file_stem": "waybill-logistics-templateList"
 }

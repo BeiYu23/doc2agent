@@ -1,11 +1,12 @@
-# afterSale.buyerExchangeConfirm
+# 商家确认是否收到换货
 
-> 商家确认是否收到换货
+> afterSale.buyerExchangeConfirm — 商家确认是否收到换货
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.afterSale.buyerExchangeConfirm` |
 | 中文名 | 商家确认是否收到换货 |
+| 文档地址 | `/docs/doudian/refund/refund-afterSale-buyerExchangeConfirm` |
+| 接口 ID | `doudian.refund.afterSale.buyerExchangeConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/buyerExchangeConfirm` |

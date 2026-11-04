@@ -1,11 +1,12 @@
-# superm.getStoreAutoAccept
+# 获取自动接单配置
 
-> 获取自动接单配置
+> superm.getStoreAutoAccept — 获取自动接单配置
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.retail-store.superm.getStoreAutoAccept` |
 | 中文名 | 获取自动接单配置 |
+| 文档地址 | `/docs/doudian/retail-store/retail-store-superm-getStoreAutoAccept` |
+| 接口 ID | `doudian.retail-store.superm.getStoreAutoAccept` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getStoreAutoAccept` |

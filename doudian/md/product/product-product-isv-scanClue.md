@@ -1,11 +1,12 @@
-# product.isv.scanClue
+# 扫描获取商机中心全量线索信息
 
-> 扫描获取商机中心全量线索信息
+> product.isv.scanClue — 扫描获取商机中心全量线索信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.product.product.isv.scanClue` |
 | 中文名 | 扫描获取商机中心全量线索信息 |
+| 文档地址 | `/docs/doudian/product/product-product-isv-scanClue` |
+| 接口 ID | `doudian.product.product.isv.scanClue` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/scanClue` |

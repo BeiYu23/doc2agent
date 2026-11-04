@@ -1,11 +1,12 @@
-# sms.getAccurateUserAmount
+# 预估人群大小
 
-> 预估人群大小
+> sms.getAccurateUserAmount — 预估人群大小
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.member.sms.getAccurateUserAmount` |
 | 中文名 | 预估人群大小 |
+| 文档地址 | `/docs/doudian/member/member-sms-getAccurateUserAmount` |
+| 接口 ID | `doudian.member.sms.getAccurateUserAmount` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getAccurateUserAmount` |

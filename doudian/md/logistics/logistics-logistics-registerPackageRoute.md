@@ -1,11 +1,12 @@
-# logistics.registerPackageRoute
+# isv轨迹订阅
 
-> isv轨迹订阅
+> logistics.registerPackageRoute — isv轨迹订阅
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.logistics.registerPackageRoute` |
 | 中文名 | isv轨迹订阅 |
+| 文档地址 | `/docs/doudian/logistics/logistics-logistics-registerPackageRoute` |
+| 接口 ID | `doudian.logistics.logistics.registerPackageRoute` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/registerPackageRoute` |

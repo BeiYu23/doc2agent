@@ -1,8 +1,10 @@
 {
   "id": "doudian.selection.supplyCenter.order.pay",
+  "cnName": "支付成功状态推进",
+  "docUrl": "/docs/doudian/selection/selection-supplyCenter-order-pay",
+  "name": "supplyCenter.order.pay",
   "platform": "doudian",
   "group": "selection",
-  "name": "supplyCenter.order.pay",
   "description": "支付成功状态推进",
   "method": "GET",
   "path": "/supplyCenter/order/pay",
@@ -103,6 +105,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5323",
   "updatedAt": "2023-11-10",
-  "_file_stem": "selection-supplyCenter-order-pay",
-  "cnName": "支付成功状态推进"
+  "_file_stem": "selection-supplyCenter-order-pay"
 }

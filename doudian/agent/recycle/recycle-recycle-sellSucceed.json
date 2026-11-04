@@ -1,8 +1,10 @@
 {
   "id": "doudian.recycle.recycle.sellSucceed",
+  "cnName": "寄售成功",
+  "docUrl": "/docs/doudian/recycle/recycle-recycle-sellSucceed",
+  "name": "recycle.sellSucceed",
   "platform": "doudian",
   "group": "recycle",
-  "name": "recycle.sellSucceed",
   "description": "寄售成功",
   "method": "GET",
   "path": "/recycle/sellSucceed",
@@ -49,6 +51,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1888",
   "updatedAt": "2021-09-03",
-  "_file_stem": "recycle-recycle-sellSucceed",
-  "cnName": "寄售成功"
+  "_file_stem": "recycle-recycle-sellSucceed"
 }

@@ -1,11 +1,12 @@
-# crossBorder.UpdateProductRecord
+# 更新备案
 
-> 更新备案
+> crossBorder.UpdateProductRecord — 更新备案
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cross-border.crossBorder.UpdateProductRecord` |
 | 中文名 | 更新备案 |
+| 文档地址 | `/docs/doudian/cross-border/cross-border-crossBorder-UpdateProductRecord` |
+| 接口 ID | `doudian.cross-border.crossBorder.UpdateProductRecord` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/UpdateProductRecord` |

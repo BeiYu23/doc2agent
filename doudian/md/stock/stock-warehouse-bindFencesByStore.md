@@ -1,11 +1,12 @@
-# warehouse.bindFencesByStore
+# 绑定门店和电子围栏
 
-> 绑定门店和电子围栏
+> warehouse.bindFencesByStore — 绑定门店和电子围栏
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.bindFencesByStore` |
 | 中文名 | 绑定门店和电子围栏 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-bindFencesByStore` |
+| 接口 ID | `doudian.stock.warehouse.bindFencesByStore` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/bindFencesByStore` |

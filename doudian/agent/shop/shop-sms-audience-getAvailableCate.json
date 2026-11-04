@@ -1,8 +1,10 @@
 {
   "id": "doudian.shop.sms.audience.getAvailableCate",
+  "cnName": "获取商家类目id",
+  "docUrl": "/docs/doudian/shop/shop-sms-audience-getAvailableCate",
+  "name": "sms.audience.getAvailableCate",
   "platform": "doudian",
   "group": "shop",
-  "name": "sms.audience.getAvailableCate",
   "description": "获取商家类目id",
   "method": "GET",
   "path": "/sms/audience/getAvailableCate",
@@ -79,6 +81,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/7662",
   "updatedAt": "2025-09-19",
-  "_file_stem": "shop-sms-audience-getAvailableCate",
-  "cnName": "获取商家类目id"
+  "_file_stem": "shop-sms-audience-getAvailableCate"
 }

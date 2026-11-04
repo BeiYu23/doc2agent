@@ -1,11 +1,12 @@
-# warehouse.unbindFences
+# 用于外部仓和电子围栏解绑
 
-> 用于外部仓和电子围栏解绑
+> warehouse.unbindFences — 用于外部仓和电子围栏解绑
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.refund.warehouse.unbindFences` |
 | 中文名 | 用于外部仓和电子围栏解绑 |
+| 文档地址 | `/docs/doudian/refund/refund-warehouse-unbindFences` |
+| 接口 ID | `doudian.refund.warehouse.unbindFences` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/unbindFences` |

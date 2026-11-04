@@ -1,11 +1,12 @@
-# product.material.editCompositeVideo
+# 商品元视频创意编辑
 
-> 商品元视频创意编辑
+> product.material.editCompositeVideo — 商品元视频创意编辑
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.creative.product.material.editCompositeVideo` |
 | 中文名 | 商品元视频创意编辑 |
+| 文档地址 | `/docs/doudian/creative/creative-product-material-editCompositeVideo` |
+| 接口 ID | `doudian.creative.product.material.editCompositeVideo` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

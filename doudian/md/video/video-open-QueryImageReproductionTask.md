@@ -1,11 +1,12 @@
-# open.QueryImageReproductionTask
+# 查询图片复刻任务
 
-> 查询图片复刻任务
+> open.QueryImageReproductionTask — 查询图片复刻任务
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.video.open.QueryImageReproductionTask` |
 | 中文名 | 查询图片复刻任务 |
+| 文档地址 | `/docs/doudian/video/video-open-QueryImageReproductionTask` |
+| 接口 ID | `doudian.video.open.QueryImageReproductionTask` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/QueryImageReproductionTask` |

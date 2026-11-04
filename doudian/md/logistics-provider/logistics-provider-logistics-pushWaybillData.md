@@ -1,11 +1,12 @@
-# logistics.pushWaybillData
+# 物流商推送非抖运单信息
 
-> 物流商推送非抖运单信息
+> logistics.pushWaybillData — 物流商推送非抖运单信息
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics-provider.logistics.pushWaybillData` |
 | 中文名 | 物流商推送非抖运单信息 |
+| 文档地址 | `/docs/doudian/logistics-provider/logistics-provider-logistics-pushWaybillData` |
+| 接口 ID | `doudian.logistics-provider.logistics.pushWaybillData` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/pushWaybillData` |

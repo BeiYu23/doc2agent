@@ -1,11 +1,12 @@
-# power.confirmDailyBill
+# 日对账文件结果推送（仅用于兼容老物流网关
 
-> 日对账文件结果推送（仅用于兼容老物流网关）
+> power.confirmDailyBill — 日对账文件结果推送（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.confirmDailyBill` |
 | 中文名 | 日对账文件结果推送（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-confirmDailyBill` |
+| 接口 ID | `doudian.logistics.power.confirmDailyBill` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/confirmDailyBill` |

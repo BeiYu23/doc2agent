@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.afterSale.orderList",
+  "cnName": "获取已发货且有售后的订单列表",
+  "docUrl": "/docs/doudian/refund/refund-afterSale-orderList",
+  "name": "afterSale.orderList",
   "platform": "doudian",
   "group": "refund",
-  "name": "afterSale.orderList",
   "description": "获取已发货且有售后的订单列表（6.30下线）",
   "method": "GET",
   "path": "/afterSale/orderList",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/88",
   "updatedAt": "2021-05-21",
-  "_file_stem": "refund-afterSale-orderList",
-  "cnName": "获取已发货且有售后的订单列表"
+  "_file_stem": "refund-afterSale-orderList"
 }

@@ -1,11 +1,12 @@
-# warehouse.setAddr
+# 绑定单个地址到区域仓
 
-> 绑定单个地址到区域仓
+> warehouse.setAddr — 绑定单个地址到区域仓
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.stock.warehouse.setAddr` |
 | 中文名 | 绑定单个地址到区域仓 |
+| 文档地址 | `/docs/doudian/stock/stock-warehouse-setAddr` |
+| 接口 ID | `doudian.stock.warehouse.setAddr` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/setAddr` |

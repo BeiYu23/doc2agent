@@ -1,11 +1,12 @@
-# order.addressConfirm
+# 买家地址变更确认
 
-> 买家地址变更确认
+> order.addressConfirm — 买家地址变更确认
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.order.order.addressConfirm` |
 | 中文名 | 买家地址变更确认 |
+| 文档地址 | `/docs/doudian/order/order-order-addressConfirm` |
+| 接口 ID | `doudian.order.order.addressConfirm` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/addressConfirm` |

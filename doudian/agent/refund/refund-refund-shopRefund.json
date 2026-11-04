@@ -1,8 +1,10 @@
 {
   "id": "doudian.refund.refund.shopRefund",
+  "cnName": "商家处理备货中退款申请",
+  "docUrl": "/docs/doudian/refund/refund-refund-shopRefund",
+  "name": "refund.shopRefund",
   "platform": "doudian",
   "group": "refund",
-  "name": "refund.shopRefund",
   "description": "商家处理备货中退款申请（831下线，可使用该接口：/afterSale/Operate）",
   "method": "GET",
   "path": "/refund/shopRefund",
@@ -37,6 +39,5 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/87",
   "updatedAt": "2021-06-30",
-  "_file_stem": "refund-refund-shopRefund",
-  "cnName": "商家处理备货中退款申请"
+  "_file_stem": "refund-refund-shopRefund"
 }

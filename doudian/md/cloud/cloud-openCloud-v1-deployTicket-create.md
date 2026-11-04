@@ -1,11 +1,12 @@
-# openCloud.v1.deployTicket.create
+# 创建发布单
 
-> 创建发布单
+> openCloud.v1.deployTicket.create — 创建发布单
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.create` |
 | 中文名 | 创建发布单 |
+| 文档地址 | `/docs/doudian/cloud/cloud-openCloud-v1-deployTicket-create` |
+| 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.create` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/deployTicket/create` |

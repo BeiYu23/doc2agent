@@ -1,11 +1,12 @@
-# power.isByteDancePackage
+# 末端服务字节面单信息查询（仅用于兼容老物流网关
 
-> 末端服务字节面单信息查询（仅用于兼容老物流网关）
+> power.isByteDancePackage — 末端服务字节面单信息查询（仅用于兼容老物流网关）
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.logistics.power.isByteDancePackage` |
 | 中文名 | 末端服务字节面单信息查询（仅用于兼容老物流网关 |
+| 文档地址 | `/docs/doudian/logistics/logistics-power-isByteDancePackage` |
+| 接口 ID | `doudian.logistics.power.isByteDancePackage` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/isByteDancePackage` |

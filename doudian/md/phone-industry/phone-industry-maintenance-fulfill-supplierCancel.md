@@ -1,11 +1,12 @@
-# maintenance.fulfill.supplierCancel
+# 维修服务商取消履约过程
 
-> 维修服务商取消履约过程
+> maintenance.fulfill.supplierCancel — 维修服务商取消履约过程
 
 | 元信息 | 值 |
 | --- | --- |
-| 接口 ID | `doudian.phone-industry.maintenance.fulfill.supplierCancel` |
 | 中文名 | 维修服务商取消履约过程 |
+| 文档地址 | `/docs/doudian/phone-industry/phone-industry-maintenance-fulfill-supplierCancel` |
+| 接口 ID | `doudian.phone-industry.maintenance.fulfill.supplierCancel` |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |
