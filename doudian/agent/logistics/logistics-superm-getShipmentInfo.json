@@ -1,0 +1,155 @@
+{
+  "id": "doudian.logistics.superm.getShipmentInfo",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "superm.getShipmentInfo",
+  "description": "小时达运力平台运力配送状态查询接口",
+  "method": "GET",
+  "path": "/superm/getShipmentInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺父订单号",
+      "example": "4993668078886578045",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "上门取运力对应售后单号",
+      "example": "3668078886578045",
+      "_depth": 0
+    },
+    {
+      "name": "shipment_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配送类型，1 表示发货单，需要传入店铺订单号 2 表示上门取件，需要传入店铺订单号和售后单编号",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shipment_info",
+      "type": "object",
+      "description": "配送状态信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法的请求参数（sub_code: isv.parameter-invalid:40100）",
+      "action": "请确认请求参数是否正确",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "非法的请求参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询不到对应的物流订单（sub_code: isv.business-failed:20111）",
+      "action": "请确认订单状态是否正常",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "查询不到对应的物流订单"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20100）",
+      "action": "请参考错误信息解决",
+      "sub_code": "isp.service-error:20100",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流轨迹展示异常（sub_code: isv.business-failed:20115）",
+      "action": "请参考物流轨迹展示异常信息",
+      "sub_code": "isv.business-failed:20115",
+      "sub_msg": "物流轨迹展示异常"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 未知服务异常（sub_code: isp.service-timeout-error:90000）",
+      "action": "请参考错误信息解决",
+      "sub_code": "isp.service-timeout-error:90000",
+      "sub_msg": "未知服务异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流履约单当前状态无法取消运力信息（sub_code: isv.business-failed:50312）",
+      "action": "请确认运单状态",
+      "sub_code": "isv.business-failed:50312",
+      "sub_msg": "物流履约单当前状态无法取消运力信息"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常：系统异常（sub_code: isp.service-error:20201）",
+      "action": "请检查代码逻辑",
+      "sub_code": "isp.service-error:20201",
+      "sub_msg": "系统异常：系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请输入正确的订单号（sub_code: isv.business-failed:100009）",
+      "action": "请输入正确的订单号",
+      "sub_code": "isv.business-failed:100009",
+      "sub_msg": "请输入正确的订单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不是该店铺下的订单，无权查询（sub_code: isv.business-failed:70009）",
+      "action": "订单不是该店铺下的订单，无权查询",
+      "sub_code": "isv.business-failed:70009",
+      "sub_msg": "订单不是该店铺下的订单，无权查询"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:20113）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:20113",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/status?app_key=your_appkey_here&method=shop.status&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "shop_status": {
+          "shop_status": "9 初始化"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "非法的请求参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2743",
+  "updatedAt": "2023-09-19",
+  "_file_stem": "logistics-superm-getShipmentInfo"
+}

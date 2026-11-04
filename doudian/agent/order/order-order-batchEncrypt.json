@@ -1,0 +1,126 @@
+{
+  "id": "doudian.order.order.batchEncrypt",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.batchEncrypt",
+  "description": "批量加密接口",
+  "method": "GET",
+  "path": "/order/batchEncrypt",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "batch_encrypt_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "待加密列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "plain_text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "明文",
+      "example": "13117428564",
+      "_depth": 1
+    },
+    {
+      "name": "is_support_index",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否支持密文索引",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "sensitive_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "加密类型；1地址加密 2姓名加密 3电话加密",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "auth_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务标识，value为抖音订单号；若是三方订单，可用三方订单号作为标识或自定义标识",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "sensitive_scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "加密场景：OrderCode代表订单 AftersaleCode代表售后单",
+      "example": "OrderCode",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "encrypt_infos",
+      "type": "array",
+      "description": "加密之后的数据",
+      "example": "-"
+    },
+    {
+      "name": "custom_err",
+      "type": "object",
+      "description": "业务错误",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/batchEncrypt?app_key=your_appkey_here&method=order.batchEncrypt&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "custom_err": {
+          "err_code": "0",
+          "err_msg": "-"
+        },
+        "encrypt_infos": [
+          {
+            "auth_id": "42341234171232",
+            "cipher_text": "asdfasdfsasfdasdf",
+            "decrypt_text": "13117428564",
+            "err_msg": "-",
+            "err_no": "0"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/487",
+  "updatedAt": "2026-08-21",
+  "_file_stem": "order-order-batchEncrypt"
+}

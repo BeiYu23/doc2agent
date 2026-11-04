@@ -1,0 +1,894 @@
+{
+  "id": "doudian.dongchedi.second.feedChannel.getFeed",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.feedChannel.getFeed",
+  "description": "【二方接口】Feed2.0接口",
+  "method": "GET",
+  "path": "/second/feedChannel/getFeed",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "config_params",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "config_params",
+      "example": "config_params",
+      "_depth": 0
+    },
+    {
+      "name": "biz_identity",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "biz_identity",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "biz_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "biz_code",
+      "example": "biz_code",
+      "_depth": 1
+    },
+    {
+      "name": "scene_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "scene_code",
+      "example": "scene_code",
+      "_depth": 1
+    },
+    {
+      "name": "base_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "base_params",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "user_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "user_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "is_auth",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "is_auth",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "register_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "register_time",
+      "example": "1788877677",
+      "_depth": 2
+    },
+    {
+      "name": "is_login",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "is_login",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "user_id",
+      "example": "xxxxxxxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "user_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "user_type",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "device_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "device_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "device_score",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "device_score",
+      "example": "device_score1",
+      "_depth": 2
+    },
+    {
+      "name": "language",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "language",
+      "example": "language",
+      "_depth": 2
+    },
+    {
+      "name": "user_agent",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "user_agent",
+      "example": "user_agent",
+      "_depth": 2
+    },
+    {
+      "name": "forwarded",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "forwarde",
+      "example": "forwarded",
+      "_depth": 2
+    },
+    {
+      "name": "device_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "device_type",
+      "example": "device_type",
+      "_depth": 2
+    },
+    {
+      "name": "device_brand",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "device_brand",
+      "example": "device_brand",
+      "_depth": 2
+    },
+    {
+      "name": "os_version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "os_version",
+      "example": "os_version",
+      "_depth": 2
+    },
+    {
+      "name": "access_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "access_type",
+      "example": "access_type",
+      "_depth": 2
+    },
+    {
+      "name": "resolution",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "resolution",
+      "example": "resolution",
+      "_depth": 2
+    },
+    {
+      "name": "client_ip",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "client_ip",
+      "example": "client_ip",
+      "_depth": 2
+    },
+    {
+      "name": "device_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "device_id",
+      "example": "device_id",
+      "_depth": 2
+    },
+    {
+      "name": "device_platform",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "device_platform",
+      "example": "device_platform",
+      "_depth": 2
+    },
+    {
+      "name": "ac",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "ac",
+      "example": "ac",
+      "_depth": 2
+    },
+    {
+      "name": "install_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "install_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "app_engine",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "app_engine",
+      "example": "app_engine",
+      "_depth": 2
+    },
+    {
+      "name": "app_name_",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "app_name_",
+      "example": "app_name_",
+      "_depth": 2
+    },
+    {
+      "name": "update_version_code",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "update_version_code",
+      "example": "update_version_code",
+      "_depth": 2
+    },
+    {
+      "name": "version_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "version_name",
+      "example": "version_name",
+      "_depth": 2
+    },
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "app_id",
+      "example": "app_id",
+      "_depth": 2
+    },
+    {
+      "name": "first_install_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "first_install_time",
+      "example": "first_install_time",
+      "_depth": 2
+    },
+    {
+      "name": "install_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "install_id",
+      "example": "install_id",
+      "_depth": 2
+    },
+    {
+      "name": "install_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "install_time",
+      "example": "install_time",
+      "_depth": 2
+    },
+    {
+      "name": "install_channel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "install_channel",
+      "example": "install_channel",
+      "_depth": 2
+    },
+    {
+      "name": "client_version",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "client_version",
+      "example": "client_version",
+      "_depth": 2
+    },
+    {
+      "name": "location_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "location_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "longitude_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "longitude_value",
+      "example": "longitude_value",
+      "_depth": 2
+    },
+    {
+      "name": "country",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "country",
+      "example": "country",
+      "_depth": 2
+    },
+    {
+      "name": "region_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "region_id",
+      "example": "region_id",
+      "_depth": 2
+    },
+    {
+      "name": "city_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "city_id",
+      "example": "city_id",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "city_code",
+      "example": "city_code",
+      "_depth": 2
+    },
+    {
+      "name": "ec_address_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ec_address_data",
+      "example": "ec_address_data",
+      "_depth": 2
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "city",
+      "example": "city",
+      "_depth": 2
+    },
+    {
+      "name": "latitude_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "latitude_value",
+      "example": "latitude_value",
+      "_depth": 2
+    },
+    {
+      "name": "region",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "region",
+      "example": "region",
+      "_depth": 2
+    },
+    {
+      "name": "country_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "country_id",
+      "example": "country_id",
+      "_depth": 2
+    },
+    {
+      "name": "region_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "region_code",
+      "example": "region_code",
+      "_depth": 2
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "country_code",
+      "example": "country_code",
+      "_depth": 2
+    },
+    {
+      "name": "mall_ab_result",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "mall_ab_result",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "ab_string",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ab_string",
+      "example": "ab_string",
+      "_depth": 2
+    },
+    {
+      "name": "ab_err_string",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ab_err_string",
+      "example": "ab_err_string",
+      "_depth": 2
+    },
+    {
+      "name": "ab_result_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ab_result_map",
+      "example": "ab_result_map",
+      "_depth": 2
+    },
+    {
+      "name": "customed_base_params",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "customed_base_params",
+      "example": "customed_base_params",
+      "_depth": 1
+    },
+    {
+      "name": "page_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "page_params",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "refresh_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "refresh_type",
+      "example": "refresh_type",
+      "_depth": 1
+    },
+    {
+      "name": "page_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "page_name",
+      "example": "page_name",
+      "_depth": 1
+    },
+    {
+      "name": "enter_from",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "enter_from",
+      "example": "enter_from",
+      "_depth": 1
+    },
+    {
+      "name": "tab_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "tab_id",
+      "example": "tab_id",
+      "_depth": 1
+    },
+    {
+      "name": "real_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "精排数量，仅用于推荐侧合理分配精排资源",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "count",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "post_back",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "首次进入和下拉刷新传空",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "recall_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "recall_params",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "recommend_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "recommend_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "disable_personal_recommend",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "disable_personal_recommend",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "recommend_filter",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "recommend_filter",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "related_gid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "related_gid",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "recommend_customed",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "recommend_customed",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "unlike_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "unlike_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "unlike_datas",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "unlike_datas",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "last_action_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "last_action_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "last_action_datas",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "last_action_datas",
+      "example": "last_action_datas",
+      "_depth": 2
+    },
+    {
+      "name": "tabs_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "tabs_params",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "with_tabs",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "with_tabs",
+      "example": "with_tabs",
+      "_depth": 2
+    },
+    {
+      "name": "impression_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "impression_params",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "impression_datas",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "impression_datas",
+      "example": "xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "impression_start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "impression_start_time",
+      "example": "188777777",
+      "_depth": 1
+    },
+    {
+      "name": "force_insert_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "force_insert_params",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "force_insert_items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "force_insert_items",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "force_insert_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "force_insert_type",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "force_insert_position",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "force_insert_position",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "force_insert_feed_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "force_insert_feed_type",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "force_insert_feed_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "force_insert_feed_id",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "force_insert_customed",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "force_insert_customed",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "disable_intervene",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "disable_intervene",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "feed",
+      "type": "array",
+      "description": "pack_data_v1",
+      "example": ""
+    },
+    {
+      "name": "page",
+      "type": "object",
+      "description": "page",
+      "example": ""
+    },
+    {
+      "name": "filtered_feed",
+      "type": "array",
+      "description": "filtered_feed",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/feedChannel/getFeed?app_key=your_appkey_here&method=second.feedChannel.getFeed&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "feed": [
+          {
+            "id": "1",
+            "pack_data_v1": {
+              "product": {
+                "cover": {
+                  "height": "100",
+                  "uri": "xxxx",
+                  "url_list": "xxxx",
+                  "width": "100"
+                },
+                "id": "xxxxx",
+                "price": {
+                  "market_price": "1",
+                  "max_price": "1",
+                  "min_price": "1",
+                  "original_price": "2",
+                  "show_price": "1",
+                  "show_price_type": "xxx",
+                  "show_sku_id": "xxx",
+                  "type": "1",
+                  "type_text": "type_text"
+                },
+                "title": "xxxxx"
+              }
+            },
+            "source": "1",
+            "type": "1"
+          }
+        ],
+        "filtered_feed": [
+          {
+            "id": "id",
+            "pack_data_v1": {
+              "product": {
+                "cover": {
+                  "height": "height",
+                  "uri": "uri",
+                  "url_list": "url_list",
+                  "width": "width"
+                },
+                "id": "id",
+                "price": {
+                  "market_price": "market_price",
+                  "max_price": "max_price",
+                  "min_price": "min_price",
+                  "original_price": "1",
+                  "show_price": "1",
+                  "show_price_type": "xxxx",
+                  "show_sku_id": "xxxx",
+                  "type": "type",
+                  "type_text": "type_text"
+                },
+                "title": "title"
+              }
+            },
+            "source": "source",
+            "type": "type"
+          }
+        ],
+        "page": {
+          "more": "true",
+          "post_back": "post_back"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6881",
+  "updatedAt": "2024-09-14",
+  "_file_stem": "dongchedi-second-feedChannel-getFeed"
+}

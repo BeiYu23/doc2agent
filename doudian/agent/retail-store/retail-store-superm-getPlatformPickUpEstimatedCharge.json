@@ -1,0 +1,136 @@
+{
+  "id": "doudian.retail-store.superm.getPlatformPickUpEstimatedCharge",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.getPlatformPickUpEstimatedCharge",
+  "description": "运力呼叫询价（逆向）/运力取消询价（逆向）",
+  "method": "GET",
+  "path": "/superm/getPlatformPickUpEstimatedCharge",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "售后单ID",
+      "example": "7161813415244218654",
+      "_depth": 0
+    },
+    {
+      "name": "selected_calendar_period",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "查询的时间段",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "time_begin_ts",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "时间段开始时间；Unix时间戳，单位：秒",
+      "example": "1667790000",
+      "_depth": 1
+    },
+    {
+      "name": "time_end_ts",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "时间段结束时间；Unix时间戳，单位：秒",
+      "example": "1667793600",
+      "_depth": 1
+    },
+    {
+      "name": "dispatcher_fee_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "查询的费用类型；1 -呼叫运力费用；2-取消运力费用",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "dispatcher_fee",
+      "type": "number",
+      "description": "运力费用预估，单位：分",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统服务异常,请重试（sub_code: isp.service-error:20100）",
+      "action": "读操作数据库异常",
+      "sub_code": "isp.service-error:20100",
+      "sub_msg": "系统服务异常,请重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求内部服务异常,请重试（sub_code: isp.service-error:20200）",
+      "action": "请求内部服务异常,请重试",
+      "sub_code": "isp.service-error:20200",
+      "sub_msg": "请求内部服务异常,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / op not found（sub_code: isv.business-failed:20201）",
+      "action": "op not found",
+      "sub_code": "isv.business-failed:20201",
+      "sub_msg": "op not found"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务错误，此状态下不可重试（sub_code: isv.business-failed:50300）",
+      "action": "业务错误，此状态下不可重试",
+      "sub_code": "isv.business-failed:50300",
+      "sub_msg": "业务错误，此状态下不可重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/getPlatformPickUpEstimatedCharge?app_key=your_appkey_here&method=superm.getPlatformPickUpEstimatedCharge&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "dispatcher_fee": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:20100",
+      "sub_msg": "系统服务异常,请重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2737",
+  "updatedAt": "2022-11-10",
+  "_file_stem": "retail-store-superm-getPlatformPickUpEstimatedCharge"
+}

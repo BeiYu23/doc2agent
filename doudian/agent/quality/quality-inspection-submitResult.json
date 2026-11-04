@@ -1,0 +1,271 @@
+{
+  "id": "doudian.quality.inspection.submitResult",
+  "platform": "doudian",
+  "group": "quality",
+  "name": "inspection.submitResult",
+  "description": "外部服务商上传质检结果",
+  "method": "GET",
+  "path": "/inspection/submitResult",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务身份参数，前置质检：machine_pre_inspection",
+      "example": "machine_pre_inspection",
+      "_depth": 0
+    },
+    {
+      "name": "targets",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "质检对象列表，批量上传数量不能超过100个",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "collection_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检对象匹配的质检标准集标识",
+      "example": "7460063059139674403_1",
+      "_depth": 1
+    },
+    {
+      "name": "result_detail",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "质检结果详情",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "result",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "质检结果, 1-合格，2-不合格，目前仅支持上传合格",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "img_urls",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检结果图片url,最多上传30张，图片大小不超过2MB",
+      "example": "[\"https://xxx\"]",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注信息",
+      "_depth": 2
+    },
+    {
+      "name": "item_results",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检项结果列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "item_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "非必填，可以填空字符串",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "material_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "材料信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文本形式结果",
+      "example": "轻微划痕",
+      "_depth": 4
+    },
+    {
+      "name": "item_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准项code",
+      "example": "7460064458699129088_1",
+      "_depth": 3
+    },
+    {
+      "name": "result",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "1-合格，2-不合格，3-无法检测",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "target_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检对象类型，如果为手机，请传phone",
+      "example": "phone",
+      "_depth": 1
+    },
+    {
+      "name": "target_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检对象标识，如果为手机，请传IMEI号",
+      "example": "356303485265827",
+      "_depth": 1
+    },
+    {
+      "name": "target_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检对象信息，非必填",
+      "example": "nil",
+      "_depth": 1
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外信息，非必填",
+      "example": "nil",
+      "_depth": 0
+    },
+    {
+      "name": "biz_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务身份参数，二手：second_hand_inspection",
+      "example": "second_hand_inspection",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不支持的业务线（sub_code: isv.parameter-invalid:601）",
+      "action": "传入正确的业务身份biz_code",
+      "sub_code": "isv.parameter-invalid:601",
+      "sub_msg": "不支持的业务线"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不支持的质检任务类型（sub_code: isv.parameter-invalid:602）",
+      "action": "传入正确的业务身份task_type",
+      "sub_code": "isv.parameter-invalid:602",
+      "sub_msg": "不支持的质检任务类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 质检对象数量超出限制（sub_code: isv.parameter-invalid:617）",
+      "action": "批量上传的手机一次不能超过100",
+      "sub_code": "isv.parameter-invalid:617",
+      "sub_msg": "质检对象数量超出限制"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 质检对象不能为空（sub_code: isv.parameter-invalid:616）",
+      "action": "质检对象不能为空",
+      "sub_code": "isv.parameter-invalid:616",
+      "sub_msg": "质检对象不能为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 质检项校验失败（sub_code: isv.parameter-invalid:615）",
+      "action": "检查质检项填写是否正确",
+      "sub_code": "isv.parameter-invalid:615",
+      "sub_msg": "质检项校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不支持的质检对象类型（sub_code: isv.parameter-invalid:1001a）",
+      "action": "传入正确的质检对象类型",
+      "sub_code": "isv.parameter-invalid:1001a",
+      "sub_msg": "不支持的质检对象类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / targetCode不能为空（sub_code: isv.parameter-invalid:1001b）",
+      "action": "传入正确的IMEI号",
+      "sub_code": "isv.parameter-invalid:1001b",
+      "sub_msg": "targetCode不能为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 质检结果不能为空（sub_code: isv.parameter-invalid:1001c）",
+      "action": "质检结果不能为空",
+      "sub_code": "isv.parameter-invalid:1001c",
+      "sub_msg": "质检结果不能为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 质检结果非法（sub_code: isv.parameter-invalid:1001d）",
+      "action": "只支持合格的质检结果",
+      "sub_code": "isv.parameter-invalid:1001d",
+      "sub_msg": "质检结果非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:601",
+      "sub_msg": "不支持的业务线"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1582/7265",
+  "updatedAt": "2025-02-12",
+  "_file_stem": "quality-inspection-submitResult"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "doudian.member.open.unionIdSwitch",
+  "platform": "doudian",
+  "group": "member",
+  "name": "open.unionIdSwitch",
+  "description": "抖音unionId转换抖店会员unionId",
+  "method": "GET",
+  "path": "/open/unionIdSwitch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 小程序"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "union_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音unionId",
+      "example": "1111-2222-3333-4444",
+      "_depth": 0
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "1-抖音unionId",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "union_id",
+      "type": "string",
+      "description": "抖店会员unionId",
+      "example": "adfdafsd"
+    },
+    {
+      "name": "type",
+      "type": "mixed",
+      "description": "2-代表抖店会员unionId",
+      "example": "2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 根据unionId查询用户信息失败，请检查unionId（sub_code: isv.business-failed:20010）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:20010",
+      "sub_msg": "根据unionId查询用户信息失败，请检查unionId"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺查询满天星系统异常，请检查店铺是否已入驻满天星（sub_code: isv.business-failed:20011）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:20011",
+      "sub_msg": "店铺查询满天星系统异常，请检查店铺是否已入驻满天星"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 生成电商侧unionId失败，请检查参数（sub_code: isv.business-failed:20012）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:20012",
+      "sub_msg": "生成电商侧unionId失败，请检查参数"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/open/unionIdSwitch?app_key=your_appkey_here&method=open.unionIdSwitch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "type": "2",
+        "union_id": "adfdafsd"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20010",
+      "sub_msg": "根据unionId查询用户信息失败，请检查unionId"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/4193",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "member-open-unionIdSwitch"
+}

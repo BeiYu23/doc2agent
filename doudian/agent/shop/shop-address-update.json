@@ -1,0 +1,247 @@
+{
+  "id": "doudian.shop.address.update",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "address.update",
+  "description": "该接口支持店铺修改单条售后地址信息",
+  "method": "GET",
+  "path": "/address/update",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V2.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "地址信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "地址ID",
+      "example": "10000",
+      "_depth": 1
+    },
+    {
+      "name": "user_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "联系人姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号码",
+      "example": "18012345678",
+      "_depth": 1
+    },
+    {
+      "name": "province_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "省ID",
+      "example": "33",
+      "_depth": 1
+    },
+    {
+      "name": "city_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "城市ID",
+      "example": "330700",
+      "_depth": 1
+    },
+    {
+      "name": "town_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "区ID",
+      "example": "330782",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "xxxxxxxx",
+      "_depth": 1
+    },
+    {
+      "name": "street_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "街道ID",
+      "example": "330782003",
+      "_depth": 1
+    },
+    {
+      "name": "link_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "联系方式类型(0-手机,1-普通座机,2-企业座机)",
+      "example": "0-手机,1-普通座机,2-企业座机",
+      "_depth": 1
+    },
+    {
+      "name": "fixed_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "普通座机格式：区号-座机号-分机号(分机号选填)、区号3~4位、座机号7~8位、分机号不超过5位。企业座机：400/800开头不超过10位、95开头在5~8we",
+      "example": "普通座机：400-12345678-1234，企业座机：40012345",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后备注，限制200个字符",
+      "example": "拒收到付",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店场景需要传门店ID，其他场景默认值0即可",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 已有对应的记录（sub_code: isv.parameter-invalid:100002）",
+      "action": "重新创建",
+      "sub_code": "isv.parameter-invalid:100002",
+      "sub_msg": "已有对应的记录"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 信息未修改，提交失败（sub_code: isv.business-failed:100005）",
+      "action": "信息未修改，提交失败",
+      "sub_code": "isv.business-failed:100005",
+      "sub_msg": "信息未修改，提交失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 操作过于频繁，请稍后重试（sub_code: isp.service-error:100001）",
+      "action": "操作过于频繁，请稍后重试",
+      "sub_code": "isp.service-error:100001",
+      "sub_msg": "操作过于频繁，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该地址不存在，请刷新后重试（sub_code: isv.business-failed:5001）",
+      "action": "请检查地址信息",
+      "sub_code": "isv.business-failed:5001",
+      "sub_msg": "该地址不存在，请刷新后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 手机号格式有误（sub_code: isv.business-failed:4000）",
+      "action": "请检查手机号码",
+      "sub_code": "isv.business-failed:4000",
+      "sub_msg": "手机号格式有误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:6000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:6000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 暂不支持该区号（sub_code: isv.business-failed:100009）",
+      "action": "请检查区地址信息",
+      "sub_code": "isv.business-failed:100009",
+      "sub_msg": "暂不支持该区号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 地址已删除，请检查地址后重试（sub_code: isv.business-failed:5004）",
+      "action": "地址已删除，请检查地址后重试",
+      "sub_code": "isv.business-failed:5004",
+      "sub_msg": "地址已删除，请检查地址后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 修改地址失败，该地址正用于电子面单订购，请新建地址或取消订购关系后修改（sub_code: isv.business-failed:5005）",
+      "action": "修改地址失败，该地址正用于电子面单订购，请新建地址或取消订购关系后修改",
+      "sub_code": "isv.business-failed:5005",
+      "sub_msg": "修改地址失败，该地址正用于电子面单订购，请新建地址或取消订购关系后修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4002:地址详细信息中存在冗余内容【(网易严选退货仓)】，需将地址详细信息精简为【茹家甸路1号安博物流园二层41号口】后再重新提交（sub_code: isv.business-failed:4002）",
+      "action": "4002:地址详细信息中存在冗余内容【(网易严选退货仓)】，需将地址详细信息精简为【茹家甸路1号安博物流园二层41号口】后再重新提交",
+      "sub_code": "isv.business-failed:4002",
+      "sub_msg": "4002:地址详细信息中存在冗余内容【(网易严选退货仓)】，需将地址详细信息精简为【茹家甸路1号安博物流园二层41号口】后再重新提交"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4001:当前输入的详细地址与所选行政区有冲突，请核查修改后提交。（sub_code: isv.business-failed:4001）",
+      "action": "4001:当前输入的详细地址与所选行政区有冲突，请核查修改后提交。",
+      "sub_code": "isv.business-failed:4001",
+      "sub_msg": "4001:当前输入的详细地址与所选行政区有冲突，请核查修改后提交。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10001:当前店铺信息无权限访问（sub_code: isv.business-failed:10001）",
+      "action": "10001:当前店铺信息无权限访问",
+      "sub_code": "isv.business-failed:10001",
+      "sub_msg": "10001:当前店铺信息无权限访问"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100002",
+      "sub_msg": "已有对应的记录"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/1511",
+  "updatedAt": "2022-10-27",
+  "_file_stem": "shop-address-update"
+}

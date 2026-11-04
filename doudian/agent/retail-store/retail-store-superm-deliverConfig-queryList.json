@@ -1,0 +1,121 @@
+{
+  "id": "doudian.retail-store.superm.deliverConfig.queryList",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.deliverConfig.queryList",
+  "description": "时效管理查询",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "店铺id列表，不传则查门店下的配置",
+      "example": "23423143412",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_deliver_config_list",
+      "type": "array",
+      "description": "配置列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 时效配置查询失败（sub_code: isv.business-failed:202326）",
+      "action": "时效配置查询失败",
+      "sub_code": "isv.business-failed:202326",
+      "sub_msg": "时效配置查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前店铺下未查询到该配置（sub_code: isv.business-failed:202327）",
+      "action": "当前店铺下未查询到该配置",
+      "sub_code": "isv.business-failed:202327",
+      "sub_msg": "当前店铺下未查询到该配置"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据转换错误（sub_code: isv.business-failed:50202）",
+      "action": "数据转换错误",
+      "sub_code": "isv.business-failed:50202",
+      "sub_msg": "数据转换错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询服务失败（sub_code: isv.business-failed:20233）",
+      "action": "门店查询服务失败",
+      "sub_code": "isv.business-failed:20233",
+      "sub_msg": "门店查询服务失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=superm.deliverConfig.queryList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "shop_deliver_config_list": [
+          {
+            "config_id": "32133123",
+            "config_status": "2",
+            "config_type": "1",
+            "deliver_type": "1",
+            "is_pre_check_suc": "true",
+            "normal_time_cost": "20",
+            "over_limit_time_cost": "40",
+            "pre_check_msg": "true",
+            "shop_id": "342543534",
+            "special_time_list": [
+              {
+                "end_time": "39600",
+                "start_time": "36000",
+                "time_cost": "20"
+              }
+            ],
+            "store_id": "2424123",
+            "update_time": "2023-02-13 20:06:31"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/3596",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "retail-store-superm-deliverConfig-queryList"
+}

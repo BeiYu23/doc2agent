@@ -1,0 +1,143 @@
+{
+  "id": "doudian.warehouse.yunc.pushOutboundAdditionalFeedback",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.pushOutboundAdditionalFeedback",
+  "description": "云仓出库单附属信息回传",
+  "method": "GET",
+  "path": "/yunc/pushOutboundAdditionalFeedback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "slip_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "幂等号 需要保证唯一",
+      "example": "\"V0002_OB398798798543343_98798758493\"",
+      "_depth": 0
+    },
+    {
+      "name": "option_sn_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "延迟占用的SN信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品信息",
+      "example": "\"76823878979875844\"",
+      "_depth": 1
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "出库单行号",
+      "example": "\"1\"",
+      "_depth": 1
+    },
+    {
+      "name": "sn_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "SN码列表，如有多个SN，需要每次回传全量的SN信息，平台会做覆盖更新",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sn_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "SN码",
+      "example": "\"890788798797898\"",
+      "_depth": 2
+    },
+    {
+      "name": "bar_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品条码",
+      "example": "\"89778534353235\"",
+      "_depth": 2
+    },
+    {
+      "name": "imei_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "imei信息（应传尽传，实物有多少个就传多少个，如果没有的话可以不传）",
+      "example": "[\"4532464654\",\"463465464\"]",
+      "_depth": 2
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓Code",
+      "example": "\"V0003\"",
+      "_depth": 0
+    },
+    {
+      "name": "outbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "出库单号",
+      "example": "\"OB898479854934464334\"",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "请求的毫秒级时间戳，多次更新场景下用于做版本控制使用。",
+      "example": "1745828286000",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/pushOutboundAdditionalFeedback?app_key=your_appkey_here&method=yunc.pushOutboundAdditionalFeedback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/7432",
+  "updatedAt": "2025-12-09",
+  "_file_stem": "warehouse-yunc-pushOutboundAdditionalFeedback"
+}

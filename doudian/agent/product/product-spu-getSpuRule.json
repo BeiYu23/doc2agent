@@ -1,0 +1,231 @@
+{
+  "id": "doudian.product.spu.getSpuRule",
+  "platform": "doudian",
+  "group": "product",
+  "name": "spu.getSpuRule",
+  "description": "获取SPU发布规则和模板",
+  "method": "GET",
+  "path": "/spu/getSpuRule",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "类目ID",
+      "example": "23362",
+      "_depth": 0
+    },
+    {
+      "name": "channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目2.0渠道字段。\n0为获取门捷列夫类目下的规则。1为获取标准类目的规则。注意类目ID号段要与channel匹配，否则会报错。如23362为门捷列夫类目ID，channl需要为0.\n系统会根据category_id自身字段判断是门捷还是标准类目，但是channel优先级更高",
+      "example": "0或1",
+      "_depth": 0
+    },
+    {
+      "name": "brand_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "品牌ID",
+      "example": "1078152838",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "spu_property_rule",
+      "type": "array",
+      "description": "SPU属性规则",
+      "example": ""
+    },
+    {
+      "name": "spu_images_rule",
+      "type": "object",
+      "description": "SPU图片规则(已废弃，请采用spu_material_rules字段)",
+      "example": ""
+    },
+    {
+      "name": "spu_actual_images_rule",
+      "type": "object",
+      "description": "SPU实物图规则（已废弃，请采用spu_proof_rules字段）",
+      "example": ""
+    },
+    {
+      "name": "control_type",
+      "type": "mixed",
+      "description": "0-不管控，商家在该类目下发布商品时，不强制要求命中SPU。 - 1-弱管控，商家在该类目下发布商品时，强制要求命中SPU（即关键属性必须一致），但绑定属性不强制要求一致。 - 2-强管控，商家在该类目下发布商品时，强制要求命中SPU，且绑定属性必须一致。",
+      "example": "2"
+    },
+    {
+      "name": "support_spu_product",
+      "type": "boolean",
+      "description": "- true 表示商家在该类目基于SPU发布商品，发商品的管控策略见管控类型。 - false 表示商家在该类目不需要基于SPU发布商品。不用发布SPU，直接发布商品即可。",
+      "example": "true"
+    },
+    {
+      "name": "support_create_spu",
+      "type": "boolean",
+      "description": "true-可以发布SPU，false-不能发布SPU",
+      "example": "true"
+    },
+    {
+      "name": "spu_material_rules",
+      "type": "array",
+      "description": "SPU素材规则（素材类型：主图）",
+      "example": ""
+    },
+    {
+      "name": "spu_proof_rules",
+      "type": "array",
+      "description": "证明材料规则（证明材料类型：实物图、版权页）",
+      "example": ""
+    },
+    {
+      "name": "spu_barcode_rule",
+      "type": "object",
+      "description": "条码规则",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 读取失败（sub_code: isv.business-failed:2012013）",
+      "action": "检查参数入参",
+      "sub_code": "isv.business-failed:2012013",
+      "sub_msg": "读取失败"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 操作人非法（sub_code: isv.risk-control-failed:20121002）",
+      "action": "查看操作人信息",
+      "sub_code": "isv.risk-control-failed:20121002",
+      "sub_msg": "操作人非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商家不存在（sub_code: isv.business-failed:20121103）",
+      "action": "查看操作人信息",
+      "sub_code": "isv.business-failed:20121103",
+      "sub_msg": "商家不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商家不存在（sub_code: isv.business-failed:2012004）",
+      "action": "查看操作人信息",
+      "sub_code": "isv.business-failed:2012004",
+      "sub_msg": "商家不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/spu/getSpuRule?app_key=your_appkey_here&method=spu.getSpuRule&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "control_type": "2",
+        "spu_actual_images_rule": {
+          "is_required": "1",
+          "max_num": "5",
+          "min_num": "1"
+        },
+        "spu_barcode_rule": {
+          "barcode_image_rule": {
+            "data_format": "[\"png\",\"jpg\",\"jpeg\"]",
+            "is_required": "1",
+            "max_num": "5",
+            "min_num": "1"
+          },
+          "barcode_rule": {
+            "is_required": "1",
+            "max_num": "1",
+            "min_num": "1"
+          }
+        },
+        "spu_images_rule": {
+          "is_required": "1",
+          "max_num": "5",
+          "min_num": "1"
+        },
+        "spu_material_rules": [
+          {
+            "material_rule": {
+              "aspect_ratio": "[\"1\",\"1\"]",
+              "data_format": "[\"png\",\"jpg\",\"jpeg\"]",
+              "is_required": "0",
+              "max_num": "5",
+              "max_size": "5",
+              "min_num": "0",
+              "name": "主图",
+              "pixel": "[600,600]"
+            },
+            "material_type": "1"
+          }
+        ],
+        "spu_proof_rules": [
+          {
+            "proof_rule": {
+              "aspect_ratio": "[\"1\",\"1\"]",
+              "data_format": "[\"png\",\"jpg\",\"jpeg\"]",
+              "is_required": "1",
+              "max_num": "5",
+              "max_size": "5",
+              "min_num": "1",
+              "name": "版权页",
+              "pixel": "[600,600]"
+            },
+            "proof_type": "6"
+          }
+        ],
+        "spu_property_rule": [
+          {
+            "diy_type": "0",
+            "is_required": "1",
+            "max_select_num": "0",
+            "property_id": "1831",
+            "property_name": "书名",
+            "property_type": "0",
+            "value_type": "select",
+            "values": [
+              {
+                "value_id": "0",
+                "value_name": "小王子"
+              }
+            ]
+          }
+        ],
+        "support_create_spu": "true",
+        "support_spu_product": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2012013",
+      "sub_msg": "读取失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/2312",
+  "updatedAt": "2026-08-13",
+  "_file_stem": "product-spu-getSpuRule"
+}

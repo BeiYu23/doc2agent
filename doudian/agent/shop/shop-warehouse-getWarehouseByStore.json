@@ -1,0 +1,88 @@
+{
+  "id": "doudian.shop.warehouse.getWarehouseByStore",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "warehouse.getWarehouseByStore",
+  "description": "通过门店id查询仓信息",
+  "method": "GET",
+  "path": "/warehouse/getWarehouseByStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "",
+      "example": "",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouse_info_list",
+      "type": "array",
+      "description": "",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/getWarehouseByStore?app_key=your_appkey_here&method=warehouse.getWarehouseByStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "warehouse_info_list": [
+          {
+            "address_detail": "",
+            "create_time": "0",
+            "introduction": "",
+            "name": "",
+            "out_fence_ids": "[]",
+            "out_warehouse_id": "",
+            "shop_id": "0",
+            "update_time": "0",
+            "warehouse_id": "0",
+            "warehouse_location": {
+              "address_id1": "0",
+              "address_id2": "0",
+              "address_id3": "0",
+              "address_id4": "0",
+              "address_name1": "",
+              "address_name2": "",
+              "address_name3": "",
+              "address_name4": ""
+            },
+            "warehouse_type": "0"
+          }
+        ]
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2423",
+  "updatedAt": "2022-08-25",
+  "_file_stem": "shop-warehouse-getWarehouseByStore"
+}

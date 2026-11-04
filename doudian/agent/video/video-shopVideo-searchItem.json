@@ -1,0 +1,229 @@
+{
+  "id": "doudian.video.shopVideo.searchItem",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.searchItem",
+  "description": "查询视频列表",
+  "method": "GET",
+  "path": "/shopVideo/searchItem",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "bind_scene",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "绑定场景，1-只查挂车短视频，2-查询所有非挂车短视频，3-查询所有未绑定商品的短视频",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "optional_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "可选参数: 是否获取相关数据",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "need_stats",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要短视频表现",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "need_high_quality_tag",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要优质标签",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页数量，默认10",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "作者账号id，不传默认人店一体账号，支持渠道号",
+      "example": "121212",
+      "_depth": 0
+    },
+    {
+      "name": "item_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "短视频id",
+      "example": "121221221",
+      "_depth": 0
+    },
+    {
+      "name": "product",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商品参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id",
+      "example": "1212121212",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回数据",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "121212"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000001:当前商家暂未绑号（sub_code: isv.business-failed:1000001）",
+      "action": "请商家绑号",
+      "sub_code": "isv.business-failed:1000001",
+      "sub_msg": "1000001:当前商家暂未绑号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20000000:下游服务内部异常(code=20000004)（sub_code: isv.business-failed:20000000）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:20000000",
+      "sub_msg": "20000000:下游服务内部异常(code=20000004)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000003:系统异常（sub_code: isv.business-failed:1000003）",
+      "action": "系统异常",
+      "sub_code": "isv.business-failed:1000003",
+      "sub_msg": "1000003:系统异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/searchItem?app_key=your_appkey_here&method=shopVideo.searchItem&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "items": [
+            {
+              "account_info": {
+                "name": "这是名称",
+                "user_id": "1212121"
+              },
+              "bind_types": "[1]",
+              "high_quality_tag": {
+                "boost_v_v": "1212",
+                "high_quality": "true"
+              },
+              "item_info": {
+                "caption": "这是描述",
+                "cover": "https://ttt",
+                "duration": "11",
+                "item_id": "12121221",
+                "name": "这是标题",
+                "publish_time": "1748347421",
+                "reviewed": "true",
+                "status": "102"
+              },
+              "products": {
+                "bind_products": [
+                  {
+                    "bind_type": "1",
+                    "products": [
+                      {
+                        "id": "12121212",
+                        "img": "https://ttt",
+                        "name": "这是商品名称"
+                      }
+                    ]
+                  }
+                ],
+                "suggest_products": [
+                  {
+                    "id": "121212121",
+                    "img": "https://www.",
+                    "name": "这是产品名称"
+                  }
+                ]
+              },
+              "shop_info": {
+                "shop_id": "4463798"
+              },
+              "stats": {
+                "comment_count": "12121",
+                "like_count": "1212",
+                "order_amount": "1234",
+                "play_count": "1223",
+                "share_count": "1221"
+              }
+            }
+          ]
+        },
+        "total": "121212"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1000001",
+      "sub_msg": "1000001:当前商家暂未绑号"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7486",
+  "updatedAt": "2025-06-11",
+  "_file_stem": "video-shopVideo-searchItem"
+}

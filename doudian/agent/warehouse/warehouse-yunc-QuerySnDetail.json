@@ -1,0 +1,139 @@
+{
+  "id": "doudian.warehouse.yunc.QuerySnDetail",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.QuerySnDetail",
+  "description": "查询sn码细节",
+  "method": "GET",
+  "path": "/yunc/QuerySnDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓, 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP单号",
+      "example": "\"1111\"",
+      "_depth": 0
+    },
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "分页查询当前页，默认值1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "分页查询每页数量，默认值10",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品id",
+      "example": "\"11111\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 货品不存在（sub_code: isv.business-failed:62302630）",
+      "action": "货品信息校验不通过，按提示修改",
+      "sub_code": "isv.business-failed:62302630",
+      "sub_msg": "货品不存在"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:请求内部服务超时（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:请求内部服务超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1003:请求内部服务异常,请重试（sub_code: isv.business-failed:1003）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "1003:请求内部服务异常,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1100:查询店铺与货主绑定关系失败，请重试！（sub_code: isv.business-failed:1100）",
+      "action": "查询店铺与货主绑定关系失败，请重试！",
+      "sub_code": "isv.business-failed:1100",
+      "sub_msg": "1100:查询店铺与货主绑定关系失败，请重试！"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1253:货主和店铺绑定关系不存在，请在scm进行货主和店铺关系绑定后重推数据！（sub_code: isv.business-failed:1253）",
+      "action": "货主和店铺绑定关系不存在，请在scm进行货主和店铺关系绑定后重推数据！",
+      "sub_code": "isv.business-failed:1253",
+      "sub_msg": "1253:货主和店铺绑定关系不存在，请在scm进行货主和店铺关系绑定后重推数据！"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/QuerySnDetail?app_key=your_appkey_here&method=yunc.QuerySnDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "page": "1",
+          "page_size": "10",
+          "sn_list": [
+            {
+              "cargo_code": "1",
+              "sn": "11111",
+              "sn_status": "1",
+              "sn_status_desc": "使用"
+            }
+          ],
+          "total": "1"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:62302630",
+      "sub_msg": "货品不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/8064",
+  "updatedAt": "2026-03-10",
+  "_file_stem": "warehouse-yunc-QuerySnDetail"
+}

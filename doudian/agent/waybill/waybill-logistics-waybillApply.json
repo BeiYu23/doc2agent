@@ -1,0 +1,139 @@
+{
+  "id": "doudian.waybill.logistics.waybillApply",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.waybillApply",
+  "description": "获取面单信息",
+  "method": "GET",
+  "path": "/logistics/waybillApply",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V2.06）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_applies",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "请求结构体",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流公司编码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "waybill_infos",
+      "type": "array",
+      "description": "正常返回结构体",
+      "example": ""
+    },
+    {
+      "name": "err_infos",
+      "type": "array",
+      "description": "错误返回结构体",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数有误，请检查请求参数（sub_code: isv.missing-parameter:1001）",
+      "action": "参数有误，请检查请求参数",
+      "sub_code": "isv.missing-parameter:1001",
+      "sub_msg": "参数有误，请检查请求参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询密钥失败（sub_code: isp.service-error:100102）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:100102",
+      "sub_msg": "查询密钥失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 获取订单信息失败（sub_code: isp.service-error:100101）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:100101",
+      "sub_msg": "获取订单信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1003:运单号有误，请检查运单号（sub_code: isv.business-failed:1003）",
+      "action": "请检查运单号",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "1003:运单号有误，请检查运单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100106:系统错误，请稍后重试（sub_code: isv.business-failed:100106）",
+      "action": "请检查运单号",
+      "sub_code": "isv.business-failed:100106",
+      "sub_msg": "100106:系统错误，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/waybillApply?app_key=your_appkey_here&method=logistics.waybillApply&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "err_infos": [
+          {
+            "err_code": "1",
+            "err_msg": "1",
+            "order_id": "1",
+            "track_no": "1"
+          }
+        ],
+        "waybill_infos": [
+          {
+            "order_id": "1",
+            "print_data": "1",
+            "sign": "1",
+            "track_no": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:1001",
+      "sub_msg": "参数有误，请检查请求参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/490",
+  "updatedAt": "2021-06-22",
+  "_file_stem": "waybill-logistics-waybillApply"
+}

@@ -1,0 +1,155 @@
+{
+  "id": "doudian.retail-store.instantShopping.SyncWarehouseStock",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "instantShopping.SyncWarehouseStock",
+  "description": "同步货品库存",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "抖音侧仓ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "org_shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "货主iD",
+      "example": "1111409488",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "1、用于记录此次变更的时间\n2、用于防止历史数据替换新数据（如12点的数据先到，11点50的数据后到，则不更新11点50的数据）",
+      "example": "1711248931",
+      "_depth": 0
+    },
+    {
+      "name": "stock_update_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "需要批量提交的goods_id及对应的数量\n数量限制：最多20个货品",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "goods_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品id",
+      "example": "111111",
+      "_depth": 1
+    },
+    {
+      "name": "stock_for_sale_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "正品库存（可销售库存数量）",
+      "example": "1111",
+      "_depth": 1
+    },
+    {
+      "name": "stock_locked_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "锁定库存（被待履约单锁定的库存数量）",
+      "example": "1111",
+      "_depth": 1
+    },
+    {
+      "name": "stock_not_for_sale_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "残次品库存（不可销售库存数量）",
+      "example": "111",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "abcd",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询未找到（sub_code: isv.business-failed:40004）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:40004",
+      "sub_msg": "查询未找到"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50040）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:50040",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法出参（sub_code: isv.parameter-invalid:40001）",
+      "action": "传入合法入参",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法出参"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 51040:|RPCError{PSM:[ecom.stock.backend_rpc] Method:[BatchSetStockForOpen] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[-30001] BizStatusMessage:[181241978商品门店信息不匹配]}:goods_id:3411410950185474|RPCError{PSM:[ecom.stock.backend_rpc]（sub_code: isv.business-failed:51040）",
+      "action": "51040:|RPCError{PSM:[ecom.stock.backend_rpc] Method:[BatchSetStockForOpen] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[-30001] BizStatusMessage:[181241978商品门店信息不匹配]}:goods_id:3411410950185474|RPCError{PSM:[ecom.stock.backend_rpc]",
+      "sub_code": "isv.business-failed:51040",
+      "sub_msg": "51040:|RPCError{PSM:[ecom.stock.backend_rpc] Method:[BatchSetStockForOpen] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[-30001] BizStatusMessage:[181241978商品门店信息不匹配]}:goods_id:3411410950185474|RPCError{PSM:[ecom.stock.backend_rpc]"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.commengru/test/encrypt/v1?app_key=your_appkey_here&method=mengru.test.encrypt.v1&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:40004",
+      "sub_msg": "查询未找到"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/6321",
+  "updatedAt": "2024-07-22",
+  "_file_stem": "retail-store-instantShopping-SyncWarehouseStock"
+}

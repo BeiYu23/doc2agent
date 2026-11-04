@@ -1,0 +1,182 @@
+{
+  "id": "doudian.alliance.buyin.colonel.specialApplyList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.colonel.specialApplyList",
+  "description": "查询团长活动特殊申请",
+  "method": "GET",
+  "path": "/buyin/colonel/specialApplyList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动 id(不传表示查机构下所有活动)",
+      "example": "33241",
+      "_depth": 0
+    },
+    {
+      "name": "search_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "查询类型（0：待处理，1：历史记录，不传默认是待处理）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页数（从 1 开始，不传默认为 1）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页条数（不传默认为 10，最大为200）",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "sort_field",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0或不填：以申请时间排序\n1：以审核时间排序",
+      "example": "0,1",
+      "_depth": 0
+    },
+    {
+      "name": "sort_direction",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0或不填：降序\n1：增序",
+      "example": "0,1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "special_apply_list",
+      "type": "array",
+      "description": "特殊申请列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总申请数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "4200:账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=buyin.colonel.specialApplyList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "special_apply_list": [
+          {
+            "activity_id": "33241",
+            "activity_name": "一个活动",
+            "apply_ad_commission_rate": "11.00",
+            "apply_ad_service_rate": "5.00",
+            "apply_commission_rate": "11.00",
+            "apply_cos_type": "1",
+            "apply_service_rate": "11.00",
+            "apply_time": "2021/12/22 16:55:27",
+            "approve_time": "2021/12/22 16:55:27",
+            "cur_ad_commission_rate": "11.00",
+            "cur_ad_service_rate": "5.00",
+            "cur_commission_rate": "10.00",
+            "cur_cos_type": "1",
+            "cur_service_rate": "10.00",
+            "op_type": "1",
+            "origin_activity_end_time": "2021/12/22 16:55:27",
+            "origin_activity_start_time": "2021/12/22 16:55:27",
+            "origin_colonel_buyin_id": "4162341231762354",
+            "origin_institution_id": "111",
+            "origin_institution_name": "原始团长名称",
+            "origin_institution_phone": "6UNGOWt5MkBIgEDQ1I31w==",
+            "product_id": "2355245623523",
+            "product_img": "https://www.baidu.com",
+            "product_name": "iphone13",
+            "product_price": "100",
+            "product_stock": "11",
+            "reason": "处理理由",
+            "shop_id": "12343652345",
+            "shop_level_is_new": "true",
+            "shop_name": "苹果官方旗舰店",
+            "shop_phone": "6UNGOWt5MkBIgEDQ1I31w==",
+            "shop_score": "4.5",
+            "special_apply_id": "13131",
+            "status": "0"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1552",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-colonel-specialApplyList"
+}

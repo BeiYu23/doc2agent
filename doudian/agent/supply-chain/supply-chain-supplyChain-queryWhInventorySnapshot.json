@@ -1,0 +1,126 @@
+{
+  "id": "doudian.supply-chain.supplyChain.queryWhInventorySnapshot",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.queryWhInventorySnapshot",
+  "description": "查询品仓库存行快照信息",
+  "method": "GET",
+  "path": "/supplyChain/queryWhInventorySnapshot",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "单页大小",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_start",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存快照时间起始",
+      "example": "2025-06-18 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_end",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存快照时间终止",
+      "example": "2025-06-20 00:00:00",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "record_list",
+      "type": "array",
+      "description": "库存行列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部异常（sub_code: isp.service-error:10000）",
+      "action": "咨询内部技术人员",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "系统内部异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / isp.service-error:10001（sub_code: isp.service-error:30000）",
+      "action": "咨询连接平台技术人员",
+      "sub_code": "isp.service-error:30000",
+      "sub_msg": "isp.service-error:10001"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/queryWhInventorySnapshot?app_key=your_appkey_here&method=supplyChain.queryWhInventorySnapshot&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "record_list": [
+          {
+            "cargoCode": "637465738",
+            "hqId": "4438982",
+            "invId": "124632879",
+            "invTime": "2025-06-18 00:00:00",
+            "invType": "1-良品；2-残次品",
+            "inventoryQty": "100",
+            "mpnCode": "MPN1234",
+            "mpnName": "iphone16新款",
+            "serialNumbers": "S123456",
+            "whCode": "自营仓编码"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "系统内部异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/7440",
+  "updatedAt": "2025-05-14",
+  "_file_stem": "supply-chain-supplyChain-queryWhInventorySnapshot"
+}

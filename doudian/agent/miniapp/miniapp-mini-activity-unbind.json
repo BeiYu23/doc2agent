@@ -1,0 +1,72 @@
+{
+  "id": "doudian.miniapp.mini.activity.unbind",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.activity.unbind",
+  "description": "用户解绑活动",
+  "method": "GET",
+  "path": "/mini/activity/unbind",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "dy_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音openId",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_success",
+      "type": "boolean",
+      "description": "是否解除成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/activity/unbind?app_key=your_appkey_here&method=mini.activity.unbind&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/6747",
+  "updatedAt": "2024-08-05",
+  "_file_stem": "miniapp-mini-activity-unbind"
+}

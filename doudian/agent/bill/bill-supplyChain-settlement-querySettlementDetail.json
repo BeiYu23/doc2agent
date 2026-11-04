@@ -1,0 +1,150 @@
+{
+  "id": "doudian.bill.supplyChain.settlement.querySettlementDetail",
+  "platform": "doudian",
+  "group": "bill",
+  "name": "supplyChain.settlement.querySettlementDetail",
+  "description": "查询对账单行(结算明细)信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 账单API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "bizCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务身份标识",
+      "example": "PLATFORM-GOV-SUBSIDIES-SHELL",
+      "_depth": 0
+    },
+    {
+      "name": "checkBillNo",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "对账单编号",
+      "example": "CB7587332613510512567",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "pageSize",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "string",
+      "description": "错误码，\"0\"代表请求成功",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误码说明",
+      "example": "\"SUCCESS\""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总条数",
+      "example": "1"
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "页码",
+      "example": "1"
+    },
+    {
+      "name": "pageSize",
+      "type": "mixed",
+      "description": "每条页数",
+      "example": "1"
+    },
+    {
+      "name": "settlementList",
+      "type": "array",
+      "description": "结算明细列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常:%s（sub_code: isp.service-error:1001）",
+      "action": "重试或联系内部人员",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "系统异常:%s"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常:%s（sub_code: isv.parameter-invalid:1002）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:1002",
+      "sub_msg": "参数异常:%s"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.settlement.querySettlementDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "\"SUCCESS\"",
+        "page": "1",
+        "pageSize": "1",
+        "settlementList": [
+          {
+            "amount": "12456",
+            "extendInfo": {},
+            "feeCategoryId": "132",
+            "id": "123456789012345680",
+            "payee": "2403442",
+            "payer": "1803482"
+          }
+        ],
+        "total": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "系统异常:%s"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/46/8002",
+  "updatedAt": "2026-04-23",
+  "_file_stem": "bill-supplyChain-settlement-querySettlementDetail"
+}

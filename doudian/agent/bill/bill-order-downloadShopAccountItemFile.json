@@ -1,0 +1,93 @@
+{
+  "id": "doudian.bill.order.downloadShopAccountItemFile",
+  "platform": "doudian",
+  "group": "bill",
+  "name": "order.downloadShopAccountItemFile",
+  "description": "资金流水明细文件下载(境内)",
+  "method": "GET",
+  "path": "/order/downloadShopAccountItemFile",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 账单API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "download_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "下载id，有效期24小时；",
+      "example": "DL202111041446472412450342",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "url",
+      "type": "string",
+      "description": "文件url，链接时效为1小时",
+      "example": "https://lf9-tos-bill-center-sign.bytetos.com/ecom-YOUR_SECRET_KEY.csv?x-expires=1636012061&x-signature=yz1M9N%2BXGMtBXyMFT9O75buK26w%3D"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 下载记录不存在（sub_code: isv.parameter-invalid:100002）",
+      "action": "重新生成download_id去下载文件",
+      "sub_code": "isv.parameter-invalid:100002",
+      "sub_msg": "下载记录不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 文件还未生成（sub_code: isv.business-failed:100015）",
+      "action": "等待文件生成完成",
+      "sub_code": "isv.business-failed:100015",
+      "sub_msg": "文件还未生成"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 下载文件失败（sub_code: isv.business-failed:100025）",
+      "action": "重新下载",
+      "sub_code": "isv.business-failed:100025",
+      "sub_msg": "下载文件失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 文件已经失效（sub_code: isv.parameter-invalid:100016）",
+      "action": "重新生成download_id去下载文件",
+      "sub_code": "isv.parameter-invalid:100016",
+      "sub_msg": "文件已经失效"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/downloadShopAccountItemFile?app_key=your_appkey_here&method=order.downloadShopAccountItemFile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "url": "https://lf9-tos-bill-center-sign.bytetos.com/ecom-YOUR_SECRET_KEY.csv?x-expires=1636012061&x-signature=yz1M9N%2BXGMtBXyMFT9O75buK26w%3D"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100002",
+      "sub_msg": "下载记录不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/46/1433",
+  "updatedAt": "2025-06-27",
+  "_file_stem": "bill-order-downloadShopAccountItemFile"
+}

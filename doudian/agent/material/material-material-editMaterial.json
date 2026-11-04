@@ -1,0 +1,80 @@
+{
+  "id": "doudian.material.material.editMaterial",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.editMaterial",
+  "description": "编辑素材",
+  "method": "GET",
+  "path": "/material/editMaterial",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "material_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材id",
+      "example": "\"7000291764753940780\"",
+      "_depth": 0
+    },
+    {
+      "name": "material_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "素材名称，不得超过50个字符",
+      "example": "编辑功能.jpg",
+      "_depth": 0
+    },
+    {
+      "name": "to_folder_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "目标文件夹id，\"0\"--素材中心",
+      "example": "\"6999833978756661548\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材不存在或已被删除（sub_code: isv.business-failed:20001）",
+      "action": "素材不存在或已被彻底删除",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "素材不存在或已被删除"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/editMaterial?app_key=your_appkey_here&method=material.editMaterial&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "素材不存在或已被删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/956",
+  "updatedAt": "2022-09-06",
+  "_file_stem": "material-material-editMaterial"
+}

@@ -1,0 +1,133 @@
+{
+  "id": "doudian.miniapp.mini.activity.edit",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.activity.edit",
+  "description": "编辑小程序专属价活动",
+  "method": "GET",
+  "path": "/mini/activity/edit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动id",
+      "example": "7279756826818658604",
+      "_depth": 0
+    },
+    {
+      "name": "activity_start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "活动开始时间",
+      "example": "1695015497",
+      "_depth": 0
+    },
+    {
+      "name": "activity_end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "活动结束时间",
+      "example": "1695015497",
+      "_depth": 0
+    },
+    {
+      "name": "user_buy_limit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "用户限购数量",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "activity_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动名称",
+      "example": "新品发售专属价",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数（sub_code: isv.parameter-invalid:606010000）",
+      "action": "请检查入参",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "非法的参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动已失效，不允许编辑（sub_code: isv.business-failed:605030008）",
+      "action": "请新建活动",
+      "sub_code": "isv.business-failed:605030008",
+      "sub_msg": "活动已失效，不允许编辑"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 上线中的活动不允许直接编辑（sub_code: isv.business-failed:605030018）",
+      "action": "请先下线活动",
+      "sub_code": "isv.business-failed:605030018",
+      "sub_msg": "上线中的活动不允许直接编辑"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 您的操作过于频繁，请稍后重试（sub_code: isv.business-failed:606000105）",
+      "action": "您的操作过于频繁，请稍后重试",
+      "sub_code": "isv.business-failed:606000105",
+      "sub_msg": "您的操作过于频繁，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动不存在，请稍后重试（sub_code: isv.business-failed:605030006）",
+      "action": "活动不存在，请稍后重试",
+      "sub_code": "isv.business-failed:605030006",
+      "sub_msg": "活动不存在，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非法的操作（sub_code: isv.business-failed:606000106）",
+      "action": "请参考错误描述调整请求入参",
+      "sub_code": "isv.business-failed:606000106",
+      "sub_msg": "非法的操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/activity/edit?app_key=your_appkey_here&method=mini.activity.edit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/4956",
+  "updatedAt": "2023-10-13",
+  "_file_stem": "miniapp-mini-activity-edit"
+}

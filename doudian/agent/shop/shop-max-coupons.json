@@ -1,0 +1,129 @@
+{
+  "id": "doudian.shop.max.coupons",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "max.coupons",
+  "description": "批量获取优惠券信息",
+  "method": "GET",
+  "path": "/max/coupons",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "coupon_meta_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优惠券id列表，手动配置的时候传",
+      "example": "111,222",
+      "_depth": 0
+    },
+    {
+      "name": "m_config_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "配置类型 0 手动配置，1 智能配置，默认手动配置",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "coupons",
+      "type": "array",
+      "description": "优惠券数组",
+      "example": ""
+    },
+    {
+      "name": "status_code",
+      "type": "mixed",
+      "description": "状态码",
+      "example": "0"
+    },
+    {
+      "name": "status_msg",
+      "type": "string",
+      "description": "状态说明",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 啊哦，服务器打瞌睡了，再试一次吧～（sub_code: isp.service-error:4）",
+      "action": "再试一次",
+      "sub_code": "isp.service-error:4",
+      "sub_msg": "啊哦，服务器打瞌睡了，再试一次吧～"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数不合法（sub_code: isv.parameter-invalid:5）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:5",
+      "sub_msg": "参数不合法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/max/coupons?app_key=your_appkey_here&method=max.coupons&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "coupons": [
+          {
+            "action_type": "1",
+            "action_value": "sslocal://goods/store?sec_shop_id=blccms",
+            "apply_status": "1",
+            "apply_toast": "本店全店可用，下单即享优惠",
+            "coupon_biz_type": "7",
+            "coupon_meta_id": "1111",
+            "coupon_range": "aa",
+            "credit": "1000",
+            "discount": "0.8",
+            "discount_limit": "1",
+            "expire_time": "0",
+            "is_discount": "false",
+            "is_show": "0",
+            "period_display": "2006-01-02 15:04:05-2006-01-03 15:04:05",
+            "period_type": "1",
+            "start_time": "0",
+            "status_text": "领取",
+            "tags": "通用券",
+            "threshold": "10000",
+            "threshold_text": "满100可用",
+            "time_limit": "领用当日起2天内有效",
+            "type": "22",
+            "valid_period": "2",
+            "what_coupon": "店铺券"
+          }
+        ],
+        "status_code": "0",
+        "status_msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:4",
+      "sub_msg": "啊哦，服务器打瞌睡了，再试一次吧～"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2833",
+  "updatedAt": "2025-09-22",
+  "_file_stem": "shop-max-coupons"
+}

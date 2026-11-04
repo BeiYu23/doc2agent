@@ -1,0 +1,149 @@
+{
+  "id": "doudian.cloud.openCloud.deployTicket.list",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.deployTicket.list",
+  "description": "查询发布单列表",
+  "method": "GET",
+  "path": "/openCloud/deployTicket/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "起始时间",
+      "example": "1712160000000",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "截止时间",
+      "example": "1712764799999",
+      "_depth": 0
+    },
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "容器服务ID",
+      "example": "7345699782717079843",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发布单类型：0 正常发布；1 重启发布；2 回滚发布",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发布单状态：5 待审批；6 审批失败；10 待部署；20 部署中；98 取消发布；99 部署失败；100 部署成功；110 已回滚",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "火山账号ID。如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100003854",
+      "_depth": 0
+    },
+    {
+      "name": "page_index",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量，最大100",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tickets",
+      "type": "array",
+      "description": "发布单列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "发布单总数",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/deployTicket/list?app_key=your_appkey_here&method=openCloud.deployTicket.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "tickets": [
+          {
+            "config_id": "config_id",
+            "confirm_time": "confirm_time",
+            "create_time": "create_time",
+            "cs_id": "cs_id",
+            "extra": {},
+            "image_version_id": "cs_id",
+            "name": "name",
+            "remark": "备注",
+            "ticket_id": "ticket_id",
+            "ticket_status": "1",
+            "ticket_type": "1",
+            "update_time": "create_time",
+            "upgrade_strategy": "1"
+          }
+        ],
+        "total": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/6450",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-deployTicket-list"
+}

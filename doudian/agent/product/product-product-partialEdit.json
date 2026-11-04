@@ -1,0 +1,636 @@
+{
+  "id": "doudian.product.product.partialEdit",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.partialEdit",
+  "description": "部分编辑商品信息",
+  "method": "GET",
+  "path": "/product/partialEdit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品id",
+      "example": "31314511114124151",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称",
+      "example": "半身裙111",
+      "_depth": 0
+    },
+    {
+      "name": "shop_category",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "店铺分类参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "leaf_category_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "店铺叶子分类id，为[]表示清空商品店铺分类。【已废弃，请使用店铺装修侧，/shop/marketCategoryOpsProd 接口修改商品装修分类】",
+      "example": "[7184320140241125691,\n            7184320140241142075,\n            7184320198915129659,\n            7184320198915146043]",
+      "_depth": 1
+    },
+    {
+      "name": "short_product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品短标题",
+      "example": "aaa",
+      "_depth": 0
+    },
+    {
+      "name": "title_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "标题前缀，可通过/product/getRecommendName接口获取",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通过/product/getRecommendName接口推荐的商品标题前缀（注意系统根据类目属性生成前缀字符串时，末尾可能有一个空格）",
+      "example": "钛钢木质耳饰",
+      "_depth": 1
+    },
+    {
+      "name": "suffix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通过/product/getRecommendName接口推荐的商品标题后缀（注意系统根据类目属性生成后缀字符串时，前面可能有一个空格）",
+      "example": "36.9度",
+      "_depth": 1
+    },
+    {
+      "name": "outer_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品外部编码",
+      "example": "bbb",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_time_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商品发货时间信息，当前仅支持sku维度发货时效更新，仅限现货发货模式。",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_ship_times",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku发货时间，注意该参数仅在现货发货模式且开启sku发货时效时有效，如果发货模式不符合要求则会校验报错。 发货时间和 commit_code 可分别单独更新，也可一起更新。多sku更新时，保证同时成功或失败。如果传入的skuId在商品下不存在，或者skuId存在重复，将报错。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "ship_time_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1 相对时间 ships in x days，2 固定日期 fixed date。更新ship_time时必传。",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "commit_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "commit code",
+      "example": "3000",
+      "_depth": 2
+    },
+    {
+      "name": "ship_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货时间，如果是相对时间，填写数据 X。如果是固定日期，填写格式为yyyy-MM-dd，例如 \"2025-09-01\"。格式不正确或者时间校验不通过，将报错。",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuId",
+      "example": "3508769879052802",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数（sub_code: isv.parameter-invalid:2010004）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "非法参数"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 更新商品太频繁，操作失败请重试（sub_code: isp.traffic-limited:2010067）",
+      "action": "稍后重试",
+      "sub_code": "isp.traffic-limited:2010067",
+      "sub_msg": "更新商品太频繁，操作失败请重试"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少参数（sub_code: isv.missing-parameter:2010003）",
+      "action": "重新进入页面进行补充",
+      "sub_code": "isv.missing-parameter:2010003",
+      "sub_msg": "缺少参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该商品在审核中（sub_code: isv.business-failed:2010041）",
+      "action": "不允许编辑",
+      "sub_code": "isv.business-failed:2010041",
+      "sub_msg": "该商品在审核中"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该商品已删除（sub_code: isv.business-failed:2010042）",
+      "action": "不允许编辑",
+      "sub_code": "isv.business-failed:2010042",
+      "sub_msg": "该商品已删除"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该商品已封禁（sub_code: isv.business-failed:2010043）",
+      "action": "不允许编辑",
+      "sub_code": "isv.business-failed:2010043",
+      "sub_msg": "该商品已封禁"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2010001）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求超时（sub_code: isp.service-error:2010002）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010002",
+      "sub_msg": "请求超时"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无访问权限（sub_code: isv.parameter-invalid:2010005）",
+      "action": "核对后重试",
+      "sub_code": "isv.parameter-invalid:2010005",
+      "sub_msg": "无访问权限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 编辑商品失败（sub_code: isv.parameter-invalid:2010011）",
+      "action": "稍后重试",
+      "sub_code": "isv.parameter-invalid:2010011",
+      "sub_msg": "编辑商品失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 保存商品失败（sub_code: isp.service-error:2010012）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010012",
+      "sub_msg": "保存商品失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 读取失败（sub_code: isp.service-error:2010013）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010013",
+      "sub_msg": "读取失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品状态错误（sub_code: isv.business-failed:2010022）",
+      "action": "检查状态后重试",
+      "sub_code": "isv.business-failed:2010022",
+      "sub_msg": "商品状态错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品正在参加活动（sub_code: isv.business-failed:2010045）",
+      "action": "暂不支持修改",
+      "sub_code": "isv.business-failed:2010045",
+      "sub_msg": "商品正在参加活动"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 获取类目信息失败（sub_code: isp.service-error:2010201）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010201",
+      "sub_msg": "获取类目信息失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 获取类目配置失败（sub_code: isp.service-error:2010202）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010202",
+      "sub_msg": "获取类目配置失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询品牌库失败（sub_code: isp.service-error:2010206）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010206",
+      "sub_msg": "查询品牌库失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询商家资质失败（sub_code: isp.service-error:2010207）",
+      "action": "查询商家资质失败，请重试",
+      "sub_code": "isp.service-error:2010207",
+      "sub_msg": "查询商家资质失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010501:商品标题未明确描述商品品名，请重新填写（sub_code: isv.business-failed:2010501）",
+      "action": "商品标题未明确描述商品品名，请重新填写",
+      "sub_code": "isv.business-failed:2010501",
+      "sub_msg": "2010501:商品标题未明确描述商品品名，请重新填写"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010326:因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看（sub_code: isv.business-failed:2010326）",
+      "action": "因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看",
+      "sub_code": "isv.business-failed:2010326",
+      "sub_msg": "2010326:因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010316:该类目需要支持7天无理由退货（sub_code: isv.business-failed:2010316）",
+      "action": "因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看",
+      "sub_code": "isv.business-failed:2010316",
+      "sub_msg": "2010316:该类目需要支持7天无理由退货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110214003:分组操作失败：category_id(7209859568560554243)不存在,请核查（sub_code: isv.business-failed:110214003）",
+      "action": "110214003:分组操作失败：category_id(7209859568560554243)不存在,请核查",
+      "sub_code": "isv.business-failed:110214003",
+      "sub_msg": "110214003:分组操作失败：category_id(7209859568560554243)不存在,请核查"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101150:商品标题最长不能超过30个汉字（60个字符）（sub_code: isv.business-failed:110101150）",
+      "action": "110101150:商品标题最长不能超过30个汉字（60个字符）",
+      "sub_code": "isv.business-failed:110101150",
+      "sub_msg": "110101150:商品标题最长不能超过30个汉字（60个字符）"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010102:系统检测审核不通过，内容未做修改，请修改后提交审核（sub_code: isv.business-failed:2010102）",
+      "action": "2010102:系统检测审核不通过，内容未做修改，请修改后提交审核",
+      "sub_code": "isv.business-failed:2010102",
+      "sub_msg": "2010102:系统检测审核不通过，内容未做修改，请修改后提交审核"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010058:商品不存在（sub_code: isv.business-failed:2010058）",
+      "action": "2010058:商品不存在",
+      "sub_code": "isv.business-failed:2010058",
+      "sub_msg": "2010058:商品不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110102123:open侧暂不允许设置分销商品（sub_code: isv.business-failed:110102123）",
+      "action": "110102123:open侧暂不允许设置分销商品",
+      "sub_code": "isv.business-failed:110102123",
+      "sub_msg": "110102123:open侧暂不允许设置分销商品"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010320:品牌必填，请重新选择品牌（sub_code: isv.business-failed:2010320）",
+      "action": "2010320:品牌必填，请重新选择品牌",
+      "sub_code": "isv.business-failed:2010320",
+      "sub_msg": "2010320:品牌必填，请重新选择品牌"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010318:当前商品选择的品牌信息已过期，请更新品牌资质信息，或更换商品品牌后，再提交商品发布。（sub_code: isv.business-failed:2010318）",
+      "action": "2010318:当前商品选择的品牌信息已过期，请更新品牌资质信息，或更换商品品牌后，再提交商品发布。",
+      "sub_code": "isv.business-failed:2010318",
+      "sub_msg": "2010318:当前商品选择的品牌信息已过期，请更新品牌资质信息，或更换商品品牌后，再提交商品发布。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270180:校验预售发货信息失败暂不支持该发货模式（sub_code: isv.business-failed:110270180）",
+      "action": "110270180:校验预售发货信息失败暂不支持该发货模式",
+      "sub_code": "isv.business-failed:110270180",
+      "sub_msg": "110270180:校验预售发货信息失败暂不支持该发货模式"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010329:当前店铺类型下, 使用/品牌，需要去资质中心上传品牌资质。去上传>https://zjsms.com/NEvh47E/（sub_code: isv.business-failed:2010329）",
+      "action": "2010329:当前店铺类型下, 使用/品牌，需要去资质中心上传品牌资质。去上传>https://zjsms.com/NEvh47E/",
+      "sub_code": "isv.business-failed:2010329",
+      "sub_msg": "2010329:当前店铺类型下, 使用/品牌，需要去资质中心上传品牌资质。去上传>https://zjsms.com/NEvh47E/"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110102129:当前商品仅支持在百应后台编辑（sub_code: isv.business-failed:110102129）",
+      "action": "110102129:当前商品仅支持在百应后台编辑",
+      "sub_code": "isv.business-failed:110102129",
+      "sub_msg": "110102129:当前商品仅支持在百应后台编辑"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101145:“商品标题”不可含有换行符（sub_code: isv.business-failed:110101145）",
+      "action": "110101145:“商品标题”不可含有换行符",
+      "sub_code": "isv.business-failed:110101145",
+      "sub_msg": "110101145:“商品标题”不可含有换行符"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110330102:请修改“售后服务“，该类目已不再支持该售后政策（sub_code: isv.business-failed:110330102）",
+      "action": "110330102:请修改“售后服务“，该类目已不再支持该售后政策",
+      "sub_code": "isv.business-failed:110330102",
+      "sub_msg": "110330102:请修改“售后服务“，该类目已不再支持该售后政策"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110370101:商品属性[面料成分含量]填写格式不正确，不支持发布（sub_code: isv.business-failed:110370101）",
+      "action": "110370101:商品属性[面料成分含量]填写格式不正确，不支持发布",
+      "sub_code": "isv.business-failed:110370101",
+      "sub_msg": "110370101:商品属性[面料成分含量]填写格式不正确，不支持发布"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110260145:当前选择的货品(7428984621309657395)不存在，请重新选择货品完成商货品绑定，或删除货品取消绑定，维护商品库存信息。（sub_code: isv.business-failed:110260145）",
+      "action": "110260145:当前选择的货品(7428984621309657395)不存在，请重新选择货品完成商货品绑定，或删除货品取消绑定，维护商品库存信息。",
+      "sub_code": "isv.business-failed:110260145",
+      "sub_msg": "110260145:当前选择的货品(7428984621309657395)不存在，请重新选择货品完成商货品绑定，或删除货品取消绑定，维护商品库存信息。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010339:存在审批中素材(主图视频)，请等待审批（sub_code: isv.business-failed:2010339）",
+      "action": "2010339:存在审批中素材(主图视频)，请等待审批",
+      "sub_code": "isv.business-failed:2010339",
+      "sub_msg": "2010339:存在审批中素材(主图视频)，请等待审批"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110405001:该商品商详页描述（含标题、主图和商品详情）与属性栏选择的材质不一致，请修改。规则详见https://school.jinritemai.com/doudian/web/question/50（sub_code: isv.business-failed:110405001）",
+      "action": "110405001:该商品商详页描述（含标题、主图和商品详情）与属性栏选择的材质不一致，请修改。规则详见https://school.jinritemai.com/doudian/web/question/50",
+      "sub_code": "isv.business-failed:110405001",
+      "sub_msg": "110405001:该商品商详页描述（含标题、主图和商品详情）与属性栏选择的材质不一致，请修改。规则详见https://school.jinritemai.com/doudian/web/question/50"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101131:短标题必须在4~12个字（sub_code: isv.business-failed:110101131）",
+      "action": "110101131:短标题必须在4~12个字",
+      "sub_code": "isv.business-failed:110101131",
+      "sub_msg": "110101131:短标题必须在4~12个字"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110102120:无法直接通过该接口创建或编辑有价券类商品（sub_code: isv.business-failed:110102120）",
+      "action": "110102120:无法直接通过该接口创建或编辑有价券类商品",
+      "sub_code": "isv.business-failed:110102120",
+      "sub_msg": "110102120:无法直接通过该接口创建或编辑有价券类商品"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270179:校验预售发货信息失败发货时间配置不满足要求（sub_code: isv.business-failed:110270179）",
+      "action": "110270179:校验预售发货信息失败发货时间配置不满足要求",
+      "sub_code": "isv.business-failed:110270179",
+      "sub_msg": "110270179:校验预售发货信息失败发货时间配置不满足要求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270110:运费模板不存在（sub_code: isv.business-failed:110270110）",
+      "action": "110270110:运费模板不存在",
+      "sub_code": "isv.business-failed:110270110",
+      "sub_msg": "110270110:运费模板不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010063:为保障消费者权益，“0元入驻”试运营期间的商家店铺会进行发品数量的限制，商品已达上限，暂不支持添加商品，您可通过【抖店-资金-店铺保证金】缴纳保证金至足额后继续此操作，相关详情可查阅《抖音电商“0元入驻”试运营规范》。（sub_code: isv.business-failed:2010063）",
+      "action": "2010063:为保障消费者权益，“0元入驻”试运营期间的商家店铺会进行发品数量的限制，商品已达上限，暂不支持添加商品，您可通过【抖店-资金-店铺保证金】缴纳保证金至足额后继续此操作，相关详情可查阅《抖音电商“0元入驻”试运营规范》。",
+      "sub_code": "isv.business-failed:2010063",
+      "sub_msg": "2010063:为保障消费者权益，“0元入驻”试运营期间的商家店铺会进行发品数量的限制，商品已达上限，暂不支持添加商品，您可通过【抖店-资金-店铺保证金】缴纳保证金至足额后继续此操作，相关详情可查阅《抖音电商“0元入驻”试运营规范》。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110290001:请上传食品生产许可证（sub_code: isv.business-failed:110290001）",
+      "action": "110290001:请上传食品生产许可证",
+      "sub_code": "isv.business-failed:110290001",
+      "sub_msg": "110290001:请上传食品生产许可证"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010055:因服务器升级，商品价格展示可能异常，请修改价格后重试（sub_code: isv.business-failed:2010055）",
+      "action": "2010055:因服务器升级，商品价格展示可能异常，请修改价格后重试",
+      "sub_code": "isv.business-failed:2010055",
+      "sub_msg": "2010055:因服务器升级，商品价格展示可能异常，请修改价格后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250121:尺码表需包含所有规格中的尺码，请补充尺码（sub_code: isv.business-failed:110250121）",
+      "action": "110250121:尺码表需包含所有规格中的尺码，请补充尺码",
+      "sub_code": "isv.business-failed:110250121",
+      "sub_msg": "110250121:尺码表需包含所有规格中的尺码，请补充尺码"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270139:商品关联未结束的限时特卖活动，仅支持现货发货模式和阶梯发货模式（sub_code: isv.business-failed:110270139）",
+      "action": "110270139:商品关联未结束的限时特卖活动，仅支持现货发货模式和阶梯发货模式",
+      "sub_code": "isv.business-failed:110270139",
+      "sub_msg": "110270139:商品关联未结束的限时特卖活动，仅支持现货发货模式和阶梯发货模式"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110240102:库存数量支持范围：0-10000000（sub_code: isv.business-failed:110240102）",
+      "action": "110240102:库存数量支持范围：0-10000000",
+      "sub_code": "isv.business-failed:110240102",
+      "sub_msg": "110240102:库存数量支持范围：0-10000000"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250118:尺码模板不支持当前类目（sub_code: isv.business-failed:110250118）",
+      "action": "110250118:尺码模板不支持当前类目",
+      "sub_code": "isv.business-failed:110250118",
+      "sub_msg": "110250118:尺码模板不支持当前类目"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270152:校验预售发货信息失败预售结束时间小于当前时间（sub_code: isv.business-failed:110270152）",
+      "action": "110270152:校验预售发货信息失败预售结束时间小于当前时间",
+      "sub_code": "isv.business-failed:110270152",
+      "sub_msg": "110270152:校验预售发货信息失败预售结束时间小于当前时间"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220210:commit code不合法（sub_code: isv.business-failed:110220210）",
+      "action": "110220210:commit code不合法",
+      "sub_code": "isv.business-failed:110220210",
+      "sub_msg": "110220210:commit code不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110360101：品牌不存在或者未审核通过（sub_code: isv.business-failed:110360101）",
+      "action": "110360101：品牌不存在或者未审核通过",
+      "sub_code": "isv.business-failed:110360101",
+      "sub_msg": "110360101：品牌不存在或者未审核通过"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110201001：未查询到该类目（sub_code: isv.business-failed:110201001）",
+      "action": "110201001：未查询到该类目",
+      "sub_code": "isv.business-failed:110201001",
+      "sub_msg": "110201001：未查询到该类目"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101267：商品草稿删除失败，请重试（sub_code: isv.business-failed:110101267）",
+      "action": "110101267：商品草稿删除失败，请重试",
+      "sub_code": "isv.business-failed:110101267",
+      "sub_msg": "110101267：商品草稿删除失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110502052:商品未发布，不支持编辑，请先发布商品（sub_code: isv.business-failed:110502052）",
+      "action": "110502052:商品未发布，不支持编辑，请先发布商品",
+      "sub_code": "isv.business-failed:110502052",
+      "sub_msg": "110502052:商品未发布，不支持编辑，请先发布商品"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110330124:该商品必须配置三包服务承诺（sub_code: isv.business-failed:110330124）",
+      "action": "110330124:该商品必须配置三包服务承诺",
+      "sub_code": "isv.business-failed:110330124",
+      "sub_msg": "110330124:该商品必须配置三包服务承诺"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250169:该类目要求上传尺码组件信息，请补充后提交（sub_code: isv.business-failed:110250169）",
+      "action": "110250169:该类目要求上传尺码组件信息，请补充后提交",
+      "sub_code": "isv.business-failed:110250169",
+      "sub_msg": "110250169:该类目要求上传尺码组件信息，请补充后提交"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250165:尺码表中的尺码大小需与尺码规格保持一致（sub_code: isv.business-failed:110250165）",
+      "action": "110250165:尺码表中的尺码大小需与尺码规格保持一致",
+      "sub_code": "isv.business-failed:110250165",
+      "sub_msg": "110250165:尺码表中的尺码大小需与尺码规格保持一致"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110360108:品牌资质规则查询失败（sub_code: isv.business-failed:110360108）",
+      "action": "110360108:品牌资质规则查询失败",
+      "sub_code": "isv.business-failed:110360108",
+      "sub_msg": "110360108:品牌资质规则查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110405002:系统异常（sub_code: isv.business-failed:110405002）",
+      "action": "110405002:系统异常",
+      "sub_code": "isv.business-failed:110405002",
+      "sub_msg": "110405002:系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250016:主图：第 1、5 张不符合格式要求，请上传 JPG/JPEG/PNG 格式，<a href='https://bytedance.larkoffice.com/wiki/Dn0twtf5kiBGr3km7gWc1XjInvg' target='_blank'>文件格式要求/转换方式请参考</a>（sub_code: isv.business-failed:110250016）",
+      "action": "110250016:主图：第 1、5 张不符合格式要求，请上传 JPG/JPEG/PNG 格式，<a href='https://bytedance.larkoffice.com/wiki/Dn0twtf5kiBGr3km7gWc1XjInvg' target='_blank'>文件格式要求/转换方式请参考</a>",
+      "sub_code": "isv.business-failed:110250016",
+      "sub_msg": "110250016:主图：第 1、5 张不符合格式要求，请上传 JPG/JPEG/PNG 格式，<a href='https://bytedance.larkoffice.com/wiki/Dn0twtf5kiBGr3km7gWc1XjInvg' target='_blank'>文件格式要求/转换方式请参考</a>"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110210108:识别到商品类目填写错误,请及时修改类目（sub_code: isv.business-failed:110210108）",
+      "action": "110210108:识别到商品类目填写错误,请及时修改类目",
+      "sub_code": "isv.business-failed:110210108",
+      "sub_msg": "110210108:识别到商品类目填写错误,请及时修改类目"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101214:商品因处置下架且未修改商品信息，请先修改商品再重新提交上架（sub_code: isv.business-failed:110101214）",
+      "action": "110101214:商品因处置下架且未修改商品信息，请先修改商品再重新提交上架",
+      "sub_code": "isv.business-failed:110101214",
+      "sub_msg": "110101214:商品因处置下架且未修改商品信息，请先修改商品再重新提交上架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101116:前缀不匹配（sub_code: isv.business-failed:110101116）",
+      "action": "110101116:前缀不匹配",
+      "sub_code": "isv.business-failed:110101116",
+      "sub_msg": "110101116:前缀不匹配"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110330125:三包服务类型不合法（sub_code: isv.business-failed:110330125）",
+      "action": "110330125:三包服务类型不合法",
+      "sub_code": "isv.business-failed:110330125",
+      "sub_msg": "110330125:三包服务类型不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250142:该类目要求尺码组件含衣长、胸围、肩宽、袖长，请补充后提交（sub_code: isv.business-failed:110250142）",
+      "action": "110250142:该类目要求尺码组件含衣长、胸围、肩宽、袖长，请补充后提交",
+      "sub_code": "isv.business-failed:110250142",
+      "sub_msg": "110250142:该类目要求尺码组件含衣长、胸围、肩宽、袖长，请补充后提交"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/partialEdit?app_key=your_appkey_here&method=product.partialEdit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "非法参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/2694",
+  "updatedAt": "2026-07-14",
+  "_file_stem": "product-product-partialEdit"
+}

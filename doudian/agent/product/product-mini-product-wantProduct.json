@@ -1,0 +1,102 @@
+{
+  "id": "doudian.product.mini.product.wantProduct",
+  "platform": "doudian",
+  "group": "product",
+  "name": "mini.product.wantProduct",
+  "description": "商品收藏",
+  "method": "GET",
+  "path": "/mini/product/wantProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 小程序"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品id",
+      "example": "111222",
+      "_depth": 0
+    },
+    {
+      "name": "action",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "1-关注 2-取消关注",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "可在xxx中查看的文案",
+      "example": "xxx"
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "description": "点击跳转链接",
+      "example": "xxx"
+    },
+    {
+      "name": "is_first",
+      "type": "boolean",
+      "description": "是否首次使用收藏功能",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品收藏失败，请检查参数重试（sub_code: isv.business-failed:605013001）",
+      "action": "检查参数，重试",
+      "sub_code": "isv.business-failed:605013001",
+      "sub_msg": "商品收藏失败，请检查参数重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10010:参数异常（sub_code: isv.business-failed:10010）",
+      "action": "检查参数，重试",
+      "sub_code": "isv.business-failed:10010",
+      "sub_msg": "10010:参数异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=mini.product.wantProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_first": "true",
+        "text": "xxx",
+        "url": "xxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:605013001",
+      "sub_msg": "商品收藏失败，请检查参数重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4228",
+  "updatedAt": "2024-07-08",
+  "_file_stem": "product-mini-product-wantProduct"
+}

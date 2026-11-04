@@ -1,0 +1,144 @@
+{
+  "id": "doudian.logistics-provider.install.order.supplierUpdate",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "install.order.supplierUpdate",
+  "description": "服务商修改预约信息",
+  "method": "GET",
+  "path": "/install/order/supplierUpdate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "appointment_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预约时间，格式：\"yyyy-MM-dd HH:mm:ss~yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上门师傅名字",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上门师傅手机号，格式，真实号：主机号；虚拟号：主机号-分机号；",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000006:状态机跃迁校验错误（sub_code: isv.business-failed:10000006）",
+      "action": "10000006:状态机跃迁校验错误",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000000:请求参数错误（sub_code: isv.business-failed:10000000）",
+      "action": "10000000:请求参数错误",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统内部错误",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/qualityList?app_key=your_appkey_here&method=product.qualityList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "quality_list": [
+          {
+            "base_score": "20",
+            "meet_standard": "2",
+            "problem_num_to_improve": "2",
+            "problem_type_distribution": [
+              {
+                "num": "1",
+                "type_name": "关键信息需优化"
+              }
+            ],
+            "product_id": "3502373827210525080",
+            "product_name": "奈克牌皮鞋",
+            "quality_score": {
+              "level": "lv3",
+              "score": "100",
+              "version": "middle_score"
+            }
+          }
+        ],
+        "total": "50"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5784",
+  "updatedAt": "2023-12-21",
+  "_file_stem": "logistics-provider-install-order-supplierUpdate"
+}

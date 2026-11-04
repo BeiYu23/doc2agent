@@ -1,0 +1,89 @@
+{
+  "id": "doudian.selection.supplyCenter.cargo.editComponentTemplate",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.cargo.editComponentTemplate",
+  "description": "编辑尺码模板",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "模板ID",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "模板名称1",
+      "_depth": 0
+    },
+    {
+      "name": "component_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板数据json",
+      "example": "{\"title\":\"服装上衣模板\",\"desc\":\"dy服装上衣模板\",\"tempName\":\"dy服装上衣模板\",\"configTable\":[{\"size\":\"XS\",\"specMap\":{\"身高（cm）\":\"180\",\"体重（斤）\":\"70\",\"胸围（cm）\":\"80\"}},{\"size\":\"M\",\"specMap\":{\"身高（cm）\":\"185\",\"体重（斤）\":\"80\",\"胸围（cm）\":\"85\"}}],\"selectedSpecs\":[\"身高（cm）\",\"体重（斤）\",\"胸围（cm）\"],\"specOptions\":[\"身高（cm）\",\"体重（斤）\",\"胸围（cm）\"],\"selectedSize\":[\"xl\",\"xxl\"]}",
+      "_depth": 0
+    },
+    {
+      "name": "shareable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否为公有模板(多个商品可共用)",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照商品编辑尺寸模板接口（sub_code: isv.parameter-invalid:66666）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/1993",
+      "sub_code": "isv.parameter-invalid:66666",
+      "sub_msg": "参照商品编辑尺寸模板接口"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.cargo.editComponentTemplate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:66666",
+      "sub_msg": "参照商品编辑尺寸模板接口"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5319",
+  "updatedAt": "2023-10-25",
+  "_file_stem": "selection-supplyCenter-cargo-editComponentTemplate"
+}

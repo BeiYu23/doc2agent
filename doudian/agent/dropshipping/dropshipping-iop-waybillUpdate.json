@@ -1,0 +1,150 @@
+{
+  "id": "doudian.dropshipping.iop.waybillUpdate",
+  "platform": "doudian",
+  "group": "dropshipping",
+  "name": "iop.waybillUpdate",
+  "description": "【厂商】代发订单更新发货接口",
+  "method": "GET",
+  "path": "/iop/waybillUpdate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 代发API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "代打店铺id",
+      "example": "65543234",
+      "_depth": 0
+    },
+    {
+      "name": "distr_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "代打订单号",
+      "example": "78823463242134",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "34324234",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司",
+      "example": "jd",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单id",
+      "example": "32423",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "return_result",
+      "type": "boolean",
+      "description": "操作结果",
+      "example": "true"
+    },
+    {
+      "name": "delivery_id",
+      "type": "string",
+      "description": "运单id",
+      "example": "982734"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 发货失败，请稍后重试（sub_code: isp.service-error:88888）",
+      "action": "发货失败，请稍后重试",
+      "sub_code": "isp.service-error:88888",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货失败（sub_code: isv.business-failed:41005）",
+      "action": "请确认代发单状态",
+      "sub_code": "isv.business-failed:41005",
+      "sub_msg": "发货失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 代发单状态不允许发货（sub_code: isv.business-failed:41000）",
+      "action": "请确认代发单状态",
+      "sub_code": "isv.business-failed:41000",
+      "sub_msg": "代发单状态不允许发货"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:10000）",
+      "action": "请确认参数后重试",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 代发单不存在（sub_code: isv.business-failed:41002）",
+      "action": "请确认代发单号单是否正确",
+      "sub_code": "isv.business-failed:41002",
+      "sub_msg": "代发单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 41004:该订单的订单状态不允许重新发货（sub_code: isv.business-failed:41004）",
+      "action": "41004:该订单的订单状态不允许重新发货",
+      "sub_code": "isv.business-failed:41004",
+      "sub_msg": "41004:该订单的订单状态不允许重新发货"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/iop/waybillUpdate?app_key=your_appkey_here&method=iop.waybillUpdate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "delivery_id": "982734",
+        "return_result": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:88888",
+      "sub_msg": "发货失败，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/59/677",
+  "updatedAt": "2021-07-18",
+  "_file_stem": "dropshipping-iop-waybillUpdate"
+}

@@ -1,0 +1,106 @@
+{
+  "id": "doudian.video.second.ecomInsight.createAssetTask",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.createAssetTask",
+  "description": "创建素材任务",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "任务名",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "传入图像、音频、视频素材时，仅支持上传 URL ，不支持 base64。\n将人脸、服装细节单独分割出来，作为单独的图片传给模型，可以有效避免参考不准的问题，具体可参考如下规则及示例：\n传入单个图像要求\n- 格式：jpeg、png、webp、bmp、tiff、gif、heic/heif\n- 宽高比（宽/高）： (0.4, 2.5) \n- 宽高长度（px）：(300, 6000)\n- 大小：单张图片小于 30 MB\n传入单个视频要求\n- 格式：mp4、mov\n- 分辨率：480p、720p\n- 时长：单个视频时长 [2, 15] s\n- 尺寸：\n  - 宽高比（宽/高）：[0.4, 2.5]\n  - 宽高长度（px）：[300, 6000]\n  - 总像素数：[640×640=409600, 834×1112=927408]，即宽和高的乘积符合 [409600, 927408] 的区间要求。\n- 大小：单个视频不超过 50 MB\n- 帧率 (FPS)：[24, 60] \n传入单个音频要求\n- 格式：wav、mp3\n- 时长：单个音频时长 [2, 15] s\n- 大小：单个音频不超过 15 MB",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "asset_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "Image、Video、Audio",
+      "example": "Image",
+      "_depth": 0
+    },
+    {
+      "name": "group_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活体对应group_id",
+      "example": "xxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回对象",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "消息",
+      "example": "xxx"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "状态码",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.createAssetTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "task_id": "12312"
+        },
+        "msg": "xxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8183",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "video-second-ecomInsight-createAssetTask"
+}

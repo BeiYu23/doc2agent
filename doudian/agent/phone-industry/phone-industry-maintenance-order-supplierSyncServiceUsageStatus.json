@@ -1,0 +1,116 @@
+{
+  "id": "doudian.phone-industry.maintenance.order.supplierSyncServiceUsageStatus",
+  "platform": "doudian",
+  "group": "phone-industry",
+  "name": "maintenance.order.supplierSyncServiceUsageStatus",
+  "description": "服务使用状态同步",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 手机行业管理（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务店铺订单号",
+      "example": "\"6930810465707234468\"",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商品订单号",
+      "example": "\"6930810465707234468\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"test\"",
+      "_depth": 0
+    },
+    {
+      "name": "item_usage_info_map",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "每个item的使用详情，key为item id，value为服务状态结构体",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "service_usage_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "服务状态枚举，1-已激活未使用，2-已使用，已使用过不支持退款，3-已完成，已完成不允许再次发起，4-已注销",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "activated_period",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "已激活状态必传，生效周期（起止时间），格式：\"yyyy-MM-dd HH:mm:ss~yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"2024-06-06 12:00:00~2026-06-06 12:00:00\"",
+      "_depth": 1
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"2024-06-06 12:00:00\"",
+      "_depth": 0
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "全量服务资源状态版本，只允许新的版本(大的版本号)覆盖旧的版本",
+      "example": "34",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=maintenance.order.supplierSyncServiceUsageStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1520/6646",
+  "updatedAt": "2024-07-04",
+  "_file_stem": "phone-industry-maintenance-order-supplierSyncServiceUsageStatus"
+}

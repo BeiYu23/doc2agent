@@ -1,0 +1,349 @@
+{
+  "id": "doudian.sms.sms.audience.send",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.audience.send",
+  "description": "按人群包发送短信",
+  "method": "GET",
+  "path": "/sms/audience/send",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sms_account",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "渠道账号，请使用专属人群包短信发送渠道账号。",
+      "example": "12xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "sign",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "签名,请使用专属人群包短信发送渠道账号下的签名。",
+      "example": "sssss",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模版id，请使用专属人群包短信发送渠道账号下的模版。",
+      "example": "ST_xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "template_param",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模版参数",
+      "example": "{\"11\":\"12\",\"12\":\"333\"}",
+      "_depth": 0
+    },
+    {
+      "name": "audience_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "人群ID，audienceFrom=2时，传入crowdTaskId相同值即可",
+      "example": "123451245",
+      "_depth": 0
+    },
+    {
+      "name": "link_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "需要链接统计效果时必传",
+      "example": "1212212212",
+      "_depth": 0
+    },
+    {
+      "name": "mini_app_link_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "小程序短链批次ID",
+      "example": "1212212212",
+      "_depth": 0
+    },
+    {
+      "name": "audience_from",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "不同场景的人群包，0-通过抖店接口创建出来的人群包； 1-公域标签创建的人群包； 2-火山的人群包； 3-组合人群包；",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "audience_send_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发送类型 0默认 1时机模型",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "crowd_task_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "种子人群任务ID，当audience_from = 2时必填",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "max_send_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "限制该任务单次最大可成功发送的人数。当audience_from = 2时有效",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当audience_send_type=1时有效，秒级时间戳。跟start_time最大间隔5天，建议设置24小时间隔，结束时间限制为某天的最后一秒如23:59:59",
+      "example": "1754567437",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当audience_send_type=1时有效，秒级时间戳",
+      "example": "1754567437",
+      "_depth": 0
+    },
+    {
+      "name": "non_disturb_time_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "免打扰时段。平台强制上午9点前，晚上8点后为勿扰时段。可增加其他勿扰时段",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "勿扰结束时间 格式 hh:mm",
+      "example": "11:59",
+      "_depth": 1
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "勿扰开始时间 格式 hh:mm",
+      "example": "08:00",
+      "_depth": 1
+    },
+    {
+      "name": "produce_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人群圈选生产任务id",
+      "example": "123532",
+      "_depth": 0
+    },
+    {
+      "name": "part_send_config",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "抽样发送",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "target_send_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "抽样发送数量",
+      "example": "12421",
+      "_depth": 1
+    },
+    {
+      "name": "target_send_percent",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "抽样百分比，取值范围[0, 100)",
+      "example": "30",
+      "_depth": 1
+    },
+    {
+      "name": "biz_request_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务幂等键，按照appId+shopId+biz_request_id 做幂等处理",
+      "example": "11111111",
+      "_depth": 0
+    },
+    {
+      "name": "abExperimentInfo",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "实验组配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "treatment_ratio",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实验组比例范围 50~90，步长 10",
+      "example": "50",
+      "_depth": 1
+    },
+    {
+      "name": "enabled",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "默认不开启ab",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "响应码",
+      "example": "12"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "响应信息",
+      "example": "1234"
+    },
+    {
+      "name": "send_task_id",
+      "type": "string",
+      "description": "发送任务ID",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:628002001）",
+      "action": "请检查参数",
+      "sub_code": "isv.missing-parameter:628002001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 人群元信息不存在（sub_code: isv.business-failed:628005600）",
+      "action": "请使用存在的人群包",
+      "sub_code": "isv.business-failed:628005600",
+      "sub_msg": "人群元信息不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 存在待执行的人群包发送任务，请稍后再试（sub_code: isv.business-failed:628003300）",
+      "action": "存在待执行的人群包发送任务，请稍后再试",
+      "sub_code": "isv.business-failed:628003300",
+      "sub_msg": "存在待执行的人群包发送任务，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 模版信息错误（sub_code: isv.business-failed:628005100）",
+      "action": "请检查模版信息",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "模版信息错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未签署短信免责协议（sub_code: isv.business-failed:628003306）",
+      "action": "签署短信免责协议",
+      "sub_code": "isv.business-failed:628003306",
+      "sub_msg": "未签署短信免责协议"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取人群包数量错误，请稍后再试（sub_code: isv.business-failed:628004001）",
+      "action": "获取人群包数量错误，请稍后再试",
+      "sub_code": "isv.business-failed:628004001",
+      "sub_msg": "获取人群包数量错误，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 人群包数量不得少于100（sub_code: isv.business-failed:628003308）",
+      "action": "人群包数量不得少于100",
+      "sub_code": "isv.business-failed:628003308",
+      "sub_msg": "人群包数量不得少于100"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前时间段不允许发短信（sub_code: isv.business-failed:628003202）",
+      "action": "请在短信允许发送时间发送",
+      "sub_code": "isv.business-failed:628003202",
+      "sub_msg": "当前时间段不允许发短信"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 验证码失效或不存在（sub_code: isv.business-failed:628004000）",
+      "action": "请检查输入的验证码",
+      "sub_code": "isv.business-failed:628004000",
+      "sub_msg": "验证码失效或不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/audience/send?app_key=your_appkey_here&method=sms.audience.send&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "12",
+        "message": "1234",
+        "send_task_id": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:628002001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/6664",
+  "updatedAt": "2026-09-03",
+  "_file_stem": "sms-sms-audience-send"
+}

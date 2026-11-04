@@ -1,0 +1,199 @@
+{
+  "id": "doudian.product.product.setOffline",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.setOffline",
+  "description": "1、支持所有类型商品下架\n2、接口调用成功，商品会放到仓库中",
+  "method": "GET",
+  "path": "/product/setOffline",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.07）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商品ID",
+      "example": "356654869456454",
+      "_depth": 0
+    },
+    {
+      "name": "outer_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "推荐使用，外部商家编码，支持字符串。",
+      "example": "2333424",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "小时达二期店铺场景才可以传，小时达二期场景可以通过传入主品id+门店id对该门店下的子品进行操作",
+      "example": "12345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 【状态非法】商品状态错误, 当前状态: 删除（sub_code: isv.parameter-invalid:2010022）",
+      "action": "请重新选择商品",
+      "sub_code": "isv.parameter-invalid:2010022",
+      "sub_msg": "【状态非法】商品状态错误, 当前状态: 删除"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 【重复操作】商品操作重复，当前状态：下架（sub_code: isv.parameter-invalid:2010021）",
+      "action": "请重新选择商品",
+      "sub_code": "isv.parameter-invalid:2010021",
+      "sub_msg": "【重复操作】商品操作重复，当前状态：下架"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 下架失败，该商品正在参加平台秒杀-抖in好物池（自播专入），暂不支持下架（sub_code: isv.parameter-invalid:2010005）",
+      "action": "请重新选择商品",
+      "sub_code": "isv.parameter-invalid:2010005",
+      "sub_msg": "下架失败，该商品正在参加平台秒杀-抖in好物池（自播专入），暂不支持下架"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 奖品商品不支持下架（sub_code: isv.parameter-invalid:2010004）",
+      "action": "请重新选择商品",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "奖品商品不支持下架"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 缺少必要参数（sub_code: isv.parameter-invalid:20024）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.parameter-invalid:20024",
+      "sub_msg": "缺少必要参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商户状态不合法（sub_code: isv.parameter-invalid:10008）",
+      "action": "请检查店铺状态",
+      "sub_code": "isv.parameter-invalid:10008",
+      "sub_msg": "商户状态不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求超时（sub_code: isv.business-failed:2010002）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2010002",
+      "sub_msg": "请求超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 更新商品失败（sub_code: isv.business-failed:2010001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "更新商品失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品正在参加平台活动，无法下架商品（sub_code: isv.business-failed:2010045）",
+      "action": "商品正在参加平台活动，无法下架商品",
+      "sub_code": "isv.business-failed:2010045",
+      "sub_msg": "商品正在参加平台活动，无法下架商品"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品不存在（sub_code: isv.business-failed:2010064）",
+      "action": "请检查product_id信息",
+      "sub_code": "isv.business-failed:2010064",
+      "sub_msg": "商品不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010058:商品不存在（sub_code: isv.business-failed:2010058）",
+      "action": "请检查product_id信息",
+      "sub_code": "isv.business-failed:2010058",
+      "sub_msg": "2010058:商品不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010401:请求被限流, 请稍后再试（sub_code: isv.business-failed:2010401）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2010401",
+      "sub_msg": "2010401:请求被限流, 请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010013:获取账号信息失败（sub_code: isv.business-failed:2010013）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "2010013:获取账号信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 7:获取子商品信息失败（sub_code: isv.business-failed:7）",
+      "action": "请检查入参信息",
+      "sub_code": "isv.business-failed:7",
+      "sub_msg": "7:获取子商品信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110310134:奖品下架失败, 该奖品有合作中的权益活动（sub_code: isv.business-failed:110310134）",
+      "action": "请检查入参信息",
+      "sub_code": "isv.business-failed:110310134",
+      "sub_msg": "110310134:奖品下架失败, 该奖品有合作中的权益活动"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101052:赠品有关联未失效的赠品活动、不可下架（sub_code: isv.business-failed:110101052）",
+      "action": "请检查入参信息",
+      "sub_code": "isv.business-failed:110101052",
+      "sub_msg": "110101052:赠品有关联未失效的赠品活动、不可下架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110310132:奖品下架失败, 该奖品已绑定抽奖活动（sub_code: isv.business-failed:110310132）",
+      "action": "请检查入参信息",
+      "sub_code": "isv.business-failed:110310132",
+      "sub_msg": "110310132:奖品下架失败, 该奖品已绑定抽奖活动"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110211010:已有库存占用，无法修改绑定关系（sub_code: isv.business-failed:110211010）",
+      "action": "110211010:已有库存占用，无法修改绑定关系",
+      "sub_code": "isv.business-failed:110211010",
+      "sub_msg": "110211010:已有库存占用，无法修改绑定关系"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2010022",
+      "sub_msg": "【状态非法】商品状态错误, 当前状态: 删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/252",
+  "updatedAt": "2024-03-05",
+  "_file_stem": "product-product-setOffline"
+}

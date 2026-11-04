@@ -1,0 +1,531 @@
+{
+  "id": "doudian.logistics-provider.logistics.updateCollectInfo",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.updateCollectInfo",
+  "description": "取件信息推送",
+  "method": "GET",
+  "path": "/logistics/updateCollectInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "更新类型，支持一次更新多个字段，以‘|’分割",
+      "example": "COURIER",
+      "_depth": 0
+    },
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "JT0101001010",
+      "_depth": 0
+    },
+    {
+      "name": "collect_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "1",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "courier_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "collect_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "截止揽收时间",
+      "example": "2021-01-19 20:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "site_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "站点名称",
+      "example": "锦州网点",
+      "_depth": 1
+    },
+    {
+      "name": "weight_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "核重核价信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "charged_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹计费重量",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "certificate_photos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "核重核价凭证图片url列表",
+      "example": "[\"https://xxx.jpg\",\"https://xxx2.jepg\"]",
+      "_depth": 2
+    },
+    {
+      "name": "actual_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹实际重量",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "package_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包装费（单位分）",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "sum_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "总金额（单位分）",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "is_master_and_child",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否子母单",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "basic_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "首重金额（单位分）",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "charged_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计费类型",
+      "example": "1--重量 2--体积",
+      "_depth": 2
+    },
+    {
+      "name": "hight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹高度",
+      "example": "100",
+      "_depth": 2
+    },
+    {
+      "name": "insured_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保价费（单位分）",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹长度",
+      "example": "100",
+      "_depth": 2
+    },
+    {
+      "name": "child_package_volume_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "子单体积数据",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "height",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹高度",
+      "example": "100",
+      "_depth": 3
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹宽度",
+      "example": "100",
+      "_depth": 3
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹长度",
+      "example": "100",
+      "_depth": 3
+    },
+    {
+      "name": "return_mode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "核重回传模式： \nmanual_feedback 快递员人工回传\nsystem_backup_feedback 系统兜底回传",
+      "example": "manual_feedback",
+      "_depth": 2
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹宽度",
+      "example": "100",
+      "_depth": 2
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取消/拦截原因",
+      "example": "ILLEGAL_ITEM",
+      "_depth": 1
+    },
+    {
+      "name": "site_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "站点编码",
+      "example": "41610",
+      "_depth": 1
+    },
+    {
+      "name": "collect_start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "开始揽收时间",
+      "example": "2021-01-19 09:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "charge_fee",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "计费信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "declared_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "续重金额（单位分）",
+      "example": "6000",
+      "_depth": 2
+    },
+    {
+      "name": "major_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "主运费（单位分），为首重 + 续重 金额「必传」",
+      "example": "700",
+      "_depth": 2
+    },
+    {
+      "name": "claim_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "sum_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "总金额 （单位分）",
+      "example": "800",
+      "_depth": 2
+    },
+    {
+      "name": "package_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包装费（单位分）",
+      "example": "150",
+      "_depth": 2
+    },
+    {
+      "name": "add_weight_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "续重金额（单位分）",
+      "example": "200",
+      "_depth": 2
+    },
+    {
+      "name": "payment_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "basic_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "首重金额（单位分）",
+      "example": "500",
+      "_depth": 2
+    },
+    {
+      "name": "insured_fee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保价费（单位分）",
+      "example": "5000",
+      "_depth": 2
+    },
+    {
+      "name": "collect_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件状态",
+      "example": "Weighted",
+      "_depth": 1
+    },
+    {
+      "name": "package_img_url_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "开箱验视照片",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "courier_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员手机号",
+      "example": "13912439882",
+      "_depth": 1
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取号时传的orderId字段",
+      "example": "1111",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_result",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "验货结果\nnormal -- 正常\nabnornal  -- 异常",
+      "example": "normal",
+      "_depth": 0
+    },
+    {
+      "name": "abnormal_quantity",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "验货异常时，原因是少件或者多件时必传，需要回传实际商品件数。",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "请求唯独id",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "abnormal_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "验货异常原因，支持多个，多个用‘|’分隔，本次传的编码",
+      "example": "101",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_weight_exception",
+      "type": "boolean",
+      "description": "订单属性",
+      "example": "重量是否异常"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11710:当前状态不允许变更（sub_code: isv.business-failed:11710）",
+      "action": "推送正确状态",
+      "sub_code": "isv.business-failed:11710",
+      "sub_msg": "11710:当前状态不允许变更"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:当前状态不允许更新快递员信息（sub_code: isv.business-failed:10000）",
+      "action": "推送正确状态",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:当前状态不允许更新快递员信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11714:当前状态已取消不允许更新（sub_code: isv.business-failed:11714）",
+      "action": "推送正确状态",
+      "sub_code": "isv.business-failed:11714",
+      "sub_msg": "11714:当前状态已取消不允许更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11715:当前状态已取消不允许更新（sub_code: isv.business-failed:11715）",
+      "action": "推送正确状态",
+      "sub_code": "isv.business-failed:11715",
+      "sub_msg": "11715:当前状态已取消不允许更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11713:重复拦截（sub_code: isv.business-failed:11713）",
+      "action": "推送正确状态",
+      "sub_code": "isv.business-failed:11713",
+      "sub_msg": "11713:重复拦截"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 6405:系统错误（sub_code: isv.business-failed:6405）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:6405",
+      "sub_msg": "6405:系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -10007:未知错误（sub_code: isv.business-failed:-10007）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:-10007",
+      "sub_msg": "-10007:未知错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 重量异常，重新输入重量信息（sub_code: isv.business-failed:11719）",
+      "action": "重新推送核价",
+      "sub_code": "isv.business-failed:11719",
+      "sub_msg": "重量异常，重新输入重量信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 重复核重核价（sub_code: isv.business-failed:11718）",
+      "action": "不需要推送核价",
+      "sub_code": "isv.business-failed:11718",
+      "sub_msg": "重复核重核价"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 重复揽收（sub_code: isv.business-failed:11712）",
+      "action": "不允许推送揽收",
+      "sub_code": "isv.business-failed:11712",
+      "sub_msg": "重复揽收"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/updateCollectInfo?app_key=your_appkey_here&method=logistics.updateCollectInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_weight_exception": "重量是否异常"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:11710",
+      "sub_msg": "11710:当前状态不允许变更"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7186",
+  "updatedAt": "2026-08-20",
+  "_file_stem": "logistics-provider-logistics-updateCollectInfo"
+}

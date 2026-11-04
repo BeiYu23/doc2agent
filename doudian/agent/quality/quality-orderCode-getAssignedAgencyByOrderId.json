@@ -1,0 +1,138 @@
+{
+  "id": "doudian.quality.orderCode.getAssignedAgencyByOrderId",
+  "platform": "doudian",
+  "group": "quality",
+  "name": "orderCode.getAssignedAgencyByOrderId",
+  "description": "通过订单号获取已分配的质检信息",
+  "method": "GET",
+  "path": "/orderCode/getAssignedAgencyByOrderId",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "orderIds",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "店铺单号列表，最多支持50个店铺单号一起查询，超过50个取前50个店铺单",
+      "example": "[\n    6941308530834610142,\n    6941334564693612510,\n    6941024859835733374\n  ]",
+      "_depth": 0
+    },
+    {
+      "name": "shopId",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺ID",
+      "example": "1111228346",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_id",
+      "type": "mixed",
+      "description": "店铺ID",
+      "example": "1111228346"
+    },
+    {
+      "name": "shop_name",
+      "type": "string",
+      "description": "店铺名称",
+      "example": "订单测试店铺"
+    },
+    {
+      "name": "order_agency_info",
+      "type": "array",
+      "description": "订单分配的质检机构信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 商家ID不能为空（sub_code: isv.missing-parameter:20001）",
+      "action": "填写店铺id",
+      "sub_code": "isv.missing-parameter:20001",
+      "sub_msg": "商家ID不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询店铺失败（sub_code: isv.business-failed:20002）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:20002",
+      "sub_msg": "查询店铺失败"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 店铺单号不能为空（sub_code: isv.missing-parameter:20003）",
+      "action": "填写店铺单号",
+      "sub_code": "isv.missing-parameter:20003",
+      "sub_msg": "店铺单号不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单记录不存在（sub_code: isv.business-failed:20004）",
+      "action": "确认单号是否填写正确",
+      "sub_code": "isv.business-failed:20004",
+      "sub_msg": "订单记录不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前商家不是ERP商家（sub_code: isv.business-failed:20005）",
+      "action": "检查店铺id填写是否正确",
+      "sub_code": "isv.business-failed:20005",
+      "sub_msg": "当前商家不是ERP商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询店铺单信息失败（sub_code: isv.business-failed:20006）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:20006",
+      "sub_msg": "查询店铺单信息失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/orderCode/getAssignedAgencyByOrderId?app_key=your_appkey_here&method=orderCode.getAssignedAgencyByOrderId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "order_agency_info": [
+          {
+            "order_id": "6917604403289457832",
+            "quality_agency_id": "101",
+            "quality_agency_name": "二手潮奢质检机构名称",
+            "warehouse_code": "02",
+            "warehouse_name": "二手潮奢质检仓名称"
+          }
+        ],
+        "shop_id": "1111228346",
+        "shop_name": "订单测试店铺"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:20001",
+      "sub_msg": "商家ID不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1582/7400",
+  "updatedAt": "2025-04-11",
+  "_file_stem": "quality-orderCode-getAssignedAgencyByOrderId"
+}

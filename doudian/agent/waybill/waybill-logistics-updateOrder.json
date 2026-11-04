@@ -1,0 +1,734 @@
+{
+  "id": "doudian.waybill.logistics.updateOrder",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.updateOrder",
+  "description": "更新收件人信息 以及发件人名字联系方式信息，不支持顺丰速递更新面单信息（支持顺丰速递更新重量体积）",
+  "method": "GET",
+  "path": "/logistics/updateOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sender_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "寄件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "寄件人联系信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件人姓名",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件人固话（和mobile二选一）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件人移动电话（和phone二选一）",
+      "example": "18500000034",
+      "_depth": 2
+    },
+    {
+      "name": "receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "收件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "收件人地址信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市code编码",
+      "example": "11111",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称。街道名称（street_name）和街道code（street_code），若传入时，需要一起传入。",
+      "example": "丹棱街",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区/县名称",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省code编码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国家编码（默认CHN，目前只有国内业务）",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市名称",
+      "example": "市辖区",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "剩余详细地址，支持密文",
+      "example": "丹棱街1号",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道code编码",
+      "example": "1111",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区code编码",
+      "example": "111111",
+      "_depth": 2
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "收件人联系信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人固话（和mobile二选一）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人移动电话（和phone二选一），支持密文",
+      "example": "18500000034",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人姓名，支持密文",
+      "example": "李四",
+      "_depth": 2
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流服务商编码",
+      "example": "jtexpress",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "jt271927012",
+      "_depth": 0
+    },
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品明细列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "item_net_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单件总净重量（g）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "item_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "item_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单件商品重量（g)",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "item_volume",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单件商品体积（cm3）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "item_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "item_specs",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品规格",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备用扩展字段",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实际使用取号服务店铺user_id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "总体积 货物的总体积或长，宽，高 ；整数 单位cm",
+      "example": "1,2,3",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "/总重量 ；整数 用于与快递商有计抛信任协议的商家）单位克",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓、门店、总对总发货",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_sum_up",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "目前该字段无效，统一传false",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "wh_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库订单号(丹鸟等仓发链路使用)",
+      "example": "8837383",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "track_no",
+      "type": "string",
+      "description": "运单号",
+      "example": "DPK363023514956"
+    },
+    {
+      "name": "sort_code",
+      "type": "string",
+      "description": "分拣码（三段码）",
+      "example": "400-W00 000"
+    },
+    {
+      "name": "package_center_code",
+      "type": "string",
+      "description": "集包地代码",
+      "example": "52"
+    },
+    {
+      "name": "package_center_name",
+      "type": "string",
+      "description": "集包名称",
+      "example": "杭州中转包1"
+    },
+    {
+      "name": "short_address_code",
+      "type": "string",
+      "description": "大头笔编码",
+      "example": "L51-00-16"
+    },
+    {
+      "name": "short_address_name",
+      "type": "string",
+      "description": "大头笔名称",
+      "example": "123456"
+    },
+    {
+      "name": "extra_resp",
+      "type": "string",
+      "description": "扩展字段",
+      "example": "{\"123456\"}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / ERROR:该订单对应的运单号3180425096642已经有物流信息,不能进行修改（sub_code: isv.parameter-invalid:10912）",
+      "action": "有轨迹无法更新",
+      "sub_code": "isv.parameter-invalid:10912",
+      "sub_msg": "ERROR:该订单对应的运单号3180425096642已经有物流信息,不能进行修改"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 运单号不存在（sub_code: isv.parameter-invalid:10911）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:10911",
+      "sub_msg": "运单号不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单已取件，不允许变更（sub_code: isv.parameter-invalid:10902）",
+      "action": "无法更新",
+      "sub_code": "isv.parameter-invalid:10902",
+      "sub_msg": "订单已取件，不允许变更"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单已取消，不允许变更（sub_code: isv.parameter-invalid:10901）",
+      "action": "无法更新",
+      "sub_code": "isv.parameter-invalid:10901",
+      "sub_msg": "订单已取消，不允许变更"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 运单号不存在（sub_code: isv.parameter-invalid:10724）",
+      "action": "输入正确的运单号",
+      "sub_code": "isv.parameter-invalid:10724",
+      "sub_msg": "运单号不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流服务不支持派送（sub_code: isv.parameter-invalid:10704）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:10704",
+      "sub_msg": "物流服务不支持派送"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 电子面单号不存在（sub_code: isv.parameter-invalid:10014）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:10014",
+      "sub_msg": "电子面单号不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:10000）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单已确认（sub_code: isv.parameter-invalid:8252）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:8252",
+      "sub_msg": "订单已确认"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / fengwang物流服务商不支持该接口（sub_code: isv.parameter-invalid:5001）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:5001",
+      "sub_msg": "fengwang物流服务商不支持该接口"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 该物流商不允许更新 Weight、Volume 字段（sub_code: isv.parameter-invalid:4023）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:4023",
+      "sub_msg": "该物流商不允许更新 Weight、Volume 字段"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 邮政和ems接口暂时不支持除了Weight、Volume之外的字段（sub_code: isv.parameter-invalid:4006）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "邮政和ems接口暂时不支持除了Weight、Volume之外的字段"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 使用该产品需签订指定专属协议（sub_code: isv.parameter-invalid:4001）",
+      "action": "无",
+      "sub_code": "isv.parameter-invalid:4001",
+      "sub_msg": "使用该产品需签订指定专属协议"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未获取到网点数据（sub_code: isv.business-failed:20045）",
+      "action": "无",
+      "sub_code": "isv.business-failed:20045",
+      "sub_msg": "未获取到网点数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 筛单不可到:其它原因（sub_code: isv.business-failed:20019）",
+      "action": "无",
+      "sub_code": "isv.business-failed:20019",
+      "sub_msg": "筛单不可到:其它原因"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 账户余额不足（sub_code: isv.business-failed:10701）",
+      "action": "无",
+      "sub_code": "isv.business-failed:10701",
+      "sub_msg": "账户余额不足"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求物流服务商超时（sub_code: isv.business-failed:4009）",
+      "action": "无",
+      "sub_code": "isv.business-failed:4009",
+      "sub_msg": "请求物流服务商超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求内部服务超时，请重试（sub_code: isv.business-failed:4007）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:4007",
+      "sub_msg": "请求内部服务超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11204:调用路由信息查询接口异常（sub_code: isv.business-failed:11204）",
+      "action": "无",
+      "sub_code": "isv.business-failed:11204",
+      "sub_msg": "11204:调用路由信息查询接口异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4010:数据库查询失败（sub_code: isv.business-failed:4010）",
+      "action": "无",
+      "sub_code": "isv.business-failed:4010",
+      "sub_msg": "4010:数据库查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20043:网点获取超时,请稍后重试（sub_code: isv.business-failed:20043）",
+      "action": "无",
+      "sub_code": "isv.business-failed:20043",
+      "sub_msg": "20043:网点获取超时,请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14081:服务不可达（sub_code: isv.business-failed:14081）",
+      "action": "无",
+      "sub_code": "isv.business-failed:14081",
+      "sub_msg": "14081:服务不可达"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8177:1:尊敬的客户您好！受目的地疫情影响，暂时无法提供收派服务，带来不便请您理解。(BPS：0125000)（sub_code: isv.business-failed:8177）",
+      "action": "无",
+      "sub_code": "isv.business-failed:8177",
+      "sub_msg": "8177:1:尊敬的客户您好！受目的地疫情影响，暂时无法提供收派服务，带来不便请您理解。(BPS：0125000)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8092:到方电话或手机不合法（sub_code: isv.business-failed:8092）",
+      "action": "无",
+      "sub_code": "isv.business-failed:8092",
+      "sub_msg": "8092:到方电话或手机不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10913:末端服务不可达（sub_code: isv.business-failed:10913）",
+      "action": "无",
+      "sub_code": "isv.business-failed:10913",
+      "sub_msg": "10913:末端服务不可达"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10802:外部订单号:141209-279021|279021_1|43|54订单已经揽收或上传无法修改（sub_code: isv.business-failed:10802）",
+      "action": "无",
+      "sub_code": "isv.business-failed:10802",
+      "sub_msg": "10802:外部订单号:141209-279021|279021_1|43|54订单已经揽收或上传无法修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10907:60：订单状态不在可允许修改配置项内（sub_code: isv.business-failed:10907）",
+      "action": "无",
+      "sub_code": "isv.business-failed:10907",
+      "sub_msg": "10907:60：订单状态不在可允许修改配置项内"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 817703:1:尊敬的客户，您好！因当前流向件量激增，为更好地保障您的寄件体验，暂不提供此产品寄递服务，您可选择其他产品寄递，带来不便请您理解。（sub_code: isv.business-failed:817703）",
+      "action": "请选择其他产品寄递",
+      "sub_code": "isv.business-failed:817703",
+      "sub_msg": "817703:1:尊敬的客户，您好！因当前流向件量激增，为更好地保障您的寄件体验，暂不提供此产品寄递服务，您可选择其他产品寄递，带来不便请您理解。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4008:内部数据JSON/XML格式非法   !（sub_code: isv.business-failed:4008）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:4008",
+      "sub_msg": "4008:内部数据JSON/XML格式非法   !"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 817702:1:尊敬的客户，您好！受目的地疫情影响，暂不提供寄递服务，带来不便请您理解。(BPS:125000)（sub_code: isv.business-failed:817702）",
+      "action": "受目的地疫情影响，暂不提供寄递服务",
+      "sub_code": "isv.business-failed:817702",
+      "sub_msg": "817702:1:尊敬的客户，您好！受目的地疫情影响，暂不提供寄递服务，带来不便请您理解。(BPS:125000)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 15000:系统繁忙，请稍后重试（sub_code: isv.business-failed:15000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:15000",
+      "sub_msg": "15000:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10719:内部处理超时，请重试（sub_code: isv.business-failed:10719）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:10719",
+      "sub_msg": "10719:内部处理超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 817701:1:尊敬的客户，您好！受寄件地疫情影响，暂时无法提供此产品寄递服务，带来不便请您理解。(BPS3562)（sub_code: isv.business-failed:817701）",
+      "action": "无",
+      "sub_code": "isv.business-failed:817701",
+      "sub_msg": "817701:1:尊敬的客户，您好！受寄件地疫情影响，暂时无法提供此产品寄递服务，带来不便请您理解。(BPS3562)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 200101:订单已揽收或已完成，不支持修改订单（sub_code: isv.business-failed:200101）",
+      "action": "无",
+      "sub_code": "isv.business-failed:200101",
+      "sub_msg": "200101:订单已揽收或已完成，不支持修改订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10903:订单号不存在（sub_code: isv.business-failed:10903）",
+      "action": "提工单",
+      "sub_code": "isv.business-failed:10903",
+      "sub_msg": "10903:订单号不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 55000008:更新失败，中转入仓订单不允许更新地址，请重新取号（sub_code: isv.business-failed:55000008）",
+      "action": "55000008:更新失败，中转入仓订单不允许更新地址，请重新取号",
+      "sub_code": "isv.business-failed:55000008",
+      "sub_msg": "55000008:更新失败，中转入仓订单不允许更新地址，请重新取号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20036:该产品的付款方式为寄付,寄转第三方可用（sub_code: isv.business-failed:20036）",
+      "action": "20036:该产品的付款方式为寄付,寄转第三方可用",
+      "sub_code": "isv.business-failed:20036",
+      "sub_msg": "20036:该产品的付款方式为寄付,寄转第三方可用"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 虚拟号绑定失败，请稍后重试（sub_code: isv.business-failed:34001）",
+      "action": "无",
+      "sub_code": "isv.business-failed:34001",
+      "sub_msg": "虚拟号绑定失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 41112:国补3C订单不支持电子面单更新（sub_code: isv.business-failed:41112）",
+      "action": "无",
+      "sub_code": "isv.business-failed:41112",
+      "sub_msg": "41112:国补3C订单不支持电子面单更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8037:订单已取消,不可更改或再次取消（sub_code: isv.business-failed:8037）",
+      "action": "无",
+      "sub_code": "isv.business-failed:8037",
+      "sub_msg": "8037:订单已取消,不可更改或再次取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:当前单据类型暂不支持修改地址（sub_code: isv.business-failed:-1）",
+      "action": "无",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:当前单据类型暂不支持修改地址"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单未通过风控，请联系客服（sub_code: isv.business-failed:15104）",
+      "action": "无",
+      "sub_code": "isv.business-failed:15104",
+      "sub_msg": "订单未通过风控，请联系客服"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/updateOrder?app_key=your_appkey_here&method=logistics.updateOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "extra_resp": "{\"123456\"}",
+        "package_center_code": "52",
+        "package_center_name": "杭州中转包1",
+        "short_address_code": "L51-00-16",
+        "short_address_name": "123456",
+        "sort_code": "400-W00 000",
+        "track_no": "DPK363023514956"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10912",
+      "sub_msg": "ERROR:该订单对应的运单号3180425096642已经有物流信息,不能进行修改"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/494",
+  "updatedAt": "2026-08-12",
+  "_file_stem": "waybill-logistics-updateOrder"
+}

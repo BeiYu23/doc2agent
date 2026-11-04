@@ -1,0 +1,271 @@
+{
+  "id": "doudian.refund.second.volcengineRetainOrder",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "second.volcengineRetainOrder",
+  "description": "核心入口，用于对单一退货的订单进行全面评估",
+  "method": "GET",
+  "path": "/second/volcengineRetainOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺退货的订单ID",
+      "example": "123456789012345",
+      "_depth": 0
+    },
+    {
+      "name": "shop_config",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商家自定义配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "roi_threshold",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家期望的最小ROI",
+      "example": "1.2",
+      "_depth": 1
+    },
+    {
+      "name": "profit_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义毛利率",
+      "example": "0.45",
+      "_depth": 1
+    },
+    {
+      "name": "supported_benefits",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商家支持的挽单权益，用于策略模型挑选最合适的权益类型",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "权益类型，枚举值为：\n- coupon：优惠券（高面额低成本）\n- gift：礼品/小样（利用高感知价值/低成本的价格差，以小博大）\n- cash：现金红包（直接有效，适合低客单价商品）\n- partial_refund：订单部分退款（无需额外营销预算，走售后逆向流程）",
+      "example": "coupon",
+      "_depth": 2
+    },
+    {
+      "name": "cash_range",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "现金红包范围，如：[1, 10]，1元到10元\n若type=cash，则必填",
+      "example": "[1.0. 10.0]",
+      "_depth": 2
+    },
+    {
+      "name": "gift_sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "小样SKu ID",
+      "example": "12222",
+      "_depth": 2
+    },
+    {
+      "name": "gift_market_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "礼品/小样的市场价格\n若type=gift必填",
+      "example": "89.0",
+      "_depth": 2
+    },
+    {
+      "name": "refund_amount",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "退款金额上限\ntype=partial_refund必填",
+      "example": "50.0",
+      "_depth": 2
+    },
+    {
+      "name": "coupon_face_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "券面额， 如20\n若type=coupon必填",
+      "example": "5.0",
+      "_depth": 2
+    },
+    {
+      "name": "coupon_threshold",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠券使用门槛金额 (0 代表无门槛)，如100\n若type=coupon必填",
+      "example": "100.0",
+      "_depth": 2
+    },
+    {
+      "name": "refund_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单金额退款比例\ntype=partial_refund必填",
+      "example": "0.3",
+      "_depth": 2
+    },
+    {
+      "name": "benefit_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "权益ID，唯一标识当前商家配置的权益，若有的话，可以选择传递过来",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "gift_cost",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "礼品/小样的实际成本\n若type=gift必填",
+      "example": "15.0",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "权益名称，如：type=gift，name=SK-II神仙水小样(10ml)\ntype=coupon，name=满100减10券",
+      "example": "SK-II神仙水小样(10ml)",
+      "_depth": 2
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后单ID",
+      "example": "123456789012345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "wool_prob",
+      "type": "string",
+      "description": "薅羊毛概率 (0.0 - 1.0)",
+      "example": "0.12"
+    },
+    {
+      "name": "strategy",
+      "type": "object",
+      "description": "权益建议，若商家入参配置了权益列表，策略引擎会从中选出最优的选项并返回\n否则，会按照策略引擎自己的理解返回建议",
+      "example": ""
+    },
+    {
+      "name": "is_hit_strategy",
+      "type": "string",
+      "description": "是否命中策略，用于做A/B实验\n“0”: 未命中，下方字段返回默认值，不要使用\n“1”：命中，可使用下方数据用于挽单决策",
+      "example": "1"
+    },
+    {
+      "name": "retention_prob",
+      "type": "string",
+      "description": "挽回概率 (0.0 - 1.0)",
+      "example": "0.7"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数不对，请检查（sub_code: isv.parameter-invalid:40001）",
+      "action": "缺少必要的参数或订单号不存在，请检查",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "参数不对，请检查"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:50201）",
+      "action": "请反馈平台开发",
+      "sub_code": "isv.business-failed:50201",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 业务请求超时（sub_code: isp.service-timeout-error:50401）",
+      "action": "业务请求超时，请重试",
+      "sub_code": "isp.service-timeout-error:50401",
+      "sub_msg": "业务请求超时"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 业务处理失败（sub_code: isp.service-error:50000）",
+      "action": "请反馈平台开发",
+      "sub_code": "isp.service-error:50000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/volcengineRetainOrder?app_key=your_appkey_here&method=second.volcengineRetainOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_hit_strategy": "1",
+        "retention_prob": "0.7",
+        "strategy": {
+          "benefit": {
+            "benefit_id": "123",
+            "condition": "on_receipt",
+            "display_name": "满100减10券",
+            "name": "SK-II神仙水小样(10ml)",
+            "type": "coupon",
+            "value": "SK-II神仙水小样(10ml)"
+          },
+          "touch": {
+            "scheduled_time": "[\"10:00-12:00\",  \"14:00-14:30\"]",
+            "timing": "scheduled"
+          }
+        },
+        "wool_prob": "0.12"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "参数不对，请检查"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/8135",
+  "updatedAt": "2026-05-08",
+  "_file_stem": "refund-second-volcengineRetainOrder"
+}

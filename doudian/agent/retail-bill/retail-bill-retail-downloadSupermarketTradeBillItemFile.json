@@ -1,0 +1,72 @@
+{
+  "id": "doudian.retail-bill.retail.downloadSupermarketTradeBillItemFile",
+  "platform": "doudian",
+  "group": "retail-bill",
+  "name": "retail.downloadSupermarketTradeBillItemFile",
+  "description": "即时零售交易账单下载，在调用/retail/downloadSupermarketTradeBillItem接口拿到download_id后，通过本接口换取账单文件下载链接",
+  "method": "GET",
+  "path": "/retail/downloadSupermarketTradeBillItemFile",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 账单管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "download_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "下载id；",
+      "example": "DL202412301518521716454401",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "string",
+      "description": "返回code 100000为成功, 返回100015 时表示文件生成中，请稍后再试，其他状态码均为失败",
+      "example": "100000"
+    },
+    {
+      "name": "code_msg",
+      "type": "string",
+      "description": "返回信息描述，失败状态下会有失败描述",
+      "example": "SUCCESS"
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "description": "文件url，链接时效为1小时",
+      "example": "https://lf9-tos-bill-center-sign.bytetos.com/ecom-YOUR_SECRET_KEY.csv?x-expires=1636012061&x-signature=yz1M9N%2BXGMtBXyMFT9O75buK26w%3D"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comcrossborder/msg/push?app_key=your_appkey_here&method=crossborder.msg.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1518/7185",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "retail-bill-retail-downloadSupermarketTradeBillItemFile"
+}

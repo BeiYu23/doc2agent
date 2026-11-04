@@ -1,0 +1,90 @@
+{
+  "id": "doudian.dongchedi.second.product.batchGetProductSellPoints",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.product.batchGetProductSellPoints",
+  "description": "【二方接口】查询商品卖点信息",
+  "method": "GET",
+  "path": "/second/product/batchGetProductSellPoints",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息（比如直播间id，key定义见 ProductSellPointExtraKey）",
+      "example": "\"1\":\"1\"",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "用户ID，新场景必传，未登录用户请传0",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "params",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "productId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品ID",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "sell_points",
+      "type": "string",
+      "description": "参数",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.product.batchGetProductSellPoints&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "sell_points": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6940",
+  "updatedAt": "2024-10-17",
+  "_file_stem": "dongchedi-second-product-batchGetProductSellPoints"
+}

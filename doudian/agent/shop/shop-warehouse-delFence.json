@@ -1,0 +1,106 @@
+{
+  "id": "doudian.shop.warehouse.delFence",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "warehouse.delFence",
+  "description": "删除电子围栏",
+  "method": "GET",
+  "path": "/warehouse/delFence",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "fence_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "内部围栏id(和外部2选1，如果传了，则优先使用这个)",
+      "example": "4922530157611679612",
+      "_depth": 0
+    },
+    {
+      "name": "out_fence_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部围栏id",
+      "example": "fence02",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 围栏id不存在（sub_code: isv.parameter-invalid:2）",
+      "action": "修改参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "围栏id不存在"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 删除围栏失败（sub_code: isp.service-error:9999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:9999",
+      "sub_msg": "删除围栏失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请检查传入参数（sub_code: isv.business-failed:2122）",
+      "action": "修改传入参数",
+      "sub_code": "isv.business-failed:2122",
+      "sub_msg": "请检查传入参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 检查围栏是否已经绑定（sub_code: isv.business-failed:2121006）",
+      "action": "删除围栏前先解绑",
+      "sub_code": "isv.business-failed:2121006",
+      "sub_msg": "检查围栏是否已经绑定"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 操作失败，请重试（sub_code: isp.service-error:2129999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2129999",
+      "sub_msg": "操作失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务器打瞌睡了，请稍后再试。（sub_code: isv.business-failed:6001001）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:6001001",
+      "sub_msg": "服务器打瞌睡了，请稍后再试。"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/delFence?app_key=your_appkey_here&method=warehouse.delFence&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "围栏id不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2065",
+  "updatedAt": "2024-06-12",
+  "_file_stem": "shop-warehouse-delFence"
+}

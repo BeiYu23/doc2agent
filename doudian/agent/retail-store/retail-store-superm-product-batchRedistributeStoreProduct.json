@@ -1,0 +1,115 @@
+{
+  "id": "doudian.retail-store.superm.product.batchRedistributeStoreProduct",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.product.batchRedistributeStoreProduct",
+  "description": "重新分配店铺主品对应的门店子品 (异步执行)",
+  "method": "GET",
+  "path": "/superm/product/batchRedistributeStoreProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "task_params",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "重新分配任务参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "start_sale_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "子品开售状态：0-立即上架售卖（默认）， 1-放入仓库，只对于新增子品有效",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "main_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺主商品ID",
+      "example": "3576410646054571500",
+      "_depth": 1
+    },
+    {
+      "name": "add_store_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要铺品的门店ID列表",
+      "example": "56386074,56386075",
+      "_depth": 1
+    },
+    {
+      "name": "del_store_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要删除子品的门店ID列表",
+      "example": "56386076,56386077",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "root_task_id",
+      "type": "mixed",
+      "description": "异步任务根任务ID",
+      "example": "7158439918014824735"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:主商品信息不合法（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:主商品信息不合法",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:主商品信息不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:提交异步任务出错（sub_code: isv.business-failed:2010001）",
+      "action": "2010001:提交异步任务出错",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:提交异步任务出错"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=superm.product.batchRedistributeStoreProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "root_task_id": "7158439918014824735"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:主商品信息不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2697",
+  "updatedAt": "2024-12-19",
+  "_file_stem": "retail-store-superm-product-batchRedistributeStoreProduct"
+}

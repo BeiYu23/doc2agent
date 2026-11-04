@@ -1,0 +1,815 @@
+{
+  "id": "doudian.selection.supplyCenter.cargo.add",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.cargo.add",
+  "description": "精选货源平台上传货品",
+  "method": "GET",
+  "path": "/supplyCenter/cargo/add",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "叶子类目ID，不支持教育、虚拟、黄金玉石类目",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称，最多60个字符(30个汉字)，不能含emoj表情",
+      "example": "xxx补水液保湿",
+      "_depth": 0
+    },
+    {
+      "name": "short_product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "导购短标题，短标题可用于物流打单及商品搜索场景，若未填写，则系统将智能生成最优短标题在商详购买页面展示，说明详见：https://school.jinritemai.YOUR_SECRET_KEY?from=shop_article",
+      "example": "补水液",
+      "_depth": 0
+    },
+    {
+      "name": "outer_product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部product_id，必填",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【已废弃】货源客服电话号码",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "substitute_goods_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货源平台商品地址",
+      "example": "https://xx.xxx",
+      "_depth": 0
+    },
+    {
+      "name": "outer_platform",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货源平台类型，1：1688精选，2：17网，3：91家纺网",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供应商ID，会被用于采购单拆单",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商手机号，相同供应商ID以最新一次上传为准",
+      "example": "40010000",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_company_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商公司名称，相同供应商ID以最新一次上传为准",
+      "example": "xxx公司",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_license_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商营业执照，相同供应商ID以最新一次上传为准",
+      "example": "9xxxxxxxxxM",
+      "_depth": 0
+    },
+    {
+      "name": "product_format_new",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性，通过/product/getCatePropertyV2获取 格式：{\"property_id\":[{\"value\":value,\"name\":\"property_name\",\"diy_type\":0}]} name的类型是string，value和diy_type的类型是number",
+      "example": "{\\\"405\\\":[{\\\"value\\\":27664,\\\"name\\\":\\\"复习资料\\\",\\\"diy_type\\\":0}],\\\"449\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"佚名\\\",\\\"diy_type\\\":0}],\\\"501\\\":[{\\\"value\\\":7310,\\\"name\\\":\\\"否\\\",\\\"diy_type\\\":0}],\\\"855\\\":[{\\\"value\\\":61683,\\\"name\\\":\\\"北京出版社\\\",\\\"diy_type\\\":0}],\\\"1088\\\":[{\\\"value\\\":407,\\\"name\\\":\\\"小学五年级\\\",\\\"diy_type\\\":0}],\\\"1319\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"1\\\",\\\"diy_type\\\":0}],\\\"1601\\\":[{\\\"value\\\":13911,\\\"name\\\":\\\"通用版\\\",\\\"diy_type\\\":0}],\\\"1618\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"9787218122861\\\",\\\"diy_type\\\":0}],\\\"1831\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"小学英语看图说话写话二年级\\\",\\\"diy_type\\\":0}],\\\"2000\\\":[{\\\"value\\\":34762,\\\"name\\\":\\\"无\\\",\\\"diy_type\\\":0}],\\\"2229\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"1\\\",\\\"diy_type\\\":0}],\\\"2763\\\":[{\\\"value\\\":25193,\\\"name\\\":\\\"英语\\\",\\\"diy_type\\\":0}],\\\"3271\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"1\\\",\\\"diy_type\\\":0}],\\\"3296\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"16.80元\\\",\\\"diy_type\\\":0}]}",
+      "_depth": 0
+    },
+    {
+      "name": "spu_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "spu_id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "freight_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1-包邮，2-非偏远地区包邮，3-不包邮",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "freight_remark",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "不包邮时需填写价格区间",
+      "example": "1-5元",
+      "_depth": 0
+    },
+    {
+      "name": "outer_sell_num",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "外部销量",
+      "example": "20000",
+      "_depth": 0
+    },
+    {
+      "name": "outer_sort_factor",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "排序因子，展示货品时，按该值倒排序；不填时，默认赋值为outer_sell_num",
+      "example": "20000",
+      "_depth": 0
+    },
+    {
+      "name": "recommend_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家推荐语，不能含emoj表情",
+      "example": "这件商品真好用",
+      "_depth": 0
+    },
+    {
+      "name": "pic",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品轮播图，多张图片用 \\\"|\\\" 分开，第一张图为主图，最多5张，至少600x600，大小不超过1M。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "description",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品描述，目前只支持图片。多张图片用 \\\"|\\\" 分开。不能用其他网站的文本粘贴，这样会出现css样式不兼容。总图片数量不得超过50张。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "white_back_ground_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "白底图",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "long_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "3:4长图",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "material_video_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主图视频id",
+      "example": "vaaa",
+      "_depth": 0
+    },
+    {
+      "name": "main_image_three_to_four",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品主图3:4，多张图片用 \\\"|\\\" 分开，最多5张，大小不超过1M。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "spec_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "V1版本。如果不填，则规格名为各级规格名用 \\\"-\\\" 自动生成",
+      "example": "颜色-尺码",
+      "_depth": 0
+    },
+    {
+      "name": "specs",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "V1版本。店铺通用规格，能被同类商品通用。多规格用^分隔，规格与规格值用|分隔，多个规格值用,分隔。如果创建或编辑现货+预售商品或新预售商品时，须包含发货时效，如：颜色|黑色,白色,黄色^尺码|S,M,L^发货时效|5天内发货,15天内发货",
+      "example": "颜色|红色,黑色^尺码|S,M",
+      "_depth": 0
+    },
+    {
+      "name": "spec_prices",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "V1版本。sku详情，数量应该等于规格1规格2规格3，sku数量和规格组合数必须一致 sku不可售时，库存可设置为0。price单位为分。 delivery_infos为SKU物流信息，info_value为字符串类型（示例：\"12\"），info_type填weight，info_unit支持mg,g,kg，超市小时达场景主品用普通库存，子品用区域库存（\"sku_type\": 1 // 区域库存，\"stock_num_map\": {\"123\": 99999 // 门店ID:库存数量}）; “gold_process_charge”为黄金加工费，只有计价金类目可填并且必填。 sell_properties为sku规格信息，代替spec_detail_name1、spec_detail_name2、spec_detail_name3，支持填写超过三级规格，样式:[{\"property_id\":123,\"property_name\":\"颜色\",\"value_id\":456,\"value_name\":\"红色\",\"remark\":\"偏深\"},{\"property_id\":789,\"property_name\":\"净含量\",\"value_id\":891,\"value_name\":\"30ml\",\"remark\":null,\"measurement\":{\"measure_unit\":\"ml\",\"measure_unit_id\":4,\"value\":\"30\"}}] 其中property_id规格项属性id,自定义时传0,property_name为规格项名称,value_id为规格值属性id自定义时传0,value_name为规格值名称,remark为规格值备注(选填),measurement为度量衡信息，当规格值为度量衡属性自定义值时传递。",
+      "example": "[{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":11,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\",\\\"delivery_infos\\\":[{\\\"info_type\\\":\\\"weight\\\",\\\"info_value\\\":\\\"100\\\",\\\"info_unit\\\":\\\"mg\\\"}]},{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":22,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\",\\\"delivery_infos\\\":[{\\\"info_type\\\":\\\"weight\\\",\\\"info_value\\\":\\\"100\\\",\\\"info_unit\\\":\\\"mg\\\"}]},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":44,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\",\\\"delivery_infos\\\":[{\\\"info_type\\\":\\\"weight\\\",\\\"info_value\\\":\\\"100\\\",\\\"info_unit\\\":\\\"mg\\\"}]},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":55,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\",\\\"delivery_infos\\\":[{\\\"info_type\\\":\\\"weight\\\",\\\"info_value\\\":\\\"100\\\",\\\"info_unit\\\":\\\"mg\\\"}]}]",
+      "_depth": 0
+    },
+    {
+      "name": "spec_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "V2版本。规格信息的新字段，用来替代spec_name和specs",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "spec_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如果不填，则规格名为 各级规格（spec_values.name） 用 \\\"-\\\" 自动生成",
+      "example": "颜色-尺码",
+      "_depth": 1
+    },
+    {
+      "name": "spec_values",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "规格，有多个",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "property_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "销售属性名称，与规格名称相同。",
+      "example": "颜色",
+      "_depth": 2
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销售属性值，与规格值相同。",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "value_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "销售属性值",
+      "example": "黄色",
+      "_depth": 3
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售属性备注",
+      "example": "偏深",
+      "_depth": 3
+    },
+    {
+      "name": "value_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "标准销售属性值id",
+      "example": "123",
+      "_depth": 3
+    },
+    {
+      "name": "cpv_path",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "规格值在销售属性中的路径",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "cpid",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "属性id",
+      "example": "123",
+      "_depth": 4
+    },
+    {
+      "name": "cpvid",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "属性值id",
+      "example": "123",
+      "_depth": 4
+    },
+    {
+      "name": "measure_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "度量衡模版id",
+      "example": "123",
+      "_depth": 4
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "度量衡内容",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "module_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "模版id",
+      "example": "354",
+      "_depth": 5
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "值内容",
+      "example": "10",
+      "_depth": 5
+    },
+    {
+      "name": "unit_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "度量衡单位id",
+      "example": "2",
+      "_depth": 5
+    },
+    {
+      "name": "unit_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "度量衡单位名称",
+      "example": "g",
+      "_depth": 5
+    },
+    {
+      "name": "prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "前缀",
+      "example": "\"\"",
+      "_depth": 5
+    },
+    {
+      "name": "suffix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "后缀",
+      "example": "\"-\"",
+      "_depth": 5
+    },
+    {
+      "name": "property_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "标准销售属性id",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "spec_prices_v2",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "V2版本。新sku参数，代替spec_prices",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sell_properties",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "销售属性（逐步替代specDetailId1、2、3，过渡期互相兼容，大于三级规格时只能用sellProperty）。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "property_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售属性名称",
+      "example": "颜色",
+      "_depth": 2
+    },
+    {
+      "name": "value_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售属性值",
+      "example": "黄色",
+      "_depth": 2
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "库存数量",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "价格",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku编码",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "outer_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部SKU ID",
+      "example": "12345",
+      "_depth": 1
+    },
+    {
+      "name": "delivery_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "SKU物流信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "info_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "信息类型，目前只有 weight 一种",
+      "example": "weight",
+      "_depth": 2
+    },
+    {
+      "name": "info_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "信息值",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "info_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "信息计量单位，info_type=weight时，可取 mg/g/kg",
+      "example": "g",
+      "_depth": 2
+    },
+    {
+      "name": "sku_classification_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "SKU分类信息",
+      "example": "main_sale_single_product",
+      "_depth": 1
+    },
+    {
+      "name": "spec_pic",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如颜色-尺寸, 颜色就是主规格, 颜色如黑,白,黄,它们图片url以逗号分隔 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url,img_url,img_url",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "重量数值",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "weight_unit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "重量单位，0-kg, 1-g",
+      "example": "g",
+      "_depth": 0
+    },
+    {
+      "name": "quality_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "在发布商品的时候需要填写商品资质，可以通过这个接口获取当前类目下需要填写的资质列表。https://op.jinritemai.com/docs/api-docs/14/1382",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "quality_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资质key",
+      "example": "3457***9470978",
+      "_depth": 1
+    },
+    {
+      "name": "quality_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资质名称",
+      "example": "进货凭证",
+      "_depth": 1
+    },
+    {
+      "name": "quality_attachments",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "资质附件，仅支持图片、pdf",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "media_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "附件类型，1-图片，2-pdf",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "附件url",
+      "example": "http://www.byted***.com/YYYY",
+      "_depth": 2
+    },
+    {
+      "name": "standard_brand_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "品牌id，通过/brand/list获取，无品牌id则传596120136",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "reference_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "参考价，单位分，需大于商品价格并小于商品价格的10倍",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "reference_price_certificate",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "参考价凭证",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "certificate_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "通过/product/getProductUpdateRule获取可选的参考价格类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "certificate_urls",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "凭证url，仅能有一张",
+      "example": "[\"http://www.aaa.com\"]",
+      "_depth": 1
+    },
+    {
+      "name": "size_info_template_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "尺寸模板id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "substitute_goods_h5_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货源平台移动端链接",
+      "example": "https://xx.xxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_id",
+      "type": "number",
+      "description": "货品ID",
+      "example": "1231241"
+    },
+    {
+      "name": "outer_product_id",
+      "type": "string",
+      "description": "外部货品ID",
+      "example": "12345"
+    },
+    {
+      "name": "create_time",
+      "type": "string",
+      "description": "创建时间",
+      "example": "-"
+    },
+    {
+      "name": "sku",
+      "type": "array",
+      "description": "sku信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照发布商品接口（sub_code: isv.parameter-invalid:40002）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/249",
+      "sub_code": "isv.parameter-invalid:40002",
+      "sub_msg": "参照发布商品接口"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照发布商品接口（sub_code: isv.parameter-invalid:40004）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/249",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "参照发布商品接口"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参照发布商品接口（sub_code: isp.service-error:20000）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/249",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "参照发布商品接口"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参照发布商品接口（sub_code: isv.business-failed:50002）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/249",
+      "sub_code": "isv.business-failed:50002",
+      "sub_msg": "参照发布商品接口"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 参照发布商品接口（sub_code: isv.risk-control-failed:60000）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/249",
+      "sub_code": "isv.risk-control-failed:60000",
+      "sub_msg": "参照发布商品接口"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.cargo.add&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "create_time": "-",
+        "outer_product_id": "12345",
+        "product_id": "1231241",
+        "sku": [
+          {
+            "code": "xxx",
+            "outer_sku_id": "1234",
+            "sku_id": "13232",
+            "spec_detail_id1": "111",
+            "spec_detail_id2": "222",
+            "spec_detail_id3": "333",
+            "spec_detail_ids": "[111,222,333]"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40002",
+      "sub_msg": "参照发布商品接口"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5331",
+  "updatedAt": "2023-11-03",
+  "_file_stem": "selection-supplyCenter-cargo-add"
+}

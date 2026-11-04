@@ -1,0 +1,102 @@
+{
+  "id": "doudian.service.order.conversationLabel",
+  "platform": "doudian",
+  "group": "service",
+  "name": "order.conversationLabel",
+  "description": "订单进线情况",
+  "method": "GET",
+  "path": "/order/conversationLabel",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 三方客服API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单ID",
+      "example": "123343563",
+      "_depth": 0
+    },
+    {
+      "name": "date_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "时间分区（t+1更新），仅支持查询近7天数据",
+      "example": "1723046400",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "conversation_count",
+      "type": "mixed",
+      "description": "进线次数",
+      "example": "1"
+    },
+    {
+      "name": "third_label",
+      "type": "string",
+      "description": "三级标签",
+      "example": "太好啦"
+    },
+    {
+      "name": "date_time",
+      "type": "mixed",
+      "description": "时间分区，若为0代表暂未查询到该时间分区下订单进线信息",
+      "example": "1723046400"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数（sub_code: isv.missing-parameter:10010）",
+      "action": "请检查入参",
+      "sub_code": "isv.missing-parameter:10010",
+      "sub_msg": "缺少必选参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单不属于该店铺（sub_code: isv.parameter-invalid:605024001）",
+      "action": "请传入自己店铺的数据",
+      "sub_code": "isv.parameter-invalid:605024001",
+      "sub_msg": "订单不属于该店铺"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/conversationLabel?app_key=your_appkey_here&method=order.conversationLabel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "conversation_count": "1",
+        "date_time": "1723046400",
+        "third_label": "太好啦"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:10010",
+      "sub_msg": "缺少必选参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1532/6761",
+  "updatedAt": "2024-08-14",
+  "_file_stem": "service-order-conversationLabel"
+}

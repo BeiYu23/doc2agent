@@ -1,0 +1,111 @@
+{
+  "id": "doudian.alliance.buyin.instPickSourceConvert",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.instPickSourceConvert",
+  "description": "商品选品来源转链",
+  "method": "GET",
+  "path": "/buyin/instPickSourceConvert",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品链接",
+      "example": "https://haohuo.jinritemai.com/views/product/item2?id=35119804196108",
+      "_depth": 0
+    },
+    {
+      "name": "pick_extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义参数（只允许 数字、字母和 _，限制长度为20）",
+      "example": "dsds_2ew",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效商品URL（sub_code: isv.parameter-invalid:1056）",
+      "action": "无效商品URL",
+      "sub_code": "isv.parameter-invalid:1056",
+      "sub_msg": "无效商品URL"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品没有加入精选联盟（sub_code: isv.parameter-invalid:4133）",
+      "action": "商品没有加入精选联盟",
+      "sub_code": "isv.parameter-invalid:4133",
+      "sub_msg": "商品没有加入精选联盟"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 获取商品信息失败（sub_code: isv.parameter-invalid:4125）",
+      "action": "获取商品信息失败",
+      "sub_code": "isv.parameter-invalid:4125",
+      "sub_msg": "获取商品信息失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/instPickSourceConvert?app_key=your_appkey_here&method=buyin.instPickSourceConvert&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "product_url": "https://haohuo.jinritemai.com/views/product/item2?id=35119804196108&pick_source=R9AhDER"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1454",
+  "updatedAt": "2023-04-23",
+  "_file_stem": "alliance-buyin-instPickSourceConvert"
+}

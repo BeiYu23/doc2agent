@@ -1,0 +1,84 @@
+{
+  "id": "doudian.retail-waybill.instantShopping.logistics.templateList",
+  "platform": "doudian",
+  "group": "retail-waybill",
+  "name": "instantShopping.logistics.templateList",
+  "description": "获取商家所有标准模版信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "template_data",
+      "type": "array",
+      "description": "模版数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100201:获取模版信息失败（sub_code: isv.business-failed:100201）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:100201",
+      "sub_msg": "100201:获取模版信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:内部处理失败（sub_code: isv.business-failed:1004）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:内部处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.logistics.templateList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "template_data": [
+          {
+            "logistics_code": "ems",
+            "template_infos": [
+              {
+                "perview_url": "https://lf9-cm.ecombdstatic.com/obj/logistics-davinci/preview/jt_100_180.png",
+                "template_code": "ems_100_180",
+                "template_id": "14",
+                "template_name": "EMS二联单",
+                "template_type": "2",
+                "template_url": "https://lf3-cm.ecombdstatic.com/obj/logistics-YOUR_SECRET_KEY_ems100.xml",
+                "version": "1"
+              }
+            ]
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:100201",
+      "sub_msg": "100201:获取模版信息失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1578/7243",
+  "updatedAt": "2025-02-06",
+  "_file_stem": "retail-waybill-instantShopping-logistics-templateList"
+}

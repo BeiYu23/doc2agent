@@ -1,0 +1,127 @@
+{
+  "id": "doudian.miniapp.mini.activity.operate",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.activity.operate",
+  "description": "操作小程序活动",
+  "method": "GET",
+  "path": "/mini/activity/operate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动id",
+      "example": "7279756826818658604",
+      "_depth": 0
+    },
+    {
+      "name": "activity_operate_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "1:活动上线\n2:活动下线\n3:活动删除，活动删除操作会自动移除商品标，商品标移除后，商品不再受小程序专享价活动规则的限制，请谨慎操作。\n4:移除活动商品标。活动只有在下架或者过期的状态下才能操作商品解绑，商品解绑后，活动即作废无法再次恢复，请谨慎操作。",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请检查入参是否正确（sub_code: isv.parameter-invalid:606010000）",
+      "action": "请检查入参是否正确",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "请检查入参是否正确"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 操作类型有误（sub_code: isv.parameter-invalid:606000106）",
+      "action": "操作类型有误",
+      "sub_code": "isv.parameter-invalid:606000106",
+      "sub_msg": "操作类型有误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动已失效，不允许上线（sub_code: isv.business-failed:605030008）",
+      "action": "活动已失效，不允许上线",
+      "sub_code": "isv.business-failed:605030008",
+      "sub_msg": "活动已失效，不允许上线"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 您的操作过于频繁，请稍后重试（sub_code: isv.business-failed:606000105）",
+      "action": "请检查入参是否正确",
+      "sub_code": "isv.business-failed:606000105",
+      "sub_msg": "您的操作过于频繁，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动不存在（sub_code: isv.business-failed:605030006）",
+      "action": "活动不存在",
+      "sub_code": "isv.business-failed:605030006",
+      "sub_msg": "活动不存在"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统错误，请稍后重试（sub_code: isp.service-error:606000103）",
+      "action": "系统错误，请稍后重试",
+      "sub_code": "isp.service-error:606000103",
+      "sub_msg": "系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 生效中的活动不允许直接删除（sub_code: isv.business-failed:605030007）",
+      "action": "生效中的活动不允许直接删除",
+      "sub_code": "isv.business-failed:605030007",
+      "sub_msg": "生效中的活动不允许直接删除"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动已下线，请不要重复操作。（sub_code: isv.business-failed:605030022）",
+      "action": "活动已下线，请不要重复操作。",
+      "sub_code": "isv.business-failed:605030022",
+      "sub_msg": "活动已下线，请不要重复操作。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动已上线，请不要重复操作。（sub_code: isv.business-failed:605030018）",
+      "action": "活动已上线，请不要重复操作。",
+      "sub_code": "isv.business-failed:605030018",
+      "sub_msg": "活动已上线，请不要重复操作。"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/activity/operate?app_key=your_appkey_here&method=mini.activity.operate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "请检查入参是否正确"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/4959",
+  "updatedAt": "2024-02-04",
+  "_file_stem": "miniapp-mini-activity-operate"
+}

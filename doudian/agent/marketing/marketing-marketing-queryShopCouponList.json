@@ -1,0 +1,168 @@
+{
+  "id": "doudian.marketing.marketing.queryShopCouponList",
+  "platform": "doudian",
+  "group": "marketing",
+  "name": "marketing.queryShopCouponList",
+  "description": "查询店铺优惠券信息，与商家工作台优惠券管理模块功能一致",
+  "method": "GET",
+  "path": "/marketing/queryShopCouponList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "coupon_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠券类型。 0表示全部。\n1：会员开卡礼；3：商品优惠券；4：店铺粉丝券；5：达人粉丝券；6：店铺新人券；7：全店通用券；8：客服专享卷；9：自有渠道券；12：团长活动券；13：达人专属券；15：订单商品复购券；16：直播投流券；20：无忧服务客服券；23：电商品牌广告券",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "content_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠内容。 0表示全部。\n1：店铺满减券；2：店铺直减券；3：店铺折扣券；11：指定商品满减券；12：指定商品直减券；13：指定商品折扣券；",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠券状态。 0表示全部。\n1: 未生效，2：生效中。3：已过期，4：已作废",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "min_start_apply_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "领取时间范围，最小领取时间",
+      "example": "2023-07-01 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "max_start_apply_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "领取时间范围，最大领取时间",
+      "example": "2023-08-01 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "分页参数，页数；从0开始",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "分页参数，每页大小，最大20；",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "coupon_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠券ID，用于定向查询",
+      "example": "7261824374827712828",
+      "_depth": 0
+    },
+    {
+      "name": "conpon_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠券名称，用于模糊查询",
+      "example": "店铺券",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "coupon_list",
+      "type": "array",
+      "description": "优惠券列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总量",
+      "example": "1023"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 店铺优惠券查询异常，缺少分页参数（sub_code: isv.parameter-invalid:605012024）",
+      "action": "请填写正确的分页参数",
+      "sub_code": "isv.parameter-invalid:605012024",
+      "sub_msg": "店铺优惠券查询异常，缺少分页参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 店铺优惠券查询异常，分页参数不合法（sub_code: isv.parameter-invalid:605012025）",
+      "action": "请填写正确的分页参数，PageNo <= 20",
+      "sub_code": "isv.parameter-invalid:605012025",
+      "sub_msg": "店铺优惠券查询异常，分页参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 店铺优惠券查询异常，时间格式不正确（sub_code: isv.parameter-invalid:605012026）",
+      "action": "max_start_apply_time不能早于min_start_apply_time",
+      "sub_code": "isv.parameter-invalid:605012026",
+      "sub_msg": "店铺优惠券查询异常，时间格式不正确"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 店铺优惠券查询异常，请稍后重试（sub_code: isp.service-error:605012000）",
+      "action": "店铺优惠券查询异常，请稍后重试",
+      "sub_code": "isp.service-error:605012000",
+      "sub_msg": "店铺优惠券查询异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=crossborder.link.inboundBill.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:605012024",
+      "sub_msg": "店铺优惠券查询异常，缺少分页参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1361/4257",
+  "updatedAt": "2023-08-04",
+  "_file_stem": "marketing-marketing-queryShopCouponList"
+}

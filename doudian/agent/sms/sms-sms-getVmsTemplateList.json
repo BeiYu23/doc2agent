@@ -1,0 +1,205 @@
+{
+  "id": "doudian.sms.sms.getVmsTemplateList",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.getVmsTemplateList",
+  "description": "获取视频短信模板list",
+  "method": "GET",
+  "path": "/sms/getVmsTemplateList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sms_account",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信account",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "618大促",
+      "_depth": 0
+    },
+    {
+      "name": "signature",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板签名",
+      "example": "测试旗舰店",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板id",
+      "example": "VT_1234",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "状态\n1：字节审核中\n2：字节审核拒绝\n3：字节审核通过\n4 ：字节审核关闭\n5：字节审核免审\n6：运营商审核中\n7：运营商审核失败\n8：运营商审核通过",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_index",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "分页页数，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "分页大小",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "版本，v2是新版本",
+      "example": "v2",
+      "_depth": 0
+    },
+    {
+      "name": "template_biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模板业务类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "template_biz_sub_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模板业务子类型",
+      "example": "100000",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "数量",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:628005100）",
+      "action": "业务处理失败，请检查请求参数",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求入参非法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "请检查请求入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "请求入参非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004702:HttpPost请求失败（sub_code: isv.business-failed:628004702）",
+      "action": "628004702:HttpPost请求失败",
+      "sub_code": "isv.business-failed:628004702",
+      "sub_msg": "628004702:HttpPost请求失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/getVmsTemplateList?app_key=your_appkey_here&method=sms.getVmsTemplateList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "approve_time": "1697610232",
+            "carrier_status": {
+              "china_mobile": {
+                "reason": "涉及敏感词",
+                "status": "1"
+              },
+              "china_telecom": {
+                "reason": "涉及敏感词",
+                "status": "1"
+              },
+              "china_unicom": {
+                "reason": "涉及敏感词",
+                "status": "1"
+              }
+            },
+            "channel_type": "CN_VMS",
+            "content": "xxx",
+            "create_time": "1677600000",
+            "desc": "test",
+            "expire_time": "1697610232",
+            "rest_valid_days": "30",
+            "signature": "测试旗舰店",
+            "status": "1",
+            "template_biz_sub_type": "1",
+            "template_biz_type": "100000",
+            "template_id": "VT_1234",
+            "template_name": "618大促",
+            "theme": "618大促主题"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/4017",
+  "updatedAt": "2026-04-20",
+  "_file_stem": "sms-sms-getVmsTemplateList"
+}

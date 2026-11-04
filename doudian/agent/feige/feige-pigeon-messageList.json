@@ -1,0 +1,169 @@
+{
+  "id": "doudian.feige.pigeon.messageList",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.messageList",
+  "description": "查询会话消息列表",
+  "method": "GET",
+  "path": "/pigeon/messageList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "conversation_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "飞鸽会话ID",
+      "example": "7307297935836939546",
+      "_depth": 0
+    },
+    {
+      "name": "start_cursor",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "开始拉消息的位点",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "limit",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每次获取消息的数量，最大值不超过50",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "conversation_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "会话类型，默认11，业务方可传10查询用户所有会话信息",
+      "example": "11",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "has_more",
+      "type": "boolean",
+      "description": "是否还有更多的消息",
+      "example": "true"
+    },
+    {
+      "name": "next_cursor",
+      "type": "mixed",
+      "description": "下一次拉消息的位点",
+      "example": "1792123122"
+    },
+    {
+      "name": "message_list",
+      "type": "array",
+      "description": "消息内容信息",
+      "example": ""
+    },
+    {
+      "name": "doudian_aid",
+      "type": "string",
+      "description": "用户端",
+      "example": "1128"
+    },
+    {
+      "name": "doudian_open_id",
+      "type": "string",
+      "description": "用户OpenId",
+      "example": "121211212"
+    },
+    {
+      "name": "conv_url",
+      "type": "string",
+      "description": "跳转飞鸽工作台会话URL",
+      "example": "https://im.jinritemai.com/op/conversation?cid=7312282185073984805"
+    },
+    {
+      "name": "mix_nick",
+      "type": "string",
+      "description": "模糊化的用户昵称",
+      "example": "许****"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理异常（sub_code: isv.business-failed:605022001）",
+      "action": "业务处理异常，请稍后重试",
+      "sub_code": "isv.business-failed:605022001",
+      "sub_msg": "业务处理异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常（sub_code: isv.parameter-invalid:605022002）",
+      "action": "参数异常，会话信息不存在",
+      "sub_code": "isv.parameter-invalid:605022002",
+      "sub_msg": "参数异常"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数异常（sub_code: isv.missing-parameter:605022003）",
+      "action": "缺少必填的参数，请补充参数",
+      "sub_code": "isv.missing-parameter:605022003",
+      "sub_msg": "参数异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/messageList?app_key=your_appkey_here&method=pigeon.messageList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "conv_url": "https://im.jinritemai.com/op/conversation?cid=7312282185073984805",
+        "doudian_aid": "1128",
+        "doudian_open_id": "121211212",
+        "has_more": "true",
+        "message_list": [
+          {
+            "card_type": "order_card",
+            "content": "hello",
+            "create_time": "1702298756522",
+            "customer_hint": "欢迎光临美妆宣言美妆，很高兴为您服务",
+            "data_id": "121212122",
+            "extra": "{\"trace_id\": \"02175299357520400000000000000000000ffff0ad040ad27ce1a:1838146990170155\",\"coupon_meta_id\":1231312312312312}",
+            "foot_text": "此消息由系统发送",
+            "pigeon_cid": "77887788122",
+            "sender_role": "CurrentServer",
+            "server_msg_id": "778877881221212",
+            "type": "text"
+          }
+        ],
+        "mix_nick": "许****",
+        "next_cursor": "1792123122"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:605022001",
+      "sub_msg": "业务处理异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/5909",
+  "updatedAt": "2025-08-04",
+  "_file_stem": "feige-pigeon-messageList"
+}

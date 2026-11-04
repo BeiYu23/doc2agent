@@ -1,0 +1,160 @@
+{
+  "id": "doudian.stock.warehouse.createBatch",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.createBatch",
+  "description": "批量创建区域仓",
+  "method": "GET",
+  "path": "/warehouse/createBatch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "外部仓信息列表",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓库ID，一个店铺下，同一个外部ID只能创建一个仓库",
+      "example": "abc",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库名称",
+      "example": "华北一仓",
+      "_depth": 1
+    },
+    {
+      "name": "intro",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库介绍",
+      "example": "这是一家外部仓",
+      "_depth": 1
+    },
+    {
+      "name": "address_detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓地址详细地址，苹果门店店铺、超市小时达店铺建仓必传",
+      "example": "xx区xx号",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_location",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓地址编码  苹果门店店铺、超市小时达店铺建仓必传",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "address_id1",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "省地址编码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "address_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "市地址编码",
+      "example": "110000",
+      "_depth": 2
+    },
+    {
+      "name": "address_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "区地址编码",
+      "example": "110101",
+      "_depth": 2
+    },
+    {
+      "name": "address_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "街道地址编码",
+      "example": "0",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "key是outWarehouseId,value代表成功/失败",
+      "example": "{         \"qwb\": true, // key是outWarehouseId         \"qwb1\": true // value代表成功/失败     },"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 仓库编码Z0010160524ZE02重复（sub_code: isv.business-failed:2）",
+      "action": "请检查仓库信息",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "仓库编码Z0010160524ZE02重复"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 单次请求过于频繁，请稍后重试（sub_code: isv.business-failed:1005）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:1005",
+      "sub_msg": "单次请求过于频繁，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/createBatch?app_key=your_appkey_here&method=warehouse.createBatch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "仓库编码Z0010160524ZE02重复"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/1862",
+  "updatedAt": "2022-08-18",
+  "_file_stem": "stock-warehouse-createBatch"
+}

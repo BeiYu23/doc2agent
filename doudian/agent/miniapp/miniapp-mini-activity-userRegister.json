@@ -1,0 +1,190 @@
+{
+  "id": "doudian.miniapp.mini.activity.userRegister",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.activity.userRegister",
+  "description": "专享价活动注册",
+  "method": "GET",
+  "path": "/mini/activity/userRegister",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动id",
+      "example": "7390039288967987465",
+      "_depth": 0
+    },
+    {
+      "name": "buy_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "限购数量",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "register_token",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预注册接口出参返回的token",
+      "example": "YOUR_SECRET_KEY",
+      "_depth": 0
+    },
+    {
+      "name": "dy_open_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "dy_open_id",
+      "example": "1234",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "user_activity_right_no",
+      "type": "string",
+      "description": "用户权益单号",
+      "example": "7390039288967987465"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请检查必填参数（sub_code: isv.parameter-invalid:606010000）",
+      "action": "请检查必填参数",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "请检查必填参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 您的操作过于频繁，请稍后重试（sub_code: isv.business-failed:606000105）",
+      "action": "您的操作过于频繁，请稍后重试",
+      "sub_code": "isv.business-failed:606000105",
+      "sub_msg": "您的操作过于频繁，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 应用不存在（sub_code: isv.parameter-invalid:605030012）",
+      "action": "应用不存在",
+      "sub_code": "isv.parameter-invalid:605030012",
+      "sub_msg": "应用不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 用户不存在（sub_code: isv.parameter-invalid:605030023）",
+      "action": "用户不存在",
+      "sub_code": "isv.parameter-invalid:605030023",
+      "sub_msg": "用户不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动暂未上线（sub_code: isv.business-failed:605030022）",
+      "action": "活动暂未上线",
+      "sub_code": "isv.business-failed:605030022",
+      "sub_msg": "活动暂未上线"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动暂未开始（sub_code: isv.business-failed:605030014）",
+      "action": "活动暂未开始",
+      "sub_code": "isv.business-failed:605030014",
+      "sub_msg": "活动暂未开始"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误，请稍后重试（sub_code: isv.business-failed:605030008）",
+      "action": "系统错误，请稍后重试",
+      "sub_code": "isv.business-failed:605030008",
+      "sub_msg": "系统错误，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统错误，请稍后重试（sub_code: isp.service-error:606000103）",
+      "action": "系统错误，请稍后重试",
+      "sub_code": "isp.service-error:606000103",
+      "sub_msg": "系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 您已注册过该活动，请不要重复注册（sub_code: isv.business-failed:605030010）",
+      "action": "您已注册过该活动，请不要重复注册",
+      "sub_code": "isv.business-failed:605030010",
+      "sub_msg": "您已注册过该活动，请不要重复注册"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 用户限购数量不能为空（sub_code: isv.business-failed:605030011）",
+      "action": "用户限购数量不能为空",
+      "sub_code": "isv.business-failed:605030011",
+      "sub_msg": "用户限购数量不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动不存在（sub_code: isv.business-failed:605030006）",
+      "action": "活动不存在",
+      "sub_code": "isv.business-failed:605030006",
+      "sub_msg": "活动不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 暂无购买资格（sub_code: isv.business-failed:606010026）",
+      "action": "暂无购买资格",
+      "sub_code": "isv.business-failed:606010026",
+      "sub_msg": "暂无购买资格"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前应用无当前活动的操作权限（sub_code: isv.business-failed:606000106）",
+      "action": "当前应用无当前活动的操作权限",
+      "sub_code": "isv.business-failed:606000106",
+      "sub_msg": "当前应用无当前活动的操作权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动已失效（sub_code: isv.business-failed:605030009）",
+      "action": "活动已失效",
+      "sub_code": "isv.business-failed:605030009",
+      "sub_msg": "活动已失效"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=mini.activity.userRegister&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "user_activity_right_no": "7390039288967987465"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "请检查必填参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/6767",
+  "updatedAt": "2024-08-20",
+  "_file_stem": "miniapp-mini-activity-userRegister"
+}

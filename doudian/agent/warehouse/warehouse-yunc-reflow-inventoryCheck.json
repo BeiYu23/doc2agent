@@ -1,0 +1,124 @@
+{
+  "id": "doudian.warehouse.yunc.reflow.inventoryCheck",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.reflow.inventoryCheck",
+  "description": "库存对账接口",
+  "method": "GET",
+  "path": "/yunc/reflow/inventoryCheck",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码",
+      "example": "W1009",
+      "_depth": 0
+    },
+    {
+      "name": "audit_date",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "对账日期（yyyyMMDD）",
+      "example": "20220801",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注内容",
+      "_depth": 0
+    },
+    {
+      "name": "audit_details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "单据对账明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "reflow_order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "翻仓单据类型（1-入库单，2-出库单，3-库调单）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "shopid",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺ID",
+      "example": "123456",
+      "_depth": 1
+    },
+    {
+      "name": "order_qty",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "单据数量",
+      "example": "100",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "错误码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误信息",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/reflow/inventoryCheck?app_key=your_appkey_here&method=yunc.reflow.inventoryCheck&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2274",
+  "updatedAt": "2022-08-01",
+  "_file_stem": "warehouse-yunc-reflow-inventoryCheck"
+}

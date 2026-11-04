@@ -1,0 +1,135 @@
+{
+  "id": "doudian.cross-border.crossBorder.DeleteProductRecord",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossBorder.DeleteProductRecord",
+  "description": "删除备案",
+  "method": "GET",
+  "path": "/crossBorder/DeleteProductRecord",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "record_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "备案ID列表，最多20个",
+      "example": "[\"7328268896950550828\",\"7328268896950550829\"]",
+      "_depth": 0
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "额外信息",
+      "example": "{\"示例\":\"\"}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "返回码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "返回结果描述",
+      "example": "-"
+    },
+    {
+      "name": "success_list",
+      "type": "array",
+      "description": "删除成功的备案ID列表",
+      "example": "[\"7328268896950550828\",\"7328268896950550829\"]"
+    },
+    {
+      "name": "fail_list",
+      "type": "array",
+      "description": "删除失败的备案ID列表与对应失败原因",
+      "example": ""
+    },
+    {
+      "name": "extra",
+      "type": "string",
+      "description": "额外信息",
+      "example": "{\"示例\":\"\"}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部系统异常（sub_code: isp.service-error:10000）",
+      "action": "重试，多次失败联系平台处理",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "内部系统异常"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 达到qps上限，触发限流（sub_code: isp.traffic-limited:10002）",
+      "action": "重试，并调整流量，控制QPS符合平台要求",
+      "sub_code": "isp.traffic-limited:10002",
+      "sub_msg": "达到qps上限，触发限流"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常（sub_code: isv.parameter-invalid:20000）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.parameter-invalid:20000",
+      "sub_msg": "参数异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理异常，如备案审核状态不正确、备案不存在、仓所属口岸与传入口岸不一致等（sub_code: isv.business-failed:30000）",
+      "action": "结合返回信息处理，有疑问联系平台处理",
+      "sub_code": "isv.business-failed:30000",
+      "sub_msg": "业务处理异常，如备案审核状态不正确、备案不存在、仓所属口岸与传入口岸不一致等"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossBorder/DeleteProductRecord?app_key=your_appkey_here&method=crossBorder.DeleteProductRecord&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "extra": {},
+        "fail_list": [
+          {
+            "fail_reason": "1.FailReason字符串最大长度1000 2.失败原因: - 备案不存在 - 备案审核状态不合法 - 备案关联了在途履约单(预约到货单、提货单) - 系统繁忙(DB访问异常/RPC调用异常)",
+            "record_id": "7328268896950550830"
+          }
+        ],
+        "msg": "-",
+        "success_list": "[\"7328268896950550828\",\"7328268896950550829\"]"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "内部系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6182",
+  "updatedAt": "2024-02-23",
+  "_file_stem": "cross-border-crossBorder-DeleteProductRecord"
+}

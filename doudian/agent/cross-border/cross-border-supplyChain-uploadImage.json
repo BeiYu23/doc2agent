@@ -1,0 +1,72 @@
+{
+  "id": "doudian.cross-border.supplyChain.uploadImage",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "supplyChain.uploadImage",
+  "description": "转换上传图片",
+  "method": "GET",
+  "path": "/supplyChain/uploadImage",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "image_uri",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材URI",
+      "example": "/xxx/xxx.jpg",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "image",
+      "type": "string",
+      "description": "图片URL",
+      "example": "https://example.com/xxx.jpg"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部服务返回错误（sub_code: isv.business-failed:200001）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:200001",
+      "sub_msg": "内部服务返回错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/uploadImage?app_key=your_appkey_here&method=supplyChain.uploadImage&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "image": "https://example.com/xxx.jpg"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:200001",
+      "sub_msg": "内部服务返回错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6326",
+  "updatedAt": "2024-03-26",
+  "_file_stem": "cross-border-supplyChain-uploadImage"
+}

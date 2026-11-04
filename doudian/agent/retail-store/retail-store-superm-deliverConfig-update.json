@@ -1,0 +1,148 @@
+{
+  "id": "doudian.retail-store.superm.deliverConfig.update",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.deliverConfig.update",
+  "description": "时效管理更新",
+  "method": "GET",
+  "path": "/superm/deliverConfig/update",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "config_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "配置ID列表",
+      "example": "213432",
+      "_depth": 0
+    },
+    {
+      "name": "shop_deliver_config",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "配置信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "deliver_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送类型\n1：商家自行配置配送时长\n2：系统自动计算配置时长",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "normal_time_cost",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "三公里内常规时间配送时长（分钟）",
+      "example": "20",
+      "_depth": 1
+    },
+    {
+      "name": "special_time_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "三公里内特殊时段列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "时间片（单位秒，表示第几秒，如36000表示10:00）",
+      "example": "36000",
+      "_depth": 2
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "时间片（单位秒，表示第几秒，如39600表示11:00）",
+      "example": "39600",
+      "_depth": 2
+    },
+    {
+      "name": "time_cost",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "时间片内对应的配送时长（分钟）",
+      "example": "20",
+      "_depth": 2
+    },
+    {
+      "name": "over_limit_time_cost",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "三公里外每公里增加的配送时长（分钟）",
+      "example": "40",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 时效配置查询失败（sub_code: isv.business-failed:202326）",
+      "action": "时效配置查询失败",
+      "sub_code": "isv.business-failed:202326",
+      "sub_msg": "时效配置查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前店铺下未查询到该配置（sub_code: isv.business-failed:202327）",
+      "action": "当前店铺下未查询到该配置",
+      "sub_code": "isv.business-failed:202327",
+      "sub_msg": "当前店铺下未查询到该配置"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/deliverConfig/update?app_key=your_appkey_here&method=superm.deliverConfig.update&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/3597",
+  "updatedAt": "2023-09-18",
+  "_file_stem": "retail-store-superm-deliverConfig-update"
+}

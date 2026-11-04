@@ -1,0 +1,237 @@
+{
+  "id": "doudian.video.second.ecomInsight.queryShortVideoData",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.queryShortVideoData",
+  "description": "查询短视频数据接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "filters",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "过滤",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "field",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "筛选字段名，必须在允许的筛选字段白名单内",
+      "example": "share_cnt_7d",
+      "_depth": 1
+    },
+    {
+      "name": "option",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "筛选条件表达式",
+      "example": ">100",
+      "_depth": 1
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页条数，最多20",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "is_industry",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否行业数据",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "search",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "搜索",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "field",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搜索字段名，必须在允许的搜索字段白名单内",
+      "example": "video_title",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搜索类型，仅允许：fuzzy（模糊搜索，LIKE '%value%'）、exact（精确匹配）",
+      "example": "fuzzy",
+      "_depth": 1
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搜索值。为 null 时该条搜索条件被跳过",
+      "example": "海",
+      "_depth": 1
+    },
+    {
+      "name": "sort",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "排序条件",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序方向，仅允许 asc 或 desc（不区分大小写）。默认 desc",
+      "example": "desc",
+      "_depth": 1
+    },
+    {
+      "name": "aggregation",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "聚合函数名，当排序字段是聚合指标时需传入。支持 sum、avg、count_distinct",
+      "example": "count_distinct",
+      "_depth": 1
+    },
+    {
+      "name": "field",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序字段名",
+      "example": "key_word",
+      "_depth": 1
+    },
+    {
+      "name": "group_by",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "聚合分组字段列表，必须至少包含一个字段。目前仅支持聚合查询模式，不传将报错",
+      "example": "key_word",
+      "_depth": 0
+    },
+    {
+      "name": "metrics",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "聚合指标列表，定义需要计算的聚合字段",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "aggregation",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "聚合方式，仅允许以下 3 种（不区分大小写）：sum、avg、count_distinct",
+      "example": "sum",
+      "_depth": 1
+    },
+    {
+      "name": "field",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "聚合字段名，必须在允许的聚合字段白名单内（见附录）",
+      "example": "share_cnt_7d",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "业务数据，成功时返回，失败时为 null",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "消息",
+      "example": "xxx"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "状态码",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.queryShortVideoData&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "field_values": "\"xxxxx<SEP>xxx<SEP>0-20000<SEP>0-20000<SEP>0-20000\",  \"xxxxx<SEP>xxx<SEP>0-20000<SEP>0-20000<SEP>0-20000\"",
+          "fields": "\"key_word\",\"video_id\",\"sum_share_cnt_7d\",\"avg_share_cnt_7d\",  \"count_distinct_key_word\"",
+          "page": "1",
+          "page_size": "20",
+          "request_id": "req_be5ce4ac672f4325a2ff9961fa4cf112",
+          "total": "12313"
+        },
+        "msg": "xxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8182",
+  "updatedAt": "2026-04-08",
+  "_file_stem": "video-second-ecomInsight-queryShortVideoData"
+}

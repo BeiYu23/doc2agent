@@ -1,0 +1,87 @@
+{
+  "id": "doudian.waybill.logistics.getCustomTemplateList",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.getCustomTemplateList",
+  "description": "查询商家自定义区模板（新版）",
+  "method": "GET",
+  "path": "/logistics/getCustomTemplateList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流服务商编码（若为空代表查询全部）",
+      "example": "shunfeng",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "custom_template_data",
+      "type": "array",
+      "description": "商家所有快递自定义模板的数据列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 操作数据库异常（sub_code: isv.business-failed:4010）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:4010",
+      "sub_msg": "操作数据库异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getCustomTemplateList?app_key=your_appkey_here&method=logistics.getCustomTemplateList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "custom_template_data": [
+          {
+            "custom_template_infos": [
+              {
+                "custom_template_code": "123",
+                "custom_template_id": "1",
+                "custom_template_key_list": "1",
+                "custom_template_name": "muban",
+                "custom_template_url": "1",
+                "parent_template_code": "1",
+                "parent_template_id": "1"
+              }
+            ],
+            "logistics_code": "shunfeng"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4010",
+      "sub_msg": "操作数据库异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/1852",
+  "updatedAt": "2021-08-19",
+  "_file_stem": "waybill-logistics-getCustomTemplateList"
+}

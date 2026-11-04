@@ -1,0 +1,148 @@
+{
+  "id": "doudian.retail-store.superm.applyPlatformPickUp",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.applyPlatformPickUp",
+  "description": "呼叫运力售后取件",
+  "method": "GET",
+  "path": "/superm/applyPlatformPickUp",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "售后单ID",
+      "example": "7161813415244218654",
+      "_depth": 0
+    },
+    {
+      "name": "selected_calendar_period",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "运力呼叫时间段",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "time_end_ts",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "时间段结束时间",
+      "example": "1667793600",
+      "_depth": 1
+    },
+    {
+      "name": "time_begin_ts",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "时间段开始时间",
+      "example": "1667790000",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "logistics_id",
+      "type": "string",
+      "description": "物流单ID",
+      "example": "100000"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求内部服务异常,请重试（sub_code: isp.service-error:20200）",
+      "action": "请求内部服务异常,请重试",
+      "sub_code": "isp.service-error:20200",
+      "sub_msg": "请求内部服务异常,请重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 虚拟号生成异常（sub_code: isp.service-error:20213）",
+      "action": "虚拟号生成异常",
+      "sub_code": "isp.service-error:20213",
+      "sub_msg": "虚拟号生成异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求内部服务异常,请重试（sub_code: isp.service-error:20201）",
+      "action": "请求内部服务异常,请重试",
+      "sub_code": "isp.service-error:20201",
+      "sub_msg": "请求内部服务异常,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 拓展字段校验不通过（sub_code: isv.business-failed:50400）",
+      "action": "拓展字段校验不通过",
+      "sub_code": "isv.business-failed:50400",
+      "sub_msg": "拓展字段校验不通过"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务错误，此状态下不可重试（sub_code: isv.business-failed:50300）",
+      "action": "业务错误，此状态下不可重试",
+      "sub_code": "isv.business-failed:50300",
+      "sub_msg": "业务错误，此状态下不可重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 19009:已存在进行中的物流单，请刷新页面后按前一次预约配送方式重试。上次配送方式为：平台运力（sub_code: isv.business-failed:19009）",
+      "action": "19009:已存在进行中的物流单，请刷新页面后按前一次预约配送方式重试。上次配送方式为：平台运力",
+      "sub_code": "isv.business-failed:19009",
+      "sub_msg": "19009:已存在进行中的物流单，请刷新页面后按前一次预约配送方式重试。上次配送方式为：平台运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20306002:操作冲突，请稍后重试（sub_code: isv.business-failed:20306002）",
+      "action": "20306002:操作冲突，请稍后重试",
+      "sub_code": "isv.business-failed:20306002",
+      "sub_msg": "20306002:操作冲突，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/applyPlatformPickUp?app_key=your_appkey_here&method=superm.applyPlatformPickUp&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "logistics_id": "100000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2741",
+  "updatedAt": "2025-12-11",
+  "_file_stem": "retail-store-superm-applyPlatformPickUp"
+}

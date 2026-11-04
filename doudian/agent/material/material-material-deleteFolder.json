@@ -1,0 +1,79 @@
+{
+  "id": "doudian.material.material.deleteFolder",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.deleteFolder",
+  "description": "彻底删除文件夹，包括当前文件夹和当前文件夹包含的所有子文件夹和素材。删除后不可查询。\n批量操作时，要求入参中的所有文件夹在同一个父文件夹下。",
+  "method": "GET",
+  "path": "/material/deleteFolder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V3.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "folder_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "文件夹id list，最多不超过20个",
+      "example": "[\"7001012973925941548\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_ids",
+      "type": "array",
+      "description": "操作成功的文件夹id列表",
+      "example": "[\"7001012973925941548\"]"
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "操作失败的的文件夹及错误详情",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 系统文件夹，不可操作（sub_code: isv.parameter-invalid:20001）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "系统文件夹，不可操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/deleteFolder?app_key=your_appkey_here&method=material.deleteFolder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "failed_map": {},
+        "success_ids": "[\"7001012973925941548\"]"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "系统文件夹，不可操作"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1139",
+  "updatedAt": "2022-09-06",
+  "_file_stem": "material-material-deleteFolder"
+}

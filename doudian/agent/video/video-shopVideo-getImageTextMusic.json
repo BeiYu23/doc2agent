@@ -1,0 +1,122 @@
+{
+  "id": "doudian.video.shopVideo.getImageTextMusic",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.getImageTextMusic",
+  "description": "获取图文音乐列表",
+  "method": "GET",
+  "path": "/shopVideo/getImageTextMusic",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "query",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "歌曲，歌手名称",
+      "example": "Dance",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当前页，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "一次多少条音乐",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "need_recommend",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要推荐音乐，默认false",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "music_list",
+      "type": "array",
+      "description": "音乐列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总条数",
+      "example": "10"
+    },
+    {
+      "name": "recommend_music_list",
+      "type": "array",
+      "description": "推荐音乐列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/getImageTextMusic?app_key=your_appkey_here&method=shopVideo.getImageTextMusic&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "music_list": [
+          {
+            "author": "Richard",
+            "clip_id": "6748245563931753523",
+            "cover_img": "https://xxx",
+            "duration": "65000",
+            "music_name": "Bass Dance",
+            "music_url": "https://xxx"
+          }
+        ],
+        "recommend_music_list": [
+          {
+            "author": "Richard",
+            "clip_id": "6748245563931753523",
+            "cover_img": "https://xxx",
+            "duration": "65000",
+            "music_name": "Bass Dance",
+            "music_url": "https://xxx"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8140",
+  "updatedAt": "2026-03-11",
+  "_file_stem": "video-shopVideo-getImageTextMusic"
+}

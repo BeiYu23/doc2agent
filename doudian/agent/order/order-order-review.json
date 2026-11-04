@@ -1,0 +1,87 @@
+{
+  "id": "doudian.order.order.review",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.review",
+  "description": "商家回传订单审核结果",
+  "method": "GET",
+  "path": "/order/review",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "表示订单审核的类型 3001 通信卡审核",
+      "example": "3001",
+      "_depth": 0
+    },
+    {
+      "name": "reject_code",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "0 审核通过 \n200001 下单身份信息180天内重复下单\n200002 超过下单身份信息可办理数量\n200003 下单身份信息年龄不符合要求 \n200004 下单地址为运营商禁售地区 \n200005 未通过运营商审核，具体可联系商家\n200006 地址模糊无法发货",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "object_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "审核的单id取决于什么审核 通信卡审核 店铺单id",
+      "example": "4921300864966120582",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20002:参数错误:找不到订单的审核任务（sub_code: isv.business-failed:20002）",
+      "action": "修改入参",
+      "sub_code": "isv.business-failed:20002",
+      "sub_msg": "20002:参数错误:找不到订单的审核任务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20003:调用交易失败（sub_code: isv.business-failed:20003）",
+      "action": "请检查请求参数",
+      "sub_code": "isv.business-failed:20003",
+      "sub_msg": "20003:调用交易失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20002",
+      "sub_msg": "20002:参数错误:找不到订单的审核任务"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1785",
+  "updatedAt": "2024-06-12",
+  "_file_stem": "order-order-review"
+}

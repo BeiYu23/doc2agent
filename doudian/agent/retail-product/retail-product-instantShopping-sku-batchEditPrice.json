@@ -1,0 +1,142 @@
+{
+  "id": "doudian.retail-product.instantShopping.sku.batchEditPrice",
+  "platform": "doudian",
+  "group": "retail-product",
+  "name": "instantShopping.sku.batchEditPrice",
+  "description": "批量修改SKU价格",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sku_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku列表，最多50个",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "售价 (单位 分)",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku编码",
+      "example": "123123",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuid",
+      "example": "45678945678",
+      "_depth": 1
+    },
+    {
+      "name": "out_sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外部skuid",
+      "example": "45678945678",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品id",
+      "example": "78945678123132",
+      "_depth": 1
+    },
+    {
+      "name": "out_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外部商品id",
+      "example": "78945678123132",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "即时零售连锁版，通过传入主品id+门店id对该门店下的子品进行操作，即时零售单店版，无需使用",
+      "example": "145633432",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "array",
+      "description": "sku更新结果明细",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.sku.batchEditPrice&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "base_resp": {
+              "extra": {},
+              "status_code": "0",
+              "status_message": "sucess"
+            },
+            "code": "123123",
+            "out_product_id": "78945678123132",
+            "out_sku_id": "45678945678",
+            "outer_product_id": "78945678123132",
+            "price": "100",
+            "product_id": "78945678123132",
+            "sku_id": "45678945678",
+            "store_id": "145633432"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1570/7159",
+  "updatedAt": "2025-01-14",
+  "_file_stem": "retail-product-instantShopping-sku-batchEditPrice"
+}

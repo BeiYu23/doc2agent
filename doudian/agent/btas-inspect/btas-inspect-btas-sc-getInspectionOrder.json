@@ -1,0 +1,107 @@
+{
+  "id": "doudian.btas-inspect.btas.sc.getInspectionOrder",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.sc.getInspectionOrder",
+  "description": "质检机构获取该机构的订单状态信息，包含履约状态，取消状态，送检状态和发货状态等。\n注意该字段需要手动配置接口权限，且仅能查询当前机构的订单。",
+  "method": "GET",
+  "path": "/btas/sc/getInspectionOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺单ID",
+      "example": "463123124535345",
+      "_depth": 0
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单码，与订单ID二选一填入",
+      "example": "0431231253",
+      "_depth": 0
+    },
+    {
+      "name": "sc_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "质检机构ID，不能为空",
+      "example": "58",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_orders",
+      "type": "array",
+      "description": "订单列表",
+      "example": ""
+    },
+    {
+      "name": "order_id",
+      "type": "string",
+      "description": "订单ID",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 订单不存在（sub_code: isp.service-error:4000）",
+      "action": "重试",
+      "sub_code": "isp.service-error:4000",
+      "sub_msg": "订单不存在"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:2030）",
+      "action": "检查订单ID和订单码是否传",
+      "sub_code": "isv.missing-parameter:2030",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非法访问，没有获取到授权店铺信息（sub_code: isv.business-failed:-1）",
+      "action": "-",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "非法访问，没有获取到授权店铺信息"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/pushOutboundFeedback?app_key=your_appkey_here&method=yunc.pushOutboundFeedback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:4000",
+      "sub_msg": "订单不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/3529",
+  "updatedAt": "2023-04-25",
+  "_file_stem": "btas-inspect-btas-sc-getInspectionOrder"
+}

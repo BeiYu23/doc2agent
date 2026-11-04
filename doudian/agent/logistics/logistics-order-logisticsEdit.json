@@ -1,0 +1,308 @@
+{
+  "id": "doudian.logistics.order.logisticsEdit",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "order.logisticsEdit",
+  "description": "更新整单发货物流信息",
+  "method": "GET",
+  "path": "/order/logisticsEdit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单ID",
+      "example": "4782813149182887526A",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "已废弃。物流公司ID。请使用company_code字段。",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司code,由接口/order/logisticsCompanyList返回的物流公司列表获得，必填",
+      "example": "shunfeng、qita",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递单号",
+      "example": "sf1231231231234",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "已废弃。物流公司名称",
+      "example": "顺丰",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店ID，抖超业务使用",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_address_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "退货地址ID,通过地址库列表【/address/list】接口查询。当传入该字段时，可实现自动审核场景买家退货至商家指定退货地址：例如商家配置的售后小助手以及平台闪电退货规则，会获取发货时传入的after_sale_address_id地址id对应的地址给买家展示进行商品退回；",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "product_orders",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "挂在商品单上的信息，只是用于传递和商品单关联的信息，比如SN/69/IMEI码。比如，店铺单下有A、B、C三个商品单，其中A单需要SN/69/IMEI码，这时候只需要把A单关联的SN/69/IMEI传递过来即可。",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "serial_no_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要的SN/69/IMEI码列表。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "SN/69/IMEI码的值。",
+      "example": "[\"12343\",\"abcd\"]",
+      "_depth": 2
+    },
+    {
+      "name": "key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "SN/69/IMEI码的类型",
+      "example": "SN",
+      "_depth": 2
+    },
+    {
+      "name": "product_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品单单号",
+      "example": "4782813149182887526",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 此订单状态不允许重新发货（sub_code: isv.business-failed:10007）",
+      "action": "请重新获取订单信息",
+      "sub_code": "isv.business-failed:10007",
+      "sub_msg": "此订单状态不允许重新发货"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 运单号不符合规则，请核对单号大小写、单号位数、快递公司是否正确（sub_code: isv.parameter-invalid:10002）",
+      "action": "请检查物流公司与物流单号是否匹配",
+      "sub_code": "isv.parameter-invalid:10002",
+      "sub_msg": "运单号不符合规则，请核对单号大小写、单号位数、快递公司是否正确"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 重新发货失败，请稍后重试（sub_code: isp.service-error:10001）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "重新发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60024:该订单不可自行操作重新发货，请联系跨境服务商进行操作（sub_code: isv.business-failed:60024）",
+      "action": "联系跨境服务商进行处理",
+      "sub_code": "isv.business-failed:60024",
+      "sub_msg": "60024:该订单不可自行操作重新发货，请联系跨境服务商进行操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流单号错误。原因：发货信息填写有误，请检查物流单号、物流公司是否填写/选择正确（sub_code: isv.business-failed:60017）",
+      "action": "请检查物流公司与物流单号是否匹配",
+      "sub_code": "isv.business-failed:60017",
+      "sub_msg": "物流单号错误。原因：发货信息填写有误，请检查物流单号、物流公司是否填写/选择正确"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流公司错误。原因：暂不支持该物流商，请检查物流商编码后重新发货（sub_code: isv.business-failed:60018）",
+      "action": "请检查物流公司与物流单号是否匹配",
+      "sub_code": "isv.business-failed:60018",
+      "sub_msg": "物流公司错误。原因：暂不支持该物流商，请检查物流商编码后重新发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单的订单状态不允许重新发货（sub_code: isv.business-failed:60021）",
+      "action": "请检查订单状态是否允许发货",
+      "sub_code": "isv.business-failed:60021",
+      "sub_msg": "该订单的订单状态不允许重新发货"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流公司编码(company_code)字段不能为空。注：物流公司ID(logisitcs_id)字段已废弃（sub_code: isv.parameter-invalid:60083）",
+      "action": "请检查物流公司与物流单号是否匹配",
+      "sub_code": "isv.parameter-invalid:60083",
+      "sub_msg": "物流公司编码(company_code)字段不能为空。注：物流公司ID(logisitcs_id)字段已废弃"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流单号校验失败，请稍后重试（sub_code: isv.business-failed:70013）",
+      "action": "请检查物流公司与物流单号是否匹配",
+      "sub_code": "isv.business-failed:70013",
+      "sub_msg": "物流单号校验失败，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流单号不能为空（sub_code: isv.parameter-invalid:60014）",
+      "action": "请检查物流公司与物流单号是否匹配",
+      "sub_code": "isv.parameter-invalid:60014",
+      "sub_msg": "物流单号不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单为质检订单，请在商家后台送检页面进行送检发货操作（sub_code: isv.business-failed:60023）",
+      "action": "请在商家后台送检页面进行送检发货",
+      "sub_code": "isv.business-failed:60023",
+      "sub_msg": "该订单为质检订单，请在商家后台送检页面进行送检发货操作"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 重新发货失败，请稍后重试（sub_code: isp.service-error:70008）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:70008",
+      "sub_msg": "重新发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单不支持使用其它物流进行发货（sub_code: isv.business-failed:60026）",
+      "action": "不支持使用其他物流发货",
+      "sub_code": "isv.business-failed:60026",
+      "sub_msg": "该订单不支持使用其它物流进行发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 退货地址在地址库不存在，请刷新重试（sub_code: isv.business-failed:60134）",
+      "action": "该发货地址在商家地址库不存在，商家重新选择可用的发货地址或者前往抖店PC端「订单-发货管理-物流工具-地址库管理」设置后重试",
+      "sub_code": "isv.business-failed:60134",
+      "sub_msg": "退货地址在地址库不存在，请刷新重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70011:包裹单号缺失，请修改后重试（sub_code: isv.business-failed:70011）",
+      "action": "仅支持整单接口发货的物流修改，如订单是一单多包或合单发货的订单，请使用【/order/logisticsEditByPack】接口更新；",
+      "sub_code": "isv.business-failed:70011",
+      "sub_msg": "70011:包裹单号缺失，请修改后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值（sub_code: isv.business-failed:120064）",
+      "action": "120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值",
+      "sub_code": "isv.business-failed:120064",
+      "sub_msg": "120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700003:store_id为空/错误，超市小时达订单发货需传入订单对应的门店ID（sub_code: isv.business-failed:700003）",
+      "action": "700003:store_id为空/错误，超市小时达订单发货需传入订单对应的门店ID",
+      "sub_code": "isv.business-failed:700003",
+      "sub_msg": "700003:store_id为空/错误，超市小时达订单发货需传入订单对应的门店ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60132:系统异常，请稍后重试（sub_code: isv.business-failed:60132）",
+      "action": "60132:系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:60132",
+      "sub_msg": "60132:系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700005:小时购订单不支持该快递公司发货（sub_code: isv.business-failed:700005）",
+      "action": "700005:小时购订单不支持该快递公司发货",
+      "sub_code": "isv.business-failed:700005",
+      "sub_msg": "700005:小时购订单不支持该快递公司发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700002:发货订单包含非本门店订单，请重试（sub_code: isv.business-failed:700002）",
+      "action": "700002:发货订单包含非本门店订单，请重试",
+      "sub_code": "isv.business-failed:700002",
+      "sub_msg": "700002:发货订单包含非本门店订单，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 您选择的订单中包含偏远中转订单，因货款及抖店钱包余额不足无法支付中转运费(每笔2.5元)发货失败，可在抖店PC端充值后重试，路径：账户中心 > 其他账户 > 抖店钱包（sub_code: isv.business-failed:120066）",
+      "action": "您选择的订单中包含偏远中转订单，因货款及抖店钱包余额不足无法支付中转运费(每笔2.5元)发货失败，可在抖店PC端充值后重试，路径：账户中心 > 其他账户 > 抖店钱包",
+      "sub_code": "isv.business-failed:120066",
+      "sub_msg": "您选择的订单中包含偏远中转订单，因货款及抖店钱包余额不足无法支付中转运费(每笔2.5元)发货失败，可在抖店PC端充值后重试，路径：账户中心 > 其他账户 > 抖店钱包"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:120035）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:120035",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/logisticsEdit?app_key=your_appkey_here&method=order.logisticsEdit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10007",
+      "sub_msg": "此订单状态不允许重新发货"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/390",
+  "updatedAt": "2026-09-03",
+  "_file_stem": "logistics-order-logisticsEdit"
+}

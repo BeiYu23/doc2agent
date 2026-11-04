@@ -1,0 +1,482 @@
+{
+  "id": "doudian.warehouse.yunc.callAndCancelTransportCapability",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.callAndCancelTransportCapability",
+  "description": "同城零售运力呼叫和运力取消接口",
+  "method": "GET",
+  "path": "/yunc/callAndCancelTransportCapability",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店ID（运力服务商侧的门店ID）",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "platform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单ID（店铺单）抖音电商平台交易父订单号（如果合单，取合单的其一即可）",
+      "example": "6917531973167941080",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "合单订单需要告知抖音电商交易父子订单号列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "platform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音电商平台交易父订单号",
+      "example": "6917531973167941080",
+      "_depth": 1
+    },
+    {
+      "name": "subplatform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音电商平台交易子订单号",
+      "example": "6917531973167941080",
+      "_depth": 1
+    },
+    {
+      "name": "out_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ERP单号",
+      "example": "xzstest20230417",
+      "_depth": 0
+    },
+    {
+      "name": "sender_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "发件人信息（条件必填，呼叫运力时必填！）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称（必传）",
+      "example": "安徽省",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "002",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称（必传）",
+      "example": "合肥市",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区编码",
+      "example": "003",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区名称（必传）",
+      "example": "蜀山区",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "004",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "闲林街道",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址（必传）",
+      "example": "西溪八方城",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式（mobile/tel_phone 其一必传）",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "tel_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话（mobile/tel_phone 其一必传）",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "oaids",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地址id",
+      "example": "地址id",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "收件人信息（条件必填，呼叫运力时必填！）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称（必传）",
+      "example": "安徽省",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "002",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称（必传）",
+      "example": "合肥市",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区编码",
+      "example": "003",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区名称（必传）",
+      "example": "蜀山区",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "004",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "闲林街道",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址（必传）",
+      "example": "西溪八方城",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式（mobile/tel_phone 其一必传）",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "tel_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话（mobile/tel_phone 其一必传）",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "oaids",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地址id",
+      "example": "地址id",
+      "_depth": 1
+    },
+    {
+      "name": "service_provider",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "呼单运力服务商品牌（shenzhenshishun=顺丰同城，dajiangwangluo=达达）",
+      "example": "shenzhenshishun",
+      "_depth": 0
+    },
+    {
+      "name": "dispatcher_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1 = 呼叫运力，2 = 取消运力",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:内部服务超时，请重试（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试！",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:内部服务超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -200001:运力平台下单错误:[不支持该收货地址]（sub_code: isv.business-failed:-200001）",
+      "action": "-200001:运力平台下单错误:[不支持该收货地址]",
+      "sub_code": "isv.business-failed:-200001",
+      "sub_msg": "-200001:运力平台下单错误:[不支持该收货地址]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 120003:虚拟号生成失败，被风控拦截（sub_code: isv.business-failed:120003）",
+      "action": "120003:虚拟号生成失败，被风控拦截",
+      "sub_code": "isv.business-failed:120003",
+      "sub_msg": "120003:虚拟号生成失败，被风控拦截"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 161001:Redis获取锁失败,请重试（sub_code: isv.business-failed:161001）",
+      "action": "161001:Redis获取锁失败,请重试",
+      "sub_code": "isv.business-failed:161001",
+      "sub_msg": "161001:Redis获取锁失败,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110022:仓id与运力服务商校验失败（sub_code: isv.business-failed:110022）",
+      "action": "110022:仓id与运力服务商校验失败",
+      "sub_code": "isv.business-failed:110022",
+      "sub_msg": "110022:仓id与运力服务商校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -500:-500（sub_code: isv.business-failed:-500）",
+      "action": "-500:-500",
+      "sub_code": "isv.business-failed:-500",
+      "sub_msg": "-500:-500"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110023:存在未取消的lo单号（sub_code: isv.business-failed:110023）",
+      "action": "110023:存在未取消的lo单号",
+      "sub_code": "isv.business-failed:110023",
+      "sub_msg": "110023:存在未取消的lo单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110024:已取消状态不许重新取号（sub_code: isv.business-failed:110024）",
+      "action": "110024:已取消状态不许重新取号",
+      "sub_code": "isv.business-failed:110024",
+      "sub_msg": "110024:已取消状态不许重新取号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1279:原单已取消，若继续发货请更换单号后推送云仓（sub_code: isv.business-failed:1279）",
+      "action": "1279:原单已取消，若继续发货请更换单号后推送云仓",
+      "sub_code": "isv.business-failed:1279",
+      "sub_msg": "1279:原单已取消，若继续发货请更换单号后推送云仓"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1280:订单已完结，请勿重推推单！（sub_code: isv.business-failed:1280）",
+      "action": "1280:订单已完结，请勿重推推单！",
+      "sub_code": "isv.business-failed:1280",
+      "sub_msg": "1280:订单已完结，请勿重推推单！"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11005:ID生成失败（sub_code: isv.business-failed:11005）",
+      "action": "11005:ID生成失败",
+      "sub_code": "isv.business-failed:11005",
+      "sub_msg": "11005:ID生成失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11203:状态不允许取消（sub_code: isv.business-failed:11203）",
+      "action": "11203:状态不允许取消",
+      "sub_code": "isv.business-failed:11203",
+      "sub_msg": "11203:状态不允许取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11102:写操作数据库更新异常（sub_code: isv.business-failed:11102）",
+      "action": "11102:写操作数据库更新异常",
+      "sub_code": "isv.business-failed:11102",
+      "sub_msg": "11102:写操作数据库更新异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 16003:Redis异常（sub_code: isv.business-failed:16003）",
+      "action": "16003:Redis异常",
+      "sub_code": "isv.business-failed:16003",
+      "sub_msg": "16003:Redis异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 120025:查询商家订单标签失败（sub_code: isv.business-failed:120025）",
+      "action": "120025:查询商家订单标签失败",
+      "sub_code": "isv.business-failed:120025",
+      "sub_msg": "120025:查询商家订单标签失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comyunc/wms/outbound/cancel?app_key=your_appkey_here&method=yunc.wms.outbound.cancel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20001,
+      "msg": "内部服务超时",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:内部服务超时，请重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/3581",
+  "updatedAt": "2023-04-21",
+  "_file_stem": "warehouse-yunc-callAndCancelTransportCapability"
+}

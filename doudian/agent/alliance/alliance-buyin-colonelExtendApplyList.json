@@ -1,0 +1,134 @@
+{
+  "id": "doudian.alliance.buyin.colonelExtendApplyList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.colonelExtendApplyList",
+  "description": "专属团长活动商品延时申请结果查询",
+  "method": "GET",
+  "path": "/buyin/colonelExtendApplyList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "活动 id",
+      "example": "5253123",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品 id",
+      "example": "36213412341234",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "状态：1-待审核,2-商家同意,3-商家拒绝,4-自动拒绝（如果状态列表有1，则只查询待审核的延长申请，没有1，则查询所有传入状态的延长申请）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "页码（默认1）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页条数（默认20，最大20）",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "extend_applies",
+      "type": "array",
+      "description": "延长申请列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 257:参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "257:参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "257:参数校验失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/colonelExtendApplyList?app_key=your_appkey_here&method=buyin.colonelExtendApplyList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "extend_applies": [
+          {
+            "activity_id": "523412",
+            "end_time": "2006-01-02 15:04:05",
+            "origin_activity_id": "512345",
+            "origin_buyin_id": "32641726341238742",
+            "product_id": "4361723412342154",
+            "product_img": "https://www.baidu.com",
+            "product_name": "商品名称",
+            "status": "1",
+            "update_time": "2006-01-02 15:04:05"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/2430",
+  "updatedAt": "2022-09-07",
+  "_file_stem": "alliance-buyin-colonelExtendApplyList"
+}

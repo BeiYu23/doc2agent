@@ -1,0 +1,143 @@
+{
+  "id": "doudian.sms.recycle.sms.sendIndustrySms",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "recycle.sms.sendIndustrySms",
+  "description": "发送短信",
+  "method": "GET",
+  "path": "/recycle/sms/sendIndustrySms",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sms_account",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道账号",
+      "example": "123s212",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模版id",
+      "example": "ST_XXX",
+      "_depth": 0
+    },
+    {
+      "name": "sms_test_verification",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "测试发送验证码",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "post_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "明文手机号",
+      "example": "12323412312",
+      "_depth": 1
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "验证码",
+      "example": "912044",
+      "_depth": 1
+    },
+    {
+      "name": "order_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "服务店铺单id",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "service_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务单号",
+      "example": "123123",
+      "_depth": 1
+    },
+    {
+      "name": "lp_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "lp code",
+      "example": "sfasd",
+      "_depth": 1
+    },
+    {
+      "name": "sign",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签名",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "template_param",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模版参数, map[string]string类型json序列化之后的字符串",
+      "example": "\"{}\"",
+      "_depth": 0
+    },
+    {
+      "name": "tag",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "透传字段，调用call_back的时候原样返回",
+      "example": "{}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/recycle/sms/sendIndustrySms?app_key=your_appkey_here&method=recycle.sms.sendIndustrySms&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/7835",
+  "updatedAt": "2025-11-03",
+  "_file_stem": "sms-recycle-sms-sendIndustrySms"
+}

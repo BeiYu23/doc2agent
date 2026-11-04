@@ -1,0 +1,137 @@
+{
+  "id": "doudian.refund.afterSale.buyerExchangeConfirm",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.buyerExchangeConfirm",
+  "description": "商家确认是否收到换货",
+  "method": "GET",
+  "path": "/afterSale/buyerExchangeConfirm",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "可以从/afterSale/refundProcessDetail接口或者消息监听获取",
+      "example": "123123123123123",
+      "_depth": 0
+    },
+    {
+      "name": "is_reject",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "处理方式： false：确认仓库收到退回货货物并二次发货（或直接退款） true：拒绝",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "action",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "s_reject为false时，必填，用于指定换货操作行为；换货动作： refund_agree ： 同意换货转退款 exchange_agree：同意换货并发货",
+      "example": "refund_agree",
+      "_depth": 0
+    },
+    {
+      "name": "comment",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "is_reject = true 时需要选择拒绝原因；具体各个可选值对应的拒绝原因见下表",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "evidence",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "凭证图片，只能传一张",
+      "example": "[\"http://pic/pic.jpeg\"]",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "is_reject = false时需要上传物流单号",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "is_reject = false时需要上传物流公司编号 ，如圆通为yuantong",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 此订单状态已经发生变化，请刷新（sub_code: isv.parameter-invalid:10007）",
+      "action": "检查售后单状态",
+      "sub_code": "isv.parameter-invalid:10007",
+      "sub_msg": "此订单状态已经发生变化，请刷新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误，请修改后重试（sub_code: isv.business-failed:10002）",
+      "action": "检查售后单状态",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "参数错误，请修改后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "服务不可用 / 系统超时，请重试（sub_code: isp.service-error:10001）",
+      "action": "检查并重试",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 存在非本店铺订单，该操作被禁止（sub_code: isv.business-failed:10004）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:10004",
+      "sub_msg": "存在非本店铺订单，该操作被禁止"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/buyerExchangeConfirm?app_key=your_appkey_here&method=afterSale.buyerExchangeConfirm&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10007",
+      "sub_msg": "此订单状态已经发生变化，请刷新"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/768",
+  "updatedAt": "2021-08-03",
+  "_file_stem": "refund-afterSale-buyerExchangeConfirm"
+}

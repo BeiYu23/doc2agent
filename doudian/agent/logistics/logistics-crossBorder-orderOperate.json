@@ -1,0 +1,524 @@
+{
+  "id": "doudian.logistics.crossBorder.orderOperate",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "crossBorder.orderOperate",
+  "description": "服务商回传仓储",
+  "method": "GET",
+  "path": "/crossBorder/orderOperate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V12.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字节电商平台的交易订单号",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字节给供应链服务商定义的编码",
+      "example": "QKQTEST",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "仓储作业状态：1入库 2打包 3 发货成功 4出库失败 6订单开始拣货 7订单拣货完成 9接单成功 10接单失败",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流状态的真实发生时间，时间戳，单位秒",
+      "example": "1656473755",
+      "_depth": 0
+    },
+    {
+      "name": "transportation",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "国内物流信息(注意：如果提供了这块信息，domestic_carrier/domestic_trans_no/domestic_ship_address是必传的；对于接单成功事件，集货场景下必传，备货场景下可不传；对于出库完成事件，快递公司编码domestic_carrier和运单号domestic_trans_no必填且必须匹配，4PL=T时快递公司编码必须与下发时一致或者在兜底公司列表，4PL=T&仓配分拆=T时快递公司编码和运单号必须与下发时一致)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "domestic_carrier",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国内快递公司编码 按字节定义的编码推送",
+      "example": "JD",
+      "_depth": 1
+    },
+    {
+      "name": "domestic_trans_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国内运单号（BBC/BC/CC/UPU）",
+      "example": "JD12345",
+      "_depth": 1
+    },
+    {
+      "name": "domestic_ship_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国内发货地址（国内快递揽收地址）",
+      "example": "北京市海淀区太阳镇街道",
+      "_depth": 1
+    },
+    {
+      "name": "product_num",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品件数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "mark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递公司大头笔，便于快速识别地址",
+      "example": "LD",
+      "_depth": 1
+    },
+    {
+      "name": "waybill",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "PDF格式的电子面单URL",
+      "example": "https://ww.werwer.com/werwer",
+      "_depth": 1
+    },
+    {
+      "name": "delivery_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货人name",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "delivery_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货人电话",
+      "example": "1123123123",
+      "_depth": 1
+    },
+    {
+      "name": "package",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "包裹信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "packing_materials",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "包材信息，原则上只需回传1个",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "packing_material_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "包材编码",
+      "example": "SA",
+      "_depth": 2
+    },
+    {
+      "name": "packing_material_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "包材名称",
+      "example": "名称",
+      "_depth": 2
+    },
+    {
+      "name": "packing_material_num",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "包材数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "consumables_materials",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "耗材信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "consumables_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "耗材编码",
+      "example": "SA",
+      "_depth": 2
+    },
+    {
+      "name": "consumables_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "耗材名称",
+      "example": "名称",
+      "_depth": 2
+    },
+    {
+      "name": "consumables_num",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "耗材数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "package_weight",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "包裹重量,单位g",
+      "example": "12",
+      "_depth": 1
+    },
+    {
+      "name": "package_items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "包裹明细信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "item_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品编码",
+      "example": "7074780",
+      "_depth": 2
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "平台sku编号",
+      "example": "123456",
+      "_depth": 2
+    },
+    {
+      "name": "item_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部服务商货品编码",
+      "example": "123456",
+      "_depth": 2
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "库存类型,正品-1，残次-2",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "batch_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "批属性",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "batch_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次号",
+      "example": "12345",
+      "_depth": 3
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "生产日期 秒级时间戳",
+      "example": "1640966400",
+      "_depth": 3
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "失效日期 秒级时间戳",
+      "example": "1640966400",
+      "_depth": 3
+    },
+    {
+      "name": "receipt_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "入库日期 秒级时间戳",
+      "example": "1640966400",
+      "_depth": 3
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商",
+      "example": "hfkg",
+      "_depth": 3
+    },
+    {
+      "name": "scm_inbound_order",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "SCM入库单号",
+      "example": "23456",
+      "_depth": 3
+    },
+    {
+      "name": "lot_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次id",
+      "example": "12345",
+      "_depth": 3
+    },
+    {
+      "name": "batch_extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次扩展字段，json格式",
+      "example": "{\"extend\":\"info\"}",
+      "_depth": 3
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "行号",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "error_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "异常信息（【发货失败】状态时，必须提供）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "error_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货失败或者接单失败异常码",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "error_msg",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细失败原因",
+      "example": "仓储我败了",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库编码",
+      "example": "101",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2018:此订单已开始拦截，请核实订单状态（sub_code: isv.business-failed:2018）",
+      "action": "先回传拦截状态",
+      "sub_code": "isv.business-failed:2018",
+      "sub_msg": "2018:此订单已开始拦截，请核实订单状态"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2019:此订单处于拦截中，请核实订单状态（sub_code: isv.business-failed:2019）",
+      "action": "先回传拦截状态",
+      "sub_code": "isv.business-failed:2019",
+      "sub_msg": "2019:此订单处于拦截中，请核实订单状态"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2020:订单已拦截成功，请核实订单状态（sub_code: isv.business-failed:2020）",
+      "action": "核实订单状态",
+      "sub_code": "isv.business-failed:2020",
+      "sub_msg": "2020:订单已拦截成功，请核实订单状态"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:节点时序状态有误（sub_code: isv.business-failed:1004）",
+      "action": "节点时序状态有误，请核实订单状态",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:节点时序状态有误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1005:参数不合法（sub_code: isv.business-failed:1005）",
+      "action": "请核实请求参数",
+      "sub_code": "isv.business-failed:1005",
+      "sub_msg": "1005:参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 2013:包耗材信息错误（sub_code: isv.parameter-invalid:2013）",
+      "action": "核实包耗材信息",
+      "sub_code": "isv.parameter-invalid:2013",
+      "sub_msg": "2013:包耗材信息错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 1002:参数不合法（sub_code: isv.parameter-invalid:1002）",
+      "action": "请核实请求参数",
+      "sub_code": "isv.parameter-invalid:1002",
+      "sub_msg": "1002:参数不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2022:biz error code [2022] message 时间格式错误（sub_code: isv.business-failed:2022）",
+      "action": "时间格式错误,请修改时间格式",
+      "sub_code": "isv.business-failed:2022",
+      "sub_msg": "2022:biz error code [2022] message 时间格式错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2021:biz error code [2021] message 接单失败异常编码不符合平台规范，请核实后重试（sub_code: isv.business-failed:2021）",
+      "action": "接单失败异常编码不符合平台规范，请核实后重试",
+      "sub_code": "isv.business-failed:2021",
+      "sub_msg": "2021:biz error code [2021] message 接单失败异常编码不符合平台规范，请核实后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1234:biz error code [1234] message 相同LO已在处理中（sub_code: isv.business-failed:1234）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1234",
+      "sub_msg": "1234:biz error code [1234] message 相同LO已在处理中"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1204:系统内部错误（sub_code: isv.business-failed:1204）",
+      "action": "系统内部错误",
+      "sub_code": "isv.business-failed:1204",
+      "sub_msg": "1204:系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1003:当前订单为自研单据，不允许回传【订单开始拣货】（sub_code: isv.business-failed:1003）",
+      "action": "自研单据不允许回传",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "1003:当前订单为自研单据，不允许回传【订单开始拣货】"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1001:服务商鉴权失败（sub_code: isv.business-failed:1001）",
+      "action": "服务商鉴权失败",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:服务商鉴权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossBorder/orderOperate?app_key=your_appkey_here&method=crossBorder.orderOperate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2018",
+      "sub_msg": "2018:此订单已开始拦截，请核实订单状态"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/526",
+  "updatedAt": "2023-05-19",
+  "_file_stem": "logistics-crossBorder-orderOperate"
+}

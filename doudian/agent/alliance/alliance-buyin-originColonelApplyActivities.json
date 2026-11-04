@@ -1,0 +1,193 @@
+{
+  "id": "doudian.alliance.buyin.originColonelApplyActivities",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.originColonelApplyActivities",
+  "description": "团长报名二级团长活动",
+  "method": "GET",
+  "path": "/buyin/originColonelApplyActivities",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V7.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "活动ID",
+      "example": "54321",
+      "_depth": 0
+    },
+    {
+      "name": "phone_number",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "联系电话",
+      "example": "15671111111",
+      "_depth": 0
+    },
+    {
+      "name": "products",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品ID",
+      "example": "123687541",
+      "_depth": 1
+    },
+    {
+      "name": "origin_activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "原始活动ID（托管商品传0）",
+      "example": "54321",
+      "_depth": 1
+    },
+    {
+      "name": "promotion_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品推广结束时间",
+      "example": "2022-01-10",
+      "_depth": 1
+    },
+    {
+      "name": "service_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "招商服务费率。 服务费率+佣金率小于90（必须为两位小数）",
+      "example": "10.00",
+      "_depth": 0
+    },
+    {
+      "name": "cos_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "佣金类型 0:固定佣金 1:双佣金",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ad_service_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期服务费率（小数）",
+      "example": "5.00",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "操作的商品数量",
+      "example": "20"
+    },
+    {
+      "name": "result",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理失败，请查看具体错误信息（sub_code: isv.business-failed:110110）",
+      "action": "业务处理失败，请查看具体错误信息",
+      "sub_code": "isv.business-failed:110110",
+      "sub_msg": "业务处理失败，请查看具体错误信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:500）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 小数服务费率不合法，必须为两位小数（sub_code: isv.business-failed:8192）",
+      "action": "小数服务费率不合法，必须为两位小数",
+      "sub_code": "isv.business-failed:8192",
+      "sub_msg": "小数服务费率不合法，必须为两位小数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "4200:账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/originColonelApplyActivities?app_key=your_appkey_here&method=buyin.originColonelApplyActivities&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "error_code": "0",
+            "error_msg": "success",
+            "is_success": "true",
+            "product_id": "123123123123"
+          }
+        ],
+        "total": "20"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:110110",
+      "sub_msg": "业务处理失败，请查看具体错误信息"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1672",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-originColonelApplyActivities"
+}

@@ -1,0 +1,289 @@
+{
+  "id": "doudian.hospital.medicine.doctorProducePrescription",
+  "platform": "doudian",
+  "group": "hospital",
+  "name": "medicine.doctorProducePrescription",
+  "description": "医生开处方单",
+  "method": "GET",
+  "path": "/medicine/doctorProducePrescription",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 互联网医院（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "consult_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "问诊单id",
+      "example": "12321321321321",
+      "_depth": 0
+    },
+    {
+      "name": "produce_time_sec",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "开方时间（精确到秒）",
+      "example": "//药品信息",
+      "_depth": 0
+    },
+    {
+      "name": "drug_info",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "药品信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "药品skuId",
+      "example": "123213213",
+      "_depth": 1
+    },
+    {
+      "name": "doctor_define_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "医生开的药品数量",
+      "example": "6",
+      "_depth": 1
+    },
+    {
+      "name": "use_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "使用信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "use_method",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "用法",
+      "example": "口服",
+      "_depth": 2
+    },
+    {
+      "name": "use_days",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "使用天数",
+      "example": "3",
+      "_depth": 2
+    },
+    {
+      "name": "frequency_unit",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "频次单位",
+      "example": "次",
+      "_depth": 2
+    },
+    {
+      "name": "frequency_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "频次量",
+      "example": "3",
+      "_depth": 2
+    },
+    {
+      "name": "each_dose",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "每次剂量",
+      "example": "0.5",
+      "_depth": 2
+    },
+    {
+      "name": "perdose_unit",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "每次剂量单位",
+      "example": "片",
+      "_depth": 2
+    },
+    {
+      "name": "doc_practice_cert",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "医生执业证编号",
+      "example": "12321123",
+      "_depth": 0
+    },
+    {
+      "name": "drug_reviewer",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "审核药师姓名",
+      "example": "张小样",
+      "_depth": 0
+    },
+    {
+      "name": "prescription_pic",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "处方图片",
+      "example": "http://xxx.xx.x.com/pic.jpg",
+      "_depth": 0
+    },
+    {
+      "name": "prescription_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "处方编号(互联网医院定义)",
+      "example": "No.213232232",
+      "_depth": 0
+    },
+    {
+      "name": "diagnostic_result",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "诊断结果",
+      "example": "牙龈炎",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统错误，请稍后重试（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统错误，请稍后重试",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:系统错误，请稍后重试（sub_code: isv.business-failed:-1）",
+      "action": "-1:系统错误，请稍后重试",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500013:问诊单无医生接诊（sub_code: isv.business-failed:500013）",
+      "action": "500013:问诊单无医生接诊",
+      "sub_code": "isv.business-failed:500013",
+      "sub_msg": "500013:问诊单无医生接诊"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50018:开方数量不可小于商品售卖的规格（sub_code: isv.business-failed:50018）",
+      "action": "50018:开方数量不可小于商品售卖的规格",
+      "sub_code": "isv.business-failed:50018",
+      "sub_msg": "50018:开方数量不可小于商品售卖的规格"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000006:系统错误，请稍后重试（sub_code: isv.business-failed:10000006）",
+      "action": "10000006:系统错误，请稍后重试",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:系统错误，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/getFolderInfo?app_key=your_appkey_here&method=material.getFolderInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "folder_info": {
+          "child_folder": [
+            {
+              "create_time": "2021-09-12 12:23:23",
+              "delete_time": "2021-09-12 12:23:23",
+              "folder_attr": "0",
+              "folder_id": "70072571115706780611250",
+              "folder_name": "子文件夹名称",
+              "folder_type": "0",
+              "operate_status": "4",
+              "parent_folder_id": "70072571115706780601250",
+              "update_time": "2021-09-12 12:23:23"
+            }
+          ],
+          "child_material": [
+            {
+              "audit_reject_desc": "文件大小超出限制",
+              "audit_status": "1",
+              "byte_url": "\"\"",
+              "create_time": "2021-09-12 12:23:23",
+              "delete_time": "0",
+              "folder_id": "70072571115706780601250",
+              "material_id": "70072571115707435960250",
+              "material_type": "photo",
+              "materil_name": "名称",
+              "operate_status": "0",
+              "origin_url": "\"\"",
+              "photo_info": {
+                "format": "jpg",
+                "height": "255",
+                "width": "255"
+              },
+              "size": "1234",
+              "update_time": "2021-09-12 12:23:23",
+              "video_info": {
+                "duration": "12",
+                "format": "mp3",
+                "vid": "123456789",
+                "video_cover_url": "https://xxxx.xxx"
+              }
+            }
+          ],
+          "create_time": "2021-09-12 12:23:23",
+          "delete_time": "0",
+          "folder_attr": "0",
+          "folder_id": "70072571115706780601250",
+          "folder_name": "文件夹名称",
+          "folder_type": "0",
+          "operate_status": "1",
+          "parent_folder_id": "0",
+          "total_child_material_num": "12",
+          "update_time": "2021-09-12 12:23:23"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统错误，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1451/5901",
+  "updatedAt": "2024-01-17",
+  "_file_stem": "hospital-medicine-doctorProducePrescription"
+}

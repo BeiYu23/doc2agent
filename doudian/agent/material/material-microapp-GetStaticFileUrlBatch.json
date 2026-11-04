@@ -1,0 +1,104 @@
+{
+  "id": "doudian.material.microapp.GetStaticFileUrlBatch",
+  "platform": "doudian",
+  "group": "material",
+  "name": "microapp.GetStaticFileUrlBatch",
+  "description": "ISV批量兑换文件url",
+  "method": "GET",
+  "path": "/microapp/GetStaticFileUrlBatch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "选择文件场景， 1：素材中心， 2：TOS临时文件，3: ImageX。",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "path",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "文件path路径，请先调用【/microapp/UpdateStaticFileMeta 】上传并审核通过的。",
+      "example": "[\"xxx/1.jpg\",\"xxx/2.png\"]",
+      "_depth": 0
+    },
+    {
+      "name": "bucket_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【目前暂不支持，后续有规划开放】bucket名称，在后端tos场景才需要传",
+      "example": "your-bucket-name",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "url_map",
+      "type": "string",
+      "description": "文件 信息。 ，  key为path，value为url；注意：批量获取时接口仅返回path路径存在并审核通过的链接，失败的不返回；单个获取时失败返回为空；",
+      "example": "{\"xxx/1.jpg\":\"https://1\",\"xxx/2.png\":\"https://2\"}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数有误（sub_code: isv.parameter-invalid:8000002）",
+      "action": "请参考文档填写正确参数",
+      "sub_code": "isv.parameter-invalid:8000002",
+      "sub_msg": "参数有误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / appKey参数有误（sub_code: isv.parameter-invalid:8000006）",
+      "action": "请填写正确的 appKey",
+      "sub_code": "isv.parameter-invalid:8000006",
+      "sub_msg": "appKey参数有误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部错误（sub_code: isp.service-error:8000001）",
+      "action": "联系开放平台同学解决",
+      "sub_code": "isp.service-error:8000001",
+      "sub_msg": "内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/microapp/GetStaticFileUrlBatch?app_key=your_appkey_here&method=microapp.GetStaticFileUrlBatch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "url_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:8000002",
+      "sub_msg": "参数有误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/2914",
+  "updatedAt": "2024-12-26",
+  "_file_stem": "material-microapp-GetStaticFileUrlBatch"
+}

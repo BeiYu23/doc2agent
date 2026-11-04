@@ -1,0 +1,315 @@
+{
+  "id": "doudian.warehouse.yunc.CloudCreateInboundOrderToB",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.CloudCreateInboundOrderToB",
+  "description": "erp创建入库单",
+  "method": "GET",
+  "path": "/yunc/CloudCreateInboundOrderToB",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "action_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "操作类型",
+      "example": "IB1001",
+      "_depth": 0
+    },
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库单号",
+      "example": "CGSH",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺id",
+      "example": "11234",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "related_orders",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "关联单据类型",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "plan_arr_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "计划到达时间",
+      "example": "1627622162",
+      "_depth": 0
+    },
+    {
+      "name": "late_arr_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "最晚到达时间",
+      "example": "1627622162",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商编码",
+      "example": "S001",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_name",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供应商名称",
+      "example": "供应商1",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "配送模式",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送扩展字段",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "轻拿轻放",
+      "_depth": 0
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓编码",
+      "example": "99",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "单号",
+      "example": "IB1001",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品code",
+      "example": "23432",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "erp货品数据",
+      "example": "234324",
+      "_depth": 1
+    },
+    {
+      "name": "expect_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "预计收货数量",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "purchase_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "采购价格",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "currency",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "币种",
+      "example": "CNY",
+      "_depth": 1
+    },
+    {
+      "name": "sn_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "唯一码",
+      "example": "23423",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存状态",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "is_batch_assigned",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否指定批次",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{}",
+      "_depth": 1
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:服务超时，请重试（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:服务超时，请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/CloudCreateInboundOrderToB?app_key=your_appkey_here&method=yunc.CloudCreateInboundOrderToB&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20001,
+      "msg": "内部服务超时",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:服务超时，请重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1197",
+  "updatedAt": "2024-06-05",
+  "_file_stem": "warehouse-yunc-CloudCreateInboundOrderToB"
+}

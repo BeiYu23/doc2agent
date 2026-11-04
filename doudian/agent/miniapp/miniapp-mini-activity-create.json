@@ -1,0 +1,180 @@
+{
+  "id": "doudian.miniapp.mini.activity.create",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.activity.create",
+  "description": "创建小程序专属价活动",
+  "method": "GET",
+  "path": "/mini/activity/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动名称",
+      "example": "新品专享价",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动商品id",
+      "example": "3639483739320549069",
+      "_depth": 0
+    },
+    {
+      "name": "activity_start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动开始时间",
+      "example": "1695015497",
+      "_depth": 0
+    },
+    {
+      "name": "activity_end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动结束时间",
+      "example": "1695015497",
+      "_depth": 0
+    },
+    {
+      "name": "user_buy_limit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "用户限购数量",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "online_directly",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否直接上线活动",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "activity_id",
+      "type": "string",
+      "description": "活动id",
+      "example": "7279756826818658604"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:606010000）",
+      "action": "请检查入参",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 并发错误（sub_code: isp.service-error:606000105）",
+      "action": "您的操作过于频繁，请稍后重试",
+      "sub_code": "isp.service-error:606000105",
+      "sub_msg": "并发错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:606000103）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:606000103",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动名称已存在（sub_code: isv.business-failed:605030003）",
+      "action": "请修改活动名称",
+      "sub_code": "isv.business-failed:605030003",
+      "sub_msg": "活动名称已存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品已经被绑定到其他活动上（sub_code: isv.business-failed:605030004）",
+      "action": "请检查商品",
+      "sub_code": "isv.business-failed:605030004",
+      "sub_msg": "商品已经被绑定到其他活动上"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该商品非小程序专属价商品（sub_code: isv.business-failed:605030002）",
+      "action": "请检查商品标题是否以【专属价】开头",
+      "sub_code": "isv.business-failed:605030002",
+      "sub_msg": "该商品非小程序专属价商品"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品状态非已下架（sub_code: isv.business-failed:605030005）",
+      "action": "创建活动时绑定的商品必须先下架",
+      "sub_code": "isv.business-failed:605030005",
+      "sub_msg": "商品状态非已下架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品必须设置为不可见（sub_code: isv.business-failed:605030017）",
+      "action": "请到商家后台【商品管理】->【批量设置】设置商品为不可见",
+      "sub_code": "isv.business-failed:605030017",
+      "sub_msg": "商品必须设置为不可见"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品不存在（sub_code: isv.business-failed:605030000）",
+      "action": "商品不存在",
+      "sub_code": "isv.business-failed:605030000",
+      "sub_msg": "商品不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品必须是普通实物商品（sub_code: isv.business-failed:606010025）",
+      "action": "商品必须是普通实物商品",
+      "sub_code": "isv.business-failed:606010025",
+      "sub_msg": "商品必须是普通实物商品"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/activity/create?app_key=your_appkey_here&method=mini.activity.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "activity_id": "7279756826818658604"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:606010000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/4958",
+  "updatedAt": "2023-10-13",
+  "_file_stem": "miniapp-mini-activity-create"
+}

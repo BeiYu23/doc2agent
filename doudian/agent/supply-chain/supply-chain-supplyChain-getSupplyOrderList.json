@@ -1,0 +1,170 @@
+{
+  "id": "doudian.supply-chain.supplyChain.getSupplyOrderList",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.getSupplyOrderList",
+  "description": "供销平台供货单的分页查询接口。",
+  "method": "GET",
+  "path": "/supplyChain/getSupplyOrderList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V5.13）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "fx_product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "货品id",
+      "example": "7073424631901749548",
+      "_depth": 0
+    },
+    {
+      "name": "order_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单据状态，10待发货，20已发货，-1已取消",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_start",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "单据创建开始时间戳，秒",
+      "example": "1617355413",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_end",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "单据创建结束时间戳，秒",
+      "example": "1617355513",
+      "_depth": 0
+    },
+    {
+      "name": "order_by",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序条件，当前仅支持create_time 订单创建时间",
+      "example": "create_time",
+      "_depth": 0
+    },
+    {
+      "name": "order_asc",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否升序，默认降序",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "每一页的条数，最大100",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "update_time_start",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "单据修改开始时间戳，秒",
+      "example": "1617355413",
+      "_depth": 0
+    },
+    {
+      "name": "update_time_end",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "单据修改结束时间戳，秒",
+      "example": "1617355513",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "number",
+      "description": "单据总条数",
+      "example": "999"
+    },
+    {
+      "name": "order_list",
+      "type": "array",
+      "description": "订单列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务错误（sub_code: isp.service-error:1000）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1020）",
+      "action": "请传入正确的参数",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:2000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/1732",
+  "updatedAt": "2025-11-28",
+  "_file_stem": "supply-chain-supplyChain-getSupplyOrderList"
+}

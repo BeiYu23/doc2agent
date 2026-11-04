@@ -1,0 +1,63 @@
+{
+  "id": "doudian.tool.second.liveroom.getUserProfile",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "second.liveroom.getUserProfile",
+  "description": "查询直播间用户画像",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "dy_open_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音OpenID，传参格式应为：open_id:client_key",
+      "example": "抖音openID",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "potential_level",
+      "type": "mixed",
+      "description": "潜力等级",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.liveroom.getUserProfile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "potential_level": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7590",
+  "updatedAt": "2025-08-25",
+  "_file_stem": "tool-second-liveroom-getUserProfile"
+}

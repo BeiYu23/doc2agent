@@ -1,0 +1,100 @@
+{
+  "id": "doudian.logistics-provider.logistics.getAiArbitration",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.getAiArbitration",
+  "description": "查询预校验结果接口",
+  "method": "GET",
+  "path": "/logistics/getAiArbitration",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ticketId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工单id",
+      "example": "7637053321475309874",
+      "_depth": 0
+    },
+    {
+      "name": "useScene",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "工单场景 (1-正式判责；2-服务商预判责)",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "taskId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ai预判责任务id",
+      "example": "7628571632545792256",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "arbitrationInfo",
+      "type": "object",
+      "description": "仲裁信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getAiArbitration?app_key=your_appkey_here&method=logistics.getAiArbitration&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "arbitrationInfo": {
+          "arbitrationBasis": "1. 用户投诉运单错误\\n2. 举证要求：用户投诉的是正向物流包裹，需提供用户本人描述此订单服务过程中的通话录音+通话记录或者内部外呼软件记录\\n3. 本次举证选用通话录音+通话记录的方式，判定举证有效，仲裁不成立",
+          "arbitrationResult": {
+            "key": "2",
+            "value": "仲裁不成立"
+          },
+          "createTime": "1778221649",
+          "rightTicketType": {
+            "key": "11606",
+            "value": "超时未取件"
+          },
+          "status": {
+            "key": "1",
+            "value": "成功"
+          },
+          "suggestedRemark": "经核实，物流商举证有效，已提供【通话录音、通话记录及物流系统订单截图】，用户反馈投诉的并非本寄件单的超时未取件问题，故此判责不成立",
+          "taskId": "7637053321475309874",
+          "ticketId": "7628571632545792256",
+          "trackNo": "1331877778251"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8310",
+  "updatedAt": "2026-05-22",
+  "_file_stem": "logistics-provider-logistics-getAiArbitration"
+}

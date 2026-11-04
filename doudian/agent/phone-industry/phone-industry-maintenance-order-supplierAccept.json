@@ -1,0 +1,89 @@
+{
+  "id": "doudian.phone-industry.maintenance.order.supplierAccept",
+  "platform": "doudian",
+  "group": "phone-industry",
+  "name": "maintenance.order.supplierAccept",
+  "description": "服务商已接单事件",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 手机行业管理（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "\"BSO24235435\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"test\"",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "2024-02-12 12:12:56",
+      "_depth": 0
+    },
+    {
+      "name": "express_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件物流公司code，寄修必传",
+      "example": "\"SF\"",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件物流运单号，寄修必传",
+      "example": "\"SF32535436456\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=maintenance.order.supplierAccept&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1520/6645",
+  "updatedAt": "2024-06-20",
+  "_file_stem": "phone-industry-maintenance-order-supplierAccept"
+}

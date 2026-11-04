@@ -1,0 +1,123 @@
+{
+  "id": "doudian.shop.warehouse.getBoundStores",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "warehouse.getBoundStores",
+  "description": "获取仓库已经绑定的列表",
+  "method": "GET",
+  "path": "/warehouse/getBoundStores",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "指定门店名称查询，可模糊查询",
+      "example": "门店1",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "指定定门店id查询",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "page_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "翻页信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "从0开始",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "最大200",
+      "example": "页面大小",
+      "_depth": 1
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓id",
+      "example": "id1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouse_stores",
+      "type": "array",
+      "description": "仓绑定的门店信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "绑定门店总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/getBoundStores?app_key=your_appkey_here&method=warehouse.getBoundStores&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "total": "100",
+        "warehouse_stores": [
+          {
+            "is_valid": "true",
+            "store_id": "123",
+            "store_name": "门店1"
+          }
+        ]
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2074",
+  "updatedAt": "2022-08-09",
+  "_file_stem": "shop-warehouse-getBoundStores"
+}

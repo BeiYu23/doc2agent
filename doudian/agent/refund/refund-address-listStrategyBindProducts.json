@@ -1,0 +1,145 @@
+{
+  "id": "doudian.refund.address.listStrategyBindProducts",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "address.listStrategyBindProducts",
+  "description": "分页获取地址库策略绑定的商品",
+  "method": "GET",
+  "path": "/address/listStrategyBindProducts",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "strategy_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "策略id，必传，多地址策略对应的ID.",
+      "example": "AFS7418493389946110223",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码,从1开始，",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页数目,最大100。地址策略目前最多支持拉取1w条记录，翻页数量超过1w会被系统拦截。",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "绑定商品总数",
+      "example": "100"
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "当前页码;",
+      "example": "1"
+    },
+    {
+      "name": "page_size",
+      "type": "mixed",
+      "description": "每页数量;",
+      "example": "20"
+    },
+    {
+      "name": "product_list",
+      "type": "array",
+      "description": "绑定商品列表;",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误，请稍后重试（sub_code: isv.parameter-invalid:4000）",
+      "action": "根据返回的错误信息，自行调整请求参数入参后重试。如果多次重试后无法解决问题，可以在开放平台提工单请求抖店同学协助。",
+      "sub_code": "isv.parameter-invalid:4000",
+      "sub_msg": "参数错误，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前最多支持拉取10000条数据（sub_code: isv.parameter-invalid:100012）",
+      "action": "调整求参数中的page或者page_size，将二者乘积总量降低到10000以内。",
+      "sub_code": "isv.parameter-invalid:100012",
+      "sub_msg": "当前最多支持拉取10000条数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:5001）",
+      "action": "重试，如果多次重试后无法解决问题，可以在开放平台提工单寻求抖店工作人员帮助。",
+      "sub_code": "isv.business-failed:5001",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:3000）",
+      "action": "重试，如果多次重试后无法解决问题，可以在开放平台提工单寻求抖店工作人员帮助。",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:3001）",
+      "action": "重试，如果多次重试后无法解决问题，可以在开放平台提工单寻求抖店工作人员帮助。",
+      "sub_code": "isv.business-failed:3001",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/address/listStrategyBindProducts?app_key=your_appkey_here&method=address.listStrategyBindProducts&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "page": "1",
+        "page_size": "20",
+        "product_list": [
+          {
+            "image": "https://p3-aio.ecombdimg.com/obj/ecom-shop-material/bMLccs_m_3313dab415e12933e72fd231f4b71515_sx_1750121_www1200-1200",
+            "product_id": "3709228738131656945",
+            "product_name": "时尚短袖T恤黑白两色背面艺术图案上衣夏季半袖小众宽松印花"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4000",
+      "sub_msg": "参数错误，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/6922",
+  "updatedAt": "2024-10-08",
+  "_file_stem": "refund-address-listStrategyBindProducts"
+}

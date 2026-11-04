@@ -1,0 +1,192 @@
+{
+  "id": "doudian.alliance.buyin.liveShareMaterial",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.liveShareMaterial",
+  "description": "直播间分销物料查询",
+  "method": "GET",
+  "path": "/buyin/liveShareMaterial",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 抖客"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "author_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1 品牌 2 达人(默认值)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "author_levels",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "作者电商等级，0-7级",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "frist_cids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品行业类目，列表类型；使用【/alliance/activityProductCategoryList】接口获取",
+      "example": "23",
+      "_depth": 0
+    },
+    {
+      "name": "author_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "达人昵称或者账号",
+      "example": "我的昵称",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页，1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页大小",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "sort_by",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "排序字段: 1-综合；2-销量；3-佣金率；4-粉丝数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "排序方式：0-降序；1-升序",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "live_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "开关播状态：0:所有，1:开播，2:关播",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "20"
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "description": "列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效分页大小（sub_code: isv.parameter-invalid:4097）",
+      "action": "无效分页大小",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "无效分页大小"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【抖客】角色授权后访问（sub_code: isv.business-failed:4198）",
+      "action": "需【抖客】角色授权后访问",
+      "sub_code": "isv.business-failed:4198",
+      "sub_msg": "需【抖客】角色授权后访问"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/liveShareMaterial?app_key=your_appkey_here&method=buyin.liveShareMaterial&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "author_level": "1",
+            "author_name": "我是kol",
+            "author_openid": "fdfwe",
+            "author_pic": "http://fake.png",
+            "average_commission_rate": "30",
+            "average_gmv": "1111111",
+            "buyin_id": "6523908954358943",
+            "city": "广州",
+            "fans_num": "222",
+            "gender": "male",
+            "has_redpack": "false",
+            "is_ecom": "true",
+            "is_live": "true",
+            "live_preview_auth": "false",
+            "product_category": "测试类目",
+            "province": "广东",
+            "room_id": "1234567890"
+          }
+        ],
+        "total": "20"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1396",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-liveShareMaterial"
+}

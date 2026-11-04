@@ -1,0 +1,159 @@
+{
+  "id": "doudian.logistics.power.updateTicket",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.updateTicket",
+  "description": "工单处理回传",
+  "method": "GET",
+  "path": "/power/updateTicket",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ticket_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字节工单ID",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "1111",
+      "_depth": 0
+    },
+    {
+      "name": "op_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型： handle 处理",
+      "example": "handle",
+      "_depth": 0
+    },
+    {
+      "name": "op_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "操作时间",
+      "example": "12345678",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "处理备注",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "compensate_state",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "是否赔付， 1未赔付 2已赔付",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "compensate_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "赔付金额，单位为分。在compensate_state为2是必填",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "compensate_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "赔付原因： lose 丢失 damage 破损 other 其他",
+      "example": "lose",
+      "_depth": 0
+    },
+    {
+      "name": "attachment",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "附件链接",
+      "example": "[\"http://www.toutiao.com\"]",
+      "_depth": 0
+    },
+    {
+      "name": "extension",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段JSON 格式:{k1:v1,k2:v2}",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "handle_response",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "处理结果",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:该工单不存在（sub_code: isv.business-failed:10000）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:该工单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10003:工单已处理，无法进行操作（sub_code: isv.business-failed:10003）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "10003:工单已处理，无法进行操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:该工单不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1477",
+  "updatedAt": "2023-02-24",
+  "_file_stem": "logistics-power-updateTicket"
+}

@@ -1,0 +1,107 @@
+{
+  "id": "doudian.selection.supplyCenter.order.pay",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.order.pay",
+  "description": "支付成功状态推进",
+  "method": "GET",
+  "path": "/supplyCenter/order/pay",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pur_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "精选货源订单号",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "pay_amount",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "支付金额数据",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "post_amount",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "邮费",
+      "example": "13",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_pay_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "子订单支付信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "pur_sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "子订单号",
+      "example": "1234",
+      "_depth": 1
+    },
+    {
+      "name": "pay_amount",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "子订单支付信息",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "pay_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "秒级时间戳",
+      "example": "1698146585",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.order.pay&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5323",
+  "updatedAt": "2023-11-10",
+  "_file_stem": "selection-supplyCenter-order-pay"
+}

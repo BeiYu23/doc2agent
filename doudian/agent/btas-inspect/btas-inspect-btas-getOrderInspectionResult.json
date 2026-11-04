@@ -1,0 +1,149 @@
+{
+  "id": "doudian.btas-inspect.btas.getOrderInspectionResult",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.getOrderInspectionResult",
+  "description": "商家_获取订单的质检结果（鉴定结论）",
+  "method": "GET",
+  "path": "/btas/getOrderInspectionResult",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "0123456787",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "order_id",
+      "type": "string",
+      "description": "父订单（店铺单）编号",
+      "example": "4775168038676399798"
+    },
+    {
+      "name": "product_order_id",
+      "type": "string",
+      "description": "商品单编号",
+      "example": "4775168038676399798"
+    },
+    {
+      "name": "order_code",
+      "type": "string",
+      "description": "订单码",
+      "example": "0123456787"
+    },
+    {
+      "name": "inspection_result",
+      "type": "string",
+      "description": "鉴定结果",
+      "example": "1"
+    },
+    {
+      "name": "certification_code",
+      "type": "string",
+      "description": "证书编号",
+      "example": "XXXX-2021-03T617"
+    },
+    {
+      "name": "detail",
+      "type": "string",
+      "description": "鉴定明细",
+      "example": "{\\\"id\\\":\\\"20455\\\",\\\"region\\\":\\\"6\\\",\\\"order_id\\\":\\\"0\\\",\\\"type\\\":\\\"2\\\",\\\"zsbh\\\":\\\"COIC-2021-03T617\\\"}"
+    },
+    {
+      "name": "inspection_comment",
+      "type": "string",
+      "description": "鉴定备注",
+      "example": "表盘后镶钻"
+    },
+    {
+      "name": "inspection_cost",
+      "type": "number",
+      "description": "鉴定费用",
+      "example": "200"
+    },
+    {
+      "name": "logistics_cost",
+      "type": "number",
+      "description": "物流费用",
+      "example": "2000"
+    },
+    {
+      "name": "inspection_time",
+      "type": "string",
+      "description": "鉴定结果时间戳（秒）",
+      "example": "1616679140"
+    },
+    {
+      "name": "inspection_order_id",
+      "type": "string",
+      "description": "鉴定单ID",
+      "example": "GGEE12321"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 质检任务不存在，请确认（sub_code: isv.business-failed:4002）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:4002",
+      "sub_msg": "质检任务不存在，请确认"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单还未送检（sub_code: isv.business-failed:-1）",
+      "action": "先送检，完成质检在查看质检结果",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "订单还未送检"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/btas/getOrderInspectionResult?app_key=your_appkey_here&method=btas.getOrderInspectionResult&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "certification_code": "XXXX-2021-03T617",
+        "detail": "{\\\"id\\\":\\\"20455\\\",\\\"region\\\":\\\"6\\\",\\\"order_id\\\":\\\"0\\\",\\\"type\\\":\\\"2\\\",\\\"zsbh\\\":\\\"COIC-2021-03T617\\\"}",
+        "inspection_comment": "表盘后镶钻",
+        "inspection_cost": "200",
+        "inspection_order_id": "GGEE12321",
+        "inspection_result": "1",
+        "inspection_time": "1616679140",
+        "logistics_cost": "2000",
+        "order_code": "0123456787",
+        "order_id": "4775168038676399798",
+        "product_order_id": "4775168038676399798"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4002",
+      "sub_msg": "质检任务不存在，请确认"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/573",
+  "updatedAt": "2021-06-07",
+  "_file_stem": "btas-inspect-btas-getOrderInspectionResult"
+}

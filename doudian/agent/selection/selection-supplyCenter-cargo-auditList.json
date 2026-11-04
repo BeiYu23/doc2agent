@@ -1,0 +1,116 @@
+{
+  "id": "doudian.selection.supplyCenter.cargo.auditList",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.cargo.auditList",
+  "description": "审核记录列表",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "publish_status",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "指定审核状态返回商品列表：0-审核中 1-审核通过 2-审核拒绝",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "第几页（第一页为0，最大为99）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页返回条数，最多支持100条",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品id",
+      "example": "11",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "records",
+      "type": "array",
+      "description": "审核记录列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数量",
+      "example": "11"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照商品审核记录列表接口（sub_code: isv.parameter-invalid:6666）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/1748",
+      "sub_code": "isv.parameter-invalid:6666",
+      "sub_msg": "参照商品审核记录列表接口"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.cargo.auditList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "records": [
+          {
+            "audit_reason": {},
+            "audit_time": "1668135600",
+            "img_url": "http://aaa",
+            "product_id": "1111",
+            "publish_status": "0",
+            "publish_time": "1668135600",
+            "title": "测试商品"
+          }
+        ],
+        "total": "11"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:6666",
+      "sub_msg": "参照商品审核记录列表接口"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5141",
+  "updatedAt": "2023-10-19",
+  "_file_stem": "selection-supplyCenter-cargo-auditList"
+}

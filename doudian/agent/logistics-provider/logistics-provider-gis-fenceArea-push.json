@@ -1,0 +1,267 @@
+{
+  "id": "doudian.logistics-provider.gis.fenceArea.push",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "gis.fenceArea.push",
+  "description": "围栏数据推送",
+  "method": "GET",
+  "path": "/gis/fenceArea/push",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "express",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商code，接口研发提供",
+      "example": "yunda",
+      "_depth": 0
+    },
+    {
+      "name": "express_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商校验码，接口研发提供",
+      "example": "lqwdnqwd",
+      "_depth": 0
+    },
+    {
+      "name": "action",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "0-删除 1-创建或更新",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "fence_area",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "围栏范围结构体",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省国标码",
+      "example": "310000",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市国标码",
+      "example": "311100",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区国标码",
+      "example": "311121",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道国标码",
+      "example": "31112103",
+      "_depth": 1
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "浙江省杭州市余杭区仓前街道爱力中心",
+      "_depth": 1
+    },
+    {
+      "name": "branch_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商网点code",
+      "example": "23389",
+      "_depth": 1
+    },
+    {
+      "name": "branch_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商网点名称",
+      "example": "这是一个网点",
+      "_depth": 1
+    },
+    {
+      "name": "area_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "围栏类型 0-坐标 1-行政区划",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "fence",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "围栏坐标结构体",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "围栏形状",
+      "example": "multipolygon",
+      "_depth": 2
+    },
+    {
+      "name": "standard",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "围栏坐标规范",
+      "example": "GaoDe",
+      "_depth": 2
+    },
+    {
+      "name": "multipolygon",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "围栏坐标pg定义",
+      "example": "Multipolygon (((1 1,1 2,2 2,2 1, 1 1)))",
+      "_depth": 2
+    },
+    {
+      "name": "data_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "数据唯一标识",
+      "example": "12938712983",
+      "_depth": 1
+    },
+    {
+      "name": "entity_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实体类型 0-网点 1-小件员",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "delivery_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点配送方式 0-不区分 1-仅支持配送 2-仅支持自提",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "three_segment_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "小件员三段码",
+      "example": "127",
+      "_depth": 1
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "小件员业务类型 0-揽件 1-派件",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "reachable",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否可达 0-不可达 1-可达",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "calculate",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否可用于推算段码 0-不可用于推算段码 1-可用于推算段码",
+      "example": "0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/gis/fenceArea/push?app_key=your_appkey_here&method=gis.fenceArea.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "data_id": "1233",
+            "reason": "鉴权失败",
+            "success": "0"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2879",
+  "updatedAt": "2023-01-09",
+  "_file_stem": "logistics-provider-gis-fenceArea-push"
+}

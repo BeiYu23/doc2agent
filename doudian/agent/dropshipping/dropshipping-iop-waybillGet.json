@@ -1,0 +1,573 @@
+{
+  "id": "doudian.dropshipping.iop.waybillGet",
+  "platform": "doudian",
+  "group": "dropshipping",
+  "name": "iop.waybillGet",
+  "description": "电子面单取号",
+  "method": "GET",
+  "path": "/iop/waybillGet",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 代发API（版本 V3.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sender",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "寄件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "寄件人联系信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "寄件人姓名",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件人固话（和mobile二选一）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件人移动电话（和phone二选一）",
+      "example": "18500000034",
+      "_depth": 2
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "寄件人地址信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "countryCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国家编码（默认CHN，目前只有国内业务）",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "provinceCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "112",
+      "_depth": 2
+    },
+    {
+      "name": "provinceName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "cityCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市编码",
+      "example": "112",
+      "_depth": 2
+    },
+    {
+      "name": "cityName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "districtCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区/县编码",
+      "example": "112",
+      "_depth": 2
+    },
+    {
+      "name": "districtName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区/县名称",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "streetCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "112",
+      "_depth": 2
+    },
+    {
+      "name": "streetName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "丹棱街1号",
+      "_depth": 2
+    },
+    {
+      "name": "detailAddress",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "剩余详细地址",
+      "example": "丹棱街1号",
+      "_depth": 2
+    },
+    {
+      "name": "trade_order_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "取号列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "代打店铺id",
+      "example": "884334435345",
+      "_depth": 1
+    },
+    {
+      "name": "order_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "代打订单列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "service_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "增值服务列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "增值服务类型",
+      "example": "SVC-INSURE",
+      "_depth": 3
+    },
+    {
+      "name": "service_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "增值服务对应的value值，如果增值类型涉及金额会校验，单位：分",
+      "example": "[\"value\":\"2200\"]",
+      "_depth": 3
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递产品类型",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "pay_method",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "支付方式：1-寄付月结，2-寄付现结）若不传，默认为商家与物流商网点约定的支付方式",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "distr_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "代打订单id",
+      "example": "7874584357345",
+      "_depth": 2
+    },
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品明细列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "item_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称",
+      "example": "手机",
+      "_depth": 3
+    },
+    {
+      "name": "item_specs",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品规格",
+      "example": "绿色/小",
+      "_depth": 3
+    },
+    {
+      "name": "item_count",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品数量",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "item_volume",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单件商品体积（cm3)",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "item_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单件商品重量（g)",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "item_net_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单件总净重量（g）",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "sender_fetch_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "要求上门取件时间段",
+      "example": "2020-11-11 22:00:00|2020-11-11 23:00:00",
+      "_depth": 2
+    },
+    {
+      "name": "is_sign_back",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "是否返回签回单（签单返还）的运单号，支持以下值：1：要求 0：不要求\"",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单备注",
+      "example": "我的包裹易碎，包严实点",
+      "_depth": 2
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备用扩展字段",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "pay_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "运费金额，单位为分",
+      "example": "5000",
+      "_depth": 2
+    },
+    {
+      "name": "total_pack_count",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "大于1，示例3",
+      "example": "子母件数",
+      "_depth": 2
+    },
+    {
+      "name": "total_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品总重量，单位：克（仅支持顺丰物流使用）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "total_length",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品总长，单位：cm（仅支持顺丰物流使用）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "total_width",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品总宽，单位：cm（仅支持顺丰物流使用）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "total_height",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品总高，单位：cm（仅支持顺丰物流使用）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品总体积，单位：cm3（仅支持顺丰物流使用）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "pack_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "包裹id（只能传入数字、字母和下划线；大小写敏感，即123A,123a 不可当做相同ID，否则存在一定可能取号失败）一单一包裹是不需要传，有2个以上时，从第二个开始都需要传不同id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "warehouse",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓相关信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "wh_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库编码",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "delivery_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货方式（用于韵达、京东链路）1或不传-普通发货2-门店发货3-仓库发货",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "wh_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库订单号(丹鸟等仓发链路使用)",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "delivery_req",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "派送要求（目前仅德邦支持）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "is_center_delivery",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否接受仅镇中心派送",
+      "example": "true",
+      "_depth": 2
+    },
+    {
+      "name": "is_pickup_self",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否合伙人自提",
+      "example": "true",
+      "_depth": 2
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流服务商编码",
+      "example": "jtexpress",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ebill_infos",
+      "type": "array",
+      "description": "电子面单信息列表",
+      "example": ""
+    },
+    {
+      "name": "err_infos",
+      "type": "array",
+      "description": "错误信息列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 取号信息一次最多支持10个（sub_code: isv.parameter-invalid:10000）",
+      "action": "取号信息一次最多支持10个",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "取号信息一次最多支持10个"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统繁忙，请稍后重试（sub_code: isp.service-error:88888）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-error:88888",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:10005）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:10005",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/iop/waybillGet?app_key=your_appkey_here&method=iop.waybillGet&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ebill_infos": [
+          {
+            "distr_order_id": "7874584357345",
+            "extra": "1",
+            "extra_resp": "1",
+            "mark_destination_code": "1",
+            "mark_destination_code_name": "1",
+            "pack_id": "0",
+            "package_code": "1",
+            "package_code_name": "1",
+            "sort_code": "400-W00 000",
+            "sub_waybill_codes": "13,434,556",
+            "track_no": "202011809"
+          }
+        ],
+        "err_infos": [
+          {
+            "distr_order_id": "7874584357345",
+            "err_code": "10701",
+            "err_msg": "电子面单库存不足",
+            "pack_id": "0"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "取号信息一次最多支持10个"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/59/674",
+  "updatedAt": "2021-09-15",
+  "_file_stem": "dropshipping-iop-waybillGet"
+}

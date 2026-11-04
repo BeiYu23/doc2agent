@@ -1,0 +1,118 @@
+{
+  "id": "doudian.prescription.medicine.updatePrescriptionStatusByInterface",
+  "platform": "doudian",
+  "group": "prescription",
+  "name": "medicine.updatePrescriptionStatusByInterface",
+  "description": "商家ERP通过调用接口审核处方单",
+  "method": "GET",
+  "path": "/medicine/updatePrescriptionStatusByInterface",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商家处方药（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "memeber_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "成员id",
+      "example": "12321312",
+      "_depth": 0
+    },
+    {
+      "name": "belong_shop_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "药剂师所属店铺id",
+      "example": "123123123",
+      "_depth": 0
+    },
+    {
+      "name": "uid",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "药剂师uid",
+      "example": "12312312",
+      "_depth": 0
+    },
+    {
+      "name": "prescription_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "处方单id",
+      "example": "123123123",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "状态，1:通过，2:拒绝",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "note",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "拒绝理由",
+      "example": "不详细",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 没有权限（sub_code: isp.service-error:100002）",
+      "action": "检查药剂师是否是有对应处方单审核权限",
+      "sub_code": "isp.service-error:100002",
+      "sub_msg": "没有权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:系统错误，请稍后重试（sub_code: isv.business-failed:-1）",
+      "action": "-1:系统错误，请稍后重试",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:系统错误，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.commarketing/membership/bind/v1?app_key=your_appkey_here&method=marketing.membership.bind.v1&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "integral": "100",
+        "level": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:100002",
+      "sub_msg": "没有权限"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1479/6463",
+  "updatedAt": "2024-05-07",
+  "_file_stem": "prescription-medicine-updatePrescriptionStatusByInterface"
+}

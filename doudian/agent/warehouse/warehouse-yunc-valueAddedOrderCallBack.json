@@ -1,0 +1,179 @@
+{
+  "id": "doudian.warehouse.yunc.valueAddedOrderCallBack",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.valueAddedOrderCallBack",
+  "description": "WMS回传增值服务单数据",
+  "method": "GET",
+  "path": "/yunc/valueAddedOrderCallBack",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "value_added_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "增值服务单号",
+      "example": "VA123456",
+      "_depth": 0
+    },
+    {
+      "name": "event_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "事件类型 2-待审核 3-审核不通过 4-审核通过 5-作业中 6-已完成",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓编号",
+      "example": "W001",
+      "_depth": 0
+    },
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "唯一流水号",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "occur_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "秒级时间戳",
+      "example": "1664193365",
+      "_depth": 0
+    },
+    {
+      "name": "operator",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作人",
+      "example": "操作人A",
+      "_depth": 0
+    },
+    {
+      "name": "details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "增值服务详情",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行号",
+      "example": "SC123456_0",
+      "_depth": 1
+    },
+    {
+      "name": "actual_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "实际数量",
+      "example": "10",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "错误码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "异常信息",
+      "example": "系统内部异常"
+    },
+    {
+      "name": "data",
+      "type": "string",
+      "description": "data",
+      "example": "data"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务端异常（sub_code: isp.service-error:1001）",
+      "action": "联系服务端研发排查",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "服务端异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1004）",
+      "action": "检查参数重新回传",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 仓库编码鉴权失败，操作仓和鉴权仓不一致（sub_code: isv.business-failed:1003）",
+      "action": "检查操作仓Code",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "仓库编码鉴权失败，操作仓和鉴权仓不一致"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 增值服务单不存在（sub_code: isv.business-failed:21000）",
+      "action": "检查增值服务单号后重试",
+      "sub_code": "isv.business-failed:21000",
+      "sub_msg": "增值服务单不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/valueAddedOrderCallBack?app_key=your_appkey_here&method=yunc.valueAddedOrderCallBack&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": "data",
+        "msg": "系统内部异常"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "服务端异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2536",
+  "updatedAt": "2025-12-09",
+  "_file_stem": "warehouse-yunc-valueAddedOrderCallBack"
+}

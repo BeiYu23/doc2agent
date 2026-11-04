@@ -1,0 +1,111 @@
+{
+  "id": "doudian.dropshipping.iop.getSellerList",
+  "platform": "doudian",
+  "group": "dropshipping",
+  "name": "iop.getSellerList",
+  "description": "【厂家】查询商家列表",
+  "method": "GET",
+  "path": "/iop/getSellerList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 代发API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "返回页码，页码从 0 开始 PS：当前采用分页返回，数量和页数会一起传",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "返回数量，最大 100",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "bind_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "绑定状态（未知-0、申请绑定待审核-1、已通过-2、已拒绝-3、已解绑-4、申请解绑待审核-5）",
+      "example": "[1,2]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "seller_shop_list",
+      "type": "array",
+      "description": "绑定列表",
+      "example": ""
+    },
+    {
+      "name": "page_size",
+      "type": "number",
+      "description": "返回数量，最大 100",
+      "example": "20"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总绑定数",
+      "example": "100"
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "返回页码，页码从 0 开始 PS：当前采用分页返回，数量和页数会一起传",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/iop/getSellerList?app_key=your_appkey_here&method=iop.getSellerList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "page": "0",
+        "page_size": "20",
+        "seller_shop_list": [
+          {
+            "apply_time": "1630484005",
+            "band_time": "1630484005",
+            "bind_status": "1",
+            "refuse_time": "1630484005",
+            "seller_shop_id": "1111",
+            "seller_shop_name": "大白店铺"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/59/1752",
+  "updatedAt": "2022-04-06",
+  "_file_stem": "dropshipping-iop-getSellerList"
+}

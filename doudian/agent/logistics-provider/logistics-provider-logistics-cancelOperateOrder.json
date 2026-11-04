@@ -1,0 +1,132 @@
+{
+  "id": "doudian.logistics-provider.logistics.cancelOperateOrder",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.cancelOperateOrder",
+  "description": "物流商取消单据",
+  "method": "GET",
+  "path": "/logistics/cancelOperateOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "SF1234567890",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因编码，枚举映射如下：\n10800：空号错号\n10801：无人接听、停关机（联系不上用户\n10802：物品不符合寄件标准\n10804：包裹破损、包裹不齐\n10805：快递误操作\n10806：客户无法提供身份证明\n10807：违禁品\n10808：寄件人超时未准备好货物\n10809：收件地址不详\n10810：扫描操作错误\n10811：客户重复下单\n10812：下错单\n10813：揽收时间无法达成一致\n10816：疫情导致快递员被隔离无法上门取",
+      "example": "10800",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消",
+      "example": "CANCELED",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "boolean",
+      "description": "请求结果（成功-true;失败-false）",
+      "example": "true"
+    },
+    {
+      "name": "return_code",
+      "type": "string",
+      "description": "错误编码",
+      "example": "1000"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "失败原因",
+      "example": "服务端异常"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:12702）",
+      "action": "根据错误信息检查请求参数",
+      "sub_code": "isv.parameter-invalid:12702",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:12704）",
+      "action": "联系平台开发定位",
+      "sub_code": "isp.service-error:12704",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 实操单不存在（sub_code: isv.business-failed:12703）",
+      "action": "联系平台开发定位",
+      "sub_code": "isv.business-failed:12703",
+      "sub_msg": "实操单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态已取消不允许更新（sub_code: isv.business-failed:12714）",
+      "action": "当前状态已取消不允许更新",
+      "sub_code": "isv.business-failed:12714",
+      "sub_msg": "当前状态已取消不允许更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态不允许变更（sub_code: isv.business-failed:12710）",
+      "action": "当前状态不允许取消",
+      "sub_code": "isv.business-failed:12710",
+      "sub_msg": "当前状态不允许变更"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/cancelOperateOrder?app_key=your_appkey_here&method=logistics.cancelOperateOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "message": "服务端异常",
+        "result": "true",
+        "return_code": "1000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:12702",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/4456",
+  "updatedAt": "2023-09-14",
+  "_file_stem": "logistics-provider-logistics-cancelOperateOrder"
+}

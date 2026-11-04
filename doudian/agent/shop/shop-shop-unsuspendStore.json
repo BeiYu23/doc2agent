@@ -1,0 +1,116 @@
+{
+  "id": "doudian.shop.shop.unsuspendStore",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "shop.unsuspendStore",
+  "description": "门店恢复营业",
+  "method": "GET",
+  "path": "/shop/unsuspendStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "恢复营业原因",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ret_code",
+      "type": "mixed",
+      "description": "返回错误码",
+      "example": "0"
+    },
+    {
+      "name": "ret_msg",
+      "type": "string",
+      "description": "-",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8:门店不存在（sub_code: isv.business-failed:8）",
+      "action": "门店不存在",
+      "sub_code": "isv.business-failed:8",
+      "sub_msg": "8:门店不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14:非正常营业或停业的门店不可恢复营业（sub_code: isv.business-failed:14）",
+      "action": "非正常营业或停业的门店不可恢复营业",
+      "sub_code": "isv.business-failed:14",
+      "sub_msg": "14:非正常营业或停业的门店不可恢复营业"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1:参数错误（sub_code: isv.business-failed:1）",
+      "action": "检查参数",
+      "sub_code": "isv.business-failed:1",
+      "sub_msg": "1:参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2:业务处理异常（sub_code: isv.business-failed:2）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "2:业务处理异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100:系统错误，请稍后重试（sub_code: isv.business-failed:100）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:100",
+      "sub_msg": "100:系统错误，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/unsuspendStore?app_key=your_appkey_here&method=shop.unsuspendStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ret_code": "0",
+        "ret_msg": "-"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:8",
+      "sub_msg": "8:门店不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2384",
+  "updatedAt": "2024-02-26",
+  "_file_stem": "shop-shop-unsuspendStore"
+}

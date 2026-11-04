@@ -1,0 +1,269 @@
+{
+  "id": "doudian.recycle.resale.quote.result",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "resale.quote.result",
+  "description": "服务商质检完成报价/修改报价信息",
+  "method": "GET",
+  "path": "/resale/quote/result",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "内部单号",
+      "example": "\"1232323213\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码，平台提供",
+      "example": "\"xxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "质检结果，0：质检成功；1：无法质检等；",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检结果描述",
+      "example": "\"质检完成\"",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_report",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "质检报告",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "report_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "报告ID",
+      "example": "12345545",
+      "_depth": 1
+    },
+    {
+      "name": "report_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "报告类型，1：差异报告，机型一致才出这个报告；2：瑕疵报告，机型不一致才会有；",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "report_url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "报告地址",
+      "example": "\"xxxxxx.html\"",
+      "_depth": 1
+    },
+    {
+      "name": "report_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "报告时间",
+      "example": "\"yyyy-MM-dd hh:MM:ss\"",
+      "_depth": 1
+    },
+    {
+      "name": "diff_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "差异项数量",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "match_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "吻合项数量",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "raw_data",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检报告原始数据",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "inspect_product_category_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "质检结果类目信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "first_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "first_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目名称",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "second_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "second_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目名称",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "third_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "third_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目名称",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "forth_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "forth_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目名称",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "sn_check_res",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sn校验结果，1：不存在；2：成功；3：失败；",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "fixed_price",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "报价，单位：分",
+      "example": "20000",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间",
+      "example": "\"yyyy-MM-dd hh:MM:ss\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "\"\"",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/resale/quote/result?app_key=your_appkey_here&method=resale.quote.result&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/4628",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "recycle-resale-quote-result"
+}

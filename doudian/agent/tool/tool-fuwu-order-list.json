@@ -1,0 +1,130 @@
+{
+  "id": "doudian.tool.fuwu.order.list",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "fuwu.order.list",
+  "description": "查询服务市场订单",
+  "method": "GET",
+  "path": "/fuwu/order/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_create_time_start",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "要搜索的订单创建时间起，unix秒级时间戳，必须大于2019年1月1日",
+      "example": "1690819200",
+      "_depth": 0
+    },
+    {
+      "name": "order_create_time_end",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "要搜索的订单创建时间止，unix秒级时间戳，需小于次月1日",
+      "example": "1693497600",
+      "_depth": 0
+    },
+    {
+      "name": "page_index",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页码，从1起",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页大小，最小1，最大100。",
+      "example": "100",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "orders",
+      "type": "array",
+      "description": "订单列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统负载高或查询报错（sub_code: isp.service-error:200）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:200",
+      "sub_msg": "系统负载高或查询报错"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:100001）",
+      "action": "按照返回描述修改入参",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 查询报错（sub_code: isp.service-timeout-error:300000）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-timeout-error:300000",
+      "sub_msg": "查询报错"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/fuwu/order/list?app_key=your_appkey_here&method=fuwu.order.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "orders": [
+          {
+            "app_id": "7255935913727911234",
+            "order_id": "692125073230001234",
+            "pay_amount": "0",
+            "pay_type": "7",
+            "refund_status": "0",
+            "service_end_time": "1693727023",
+            "service_start_time": "1693122223",
+            "shop_id": "77977",
+            "sku_duration": "7",
+            "sku_duration_unit": "0",
+            "sku_price": "0",
+            "sku_spec_type": "0",
+            "sku_spec_value": "试用版",
+            "sku_title": "试用版 7天"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:200",
+      "sub_msg": "系统负载高或查询报错"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/4524",
+  "updatedAt": "2023-09-05",
+  "_file_stem": "tool-fuwu-order-list"
+}

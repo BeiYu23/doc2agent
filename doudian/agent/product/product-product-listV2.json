@@ -1,0 +1,351 @@
+{
+  "id": "doudian.product.product.listV2",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.listV2",
+  "description": "使用场景：批量查询商家抖店商品信息\n1、支持使用商品状态，商品类型、商品创建时间和更新时间筛选商品\n2、最大支持1次查询1万条，如返回商品数据大于1万条，请增加筛选条件。",
+  "method": "GET",
+  "path": "/product/listV2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品在店铺中状态: 0-在线；1-下线；2-删除；详见商品状态机：https://op.jinritemai.com/docs/question-docs/92/2070",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "check_status",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品审核状态: 1-未提交；2-待审核；3-审核通过；4-审核未通过；5-封禁；7-审核通过待上架；详见商品状态机：https://op.jinritemai.com/docs/question-docs/92/2070",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品类型；0-普通；1-新客商品；3-虚拟；6-玉石闪购；7-云闪购 ；127-其他类型；",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品创建开始时间，unix时间戳，单位：秒；",
+      "example": "1619161933",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品创建结束时间，unix时间戳，单位：秒；",
+      "example": "1619162000",
+      "_depth": 0
+    },
+    {
+      "name": "update_start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品更新开始时间，unix时间戳，单位：秒；注意：查询范围是update_start_time和update_end_time之间的数据，不包含入参时间。",
+      "example": "1619161933",
+      "_depth": 0
+    },
+    {
+      "name": "update_end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品更新结束时间，unix时间戳，单位：秒；注意：查询范围是update_start_time和update_end_time之间的数据，不包含入参时间。",
+      "example": "1619161933",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页码，从1开始，最大为100；page* size最大不能超过1万条",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页数，填写范围1~100；page* size最大不能超过1万条",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "小时达商家使用的门店id，即时零售单店版，无需使用",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品标题，支持模糊匹配",
+      "example": "标题",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品id，最大支持传入100个；",
+      "example": "3600137140018749665",
+      "_depth": 0
+    },
+    {
+      "name": "use_cursor",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否使用游标，true 使用，false 不使用；使用游标能遍历全量商品，不会受到只能查询到10000个数据的影响。\n特别说明：使用游标查询时，page字段失效，只会查询当前游标后面size条数据；根据获取查询数据为空来判断本次遍历结束；查询过程中数据发生变更，可能重复、遗漏数据；需要保证每次查询的筛选条件一致。",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "cursor_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "游标id，结合use_cursor使用（use_cursor=true）;首次查询时不需要传值，每次查询结果会返回cursor_id，下一次查询时复制给该字段。当查询返回数据为空时，结束遍历。",
+      "example": "WzE2ODI1Nzc4MjksMTc2NDMxMDczMDU3MDg0M10=",
+      "_depth": 0
+    },
+    {
+      "name": "can_combine_product",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "能否参加搭配",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "lookup_option",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "查询option",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "need_name_affix",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要获取标题前后缀",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "need_title_limit",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要获取商品标题长度限制规则",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "need_rectification_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要自动整改信息",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "query_options",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "查询定制参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "exist_category_misplaced",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "只查询类目错放的商品",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "exist_audit_reject_suggest",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "只查询有驳回建议的商品",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "need_audit_reject_suggest",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "需要返回审核驳回建议信息",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "need_check_out",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要核销",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "sku_codes",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku商家编码，最大支持传入50个",
+      "example": "aaabbcc",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "商品数据",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "本次查询返回的商品总数",
+      "example": "10000"
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "当前页码",
+      "example": "10"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": "页数（每页数量）",
+      "example": "100"
+    },
+    {
+      "name": "cursor_id",
+      "type": "string",
+      "description": "使用游标时，每次查询会返回该值，作为下次查询的入参使用。",
+      "example": "WzE2ODI1Nzc4MjksMTc2NDMxMDczMDU3MDg0M10="
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 页数从1开始（sub_code: isv.parameter-invalid:2010004）",
+      "action": "请检查必传参数是否填写",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "页数从1开始"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 判断库存版本失败（sub_code: isp.service-error:2010013）",
+      "action": "灰度时使用，现应无此报错",
+      "sub_code": "isp.service-error:2010013",
+      "sub_msg": "判断库存版本失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询库存失败（sub_code: isp.service-error:2010001）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "查询库存失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 读取商品失败（sub_code: isp.service-error:20053）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:20053",
+      "sub_msg": "读取商品失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取类目信息失败（sub_code: isv.business-failed:2010201）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:2010201",
+      "sub_msg": "获取类目信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 触发商品操作限流（sub_code: isv.business-failed:2010401）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:2010401",
+      "sub_msg": "触发商品操作限流"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010203:获取商品信息失败（sub_code: isv.business-failed:2010203）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:2010203",
+      "sub_msg": "2010203:获取商品信息失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "页数从1开始"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/633",
+  "updatedAt": "2026-01-21",
+  "_file_stem": "product-product-listV2"
+}

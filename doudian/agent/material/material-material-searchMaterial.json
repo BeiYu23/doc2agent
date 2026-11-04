@@ -1,0 +1,202 @@
+{
+  "id": "doudian.material.material.searchMaterial",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.searchMaterial",
+  "description": "1、不会返回已经删除的素材；\n2、请至少传入一个入参，如果没有任何搜索条件，即：除page_num、page_size、order_type之外的字段都为空，会返【查询失败，未上传任何查询参数】错误。\n3、2022年11月-素材接口字段变更公告：https",
+  "method": "GET",
+  "path": "/material/searchMaterial",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V6.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "material_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "素材id；可使用【/material/batchUploadImageSync】【/material/uploadImageSync】【/material/searchMaterial  】接口获取",
+      "example": "7000291764753940780",
+      "_depth": 0
+    },
+    {
+      "name": "material_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文件名称，支持模糊匹配",
+      "example": "模糊匹配,",
+      "_depth": 0
+    },
+    {
+      "name": "material_type",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材类型，空-不限； photo-图片；video-视频；",
+      "example": "photo",
+      "_depth": 0
+    },
+    {
+      "name": "operate_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材状态，0-待下载；1-有效；4-回收站中；",
+      "example": "[0,1,4]",
+      "_depth": 0
+    },
+    {
+      "name": "audit_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "审核状态，1-待审核；2-审核中；3-通过 ；4-拒绝；注意：只有AuditStatus=3时ByteUrl才会返回；",
+      "example": "[1,2,3,4]",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_start",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搜索创建开始时间，格式：yyyy-MM-dd HH:mm:ss",
+      "example": "2012-08-12 12:00:12",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_end",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搜索创建结束时间，格式：yyyy-MM-dd HH:mm:ss",
+      "example": "2022-11-12 12:00:12",
+      "_depth": 0
+    },
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文件夹id，0-素材中心； -1-回收站；",
+      "example": "6999834643465781548",
+      "_depth": 0
+    },
+    {
+      "name": "material_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材id列表",
+      "example": "[7000291764753940780,7000291764753940780]",
+      "_depth": 0
+    },
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "第几页，1，2，……，默认值：1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "页大小，1，2，……，100，默认值：50",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序方式，0-按照创建时间倒序 ；1-按照创建时间升序；6-按照素材大小降序；7-按照素材大小升序；",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "material_info_list",
+      "type": "array",
+      "description": "素材列表信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "3"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 文件夹ID错误，请输入正确的文件夹ID（sub_code: isv.parameter-invalid:20001）",
+      "action": "文件夹id不正确",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "文件夹ID错误，请输入正确的文件夹ID"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10004）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:10003）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 查询数量超出限制，请通过筛选素材名称/状态/日期等缩小范围（sub_code: isv.parameter-invalid:31002）",
+      "action": "查询数量超出限制，请通过筛选素材名称/状态/日期等缩小范围",
+      "sub_code": "isv.parameter-invalid:31002",
+      "sub_msg": "查询数量超出限制，请通过筛选素材名称/状态/日期等缩小范围"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:10006）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:10006",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "文件夹ID错误，请输入正确的文件夹ID"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1148",
+  "updatedAt": "2022-11-17",
+  "_file_stem": "material-material-searchMaterial"
+}

@@ -1,0 +1,196 @@
+{
+  "id": "doudian.shop.shop.batchCreateStore",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "shop.batchCreateStore",
+  "description": "批量创建门店",
+  "method": "GET",
+  "path": "/shop/batchCreateStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "与createStore接口入参一致",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "row_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "标识这行数据",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店名称",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "store_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店编码",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "经度",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "纬度",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份",
+      "example": "四川省",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市",
+      "example": "成都市",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区",
+      "example": "武侯区",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "xxx小区",
+      "_depth": 1
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "电话",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "open_time",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "Key:用数字表示周几，例：1:周一、2:周一、5:周五、6:周六、7:周日。Value: 营业时间，多段时间用空格分隔，例：“x-x x-x”。x的区间：[00:00, 23:59]（24:00无效）。营业到次日举例：\"19:00-02:00\"。完整举例(周3周4不营业)：{1:\"12:00-16:00\",2:\"12:00-16:00\",5:\"19:00-02:00\",6:\"12:00-16:00\",7:\"12:00-16:00\"}",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "day_map",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "Key:用数字表示周几，例：1:周一、2:周一、5:周五、6:周六、7:周日。Value: 营业时间，多段时间用空格分隔，例：“x-x x-x”。x的区间：[00:00, 23:59]（24:00无效）。营业到次日举例：\"19:00-02:00\"。完整举例(周3周4不营业)：{1:\"12:00-16:00\",2:\"12:00-16:00\",5:\"19:00-02:00\",6:\"12:00-16:00\",7:\"12:00-16:00\"}",
+      "example": "",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result_list",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/batchCreateStore?app_key=your_appkey_here&method=shop.batchCreateStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result_list": [
+          {
+            "is_success": "true",
+            "msg": "invalid param",
+            "store": {
+              "address": "-",
+              "city": "-",
+              "contact": "-",
+              "district": "-",
+              "latitude": "-",
+              "longitude": "-",
+              "name": "-",
+              "open_time": {
+                "custom": "-",
+                "day_map": {}
+              },
+              "province": "-",
+              "rel_shop_id": "-",
+              "row_id": "-",
+              "store_code": "-",
+              "store_id": "123"
+            }
+          }
+        ]
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2040",
+  "updatedAt": "2022-08-15",
+  "_file_stem": "shop-shop-batchCreateStore"
+}

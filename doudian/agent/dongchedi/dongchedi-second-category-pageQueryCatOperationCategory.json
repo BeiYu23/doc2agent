@@ -1,0 +1,119 @@
+{
+  "id": "doudian.dongchedi.second.category.pageQueryCatOperationCategory",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.category.pageQueryCatOperationCategory",
+  "description": "【二方接口】分页获取垂类类目信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "enumIds",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "垂类枚举",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "pageNo",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码，第一页从0开始",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "pageSize",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "分页大小",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目 0:default 门捷列夫 1:std 标准类目树",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "categoryTags",
+      "type": "array",
+      "description": "属性信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参数pageNo非法（sub_code: isp.service-error:300001）",
+      "action": "参数pageNo非法",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "参数pageNo非法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参数pageSize非法（sub_code: isp.service-error:300002）",
+      "action": "参数pageSize非法",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "参数pageSize非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.category.pageQueryCatOperationCategory&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "categoryTags": [
+          {
+            "categoryId": "1",
+            "tagEnumId": "1",
+            "tagEnumName": "test"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "参数pageNo非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6837",
+  "updatedAt": "2026-02-25",
+  "_file_stem": "dongchedi-second-category-pageQueryCatOperationCategory"
+}

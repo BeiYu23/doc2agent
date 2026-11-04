@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "doc2agent 统一接口文档 agent 版模板。字段与 api-template.md 一一对应；新增接口复制本文件后填写。所有示例值均为占位符。",
+  "id": "<platform>.<resource>.<action>",
+  "platform": "<platform>",
+  "name": "<接口名称>",
+  "description": "<一句话说明>",
+  "method": "GET",
+  "path": "/v1/example/path",
+  "baseUrl": "https://example.com",
+  "auth": {
+    "type": "none",
+    "description": "<鉴权说明：cookie / token / sign / none，及凭证放置位置>"
+  },
+  "notes": [
+    "<适用场景、调用前置条件、频率限制、注意事项；无则留空数组>"
+  ],
+  "params": [
+    {
+      "name": "param_a",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "参数 A 的含义",
+      "example": "abc123"
+    },
+    {
+      "name": "param_b",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "参数 B 的含义",
+      "example": 20
+    }
+  ],
+  "responseCodes": [
+    { "code": "0", "meaning": "成功", "action": "正常读取 data" },
+    { "code": "1001", "meaning": "参数缺失", "action": "核对必填参数" },
+    { "code": "401", "meaning": "未登录/凭证失效", "action": "刷新凭证后重试" },
+    { "code": "429", "meaning": "请求过于频繁", "action": "退避重试，降低频率" },
+    { "code": "500", "meaning": "服务端错误", "action": "记录日志，稍后重试" }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://example.com/v1/example/path?param_a=abc123' -H 'Authorization: Bearer <TOKEN>'",
+    "responseSuccess": {
+      "code": 0,
+      "message": "success",
+      "data": {
+        "id": "abc123",
+        "name": "示例数据"
+      }
+    },
+    "responseError": {
+      "code": 1001,
+      "message": "missing required param: param_a",
+      "data": null
+    }
+  },
+  "source": "<来源链接或「自测整理」>",
+  "updatedAt": "YYYY-MM-DD"
+}

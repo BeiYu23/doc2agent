@@ -1,0 +1,172 @@
+{
+  "id": "doudian.logistics-provider.logistics.ebillInfoGet",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.ebillInfoGet",
+  "description": "面单明文信息查询接口",
+  "method": "GET",
+  "path": "/logistics/ebillInfoGet",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "电子面单号",
+      "example": "UT2900675235553",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "user_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "请求用户类型，1-系统；2-业务员（快递员）；3-客服；4-总部业务人员；5-网点业务人员",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "system_source",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "系统来源，根据物流公司内部系统的代号传值，比如CRM系统，网点操作系统、小件员APP等，区分系统唯一性",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "query_reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "查询原因，根据实际用户查询的情况传值，如派件员联系收件人；处理客诉问题等",
+      "example": "处理客诉问题",
+      "_depth": 0
+    },
+    {
+      "name": "ip_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "IP地址，调用该接口数据的用户的IP地址",
+      "example": "10.10.10.10",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "若userType≠1时，则必须传入具体用户的系统ID，可以结合systemSource中的系统的用户ID",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "查询用户的所属机构编码",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "net_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "查询用户的所属机构名称",
+      "example": "1234",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "-",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10014:运单号不存在（sub_code: isv.business-failed:10014）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10014",
+      "sub_msg": "10014:运单号不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11704：当前用户单日明文查询量已耗尽，请联系平台运营处理（sub_code: isv.business-failed:11704）",
+      "action": "-",
+      "sub_code": "isv.business-failed:11704",
+      "sub_msg": "11704：当前用户单日明文查询量已耗尽，请联系平台运营处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11703：当日明文查询量已耗尽，请联系平台物流运营护理（sub_code: isv.business-failed:11703）",
+      "action": "-",
+      "sub_code": "isv.business-failed:11703",
+      "sub_msg": "11703：当日明文查询量已耗尽，请联系平台物流运营护理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4006:waybillCode不能为空（sub_code: isv.business-failed:4006）",
+      "action": "请检查waybillCode入参",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "4006:waybillCode不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11705:物流风险查询,已拦截！（sub_code: isv.business-failed:11705）",
+      "action": "本次请求被拦截，如有需要请联系物流商总部处理",
+      "sub_code": "isv.business-failed:11705",
+      "sub_msg": "11705:物流风险查询,已拦截！"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/ebillInfoGet?app_key=your_appkey_here&method=logistics.ebillInfoGet&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10014",
+      "sub_msg": "10014:运单号不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2886",
+  "updatedAt": "2024-08-07",
+  "_file_stem": "logistics-provider-logistics-ebillInfoGet"
+}

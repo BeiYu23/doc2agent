@@ -1,0 +1,200 @@
+{
+  "id": "doudian.logistics.order.logisticsEditByPack",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "order.logisticsEditByPack",
+  "description": "调用场景：\n1、支持修改一单多包（拆单发货）【/order/logisticsAddMultiPack】和合单发货【/order/logisticsAddSinglePack】接口，发货成功的订单；\n2、注意：整单发货修改物流请使用【/order/logi",
+  "method": "GET",
+  "path": "/order/logisticsEditByPack",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V3.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "父订单ID，可使用【/order/searchList】接口获取；",
+      "example": "6496679971677798670",
+      "_depth": 0
+    },
+    {
+      "name": "pack_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "包裹ID；可使用【/order/orderDetail\n】和【/order/searchList】在响应参数中获取delivery_id字段；",
+      "example": "23123123",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "9595123123",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司ID，由接口【/order/logisticsCompanyList】返回的物流公司列表获得，必填",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "已废弃。物流公司ID。请使用company_code字段。",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店ID，抖超业务使用",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "退货地址ID,通过地址库列表【/address/list】接口查询。当传入该字段时，可实现自动审核场景买家退货至商家指定退货地址：例如商家配置的售后小助手以及平台闪电退货规则，会获取发货时传入的after_sale_address_id地址id对应的地址给买家展示进行商品退回；",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求校验物流公司及物流单号失败，请稍后重试（sub_code: isp.service-error:70013）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:70013",
+      "sub_msg": "请求校验物流公司及物流单号失败，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 发货失败，请稍后重试（sub_code: isp.service-error:70011）",
+      "action": "请参考接口错误信息，修复后重试",
+      "sub_code": "isp.service-error:70011",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 发货失败，请稍后重试（sub_code: isp.service-error:70008）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:70008",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单的订单状态不允许发货（sub_code: isv.business-failed:60021）",
+      "action": "请重新获取订单信息",
+      "sub_code": "isv.business-failed:60021",
+      "sub_msg": "该订单的订单状态不允许发货"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流单号不符合规则（sub_code: isv.parameter-invalid:60017）",
+      "action": "物流单号不符合规则或不匹配",
+      "sub_code": "isv.parameter-invalid:60017",
+      "sub_msg": "物流单号不符合规则"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 物流公司编码(company_code)字段不能为空。注：物流公司ID(logisitcs_id)字段已废弃（sub_code: isv.missing-parameter:60083）",
+      "action": "请通过/order/logisticsCompanyList接口获取company_code",
+      "sub_code": "isv.missing-parameter:60083",
+      "sub_msg": "物流公司编码(company_code)字段不能为空。注：物流公司ID(logisitcs_id)字段已废弃"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60011:物流公司Code不能全为空（sub_code: isv.business-failed:60011）",
+      "action": "请通过/order/logisticsCompanyList接口获取company_code",
+      "sub_code": "isv.business-failed:60011",
+      "sub_msg": "60011:物流公司Code不能全为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 暂不支持该物流商，请检查物流商编码后重新发货（sub_code: isv.business-failed:60018）",
+      "action": "请通过/order/logisticsCompanyList接口获取company_code",
+      "sub_code": "isv.business-failed:60018",
+      "sub_msg": "暂不支持该物流商，请检查物流商编码后重新发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货失败，请稍后重试（sub_code: isv.business-failed:8888）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:8888",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不支持使用其它物流进行发货（sub_code: isv.business-failed:60026）",
+      "action": "订单不支持使用其它物流进行发货",
+      "sub_code": "isv.business-failed:60026",
+      "sub_msg": "订单不支持使用其它物流进行发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 退货地址在地址库不存在，请刷新重试（sub_code: isv.business-failed:60134）",
+      "action": "该发货地址在商家地址库不存在，商家重新选择可用的发货地址或者前往抖店PC端「订单-发货管理-物流工具-地址库管理」设置后重试",
+      "sub_code": "isv.business-failed:60134",
+      "sub_msg": "退货地址在地址库不存在，请刷新重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值（sub_code: isv.business-failed:120064）",
+      "action": "120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值",
+      "sub_code": "isv.business-failed:120064",
+      "sub_msg": "120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60023:该订单为质检订单，请在商家后台送检页面进行重新发货操作（sub_code: isv.business-failed:60023）",
+      "action": "60023:该订单为质检订单，请在商家后台送检页面进行重新发货操作",
+      "sub_code": "isv.business-failed:60023",
+      "sub_msg": "60023:该订单为质检订单，请在商家后台送检页面进行重新发货操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:70013",
+      "sub_msg": "请求校验物流公司及物流单号失败，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/539",
+  "updatedAt": "2022-12-05",
+  "_file_stem": "logistics-order-logisticsEditByPack"
+}

@@ -1,0 +1,222 @@
+{
+  "id": "doudian.bill.order.getSettleBillDetail",
+  "platform": "doudian",
+  "group": "bill",
+  "name": "order.getSettleBillDetail",
+  "description": "查询账单明细",
+  "method": "GET",
+  "path": "/order/getSettleBillDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 账单API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页数（默认为0，第一页从0开始）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页结果数,默认为20",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "查询开始时间",
+      "example": "2021-05-18 23:59:59",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "查询结束时间，建议开始时间和结束时间间隔不超过7天",
+      "example": "2021-06-18 23:59:59",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "子订单id",
+      "example": "4778345176320227200",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id",
+      "example": "12343",
+      "_depth": 0
+    },
+    {
+      "name": "pay_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结算账户 0:全部 1:微信（升级前） 2:微信 3:支付宝 4:合众支付 5:聚合账户",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "flow_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务类型，不传则默认为0 0:全部 1:鲁班广告, 2:值点商城, 3:精选联盟  4:小店自卖",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "time_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "时间类型 0:结算时间 1：下单时间",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "string",
+      "description": "返回code   100000为成功，其他为失败",
+      "example": "100000"
+    },
+    {
+      "name": "code_msg",
+      "type": "string",
+      "description": "返回信息描述，成功时返回SUCCESS，其他状态下会有失败描述",
+      "example": "SUCCESS"
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "description": "账单明细列表",
+      "example": "-"
+    },
+    {
+      "name": "total_cnt",
+      "type": "number",
+      "description": "总数",
+      "example": "0"
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "页数",
+      "example": "0"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": "每页数量",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / size大于1000，请缩小size（sub_code: isv.parameter-invalid:500）",
+      "action": "减小传入的size",
+      "sub_code": "isv.parameter-invalid:500",
+      "sub_msg": "size大于1000，请缩小size"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/getSettleBillDetail?app_key=your_appkey_here&method=order.getSettleBillDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "100000",
+        "code_msg": "SUCCESS",
+        "data": [
+          {
+            "actual_author_coupon": "0",
+            "actual_pay_promotion": "0",
+            "actual_platform_coupon": "0",
+            "actual_subsidy_amount": "0",
+            "author_coupon": "0",
+            "colonel_service_fee": "0",
+            "commission": "0",
+            "flow_type": "1",
+            "flow_type_desc": "广告",
+            "good_learn_channel_fee": "0",
+            "goods_count": "10",
+            "order_id": "4778345176320227200",
+            "order_time": "2021-04-07 11:05:56",
+            "pay_promotion": "0",
+            "pay_type": "1",
+            "pay_type_desc": "支付宝",
+            "phase_cnt": "2",
+            "phase_id": "1",
+            "phase_order_no": "1232",
+            "platform_coupon": "0",
+            "platform_service_fee": "950",
+            "post_amount": "0",
+            "product_id": "3461567267249244016",
+            "profit": "950",
+            "real_pay_amount": "0",
+            "refund": "0",
+            "request_no": "6945807072718045454",
+            "settle_amount": "950",
+            "settle_time": "2021-05-17 11:05:56",
+            "settled_pay_amount": "0",
+            "shop_coupon": "0",
+            "shop_id": "12345",
+            "shop_order_id": "4778345176320227200",
+            "shop_refund_loss": "0",
+            "total_amount": "0",
+            "total_goods_amount": "0",
+            "total_income": "950",
+            "total_outcome": "0",
+            "trade_type": "0",
+            "trade_type_desc": "已结算"
+          }
+        ],
+        "page": "0",
+        "size": "0",
+        "total_cnt": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:500",
+      "sub_msg": "size大于1000，请缩小size"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/46/1192",
+  "updatedAt": "2022-09-28",
+  "_file_stem": "bill-order-getSettleBillDetail"
+}

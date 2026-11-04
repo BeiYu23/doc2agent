@@ -1,0 +1,188 @@
+{
+  "id": "doudian.logistics-provider.logistics.collectInfoCallback",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.collectInfoCallback",
+  "description": "作为服务商确认接单的依据，在揽收前可多次更新，揽收之后取消会失败，快递员信息或者网点信息回传会驱动运单变为已接单",
+  "method": "GET",
+  "path": "/logistics/collectInfoCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "courier：快递员信息\nnetInfo：网点信息\nall：全部",
+      "example": "courier",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "更新时间戳",
+      "example": "1608556777",
+      "_depth": 0
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "唯一码",
+      "example": "1324535345646",
+      "_depth": 0
+    },
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "SF1234567890",
+      "_depth": 0
+    },
+    {
+      "name": "collect_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "揽收网点&快递员信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "courier_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员名称",
+      "example": "刘先生",
+      "_depth": 1
+    },
+    {
+      "name": "courier_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系电话",
+      "example": "1567902344",
+      "_depth": 1
+    },
+    {
+      "name": "net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点编码",
+      "example": "123455",
+      "_depth": 1
+    },
+    {
+      "name": "net_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点名称",
+      "example": "测试网点",
+      "_depth": 1
+    },
+    {
+      "name": "net_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点联系电话",
+      "example": "1567902344",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "boolean",
+      "description": "请求结果",
+      "example": "true"
+    },
+    {
+      "name": "return_code",
+      "type": "string",
+      "description": "失败编码",
+      "example": "10000"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "失败原因",
+      "example": "系统错误"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:12702）",
+      "action": "根据错误信息检查请求参数",
+      "sub_code": "isv.parameter-invalid:12702",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:12704）",
+      "action": "联系平台研发定位",
+      "sub_code": "isp.service-error:12704",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态不允许变更（sub_code: isv.business-failed:12710）",
+      "action": "已揽收不允许更新",
+      "sub_code": "isv.business-failed:12710",
+      "sub_msg": "当前状态不允许变更"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态已取消不允许更新（sub_code: isv.business-failed:12714）",
+      "action": "当前状态已取消不允许更新",
+      "sub_code": "isv.business-failed:12714",
+      "sub_msg": "当前状态已取消不允许更新"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/wmsInboundCallback?app_key=your_appkey_here&method=yunc.wmsInboundCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": "data",
+        "msg": "\"系统内部异常\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:12702",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/4455",
+  "updatedAt": "2023-09-01",
+  "_file_stem": "logistics-provider-logistics-collectInfoCallback"
+}

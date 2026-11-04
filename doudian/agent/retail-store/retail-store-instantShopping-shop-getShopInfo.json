@@ -1,0 +1,75 @@
+{
+  "id": "doudian.retail-store.instantShopping.shop.getShopInfo",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "instantShopping.shop.getShopInfo",
+  "description": "获取店铺信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "shop_user",
+      "type": "object",
+      "description": "即时零售店铺信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:750003）",
+      "action": "更换参数",
+      "sub_code": "isv.missing-parameter:750003",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常/店铺信息不存在或已撤销入驻（sub_code: isp.service-error:750001）",
+      "action": "重试；",
+      "sub_code": "isp.service-error:750001",
+      "sub_msg": "系统异常/店铺信息不存在或已撤销入驻"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.shop.getShopInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "shop_user": {
+          "instant_retail_info": {
+            "enter_type": "1",
+            "shop_identity_mode": "1"
+          },
+          "shop_biz_type": "1"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:750003",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/7377",
+  "updatedAt": "2025-03-23",
+  "_file_stem": "retail-store-instantShopping-shop-getShopInfo"
+}

@@ -1,0 +1,195 @@
+{
+  "id": "doudian.logistics.power.ebillAccountCharge",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.ebillAccountCharge",
+  "description": "面单余额充值/撤销（仅用于兼容老物流网关）",
+  "method": "GET",
+  "path": "/power/ebillAccountCharge",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "unique_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "唯一编码",
+      "example": "test26",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id_compatible",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商家ID",
+      "example": "95250",
+      "_depth": 0
+    },
+    {
+      "name": "net_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "网点编码",
+      "example": "3025100",
+      "_depth": 0
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "充值数量 若为正数，代表充值； 若为负数，代表撤销； 若为0，则为非法",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "具有独立库存时，必填 产品类型编码",
+      "example": "000000",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "具有独立库存时，必填 增值服务编码",
+      "example": "000000",
+      "_depth": 0
+    },
+    {
+      "name": "recharge_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "充值类型（1-业务人工充值/撤回、2-系统自动回收/返还，主要用于1.0切换到2.0版本后，1.0中取走的单号符合回收要求但未给商家返还单量的场景）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作员ID",
+      "example": "0000",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作员名称",
+      "example": "test011203",
+      "_depth": 0
+    },
+    {
+      "name": "op_timestamp",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "操作时间戳（毫秒级）",
+      "example": "1629278247813",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "reslut",
+      "type": "string",
+      "description": "返回结果",
+      "example": "空"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "返回消息",
+      "example": "空"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14025:撤销数量不能大于库存数量（sub_code: isv.business-failed:14025）",
+      "action": "请检查请求数量",
+      "sub_code": "isv.business-failed:14025",
+      "sub_msg": "14025:撤销数量不能大于库存数量"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14023:电子面单账户不存在, 请申请开通（sub_code: isv.business-failed:14023）",
+      "action": "请先申请电子面单账户",
+      "sub_code": "isv.business-failed:14023",
+      "sub_msg": "14023:电子面单账户不存在, 请申请开通"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11201:uniqueCode重复（sub_code: isv.business-failed:11201）",
+      "action": "请检查uniqueCode",
+      "sub_code": "isv.business-failed:11201",
+      "sub_msg": "11201:uniqueCode重复"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14039:超过扣减库存最大重试次数（sub_code: isv.business-failed:14039）",
+      "action": "请检查库存数",
+      "sub_code": "isv.business-failed:14039",
+      "sub_msg": "14039:超过扣减库存最大重试次数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14037:Redis操作异常（sub_code: isv.business-failed:14037）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:14037",
+      "sub_msg": "14037:Redis操作异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4006:充值数量不能为0（sub_code: isv.business-failed:4006）",
+      "action": "4006:充值数量不能为0",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "4006:充值数量不能为0"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/ebillAccountCharge?app_key=your_appkey_here&method=power.ebillAccountCharge&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "msg": "空",
+        "reslut": "空"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:14025",
+      "sub_msg": "14025:撤销数量不能大于库存数量"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1489",
+  "updatedAt": "2021-11-24",
+  "_file_stem": "logistics-power-ebillAccountCharge"
+}

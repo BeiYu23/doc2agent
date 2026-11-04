@@ -1,0 +1,114 @@
+{
+  "id": "doudian.pickup.logistics.overSize.queryPaymentStatus",
+  "platform": "doudian",
+  "group": "pickup",
+  "name": "logistics.overSize.queryPaymentStatus",
+  "description": "大件逆向支付信息查询",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 上门取件API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单号",
+      "example": "LBF123",
+      "_depth": 0
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务类型",
+      "example": "ReverseOverSizePickUp",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "insurance_claim_fee",
+      "type": "mixed",
+      "description": "应理赔金额（分）= 激励金额 + 保险理赔金额",
+      "example": "1"
+    },
+    {
+      "name": "insure_claim_fee",
+      "type": "mixed",
+      "description": "保险理赔金额(分)",
+      "example": "insure_claim_fee"
+    },
+    {
+      "name": "operation_time",
+      "type": "string",
+      "description": "状态对应的操作时间",
+      "example": "2022-09-06 10:00:00"
+    },
+    {
+      "name": "payment_status",
+      "type": "string",
+      "description": "1--已支付 0--核重未支付 2--未核重",
+      "example": "1"
+    },
+    {
+      "name": "payment_fee",
+      "type": "mixed",
+      "description": "用户支付金额（分）",
+      "example": "1"
+    },
+    {
+      "name": "encourage_fee",
+      "type": "mixed",
+      "description": "激励金额（分）",
+      "example": "1"
+    },
+    {
+      "name": "platform_allowance",
+      "type": "mixed",
+      "description": "平台补贴金额(分)",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.overSize.queryPaymentStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "encourage_fee": "1",
+        "insurance_claim_fee": "1",
+        "insure_claim_fee": "insure_claim_fee",
+        "operation_time": "2022-09-06 10:00:00",
+        "payment_fee": "1",
+        "payment_status": "1",
+        "platform_allowance": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1526/6707",
+  "updatedAt": "2024-07-15",
+  "_file_stem": "pickup-logistics-overSize-queryPaymentStatus"
+}

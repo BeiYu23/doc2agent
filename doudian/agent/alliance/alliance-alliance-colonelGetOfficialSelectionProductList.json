@@ -1,0 +1,221 @@
+{
+  "id": "doudian.alliance.alliance.colonelGetOfficialSelectionProductList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.colonelGetOfficialSelectionProductList",
+  "description": "团长拉取爆品合伙人选品库商品",
+  "method": "GET",
+  "path": "/alliance/colonelGetOfficialSelectionProductList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "commission_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 佣金率筛选，可指定佣金范围，支持如下格式\n  - 0,5\n  - 10,20\n  - 20,30\n  - 30,40\n  - 40,50\n  - 50,-1",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "order_by",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "asc:升序，desc:降序，默认desc",
+      "example": "desc",
+      "_depth": 0
+    },
+    {
+      "name": "month_sales",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "- 月销筛选，可筛选月销满足要求的商品，支持如下格式\n  - 1  含义是>=5千\n  - 2  含义是>=1万\n  - 3  含义是>=2万\n  - 4  含义是>=3万\n  - 5  含义是>=5万",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "query_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "可指定商品信息/店铺信息查询",
+      "example": "衣服",
+      "_depth": 0
+    },
+    {
+      "name": "shop_score",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "- 店铺分筛选，可筛选店铺分达标的商品，支持如下格式\n  - 1  含义是>=80分\n  - 2  含义是>=85分\n  - 3  含义是>=90分\n  - 4  含义是>=95分\n  - 5  含义是=100分",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "cat_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "行业类目筛选，可指定电商行业大类id",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "order_field",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 排序字段，支持如下四种排序\n  - product_price\n  - commission_rate\n  - month_sales\n  - promoters_count",
+      "example": "product_price",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "默认1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "product_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 商品价格筛选，可指定价格范围，支持如下格式\n  - 0,10\n  - 10,30\n  - 30,50\n  - 50,100\n  - 100,500\n  - 500,-1",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "service_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 服务费率筛选，可指定服务费范围，支持如下格式\n  - 0,3\n  - 3,5\n  - 5,8\n  - 10,-1",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "promote_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "- 可合作时间筛选，可指定合作到期时间范围，支持如下格式\n  - 0  含义是>=7天\n  - 1  含义是>=30天\n  - 2  含义是>=90天\n  - 3  含义是>=180天\n  - 4  含义是>=360天",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "promoters_count",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 带货达人数筛选，可筛选商品的带货达人数量，支持如下格式\n  - 100 含义是>=100个达人\n  - 200 含义是>=200个达人\n  - 500 含义是>=500个达人\n  - 1000 含义是>=1000个达人",
+      "example": "-1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "has_more",
+      "type": "boolean",
+      "description": "是否有更多",
+      "example": "true"
+    },
+    {
+      "name": "base_resp",
+      "type": "object",
+      "description": "接触返回",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "商品总数",
+      "example": "100"
+    },
+    {
+      "name": "product_list",
+      "type": "array",
+      "description": "商品列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110110:获取商品列表失败（sub_code: isv.business-failed:110110）",
+      "action": "''",
+      "sub_code": "isv.business-failed:110110",
+      "sub_msg": "110110:获取商品列表失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/colonelGetOfficialSelectionProductList?app_key=your_appkey_here&method=alliance.colonelGetOfficialSelectionProductList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "base_resp": {
+          "status_code": "0",
+          "status_message": "成功"
+        },
+        "has_more": "true",
+        "product_list": [
+          {
+            "ad_commission_rate": "10",
+            "ad_service_rate": "10",
+            "alliance_month_sales": "1234",
+            "channel_type_percent": "[15,85]",
+            "commission_rate": "10",
+            "common_ad_commission_rate": "10",
+            "common_commission_rate": "10",
+            "common_cos_type": "1",
+            "cos_type": "1",
+            "origin_activity_id": "1234",
+            "origin_institution_id": "12345123512",
+            "origin_institution_name": "团长A",
+            "product_id": "13251235123",
+            "product_img": "https://product.img",
+            "product_name": "测试商品",
+            "promoters_count": "123",
+            "promotion_end_time": "2026/06/01",
+            "promotion_end_time_desc": ">=30天",
+            "service_rate": "10",
+            "shop_id": "1234",
+            "shop_name": "测试商家",
+            "shop_score": "85",
+            "views": "100"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:110110",
+      "sub_msg": "110110:获取商品列表失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/8361",
+  "updatedAt": "2026-10-21",
+  "_file_stem": "alliance-alliance-colonelGetOfficialSelectionProductList"
+}

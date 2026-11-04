@@ -1,0 +1,123 @@
+{
+  "id": "doudian.logistics-provider.logistics.queryPaymentStatus",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.queryPaymentStatus",
+  "description": "支付结果查询",
+  "method": "GET",
+  "path": "/logistics/queryPaymentStatus",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "orderId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "4732078173688851864",
+      "_depth": 0
+    },
+    {
+      "name": "bizType",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ReversePickUp -- 上门取件（默认值，不传为上门取件业务） CabinetPickUp -- 快递柜",
+      "example": "ReversePickUp",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "paymentStatus",
+      "type": "string",
+      "description": "1--已支付 0--核重未支付 2--未核重",
+      "example": "1"
+    },
+    {
+      "name": "paymentFee",
+      "type": "number",
+      "description": "用户支付金额",
+      "example": "11"
+    },
+    {
+      "name": "insuranceClaimFee",
+      "type": "number",
+      "description": "应理赔金额=激励金 + 保险理赔金额",
+      "example": "11"
+    },
+    {
+      "name": "encourageFee",
+      "type": "number",
+      "description": "激励金",
+      "example": "11"
+    },
+    {
+      "name": "platformAllowance",
+      "type": "number",
+      "description": "平台补贴金额",
+      "example": "11"
+    },
+    {
+      "name": "insureClaimFee",
+      "type": "number",
+      "description": "保险理赔金额",
+      "example": "11"
+    },
+    {
+      "name": "operationTime",
+      "type": "string",
+      "description": "操作时间",
+      "example": "2021-01-19 10:00:00"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:10000）",
+      "action": "换个参数",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/queryPaymentStatus?app_key=your_appkey_here&method=logistics.queryPaymentStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "encourageFee": "11",
+        "insuranceClaimFee": "11",
+        "insureClaimFee": "11",
+        "operationTime": "2021-01-19 10:00:00",
+        "paymentFee": "11",
+        "paymentStatus": "1",
+        "platformAllowance": "11"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2500",
+  "updatedAt": "2022-09-14",
+  "_file_stem": "logistics-provider-logistics-queryPaymentStatus"
+}

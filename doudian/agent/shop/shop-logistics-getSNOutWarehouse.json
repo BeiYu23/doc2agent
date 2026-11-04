@@ -1,0 +1,118 @@
+{
+  "id": "doudian.shop.logistics.getSNOutWarehouse",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "logistics.getSNOutWarehouse",
+  "description": "获取SN出库数据接口",
+  "method": "GET",
+  "path": "/logistics/getSNOutWarehouse",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_start",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务开始时间，yyyyMMddHHmmss 格式",
+      "example": "20220320000000",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_end",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务结束时间，yyyyMMddHHmmss 格式",
+      "example": "20220320235959",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "list",
+      "type": "array",
+      "description": "溯源记录",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "231",
+      "example": "总数"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部异常（sub_code: isp.service-error:10001）",
+      "action": "咨询连接平台入驻人员",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统内部异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getSNOutWarehouse?app_key=your_appkey_here&method=logistics.getSNOutWarehouse&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "list": [
+          {
+            "cargo_code": "7278177207393141031",
+            "is_gov": "Y",
+            "is_gov_subsidy": "Y",
+            "is_subsidy": "Y",
+            "out_warehouse_name": "上海仓",
+            "out_warehouse_time": "20220320010101",
+            "out_warehouse_type": "销售出库",
+            "shop_order_id": "6932143218312025395",
+            "trace_code": "SHXH534NRLYW"
+          }
+        ],
+        "total": "总数"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统内部异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/6722",
+  "updatedAt": "2025-08-26",
+  "_file_stem": "shop-logistics-getSNOutWarehouse"
+}

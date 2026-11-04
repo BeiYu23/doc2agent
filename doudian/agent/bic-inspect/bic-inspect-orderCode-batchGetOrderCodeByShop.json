@@ -1,0 +1,87 @@
+{
+  "id": "doudian.bic-inspect.orderCode.batchGetOrderCodeByShop",
+  "platform": "doudian",
+  "group": "bic-inspect",
+  "name": "orderCode.batchGetOrderCodeByShop",
+  "description": "批量预绑订单码\n批量预绑订单码，下载后订单进入预绑码状态",
+  "method": "GET",
+  "path": "/orderCode/batchGetOrderCodeByShop",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BIC质检API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单号列表",
+      "example": "4652554264337710006, 4652998694668485077",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "batch_data",
+      "type": "array",
+      "description": "订单码数据",
+      "example": ""
+    },
+    {
+      "name": "delivery_type",
+      "type": "number",
+      "description": "送检方式",
+      "example": "0"
+    },
+    {
+      "name": "ship_type",
+      "type": "number",
+      "description": "出仓方式",
+      "example": "3"
+    },
+    {
+      "name": "reinspection_quota",
+      "type": "number",
+      "description": "当前复检额度",
+      "example": "500"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 存在未维护sku的订单（sub_code: isv.business-failed:-1）",
+      "action": "需要维护sku",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "存在未维护sku的订单"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "存在未维护sku的订单"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/51/1872",
+  "updatedAt": "2024-08-01",
+  "_file_stem": "bic-inspect-orderCode-batchGetOrderCodeByShop"
+}

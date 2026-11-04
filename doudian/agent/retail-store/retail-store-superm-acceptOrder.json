@@ -1,0 +1,204 @@
+{
+  "id": "doudian.retail-store.superm.acceptOrder",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.acceptOrder",
+  "description": "超市小时达接单",
+  "method": "GET",
+  "path": "/superm/acceptOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "门店id",
+      "example": "1123456",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺单id",
+      "example": "3157462748578289376209",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20201）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:20201",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50120）",
+      "action": "店铺未在灰度中，不存在接单和未接单状态",
+      "sub_code": "isv.business-failed:50120",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50121）",
+      "action": "履约状态不允许变更",
+      "sub_code": "isv.business-failed:50121",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50122）",
+      "action": "拒绝系统拒单的操作",
+      "sub_code": "isv.business-failed:50122",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50123）",
+      "action": "订单已发货，不允许拒单/接单",
+      "sub_code": "isv.business-failed:50123",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50124）",
+      "action": "订单已取消，无需拒单/接单",
+      "sub_code": "isv.business-failed:50124",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:50125）",
+      "action": "订单已完结，不允许拒单/接单",
+      "sub_code": "isv.business-failed:50125",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40101）",
+      "action": "传入履约的参数错误（需商家后台排查）",
+      "sub_code": "isv.parameter-invalid:40101",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90001:暂无接口调用权限，系统默认自动接单，如有疑问请联系客户经理咨询（sub_code: isv.business-failed:90001）",
+      "action": "暂无接口调用权限，系统默认自动接单，如有疑问请联系客户经理咨询",
+      "sub_code": "isv.business-failed:90001",
+      "sub_msg": "90001:暂无接口调用权限，系统默认自动接单，如有疑问请联系客户经理咨询"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90008:系统繁忙，请稍后重试（sub_code: isv.business-failed:90008）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:90008",
+      "sub_msg": "90008:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90000:系统繁忙，请稍后重试（sub_code: isv.business-failed:90000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:90000",
+      "sub_msg": "90000:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700007:查询订单详情错误（sub_code: isv.business-failed:700007）",
+      "action": "查询订单详情错误",
+      "sub_code": "isv.business-failed:700007",
+      "sub_msg": "700007:查询订单详情错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90007:该订单状态非备货中或部分发货，不能操作接单（sub_code: isv.business-failed:90007）",
+      "action": "90007:该订单状态非备货中或部分发货，不能操作接单",
+      "sub_code": "isv.business-failed:90007",
+      "sub_msg": "90007:该订单状态非备货中或部分发货，不能操作接单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90005:该订单已取消，不能操作接单（sub_code: isv.business-failed:90005）",
+      "action": "90005:该订单已取消，不能操作接单",
+      "sub_code": "isv.business-failed:90005",
+      "sub_msg": "90005:该订单已取消，不能操作接单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90004:该订单已发货，不能操作接单（sub_code: isv.business-failed:90004）",
+      "action": "90004:该订单已发货，不能操作接单",
+      "sub_code": "isv.business-failed:90004",
+      "sub_msg": "90004:该订单已发货，不能操作接单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90006:该订单已完结，不能操作接单（sub_code: isv.business-failed:90006）",
+      "action": "90006:该订单已完结，不能操作接单",
+      "sub_code": "isv.business-failed:90006",
+      "sub_msg": "90006:该订单已完结，不能操作接单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90013:系统繁忙，请稍后重试（sub_code: isv.business-failed:90013）",
+      "action": "90013:系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:90013",
+      "sub_msg": "90013:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90009:非本店铺订单，不允许操作，请核对订单后操作（sub_code: isv.business-failed:90009）",
+      "action": "90009:非本店铺订单，不允许操作，请核对订单后操作",
+      "sub_code": "isv.business-failed:90009",
+      "sub_msg": "90009:非本店铺订单，不允许操作，请核对订单后操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 90010:非本门店订单，不允许对该订单操作（sub_code: isv.business-failed:90010）",
+      "action": "90010:非本门店订单，不允许对该订单操作",
+      "sub_code": "isv.business-failed:90010",
+      "sub_msg": "90010:非本门店订单，不允许对该订单操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comyunc/wmsOutbound/create?app_key=your_appkey_here&method=yunc.wmsOutbound.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2959",
+  "updatedAt": "2023-09-19",
+  "_file_stem": "retail-store-superm-acceptOrder"
+}

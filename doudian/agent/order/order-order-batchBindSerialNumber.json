@@ -1,0 +1,156 @@
+{
+  "id": "doudian.order.order.batchBindSerialNumber",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.batchBindSerialNumber",
+  "description": "上传序列号",
+  "method": "GET",
+  "path": "/order/batchBindSerialNumber",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "bind_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "绑定列表;",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单号;",
+      "example": "\"6940658920780535662\"",
+      "_depth": 1
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "Sku单号;",
+      "example": "\"6940658920780535662\"",
+      "_depth": 1
+    },
+    {
+      "name": "serial_no_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "序列号信息;",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "序列号相关的信息;",
+      "example": "{\"1\",\"2\"}",
+      "_depth": 2
+    },
+    {
+      "name": "key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "序列号类型,SN - SN码，69 - 69码，IMEI - IMEI码;\n对于空调国补，内机SN对应SN_INDOOR，外机SN对应SN_OUTDOOR",
+      "example": "\"SN\"",
+      "_depth": 2
+    },
+    {
+      "name": "bind_scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "绑定场景 \n1 // 发货后\n 2 // 发货前",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total_fail_bind_cnt",
+      "type": "number",
+      "description": "绑定失败的数量;",
+      "example": "1"
+    },
+    {
+      "name": "success_bind_list",
+      "type": "array",
+      "description": "成功绑定的列表;",
+      "example": ""
+    },
+    {
+      "name": "fail_bind_list",
+      "type": "array",
+      "description": "绑定失败的列表;",
+      "example": ""
+    },
+    {
+      "name": "total_request_bind_cnt",
+      "type": "number",
+      "description": "请求绑定的数量;",
+      "example": "10"
+    },
+    {
+      "name": "total_success_bind_cnt",
+      "type": "number",
+      "description": "成功绑定的数量;",
+      "example": "5"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/addV2?app_key=your_appkey_here&method=product.addV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "create_time": "create_time",
+        "out_product_id": "out_product_id",
+        "outer_product_id": "outer_product_id",
+        "product_id": "product_id",
+        "sku": [
+          {
+            "code": "1",
+            "out_sku_id": "1",
+            "outer_sku_id": "1",
+            "sku_id": "1",
+            "spec_detail_id1": "1",
+            "spec_detail_id2": "1",
+            "spec_detail_id3": "1",
+            "spec_detail_ids": "[111,222,333]"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/7383",
+  "updatedAt": "2025-03-27",
+  "_file_stem": "order-order-batchBindSerialNumber"
+}

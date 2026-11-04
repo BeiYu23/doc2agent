@@ -1,0 +1,129 @@
+{
+  "id": "doudian.retail-product.instantShopping.product.getSchema",
+  "platform": "doudian",
+  "group": "retail-product",
+  "name": "instantShopping.product.getSchema",
+  "description": "商品发布schema-渲染接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目Id",
+      "example": "31860",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品Id",
+      "example": "1232",
+      "_depth": 0
+    },
+    {
+      "name": "spu_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "SPU id",
+      "example": "1232",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "model",
+      "type": "string",
+      "description": "schem数据、json格式",
+      "example": "{}"
+    },
+    {
+      "name": "product_data",
+      "type": "object",
+      "description": "商品数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:获取店铺标签失败（sub_code: isv.business-failed:2010001）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:获取店铺标签失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:类目ID必传（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:类目ID必传",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:类目ID必传"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110105006:不支持操作奖品商品，请前往电脑端进行管理（sub_code: isv.business-failed:110105006）",
+      "action": "110105006:不支持操作奖品商品，请前往电脑端进行管理",
+      "sub_code": "isv.business-failed:110105006",
+      "sub_msg": "110105006:不支持操作奖品商品，请前往电脑端进行管理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110105001:不支持操作质检信息相关商品，请前往电脑端进行管理（sub_code: isv.business-failed:110105001）",
+      "action": "110105001:不支持操作质检信息相关商品，请前往电脑端进行管理",
+      "sub_code": "isv.business-failed:110105001",
+      "sub_msg": "110105001:不支持操作质检信息相关商品，请前往电脑端进行管理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110201001:未查询到该类目（sub_code: isv.business-failed:110201001）",
+      "action": "110201001:未查询到该类目",
+      "sub_code": "isv.business-failed:110201001",
+      "sub_msg": "110201001:未查询到该类目"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.product.getSchema&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "model": "{}",
+        "product_data": {
+          "check_status": "3",
+          "draft_status": "0",
+          "status": "3"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:获取店铺标签失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1570/7458",
+  "updatedAt": "2025-05-14",
+  "_file_stem": "retail-product-instantShopping-product-getSchema"
+}

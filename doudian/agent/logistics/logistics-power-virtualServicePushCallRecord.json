@@ -1,0 +1,306 @@
+{
+  "id": "doudian.logistics.power.virtualServicePushCallRecord",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.virtualServicePushCallRecord",
+  "description": "虚拟号服务商通话记录回传（仅用于兼容老物流网关）",
+  "method": "GET",
+  "path": "/power/virtualServicePushCallRecord",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_a",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_x",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_b",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_y",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "subid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "calltype",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "calltime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ringingtime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "starttime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "releasetime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_duration",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ringing_duration",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "callid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "releasedir",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "releasecause",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "calldisplay",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "callrecording",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "recordurl",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ringingrecordurl",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "areacode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_xext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "collect_num_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "callstate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "-",
+      "example": "false"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-1）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/virtualServicePushCallRecord?app_key=your_appkey_here&method=power.virtualServicePushCallRecord&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "false"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1920",
+  "updatedAt": "2022-12-09",
+  "_file_stem": "logistics-power-virtualServicePushCallRecord"
+}

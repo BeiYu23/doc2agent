@@ -1,0 +1,156 @@
+{
+  "id": "doudian.logistics-provider.logistics.verifyFetchCode",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.verifyFetchCode",
+  "description": "取件码核销",
+  "method": "GET",
+  "path": "/logistics/verifyFetchCode",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家订单号(下单接口传给物流服务商的orderId)",
+      "example": "4732078173688851864",
+      "_depth": 0
+    },
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "JT0101001010",
+      "_depth": 0
+    },
+    {
+      "name": "verify_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件码",
+      "example": "6472",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "核销操作时间",
+      "example": "2021-01-19 15:12:23",
+      "_depth": 0
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "112.338589",
+      "_depth": 0
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "16.830871",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11410:取件码错误（sub_code: isv.business-failed:11410）",
+      "action": "联系技术定位",
+      "sub_code": "isv.business-failed:11410",
+      "sub_msg": "11410:取件码错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11411:重复核销（sub_code: isv.business-failed:11411）",
+      "action": "不需要核销",
+      "sub_code": "isv.business-failed:11411",
+      "sub_msg": "11411:重复核销"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11413:取消后不支持核销（sub_code: isv.business-failed:11413）",
+      "action": "无法核销",
+      "sub_code": "isv.business-failed:11413",
+      "sub_msg": "11413:取消后不支持核销"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10002:当前状态不允许核销取件码（sub_code: isv.business-failed:10002）",
+      "action": "无法核销",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "10002:当前状态不允许核销取件码"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11715:当前状态已取消不允许更新（sub_code: isv.business-failed:11715）",
+      "action": "无法核销",
+      "sub_code": "isv.business-failed:11715",
+      "sub_msg": "11715:当前状态已取消不允许更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:不存在对应的取件信息（sub_code: isv.business-failed:10000）",
+      "action": "不存在对应的取件信息",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:不存在对应的取件信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10010:物流商错误（sub_code: isv.business-failed:10010）",
+      "action": "无法核销",
+      "sub_code": "isv.business-failed:10010",
+      "sub_msg": "10010:物流商错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11412:运单号错误（sub_code: isv.business-failed:11412）",
+      "action": "无法核销",
+      "sub_code": "isv.business-failed:11412",
+      "sub_msg": "11412:运单号错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/verifyFetchCode?app_key=your_appkey_here&method=logistics.verifyFetchCode&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:11410",
+      "sub_msg": "11410:取件码错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7188",
+  "updatedAt": "2026-10-26",
+  "_file_stem": "logistics-provider-logistics-verifyFetchCode"
+}

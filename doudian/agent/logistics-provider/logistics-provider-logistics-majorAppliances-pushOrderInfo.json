@@ -1,0 +1,112 @@
+{
+  "id": "doudian.logistics-provider.logistics.majorAppliances.pushOrderInfo",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.majorAppliances.pushOrderInfo",
+  "description": "服务商推进取件单状态",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pickup_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件单号",
+      "example": "LBFxxx",
+      "_depth": 0
+    },
+    {
+      "name": "push_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "推送类型",
+      "example": "1: 推送取件员信息\n2: 推送取件结果",
+      "_depth": 0
+    },
+    {
+      "name": "courier_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上门师傅姓名(回传上门师傅信息时必传)",
+      "example": "张三",
+      "_depth": 0
+    },
+    {
+      "name": "courier_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上门师傅电话(回传上门师傅信息时必传)",
+      "example": "180xxxxxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "task_result",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "任务结果(已取件)(回告取件任务结果时必传)",
+      "example": "FETCHED",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参错误，例如枚举值传错（sub_code: isv.parameter-invalid:12004）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:12004",
+      "sub_msg": "入参错误，例如枚举值传错"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 必选字段缺失（sub_code: isv.missing-parameter:12005）",
+      "action": "检查入参",
+      "sub_code": "isv.missing-parameter:12005",
+      "sub_msg": "必选字段缺失"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:10001）",
+      "action": "重试调用",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.majorAppliances.pushOrderInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:12004",
+      "sub_msg": "入参错误，例如枚举值传错"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8272",
+  "updatedAt": "2026-05-08",
+  "_file_stem": "logistics-provider-logistics-majorAppliances-pushOrderInfo"
+}

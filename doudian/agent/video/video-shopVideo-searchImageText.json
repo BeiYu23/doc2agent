@@ -1,0 +1,156 @@
+{
+  "id": "doudian.video.shopVideo.searchImageText",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.searchImageText",
+  "description": "搜索图文",
+  "method": "GET",
+  "path": "/shopVideo/searchImageText",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "作者账号id",
+      "example": "11",
+      "_depth": 0
+    },
+    {
+      "name": "item_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图文id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "每页数量，默认10",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "product",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商品参数（使用商品id查询时，必传bind_scene，否则商品过滤无效）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id",
+      "example": "123443",
+      "_depth": 1
+    },
+    {
+      "name": "bind_scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品绑定场景（传入productId时，该参数必传，否则商品过滤无效）\n 1:只查挂车图文 2:查询所有非挂车图文 3:查询所有未绑定商品图文 4:全部",
+      "example": "4",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图文发布状态：22-用户删除，23-审核删除，102-公开，140-支持运营、用户并行审核流程，141-待审/自见，142-需要编辑终审，143-好友可见，144-审核自见",
+      "example": "102",
+      "_depth": 0
+    },
+    {
+      "name": "optional_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "可选查询参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "need_product_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要商品信息，挂车或看后搜",
+      "example": "true",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "数据",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1000001）",
+      "action": "检查输入参数",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8141",
+  "updatedAt": "2026-03-13",
+  "_file_stem": "video-shopVideo-searchImageText"
+}

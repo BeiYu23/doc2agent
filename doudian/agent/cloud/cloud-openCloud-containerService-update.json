@@ -1,0 +1,125 @@
+{
+  "id": "doudian.cloud.openCloud.containerService.update",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.containerService.update",
+  "description": "更新容器服务",
+  "method": "GET",
+  "path": "/openCloud/containerService/update",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器服务ID",
+      "example": "7345699782717079843",
+      "_depth": 0
+    },
+    {
+      "name": "instance_spec",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "容器服务规格",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "requested_cpu",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "CPU请求值",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "requested_memory",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "内存请求值",
+      "example": "1024",
+      "_depth": 1
+    },
+    {
+      "name": "limited_cpu",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "CPU上限值",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "limited_memory",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "内存上限值",
+      "example": "2048",
+      "_depth": 1
+    },
+    {
+      "name": "instance_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "实例个数",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "cron_str",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "cron表达式，无状态负载类型的容器服务无需传该参数",
+      "example": "*/1 * * * *",
+      "_depth": 1
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "火山账号ID。如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100003854",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/containerService/update?app_key=your_appkey_here&method=openCloud.containerService.update&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/6452",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-containerService-update"
+}

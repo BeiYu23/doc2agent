@@ -1,0 +1,260 @@
+{
+  "id": "doudian.alliance.buyin.originColonelEnrollableActivityList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.originColonelEnrollableActivityList",
+  "description": "接口用于团长获取可参与的二级团长活动，支持报名状态筛选，包括已提报和未提报两种状态",
+  "method": "GET",
+  "path": "/buyin/originColonelEnrollableActivityList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V3.11）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "apply_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1、我报名的活动 2、可以报名的活动",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "页码，从1开始。分页模式下生效，超过10000条会被限制",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页条数，最大20",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "commission_rate_min",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动要求的最低佣金率，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "commission_rate_max",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动要求的最高佣金率，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "service_rate_min",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动要求的最低服务费率，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "service_rate_max",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动要求的最高服务费率，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "product_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "inst_acti_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "团长名称或活动名称-模糊搜索",
+      "example": "一个团长",
+      "_depth": 0
+    },
+    {
+      "name": "retrieve_mode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "获取模式。0: 分页模式（默认），最多返回10000条数据；1: 游标模式（推荐），返回条数无限制",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cursor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "游标。游标模式下传，首页不需要传",
+      "example": "mdqwje3iorji3nr3j../fd",
+      "_depth": 0
+    },
+    {
+      "name": "colonel_buyin_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "团长百应 id",
+      "example": "4739745019873796",
+      "_depth": 0
+    },
+    {
+      "name": "cos_limit_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "佣金限制类型，1:不限制 2:仅双佣金 3:仅固定佣金",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ad_commission_rate_min",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期佣金率min，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "ad_commission_rate_max",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期佣金率max，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "ad_service_rate_min",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期服务费率min，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "ad_service_rate_max",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期服务费率max，例：5%传5",
+      "example": "5",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "数据",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数，游标模式下不返回",
+      "example": "100"
+    },
+    {
+      "name": "next_cursor",
+      "type": "string",
+      "description": "下一页游标。游标模式下返回，最后一页返回空",
+      "example": "fdkdfjie../32321jckld"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不允许继续翻页，请使用游标模式加载更多数据（sub_code: isv.parameter-invalid:8197）",
+      "action": "请使用游标模式加载更多数据",
+      "sub_code": "isv.parameter-invalid:8197",
+      "sub_msg": "不允许继续翻页，请使用游标模式加载更多数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "账号状态异常，请检查账号状态"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 16384:非法团长百应 id（sub_code: isv.business-failed:16384）",
+      "action": "16384:非法团长百应 id",
+      "sub_code": "isv.business-failed:16384",
+      "sub_msg": "16384:非法团长百应 id"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1675",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-originColonelEnrollableActivityList"
+}

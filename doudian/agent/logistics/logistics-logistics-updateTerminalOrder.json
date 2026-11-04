@@ -1,0 +1,590 @@
+{
+  "id": "doudian.logistics.logistics.updateTerminalOrder",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.updateTerminalOrder",
+  "description": "末端订单状态推送",
+  "method": "GET",
+  "path": "/logistics/updateTerminalOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "bizType",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "推送状态标识",
+      "example": "CABINET_STATUS",
+      "_depth": 0
+    },
+    {
+      "name": "cabinetNum",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递柜编码",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "cabinetName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递柜名称",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "cabinetLongitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递柜经度",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "cabinetLatitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递柜纬度",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "cabinetAddress",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "快递柜地址",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cityCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市编码",
+      "example": "220000",
+      "_depth": 1
+    },
+    {
+      "name": "provinceName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "districtCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区编码",
+      "example": "220001",
+      "_depth": 1
+    },
+    {
+      "name": "countryCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家编码",
+      "example": "cn",
+      "_depth": 1
+    },
+    {
+      "name": "streetCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "220011",
+      "_depth": 1
+    },
+    {
+      "name": "streetName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "仓前街道",
+      "_depth": 1
+    },
+    {
+      "name": "cityName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市名称",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "districtName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区名称",
+      "example": "余杭区",
+      "_depth": 1
+    },
+    {
+      "name": "detailAddress",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "爱力中心",
+      "_depth": 1
+    },
+    {
+      "name": "provinceCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "22",
+      "_depth": 1
+    },
+    {
+      "name": "orderId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单号",
+      "example": "lfo12345678",
+      "_depth": 0
+    },
+    {
+      "name": "operationTime",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作时间",
+      "example": "2022-06-15 11:20:32",
+      "_depth": 0
+    },
+    {
+      "name": "terminalInfo",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "订单信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "waybillCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "1234567",
+      "_depth": 1
+    },
+    {
+      "name": "operatorPhone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件人号码",
+      "example": "1234567",
+      "_depth": 1
+    },
+    {
+      "name": "operatorName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件人姓名",
+      "example": "李四",
+      "_depth": 1
+    },
+    {
+      "name": "express",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商编码",
+      "example": "jd",
+      "_depth": 1
+    },
+    {
+      "name": "courierTel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员号码",
+      "example": "112345656",
+      "_depth": 1
+    },
+    {
+      "name": "weightInfo",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "核重核价信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "chargedType",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计费类型",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "packageFee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包装费用",
+      "example": "12",
+      "_depth": 2
+    },
+    {
+      "name": "bulkyWeight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "泡重",
+      "example": "13",
+      "_depth": 2
+    },
+    {
+      "name": "certificate_photos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "核重核价凭证图片url列表",
+      "example": "[\"https://xxx.jpg\",\"https://xxx2.jepg\"]",
+      "_depth": 2
+    },
+    {
+      "name": "site",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "站点",
+      "example": "xx仓库",
+      "_depth": 2
+    },
+    {
+      "name": "chargedWeight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计费重量",
+      "example": "12",
+      "_depth": 2
+    },
+    {
+      "name": "is_master_and_child",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否子母单",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "bulkyRatio",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "泡重比",
+      "example": "13",
+      "_depth": 2
+    },
+    {
+      "name": "child_package_volume_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "子单体积数据",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹宽度",
+      "example": "100",
+      "_depth": 3
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹长度",
+      "example": "100",
+      "_depth": 3
+    },
+    {
+      "name": "height",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹高度",
+      "example": "100",
+      "_depth": 3
+    },
+    {
+      "name": "insuredFee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保价费用",
+      "example": "12",
+      "_depth": 2
+    },
+    {
+      "name": "traceType",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流节点",
+      "example": "TRANS",
+      "_depth": 2
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "宽度 单位cm",
+      "example": "13.0",
+      "_depth": 2
+    },
+    {
+      "name": "sumFee",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "总费用",
+      "example": "12",
+      "_depth": 2
+    },
+    {
+      "name": "actualWeight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实际重量",
+      "example": "12",
+      "_depth": 2
+    },
+    {
+      "name": "height",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "高度 单位cm",
+      "example": "13.0",
+      "_depth": 2
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "长度 单位cm",
+      "example": "13.0",
+      "_depth": 2
+    },
+    {
+      "name": "courierName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "requestId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "请求唯一标识",
+      "example": "123456789",
+      "_depth": 0
+    },
+    {
+      "name": "weightTimes",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "核重核价次数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "transferOrderResult",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "转单结果",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "transferErrCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "转单失败编码",
+      "example": "10823",
+      "_depth": 0
+    },
+    {
+      "name": "transferErrReason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "转单失败原因",
+      "example": "寄方电话加入防骚扰",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "isWeightException",
+      "type": "boolean",
+      "description": "是否重量异常",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:11000）",
+      "action": "修改参数",
+      "sub_code": "isv.parameter-invalid:11000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / bizType非法（sub_code: isv.business-failed:13001）",
+      "action": "修改bizType参数",
+      "sub_code": "isv.business-failed:13001",
+      "sub_msg": "bizType非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不存在（sub_code: isv.business-failed:11005）",
+      "action": "修改订单号",
+      "sub_code": "isv.business-failed:11005",
+      "sub_msg": "订单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 状态机初始化失败（sub_code: isv.business-failed:12001）",
+      "action": "联系技术",
+      "sub_code": "isv.business-failed:12001",
+      "sub_msg": "状态机初始化失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态不允许更新（sub_code: isv.business-failed:12002）",
+      "action": "联系技术",
+      "sub_code": "isv.business-failed:12002",
+      "sub_msg": "当前状态不允许更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / mq异常（sub_code: isv.business-failed:11002）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:11002",
+      "sub_msg": "mq异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据库异常（sub_code: isv.business-failed:11001）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:11001",
+      "sub_msg": "数据库异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据库并发异常（sub_code: isv.business-failed:11017）",
+      "action": "联系技术",
+      "sub_code": "isv.business-failed:11017",
+      "sub_msg": "数据库并发异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单已取消（sub_code: isv.business-failed:13003）",
+      "action": "联系技术",
+      "sub_code": "isv.business-failed:13003",
+      "sub_msg": "订单已取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 重量异常（sub_code: isv.business-failed:11019）",
+      "action": "二次核重核价",
+      "sub_code": "isv.business-failed:11019",
+      "sub_msg": "重量异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部系统异常（sub_code: isv.business-failed:11003）",
+      "action": "联系技术",
+      "sub_code": "isv.business-failed:11003",
+      "sub_msg": "内部系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 可重试错误码（sub_code: isv.business-failed:10002）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "可重试错误码"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/updateTerminalOrder?app_key=your_appkey_here&method=logistics.updateTerminalOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "isWeightException": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:11000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2016",
+  "updatedAt": "2026-09-16",
+  "_file_stem": "logistics-logistics-updateTerminalOrder"
+}

@@ -1,0 +1,1787 @@
+{
+  "id": "doudian.product.product.calDelayShipTimeForOpen",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.calDelayShipTimeForOpen",
+  "description": "发货时效规则预览",
+  "method": "GET",
+  "path": "/product/calDelayShipTimeForOpen",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目id",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "presell_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预售结束时间",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "delay_rule",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商品维度 延迟发货配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商家配置的结束时间",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商家配置的开始时间",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "config_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "配置类型",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "config_value",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "配置值",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "rule_scope",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "规则生效范围",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "enable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否开启",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "presell_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "预售类型",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "pickup_method",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "\"0\": 普通商品-使用物流发货, \"1\": 虚拟商品-无需物流与电子交易凭证, \"2\": 虚拟商品-使用电子交易凭证,  \"3\": 虚拟商品-充值直连",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "is_mass_auction_product",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否大众拍卖商品",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品id",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "presell_delay",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "预售结束后几天发货",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "selected_multi_times",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "选择的时效 新阶梯",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "is_c2b_switch_on",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否打开c2b定制商品开关",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "presell_config_level",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "预售类型 0 全款预售 1SKU预售 2时效SKU现货+预售  3时效SKU预售",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_delay_day",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "承诺发货时间",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "presell_delivery_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0 预售结束后发货  1支付完成后发货",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "spec_prices_v2",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "新sku字段 时效SKU",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "spec_model_code",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "规格型号编码",
+      "example": "[]",
+      "_depth": 1
+    },
+    {
+      "name": "cargo",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "绑定货品（如果传0 0 表示解绑）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "cargo_id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "source_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "source_type",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "out_sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外部sku_id-i64",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "sell_properties",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销售属性（逐步替代specDetailId1、2、3，过渡期互相兼容，大于三级规格时只能用sellProperty）。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "property_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "property_name",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "measurement",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "measure_unit_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单位id，与类目属性应该保持一致",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "measure_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单位名字（g或克等）",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "输入值",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "value_id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "property_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "property_id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "measure_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "度量衡模板id",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "度量衡内容",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "suffix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "后缀",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义度量衡扩展信息",
+      "example": "{}",
+      "_depth": 4
+    },
+    {
+      "name": "value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "值id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "suffix_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "后缀id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "值内容",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "unit_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "度量衡单位名称",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "前缀",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "prefix_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "前缀id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "value_required",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否必填",
+      "example": "false",
+      "_depth": 4
+    },
+    {
+      "name": "unit_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "度量衡单位id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "module_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模块id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义度量衡扩展信息",
+      "example": "{}",
+      "_depth": 3
+    },
+    {
+      "name": "value_spec_detail_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "规格值detailId，支持3级以上多规格，代替原specDetailId123",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "cpv_path",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销售属性值路径",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "cpid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "cpid",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "cpvid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "cpvid",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "value_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "value_name",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商编码",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuId,支持open基于skuId修改sku信息",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "stock_num_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓ID -> 库存数量",
+      "example": "{}",
+      "_depth": 1
+    },
+    {
+      "name": "service_quotation",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "sku服务报价信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "provider_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "service_template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "所属模版id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "service_quotation_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku粒度的服务商品信息\n服务报价id",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "spec_value_lib_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "懂车帝商品规格值id",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "ignore_price_update",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "忽略价格更新",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "customs_report_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "海关申报要素",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "second_measure_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "法定第二计量单位",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售卖单位",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "report_brand_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "g_model",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规格型号",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "bar_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "条形码",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "first_measure_qty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "法定第一计量数量",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "second_measure_qty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "法定第二计量数量",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "usage",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用途",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "first_measure_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "法定第一计量单位",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "hs_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "海关代码",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "report_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品名",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "price",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "delivery_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "SKU物流信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "info_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "信息计量单位",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "info_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "信息值",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "info_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流采集信息\n信息类型",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "spec_detail_name2",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级规格值名称，已废弃，open对接不再使用",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "sku_classification_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku分类信息",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "package_sku",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "组套信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sku_id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "stock_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "stock_type",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "叶子类目id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "settlement_ratio",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "子品结算分摊比例",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "extra_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "扩展信息，受选项的控制",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "pic",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品主图，1—5张",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "url",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "process_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "process_info",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "origin_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "origin_url",
+      "example": "\"\"",
+      "_depth": 5
+    },
+    {
+      "name": "process_type",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "process_type",
+      "example": "[]",
+      "_depth": 5
+    },
+    {
+      "name": "pic_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "图片类型",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "self_sell_stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "自售库存",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "quality_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品资质",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "quality_attachments",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "资质附件",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "quality_content_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "资质名",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "quality_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "资质种类名称",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "quality_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "资质id 复用",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "quality_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "资质种类key",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "bind_cargo_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "国内货品信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "delivery_type_options",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "可选发发货模式类型",
+      "example": "[]",
+      "_depth": 4
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "cargo_name",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "cost_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品价格",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "disable_stock",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否禁止编辑库存",
+      "example": "false",
+      "_depth": 4
+    },
+    {
+      "name": "cargo_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品类型",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "img_urls",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品图片",
+      "example": "[]",
+      "_depth": 4
+    },
+    {
+      "name": "tags",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品标签",
+      "example": "[]",
+      "_depth": 4
+    },
+    {
+      "name": "cargo_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "need_validate_price",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要校验价格",
+      "example": "false",
+      "_depth": 4
+    },
+    {
+      "name": "stock",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品库存",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "main_image_three_to_four",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品主图3:4，1—5张",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "url",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "pic_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "pic_type",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "process_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "process_info",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "origin_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "origin_url",
+      "example": "\"\"",
+      "_depth": 5
+    },
+    {
+      "name": "process_type",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "process_type",
+      "example": "[]",
+      "_depth": 5
+    },
+    {
+      "name": "combo_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "combo_num",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "stock_num",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "sell_properties",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销售属性",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "value_spec_detail_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "规格值detailId，支持3级以上多规格，代替原specDetailId123",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "property_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "property_name",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "cpv_path",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销售属性值路径",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "cpvid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "cpvid",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "cpid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "cpid",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "property_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "property_id",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "measurement",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "measure_unit_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单位id，与类目属性应该保持一致",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "输入值",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "measure_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单位名字（g或克等）",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "measure_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义度量衡扩展信息",
+      "example": "{}",
+      "_depth": 4
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "度量衡内容",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "度量衡模板id",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "value_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "value_name",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "value_id",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sku实时价格",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "short_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "short_name",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片url",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "ori_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "ori_price",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "sub_sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sub_sku_id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "sub_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sub_product_id",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "spec_detail_name1",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级规格值名称，已废弃，open对接不再使用",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "imei_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "IMEI数量",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "copied_sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "复制创建时，记录原商品skuId",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "quantity_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "外卖份量信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "unit_prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "unit_prefix",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "unit_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "unit_desc",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "value",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "unit_name",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "unit_name",
+      "example": "[]",
+      "_depth": 2
+    },
+    {
+      "name": "tax_exemption_sku_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "海南免税：Sku 信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "净含量",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "suit_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "套装数量",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "is_suit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否套装（0 否 1 是）",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "outer_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部sku_id-string",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "supply_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货价,单位：分，nil代表不修改，0代表清空",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "multi_time_stocks",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "时效库存明细",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存数",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "time_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时效描述",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "time_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "时效类型",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "barcodes",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "条码",
+      "example": "[]",
+      "_depth": 1
+    },
+    {
+      "name": "product_code",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "SKU产品编码",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二维码码值",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "spec_detail_name3",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级规格值名称，已废弃，open对接不再使用",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "gold_process_charge",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "黄金加工费，单位：分，nil代表不修改",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "sku_status",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "sku状态是否有效，true上架 false下架",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "presell_delay",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "SKU维度预售发货延迟时间",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "sku_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存类型",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "step_stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "阶梯库存数",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "stock_num",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "code",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "batch_stocks",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批次库存",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部仓id，仅区域库存模式填写",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "batch_stock_items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批次库存项",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存数",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "unique_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "唯一码",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "batch_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "批次类型：0为时效 1为唯一码",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品类型",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "open_logistics_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "跨境：物流信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "customs_clear_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "通关模式，1BBC 2BC 3邮关",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "origin_country_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "原产国id",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "source_country_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货源国id",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "cross_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家仓id",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "tax_payer",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "税金承担方，0商家承担，1用户承担",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "net_weight_qty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品净重",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "brand_country_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "品牌所在地id",
+      "example": "0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "not_can_calculate_code",
+      "type": "mixed",
+      "description": "不能计算发货时效的错误码",
+      "example": "0"
+    },
+    {
+      "name": "not_can_calculate_msg",
+      "type": "string",
+      "description": "不能计算发货时效的错误文案",
+      "example": "\"\""
+    },
+    {
+      "name": "delay_ship_time_tip",
+      "type": "string",
+      "description": "发货时效计算说明文案",
+      "example": "\"\""
+    },
+    {
+      "name": "delay_ship_time_results",
+      "type": "array",
+      "description": "发货时效计算结果列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/calDelayShipTimeForOpen?app_key=your_appkey_here&method=product.calDelayShipTimeForOpen&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "delay_ship_time_results": [
+          {
+            "delay_ship_time_desc_items": [
+              {
+                "payment_period": "\"\"",
+                "ship_time_desc": "\"\"",
+                "ship_time_rule_desc": "\"\""
+              }
+            ],
+            "delay_ship_time_desc_title": "\"\""
+          }
+        ],
+        "delay_ship_time_tip": "\"\"",
+        "not_can_calculate_code": "0",
+        "not_can_calculate_msg": "\"\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/8066",
+  "updatedAt": "2026-01-29",
+  "_file_stem": "product-product-calDelayShipTimeForOpen"
+}

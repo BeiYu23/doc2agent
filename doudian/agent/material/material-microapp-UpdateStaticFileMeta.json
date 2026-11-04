@@ -1,0 +1,117 @@
+{
+  "id": "doudian.material.microapp.UpdateStaticFileMeta",
+  "platform": "doudian",
+  "group": "material",
+  "name": "microapp.UpdateStaticFileMeta",
+  "description": "ISV上传静态资源后绑定相对路径",
+  "method": "GET",
+  "path": "/microapp/UpdateStaticFileMeta",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "存储类型。 1: 素材中心。 3:ImageX",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "path",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件相对路径，前端请求获取文件时需填该值",
+      "example": "/test/path/1.jpg",
+      "_depth": 0
+    },
+    {
+      "name": "material_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "素材id，由素材中心接口返回",
+      "example": "1111111111",
+      "_depth": 0
+    },
+    {
+      "name": "file_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "文件大小, 单位为B",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数有误（sub_code: isv.parameter-invalid:8000002）",
+      "action": "请参考文档填写正确参数",
+      "sub_code": "isv.parameter-invalid:8000002",
+      "sub_msg": "参数有误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / appKey参数有误（sub_code: isv.parameter-invalid:8000006）",
+      "action": "请填写正确的 appKey",
+      "sub_code": "isv.parameter-invalid:8000006",
+      "sub_msg": "appKey参数有误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部错误（sub_code: isp.service-error:8000001）",
+      "action": "联系开放平台同学解决",
+      "sub_code": "isp.service-error:8000001",
+      "sub_msg": "内部错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部错误（sub_code: isp.service-error:8000004）",
+      "action": "联系开放平台同学解决",
+      "sub_code": "isp.service-error:8000004",
+      "sub_msg": "内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 静态资源path字段有重复值，请检查（sub_code: isv.business-failed:9900007）",
+      "action": "使用新的path",
+      "sub_code": "isv.business-failed:9900007",
+      "sub_msg": "静态资源path字段有重复值，请检查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/microapp/UpdateStaticFileMeta?app_key=your_appkey_here&method=microapp.UpdateStaticFileMeta&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:8000002",
+      "sub_msg": "参数有误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/2884",
+  "updatedAt": "2024-12-25",
+  "_file_stem": "material-microapp-UpdateStaticFileMeta"
+}

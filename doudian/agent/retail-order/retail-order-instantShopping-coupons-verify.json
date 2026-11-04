@@ -1,0 +1,208 @@
+{
+  "id": "doudian.retail-order.instantShopping.coupons.verify",
+  "platform": "doudian",
+  "group": "retail-order",
+  "name": "instantShopping.coupons.verify",
+  "description": "即时零售验券",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "batch_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "请求唯一编号，防重入，默认当前时间戳",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "frozen_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "冻结id",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "cert_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "卡券类型（0，1 - 三方卡券，平台卡券）",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "check_verify_order_id",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否校验订单id",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "cert_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卡密",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "verify_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "核销时间,0则用当前时间",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "verify_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "核销次数，默认1",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "verify_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "核销userid",
+      "example": "xxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "verify_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "核销订单id",
+      "example": "6943171580507722926",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店Id（提货券核销必传）",
+      "example": "155317660",
+      "_depth": 0
+    },
+    {
+      "name": "cert_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "卡号券码",
+      "example": "69519975504849",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 请传入正确的参数（sub_code: isv.missing-parameter:000002）",
+      "action": "传入正确的StoreId",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "请传入正确的参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010002:非未使用状态电子凭证禁止核销（sub_code: isv.business-failed:010002）",
+      "action": "010002:非未使用状态电子凭证禁止核销",
+      "sub_code": "isv.business-failed:010002",
+      "sub_msg": "010002:非未使用状态电子凭证禁止核销"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 核销码与订单不匹配，请重新核对订单（sub_code: isv.business-failed:010021）",
+      "action": "核销码与订单不匹配，请重新核对订单",
+      "sub_code": "isv.business-failed:010021",
+      "sub_msg": "核销码与订单不匹配，请重新核对订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010017:未在有效期内禁止核销（sub_code: isv.business-failed:010017）",
+      "action": "010017:未在有效期内禁止核销",
+      "sub_code": "isv.business-failed:010017",
+      "sub_msg": "010017:未在有效期内禁止核销"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010006:找不到该电子凭证（sub_code: isv.business-failed:010006）",
+      "action": "010006:找不到该电子凭证",
+      "sub_code": "isv.business-failed:010006",
+      "sub_msg": "010006:找不到该电子凭证"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 009999:系统内部错误（sub_code: isv.business-failed:009999）",
+      "action": "009999:系统内部错误",
+      "sub_code": "isv.business-failed:009999",
+      "sub_msg": "009999:系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020005:查询订单失败（sub_code: isv.business-failed:020005）",
+      "action": "020005:查询订单失败",
+      "sub_code": "isv.business-failed:020005",
+      "sub_msg": "020005:查询订单失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单与核销码不匹配，请重新核对订单（sub_code: isv.business-failed:020014）",
+      "action": "订单与核销码不匹配，请重新核对订单",
+      "sub_code": "isv.business-failed:020014",
+      "sub_msg": "订单与核销码不匹配，请重新核对订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020027:门店查询失败（sub_code: isv.business-failed:020027）",
+      "action": "020027:门店查询失败",
+      "sub_code": "isv.business-failed:020027",
+      "sub_msg": "020027:门店查询失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.coupons.verify&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "请传入正确的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1531/7692",
+  "updatedAt": "2025-08-11",
+  "_file_stem": "retail-order-instantShopping-coupons-verify"
+}

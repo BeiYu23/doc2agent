@@ -1,0 +1,243 @@
+{
+  "id": "doudian.logistics-provider.logistics.updateOrgManagedArea",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.updateOrgManagedArea",
+  "description": "更新服务商更新组织（省区）管理范围接口",
+  "method": "GET",
+  "path": "/logistics/updateOrgManagedArea",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "org_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "组织编码（网点编码）",
+      "example": "test_011",
+      "_depth": 0
+    },
+    {
+      "name": "change_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "变更类型\nSAVE：添加/更新范围；\nDEL-删除范围",
+      "example": "SAVE",
+      "_depth": 0
+    },
+    {
+      "name": "area_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "范围类型\nLEVEL_ADDRESS：行政区划",
+      "example": "LEVEL_ADDRESS",
+      "_depth": 0
+    },
+    {
+      "name": "managed_level_area",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "组织管理范围列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称（必填）",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市编码",
+      "example": "110000",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市名称",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "110108",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "海淀区",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "110108018",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "花园路街道",
+      "_depth": 1
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "中兴大厦",
+      "_depth": 1
+    },
+    {
+      "name": "lon",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "121.223344",
+      "_depth": 1
+    },
+    {
+      "name": "lat",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "37.334422",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "fail_records",
+      "type": "array",
+      "description": "失败记录",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 必填参数为空（sub_code: isv.business-failed:-2）",
+      "action": "修正入参",
+      "sub_code": "isv.business-failed:-2",
+      "sub_msg": "必填参数为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-3）",
+      "action": "修正入参",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 入参对象为空（sub_code: isv.business-failed:-7）",
+      "action": "修正入参",
+      "sub_code": "isv.business-failed:-7",
+      "sub_msg": "入参对象为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 调用下游RPC异常（sub_code: isv.business-failed:-600）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:-600",
+      "sub_msg": "调用下游RPC异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / DB写入异常（sub_code: isv.business-failed:-301）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:-301",
+      "sub_msg": "DB写入异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/updateOrgManagedArea?app_key=your_appkey_here&method=logistics.updateOrgManagedArea&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fail_records": [
+          {
+            "fail_desc": "xx",
+            "org_info": {
+              "city_code": "xx",
+              "city_name": "xx",
+              "detail_address": "xx",
+              "district_code": "xx",
+              "district_name": "xx",
+              "lat": "xx",
+              "lon": "xx",
+              "province_code": "xx",
+              "province_name": "xx",
+              "street_code": "xx",
+              "street_name": "xx"
+            }
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-2",
+      "sub_msg": "必填参数为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5678",
+  "updatedAt": "2025-06-10",
+  "_file_stem": "logistics-provider-logistics-updateOrgManagedArea"
+}

@@ -1,0 +1,191 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyProduct.getSupplyProductList",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyProduct.getSupplyProductList",
+  "description": "获取供销产品列表",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "主状态值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sub_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "子状态值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "create_start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建开始时间",
+      "example": "1657800575",
+      "_depth": 0
+    },
+    {
+      "name": "create_end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建结束时间",
+      "example": "1657800575",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码，第一页从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页大小， 不传或超过50会默认设置为50",
+      "example": "50",
+      "_depth": 0
+    },
+    {
+      "name": "update_start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "更新开始时间",
+      "example": "1657800575",
+      "_depth": 0
+    },
+    {
+      "name": "update_end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "更新结束时间",
+      "example": "1657800575",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回值",
+      "example": ""
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "当前页数",
+      "example": "1"
+    },
+    {
+      "name": "size",
+      "type": "mixed",
+      "description": "每页大小",
+      "example": "50"
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总页数",
+      "example": "3"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3200:创建分销品错误（sub_code: isv.business-failed:3200）",
+      "action": "3200:创建分销品错误",
+      "sub_code": "isv.business-failed:3200",
+      "sub_msg": "3200:创建分销品错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.supplyProduct.getSupplyProductList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "category_detail": {
+              "first_cid": "11111111",
+              "first_cname": "一级类目名称",
+              "fourth_cid": "111111",
+              "fourth_cname": "四级类目名称",
+              "second_cid": "1111111",
+              "second_cname": "二级类目名称",
+              "third_cid": "11111",
+              "third_cname": "三级类目名称"
+            },
+            "create_time": "1657800575",
+            "distribution_status": "distributable",
+            "img": "\\\"https://sf6-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\\\"",
+            "name": "测试名称",
+            "non_distributable_reason": "因货品信息缺失，该货品已在抖店已不可被分销，请尽快完成货品信息的补充，补充后货品将在次日于\"抖店-精选货源\"中恢复展示。",
+            "original_category_detail": {
+              "first_cid": "111111",
+              "first_cname": "一级类目名称",
+              "fourth_cid": "44444",
+              "fourth_cname": "四级类目名称",
+              "second_cid": "22222",
+              "second_cname": "二级类目名称",
+              "third_cid": "33333",
+              "third_cname": "三级类目名称"
+            },
+            "outer_product_id": "11111111",
+            "product_id": "111111111",
+            "standard_brand_id": "13123123",
+            "status": "1",
+            "sub_status": "1",
+            "update_time": "1657800575",
+            "zhili_reject_reasons": "[\"分销品标题未明确描述分销品品名，请重新填写。\"]"
+          }
+        ],
+        "page": "1",
+        "size": "50",
+        "total": "3"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:3200",
+      "sub_msg": "3200:创建分销品错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/2549",
+  "updatedAt": "2026-08-05",
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-getSupplyProductList"
+}

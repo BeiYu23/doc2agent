@@ -1,0 +1,224 @@
+{
+  "id": "doudian.logistics.power.notifyRelationTicket",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.notifyRelationTicket",
+  "description": "物流商关联工单推送（仅用于兼容老物流网关）",
+  "method": "GET",
+  "path": "/power/notifyRelationTicket",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "bp_ticket_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_create_first_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_create_second_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_create_third_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_create_description",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_close_first_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_close_second_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_close_third_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_close_description",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "compensate_state",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "compensate_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "product_volume",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "attachment",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "extension",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "request_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_create_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_close_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:工单已完结（sub_code: isv.business-failed:10000）",
+      "action": "10000:工单已完结",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:工单已完结"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/notifyRelationTicket?app_key=your_appkey_here&method=power.notifyRelationTicket&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:工单已完结"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1560",
+  "updatedAt": "2021-12-27",
+  "_file_stem": "logistics-power-notifyRelationTicket"
+}

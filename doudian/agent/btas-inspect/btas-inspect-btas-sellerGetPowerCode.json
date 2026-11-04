@@ -1,0 +1,88 @@
+{
+  "id": "doudian.btas-inspect.btas.sellerGetPowerCode",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.sellerGetPowerCode",
+  "description": "商家_电子面单取号",
+  "method": "GET",
+  "path": "/btas/sellerGetPowerCode",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓, 物流商, , 供应商, 店铺"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "43534113",
+      "_depth": 0
+    },
+    {
+      "name": "sc_receipt_courier_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "质检机构物流编号。1-顺丰",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sc_receipt_order_insurance_cost",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "报价金额（分）",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "power_order_track_no",
+      "type": "string",
+      "description": "物流单号",
+      "example": "SF342341333111"
+    },
+    {
+      "name": "s_c_receipt_courier_code_count",
+      "type": "mixed",
+      "description": "取号次数，当前限制为4",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/btas/sellerGetPowerCode?app_key=your_appkey_here&method=btas.sellerGetPowerCode&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "power_order_track_no": "SF342341333111",
+        "s_c_receipt_courier_code_count": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/2944",
+  "updatedAt": "2024-11-19",
+  "_file_stem": "btas-inspect-btas-sellerGetPowerCode"
+}

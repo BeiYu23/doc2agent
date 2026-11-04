@@ -1,0 +1,53 @@
+{
+  "id": "doudian.btas-inspect.order.modifyQualityCheckType",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "order.modifyQualityCheckType",
+  "description": "修改可质检订单质检类型",
+  "method": "GET",
+  "path": "/order/modifyQualityCheckType",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "6917531773719545725",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/modifyQualityCheckType?app_key=your_appkey_here&method=order.modifyQualityCheckType&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/3590",
+  "updatedAt": "2023-04-23",
+  "_file_stem": "btas-inspect-order-modifyQualityCheckType"
+}

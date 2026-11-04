@@ -1,0 +1,97 @@
+{
+  "id": "doudian.industry.supplyChain.procurement.queryProcurementOrder",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "supplyChain.procurement.queryProcurementOrder",
+  "description": "查询采购单信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺单号",
+      "example": "691111111111111111111111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "采购单信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.procurement.queryProcurementOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "complete_time": "1766124572",
+            "create_time": "1766124572",
+            "detail_list": [
+              {
+                "author_subsidy_amount": "100",
+                "commission_amount": "100",
+                "estimated_procurement_amount": "100",
+                "estimated_procurement_price": "100",
+                "gov_subsidy_amount_info": {
+                  "government_subsidy": "100",
+                  "platform_subsidy": "100",
+                  "shop_subsidy": "100"
+                },
+                "order_no": "PO75792201184678",
+                "pay_subsidy_amount": "100",
+                "platform_subsidy_amount": "100",
+                "procurement_amount": "100",
+                "product_id": "3788402848050000000",
+                "product_name": "xx商品",
+                "quantity": "1",
+                "sku_order_id": "691111111111111111111111"
+              }
+            ],
+            "distributor_id": "206400000",
+            "distributor_name": "xx公司",
+            "order_no": "PO75792201184678",
+            "order_status": "100",
+            "pay_time": "1766124572",
+            "shop_order_id": "691111111111111111111111",
+            "supplier_id": "148000074",
+            "supplier_name": "xx公司"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/7969",
+  "updatedAt": "2025-12-19",
+  "_file_stem": "industry-supplyChain-procurement-queryProcurementOrder"
+}

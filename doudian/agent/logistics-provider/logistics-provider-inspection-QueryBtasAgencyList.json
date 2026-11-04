@@ -1,0 +1,77 @@
+{
+  "id": "doudian.logistics-provider.inspection.QueryBtasAgencyList",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "inspection.QueryBtasAgencyList",
+  "description": "查询btas质检机构列表",
+  "method": "GET",
+  "path": "/inspection/QueryBtasAgencyList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺id，优先按店铺id查询",
+      "example": "11123",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商id",
+      "example": "23231",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "details",
+      "type": "array",
+      "description": "机构列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/inspection/QueryBtasAgencyList?app_key=your_appkey_here&method=inspection.QueryBtasAgencyList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "details": [
+          {
+            "agency_id": "47",
+            "agency_name": "采货侠"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2885",
+  "updatedAt": "2023-03-08",
+  "_file_stem": "logistics-provider-inspection-QueryBtasAgencyList"
+}

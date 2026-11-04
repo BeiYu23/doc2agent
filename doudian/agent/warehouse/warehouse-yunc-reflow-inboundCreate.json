@@ -1,0 +1,329 @@
+{
+  "id": "doudian.warehouse.yunc.reflow.inboundCreate",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.reflow.inboundCreate",
+  "description": "翻仓入库单创建接口",
+  "method": "GET",
+  "path": "/yunc/reflow/inboundCreate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码（仅允许仓库类型为翻仓）",
+      "example": "W1009",
+      "_depth": 0
+    },
+    {
+      "name": "inbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库单号",
+      "example": "IO123456",
+      "_depth": 0
+    },
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "上游业务单号",
+      "example": "CG123456",
+      "_depth": 0
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "BD10000028",
+      "_depth": 0
+    },
+    {
+      "name": "owner_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主名称",
+      "example": "3PL翻仓测试货主",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "单据类型（CGRK-采购入库，XTRK-销退入库，DBRK-调拨入库，SCRK-生产入库，QTRK-其他入库）",
+      "example": "CGRK",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "单据状态",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商编码",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商名称",
+      "example": "供应商名称",
+      "_depth": 0
+    },
+    {
+      "name": "shopid",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "店铺ID",
+      "example": "1111235707",
+      "_depth": 0
+    },
+    {
+      "name": "shop_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺名称",
+      "example": "店铺名称",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注内容",
+      "_depth": 0
+    },
+    {
+      "name": "sale_outbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售出库单号",
+      "example": "OB123456",
+      "_depth": 0
+    },
+    {
+      "name": "sale_way_bill_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售运单号",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "sale_express",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售快递商编码",
+      "example": "zhongtong",
+      "_depth": 0
+    },
+    {
+      "name": "sale_express_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售快递商名称",
+      "example": "中通速递",
+      "_depth": 0
+    },
+    {
+      "name": "sale_return_way_bill_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销退运单号",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "sale_return_express",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销退快递商编码",
+      "example": "中通速递",
+      "_depth": 0
+    },
+    {
+      "name": "sale_return_express_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销退快递商名称",
+      "example": "zhongtong",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "入库单明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行号（同一入库单下行号唯一）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "7072665065857597721",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品名称",
+      "example": "货品名称",
+      "_depth": 1
+    },
+    {
+      "name": "barcode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品条码",
+      "example": "123456",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP商品ID",
+      "example": "E123456",
+      "_depth": 1
+    },
+    {
+      "name": "expect_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "预计入库数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "actual_qty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实际入库数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "order_create_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "wms系统单据创建时间",
+      "example": "1665460015",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "错误码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误信息",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1001）",
+      "action": "联系系统负责人处理",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 货主、店铺信息不合法（sub_code: isv.business-failed:13001）",
+      "action": "确定店铺和货主的有效性",
+      "sub_code": "isv.business-failed:13001",
+      "sub_msg": "货主、店铺信息不合法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/reflow/inboundCreate?app_key=your_appkey_here&method=yunc.reflow.inboundCreate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2278",
+  "updatedAt": "2022-10-11",
+  "_file_stem": "warehouse-yunc-reflow-inboundCreate"
+}

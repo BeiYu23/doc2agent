@@ -1,0 +1,98 @@
+{
+  "id": "doudian.recycle.shop.setFinalPayment",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "shop.setFinalPayment",
+  "description": "设置尾款信息",
+  "method": "GET",
+  "path": "/shop/setFinalPayment",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "final_price",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "尾款价格",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "product_imgs",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品图片信息",
+      "example": "https://tosv.boe.byted.org/obj/ecom-shop-material/v1_kjmqYuUBq_70574132456860388280201_818a633a4fcf03f65f4f7211adc34afa_sx_395228_www800-800",
+      "_depth": 0
+    },
+    {
+      "name": "product_dscription",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "描述一下这个商品",
+      "example": "非常热销的switch游戏手柄",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺单号",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "operate_user_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作人信息",
+      "example": "nishizhu95",
+      "_depth": 0
+    },
+    {
+      "name": "source",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "0默认/1Open调用-创建/2Open调用-更新",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/setFinalPayment?app_key=your_appkey_here&method=shop.setFinalPayment&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/1659",
+  "updatedAt": "2022-02-17",
+  "_file_stem": "recycle-shop-setFinalPayment"
+}

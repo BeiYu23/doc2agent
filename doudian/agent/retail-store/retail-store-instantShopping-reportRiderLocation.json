@@ -1,0 +1,202 @@
+{
+  "id": "doudian.retail-store.instantShopping.reportRiderLocation",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "instantShopping.reportRiderLocation",
+  "description": "用于自配送场景中，商家向抖音回传骑手位置信息，抖音会向用户展示骑手位置",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音电商shop order单id",
+      "example": "6917539978356459031",
+      "_depth": 0
+    },
+    {
+      "name": "distribution_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "三方运力服务商，枚举：\nSF:顺丰同城\nDADA:达达\nFENG_NIAO:蜂鸟配送\nMEI_TUAN:美团配送\nSHAN_SONG:闪送\nDIAN_WO_DA:点我达\nUU:UU跑腿\nXIN_TIAN_WENG:信天翁\nSAN_LIU_WU:365跑腿\nCAO_CAO:曹操跑腿\nAI_PAO_TUI:爱跑腿\nKUAI_PAO_ZHE:快跑者\nJI_KE_KUAI_SONG:极客快送\nTONG_DA:同达\nSHENG_HUO_BAN_JING:生活半径\nLIN_QU:临趣\nQU_SONG:趣送\nKUAI_FU_WU:快服务\nCAI_NIAO_XIN_LIAN_MENG:菜鸟新联盟\nFENG_XIAN_SHENG:风先生\nLAI_DA_PEI_SONG:来答配送\nHAO_JI_PAO_TUI:好急跑腿\nSONG_GE_DONG_XI_PAO_TUI:送个东西跑腿\nKAO_PU_SONG:靠谱送\nKUAI_NAN_PAO_TUI:快男跑腿\nGUO_XIAO_DI:裹小递\nMERCHANT:商家自配送,使用此枚举需要提前和平台沟通",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "distribution_delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "三方运单号，与发货运单号保持一致",
+      "example": "SF1124756994790",
+      "_depth": 0
+    },
+    {
+      "name": "rider_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手姓名；",
+      "example": "王某某",
+      "_depth": 0
+    },
+    {
+      "name": "rider_phone_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手手机号类型，0是真实号，1是隐私号",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "rider_phone",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手电话；",
+      "example": "12341231111",
+      "_depth": 0
+    },
+    {
+      "name": "rider_longitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手经度，高德坐标系",
+      "example": "120.518486",
+      "_depth": 0
+    },
+    {
+      "name": "rider_latitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手维度，高德坐标系",
+      "example": "36.894333",
+      "_depth": 0
+    },
+    {
+      "name": "report_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "骑手上报时间戳，十位时间戳",
+      "example": "1693478310",
+      "_depth": 0
+    },
+    {
+      "name": "rider_coordinate_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "坐标系类型0 高德 1 百度",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_order_id",
+      "type": "string",
+      "description": "抖音电商shop order单id",
+      "example": "6917539978356459031"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询不到对应的运力订单（sub_code: isv.business-failed:20111）",
+      "action": "查看传递订单是否合法",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "查询不到对应的运力订单"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20100）",
+      "action": "系统错误",
+      "sub_code": "isp.service-error:20100",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法的请求参数（sub_code: isv.parameter-invalid:40100）",
+      "action": "查看请求参数是否合理",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "非法的请求参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 503:快递发货订单不允许上报骑手位置（sub_code: isv.business-failed:503）",
+      "action": "503:快递发货订单不允许上报骑手位置",
+      "sub_code": "isv.business-failed:503",
+      "sub_msg": "503:快递发货订单不允许上报骑手位置"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 701:数据查询失败，请稍后重试（sub_code: isv.business-failed:701）",
+      "action": "701:数据查询失败，请稍后重试",
+      "sub_code": "isv.business-failed:701",
+      "sub_msg": "701:数据查询失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 99999:合约单查询失败，请稍后重试（sub_code: isv.business-failed:99999）",
+      "action": "99999:合约单查询失败，请稍后重试",
+      "sub_code": "isv.business-failed:99999",
+      "sub_msg": "99999:合约单查询失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 702:查询数据失败，请稍后重试（sub_code: isv.business-failed:702）",
+      "action": "702:查询数据失败，请稍后重试",
+      "sub_code": "isv.business-failed:702",
+      "sub_msg": "702:查询数据失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 505:查询数据不存在，请稍后重试（sub_code: isv.business-failed:505）",
+      "action": "505:查询数据不存在，请稍后重试",
+      "sub_code": "isv.business-failed:505",
+      "sub_msg": "505:查询数据不存在，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comcrossborder/msg/push?app_key=your_appkey_here&method=crossborder.msg.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "receive": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "查询不到对应的运力订单"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/4775",
+  "updatedAt": "2024-04-09",
+  "_file_stem": "retail-store-instantShopping-reportRiderLocation"
+}

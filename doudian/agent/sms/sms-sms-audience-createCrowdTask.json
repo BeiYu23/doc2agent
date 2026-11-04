@@ -1,0 +1,207 @@
+{
+  "id": "doudian.sms.sms.audience.createCrowdTask",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.audience.createCrowdTask",
+  "description": "创建种子人群任务",
+  "method": "GET",
+  "path": "/sms/audience/createCrowdTask",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "crowd_task",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "种子人群任务",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "id_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "ID类型：2-MD5 32位小写加密手机号",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "lookalike_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "预期放大人群数量",
+      "example": "10000",
+      "_depth": 1
+    },
+    {
+      "name": "cate_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "类目id",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "first_cid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "一级类目",
+      "example": "200001",
+      "_depth": 2
+    },
+    {
+      "name": "second_cid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "二级类目",
+      "example": "210001",
+      "_depth": 2
+    },
+    {
+      "name": "crowd_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "人群包任务名称, 对应唯一一个人群包，不允许重复",
+      "example": "订购高转人群",
+      "_depth": 1
+    },
+    {
+      "name": "seed_source",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "种子来源，见listSeedMeta接口SeedSourceList的取值，取英文赋值",
+      "example": "PDD",
+      "_depth": 1
+    },
+    {
+      "name": "tos_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人群包TOS地址，格式参考接入文档",
+      "example": "http://xxx.com",
+      "_depth": 1
+    },
+    {
+      "name": "seed_rule_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人群规则类型，见listSeedMeta接口SeedRuleTypes的取值，取英文赋值",
+      "example": "PURCHASE_USERS",
+      "_depth": 1
+    },
+    {
+      "name": "liveroom_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "透传的直播间参数",
+      "example": "<\"live_room_id\":\"123\">",
+      "_depth": 1
+    },
+    {
+      "name": "target_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务目标，见listSeedMeta接口TargetTypes的取值，取英文赋值",
+      "example": "NEW_BUY",
+      "_depth": 1
+    },
+    {
+      "name": "seed_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "种子类型，见listSeedMeta接口SeedTypes的取值，取英文赋值",
+      "example": "MEMBERSHIP",
+      "_depth": 1
+    },
+    {
+      "name": "crowd_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "人群包信息 2-公域种子人群 3-规则圈选种子人群，4-行为圈选，5-直播间人群",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "exclude_seed",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否剔除种子",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "seed_rule_period",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "种子人群规则周期，见listSeedMeta接口SeedRulePeriods的取值",
+      "example": "30",
+      "_depth": 1
+    },
+    {
+      "name": "target_type_period",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "目标类型周期，取值1/7/15，见listSeedMeta接口TargetTypePeriods的取值",
+      "example": "7",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "crowd_task_id",
+      "type": "mixed",
+      "description": "人群任务id",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=sms.audience.createCrowdTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "crowd_task_id": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/7659",
+  "updatedAt": "2026-03-11",
+  "_file_stem": "sms-sms-audience-createCrowdTask"
+}

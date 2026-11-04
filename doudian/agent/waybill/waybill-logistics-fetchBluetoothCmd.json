@@ -1,0 +1,213 @@
+{
+  "id": "doudian.waybill.logistics.fetchBluetoothCmd",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.fetchBluetoothCmd",
+  "description": "电子面单场景下，获取蓝牙的打印指令",
+  "method": "GET",
+  "path": "/logistics/fetchBluetoothCmd",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_applies",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "运单信息，一次最多请求200单。",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "12345",
+      "_depth": 1
+    },
+    {
+      "name": "std_template_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "标准模板code。已支持的模板信息 https://bytedance.feishu.cn/sheets/VFmQsxJNth8t2OtWWDJca5BbnDb?sheet=p92gXy",
+      "example": "zt_76_130_v2",
+      "_depth": 1
+    },
+    {
+      "name": "cus_template_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义区模板url。（传了cus_print_data后url和code其中一个必传）",
+      "example": "https://lf3-cm.ecombdstatic.com/obj/logistics-davinci/publicElements/zt_76_130_v2_1633693132.xml",
+      "_depth": 1
+    },
+    {
+      "name": "cus_template_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义区模板code（支持模板设计器的模板）。设计器地址：https://cloudprint.douyinec.com/",
+      "example": "1234",
+      "_depth": 1
+    },
+    {
+      "name": "cus_print_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义区json数据",
+      "example": "{\"customKey\":\"customValue\"}",
+      "_depth": 1
+    },
+    {
+      "name": "remote_print_config",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "打印配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "need_top_logo",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要打印物流商logo",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "horizontal_offset",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "水平偏移量，单位mm",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "vertical_offset",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "垂直偏移量，单位mm",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "print_direction",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "[必传字段] 打印方向。normal-正常；reverse-反转。",
+      "example": "normal",
+      "_depth": 1
+    },
+    {
+      "name": "printer_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "打印机名称。查看已支持的打印机信息 https://bytedance.feishu.cn/sheets/VFmQsxJNth8t2OtWWDJca5BbnDb?sheet=44acf5",
+      "example": "QR-488BT_xx",
+      "_depth": 1
+    },
+    {
+      "name": "cmd_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "打印机指令类型。CPCL；TSPL",
+      "example": "CPCL",
+      "_depth": 0
+    },
+    {
+      "name": "cmd_encode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "编码方式。\norigin：原串->字节数组->base64；\ngbk：原串->字节数组->gbk->base64；\ngzip_byte：原串->字节数组->gzip压缩->base64；",
+      "example": "gzip_byte",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "waybill_infos",
+      "type": "array",
+      "description": "运单的打印指令",
+      "example": ""
+    },
+    {
+      "name": "err_infos",
+      "type": "array",
+      "description": "错误信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数有误，请检查请求参数（sub_code: isv.parameter-invalid:100001）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "参数有误，请检查请求参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误，请稍后重试（sub_code: isv.business-failed:100002）",
+      "action": "联系开发人员",
+      "sub_code": "isv.business-failed:100002",
+      "sub_msg": "系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 101115:该模板不存在（sub_code: isv.business-failed:101115）",
+      "action": "检查模板信息",
+      "sub_code": "isv.business-failed:101115",
+      "sub_msg": "101115:该模板不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 101113:暂不支持该品牌的打印机型号（sub_code: isv.business-failed:101113）",
+      "action": "检查打印机名称",
+      "sub_code": "isv.business-failed:101113",
+      "sub_msg": "101113:暂不支持该品牌的打印机型号"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/erpInboundCancel?app_key=your_appkey_here&method=yunc.erpInboundCancel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "参数有误，请检查请求参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/4142",
+  "updatedAt": "2023-06-28",
+  "_file_stem": "waybill-logistics-fetchBluetoothCmd"
+}

@@ -1,0 +1,225 @@
+{
+  "id": "doudian.retail-order.instantShopping.createOperationOrder",
+  "platform": "doudian",
+  "group": "retail-order",
+  "name": "instantShopping.createOperationOrder",
+  "description": "创建仓内作业单",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 订单管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商单据code",
+      "example": "33333333",
+      "_depth": 0
+    },
+    {
+      "name": "operation_order_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "单据类型，1=盘点，2=转移",
+      "example": "3333333",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "入库",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "更新时间（Unix时间戳）",
+      "example": "1728908162",
+      "_depth": 0
+    },
+    {
+      "name": "org_shop_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货主id",
+      "example": "1333",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓ID",
+      "example": "123132",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "作业子单列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_detail_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商单据明细code / 行号",
+      "example": "1312323123",
+      "_depth": 1
+    },
+    {
+      "name": "goods_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品ID",
+      "example": "1231313213",
+      "_depth": 1
+    },
+    {
+      "name": "operation_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "作业明细列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "change_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "变动数量，正数增加，负数减少",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "production_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期（Unix时间戳）有s生产日期，有必传，否是应对没有生产日期的货品",
+      "example": "1728908162",
+      "_depth": 2
+    },
+    {
+      "name": "expire_days",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保质期（天）,有必传，否是应对没有保质期的货品",
+      "example": "7",
+      "_depth": 2
+    },
+    {
+      "name": "expire_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "过期时间（天）,有必传，否是应对没有过期时间的货品",
+      "example": "1728908162",
+      "_depth": 2
+    },
+    {
+      "name": "receive_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "入库时间（Unix时间戳）",
+      "example": "1727348559",
+      "_depth": 2
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作原因",
+      "example": "无",
+      "_depth": 2
+    },
+    {
+      "name": "stock_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存类型，1=正品，2=残次",
+      "example": "1",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数（sub_code: isv.parameter-invalid:40001）",
+      "action": "调整参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法参数"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.createOperationOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "operation_order_code": "123123132",
+          "operation_order_detail": [
+            {
+              "order_detail_code": "123132123",
+              "order_detail_id": "123123132"
+            }
+          ],
+          "operation_order_id": "1231312313"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1531/6946",
+  "updatedAt": "2024-10-29",
+  "_file_stem": "retail-order-instantShopping-createOperationOrder"
+}

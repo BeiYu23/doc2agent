@@ -1,0 +1,163 @@
+{
+  "id": "doudian.material.material.getFolderInfo",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.getFolderInfo",
+  "description": "查看文件夹详情",
+  "method": "GET",
+  "path": "/material/getFolderInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商, 小程序"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件夹id",
+      "example": "70072571115706780601250",
+      "_depth": 0
+    },
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "分页的页数，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "每页返回的数量。最大为100，默认为50",
+      "example": "50",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "folder_info",
+      "type": "object",
+      "description": "文件夹信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 文件夹ID无效或文件夹已被彻底删除（sub_code: isv.parameter-invalid:20001）",
+      "action": "文件夹id不存或已被彻底删除",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "文件夹ID无效或文件夹已被彻底删除"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 查询数量超出限制，请通过筛选素材名称/状态/日期等缩小范围（sub_code: isv.parameter-invalid:31002）",
+      "action": "查询数量超出限制，请通过筛选素材名称/状态/日期等缩小范围",
+      "sub_code": "isv.parameter-invalid:31002",
+      "sub_msg": "查询数量超出限制，请通过筛选素材名称/状态/日期等缩小范围"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10004）",
+      "action": "重试",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10006）",
+      "action": "重试",
+      "sub_code": "isp.service-error:10006",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/getFolderInfo?app_key=your_appkey_here&method=material.getFolderInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "folder_info": {
+          "child_folder": [
+            {
+              "create_time": "2021-09-12 12:23:23",
+              "delete_time": "2021-09-12 12:23:23",
+              "folder_attr": "0",
+              "folder_id": "70072571115706780611250",
+              "folder_name": "子文件夹名称",
+              "folder_type": "0",
+              "operate_status": "4",
+              "parent_folder_id": "70072571115706780601250",
+              "update_time": "2021-09-12 12:23:23"
+            }
+          ],
+          "child_material": [
+            {
+              "audit_reject_desc": "文件大小超出限制",
+              "audit_status": "1",
+              "byte_url": "\"\"",
+              "create_time": "2021-09-12 12:23:23",
+              "delete_time": "0",
+              "folder_id": "70072571115706780601250",
+              "material_id": "70072571115707435960250",
+              "material_type": "photo",
+              "materil_name": "名称",
+              "operate_status": "0",
+              "origin_url": "\"\"",
+              "photo_info": {
+                "format": "jpg",
+                "height": "255",
+                "width": "255"
+              },
+              "size": "1234",
+              "update_time": "2021-09-12 12:23:23",
+              "video_info": {
+                "duration": "12",
+                "format": "mp3",
+                "vid": "123456789",
+                "video_cover_url": "https://xxxx.xxx"
+              }
+            }
+          ],
+          "create_time": "2021-09-12 12:23:23",
+          "delete_time": "0",
+          "folder_attr": "0",
+          "folder_id": "70072571115706780601250",
+          "folder_name": "文件夹名称",
+          "folder_type": "0",
+          "operate_status": "1",
+          "parent_folder_id": "0",
+          "total_child_material_num": "12",
+          "update_time": "2021-09-12 12:23:23"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "文件夹ID无效或文件夹已被彻底删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1150",
+  "updatedAt": "2022-12-28",
+  "_file_stem": "material-material-getFolderInfo"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "doudian.order.order.batchSensitive",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.batchSensitive",
+  "description": "批量脱敏接口",
+  "method": "GET",
+  "path": "/order/batchSensitive",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V2.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cipher_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "待脱敏的密文列表，每次调用不超过50条",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "auth_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务标识，value为抖音订单号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "cipher_text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "密文",
+      "example": "待脱敏密文，具体内容参考[数据安全加密对接文档](https://op.jinritemai.com/docs/guide-docs/56/589)",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "decrypt_infos",
+      "type": "array",
+      "description": "脱敏信息列表",
+      "example": "-"
+    },
+    {
+      "name": "custom_err",
+      "type": "object",
+      "description": "业务错误",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误: 输入的密文列表过长，上限为:50（sub_code: isv.parameter-invalid:100000）",
+      "action": "解密数据不要超出50",
+      "sub_code": "isv.parameter-invalid:100000",
+      "sub_msg": "参数错误: 输入的密文列表过长，上限为:50"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误: 输入的密文列表过长，上限为:50（sub_code: isv.business-failed:300001）",
+      "action": "列表数据不要超过50",
+      "sub_code": "isv.business-failed:300001",
+      "sub_msg": "参数错误: 输入的密文列表过长，上限为:50"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 300003:参数错误: 输入的密文列表过长，上限为:50（sub_code: isv.business-failed:300003）",
+      "action": "300003:参数错误: 输入的密文列表过长，上限为:50",
+      "sub_code": "isv.business-failed:300003",
+      "sub_msg": "300003:参数错误: 输入的密文列表过长，上限为:50"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/batchSensitive?app_key=your_appkey_here&method=order.batchSensitive&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "custom_err": {
+          "err_code": "错误码",
+          "err_msg": "错误描述"
+        },
+        "decrypt_infos": [
+          {
+            "auth_id": "123",
+            "cipher_text": "密文，具体内容参考[数据安全加密对接文档](https://op.jinritemai.com/docs/guide-docs/56/589)",
+            "decrypt_text": "明文",
+            "err_msg": "错误描述",
+            "err_no": "错误码"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100000",
+      "sub_msg": "参数错误: 输入的密文列表过长，上限为:50"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/508",
+  "updatedAt": "2021-07-14",
+  "_file_stem": "order-order-batchSensitive"
+}

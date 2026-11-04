@@ -1,0 +1,83 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyProduct.queryPrice",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyProduct.queryPrice",
+  "description": "查询价格",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "skuid",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "productid",
+      "example": "1111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回值",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.supplyProduct.queryPrice&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "sku_id": "1111",
+            "spec_price_list": [
+              {
+                "distributor_id_list": "1111",
+                "supply_price": "111111"
+              }
+            ],
+            "supply_price": "1111"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/2559",
+  "updatedAt": "2022-09-28",
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-queryPrice"
+}

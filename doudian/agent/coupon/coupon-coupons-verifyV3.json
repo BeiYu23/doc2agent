@@ -1,0 +1,191 @@
+{
+  "id": "doudian.coupon.coupons.verifyV3",
+  "platform": "doudian",
+  "group": "coupon",
+  "name": "coupons.verifyV3",
+  "description": "核销接口（无需授权）",
+  "method": "GET",
+  "path": "/coupons/verifyV3",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 卡券API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "verify_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "核销次数，单次券传1，多次券按需传",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "verify_store_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "核销门店id",
+      "example": "112233",
+      "_depth": 0
+    },
+    {
+      "name": "verify_shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺id",
+      "example": "11223344",
+      "_depth": 0
+    },
+    {
+      "name": "verify_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "核销时间（时间戳）",
+      "example": "1752658197",
+      "_depth": 0
+    },
+    {
+      "name": "cert_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "卡号券码",
+      "example": "112233",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商Code",
+      "example": "112233",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 卡券查询失败（sub_code: isv.business-failed:20008）",
+      "action": "卡券查询失败",
+      "sub_code": "isv.business-failed:20008",
+      "sub_msg": "卡券查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店状态异常，无法核销，请联系商家（sub_code: isv.business-failed:020025）",
+      "action": "门店状态异常，无法核销，请联系商家",
+      "sub_code": "isv.business-failed:020025",
+      "sub_msg": "门店状态异常，无法核销，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不允许跨城市核销，请联系商家（sub_code: isv.business-failed:020032）",
+      "action": "不允许跨城市核销，请联系商家",
+      "sub_code": "isv.business-failed:020032",
+      "sub_msg": "不允许跨城市核销，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 卡券不在有效期内（sub_code: isv.business-failed:010017）",
+      "action": "卡券不在有效期内",
+      "sub_code": "isv.business-failed:010017",
+      "sub_msg": "卡券不在有效期内"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询失败，请联系商家（sub_code: isv.business-failed:020024）",
+      "action": "门店查询失败，请联系商家",
+      "sub_code": "isv.business-failed:020024",
+      "sub_msg": "门店查询失败，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询失败，请联系商家（sub_code: isv.business-failed:020026）",
+      "action": "门店查询失败，请联系商家",
+      "sub_code": "isv.business-failed:020026",
+      "sub_msg": "门店查询失败，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询失败，请联系商家（sub_code: isv.business-failed:020031）",
+      "action": "门店查询失败，请联系商家",
+      "sub_code": "isv.business-failed:020031",
+      "sub_msg": "门店查询失败，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务商信息不匹配，请核对信息（sub_code: isv.business-failed:020033）",
+      "action": "服务商信息不匹配，请核对信息",
+      "sub_code": "isv.business-failed:020033",
+      "sub_msg": "服务商信息不匹配，请核对信息"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:000002）",
+      "action": "参数错误",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询失败，请联系商家（sub_code: isv.business-failed:020027）",
+      "action": "门店查询失败，请联系商家",
+      "sub_code": "isv.business-failed:020027",
+      "sub_msg": "门店查询失败，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询失败，请联系商家（sub_code: isv.business-failed:20027）",
+      "action": "门店查询失败，请联系商家",
+      "sub_code": "isv.business-failed:20027",
+      "sub_msg": "门店查询失败，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 000009:不支持的操作类型（sub_code: isv.business-failed:9）",
+      "action": "不支持的操作类型",
+      "sub_code": "isv.business-failed:9",
+      "sub_msg": "000009:不支持的操作类型"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010017:未在有效期内（sub_code: isv.business-failed:10017）",
+      "action": "未在有效期内",
+      "sub_code": "isv.business-failed:10017",
+      "sub_msg": "010017:未在有效期内"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/verifyV3?app_key=your_appkey_here&method=coupons.verifyV3&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20008",
+      "sub_msg": "卡券查询失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/52/7582",
+  "updatedAt": "2025-07-24",
+  "_file_stem": "coupon-coupons-verifyV3"
+}

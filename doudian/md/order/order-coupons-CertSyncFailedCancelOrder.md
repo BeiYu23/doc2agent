@@ -1,0 +1,130 @@
+# coupons.CertSyncFailedCancelOrder
+
+> 1、定向开放接口，需商家联系行业小二加白后才可使用，联系方式https://op.jinritemai.com/docs/question-docs/45/1777。
+2、仅适用于三方卡券订单，其他类型的订单都不支持。
+3、订单状态等于2 处于待发码状态，
+
+| 元信息 | 值 |
+| --- | --- |
+| 接口 ID | `doudian.order.coupons.CertSyncFailedCancelOrder` |
+| 平台 | `doudian` |
+| 请求方法 | `GET` |
+| 接口路径 | `/coupons/CertSyncFailedCancelOrder` |
+| Base URL | `https://openapi-fxg.jinritemai.com` |
+| 鉴权方式 | `access_token+sign` |
+| 文档来源 | https://op.jinritemai.com/docs/api-docs/15/6662 |
+| 更新日期 | `2024-07-02` |
+
+## 接口说明
+
+- 文档书: 订单API（版本 V1.03）
+- 公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json
+
+## 请求参数
+
+| 参数名 | 位置 | 类型 | 必填 | 说明 | 示例 |
+| --- | --- | --- | --- | --- | --- |
+| `OrderId` | body | string | 是 | 订单号 | `6931496948675122841` |
+| `Op` | body | object | 否 | 风控相关信息 | `` |
+| `  └ Platform` | body | string | 否 | 操作平台枚举（选填，暂时用不上） | `1` |
+| `  └ OpUid` | body | number | 否 | 操作人uid（选填，暂时用不上） | `1234` |
+
+## 请求示例
+
+```bash
+curl -X GET 'https://openapi-fxg.jinritemai.com/dutyFree/orderList?app_key=your_appkey_here&method=dutyFree.orderList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'
+```
+
+## 响应参数
+
+| 字段名 | 类型 | 说明 | 示例 |
+| --- | --- | --- | --- |
+| `RetStatus` | string | 返回状态 | `"000000"` |
+| `RetCode` | string | 返回码 | `"000000"` |
+| `RetMessage` | string | 返回信息 | `"000000"` |
+
+## 响应码
+
+| code | 含义 | 处理建议 |
+| --- | --- | --- |
+| `10000` | 成功 | 正常处理 |
+
+## 响应示例
+
+成功：
+
+```json
+{
+  "data": {
+    "data": [
+      {
+        "actural_paid": "2100",
+        "buyer_id_number": "321312123243454",
+        "buyer_id_type": "1",
+        "buyer_name": "赵雷",
+        "buyer_reg_no": "235345346454",
+        "buyer_telephone": "15261890777",
+        "consignee": "赵雷",
+        "consignee_address": "{\"province\":{\"name\":\"江苏省\",\"id\":\"320000\"},\"city\":{\"name\":\"泰州市\",\"id\":\"321200\"},\"town\":{\"name\":\"姜堰区\",\"id\":\"321204\"},\"detail\":\"南苑二区5号楼102室\"}",
+        "consignee_telephone": "15261890777",
+        "create_time": "1624260016",
+        "customs_clear_type": "4",
+        "delivery_location": "**自提点地址",
+        "delivery_method": "1",
+        "discount": "400",
+        "exp_ship_time": "1624260016",
+        "freight": "0",
+        "frequency_no": "HU7661",
+        "goods_value": "2500",
+        "leave_date": "1624260016",
+        "leave_type": "2",
+        "no_public_discount": "300",
+        "order_date": "1624260016",
+        "order_detail_list": [
+          {
+            "bar_code": "14324545",
+            "cdf_category": "30",
+            "coupon_amount": "300",
+            "discount": "400",
+            "fulldiscount_amount": "100",
+            "is_suit": "1",
+            "item_name": "SHERMY婴儿尿布裤",
+            "original_price": "1250",
+            "out_sku_id": "453464542343",
+            "price": "1250",
+            "qty": "2",
+            "sku_id": "453464542343",
+            "suit_num": "2",
+            "total_price": "2500",
+            "volume": "1000"
+          }
+        ],
+        "order_id": "2021061619395010955",
+        "pay_time": "1624260016",
+        "pay_transaction_id": "2353453464542343",
+        "pay_type": "1",
+        "pre_sale_type": "1",
+        "shop_id": "14802",
+        "status": "100"
+      }
+    ],
+    "has_next": "true",
+    "total": "100"
+  },
+  "code": 10000,
+  "msg": "success",
+  "sub_code": "",
+  "sub_msg": ""
+}
+```
+
+失败：
+
+```json
+{
+  "sub_code": "",
+  "sub_msg": ""
+}
+```
+
+## 备注

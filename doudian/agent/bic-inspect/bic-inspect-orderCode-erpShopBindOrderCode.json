@@ -1,0 +1,325 @@
+{
+  "id": "doudian.bic-inspect.orderCode.erpShopBindOrderCode",
+  "platform": "doudian",
+  "group": "bic-inspect",
+  "name": "orderCode.erpShopBindOrderCode",
+  "description": "质检/查验订单商家发货接口，调用后会绑定订单和订单码，并生成qic入库单，\ndelivery_type 是 【0】&& ship_type 是【1】，对应一单一包裹模式；\ndelivery_type 是 【0】&& ship_type 是【3】，对应混订单",
+  "method": "GET",
+  "path": "/orderCode/erpShopBindOrderCode",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BIC质检API（版本 V1.11）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_package_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商家包裹id",
+      "example": "6941730766905180453",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "送检方式",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ship_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "出仓方式",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "order_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "agency_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "质检机构ID，复检订单必填，需要与仓库编码对应上",
+      "example": "101",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库编码，复检订单必填",
+      "example": "02",
+      "_depth": 1
+    },
+    {
+      "name": "is_reinspection",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1：是，2：否。注意：不是复检订单不可传0，直接不入参is_reinspection即可",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "订单id",
+      "example": "4782860977949521619",
+      "_depth": 1
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "0822597409",
+      "_depth": 1
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "9595123123",
+      "_depth": 1
+    },
+    {
+      "name": "logistics_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "物流公司id",
+      "example": "12",
+      "_depth": 1
+    },
+    {
+      "name": "order_detail",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品详情",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "combo_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "该订单购买的商品对应平台的 sku_id",
+      "example": "1696289587496995",
+      "_depth": 2
+    },
+    {
+      "name": "shop_qty",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "发货数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sku_barcode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品条码",
+      "example": "预留扩展字段",
+      "_depth": 2
+    },
+    {
+      "name": "unique_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "\"商品唯一标识编码  （如：海宁基地服饰的溯源码信息）\"",
+      "example": "预留扩展字段",
+      "_depth": 2
+    },
+    {
+      "name": "lot01",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次属性01",
+      "example": "预留扩展字段",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "order_list",
+      "type": "array",
+      "description": "订单列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 传入订单码有误（sub_code: isv.parameter-invalid:6011）",
+      "action": "订单码不存在，确认输入的订单码是否有误",
+      "sub_code": "isv.parameter-invalid:6011",
+      "sub_msg": "传入订单码有误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 质检机构有误（sub_code: isv.parameter-invalid:-1）",
+      "action": "请检查发货策略是否配置，稍后重试",
+      "sub_code": "isv.parameter-invalid:-1",
+      "sub_msg": "质检机构有误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单不是待绑码状态，不允许绑码（sub_code: isv.business-failed:6071）",
+      "action": "该订单不需要操作绑码",
+      "sub_code": "isv.business-failed:6071",
+      "sub_msg": "该订单不是待绑码状态，不允许绑码"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单处理中，请稍后再试（sub_code: isv.business-failed:1001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "订单处理中，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商家发货包裹已经存在，不支持重发（sub_code: isv.parameter-invalid:1000）",
+      "action": "商家发货包裹已经存在，不支持重发",
+      "sub_code": "isv.parameter-invalid:1000",
+      "sub_msg": "商家发货包裹已经存在，不支持重发"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 调用下游超时（sub_code: isp.service-error:6014）",
+      "action": "接口超时，请重试",
+      "sub_code": "isp.service-error:6014",
+      "sub_msg": "调用下游超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 6012:该订单码已绑定，不可再被绑定（sub_code: isv.business-failed:6012）",
+      "action": "请检查订单码是否正确，更换订单码",
+      "sub_code": "isv.business-failed:6012",
+      "sub_msg": "6012:该订单码已绑定，不可再被绑定"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不存在（sub_code: isv.business-failed:6038）",
+      "action": "请检查订单是否正确，确认无误稍后重试",
+      "sub_code": "isv.business-failed:6038",
+      "sub_msg": "订单不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法操作（sub_code: isv.parameter-invalid:6041）",
+      "action": "订单不属于当前店铺",
+      "sub_code": "isv.parameter-invalid:6041",
+      "sub_msg": "非法操作"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参为空（sub_code: isv.parameter-invalid:20001）",
+      "action": "入参不能为空，填入合法参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "入参为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 仓库和机构关系错误（sub_code: isv.business-failed:20020）",
+      "action": "检查仓库和机构的对应关系",
+      "sub_code": "isv.business-failed:20020",
+      "sub_msg": "仓库和机构关系错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 复检订单额度不足（sub_code: isv.business-failed:20021）",
+      "action": "选择非复检绑码",
+      "sub_code": "isv.business-failed:20021",
+      "sub_msg": "复检订单额度不足"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前机构产能不足（sub_code: isv.business-failed:20022）",
+      "action": "更换质检机构",
+      "sub_code": "isv.business-failed:20022",
+      "sub_msg": "当前机构产能不足"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 材质无法检测（sub_code: isv.business-failed:20023）",
+      "action": "更换质检机构",
+      "sub_code": "isv.business-failed:20023",
+      "sub_msg": "材质无法检测"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1002:系统错误，请稍后重试（sub_code: isv.business-failed:1002）",
+      "action": "1002:系统错误，请稍后重试",
+      "sub_code": "isv.business-failed:1002",
+      "sub_msg": "1002:系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1006:选择的【不二】睡美人蓝松DIY随形耳钩，不能与其他订单一起绑码（sub_code: isv.business-failed:1006）",
+      "action": "1006:选择的【不二】睡美人蓝松DIY随形耳钩，不能与其他订单一起绑码",
+      "sub_code": "isv.business-failed:1006",
+      "sub_msg": "1006:选择的【不二】睡美人蓝松DIY随形耳钩，不能与其他订单一起绑码"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:调用入库单接口失败（sub_code: isv.business-failed:1004）",
+      "action": "1004:调用入库单接口失败",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:调用入库单接口失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:6011",
+      "sub_msg": "传入订单码有误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/51/806",
+  "updatedAt": "2024-08-01",
+  "_file_stem": "bic-inspect-orderCode-erpShopBindOrderCode"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "doudian.stock.product.getBindBySaleProduct",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "product.getBindBySaleProduct",
+  "description": "通过前台销售商品查供货商品",
+  "method": "GET",
+  "path": "/product/getBindBySaleProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "request_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "查询列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品id",
+      "example": "3820584917637660672",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuid",
+      "example": "3659238057270816",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "relation_list",
+      "type": "array",
+      "description": "关系列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:-10007）",
+      "action": "根据具体报错提示调整",
+      "sub_code": "isp.service-error:-10007",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/getBindBySaleProduct?app_key=your_appkey_here&method=product.getBindBySaleProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "relation_list": [
+          {
+            "cargo_id": "3820584917637660672",
+            "cargo_sku_id": "3659238057270816",
+            "product_id": "3820739174718380209",
+            "shop_id": "95078",
+            "sku_id": "3659238054343040"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:-10007",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/8329",
+  "updatedAt": "2026-05-22",
+  "_file_stem": "stock-product-getBindBySaleProduct"
+}

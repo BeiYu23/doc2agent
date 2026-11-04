@@ -1,0 +1,216 @@
+{
+  "id": "doudian.shop.marketing.createCoupon",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "marketing.createCoupon",
+  "description": "营销中心-创建优惠券",
+  "method": "GET",
+  "path": "/marketing/createCoupon",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "coupon_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "优惠券名称",
+      "example": "优惠券名称",
+      "_depth": 0
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "优惠券类型,21 商家折扣券 22 商家直减券 23 商家满减券 31 渠道折扣券 32 渠道直减券 33 渠道满减券 41 单品折扣券 42 单品直减券 43 单品满减券",
+      "example": "21",
+      "_depth": 0
+    },
+    {
+      "name": "period_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "有效期类型,1固定有效期类型，2浮动有效期类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "valid_period",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "如果period_type = 2 浮动有效期（单位：天）",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "start_apply_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "开始领取时间,格式2006-01-02 15:04:05",
+      "example": "2006-01-02 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "end_apply_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "结束领取时间",
+      "example": "2006-01-03 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "开始生效时间",
+      "example": "2006-01-02 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "expire_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "结束生效时间",
+      "example": "2006-01-03 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "total_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "总数量",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "type_detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "根据type传不同参数,商家券shop_id,商品券->多个商品id",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "discount",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "折扣券折扣，8.5折传85",
+      "example": "85",
+      "_depth": 0
+    },
+    {
+      "name": "max_discount_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "折扣最高抵扣金额 分",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "threshold",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "满减券门槛 分",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "credit",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "满减券，直减券金额 分",
+      "example": "200",
+      "_depth": 0
+    },
+    {
+      "name": "max_apply_times",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "最大领取次数限制",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "url",
+      "example": "url",
+      "_depth": 0
+    },
+    {
+      "name": "op_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺名",
+      "example": "店铺名",
+      "_depth": 0
+    },
+    {
+      "name": "is_show",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "0 全网店铺推广  1自有渠道",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "coupon_meta_id",
+      "type": "mixed",
+      "description": "优惠券ID",
+      "example": "优惠券ID"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/marketing/createCoupon?app_key=your_appkey_here&method=marketing.createCoupon&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "coupon_meta_id": "优惠券ID"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/523",
+  "updatedAt": "2024-06-11",
+  "_file_stem": "shop-marketing-createCoupon"
+}

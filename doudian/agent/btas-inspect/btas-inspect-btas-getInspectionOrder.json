@@ -1,0 +1,98 @@
+{
+  "id": "doudian.btas-inspect.btas.getInspectionOrder",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.getInspectionOrder",
+  "description": "⁣商家_查询订单的质检信息",
+  "method": "GET",
+  "path": "/btas/getInspectionOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "父订单（店铺单）编号",
+      "example": "4775168038676399798",
+      "_depth": 0
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单码，与店铺单ID二选一。",
+      "example": "052131231222",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "order_id",
+      "type": "string",
+      "description": "父订单（店铺单）编号",
+      "example": "\"4775168038676399798\""
+    },
+    {
+      "name": "product_orders",
+      "type": "array",
+      "description": "商品单内容，根据订单ID查可能返回多条数据，根据orderCode查仅有一条数据。",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不存在（sub_code: isv.business-failed:4000）",
+      "action": "确认订单编码是否正确",
+      "sub_code": "isv.business-failed:4000",
+      "sub_msg": "订单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2030:参数错误（sub_code: isv.business-failed:2030）",
+      "action": "检查订单号",
+      "sub_code": "isv.business-failed:2030",
+      "sub_msg": "2030:参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4008:获取商品件单出错，请重试（sub_code: isv.business-failed:4008）",
+      "action": "4008:获取商品件单出错，请重试",
+      "sub_code": "isv.business-failed:4008",
+      "sub_msg": "4008:获取商品件单出错，请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4000",
+      "sub_msg": "订单不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/473",
+  "updatedAt": "2024-06-12",
+  "_file_stem": "btas-inspect-btas-getInspectionOrder"
+}

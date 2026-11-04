@@ -1,0 +1,292 @@
+{
+  "id": "doudian.logistics.power.netsiteUpdate",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.netsiteUpdate",
+  "description": "网点信息更新（仅用于兼容老物流网关）",
+  "method": "GET",
+  "path": "/power/netsiteUpdate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V3.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "net_sites",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "网点信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "father_net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "父网点编码",
+      "example": "029648",
+      "_depth": 1
+    },
+    {
+      "name": "organization_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "组织类型",
+      "example": "承包区",
+      "_depth": 1
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流公司",
+      "example": "bytedance",
+      "_depth": 1
+    },
+    {
+      "name": "net_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点名称",
+      "example": "八方城",
+      "_depth": 1
+    },
+    {
+      "name": "net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点编码",
+      "example": "200120",
+      "_depth": 1
+    },
+    {
+      "name": "net_area",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点作业面积",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "网点地址信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国家编码",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份code，网点查询、更新、停用时code必传，其他接口可不传",
+      "example": "330000",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份，段码/路由信息相关接口该字段可传入1，表示全国",
+      "example": "浙江省",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市code，网点查询、更新、停用时code必传，其他接口可不传",
+      "example": "330100",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市，段码相关接口需要传空字符串",
+      "example": "杭州市",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县code，网点查询、更新、停用时code必传，其他接口可不传",
+      "example": "330110",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区县，段码相关接口需要传空字符串",
+      "example": "余杭区",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道code",
+      "example": "330111",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道，段码相关接口需要传空字符串",
+      "example": "良渚街道",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址，段码相关接口需要传空字符串",
+      "example": "良渚路166号",
+      "_depth": 2
+    },
+    {
+      "name": "address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "网点联系人",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话",
+      "example": "0571-88888888",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号",
+      "example": "13282160694",
+      "_depth": 2
+    },
+    {
+      "name": "email",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "邮箱",
+      "example": "zhangsan@163.com",
+      "_depth": 2
+    },
+    {
+      "name": "facility_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1-普通网点；2-分拨中心 不传默认是普通网点",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:4006）",
+      "action": "修正入参",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 调用物流商超时（sub_code: isv.business-failed:4009）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:4009",
+      "sub_msg": "调用物流商超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4007:202022联系人Phone或者Mobile必须有一个（sub_code: isv.business-failed:4007）",
+      "action": "4007:202022联系人Phone或者Mobile必须有一个",
+      "sub_code": "isv.business-failed:4007",
+      "sub_msg": "4007:202022联系人Phone或者Mobile必须有一个"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1471",
+  "updatedAt": "2023-03-20",
+  "_file_stem": "logistics-power-netsiteUpdate"
+}

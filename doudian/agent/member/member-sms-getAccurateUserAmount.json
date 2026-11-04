@@ -1,0 +1,670 @@
+{
+  "id": "doudian.member.sms.getAccurateUserAmount",
+  "platform": "doudian",
+  "group": "member",
+  "name": "sms.getAccurateUserAmount",
+  "description": "预估人群大小",
+  "method": "GET",
+  "path": "/sms/getAccurateUserAmount",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "from_cache",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否查询缓存",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "audience_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "条件二选一 ,直接用人群包id预估人数",
+      "example": "1221",
+      "_depth": 0
+    },
+    {
+      "name": "query_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "查询条件 1: 全部, 12 isv可发送人数(会员+已购365)",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "and_content",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "人群包内容(交)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "label_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要保存/返回的标签结构体",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "extra_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外参数，如区间值的>X minPrice, maxPrice",
+      "example": "{\"source_audience_id\": \"6637613407932301612\"}",
+      "_depth": 2
+    },
+    {
+      "name": "label_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "标签id",
+      "example": "标签id",
+      "_depth": 2
+    },
+    {
+      "name": "logic_operation",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "嵌套的下层的逻辑操作符(1交集 2并集 3差集)",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "label_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "嵌套的下层标签",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "extra_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外参数，如区间值的>X minPrice, maxPrice",
+      "example": "{\"source_audience_id\": \"6637613407932301612\"}",
+      "_depth": 3
+    },
+    {
+      "name": "param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "标签参数",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参数id",
+      "example": "1",
+      "_depth": 4
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数描述",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "label_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "标签id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "可选参数列表或已选参数列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参数id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "sub_param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "子参数列表，用于级联多选",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "标签id",
+      "example": "1",
+      "_depth": 4
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数描述",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标签描述",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "logic_operation",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "逻辑操作符",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "audience_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "人群查询类型 不传",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "or_content",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "人群包内容(并)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "logic_operation",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "逻辑操作符",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "audience_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "人群查询类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "label_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要保存/返回的标签结构体",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "extra_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外参数，如区间值的>X minPrice, maxPrice",
+      "example": "{\"key\":\"value\"}",
+      "_depth": 2
+    },
+    {
+      "name": "label_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "标签id",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "logic_operation",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "嵌套的下层的逻辑操作符",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "可选参数列表或已选参数列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参数id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "sub_param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "子参数列表，用于级联多选",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参数id",
+      "example": "1",
+      "_depth": 4
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标签描述",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标签描述",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "except_content",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "人群包内容(差)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "logic_operation",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "逻辑操作符",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "audience_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "人群查询类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "label_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要保存/返回的标签结构体",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "extra_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外参数，如区间值的>X minPrice, maxPrice",
+      "example": "{\"key\":\"value\"}",
+      "_depth": 2
+    },
+    {
+      "name": "label_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "标签id",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "logic_operation",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "嵌套的下层的逻辑操作符",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "可选参数列表或已选参数列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "sub_param_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "子参数列表，用于级联多选",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参数id",
+      "example": "1",
+      "_depth": 4
+    },
+    {
+      "name": "param_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数名称",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数描述",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 4
+    },
+    {
+      "name": "param_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标签描述",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "param_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "参数字符串",
+      "example": "\"\"",
+      "_depth": 3
+    },
+    {
+      "name": "param_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参数id",
+      "example": "1",
+      "_depth": 3
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "estimated_amount",
+      "type": "mixed",
+      "description": "预估人群总数量",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必要参数（sub_code: isv.missing-parameter:628002001）",
+      "action": "请确认参数",
+      "sub_code": "isv.missing-parameter:628002001",
+      "sub_msg": "缺少必要参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数（sub_code: isv.parameter-invalid:628005600）",
+      "action": "请确认参数",
+      "sub_code": "isv.parameter-invalid:628005600",
+      "sub_msg": "非法参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务超时,请稍后再试（sub_code: isv.business-failed:628004000）",
+      "action": "请联系管理员",
+      "sub_code": "isv.business-failed:628004000",
+      "sub_msg": "服务超时,请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 人群生产错误（sub_code: isv.business-failed:628005601）",
+      "action": "请联系管理员",
+      "sub_code": "isv.business-failed:628005601",
+      "sub_msg": "人群生产错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据拉取失败（sub_code: isv.business-failed:628004630）",
+      "action": "请稍后再试",
+      "sub_code": "isv.business-failed:628004630",
+      "sub_msg": "数据拉取失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004004:内部异常（sub_code: isv.business-failed:628004004）",
+      "action": "628004004:内部异常",
+      "sub_code": "isv.business-failed:628004004",
+      "sub_msg": "628004004:内部异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004002:RPC超时（sub_code: isv.business-failed:628004002）",
+      "action": "628004002:RPC超时",
+      "sub_code": "isv.business-failed:628004002",
+      "sub_msg": "628004002:RPC超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004001:RPC通用错误（sub_code: isv.business-failed:628004001）",
+      "action": "628004001:RPC通用错误",
+      "sub_code": "isv.business-failed:628004001",
+      "sub_msg": "628004001:RPC通用错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/ebillInfoGet?app_key=your_appkey_here&method=power.ebillInfoGet&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:628002001",
+      "sub_msg": "缺少必要参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6684",
+  "updatedAt": "2024-07-30",
+  "_file_stem": "member-sms-getAccurateUserAmount"
+}

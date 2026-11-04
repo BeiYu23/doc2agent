@@ -1,0 +1,146 @@
+{
+  "id": "doudian.warehouse.yunc.CloudCancelOutboundOrderToB",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.CloudCancelOutboundOrderToB",
+  "description": "云仓出库取消toB",
+  "method": "GET",
+  "path": "/yunc/CloudCancelOutboundOrderToB",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "erp_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ERP出库单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "op_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_tag",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消标记",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因",
+      "example": "不想要了",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "取消列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品编码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cancel_amount",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/CloudCancelOutboundOrderToB?app_key=your_appkey_here&method=yunc.CloudCancelOutboundOrderToB&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "logistics_no": "LB000001"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1196",
+  "updatedAt": "2021-09-17",
+  "_file_stem": "warehouse-yunc-CloudCancelOutboundOrderToB"
+}

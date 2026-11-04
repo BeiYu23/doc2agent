@@ -1,0 +1,117 @@
+{
+  "id": "doudian.member.sms.getLabelList",
+  "platform": "doudian",
+  "group": "member",
+  "name": "sms.getLabelList",
+  "description": "获取标签列表",
+  "method": "GET",
+  "path": "/sms/getLabelList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "tab_list",
+      "type": "array",
+      "description": "标签tab列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 系统不可用拦截（sub_code: isv.risk-control-failed:628004410）",
+      "action": "待系统恢复",
+      "sub_code": "isv.risk-control-failed:628004410",
+      "sub_msg": "系统不可用拦截"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/getLabelList?app_key=your_appkey_here&method=sms.getLabelList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "tab_list": [
+          {
+            "label_list": [
+              {
+                "disable": "false",
+                "front_type": "7",
+                "label_desc": "在平台上购买所选类目商品较多的人群",
+                "label_id": "36",
+                "label_name": "类目核心人群",
+                "label_type": "7",
+                "param_list": [
+                  {
+                    "param_desc": "\"\"",
+                    "param_id": "2",
+                    "param_name": "玩具乐器",
+                    "sub_param_list": [
+                      {
+                        "param_desc": "\"\"",
+                        "param_id": "20019",
+                        "param_name": "模玩/动漫/周边/娃圈/三坑/桌游"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "sub_tab": [
+              {
+                "label_list": [
+                  {
+                    "disable": "true",
+                    "label_desc": "根据用户在抖音行为数据预测得出",
+                    "label_id": "1",
+                    "label_name": "八大人群",
+                    "label_type": "2",
+                    "param_list": [
+                      {
+                        "param_desc": "\"\"",
+                        "param_id": "1",
+                        "param_name": "小镇青年",
+                        "sub_param_list": [
+                          {
+                            "param_id": "1",
+                            "param_name": "甘肃省"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "tab_name": "基础属性"
+              }
+            ],
+            "tab_name": "基础标签"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 80000,
+      "msg": "风控拦截",
+      "sub_code": "isv.risk-control-failed:628004410",
+      "sub_msg": "系统不可用拦截"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6683",
+  "updatedAt": "2024-08-01",
+  "_file_stem": "member-sms-getLabelList"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "doudian.alliance.alliance.getOrderList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.getOrderList",
+  "description": "查询联盟订单明细",
+  "method": "GET",
+  "path": "/alliance/getOrderList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单id列表",
+      "example": "[\\\"id1\\\",\\\"id2\\\",\\\"id3\\\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "string",
+      "description": "返回编码",
+      "example": "100000"
+    },
+    {
+      "name": "code_msg",
+      "type": "string",
+      "description": "返回信息",
+      "example": "success"
+    },
+    {
+      "name": "datas",
+      "type": "array",
+      "description": "订单明细数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/getOrderList?app_key=your_appkey_here&method=alliance.getOrderList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "100000",
+        "code_msg": "success",
+        "datas": [
+          {
+            "alliance_biz_type": "COMMON",
+            "author_account": "北三环小王子",
+            "commission_rate": "300",
+            "estimated_comission": "810",
+            "order_id": "4790957107260097836",
+            "order_status": "支付成功",
+            "phase_id": "1",
+            "product_id": "3475285904548040556",
+            "real_comission": "0",
+            "shop_id": "1111115516",
+            "short_id": "1068048",
+            "total_pay_amount": "31000"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/469",
+  "updatedAt": "2024-06-13",
+  "_file_stem": "alliance-alliance-getOrderList"
+}

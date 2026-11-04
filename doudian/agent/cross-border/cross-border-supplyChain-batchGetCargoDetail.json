@@ -1,0 +1,178 @@
+{
+  "id": "doudian.cross-border.supplyChain.batchGetCargoDetail",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "supplyChain.batchGetCargoDetail",
+  "description": "批量获取货品详情",
+  "method": "GET",
+  "path": "/supplyChain/batchGetCargoDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cargo_codes",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "货品编码",
+      "example": "7337822801686511916",
+      "_depth": 0
+    },
+    {
+      "name": "bmp_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务身份编码",
+      "example": "xiaodian.crossborder",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/batchGetCargoDetail?app_key=your_appkey_here&method=supplyChain.batchGetCargoDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "batch_props": [
+              {
+                "is_multi": "true",
+                "prop_key": {
+                  "prop_code": "birth_batch",
+                  "prop_key": "生产批号",
+                  "prop_key_id": "283"
+                },
+                "prop_val": {
+                  "prop_value": "是",
+                  "prop_value_id": "227"
+                },
+                "prop_val_list": [
+                  {
+                    "prop_value": "是",
+                    "prop_value_id": "227"
+                  }
+                ]
+              }
+            ],
+            "cargo_category_id": "22291",
+            "cargo_code": "7337822801686511916",
+            "cargo_name": "测试货品",
+            "category_props": [
+              {
+                "is_multi": "true",
+                "prop_key": {
+                  "prop_code": "brand",
+                  "prop_key": "品牌",
+                  "prop_key_id": "292"
+                },
+                "prop_val": {
+                  "prop_value": "测试品牌",
+                  "prop_value_id": "286890612"
+                },
+                "prop_val_list": [
+                  {
+                    "prop_value": "测试品牌",
+                    "prop_value_id": "286890612"
+                  }
+                ]
+              }
+            ],
+            "desc": "测试新建货品",
+            "flatten_status": "3",
+            "is_need_batch": "1",
+            "is_need_valid": "1",
+            "period_props": [
+              {
+                "is_multi": "true",
+                "prop_key": {
+                  "prop_code": "period_of_validity",
+                  "prop_key": "有效期",
+                  "prop_key_id": "280"
+                },
+                "prop_val": {
+                  "prop_value": "100",
+                  "prop_value_id": "1"
+                },
+                "prop_val_list": [
+                  {
+                    "prop_value": "100",
+                    "prop_value_id": "1"
+                  }
+                ]
+              }
+            ],
+            "picture": "https://xxx.png",
+            "product_sub_pictures": "https://xxx.png",
+            "sku_category_props": [
+              {
+                "is_multi": "true",
+                "prop_key": {
+                  "prop_code": "barcode",
+                  "prop_key": "条形码",
+                  "prop_key_id": "286"
+                },
+                "prop_val": {
+                  "prop_value": "979624064913",
+                  "prop_value_id": "1"
+                },
+                "prop_val_list": [
+                  {
+                    "prop_value": "979624064913",
+                    "prop_value_id": "1"
+                  }
+                ]
+              }
+            ],
+            "sku_image": "https://xxx.png",
+            "sku_props": [
+              {
+                "prop_key": {
+                  "prop_code": "specs",
+                  "prop_key": "规格",
+                  "prop_key_id": "330"
+                },
+                "prop_val": {
+                  "prop_value": "50ml",
+                  "prop_value_id": "1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6322",
+  "updatedAt": "2024-03-26",
+  "_file_stem": "cross-border-supplyChain-batchGetCargoDetail"
+}

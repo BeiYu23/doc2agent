@@ -1,0 +1,63 @@
+{
+  "id": "doudian.install.install.store.ProviderStoreImageUpload",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.ProviderStoreImageUpload",
+  "description": "服务商门店图片上传接口",
+  "method": "GET",
+  "path": "/install/store/ProviderStoreImageUpload",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "image_url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "公网可以访问的图片链接",
+      "example": "http://www.czzqp.com/store/b/264513/264513.jpg?20250723160343",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "image_url",
+      "type": "string",
+      "description": "图片链接",
+      "example": "https://tosv.byted.org/obj/ecom-logistics-YOUR_SECRET_KEY-3755-42b9-822d-d4a78a5588b2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.ProviderStoreImageUpload&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "image_url": "https://tosv.byted.org/obj/ecom-logistics-YOUR_SECRET_KEY-3755-42b9-822d-d4a78a5588b2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7676",
+  "updatedAt": "2025-08-05",
+  "_file_stem": "install-install-store-ProviderStoreImageUpload"
+}

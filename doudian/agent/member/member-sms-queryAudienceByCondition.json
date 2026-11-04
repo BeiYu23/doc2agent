@@ -1,0 +1,249 @@
+{
+  "id": "doudian.member.sms.queryAudienceByCondition",
+  "platform": "doudian",
+  "group": "member",
+  "name": "sms.queryAudienceByCondition",
+  "description": "查询人群信息",
+  "method": "GET",
+  "path": "/sms/queryAudienceByCondition",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "match_search",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人群包名称查询",
+      "example": "自定义人群包",
+      "_depth": 0
+    },
+    {
+      "name": "audience_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人群包id",
+      "example": "22074278516698983",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_range",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "创建时间",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "start_time_unix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "开始时间，秒级时间戳",
+      "example": "1719763200",
+      "_depth": 1
+    },
+    {
+      "name": "end_time_unix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结束时间，秒级时间戳",
+      "example": "1719763200",
+      "_depth": 1
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单页容纳记录数",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "query_audience_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "查询人群包类型\nISVDefault=1 // isv默认人群包，包含AudienceType 1、5\nOfficalRecommended=2 // 官方推荐人群包，包含AudienceType 2",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "include_audience_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "最多50个",
+      "example": "[1]",
+      "_depth": 0
+    },
+    {
+      "name": "exclude_audience_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "最多50个",
+      "example": "[1]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "结果总数",
+      "example": "100"
+    },
+    {
+      "name": "results",
+      "type": "array",
+      "description": "结果列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:628002001）",
+      "action": "请正确输入参数",
+      "sub_code": "isv.missing-parameter:628002001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求非法（sub_code: isv.parameter-invalid:628005600）",
+      "action": "请正确输入参数",
+      "sub_code": "isv.parameter-invalid:628005600",
+      "sub_msg": "请求非法"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 系统不可用拦截（sub_code: isv.risk-control-failed:628004410）",
+      "action": "待系统恢复",
+      "sub_code": "isv.risk-control-failed:628004410",
+      "sub_msg": "系统不可用拦截"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/queryAudienceByCondition?app_key=your_appkey_here&method=sms.queryAudienceByCondition&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "results": [
+          {
+            "audience_id": "22074278516698983",
+            "audience_name": "自定义人群",
+            "audience_status": "1",
+            "audience_type": "1",
+            "content_desc": "测试人群",
+            "create_time_unix": "1719763200",
+            "label_list": [
+              {
+                "extra_map": {},
+                "label_id": "1",
+                "label_list": [
+                  {
+                    "extra_map": {},
+                    "label_id": "1",
+                    "label_list": [
+                      {
+                        "extra_map": {},
+                        "label_id": "1",
+                        "logic_operation": "1",
+                        "param_list": [
+                          {
+                            "param_id": "1",
+                            "param_name": "参数名称",
+                            "param_str": "''",
+                            "sub_param_list": [
+                              {
+                                "param_id": "1",
+                                "param_name": "河南省",
+                                "param_str": "河南省"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "logic_operation": "1",
+                    "param_list": [
+                      {
+                        "param_id": "4",
+                        "param_name": "中华地区",
+                        "sub_param_list": [
+                          {
+                            "param_id": "1",
+                            "param_name": "河南省",
+                            "param_str": "\"\""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "logic_operation": "1",
+                "param_list": [
+                  {
+                    "param_desc": "\"\"",
+                    "param_id": "1",
+                    "param_name": "\"\"",
+                    "param_str": "\"\"",
+                    "sub_param_list": [
+                      {
+                        "param_id": "1",
+                        "param_name": "\"\"",
+                        "param_str": "\"\""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "logic_operation": "1",
+            "shop_id": "12345",
+            "update_time_unix": "1719763200"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:628002001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6681",
+  "updatedAt": "2025-10-17",
+  "_file_stem": "member-sms-queryAudienceByCondition"
+}

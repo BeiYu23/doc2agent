@@ -1,0 +1,269 @@
+{
+  "id": "doudian.product.spu.QuerySpu",
+  "platform": "doudian",
+  "group": "product",
+  "name": "spu.QuerySpu",
+  "description": "检索SPU",
+  "method": "GET",
+  "path": "/spu/QuerySpu",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "【必填】从第0页开始",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "【必填】最大值为20",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "【选填】叶子类目ID",
+      "example": "31860",
+      "_depth": 0
+    },
+    {
+      "name": "properties",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "【选填】属性",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】产品名称",
+      "example": "美容护肤面霜",
+      "_depth": 1
+    },
+    {
+      "name": "ccc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】CCC证书编号",
+      "example": "2023011606593938",
+      "_depth": 1
+    },
+    {
+      "name": "isbn",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】ISBN",
+      "example": "9787544847346",
+      "_depth": 1
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】型号",
+      "example": "F911",
+      "_depth": 1
+    },
+    {
+      "name": "book_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】书名",
+      "example": "童话世界",
+      "_depth": 1
+    },
+    {
+      "name": "goods_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】货号",
+      "example": "W91216040101",
+      "_depth": 1
+    },
+    {
+      "name": "brand_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "【选填】品牌",
+      "example": "2078711068",
+      "_depth": 1
+    },
+    {
+      "name": "series",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】系列",
+      "example": "JAMES 系列",
+      "_depth": 1
+    },
+    {
+      "name": "registration_approval",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【选填】备案/批准文号",
+      "example": "粤G妆网备字2023292746",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "【选填】SPU状态：1-上线，2-下线，3-审核中，4-审核不通过",
+      "example": "[1,2]",
+      "_depth": 0
+    },
+    {
+      "name": "channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0：门捷列夫，1：标准类目2.0",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "查询到的总数据量",
+      "example": "80"
+    },
+    {
+      "name": "spuList",
+      "type": "array",
+      "description": "SPU信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 传入参数错误（sub_code: isv.parameter-invalid:40004）",
+      "action": "请检查传入参数",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "传入参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:50002）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:50002",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2012004:传入参数异常，该商家无类目[29196]资质（sub_code: isv.business-failed:2012004）",
+      "action": "2012004:传入参数异常，该商家无类目[29196]资质",
+      "sub_code": "isv.business-failed:2012004",
+      "sub_msg": "2012004:传入参数异常，该商家无类目[29196]资质"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2012013:获取品牌信息失败（sub_code: isv.business-failed:2012013）",
+      "action": "2012013:获取品牌信息失败",
+      "sub_code": "isv.business-failed:2012013",
+      "sub_msg": "2012013:获取品牌信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2012001:查询商家类目资质异常（sub_code: isv.business-failed:2012001）",
+      "action": "2012001:查询商家类目资质异常",
+      "sub_code": "isv.business-failed:2012001",
+      "sub_msg": "2012001:查询商家类目资质异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/spu/QuerySpu?app_key=your_appkey_here&method=spu.QuerySpu&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "spuList": [
+          {
+            "barcodes": [
+              {
+                "barcode": "6973971701655"
+              }
+            ],
+            "brandId": "437716142",
+            "categoryId": "23072",
+            "materials": [
+              {
+                "content": [
+                  {
+                    "content": "https://p3-ecom-spu.byteimg.com/tos-cn-i-89jsre2ap7/2feb661390654869ab35a2d05fea5472~tplv-89jsre2ap7-image.image"
+                  }
+                ],
+                "type": "1"
+              }
+            ],
+            "spuId": "7340298802504761650",
+            "spuName": "9787561139684/红点奖:全球最佳视觉传达设计年鉴",
+            "spuPropertyInfos": [
+              {
+                "propertyId": "1479",
+                "propertyName": "产品名称",
+                "propertyType": "1",
+                "propertyValues": [
+                  {
+                    "valueId": "0",
+                    "valueName": "神经酰胺修护霜"
+                  }
+                ]
+              }
+            ],
+            "status": "1"
+          }
+        ],
+        "total": "80"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "传入参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/6206",
+  "updatedAt": "2026-08-14",
+  "_file_stem": "product-spu-QuerySpu"
+}

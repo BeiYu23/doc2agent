@@ -1,0 +1,18 @@
+{
+  "updatedAt": "2026-11-04",
+  "description": "全平台接口目录：每个平台一份 catalog/<platform>.json，内含每个接口在本仓库内的 md/agent 文档地址。",
+  "platforms": [
+    {
+      "platform": "doudian",
+      "count": 1504,
+      "json": "catalog/doudian.json",
+      "md": "catalog/doudian.md"
+    },
+    {
+      "platform": "douyin",
+      "count": 1,
+      "json": "catalog/douyin.json",
+      "md": "catalog/douyin.md"
+    }
+  ]
+}

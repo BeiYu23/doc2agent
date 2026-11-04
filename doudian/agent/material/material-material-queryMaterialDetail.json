@@ -1,0 +1,113 @@
+{
+  "id": "doudian.material.material.queryMaterialDetail",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.queryMaterialDetail",
+  "description": "根据素材id查素材详情",
+  "method": "GET",
+  "path": "/material/queryMaterialDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商, 小程序"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "material_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材id；可使用【/material/batchUploadImageSync】【/material/uploadImageSync】【/material/searchMaterial  】接口获取",
+      "example": "70031975314170022840250",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "material_info",
+      "type": "object",
+      "description": "素材详情",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材不存在或已被删除（sub_code: isv.parameter-invalid:22002）",
+      "action": "素材不存在或已被删除",
+      "sub_code": "isv.parameter-invalid:22002",
+      "sub_msg": "素材不存在或已被删除"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:20001）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:10004）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/queryMaterialDetail?app_key=your_appkey_here&method=material.queryMaterialDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "material_info": {
+          "audit_reject_desc": "文件大小超出限制",
+          "audit_status": "5",
+          "byte_url": "\"\"",
+          "create_time": "2021-09-12 12:23:23",
+          "delete_time": "0",
+          "folder_id": "70072571115706780601250",
+          "material_id": "70072571115707435960250",
+          "material_type": "video",
+          "materil_name": "名称",
+          "operate_status": "0",
+          "origin_url": "\"\"",
+          "photo_info": {
+            "format": "jpg",
+            "height": "255",
+            "width": "255"
+          },
+          "size": "1234",
+          "update_time": "2021-09-12 12:23:23",
+          "video_info": {
+            "duration": "12",
+            "format": "mp3",
+            "height": "32",
+            "vid": "12345678",
+            "video_cover_url": "www.xxxxxxx.com",
+            "width": "23"
+          }
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:22002",
+      "sub_msg": "素材不存在或已被删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1145",
+  "updatedAt": "2022-12-28",
+  "_file_stem": "material-material-queryMaterialDetail"
+}

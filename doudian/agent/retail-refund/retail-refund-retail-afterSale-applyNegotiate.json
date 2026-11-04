@@ -1,0 +1,216 @@
+{
+  "id": "doudian.retail-refund.retail.afterSale.applyNegotiate",
+  "platform": "doudian",
+  "group": "retail-refund",
+  "name": "retail.afterSale.applyNegotiate",
+  "description": "商家发起协商",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pre_after_sale_reason_code",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "修改的售后原因，可选枚举及含义参考YOUR_SECRET_KEY接口返回值",
+      "example": "23",
+      "_depth": 0
+    },
+    {
+      "name": "pre_refund_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "修改的退款金额，最大可选金额参考YOUR_SECRET_KEY接口返回值",
+      "example": "1420",
+      "_depth": 0
+    },
+    {
+      "name": "pre_after_sale_item_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "修改的售后数量，最大可选数量参考YOUR_SECRET_KEY接口返回值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "im_negotiate_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "im消息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "im_text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "im对话内容",
+      "example": "测试文案",
+      "_depth": 1
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "售后单ID",
+      "example": "146602997871474402",
+      "_depth": 0
+    },
+    {
+      "name": "negotiate_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "协商时长，单位秒，商家主动发起协商场景下不需要传",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "negotiate_scene",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "协商场景，可选枚举及含义参考YOUR_SECRET_KEY接口返回值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "pre_after_sale_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "修改的售后类型，可选枚举及含义参考YOUR_SECRET_KEY接口返回值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "pre_package_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "修改的货物状态，0未收到货，1已收到货，可选枚举及含义参考YOUR_SECRET_KEY接口返回值",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "negotiate_deadline",
+      "type": "mixed",
+      "description": "协商截止时间，秒级时间戳",
+      "example": "1726671931"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常-可重试（sub_code: isp.service-error:5100002）",
+      "action": "系统异常，可尝试重试",
+      "sub_code": "isp.service-error:5100002",
+      "sub_msg": "系统异常-可重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 售后金额校验未通过（sub_code: isv.parameter-invalid:5100504）",
+      "action": "请按照错误文案输入正确的售后金额",
+      "sub_code": "isv.parameter-invalid:5100504",
+      "sub_msg": "售后金额校验未通过"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 货物状态校验未通过（sub_code: isv.parameter-invalid:5100502）",
+      "action": "请按照错误文案输入正确的货物状态",
+      "sub_code": "isv.parameter-invalid:5100502",
+      "sub_msg": "货物状态校验未通过"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 售后原因校验未通过（sub_code: isv.parameter-invalid:5100503）",
+      "action": "请按照错误文案输入正确的售后原因",
+      "sub_code": "isv.parameter-invalid:5100503",
+      "sub_msg": "售后原因校验未通过"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 售后件数校验未通过（sub_code: isv.parameter-invalid:5100505）",
+      "action": "请按照错误文案输入正确的售后件数",
+      "sub_code": "isv.parameter-invalid:5100505",
+      "sub_msg": "售后件数校验未通过"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 售后方式校验未通过（sub_code: isv.parameter-invalid:5100501）",
+      "action": "请按照错误文案输入正确的售后方式",
+      "sub_code": "isv.parameter-invalid:5100501",
+      "sub_msg": "售后方式校验未通过"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必填参数（sub_code: isv.missing-parameter:4100001）",
+      "action": "请参考能力文档传入必填参数",
+      "sub_code": "isv.missing-parameter:4100001",
+      "sub_msg": "缺少必填参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数类型错误（sub_code: isv.parameter-invalid:4100002）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100002",
+      "sub_msg": "参数类型错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100003）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务系统异常-不可重试的错误（sub_code: isv.business-failed:5000001）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "业务系统异常-不可重试的错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=retail.afterSale.applyNegotiate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "negotiate_deadline": "1726671931"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:5100002",
+      "sub_msg": "系统异常-可重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1548/6898",
+  "updatedAt": "2024-09-23",
+  "_file_stem": "retail-refund-retail-afterSale-applyNegotiate"
+}

@@ -1,0 +1,130 @@
+{
+  "id": "doudian.logistics-provider.install.order.supplierUpdateStore",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "install.order.supplierUpdateStore",
+  "description": "安装服务商更新门店",
+  "method": "GET",
+  "path": "/install/order/supplierUpdateStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店名称",
+      "example": "\"门店名称\"",
+      "_depth": 0
+    },
+    {
+      "name": "custom_store_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店自编码",
+      "example": "\"4321\"",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "2024-12-23 20:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "\"BSO123456\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "physical_shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实物店铺单id",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店id",
+      "example": "\"1234\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000006:状态机跃迁校验错误（sub_code: isv.business-failed:10000006）",
+      "action": "10000006:状态机跃迁校验错误",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000000:请求参数错误（sub_code: isv.business-failed:10000000）",
+      "action": "10000000:请求参数错误",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统内部错误",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.order.supplierUpdateStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7524",
+  "updatedAt": "2025-07-16",
+  "_file_stem": "logistics-provider-install-order-supplierUpdateStore"
+}

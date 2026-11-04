@@ -1,0 +1,261 @@
+{
+  "id": "doudian.retail-marketing.instantShopping.marketing.createLiveMainProductCoupon",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "instantShopping.marketing.createLiveMainProductCoupon",
+  "description": "创建直播主品券",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.08）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "券信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "coupon_base_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "券基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "apply_end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "使用结束时间（apply_way使用方式=限制日期范围）\n使用区间不长于365天",
+      "example": "1738166399",
+      "_depth": 2
+    },
+    {
+      "name": "valid_period",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "使用天数(apply_way使用方式=限制天数)\n单位是秒，范围在1s-180天内（需要是86400的倍数）",
+      "example": "172800",
+      "_depth": 2
+    },
+    {
+      "name": "activity_start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "领取开始时间",
+      "example": "1737561600",
+      "_depth": 2
+    },
+    {
+      "name": "activity_end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "领取结束时间",
+      "example": "1738166399",
+      "_depth": 2
+    },
+    {
+      "name": "total_amount",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "券发放量\n数值范围1-100W",
+      "example": "20",
+      "_depth": 2
+    },
+    {
+      "name": "apply_way",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "使用方式\n（限制天数-1，限制日期范围-2）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "discount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "折扣比例（折扣百分比）\n打折券专属\n例如9折，discount=90\n（折扣需在1-9折）",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "券业务类型（直播主品券=2）",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "max_apply_times",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每人最多可领取次数\n数值范围1-30",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "apply_start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "使用开始时间（apply_way使用方式=限制日期范围）\n注意：1. 券使用时间需在365天以内\n2. 使用的开始时间不可早于领取的开始时间",
+      "example": "1737561600",
+      "_depth": 2
+    },
+    {
+      "name": "credit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠金额（单位为分）\n例如9元，credit=900\n直减券/满减券\n（直减金额需在1-3000元的整数；满减优惠金额需在1-99999元的整数，满减券优惠金额必须大于等于券门槛的1%，满减券门槛必须大于券优惠金额）",
+      "example": "900",
+      "_depth": 2
+    },
+    {
+      "name": "threshold",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠门槛金额（单位为分）满减券专属\n例如9元，credit=900\n（门槛金额需在1-99999元的整数）",
+      "example": "1000",
+      "_depth": 2
+    },
+    {
+      "name": "activity_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动名称，最长25个字符",
+      "example": "活动A",
+      "_depth": 1
+    },
+    {
+      "name": "activity_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动类型（商品券=30）",
+      "example": "30",
+      "_depth": 1
+    },
+    {
+      "name": "activity_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动子类型\n301-直减券，302-满减券，303-折扣券",
+      "example": "301",
+      "_depth": 1
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "幂等id，长度最大100个字符",
+      "example": "xxxx1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "activity_id",
+      "type": "string",
+      "description": "活动id",
+      "example": "1111"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-40000）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 越权错误（sub_code: isv.parameter-invalid:-50001）",
+      "action": "检查当前用户是否有权限操作",
+      "sub_code": "isv.parameter-invalid:-50001",
+      "sub_msg": "越权错误"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 系统繁忙，请稍后重试（sub_code: isp.service-timeout-error:-10000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-timeout-error:-10000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请联系技术人员排查（sub_code: isp.service-error:-11450）",
+      "action": "系统异常，请联系技术人员排查",
+      "sub_code": "isp.service-error:-11450",
+      "sub_msg": "系统异常，请联系技术人员排查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/waybillApply?app_key=your_appkey_here&method=logistics.waybillApply&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "err_infos": [
+          {
+            "err_code": "1",
+            "err_msg": "1",
+            "order_id": "1",
+            "track_no": "1"
+          }
+        ],
+        "waybill_infos": [
+          {
+            "order_id": "1",
+            "print_data": "1",
+            "sign": "1",
+            "track_no": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/7250",
+  "updatedAt": "2025-02-10",
+  "_file_stem": "retail-marketing-instantShopping-marketing-createLiveMainProductCoupon"
+}

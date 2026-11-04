@@ -1,0 +1,221 @@
+{
+  "id": "doudian.retail-marketing.instantShopping.marketing.listActivityProducts",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "instantShopping.marketing.listActivityProducts",
+  "description": "即时零售商家营销工具开放服务",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "当前页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页大小",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "Init = 10,           // 创建中\nFail = 20,           // 创建失败\nDelete = 40,         // 删除\nPartialSuccess = 50, // 部分成功\nSuccess = 90,        // 创建成功",
+      "example": "90",
+      "_depth": 0
+    },
+    {
+      "name": "main_product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "根据主品id列表批量查询",
+      "example": "['111','222','333']",
+      "_depth": 0
+    },
+    {
+      "name": "main_sku_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "根据主skuId列表批量查询",
+      "example": "['111','222','333']",
+      "_depth": 0
+    },
+    {
+      "name": "sub_product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "根据子品id列表批量查询",
+      "example": "['111','222','333']",
+      "_depth": 0
+    },
+    {
+      "name": "sub_sku_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "根据子skuId列表批量查询",
+      "example": "['111','222','333']",
+      "_depth": 0
+    },
+    {
+      "name": "store_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "根据门店id列表批量查询",
+      "example": "[111,222,333]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "商品优惠明细",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总量",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-40000）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 越权错误（sub_code: isv.parameter-invalid:-50001）",
+      "action": "检查当前用户是否有权限操作",
+      "sub_code": "isv.parameter-invalid:-50001",
+      "sub_msg": "越权错误"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 系统繁忙，请稍后重试（sub_code: isp.service-timeout-error:-10000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-timeout-error:-10000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请联系技术人员排查（sub_code: isp.service-error:-11450）",
+      "action": "系统异常，请联系技术人员排查",
+      "sub_code": "isp.service-error:-11450",
+      "sub_msg": "系统异常，请联系技术人员排查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.marketing.listActivityProducts&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "activity_detail": {
+              "activity_price": "123",
+              "limit_buy": "123",
+              "stock_option": {
+                "activity_stock": "123",
+                "use_max_limit": "true"
+              }
+            },
+            "create_time": "1711273687",
+            "detail_status": "90",
+            "detail_status_reason": "商品不存在",
+            "main_product": {
+              "id": "123",
+              "img": "https://ehome.bytedance.net/xasdasd/1710",
+              "name": "商品A",
+              "status": "1"
+            },
+            "main_sku": {
+              "id": "123",
+              "img": "https://ehome.bytedance.net/xasdasd/1710",
+              "name": "主SKUA",
+              "original_price": "123"
+            },
+            "stock_info": {
+              "activity_stock_remain_num": "123",
+              "stock_num": "123"
+            },
+            "store": {
+              "shop_address": "xx路xx号",
+              "shop_id": "123",
+              "shop_name": "xx店",
+              "status": "1"
+            },
+            "sub_product": {
+              "id": "123",
+              "img": "https://ehome.bytedance.net/xasdasd/1710",
+              "name": "子品A",
+              "status": "1"
+            },
+            "sub_sku": {
+              "id": "123",
+              "img": "https://ehome.bytedance.net/xasdasd/1710",
+              "name": "子SKUA",
+              "original_price": "123"
+            },
+            "update_time": "1711273687"
+          }
+        ],
+        "total": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/6376",
+  "updatedAt": "2024-07-10",
+  "_file_stem": "retail-marketing-instantShopping-marketing-listActivityProducts"
+}

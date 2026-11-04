@@ -1,0 +1,157 @@
+{
+  "id": "doudian.miniapp.mini.getStoreDetail",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.getStoreDetail",
+  "description": "小程序c端获取门店信息",
+  "method": "GET",
+  "path": "/mini/getStoreDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 小程序"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店id，不是商品的storeid",
+      "example": "201581626",
+      "_depth": 0
+    },
+    {
+      "name": "lbs_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "wgs84经纬度",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "31.317514",
+      "_depth": 1
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "121.508568",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store",
+      "type": "object",
+      "description": "门店信息",
+      "example": ""
+    },
+    {
+      "name": "custom_err",
+      "type": "object",
+      "description": "接口返回错误信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:200216）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:200216",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / OpenAppId为空（sub_code: isv.parameter-invalid:100001）",
+      "action": "检查app_key是否正确",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "OpenAppId为空"
+    },
+    {
+      "code": "10001",
+      "meaning": "请求部分失败 / 门店信息为空（sub_code: isv.business-part-failed:200218）",
+      "action": "检查输入是否正确",
+      "sub_code": "isv.business-part-failed:200218",
+      "sub_msg": "门店信息为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 店铺id不匹配（sub_code: isv.parameter-invalid:200219）",
+      "action": "请确认使用账号",
+      "sub_code": "isv.parameter-invalid:200219",
+      "sub_msg": "店铺id不匹配"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/getStoreDetail?app_key=your_appkey_here&method=mini.getStoreDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "custom_err": {
+          "err_code": "0",
+          "err_msg": "success"
+        },
+        "store": {
+          "address_info": {
+            "detail": "凤起路111号",
+            "lbs_city": "杭州市",
+            "lbs_city_code": "330100",
+            "lbs_district": "余杭区",
+            "lbs_district_code": "3301100000000",
+            "lbs_province": "浙江省",
+            "lbs_province_code": "33",
+            "lbs_town": "/",
+            "lbs_town_code": "/"
+          },
+          "contact": "12345678901",
+          "distance": "48402.19774960337",
+          "distance_desc": "距您48.4km",
+          "is_open_now": "true",
+          "lbs_info": {
+            "latitude": "31.000",
+            "longitude": "121.000"
+          },
+          "logo_img": "https://p6-ecom-qualification-sign.ecombdimg.com/tos-cn-i-6v",
+          "open_time": {
+            "custom": "/",
+            "day_map": {}
+          },
+          "store_id": "0",
+          "store_name": "服饰自提测试门店1"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:200216",
+      "sub_msg": "系统内部错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/7261",
+  "updatedAt": "2025-02-21",
+  "_file_stem": "miniapp-mini-getStoreDetail"
+}

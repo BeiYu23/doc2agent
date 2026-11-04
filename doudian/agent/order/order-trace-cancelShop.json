@@ -1,0 +1,90 @@
+{
+  "id": "doudian.order.trace.cancelShop",
+  "platform": "doudian",
+  "group": "order",
+  "name": "trace.cancelShop",
+  "description": "订单链路监控删除用户",
+  "method": "GET",
+  "path": "/trace/cancelShop",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "shop_name",
+      "type": "string",
+      "description": "店铺名称",
+      "example": "测试店铺名称"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "description": "用户开通状态。已关闭，授权已过期",
+      "example": "已关闭"
+    },
+    {
+      "name": "create_at",
+      "type": "string",
+      "description": "开通时间；格式：yyyy-MM-dd HH:mm:ss",
+      "example": "2022-11-30 10:52:53"
+    },
+    {
+      "name": "update_at",
+      "type": "string",
+      "description": "最后更新时间，此次为关闭时间；格式：yyyy-MM-dd HH:mm:ss",
+      "example": "2022-11-30 10:52:53"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前用户未开通订单轨迹服务（sub_code: isv.parameter-invalid:605090004）",
+      "action": "用户未开通，无需调用删除",
+      "sub_code": "isv.parameter-invalid:605090004",
+      "sub_msg": "当前用户未开通订单轨迹服务"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部服务异常，请稍后重试（sub_code: isp.service-error:605090001）",
+      "action": "内部服务异常，请稍后重试",
+      "sub_code": "isp.service-error:605090001",
+      "sub_msg": "内部服务异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/trace/cancelShop?app_key=your_appkey_here&method=trace.cancelShop&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "create_at": "2022-11-30 10:52:53",
+        "shop_name": "测试店铺名称",
+        "status": "已关闭",
+        "update_at": "2022-11-30 10:52:53"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:605090004",
+      "sub_msg": "当前用户未开通订单轨迹服务"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/2793",
+  "updatedAt": "2022-12-13",
+  "_file_stem": "order-trace-cancelShop"
+}

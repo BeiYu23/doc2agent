@@ -1,0 +1,143 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyProduct.batchEditPrice",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyProduct.batchEditPrice",
+  "description": "批量改价",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "supply_price_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "价格list",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "supply_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货价，单位分",
+      "example": "1000",
+      "_depth": 1
+    },
+    {
+      "name": "spec_price_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "特定供货价list",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "distributor_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "分销商id列表",
+      "example": "[1,2]",
+      "_depth": 2
+    },
+    {
+      "name": "supply_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货价，单位分",
+      "example": "900",
+      "_depth": 2
+    },
+    {
+      "name": "suggest_retail_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "建议零售价，单位分",
+      "example": "10000",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sku id",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "msg",
+      "example": "msg"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "code",
+      "example": "code"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11037:已存在待生效的改价申请，不允许重复操作改价（sub_code: isv.business-failed:11037）",
+      "action": "11037:已存在待生效的改价申请，不允许重复操作改价",
+      "sub_code": "isv.business-failed:11037",
+      "sub_msg": "11037:已存在待生效的改价申请，不允许重复操作改价"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000:服务异常（sub_code: isv.business-failed:1000）",
+      "action": "1000:服务异常",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "1000:服务异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11002:当前分销品正在改价，请稍后重试~（sub_code: isv.business-failed:11002）",
+      "action": "11002:当前分销品正在改价，请稍后重试~",
+      "sub_code": "isv.business-failed:11002",
+      "sub_msg": "11002:当前分销品正在改价，请稍后重试~"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/confirmDailyBill?app_key=your_appkey_here&method=power.confirmDailyBill&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:11037",
+      "sub_msg": "11037:已存在待生效的改价申请，不允许重复操作改价"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/6686",
+  "updatedAt": "2024-08-26",
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-batchEditPrice"
+}

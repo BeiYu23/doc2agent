@@ -1,0 +1,104 @@
+{
+  "id": "doudian.order.order.merge",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.merge",
+  "description": "判断一批待发货订单，哪些可以收件人信息一致，可以使用同一个包裹进行发货：\n1. 批处理上限为100\n2. 只支持近15天的代发货订单的合单判断\n3. 同一天创建的订单：open_address_id不同的，一定不可以合单；open_address_id相同",
+  "method": "GET",
+  "path": "/order/merge",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "merge_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "合并需求列表，最少支持2个，最多支持100个。order_id和open_address_id必须一一对应，不可传错",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺订单id，不可重复。不支持售后单",
+      "example": "12345678",
+      "_depth": 1
+    },
+    {
+      "name": "open_address_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "收件人唯一id，订单列表、订单详情及售后详情API会返回，长度256以内",
+      "example": "#YOUR_SECRET_KEY",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "order_list",
+      "type": "array",
+      "description": "合单结果。可合单的订单ID列表用逗号分隔的字符串表示。比如，1111,2222表示订单1111和订单2222可合并发货，3333表示无法合单。",
+      "example": "[\"1111,2222\",\"3333\"]"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:100000）",
+      "action": "根据提示修改入参",
+      "sub_code": "isv.parameter-invalid:100000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部错误，请重试（sub_code: isv.business-failed:200101）",
+      "action": "内部错误，请重试",
+      "sub_code": "isv.business-failed:200101",
+      "sub_msg": "内部错误，请重试"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 存在安全风险（sub_code: isv.risk-control-failed:300011）",
+      "action": "稍后重试",
+      "sub_code": "isv.risk-control-failed:300011",
+      "sub_msg": "存在安全风险"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comyunc/adjustInventory?app_key=your_appkey_here&method=yunc.adjustInventory&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "{}"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/4042",
+  "updatedAt": "2023-06-15",
+  "_file_stem": "order-order-merge"
+}

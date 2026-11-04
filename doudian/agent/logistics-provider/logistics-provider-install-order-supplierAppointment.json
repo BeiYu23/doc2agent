@@ -1,0 +1,155 @@
+{
+  "id": "doudian.logistics-provider.install.order.supplierAppointment",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "install.order.supplierAppointment",
+  "description": "服务商已预约",
+  "method": "GET",
+  "path": "/install/order/supplierAppointment",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "appointment_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "预约时间，格式：\"yyyy-MM-dd HH:mm:ss~yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "师傅名称",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "师傅电话，格式，真实号：主机号；虚拟号：主机号-分机号；",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000000:请求参数错误（sub_code: isv.business-failed:10000000）",
+      "action": "10000000:请求参数错误",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000006:状态机跃迁校验错误（sub_code: isv.business-failed:10000006）",
+      "action": "10000006:状态机跃迁校验错误",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统内部错误",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/searchMaterial?app_key=your_appkey_here&method=material.searchMaterial&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "material_info_list": [
+          {
+            "audit_reject_desc": "不符合",
+            "audit_status": "1",
+            "byte_url": "\\\"\\\"",
+            "create_time": "2021-08-12 12:00:12",
+            "delete_time": "2021-08-12 12:00:12",
+            "folder_id": "6999834643465781548",
+            "material_id": "7000291764753940780",
+            "material_name": "素材名",
+            "material_type": "photo",
+            "operate_status": "1",
+            "origin_url": "\\\"\\\"",
+            "photoInfo": {
+              "format": "jpg",
+              "height": "255",
+              "width": "255"
+            },
+            "size": "1234",
+            "update_time": "2021-08-12 12:00:12",
+            "videoInfo": {
+              "duration": "12",
+              "format": "mp3",
+              "height": "23",
+              "size": "91226112",
+              "vid": "12345678",
+              "video_cover_url": "www.xxxxxxx.com",
+              "width": "32"
+            }
+          }
+        ],
+        "total": "3"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5785",
+  "updatedAt": "2023-12-21",
+  "_file_stem": "logistics-provider-install-order-supplierAppointment"
+}

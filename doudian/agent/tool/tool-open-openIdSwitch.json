@@ -1,0 +1,102 @@
+{
+  "id": "doudian.tool.open.openIdSwitch",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "open.openIdSwitch",
+  "description": "提供抖音和抖店 Openid 转换功能",
+  "method": "GET",
+  "path": "/open/openIdSwitch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 小程序, 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "传入的openId",
+      "example": "fgdsgwerqwfdsfd",
+      "_depth": 0
+    },
+    {
+      "name": "open_id_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "openId类型，1-抖音openId 2-抖店openId",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "open_id",
+      "type": "string",
+      "description": "对应的openId",
+      "example": "dfsdfsgdrwds"
+    },
+    {
+      "name": "open_id_type",
+      "type": "string",
+      "description": "openId类型，1-抖音openId 2-抖店openId",
+      "example": "2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参不合法（sub_code: isv.parameter-invalid:100001）",
+      "action": "请检查入参",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "入参不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询应用和小程序绑定关系失败（sub_code: isv.business-failed:300010）",
+      "action": "检查应用和小程序绑定关系",
+      "sub_code": "isv.business-failed:300010",
+      "sub_msg": "查询应用和小程序绑定关系失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参不合法（sub_code: isv.parameter-invalid:100000）",
+      "action": "请检查入参",
+      "sub_code": "isv.parameter-invalid:100000",
+      "sub_msg": "入参不合法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/open/openIdSwitch?app_key=your_appkey_here&method=open.openIdSwitch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "open_id": "dfsdfsgdrwds",
+        "open_id_type": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "入参不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/1973",
+  "updatedAt": "2022-06-02",
+  "_file_stem": "tool-open-openIdSwitch"
+}

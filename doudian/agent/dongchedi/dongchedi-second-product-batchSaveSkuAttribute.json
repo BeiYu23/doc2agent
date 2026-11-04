@@ -1,0 +1,199 @@
+{
+  "id": "doudian.dongchedi.second.product.batchSaveSkuAttribute",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.product.batchSaveSkuAttribute",
+  "description": "【二方接口】保存SKU扩展属性",
+  "method": "GET",
+  "path": "/second/product/batchSaveSkuAttribute",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "uid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商业化账号组uid，用作鉴权",
+      "example": "15495388485",
+      "_depth": 0
+    },
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "productId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品ID",
+      "example": "100001",
+      "_depth": 1
+    },
+    {
+      "name": "skuIds",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "SKU ID",
+      "example": "200001",
+      "_depth": 1
+    },
+    {
+      "name": "shopId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "店铺ID（店铺必须属于uid）",
+      "example": "565645",
+      "_depth": 1
+    },
+    {
+      "name": "key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展属性key",
+      "example": "key",
+      "_depth": 0
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展属性value",
+      "example": "value",
+      "_depth": 0
+    },
+    {
+      "name": "option",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0-覆盖更新，1-已存在该key的，返回错误",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "items",
+      "type": "array",
+      "description": "商品信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / uid不能为空（sub_code: isp.service-error:300001）",
+      "action": "uid不能为空",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / items不能为空（sub_code: isp.service-error:300002）",
+      "action": "items不能为空",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "items不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / key不能为空（sub_code: isp.service-error:300003）",
+      "action": "key不能为空",
+      "sub_code": "isp.service-error:300003",
+      "sub_msg": "key不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / value不能为空（sub_code: isp.service-error:300004）",
+      "action": "value不能为空",
+      "sub_code": "isp.service-error:300004",
+      "sub_msg": "value不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 只能更改同一店铺的商品SKU属性（sub_code: isp.service-error:300005）",
+      "action": "只能更改同一店铺的商品SKU属性",
+      "sub_code": "isp.service-error:300005",
+      "sub_msg": "只能更改同一店铺的商品SKU属性"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / skuIds不能为空（sub_code: isp.service-error:300006）",
+      "action": "skuIds不能为空",
+      "sub_code": "isp.service-error:300006",
+      "sub_msg": "skuIds不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / productId不能为空（sub_code: isp.service-error:300007）",
+      "action": "productId不能为空",
+      "sub_code": "isp.service-error:300007",
+      "sub_msg": "productId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / shopId不能为空（sub_code: isp.service-error:300008）",
+      "action": "shopId不能为空",
+      "sub_code": "isp.service-error:300008",
+      "sub_msg": "shopId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 店铺鉴权失败（sub_code: isp.service-error:500004）",
+      "action": "店铺鉴权失败",
+      "sub_code": "isp.service-error:500004",
+      "sub_msg": "店铺鉴权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.product.batchSaveSkuAttribute&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "items": [
+          {
+            "code": "0",
+            "msg": "msg",
+            "productId": "100001",
+            "shopId": "56767",
+            "skuId": "200001"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6951",
+  "updatedAt": "2024-10-18",
+  "_file_stem": "dongchedi-second-product-batchSaveSkuAttribute"
+}

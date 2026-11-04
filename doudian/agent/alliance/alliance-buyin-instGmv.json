@@ -1,0 +1,85 @@
+{
+  "id": "doudian.alliance.buyin.instGmv",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.instGmv",
+  "description": "【已下线，公告https://op.jinritemai.com/docs/notice-docs/21/7407】\n查询机构某天的选品GMV，不包括抖音应用选品GMV数据",
+  "method": "GET",
+  "path": "/buyin/instGmv",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, MCN机构, 抖客, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "date",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "日期（只支持查询[t-60,t-2]的GMV）",
+      "example": "2022-02-01",
+      "_depth": 0
+    },
+    {
+      "name": "search_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "查询粒度（1-查询当前应用，2-查询应用所属工具服务商，不包括抖音应用选品GMV数据）",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1652",
+  "updatedAt": "2022-11-15",
+  "_file_stem": "alliance-buyin-instGmv"
+}

@@ -1,0 +1,161 @@
+{
+  "id": "doudian.logistics.power.homeDeliveryCallback",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.homeDeliveryCallback",
+  "description": "送货上门履约结果推送（仅用于兼容老物流网关）",
+  "method": "GET",
+  "path": "/power/homeDeliveryCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "resource_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "waybill_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "number_calls",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "connect_result",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "time_ring_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "-",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "time_ring",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "is_home_delivery",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "home_delivery_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "photograph",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签收图片",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务类型",
+      "example": "SignAndReturn",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10003:系统异常（sub_code: isv.business-failed:10003）",
+      "action": "10003:系统异常",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "10003:系统异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "10003:系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1573",
+  "updatedAt": "2022-11-08",
+  "_file_stem": "logistics-power-homeDeliveryCallback"
+}

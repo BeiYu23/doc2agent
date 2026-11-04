@@ -1,0 +1,126 @@
+{
+  "id": "doudian.video.second.ecomInsight.createVideoRecommendTask",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.createVideoRecommendTask",
+  "description": "创建视频推荐子任务",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页面条数",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "task_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "任务id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "product_title",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品标题",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "product_image_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品图片链接，必须是公网可访问的",
+      "example": "xxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "数据",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "消息",
+      "example": "xxxx"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "状态码",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.createVideoRecommendTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "id": "123",
+          "task_id": "1",
+          "task_type": "VideoRecommending"
+        },
+        "msg": "xxxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8355",
+  "updatedAt": "2026-07-07",
+  "_file_stem": "video-second-ecomInsight-createVideoRecommendTask"
+}

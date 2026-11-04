@@ -1,0 +1,81 @@
+{
+  "id": "doudian.logistics.logistics.batchQueryRealNumber",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.batchQueryRealNumber",
+  "description": "批量获取真实手机号",
+  "method": "GET",
+  "path": "/logistics/batchQueryRealNumber",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: , 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务编码，联系研发确认",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "operation_no_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "实操单号列表",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码，联系研发确认",
+      "example": "xxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "operation_no_2_real_number",
+      "type": "string",
+      "description": "实操单号对应真实手机号map序列化结果",
+      "example": "xxx"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/batchQueryRealNumber?app_key=your_appkey_here&method=logistics.batchQueryRealNumber&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "operation_no_2_real_number": "xxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/3534",
+  "updatedAt": "2023-05-16",
+  "_file_stem": "logistics-logistics-batchQueryRealNumber"
+}

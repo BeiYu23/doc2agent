@@ -1,0 +1,247 @@
+{
+  "id": "doudian.retail-store.instantShopping.notifyDeliveryStatus",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "instantShopping.notifyDeliveryStatus",
+  "description": "即时零售自配订单同步配送信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音电商shop order单id",
+      "example": "6917539978356459031",
+      "_depth": 0
+    },
+    {
+      "name": "distribution_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "三方运力服务商，枚举：\nSF:顺丰同城\nDADA:达达\nFENG_NIAO:蜂鸟配送\nMEI_TUAN:美团配送\nSHAN_SONG:闪送\nDIAN_WO_DA:点我达\nUU:UU跑腿\nXIN_TIAN_WENG:信天翁\nSAN_LIU_WU:365跑腿\nCAO_CAO:曹操跑腿\nAI_PAO_TUI:爱跑腿\nKUAI_PAO_ZHE:快跑者\nJI_KE_KUAI_SONG:极客快送\nTONG_DA:同达\nSHENG_HUO_BAN_JING:生活半径\nLIN_QU:临趣\nQU_SONG:趣送\nKUAI_FU_WU:快服务\nCAI_NIAO_XIN_LIAN_MENG:菜鸟新联盟\nFENG_XIAN_SHENG:风先生\nLAI_DA_PEI_SONG:来答配送\nHAO_JI_PAO_TUI:好急跑腿\nSONG_GE_DONG_XI_PAO_TUI:送个东西跑腿\nKAO_PU_SONG:靠谱送\nKUAI_NAN_PAO_TUI:快男跑腿\nGUO_XIAO_DI:裹小递\nMERCHANT:商家自配送,使用此枚举需要提前和平台沟通",
+      "example": "SF",
+      "_depth": 0
+    },
+    {
+      "name": "distribution_delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "三方运单号，与发货运单号保持一致",
+      "example": "SF1124756994790",
+      "_depth": 0
+    },
+    {
+      "name": "rider_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手姓名；\n骑手已接单/到店/取货/送达状态时必传；",
+      "example": "王某某",
+      "_depth": 0
+    },
+    {
+      "name": "rider_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手电话；\n骑手已接单/到店/取货/送达状态时必传；",
+      "example": "12341231111",
+      "_depth": 0
+    },
+    {
+      "name": "rider_phone_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "骑手手机号类型，0是真实号，1是隐私号",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "rider_longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手经度；骑手已接单/到店/取货/送达状态时必传；高德坐标系",
+      "example": "120.518486",
+      "_depth": 0
+    },
+    {
+      "name": "rider_latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手维度；骑手已接单/到店/取货/送达状态时必传；高德坐标系",
+      "example": "36.894333",
+      "_depth": 0
+    },
+    {
+      "name": "report_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "骑手位置上报时间戳，传入骑手坐标时必填，十位时间戳",
+      "example": "1693478310",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "状态更新时间戳，十位时间戳",
+      "example": "1693478310",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取消原因",
+      "example": "商家取消",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_code",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "取消编码，枚举：\n201:超出配送范围\n202:骑手原因无法完成配送\n203:运力紧张无可接单骑手\n204:骑手联系不上收货人\n206:物品超长超重无法完成配送\n208:商家未营业\n209:商家无法出餐\n210:商家地址错误\n211:用户拒收\n222:用户取消订单\n200:其他原因",
+      "example": "201",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "运力状态，枚举：\n101:待骑手接单\n102:骑手已接单\n103:骑手已到店\n104:骑手已取货\n200:已送达\n300:已取消",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "rider_coordinate_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "坐标系 0 高德 1 百度",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售后单号，售后场景必传，正向场景不传递",
+      "example": "146436655029345858",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_order_id",
+      "type": "string",
+      "description": "抖音电商shop order单id",
+      "example": "6917539978356459031"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询不到对应的运力订单（sub_code: isv.business-failed:20111）",
+      "action": "查看推送订单信息是否正确",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "查询不到对应的运力订单"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20100）",
+      "action": "系统错误",
+      "sub_code": "isp.service-error:20100",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:40100）",
+      "action": "校验参数是否正确",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据查询失败，请稍后重试（sub_code: isv.business-failed:701）",
+      "action": "数据查询失败，请稍后重试",
+      "sub_code": "isv.business-failed:701",
+      "sub_msg": "数据查询失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据查询失败，请稍后重试（sub_code: isv.business-failed:505）",
+      "action": "数据查询失败，请稍后重试",
+      "sub_code": "isv.business-failed:505",
+      "sub_msg": "数据查询失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 503:快递发货订单不允许同步配送完成（sub_code: isv.business-failed:503）",
+      "action": "503:快递发货订单不允许同步配送完成",
+      "sub_code": "isv.business-failed:503",
+      "sub_msg": "503:快递发货订单不允许同步配送完成"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 99999:合约单查询失败，请稍后重试（sub_code: isv.business-failed:99999）",
+      "action": "99999:合约单查询失败，请稍后重试",
+      "sub_code": "isv.business-failed:99999",
+      "sub_msg": "99999:合约单查询失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 702:查询数据失败，请稍后重试（sub_code: isv.business-failed:702）",
+      "action": "702:查询数据失败，请稍后重试",
+      "sub_code": "isv.business-failed:702",
+      "sub_msg": "702:查询数据失败，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comcrossborder/msg/push?app_key=your_appkey_here&method=crossborder.msg.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "receive": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "查询不到对应的运力订单"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/4774",
+  "updatedAt": "2024-05-23",
+  "_file_stem": "retail-store-instantShopping-notifyDeliveryStatus"
+}

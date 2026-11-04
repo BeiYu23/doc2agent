@@ -1,0 +1,267 @@
+{
+  "id": "doudian.logistics-provider.logistics.updateCollectTime",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.updateCollectTime",
+  "description": "物流商推送改约时间",
+  "method": "GET",
+  "path": "/logistics/updateCollectTime",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "JT0101001010",
+      "_depth": 0
+    },
+    {
+      "name": "start_collect_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "开始揽收时间",
+      "example": "2021-01-19 09:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "end_collect_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结束揽收时间",
+      "example": "2021-01-19 10:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作时间",
+      "example": "2021-01-19 15:12:23",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_fulfill_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流领域订单id",
+      "example": "LFO000000000001",
+      "_depth": 0
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否接通",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "express",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "call",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否电联",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "call_nums",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电联次数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "call_info",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "电联信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "caller_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电联人姓名（快递员）",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "receive_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户号码",
+      "example": "15161052777",
+      "_depth": 1
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否接通",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "call_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电联时间",
+      "example": "2021-01-19 10:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "call_duration",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通话时长",
+      "example": "10（秒）",
+      "_depth": 1
+    },
+    {
+      "name": "call_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电联号码（快递员）",
+      "example": "15161052777",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -10007:未知错误（sub_code: isv.business-failed:-10007）",
+      "action": "人工定位",
+      "sub_code": "isv.business-failed:-10007",
+      "sub_msg": "-10007:未知错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10902:该运单号已超过修改次数阈值（sub_code: isv.business-failed:10902）",
+      "action": "修改失败",
+      "sub_code": "isv.business-failed:10902",
+      "sub_msg": "10902:该运单号已超过修改次数阈值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10905:修改时间不在3天内（sub_code: isv.business-failed:10905）",
+      "action": "修改失败",
+      "sub_code": "isv.business-failed:10905",
+      "sub_msg": "10905:修改时间不在3天内"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 6405:系统异常（sub_code: isv.business-failed:6405）",
+      "action": "修改失败",
+      "sub_code": "isv.business-failed:6405",
+      "sub_msg": "6405:系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10904:修改时间格式不允许（sub_code: isv.business-failed:10904）",
+      "action": "修改失败",
+      "sub_code": "isv.business-failed:10904",
+      "sub_msg": "10904:修改时间格式不允许"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10901:当前状态不允许修改（sub_code: isv.business-failed:10901）",
+      "action": "修改失败",
+      "sub_code": "isv.business-failed:10901",
+      "sub_msg": "10901:当前状态不允许修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10002:系统异常（sub_code: isv.business-failed:10002）",
+      "action": "人工定位",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "10002:系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10906:不满足电联要求（sub_code: isv.business-failed:10906）",
+      "action": "传入合法电联记录",
+      "sub_code": "isv.business-failed:10906",
+      "sub_msg": "10906:不满足电联要求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:参数错误（sub_code: isv.business-failed:10000）",
+      "action": "检查参数",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 滞留包裹不支持改约（sub_code: isv.business-failed:10907）",
+      "action": "检查参数",
+      "sub_code": "isv.business-failed:10907",
+      "sub_msg": "滞留包裹不支持改约"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1h不支持改为2h预约时间（sub_code: isv.business-failed:10014）",
+      "action": "检查参数",
+      "sub_code": "isv.business-failed:10014",
+      "sub_msg": "1h不支持改为2h预约时间"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/updateCollectTime?app_key=your_appkey_here&method=logistics.updateCollectTime&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-10007",
+      "sub_msg": "-10007:未知错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7187",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "logistics-provider-logistics-updateCollectTime"
+}

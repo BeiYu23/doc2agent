@@ -1,0 +1,80 @@
+{
+  "id": "doudian.material.material.editFolder",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.editFolder",
+  "description": "编辑/移动文件夹",
+  "method": "GET",
+  "path": "/material/editFolder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件夹id，不能操作系统文件夹（0：根目录 -1：回收站）",
+      "example": "\"70029608590225411001510\"",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "新的文件夹名称",
+      "example": "我是新的文件夹名称",
+      "_depth": 0
+    },
+    {
+      "name": "to_folder_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "需要移动到的父文件夹id",
+      "example": "\"70029608590225411001510\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 文件夹ID错误，请输入正确的文件夹ID（sub_code: isv.parameter-invalid:20001）",
+      "action": "文件夹id不存，检查参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "文件夹ID错误，请输入正确的文件夹ID"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/editFolder?app_key=your_appkey_here&method=material.editFolder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "文件夹ID错误，请输入正确的文件夹ID"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/948",
+  "updatedAt": "2022-09-06",
+  "_file_stem": "material-material-editFolder"
+}

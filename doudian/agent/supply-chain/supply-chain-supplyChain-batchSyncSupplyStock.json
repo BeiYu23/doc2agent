@@ -1,0 +1,116 @@
+{
+  "id": "doudian.supply-chain.supplyChain.batchSyncSupplyStock",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.batchSyncSupplyStock",
+  "description": "批量同步库存",
+  "method": "GET",
+  "path": "/supplyChain/batchSyncSupplyStock",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "stock_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "库存列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部仓编码",
+      "example": "\"123\"",
+      "_depth": 1
+    },
+    {
+      "name": "incremental",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "库存更新方式， 当前只支持增量",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "idempotent_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "幂等ID，仅incremental=true时有用",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "stock_serial_no_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "库存实物序列号，如手机即为每个手机的IMEI",
+      "example": "[\"123\"]",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuid",
+      "example": "123",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/batchSyncSupplyStock?app_key=your_appkey_here&method=supplyChain.batchSyncSupplyStock&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/7335",
+  "updatedAt": "2025-03-05",
+  "_file_stem": "supply-chain-supplyChain-batchSyncSupplyStock"
+}

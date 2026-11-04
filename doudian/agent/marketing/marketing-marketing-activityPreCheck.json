@@ -1,0 +1,787 @@
+{
+  "id": "doudian.marketing.marketing.activityPreCheck",
+  "platform": "doudian",
+  "group": "marketing",
+  "name": "marketing.activityPreCheck",
+  "description": "玩法优惠信息创建或修改前的预校验能力",
+  "method": "GET",
+  "path": "/marketing/activityPreCheck",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动信息信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "activity_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "玩法基本信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "活动Id。创建时填0，编辑时填活动ID。",
+      "example": "7543564853458698506",
+      "_depth": 2
+    },
+    {
+      "name": "activity_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动名称",
+      "example": "限时抢购 20250806 15:45",
+      "_depth": 2
+    },
+    {
+      "name": "activity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "玩法编码。LimitTimeTimeBuy: 限时抢购; LimitQuantityTimeBuy: 限量抢购; OrdinaryTimeBuy: 普通降价促销。",
+      "example": "LimitTimeTimeBuy",
+      "_depth": 2
+    },
+    {
+      "name": "create_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "创建时间。必填",
+      "example": "1749744000",
+      "_depth": 2
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "更新时间。必填",
+      "example": "1749744000",
+      "_depth": 2
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "玩法状态。固定传 1。",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "activity_time",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "玩法周期信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "开始时间时间",
+      "example": "1749744000",
+      "_depth": 2
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "结束时间",
+      "example": "1749744000",
+      "_depth": 2
+    },
+    {
+      "name": "warm_up_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "预热时间",
+      "example": "1749744000",
+      "_depth": 2
+    },
+    {
+      "name": "activity_common_config",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "玩法通用配置",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "rule_scope",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "优惠规则作用范围",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "rule_scope_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "优惠规则作用类型。当前仅支持传 3，代表 sku 维度。",
+      "example": "3",
+      "_depth": 3
+    },
+    {
+      "name": "source_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "来源类型。传固定值 10，代表开放平台",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "source_page",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "创建来源页。传固定值 300，代表isv页面",
+      "example": "300",
+      "_depth": 2
+    },
+    {
+      "name": "activity_rule",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "玩法规则信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "campaign_resource",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动资源规则",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "user_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "用户限购规则",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "trade_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "交易限购规则",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "trade_limit_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "限购类型。固定传1，代表sku维度限购",
+      "example": "1",
+      "_depth": 5
+    },
+    {
+      "name": "campaign_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动限量规则",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "promotion_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "营销限用规则",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "limit_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "限用类型。固定传 14，代表商品维度限用",
+      "example": "14",
+      "_depth": 5
+    },
+    {
+      "name": "activity_stock",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动库存规则",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "stock_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "库存类型。固定传1，代表商品维度库存。",
+      "example": "1",
+      "_depth": 5
+    },
+    {
+      "name": "discount_rule",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优惠规则",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "discount_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "优惠信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "activity_price_discount",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "价格类优惠",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "discount_value",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠值。默认填充0",
+      "example": "0",
+      "_depth": 5
+    },
+    {
+      "name": "discount_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠方式。1: 打折; 2: 一口价; 3: 直降",
+      "example": "2",
+      "_depth": 5
+    },
+    {
+      "name": "fund_share",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "出资信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "fund_share_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "出资信息",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "fund_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "出资方ID。固定传值：v1:2",
+      "example": "v1:2",
+      "_depth": 5
+    },
+    {
+      "name": "share_ratio",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "分摊比例。店铺单品直降传 100",
+      "example": "100",
+      "_depth": 5
+    },
+    {
+      "name": "denominator",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "分摊分母",
+      "example": "100",
+      "_depth": 5
+    },
+    {
+      "name": "fund_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "出资角色。1: 平台; 2: 店铺; 3: 达人;4: 供应商。单品直降场景传 2",
+      "example": "2",
+      "_depth": 5
+    },
+    {
+      "name": "share_way",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平摊方式。固定传1，代表比例出资。",
+      "example": "1",
+      "_depth": 5
+    },
+    {
+      "name": "scene_rule",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "场景规则",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "need_live",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否直播间生效。固定传 false，代表活动期间均生效",
+      "example": "false",
+      "_depth": 3
+    },
+    {
+      "name": "activity_products",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "玩法商品信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "activity_sku_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "活动SKU信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "sku_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "SKU基本信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "activity_fixed_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "sku活动一口价。需要调用方根据优惠设置做计算，单位分",
+      "example": "600",
+      "_depth": 4
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "skuId",
+      "example": "1774276049399816",
+      "_depth": 4
+    },
+    {
+      "name": "origin_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "sku价格",
+      "example": "800",
+      "_depth": 4
+    },
+    {
+      "name": "activity_rule",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动优惠规则",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "discount_rule",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优惠规则",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "discount_threshold",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "优惠门槛",
+      "example": "",
+      "_depth": 5
+    },
+    {
+      "name": "threshold_value",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门槛值。固定传0",
+      "example": "0",
+      "_depth": 6
+    },
+    {
+      "name": "threshold_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠门槛类型。固定传 2,2 代表满元。",
+      "example": "2",
+      "_depth": 6
+    },
+    {
+      "name": "discount_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "优惠信息",
+      "example": "",
+      "_depth": 5
+    },
+    {
+      "name": "activity_price_discount",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "价格类优惠",
+      "example": "",
+      "_depth": 6
+    },
+    {
+      "name": "discount_value",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "优惠值。一口价和直降代表面额，单位分；打折代表百分之多少",
+      "example": "20",
+      "_depth": 7
+    },
+    {
+      "name": "discount_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠方式。1: 打折; 2: 一口价; 3: 直降",
+      "example": "2",
+      "_depth": 7
+    },
+    {
+      "name": "campaign_resource",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动资源规则",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "user_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "用户限购规则",
+      "example": "",
+      "_depth": 5
+    },
+    {
+      "name": "trade_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "交易限购规则",
+      "example": "",
+      "_depth": 6
+    },
+    {
+      "name": "user_limit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "用户限购值",
+      "example": "2",
+      "_depth": 7
+    },
+    {
+      "name": "trade_limit_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "限购类型。固定传1，代表sku维度限购",
+      "example": "1",
+      "_depth": 7
+    },
+    {
+      "name": "product_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商品信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "channel_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "渠道类型。固定传0",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品ID",
+      "example": "3633954572898306915",
+      "_depth": 3
+    },
+    {
+      "name": "channel_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道ID。固定传 0。",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名",
+      "example": "多sku半身裙01-20 21:47",
+      "_depth": 3
+    },
+    {
+      "name": "cover",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主图链接",
+      "example": "https://tosv.boe.byted.org/obj/ecom-shop-material/ayoJLG_m_6fa7399f9514ce5978e1451cc6e952a0_sx_69234_www800-800",
+      "_depth": 3
+    },
+    {
+      "name": "activity_rule",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动规则",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "campaign_resource",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动资源规则",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "campaign_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动限量规则",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "promotion_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "营销限用规则",
+      "example": "",
+      "_depth": 5
+    },
+    {
+      "name": "limit_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "限用类型。固定传 14，代表商品维度限用",
+      "example": "14",
+      "_depth": 6
+    },
+    {
+      "name": "limit_num",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "限用数",
+      "example": "2",
+      "_depth": 6
+    },
+    {
+      "name": "activity_extra_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "玩法扩展信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "time_buy_extra",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "限时限量购扩展信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "order_expire_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "订单过期时间。仅支持传入 1800，代表 30 分钟",
+      "example": "1800",
+      "_depth": 3
+    },
+    {
+      "name": "set_promotion_limit",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否设置营销限用",
+      "example": "true",
+      "_depth": 3
+    },
+    {
+      "name": "common_ctx_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "上下文信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "isv_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "第三方应用信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "shop_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "店铺信息",
+      "example": "",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "check_res",
+      "type": "object",
+      "description": "校验结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数（sub_code: isv.parameter-invalid:510000001）",
+      "action": "调整参数",
+      "sub_code": "isv.parameter-invalid:510000001",
+      "sub_msg": "非法参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:510050002）",
+      "action": "联系技术排查",
+      "sub_code": "isp.service-error:510050002",
+      "sub_msg": "系统异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:510000001",
+      "sub_msg": "非法参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1361/7774",
+  "updatedAt": "2025-09-16",
+  "_file_stem": "marketing-marketing-activityPreCheck"
+}

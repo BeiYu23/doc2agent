@@ -1,0 +1,108 @@
+{
+  "id": "doudian.logistics-provider.logistics.netsiteApplyCallback",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.netsiteApplyCallback",
+  "description": "电子面单服务订购审核回调函数；",
+  "method": "GET",
+  "path": "/logistics/netsiteApplyCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "book_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订购id",
+      "example": "323123",
+      "_depth": 0
+    },
+    {
+      "name": "result",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "审核结果 （通过-true, 不通过 - false）",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "审核意见，不通过是可以备注本字段",
+      "example": "审核意见",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "action",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10501:不能重复审核（sub_code: isv.business-failed:10501）",
+      "action": "请检查请求参数",
+      "sub_code": "isv.business-failed:10501",
+      "sub_msg": "10501:不能重复审核"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10003:该数据不存在，请检查后重试（sub_code: isv.business-failed:10003）",
+      "action": "10003:该数据不存在，请检查后重试",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "10003:该数据不存在，请检查后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comtest/encrypt?app_key=your_appkey_here&method=test.encrypt&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10501",
+      "sub_msg": "10501:不能重复审核"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2804",
+  "updatedAt": "2022-12-06",
+  "_file_stem": "logistics-provider-logistics-netsiteApplyCallback"
+}

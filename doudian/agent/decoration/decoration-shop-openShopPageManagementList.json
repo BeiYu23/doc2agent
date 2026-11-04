@@ -1,0 +1,171 @@
+{
+  "id": "doudian.decoration.shop.openShopPageManagementList",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.openShopPageManagementList",
+  "description": "店铺装修-页面管理",
+  "method": "GET",
+  "path": "/shop/openShopPageManagementList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "query_text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "页面名称模糊查询使用",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "page_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页面类型",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "时间排序方式\n0：不排序\n1：绑定时间从新到老\n2：绑定时间从老到新",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "一页中记录个数",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data_result",
+      "type": "array",
+      "description": "返回值",
+      "example": ""
+    },
+    {
+      "name": "page_result",
+      "type": "object",
+      "description": "分页信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / RPC调用失败（sub_code: isp.service-error:10004）",
+      "action": "根据报错内容排查",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/openShopPageManagementList?app_key=your_appkey_here&method=shop.openShopPageManagementList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data_result": [
+          {
+            "bind_shop_invalid_num": "0",
+            "bind_shop_num": "\"0\"",
+            "bind_shop_valid_num": "0",
+            "last_update_time": "\"2024-02-06T19:16:03+08:00\"",
+            "operator": {
+              "operator_id": "0",
+              "operator_name": "系统",
+              "shop_id": "155761471"
+            },
+            "order_ratio_7d": {
+              "benchmark_ratio": "0",
+              "in_period_incr": "0",
+              "is_faster": "0",
+              "last_period_value": "0",
+              "out_period_absolute": "0",
+              "out_period_incr": "0",
+              "same_period_incr": "0",
+              "value": "0",
+              "value_ratio": "0"
+            },
+            "page_source": "1",
+            "product_click_number_7d": {
+              "benchmark_ratio": "0",
+              "in_period_incr": "0",
+              "is_faster": "0",
+              "last_period_value": "0",
+              "out_period_absolute": "0",
+              "out_period_incr": "0",
+              "same_period_incr": "0",
+              "value": "0",
+              "value_ratio": "0"
+            },
+            "pv_7d": {
+              "benchmark_ratio": "0",
+              "in_period_incr": "0",
+              "is_faster": "0",
+              "last_period_value": "0",
+              "out_period_absolute": "0",
+              "out_period_incr": "0",
+              "same_period_incr": "0",
+              "value": "0",
+              "value_ratio": "0"
+            },
+            "source_shop_id": "155749636",
+            "source_shop_name": "迁移showcase连锁店",
+            "status": "2",
+            "template_id": "7332399246898888986",
+            "tmp_id": "7332424402653184307",
+            "tmp_name": "数据迁移回归数据1"
+          }
+        ],
+        "page_result": {
+          "page_no": "1",
+          "page_size": "10",
+          "total": "1"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6298",
+  "updatedAt": "2026-04-02",
+  "_file_stem": "decoration-shop-openShopPageManagementList"
+}

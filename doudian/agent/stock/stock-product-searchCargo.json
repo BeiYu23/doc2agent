@@ -1,0 +1,139 @@
+{
+  "id": "doudian.stock.product.searchCargo",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "product.searchCargo",
+  "description": "货品检索",
+  "method": "GET",
+  "path": "/product/searchCargo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "id_code_name_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "id code name混合检索",
+      "example": "[\"AAA\",\"123\"]",
+      "_depth": 0
+    },
+    {
+      "name": "code_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品编码数组",
+      "example": "[\"AAA\"]",
+      "_depth": 0
+    },
+    {
+      "name": "name_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "名称数组",
+      "example": "[\"货品\"]",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品id数组",
+      "example": "[123]",
+      "_depth": 0
+    },
+    {
+      "name": "status_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品状态数组",
+      "example": "[0]",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码 0开始",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "分页大小",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "cargo_list",
+      "type": "array",
+      "description": "检索结果",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/searchCargo?app_key=your_appkey_here&method=product.searchCargo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "cargo_list": [
+          {
+            "cargo_id": "123",
+            "code": "ABC",
+            "img": "xxx",
+            "name": "ABC",
+            "status": "0",
+            "warehouse_stock": [
+              {
+                "stock_num": "1",
+                "warehouse_code": "ABC",
+                "warehouse_id": "123"
+              }
+            ]
+          }
+        ],
+        "total": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/8419",
+  "updatedAt": "2026-07-16",
+  "_file_stem": "stock-product-searchCargo"
+}

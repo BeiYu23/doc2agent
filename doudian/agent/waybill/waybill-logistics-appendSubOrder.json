@@ -1,0 +1,197 @@
+{
+  "id": "doudian.waybill.logistics.appendSubOrder",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.appendSubOrder",
+  "description": "电子面单追加子单号场景；",
+  "method": "GET",
+  "path": "/logistics/appendSubOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V2.06）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "1343434",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "pack_add_quantity",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "追加个数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_return_full_sub_codes",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回全量的子单号",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "track_no",
+      "type": "string",
+      "description": "运单号",
+      "example": "sf2343434"
+    },
+    {
+      "name": "pack_quantity",
+      "type": "number",
+      "description": "子母单数量",
+      "example": "20"
+    },
+    {
+      "name": "sub_waybill_codes",
+      "type": "string",
+      "description": "新追加的子单号",
+      "example": "1,2,3"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单状态不为接货中,不允许拆单（sub_code: isv.parameter-invalid:10000）",
+      "action": "订单状态不为接货中,不允许拆单",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "订单状态不为接货中,不允许拆单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 电子面单号不存在（sub_code: isv.business-failed:10014）",
+      "action": "输入正确的面单号",
+      "sub_code": "isv.business-failed:10014",
+      "sub_msg": "电子面单号不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单已生成路由不能申请子单（sub_code: isv.business-failed:8168）",
+      "action": "订单已生成路由不能申请子单",
+      "sub_code": "isv.business-failed:8168",
+      "sub_msg": "订单已生成路由不能申请子单"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:400）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:400",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 目标服务异常或不可达（sub_code: isv.business-failed:4007）",
+      "action": "目标服务异常或不可达",
+      "sub_code": "isv.business-failed:4007",
+      "sub_msg": "目标服务异常或不可达"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单已取消，不允许变更（sub_code: isv.business-failed:10901）",
+      "action": "订单已取消，不允许变更，请检查订单状态",
+      "sub_code": "isv.business-failed:10901",
+      "sub_msg": "订单已取消，不允许变更"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4009:请求物流服务商超时         !（sub_code: isv.business-failed:4009）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:4009",
+      "sub_msg": "4009:请求物流服务商超时         !"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4010:操作数据库异常（sub_code: isv.business-failed:4010）",
+      "action": "4010:操作数据库异常",
+      "sub_code": "isv.business-failed:4010",
+      "sub_msg": "4010:操作数据库异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20001:重复请求（sub_code: isv.business-failed:20001）",
+      "action": "20001:重复请求",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "20001:重复请求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8067:超过最大能申请子单号数量（sub_code: isv.business-failed:8067）",
+      "action": "8067:超过最大能申请子单号数量",
+      "sub_code": "isv.business-failed:8067",
+      "sub_msg": "8067:超过最大能申请子单号数量"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 200102:内部服务异常（sub_code: isv.business-failed:200102）",
+      "action": "200102:内部服务异常",
+      "sub_code": "isv.business-failed:200102",
+      "sub_msg": "200102:内部服务异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10003:系统错误（sub_code: isv.business-failed:10003）",
+      "action": "10003:系统错误",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "10003:系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10002:系统未知异常（sub_code: isv.business-failed:10002）",
+      "action": "10002:系统未知异常",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "10002:系统未知异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/appendSubOrder?app_key=your_appkey_here&method=logistics.appendSubOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "pack_quantity": "20",
+        "sub_waybill_codes": "1,2,3",
+        "track_no": "sf2343434"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "订单状态不为接货中,不允许拆单"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/1075",
+  "updatedAt": "2021-09-14",
+  "_file_stem": "waybill-logistics-appendSubOrder"
+}

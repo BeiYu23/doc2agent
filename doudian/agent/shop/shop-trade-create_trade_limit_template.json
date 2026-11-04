@@ -1,0 +1,200 @@
+{
+  "id": "doudian.shop.trade.create_trade_limit_template",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "trade.create_trade_limit_template",
+  "description": "创建限售规则模板",
+  "method": "GET",
+  "path": "/trade/create_trade_limit_template",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店ID",
+      "example": "90419",
+      "_depth": 0
+    },
+    {
+      "name": "trade_limit_rule_request_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "限购参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "trade_limit_model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "限购模型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "trade_limit_subject",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "限购维度",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "trade_limit_resource",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "限购资源类别",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "trade_limit_resource_object",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "限购资源值",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "trade_limit_resource_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "限购资源值列表",
+      "example": "[\"1\"]",
+      "_depth": 2
+    },
+    {
+      "name": "trade_limit_pattern",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "限购数量",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "minimum",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "单次下限",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "maximum",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "单次上限",
+      "example": "5",
+      "_depth": 2
+    },
+    {
+      "name": "cumulative_max",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "累计限购值",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "time_period",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "限购时间",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "限购开始时间",
+      "example": "1655991571",
+      "_depth": 2
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "限购结束时间",
+      "example": "1655991571",
+      "_depth": 2
+    },
+    {
+      "name": "limit_period",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "限购滑动窗口时长",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "limit_period_end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "限购滑动窗口结束时间",
+      "example": "1655991571",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "trade_limit_id",
+      "type": "number",
+      "description": "限购模板ID",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/trade/create_trade_limit_template?app_key=your_appkey_here&method=trade.create_trade_limit_template&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "trade_limit_id": "1"
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2111",
+  "updatedAt": "2022-06-27",
+  "_file_stem": "shop-trade-create_trade_limit_template"
+}

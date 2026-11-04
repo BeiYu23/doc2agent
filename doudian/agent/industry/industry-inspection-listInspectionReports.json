@@ -1,0 +1,258 @@
+{
+  "id": "doudian.industry.inspection.listInspectionReports",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "inspection.listInspectionReports",
+  "description": "验机报告列表页查询",
+  "method": "GET",
+  "path": "/inspection/listInspectionReports",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态查询",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "imei_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "IMEI",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品 ID 列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "brand_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "品牌 ID 列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "model_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "型号 ID 列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_begin",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建时间范围 - 起始（包含）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_report_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "验机报告 ID 列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建时间范围 - 截止（包含）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页大小",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应数据",
+      "example": ""
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "响应code",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应message",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必选参数 (如：operator_info 身份信息为空 或 operator_id 为空)（sub_code: isv.missing-parameter:-41003）",
+      "action": "请检查并传入必传参数 operator_info.operator_id",
+      "sub_code": "isv.missing-parameter:-41003",
+      "sub_msg": "缺少必选参数 (如：operator_info 身份信息为空 或 operator_id 为空)"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法的参数 (如：分页参数 page 小于等于 0，或 page_size 不在 1~100 之间)（sub_code: isv.parameter-invalid:-41004）",
+      "action": "请检查并修正分页参数，确保 page > 0 且 0 < page_size <= 100",
+      "sub_code": "isv.parameter-invalid:-41004",
+      "sub_msg": "非法的参数 (如：分页参数 page 小于等于 0，或 page_size 不在 1~100 之间)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理失败 (如：获取质检报告列表失败)（sub_code: isv.business-failed:-41005）",
+      "action": "请检查查询条件参数的有效性，或稍后重试",
+      "sub_code": "isv.business-failed:-41005",
+      "sub_msg": "业务处理失败 (如：获取质检报告列表失败)"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务不可用 (如：获取质检报告列表失败，底层服务返回为空)（sub_code: isp.service-error:-41002）",
+      "action": "系统内部繁忙或异常，请稍后重试",
+      "sub_code": "isp.service-error:-41002",
+      "sub_msg": "服务不可用 (如：获取质检报告列表失败，底层服务返回为空)"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/inspection/listInspectionReports?app_key=your_appkey_here&method=inspection.listInspectionReports&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "inspection_report_list": [
+            {
+              "allowed_operation_type": [
+                {}
+              ],
+              "base_info": {
+                "brand_id": "559043",
+                "brand_name": "APPLE/苹果",
+                "category_id": "1000007628",
+                "category_name": "",
+                "collection_code": "7457180029220159759_152",
+                "cover_image": {
+                  "appearance_image_type": "10",
+                  "url": "xx"
+                },
+                "create_time": "1777278818",
+                "fineness": "未拆封",
+                "imei": "123451234512345",
+                "inspection_report_id": "2048681961564306432",
+                "model_id": "559043",
+                "model_name": "iPhone 17 Pro Max",
+                "qc_code": "QC763335335436204111",
+                "reject_reason": "",
+                "reject_time": "-62135596800",
+                "remark": "xx",
+                "shop_id": "111111",
+                "status": "20",
+                "std_category_id": "",
+                "std_category_name": ""
+              },
+              "bound_product_list": [
+                {
+                  "check_status": "3",
+                  "image_url": "xx",
+                  "product_id": "3816660039192674753",
+                  "product_name": "未拆封 Apple/苹果",
+                  "sku_list": [
+                    {
+                      "sku_id": "3665335149822978",
+                      "sku_name": "绿色/1GB+16GB",
+                      "sku_price": "10000",
+                      "spec_id": "1863605308847175"
+                    }
+                  ],
+                  "status": "0"
+                }
+              ]
+            }
+          ],
+          "status_count_map": {},
+          "total": "25"
+        },
+        "msg": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:-41003",
+      "sub_msg": "缺少必选参数 (如：operator_info 身份信息为空 或 operator_id 为空)"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8257",
+  "updatedAt": "2026-04-28",
+  "_file_stem": "industry-inspection-listInspectionReports"
+}

@@ -1,0 +1,273 @@
+{
+  "id": "doudian.cross-border.crossborder.stockTaking",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossborder.stockTaking",
+  "description": "库存盘点回告",
+  "method": "GET",
+  "path": "/crossborder/stockTaking",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "GZJS",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码",
+      "example": "JSBBC01",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "店铺id",
+      "example": "4321",
+      "_depth": 0
+    },
+    {
+      "name": "taking_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "盘点类型 1:盘盈 2:盘亏",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "盘点完成时间戳 单位：s",
+      "example": "123456789",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "stock_taking_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "盘点信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "6543",
+      "_depth": 1
+    },
+    {
+      "name": "quality_grade",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "质量等级 1:良品 2:次品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "reason_code",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "盘点原因 1：其他 2：退货盘点",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "reason_msg",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "具体原因",
+      "example": "具体原因",
+      "_depth": 1
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息",
+      "example": "{\"key\":\"value\"}",
+      "_depth": 1
+    },
+    {
+      "name": "duty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "责任方\n  \"1\"-服务商原因\n  \"2\"-商家原因\n  \"3\"-监管原因\n  \"4\"-服务商原因（无需赔付）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "调整原因",
+      "_depth": 1
+    },
+    {
+      "name": "evidence",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "证明材料",
+      "example": "[]",
+      "_depth": 1
+    },
+    {
+      "name": "idempotent_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "幂等号（建议传入，由调用方生成唯一ID，以防接口调用重试场景重复操作库存）",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态 2-待审核 1-已完成 5-已取消",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "inbound_plan_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预约到货单号",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "adjust_biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "业务场景\n101 库存盘点\n102 包耗材盘点\n103 包耗材出库\n104 库存初始化\n105 销退入库\n106 系统异常",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "owner_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货主id",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "响应状态码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应状态信息",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 幂等调用异常（sub_code: isv.parameter-invalid:1007）",
+      "action": "已操作成功，请忽略",
+      "sub_code": "isv.parameter-invalid:1007",
+      "sub_msg": "幂等调用异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1005:接口调用异常，请重试，多次失败请人工反馈（sub_code: isv.business-failed:1005）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:1005",
+      "sub_msg": "1005:接口调用异常，请重试，多次失败请人工反馈"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9001:调用货品中心有误（sub_code: isv.business-failed:9001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:9001",
+      "sub_msg": "9001:调用货品中心有误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossborder/stockTaking?app_key=your_appkey_here&method=crossborder.stockTaking&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1007",
+      "sub_msg": "幂等调用异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/883",
+  "updatedAt": "2024-03-20",
+  "_file_stem": "cross-border-crossborder-stockTaking"
+}

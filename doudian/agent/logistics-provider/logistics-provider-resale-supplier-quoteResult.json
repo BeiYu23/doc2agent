@@ -1,0 +1,63 @@
+{
+  "id": "doudian.logistics-provider.resale.supplier.quoteResult",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "resale.supplier.quoteResult",
+  "description": "查询平台生成的询价ID对应的问卷内容",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "quote_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "询价单id",
+      "example": "13",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "quote_json",
+      "type": "string",
+      "description": "问卷结果内容",
+      "example": "{\\\"first_category_id\\\":\\\"101\\\",\\\"second_category_id\\\":\\\"10530\\\",\\\"third_category_id\\\":\\\"58384\\\",\\\"opts\\\":[{\\\"quote_opt_ids\\\":[\\\"1201\\\"],\\\"quote_issue_id\\\":\\\"1124763\\\"},{\\\"quote_opt_ids\\\":[\\\"607\\\"],\\\"quote_issue_id\\\":\\\"1124770\\\"},{\\\"quote_opt_ids\\\":[\\\"1093559\\\"],\\\"quote_issue_id\\\":\\\"7191\\\"},{\\\"quote_opt_ids\\\":[\\\"603\\\"],\\\"quote_issue_id\\\":\\\"1124769\\\"},{\\\"quote_opt_ids\\\":[\\\"398228\\\"],\\\"quote_issue_id\\\":\\\"5587\\\"},{\\\"quote_opt_ids\\\":[\\\"636\\\"],\\\"quote_issue_id\\\":\\\"1124764\\\"},{\\\"quote_opt_ids\\\":[\\\"610\\\"],\\\"quote_issue_id\\\":\\\"1122122\\\"},{\\\"quote_opt_ids\\\":[\\\"678741\\\"],\\\"quote_issue_id\\\":\\\"6651\\\"},{\\\"quote_opt_ids\\\":[\\\"511435\\\"],\\\"quote_issue_id\\\":\\\"6652\\\"},{\\\"quote_opt_ids\\\":[\\\"33684\\\"],\\\"quote_issue_id\\\":\\\"1224144\\\"},{\\\"quote_opt_ids\\\":[\\\"615\\\"],\\\"quote_issue_id\\\":\\\"1124771\\\"},{\\\"quote_opt_ids\\\":[\\\"595\\\"],\\\"quote_issue_id\\\":\\\"1124765\\\"}]}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=resale.supplier.quoteResult&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "quote_json": "{\\\"first_category_id\\\":\\\"101\\\",\\\"second_category_id\\\":\\\"10530\\\",\\\"third_category_id\\\":\\\"58384\\\",\\\"opts\\\":[{\\\"quote_opt_ids\\\":[\\\"1201\\\"],\\\"quote_issue_id\\\":\\\"1124763\\\"},{\\\"quote_opt_ids\\\":[\\\"607\\\"],\\\"quote_issue_id\\\":\\\"1124770\\\"},{\\\"quote_opt_ids\\\":[\\\"1093559\\\"],\\\"quote_issue_id\\\":\\\"7191\\\"},{\\\"quote_opt_ids\\\":[\\\"603\\\"],\\\"quote_issue_id\\\":\\\"1124769\\\"},{\\\"quote_opt_ids\\\":[\\\"398228\\\"],\\\"quote_issue_id\\\":\\\"5587\\\"},{\\\"quote_opt_ids\\\":[\\\"636\\\"],\\\"quote_issue_id\\\":\\\"1124764\\\"},{\\\"quote_opt_ids\\\":[\\\"610\\\"],\\\"quote_issue_id\\\":\\\"1122122\\\"},{\\\"quote_opt_ids\\\":[\\\"678741\\\"],\\\"quote_issue_id\\\":\\\"6651\\\"},{\\\"quote_opt_ids\\\":[\\\"511435\\\"],\\\"quote_issue_id\\\":\\\"6652\\\"},{\\\"quote_opt_ids\\\":[\\\"33684\\\"],\\\"quote_issue_id\\\":\\\"1224144\\\"},{\\\"quote_opt_ids\\\":[\\\"615\\\"],\\\"quote_issue_id\\\":\\\"1124771\\\"},{\\\"quote_opt_ids\\\":[\\\"595\\\"],\\\"quote_issue_id\\\":\\\"1124765\\\"}]}"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7737",
+  "updatedAt": "2025-09-02",
+  "_file_stem": "logistics-provider-resale-supplier-quoteResult"
+}

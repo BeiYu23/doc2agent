@@ -1,0 +1,119 @@
+{
+  "id": "doudian.supply-chain.supplyChain.address.list",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.address.list",
+  "description": "供应商地址查询",
+  "method": "GET",
+  "path": "/supplyChain/address/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每一页的条数，最大100",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "address_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "地址信息类型 1:发货地址 2:收货地址",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务错误（sub_code: isp.service-error:1000）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询地址失败（sub_code: isv.business-failed:7004）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:7004",
+      "sub_msg": "查询地址失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/address/list?app_key=your_appkey_here&method=supplyChain.address.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "list": [
+            {
+              "address_detail": "xx路xx号xx小区xx室",
+              "address_info_id": "1",
+              "address_type": "1",
+              "area_code": "3301100000000",
+              "area_name": "余杭区",
+              "city_code": "330100",
+              "city_name": "杭州市",
+              "contact_mobile": "13612345678",
+              "contact_name": "张三",
+              "is_default": "1",
+              "province_code": "33",
+              "province_name": "浙江省",
+              "street_code": "3301100120000",
+              "street_name": "仓前街道"
+            }
+          ],
+          "page": "1",
+          "page_size": "100",
+          "total": "1000"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/6473",
+  "updatedAt": "2024-04-26",
+  "_file_stem": "supply-chain-supplyChain-address-list"
+}

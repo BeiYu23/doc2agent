@@ -1,0 +1,86 @@
+{
+  "id": "doudian.video.shopVideo.queryUploadTask",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.queryUploadTask",
+  "description": "查询url上传视频接口的任务信息（状态、上传成功的视频id等）",
+  "method": "GET",
+  "path": "/shopVideo/queryUploadTask",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "task_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "uploadVideo接口得到的task_id",
+      "example": "7447060952975049010",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "vid",
+      "type": "string",
+      "description": "media_id，v开头的字符串",
+      "example": "v0d27cg10001cqclamfog40zzm86o6v0"
+    },
+    {
+      "name": "status",
+      "type": "mixed",
+      "description": "短视频上传状态，0=初始化，1=上传中，2=上传成功，3=上传失败",
+      "example": "2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / task_id不正确（sub_code: isv.parameter-invalid:605025001）",
+      "action": "确认task_id是否有误",
+      "sub_code": "isv.parameter-invalid:605025001",
+      "sub_msg": "task_id不正确"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 数据库查询失败（sub_code: isp.service-error:605025006）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:605025006",
+      "sub_msg": "数据库查询失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/queryUploadTask?app_key=your_appkey_here&method=shopVideo.queryUploadTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "status": "2",
+        "vid": "v0d27cg10001cqclamfog40zzm86o6v0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:605025001",
+      "sub_msg": "task_id不正确"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7151",
+  "updatedAt": "2024-12-12",
+  "_file_stem": "video-shopVideo-queryUploadTask"
+}

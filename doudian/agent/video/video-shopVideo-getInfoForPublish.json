@@ -1,0 +1,148 @@
+{
+  "id": "doudian.video.shopVideo.getInfoForPublish",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.getInfoForPublish",
+  "description": "查询投稿需要的信息",
+  "method": "GET",
+  "path": "/shopVideo/getInfoForPublish",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "need_hotspot",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否需要热点数据",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "need_activity",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否查询创作者活动",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "need_alliance_limit",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否需要检查挂车次数限制",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "need_image_alliance_limit",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要检查图文挂车次数限制",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "hotspot_info",
+      "type": "object",
+      "description": "热点信息",
+      "example": ""
+    },
+    {
+      "name": "activity_list",
+      "type": "array",
+      "description": "活动列表",
+      "example": ""
+    },
+    {
+      "name": "alliance_limit_info",
+      "type": "object",
+      "description": "挂车次数限制信息",
+      "example": ""
+    },
+    {
+      "name": "image_alliance_limit_info",
+      "type": "object",
+      "description": "图文挂车次数限制信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "根据提示文案调整参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺未绑定人店一体账号（sub_code: isv.business-failed:628002009）",
+      "action": "引导商家去抖店-内容-短视频创作tab绑定抖音账号",
+      "sub_code": "isv.business-failed:628002009",
+      "sub_msg": "店铺未绑定人店一体账号"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/getInfoForPublish?app_key=your_appkey_here&method=shopVideo.getInfoForPublish&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "activity_list": [
+          {
+            "activity_id": "7330597710854362122",
+            "activity_name": "艺术在抖音",
+            "head_image": "https://lf-gaia-dy.douyinstatic.com/obj/gaia-dy/7423651c0d3ed2c206c641564a68adbe.jpg",
+            "jump_url": "https://webcast.amemv.YOUR_SECRET_KEY?should_full_screen=1&show_back=0&hide_nav_bar=1&hide_status_bar=1&auto_play_bgm=1&web_bg_color=%23FFbbd8fd&loader_name=forest&disable_all_bounces=1&__live_platform__=webcast&appType=webcast&magic_page_no=1&magic_source=mp_offline"
+          }
+        ],
+        "alliance_limit_info": {
+          "can_bind": "true",
+          "current_bind_num": "1",
+          "remain_bind_num": "1"
+        },
+        "hotspot_info": {
+          "hotspot_list": [
+            {
+              "name": "花样玩雪的101种方式"
+            }
+          ]
+        },
+        "image_alliance_limit_info": {
+          "can_bind": "true",
+          "current_bind_num": "1",
+          "remain_bind_num": "1"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7148",
+  "updatedAt": "2026-03-11",
+  "_file_stem": "video-shopVideo-getInfoForPublish"
+}

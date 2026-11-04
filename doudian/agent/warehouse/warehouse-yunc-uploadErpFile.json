@@ -1,0 +1,170 @@
+{
+  "id": "doudian.warehouse.yunc.uploadErpFile",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.uploadErpFile",
+  "description": "erp系统上传商货关系文件服务",
+  "method": "GET",
+  "path": "/yunc/uploadErpFile",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "bin_file_uri",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件资源描述符",
+      "example": "/tos-cn-i-7veqoeduo3/2b2acab2be994a77bcced42475523d67",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "20130702_APPID_文件总数_第几个文件",
+      "example": "20130702_123456789065_06_01",
+      "_depth": 0
+    },
+    {
+      "name": "idempotent",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件唯一标识",
+      "example": "azazazaaaa22",
+      "_depth": 0
+    },
+    {
+      "name": "line_number",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "文件行数",
+      "example": "100000",
+      "_depth": 0
+    },
+    {
+      "name": "file_md5",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件md5值",
+      "example": "xxxxxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "file_number",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "文件数目",
+      "example": "5",
+      "_depth": 0
+    },
+    {
+      "name": "total_line_number",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "总行数",
+      "example": "10000",
+      "_depth": 0
+    },
+    {
+      "name": "bin_original_uri",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "和bin_file_uri的值一样",
+      "example": "/tos-cn-i-7veqoeduo3/2b2acab2be994a77bcced42475523d67",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "错误编码",
+      "example": "111"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误描述",
+      "example": "参数非法"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:30001）",
+      "action": "核对请求入参数",
+      "sub_code": "isv.parameter-invalid:30001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 验签失败,请检查参数（sub_code: isv.business-failed:30002）",
+      "action": "验签失败,请检查参数",
+      "sub_code": "isv.business-failed:30002",
+      "sub_msg": "验签失败,请检查参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 文件重复，无需上传（sub_code: isv.business-failed:30003）",
+      "action": "文件重复，无需上传",
+      "sub_code": "isv.business-failed:30003",
+      "sub_msg": "文件重复，无需上传"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理错误,请联系客服（sub_code: isv.business-failed:30004）",
+      "action": "业务处理错误,请联系客服",
+      "sub_code": "isv.business-failed:30004",
+      "sub_msg": "业务处理错误,请联系客服"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 文件行数不一致，请检查（sub_code: isv.business-failed:30005）",
+      "action": "文件行数不一致，请检查",
+      "sub_code": "isv.business-failed:30005",
+      "sub_msg": "文件行数不一致，请检查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/uploadErpFile?app_key=your_appkey_here&method=yunc.uploadErpFile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "111",
+        "msg": "参数非法"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:30001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/4523",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "warehouse-yunc-uploadErpFile"
+}

@@ -1,0 +1,197 @@
+{
+  "id": "doudian.phone-industry.maintenance.fulfill.supplierAudit",
+  "platform": "doudian",
+  "group": "phone-industry",
+  "name": "maintenance.fulfill.supplierAudit",
+  "description": "维修服务商审核通过",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 手机行业管理（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "fulfill_operation_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "履约操作类型，如：服务商审核通过",
+      "example": "AuditPass",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "服务商收货信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "receiver_tel",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "收货人电话",
+      "example": "13712345678",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_addr",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "收货人地址",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区编码",
+      "example": "440111",
+      "_depth": 2
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省编码",
+      "example": "44",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市名称",
+      "example": "广州市",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区名称",
+      "example": "白云区",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "街道名称",
+      "example": "白云湖街道",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省名称",
+      "example": "广东省",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "白云湖小区",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "街道编码",
+      "example": "440111018",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市编码",
+      "example": "440100",
+      "_depth": 2
+    },
+    {
+      "name": "receiver_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "收货人姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务申请审核通过的时间",
+      "example": "2025-11-27 12:30:00",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码，与平台对接的服务商枚举值",
+      "example": "nanjingxingcan",
+      "_depth": 0
+    },
+    {
+      "name": "fulfill_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "一次履约发起行为的唯一标识",
+      "example": "BSO117077558018",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=maintenance.fulfill.supplierAudit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1520/7892",
+  "updatedAt": "2025-11-27",
+  "_file_stem": "phone-industry-maintenance-fulfill-supplierAudit"
+}

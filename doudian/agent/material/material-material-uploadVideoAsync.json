@@ -1,0 +1,163 @@
+{
+  "id": "doudian.material.material.uploadVideoAsync",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.uploadVideoAsync",
+  "description": "素材中心--异步上传视频接口",
+  "method": "GET",
+  "path": "/material/uploadVideoAsync",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V3.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "父文件夹id，0为根目录。若需要创建文件夹，请参考：https://ehome.bytedance.YOUR_SECRET_KEY?doc=true",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频url，url和file_uri二选一，不能同时为空，如果2者都传则取url",
+      "example": "https://xxxx.xxx.xx",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频名称，不得超过50个字符，最好带上后缀",
+      "example": "视频.mp4",
+      "_depth": 0
+    },
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二进制文件对应的uri，获取方式请参考：https://op.jinritemai.com/docs/guide-docs/171/1719",
+      "example": "tos-cn-i-7veqoeduo3/9e1df78157524c63abf7caa9bb1e88e0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "material_id",
+      "type": "string",
+      "description": "素材id",
+      "example": "7000254886243811628"
+    },
+    {
+      "name": "folder_id",
+      "type": "string",
+      "description": "素材所在文件夹id，0-素材中心的根目录",
+      "example": "0"
+    },
+    {
+      "name": "is_new",
+      "type": "boolean",
+      "description": "是否是新建，false-重复请求 true-新建",
+      "example": "true"
+    },
+    {
+      "name": "audit_status",
+      "type": "string",
+      "description": "素材审核状态 0-下载中 1-等待审核 2-审核中 3-通过 4-拒绝",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:20001）",
+      "action": "请检查参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:10004）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材大小超出限制（sub_code: isv.parameter-invalid:22001）",
+      "action": "视频大小超出限制，勿重复操作",
+      "sub_code": "isv.parameter-invalid:22001",
+      "sub_msg": "素材大小超出限制"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求已生效，请勿重复请求（sub_code: isv.parameter-invalid:31001）",
+      "action": "并发请求导致，请稍后重试",
+      "sub_code": "isv.parameter-invalid:31001",
+      "sub_msg": "请求已生效，请勿重复请求"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材库容量不足（sub_code: isv.parameter-invalid:30001）",
+      "action": "容量不足，删除部分素材后重试",
+      "sub_code": "isv.parameter-invalid:30001",
+      "sub_msg": "素材库容量不足"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材下载失败，请重新上传（sub_code: isv.business-failed:10010）",
+      "action": "素材下载失败，请重新上传",
+      "sub_code": "isv.business-failed:10010",
+      "sub_msg": "素材下载失败，请重新上传"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31004:店铺超过每秒上传限制（sub_code: isv.business-failed:31004）",
+      "action": "31004:店铺超过每秒上传限制",
+      "sub_code": "isv.business-failed:31004",
+      "sub_msg": "31004:店铺超过每秒上传限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 22006:当前文件夹下不支持创建该类素材（sub_code: isv.business-failed:22006）",
+      "action": "22006:当前文件夹下不支持创建该类素材",
+      "sub_code": "isv.business-failed:22006",
+      "sub_msg": "22006:当前文件夹下不支持创建该类素材"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1147",
+  "updatedAt": "2022-10-11",
+  "_file_stem": "material-material-uploadVideoAsync"
+}

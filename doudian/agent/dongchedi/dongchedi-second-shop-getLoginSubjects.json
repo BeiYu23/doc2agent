@@ -1,0 +1,169 @@
+{
+  "id": "doudian.dongchedi.second.shop.getLoginSubjects",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.shop.getLoginSubjects",
+  "description": "【二方接口】查询登陆信息",
+  "method": "GET",
+  "path": "/second/shop/getLoginSubjects",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "loginWay",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "登录方式",
+      "example": "a1420e13",
+      "_depth": 0
+    },
+    {
+      "name": "sysIds",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "系统ids",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "busType",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "业务类型",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "loginSource",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "登录来源-级别1",
+      "example": "cd3a6c7d",
+      "_depth": 0
+    },
+    {
+      "name": "oceanId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商业化帐号组uid",
+      "example": "2147563",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "login_subjects",
+      "type": "array",
+      "description": "登录账户列表，可能为空",
+      "example": ""
+    },
+    {
+      "name": "retCode",
+      "type": "string",
+      "description": "返回错误码",
+      "example": "e65d6243"
+    },
+    {
+      "name": "retStatus",
+      "type": "string",
+      "description": "返回状态",
+      "example": "fad9ad89"
+    },
+    {
+      "name": "retMsg",
+      "type": "string",
+      "description": "返回的错误信息",
+      "example": "58c2736e"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / loginWay不能为空（sub_code: isp.service-error:300001）",
+      "action": "loginWay不能为空",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "loginWay不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / sysIds不能为空（sub_code: isp.service-error:300002）",
+      "action": "sysIds不能为空",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "sysIds不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / busType不能为空（sub_code: isp.service-error:300003）",
+      "action": "busType不能为空",
+      "sub_code": "isp.service-error:300003",
+      "sub_msg": "busType不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / loginSource不能为空（sub_code: isp.service-error:300004）",
+      "action": "loginSource不能为空",
+      "sub_code": "isp.service-error:300004",
+      "sub_msg": "loginSource不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / oceanId不能为空（sub_code: isp.service-error:300005）",
+      "action": "oceanId不能为空",
+      "sub_code": "isp.service-error:300005",
+      "sub_msg": "oceanId不能为空"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/shop/getLoginSubjects?app_key=your_appkey_here&method=second.shop.getLoginSubjects&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "login_subjects": [
+          {
+            "bus_id": "6412623",
+            "can_not_login": "false",
+            "extra": [
+              {
+                "extra": "dc3fd53c",
+                "key": "key"
+              }
+            ],
+            "uid": "2456557"
+          }
+        ],
+        "retCode": "e65d6243",
+        "retMsg": "58c2736e",
+        "retStatus": "fad9ad89"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "loginWay不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6945",
+  "updatedAt": "2024-10-15",
+  "_file_stem": "dongchedi-second-shop-getLoginSubjects"
+}

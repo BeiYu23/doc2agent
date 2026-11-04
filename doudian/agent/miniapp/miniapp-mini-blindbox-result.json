@@ -1,0 +1,139 @@
+{
+  "id": "doudian.miniapp.mini.blindbox.result",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.blindbox.result",
+  "description": "小程序用户抽盒，同步抽盒结果平台\n1、使用场景说明，用户下单后在小程序抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果",
+  "method": "GET",
+  "path": "/mini/blindbox/result",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺单id",
+      "example": "777",
+      "_depth": 0
+    },
+    {
+      "name": "douyin_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音用户openId",
+      "example": "12341234123412",
+      "_depth": 0
+    },
+    {
+      "name": "blind_box_result_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "奖品结果列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku单id",
+      "example": "777",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_img",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "盲盒结果图片",
+      "example": "https://xxx/1.jpg",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "盲盒结果标题",
+      "example": "LV包",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_sub_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "盲盒结果副标题",
+      "example": "LV包黑色",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_open_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "盲盒结果开盒时间",
+      "example": "1723631662789",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_success",
+      "type": "boolean",
+      "description": "是否写入成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606000102:RPCError{PSM:[ecom.trade.order_query] Method:[GetSkuOrderInfoGroupsBySkuOrder] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110001] BizStatusMessage:[[FAIL,OQ10002,查询订单不存在]]}（sub_code: isv.business-failed:606000102）",
+      "action": "请找平台同学处理",
+      "sub_code": "isv.business-failed:606000102",
+      "sub_msg": "606000102:RPCError{PSM:[ecom.trade.order_query] Method:[GetSkuOrderInfoGroupsBySkuOrder] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110001] BizStatusMessage:[[FAIL,OQ10002,查询订单不存在]]}"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606010000:入参店铺id非法（sub_code: isv.business-failed:606010000）",
+      "action": "请自行检查入参",
+      "sub_code": "isv.business-failed:606010000",
+      "sub_msg": "606010000:入参店铺id非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:606000102",
+      "sub_msg": "606000102:RPCError{PSM:[ecom.trade.order_query] Method:[GetSkuOrderInfoGroupsBySkuOrder] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110001] BizStatusMessage:[[FAIL,OQ10002,查询订单不存在]]}"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/6798",
+  "updatedAt": "2024-08-26",
+  "_file_stem": "miniapp-mini-blindbox-result"
+}

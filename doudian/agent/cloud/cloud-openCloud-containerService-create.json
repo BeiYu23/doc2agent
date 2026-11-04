@@ -1,0 +1,270 @@
+{
+  "id": "doudian.cloud.openCloud.containerService.create",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.containerService.create",
+  "description": "创建容器服务",
+  "method": "GET",
+  "path": "/openCloud/containerService/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cluster_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "关联集群id",
+      "example": "\"7020346122334567\"",
+      "_depth": 0
+    },
+    {
+      "name": "image_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镜像描述",
+      "example": "\"java8基础镜像\"",
+      "_depth": 0
+    },
+    {
+      "name": "deploy_path",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "部署路径",
+      "example": "/data/work/{container_service_name}",
+      "_depth": 0
+    },
+    {
+      "name": "cs_env",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "环境信息",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "火山账号，如果使用强管控租户，需要传对应火山id",
+      "example": "2100000000",
+      "_depth": 0
+    },
+    {
+      "name": "cluster_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "关联集群名称",
+      "example": "\"auto-test-cluster\"",
+      "_depth": 0
+    },
+    {
+      "name": "log_path",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "日志收集路径(日志服务只收集该路径下的日志)",
+      "example": "/data/work/{container_service_name}/logs",
+      "_depth": 0
+    },
+    {
+      "name": "cs_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "容器服务名称",
+      "example": "container_service_name",
+      "_depth": 0
+    },
+    {
+      "name": "instance_spec",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "实例配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "requested_cpu",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "CPU请求 单位:核",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "requested_memory",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "内存请求 单位:MiB",
+      "example": "200",
+      "_depth": 1
+    },
+    {
+      "name": "limited_cpu",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "CPU上限 单位:核",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "limited_memory",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "内存上限 单位:MiB",
+      "example": "220",
+      "_depth": 1
+    },
+    {
+      "name": "instance_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实例个数i32",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cron_str",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "cron 表达式",
+      "example": "\"cron_str\"",
+      "_depth": 1
+    },
+    {
+      "name": "cs_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "容器服务类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "deploy_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "部署方式",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "描述",
+      "example": "\"desc\"",
+      "_depth": 0
+    },
+    {
+      "name": "image_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镜像Id",
+      "example": "\"image_id\"",
+      "_depth": 0
+    },
+    {
+      "name": "image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "镜像类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "custom_image",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "自定义镜像",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "repo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镜像名称",
+      "example": "\"repo\"",
+      "_depth": 1
+    },
+    {
+      "name": "tag_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镜像版本",
+      "example": "\"v1\"",
+      "_depth": 1
+    },
+    {
+      "name": "contain_code_package",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "镜像是否包含代码包",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "cs_id",
+      "type": "string",
+      "description": "容器服务id",
+      "example": "\"cs-id\""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/containerService/create?app_key=your_appkey_here&method=openCloud.containerService.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "cs_id": "\"cs-id\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/7609",
+  "updatedAt": "2025-07-17",
+  "_file_stem": "cloud-openCloud-containerService-create"
+}

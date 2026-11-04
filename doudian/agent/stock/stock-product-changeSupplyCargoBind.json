@@ -1,0 +1,152 @@
+{
+  "id": "doudian.stock.product.changeSupplyCargoBind",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "product.changeSupplyCargoBind",
+  "description": "变更库存供给关系",
+  "method": "GET",
+  "path": "/product/changeSupplyCargoBind",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "req_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "入参列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sale_product",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "前台销售品",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "销售商品skuid",
+      "example": "3659238057270815",
+      "_depth": 2
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "销售商品id",
+      "example": "3820739174718380278",
+      "_depth": 2
+    },
+    {
+      "name": "change_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1:设置；2-删除",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "outer_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作号id，做结果映射使用",
+      "example": "a123",
+      "_depth": 1
+    },
+    {
+      "name": "supply_cargo",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "供货品",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货商品id",
+      "example": "3820584917637660673",
+      "_depth": 2
+    },
+    {
+      "name": "cargo_sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货商品skuid",
+      "example": "3659238054343021",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "resp_list",
+      "type": "array",
+      "description": "操作结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数（sub_code: isv.parameter-invalid:-10007）",
+      "action": "根据报错文案调整入参",
+      "sub_code": "isv.parameter-invalid:-10007",
+      "sub_msg": "非法参数"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/changeSupplyCargoBind?app_key=your_appkey_here&method=product.changeSupplyCargoBind&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "resp_list": [
+          {
+            "base_resp": {
+              "status_code": "12000128",
+              "status_message": "商品绑定数量超出限制"
+            },
+            "outer_id": "a123"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:-10007",
+      "sub_msg": "非法参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/8330",
+  "updatedAt": "2026-05-22",
+  "_file_stem": "stock-product-changeSupplyCargoBind"
+}

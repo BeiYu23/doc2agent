@@ -1,0 +1,75 @@
+{
+  "id": "doudian.prescription.medicine.getShopDruggist",
+  "platform": "doudian",
+  "group": "prescription",
+  "name": "medicine.getShopDruggist",
+  "description": "商家ERP获取店铺下的药剂师",
+  "method": "GET",
+  "path": "/medicine/getShopDruggist",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商家处方药（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "第几页（从1开始)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页几条数据，最大50",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "druggists",
+      "type": "array",
+      "description": "药剂师列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=marketing.membership.unbind.v1&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1479/6462",
+  "updatedAt": "2024-04-29",
+  "_file_stem": "prescription-medicine-getShopDruggist"
+}

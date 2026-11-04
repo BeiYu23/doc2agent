@@ -1,0 +1,359 @@
+{
+  "id": "doudian.logistics.logistics.voiceNotifyCallRecordCallback",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.voiceNotifyCallRecordCallback",
+  "description": "火山引擎语音通知回调",
+  "method": "GET",
+  "path": "/logistics/voiceNotifyCallRecordCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "account_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "账号ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "call_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "呼叫唯一ID",
+      "example": "NM20010115474511150001012500007a8c",
+      "_depth": 0
+    },
+    {
+      "name": "message_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "消息回执类型 2-呼叫记录；3-录音",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "service_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务类型，详见：https://www.volcengine.com/docs/6358/69226#%E6%9C%8D%E5%8A%A1%E7%B1%BB%E5%9E%8B",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "sub_service_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "子服务类型,详见：服务类型枚举值https://www.volcengine.com/docs/6358/69226#%E5%AD%90%E6%9C%8D%E5%8A%A1%E7%B1%BB%E5%9E%8B",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "number_pool_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "号码池编号",
+      "example": "NP160102116501911493",
+      "_depth": 0
+    },
+    {
+      "name": "caller",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主叫方号码",
+      "example": "13100001111",
+      "_depth": 0
+    },
+    {
+      "name": "caller_country_iso_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主叫方号码所在国家ISO编码",
+      "example": "CH",
+      "_depth": 0
+    },
+    {
+      "name": "caller_province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主叫方号码所在省份编码",
+      "example": "110000",
+      "_depth": 0
+    },
+    {
+      "name": "caller_city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主叫方号码所在城市编码",
+      "example": "010",
+      "_depth": 0
+    },
+    {
+      "name": "callee",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被叫方号码",
+      "example": "13100001111",
+      "_depth": 0
+    },
+    {
+      "name": "callee_country_iso_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被叫方号码所在国家ISO编码",
+      "example": "CH",
+      "_depth": 0
+    },
+    {
+      "name": "callee_province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被叫方号码所在省份编码",
+      "example": "110000",
+      "_depth": 0
+    },
+    {
+      "name": "callee_city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被叫方号码所在城市编码",
+      "example": "010",
+      "_depth": 0
+    },
+    {
+      "name": "begin_call_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "呼叫开始时间自(1970-01-01 00:00:00\"开始的毫秒数)",
+      "example": "1607588903000",
+      "_depth": 0
+    },
+    {
+      "name": "ring_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "被叫方振铃时间",
+      "example": "1607588903000",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "呼叫建立时间",
+      "example": "1607588903000",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "呼叫挂断时间",
+      "example": "1607588903000",
+      "_depth": 0
+    },
+    {
+      "name": "release_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "挂断类型：0-主叫；1-被叫；2-平台",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_duration",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "呼叫时长（秒）",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "call_result",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "呼叫识别结果\n1-正常接通；2-关机；3-停机；4-空号；5-主叫提前挂机；6-暂时无法接通；7-无人接听；8-被叫忙；9-被叫拒接；10-被叫不可及；11-线路忙；12-无权限呼叫；13-无绑定关系；14-网络忙>；15-路由失败；16-中间号状态异常；17-呼出限制；18-呼入限制；19-超时；20-平台系统异常；21-被叫未振铃，收到挂断消息；22-被叫振铃了挂断或超时未摘机；-1-其他(包含匹配失败的情况)；",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "audio_record_flag",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "录音是否分轨,1-分轨；0-不分轨；",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "cdr_create_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "呼叫记录建立时间",
+      "example": "1607588903000",
+      "_depth": 0
+    },
+    {
+      "name": "user_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户拓展参数，最大长度为2048",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "task_open_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "任务id",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "single_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "用户定义的id",
+      "example": "7180417835737481260",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户自定义参数，长度限制250",
+      "example": "7180417835737481260",
+      "_depth": 0
+    },
+    {
+      "name": "digits",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "ivr按键",
+      "example": "[\"1\"]",
+      "_depth": 0
+    },
+    {
+      "name": "audio_record_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "录音文件下载地址",
+      "example": "https://xx/xx/S1111111021.wav",
+      "_depth": 0
+    },
+    {
+      "name": "audio_record_left_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "录音文件分轨左声道下载地址",
+      "example": "https://xx/xx/S1111111021_L.wav",
+      "_depth": 0
+    },
+    {
+      "name": "audio_record_right_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "录音文件分轨右声道下载地址",
+      "example": "https://xx/xx/S1111111021_R.wav",
+      "_depth": 0
+    },
+    {
+      "name": "audio_record_model",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "录音类型,1-主叫左声道；2-主叫右声道；3-混音；",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "caller_show_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主叫侧外显号码",
+      "example": "13100001111",
+      "_depth": 0
+    },
+    {
+      "name": "callee_show_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被叫方外显号码",
+      "example": "13100001111",
+      "_depth": 0
+    },
+    {
+      "name": "call_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "呼叫类型 0-呼入；1-呼出；",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/voiceNotifyCallRecordCallback?app_key=your_appkey_here&method=logistics.voiceNotifyCallRecordCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2894",
+  "updatedAt": "2023-02-27",
+  "_file_stem": "logistics-logistics-voiceNotifyCallRecordCallback"
+}

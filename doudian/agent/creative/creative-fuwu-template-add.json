@@ -1,0 +1,316 @@
+{
+  "id": "doudian.creative.fuwu.template.add",
+  "platform": "doudian",
+  "group": "creative",
+  "name": "fuwu.template.add",
+  "description": "创建或编辑内容模版服务",
+  "method": "GET",
+  "path": "/fuwu/template/add",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 创意管理API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部模版code",
+      "example": "ccccc",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模版名称",
+      "example": "新品上架模版",
+      "_depth": 0
+    },
+    {
+      "name": "template_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "模版基础信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "枚举值1、1:1 ,2、 3:4",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "para_graph_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "段落数量，默认为0，不展示段落数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "displaying_text",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否含字幕/文案 0 不含 1 含",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "service_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "服务类型：1主图视频2图文",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "skus",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "版本信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "price_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "价格类型 0、付费版 1、免费版 2、试用版 3、加量包 ，其中存在免费版不可有试用/付费;存在试用版，必须至少传入一个付费版;付费版/加量包需传入价格",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模版服务价格，付费版/加量包必传入，单位为分",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "duration_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "默认参数0无需设置周期, 时间周期枚举数据，6:30天、3:6个月、4:1年、10:7天、11:15天",
+      "example": "6",
+      "_depth": 1
+    },
+    {
+      "name": "usage_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "服务可使用次数",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "suite_industry",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "适用行业信息数据",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "suite_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "适用类型 1: 通用 2:指定电商行业一级类目id",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "industry_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "电商一级类目信息列表2:玩具乐器,3:二手商品,4:服饰内衣,5:个护家清,6:礼品文创,7:智能家居,8:生鲜,9:美妆,10:母婴宠物,11:鲜花园艺,12:本地生活,13:食品饮料,14:3C数码家电,15:图书教育,16:鞋靴箱包,17:虚拟充值,18:运动户外,19:钟表配饰,20:珠宝文玩,21:奢侈品,22:医疗健康,23:酒类,24:滋补保健,5012:汽车整车",
+      "example": "[123]",
+      "_depth": 1
+    },
+    {
+      "name": "preview_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "预览信息数据",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "video_path",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主图视频时必传",
+      "example": "xxx.mp4",
+      "_depth": 1
+    },
+    {
+      "name": "thumbnail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主图视频必传",
+      "example": "cover.jpg",
+      "_depth": 1
+    },
+    {
+      "name": "picture_paths",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "图文模版时必传",
+      "example": "['1.jpeg']",
+      "_depth": 1
+    },
+    {
+      "name": "labels",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "模版类型 1、产品讲解 2、种草",
+      "example": "[1,2]",
+      "_depth": 0
+    },
+    {
+      "name": "service_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "编辑时传入服务id",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "is_hidden",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否在服务市场隐藏",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "service_course",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务教程",
+      "example": "服务教程内容",
+      "_depth": 0
+    },
+    {
+      "name": "custom_content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义模块",
+      "example": "自定义模块内容",
+      "_depth": 0
+    },
+    {
+      "name": "support_terminal",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "支持的端类型(1:PC 2:APP）",
+      "example": "[1,2]",
+      "_depth": 0
+    },
+    {
+      "name": "is_by_times_fulfill",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "按次进行履约(按次结算&退款), 支持限用次数与加量包",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "service_id",
+      "type": "mixed",
+      "description": "服务id(对应一个模板)",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 100001:参数错误，素材未审核，不允许创建（sub_code: isv.parameter-invalid:100001）",
+      "action": "检查相关参数",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "100001:参数错误，素材未审核，不允许创建"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 300270:已存在同名的服务，请更换服务名称（sub_code: isv.business-failed:300270）",
+      "action": "检查服务名称或模版code参数",
+      "sub_code": "isv.business-failed:300270",
+      "sub_msg": "300270:已存在同名的服务，请更换服务名称"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:300200）",
+      "action": "按 sub_code 定位问题后处理",
+      "sub_code": "isv.business-failed:300200"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:200070）",
+      "action": "按 sub_code 定位问题后处理",
+      "sub_code": "isv.business-failed:200070"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/fuwu/template/add?app_key=your_appkey_here&method=fuwu.template.add&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "service_id": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "100001:参数错误，素材未审核，不允许创建"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1358/4198",
+  "updatedAt": "2024-01-03",
+  "_file_stem": "creative-fuwu-template-add"
+}

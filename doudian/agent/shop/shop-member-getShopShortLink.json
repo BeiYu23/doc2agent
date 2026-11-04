@@ -1,0 +1,136 @@
+{
+  "id": "doudian.shop.member.getShopShortLink",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "member.getShopShortLink",
+  "description": "获取商家推广链接接口",
+  "method": "GET",
+  "path": "/member/getShopShortLink",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V5.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "link_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "链接类型（1-会员中心，2-达人主页，3-店铺首页, 4-商品详情页，5-订单详情页，6-优惠券领取, 7-店铺七分屏 8-直播间）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id，生成商品详情页链接需要",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单id，生成订单详情页链接需要",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "coupon_meta_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠券id，生成领取优惠券链接需要",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "aweme_uid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音号（仅当linkType为8时选填）",
+      "example": "PROYA_STORE",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "short_link",
+      "type": "string",
+      "description": "对应类型的链接，有效时间60天，长度21~24",
+      "example": "z.douyin.com/9xNklYc"
+    },
+    {
+      "name": "link_id",
+      "type": "mixed",
+      "description": "短链唯一链接id",
+      "example": "7402147984902783282"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前店铺未开通会员服务（sub_code: isv.business-failed:-300002）",
+      "action": "检查类型参数，未开通店铺会员的商家无会员中心链接",
+      "sub_code": "isv.business-failed:-300002",
+      "sub_msg": "当前店铺未开通会员服务"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务器开小差了，请稍后重试（sub_code: isp.service-error:-500）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:-500",
+      "sub_msg": "服务器开小差了，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 网络错误，请稍后重试（sub_code: isv.business-failed:628145000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:628145000",
+      "sub_msg": "网络错误，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 抖音号错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "确认输入的抖音号",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "抖音号错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/getShopShortLink?app_key=your_appkey_here&method=member.getShopShortLink&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "link_id": "7402147984902783282",
+        "short_link": "z.douyin.com/9xNklYc"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-300002",
+      "sub_msg": "当前店铺未开通会员服务"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/1455",
+  "updatedAt": "2026-05-12",
+  "_file_stem": "shop-member-getShopShortLink"
+}

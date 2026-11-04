@@ -1,0 +1,109 @@
+{
+  "id": "doudian.tool.alliance.card.add",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "alliance.card.add",
+  "description": "添加商品(精选联盟商品)到达人选品车",
+  "method": "GET",
+  "path": "/alliance/card/add",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 达人"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "keep_picksource",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否保留商品链接原有选品来源，默认不保留（加选品车时默认会生成新的选品来源参数覆盖旧参数，转链的自定义参数也会失效，选品来源为当前加选品车应用），keep_picksource 为 true 时保留原有选品来源",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "products",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品信息，最多20个商品",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品ID",
+      "example": "3450632721376902816",
+      "_depth": 1
+    },
+    {
+      "name": "activity_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "团长活动商品URL",
+      "example": "https://haohuo.jinritemai.com/views/product/detail?ins_activity_param=eLee5v2&id=3424454103747684585",
+      "_depth": 1
+    },
+    {
+      "name": "pick_extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义参数，携带到订单（只允许 数字、字母和_，限制长度为20）",
+      "example": "test",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "请求结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/card/add?app_key=your_appkey_here&method=alliance.card.add&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "results": [
+            {
+              "bind_reason": "添加失败原因",
+              "content": "弹窗信息",
+              "failed_add_code": "1",
+              "product_id": "3450632721376902816"
+            }
+          ],
+          "total": "10"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7600",
+  "updatedAt": "2025-07-16",
+  "_file_stem": "tool-alliance-card-add"
+}

@@ -1,0 +1,148 @@
+{
+  "id": "doudian.logistics.logistics.interception.updateInterceptionInfo",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.interception.updateInterceptionInfo",
+  "description": "用于服务商推送拦截状态",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓, 物流商, "
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inner_shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "店铺ID",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "resource_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "资源编码",
+      "example": "RC_XXXXX",
+      "_depth": 0
+    },
+    {
+      "name": "waybill_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "1234567",
+      "_depth": 0
+    },
+    {
+      "name": "return_result",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结果：1-拦截/退回成功；2-拦截/退回失败",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "result_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "失败原因编码：（return_result=1时为空，return_result=2时必传）\n拦截失败：\n10000——运单号有误\n10001——包裹未揽件\n10002——包裹已派件\n10003——包裹已签收\n11404——系统异常\n10004——包裹已终止\n10005——快递商无法识别网点\n10006——信息不全\n10007——系统超时，请重新发起\n10008——重复拦截\n10009——物流轨迹异常\n10010——收件地址不支持派送\n10011——物流商资源编码有误\n10012——派件网点增值服务异常\n10013——其他\n10014——网点不具备拦截能力\n10015——非抖音电商电子面单\n10016——拦截前已丢失\n退回失败：\n10001——用户签收\n10002——包裹丢失\n10003——包裹破损\n10004——操作不规范（物理退回、逻辑未退回）\n10005——包裹未退回发件站点\n10006——取消拦截\n10007——弃件\n20000——其他",
+      "example": "10001",
+      "_depth": 0
+    },
+    {
+      "name": "result_message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "拦截失败/退回失败原因（return_result=1时为空，return_result=2时必传；长度不能超过100英文字符，一个中文相当于3个英文字符）",
+      "example": "包裹未揽件",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态：（默认2——退回）\n1——拦截\n2——退回",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实操时间",
+      "example": "2023-07-25 12:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "express",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商编码：\nzhongtong——中通\njtexpress——极兔\nyunda——韵达\nshentong——申通\nyuantong——圆通",
+      "example": "zhongtong",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:10000）",
+      "action": "请检查参数的正确性",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:10002）",
+      "action": "系统异常，请重试",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态不允许变更（sub_code: isv.business-failed:10006）",
+      "action": "当前状态不允许变更，不可重试",
+      "sub_code": "isv.business-failed:10006",
+      "sub_msg": "当前状态不允许变更"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.interception.updateInterceptionInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/3564",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "logistics-logistics-interception-updateInterceptionInfo"
+}

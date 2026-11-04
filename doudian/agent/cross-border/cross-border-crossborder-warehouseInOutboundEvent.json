@@ -1,0 +1,583 @@
+{
+  "id": "doudian.cross-border.crossborder.warehouseInOutboundEvent",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossborder.warehouseInOutboundEvent",
+  "description": "入库和提货出库回告",
+  "method": "GET",
+  "path": "/crossborder/warehouseInOutboundEvent",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V15.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "in_outbound_event_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "200:入库单仓库已接单 210:入库单接单异常 300:货物到仓 310:货物到仓异常 400:开始理货 410:理货异常 420:理货完成 500:上架完成 510:上架异常 600:入库单取消 1200:出库单已接单 1210:出库单接单异常 1300:提货完成 1310:提货异常 1400:出库单取消 1250:出库理货开始 1260:出库理货异常 1270:出库理货完成",
+      "example": "200",
+      "_depth": 0
+    },
+    {
+      "name": "source_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "来源单据号",
+      "example": "9876",
+      "_depth": 0
+    },
+    {
+      "name": "sp_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务商单据编号",
+      "example": "7052523800093065516",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "实操时间戳 单位：s",
+      "example": "1656547563",
+      "_depth": 0
+    },
+    {
+      "name": "tally_report_url",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "理货报告附件url，当回告节点为理货完成时，必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "附件url",
+      "example": "https://xxx",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "附件名称",
+      "example": "标题",
+      "_depth": 1
+    },
+    {
+      "name": "inbound_cargo_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "入库货品信息，回传“上架完成”时，必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "7004810808521818412",
+      "_depth": 1
+    },
+    {
+      "name": "actual_stack_count",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实际上架数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "good_cargo_count",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "良品数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "defective_cargo_count",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "次品数量",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "expiry_date",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "失效日期 yyyy-MM-dd HH:mm:ss",
+      "example": "2021-08-24 20:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "outbound_cargo_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "出库货品信息，回传“提货完成”时，必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "7004810808521818412",
+      "_depth": 1
+    },
+    {
+      "name": "quality_grade",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "质量等级 1:良品 2:次品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息",
+      "example": "{\"key\":\"value\"}",
+      "_depth": 1
+    },
+    {
+      "name": "error_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常原因",
+      "example": "异常",
+      "_depth": 0
+    },
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "GZJS",
+      "_depth": 0
+    },
+    {
+      "name": "tally_report",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "理货报告",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "tally_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "理货单id",
+      "example": "1524215",
+      "_depth": 1
+    },
+    {
+      "name": "customs_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报关单号",
+      "example": "415",
+      "_depth": 1
+    },
+    {
+      "name": "tally_total_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "理货总件数",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "customs_qty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报关数量",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "outbound_tally_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "出库理货日期，秒",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "arrival_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "到库日期，秒",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "tally_completed_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "理货完成日期，秒",
+      "example": "2351",
+      "_depth": 1
+    },
+    {
+      "name": "tally_report_cargo_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "理货货品明细",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "2351",
+      "_depth": 2
+    },
+    {
+      "name": "origin_country",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "原产国代码（海关原产国代码）",
+      "example": "502",
+      "_depth": 2
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品名称",
+      "example": "货品1",
+      "_depth": 2
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "长",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "宽",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "height",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "高",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "体积",
+      "example": "8",
+      "_depth": 2
+    },
+    {
+      "name": "length_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "长度单位，默认mm，可填mm，m，MM，M",
+      "example": "mm",
+      "_depth": 2
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "重量",
+      "example": "4",
+      "_depth": 2
+    },
+    {
+      "name": "weight_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "重量单位，默认g，可填g，kg，G，KG",
+      "example": "g",
+      "_depth": 2
+    },
+    {
+      "name": "barcode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品条码",
+      "example": "435",
+      "_depth": 2
+    },
+    {
+      "name": "good_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "理货件数（良品）",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "defective_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "理货件数（次品）",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "customs_qty",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报关数量",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "receive_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实收数量",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "product_batch_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "生产批次",
+      "example": "3452",
+      "_depth": 2
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "生产日期，秒",
+      "example": "325",
+      "_depth": 2
+    },
+    {
+      "name": "expiration_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "失效日期，秒",
+      "example": "535",
+      "_depth": 2
+    },
+    {
+      "name": "difference",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "该货品ID，xx产国，总预约到货数为XX，实际理货件数为XX，差异为XX ，若遇同品多行需在表述中注明商品存在多条理货明细，需商家关注",
+      "example": "无",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "无",
+      "_depth": 2
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库编码",
+      "example": "101",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "响应状态码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应信息",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 理货报告已存在（sub_code: isv.business-failed:16002）",
+      "action": "无需重试",
+      "sub_code": "isv.business-failed:16002",
+      "sub_msg": "理货报告已存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1005:接口调用异常，请重试，多次失败请人工反馈（sub_code: isv.business-failed:1005）",
+      "action": "暂无",
+      "sub_code": "isv.business-failed:1005",
+      "sub_msg": "1005:接口调用异常，请重试，多次失败请人工反馈"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 1002:参数错误（sub_code: isv.parameter-invalid:1002）",
+      "action": "核实参数",
+      "sub_code": "isv.parameter-invalid:1002",
+      "sub_msg": "1002:参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 7000:查询不到货品信息（sub_code: isv.business-failed:7000）",
+      "action": "理货报告中的货品编码错误",
+      "sub_code": "isv.business-failed:7000",
+      "sub_msg": "7000:查询不到货品信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:回告事件类型不正确，请核实后重试（sub_code: isv.business-failed:1004）",
+      "action": "正确回传事件顺序",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:回告事件类型不正确，请核实后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9001:调用货品中心有误（sub_code: isv.business-failed:9001）",
+      "action": "货品编码错误",
+      "sub_code": "isv.business-failed:9001",
+      "sub_msg": "9001:调用货品中心有误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 16003:理货报告url为空（sub_code: isv.parameter-invalid:16003）",
+      "action": "填写理货报告url",
+      "sub_code": "isv.parameter-invalid:16003",
+      "sub_msg": "16003:理货报告url为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2022:请回传毫秒级别时间戳（sub_code: isv.business-failed:2022）",
+      "action": "请回传毫秒级别时间戳",
+      "sub_code": "isv.business-failed:2022",
+      "sub_msg": "2022:请回传毫秒级别时间戳"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 14003:unsupported status change, current status is :[OutboundOrderStatusAccepted OutboundOrderCompleteOk], next event status is :%!s(MISSING)（sub_code: isv.business-failed:14003）",
+      "action": "状态异常，请检查后重试",
+      "sub_code": "isv.business-failed:14003",
+      "sub_msg": "14003:unsupported status change, current status is :[OutboundOrderStatusAccepted OutboundOrderCompleteOk], next event status is :%!s(MISSING)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1001:服务商鉴权失败（sub_code: isv.business-failed:1001）",
+      "action": "服务商鉴权失败",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:服务商鉴权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossborder/warehouseInOutboundEvent?app_key=your_appkey_here&method=crossborder.warehouseInOutboundEvent&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:16002",
+      "sub_msg": "理货报告已存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/1205",
+  "updatedAt": "2023-05-19",
+  "_file_stem": "cross-border-crossborder-warehouseInOutboundEvent"
+}

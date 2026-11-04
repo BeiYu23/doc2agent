@@ -1,0 +1,182 @@
+{
+  "id": "doudian.industry.inspection.getShopProductAndSkuInfo",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "inspection.getShopProductAndSkuInfo",
+  "description": "查询商家的商品及其 SKU",
+  "method": "GET",
+  "path": "/inspection/getShopProductAndSkuInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品 ID 列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称（模糊匹配）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "category_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "类目 ID",
+      "example": "[\"1000007628\"]",
+      "_depth": 0
+    },
+    {
+      "name": "brand_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "品牌 ID",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_for_sale",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "商品是否可售",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每页大小",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "model_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "型号 ID",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "响应code",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应message",
+      "example": ""
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必选参数 (如：operator_info 身份信息为空 或 operator_id 为空)（sub_code: isv.missing-parameter:-41003）",
+      "action": "请检查并传入必传参数 operator_info.operator_id",
+      "sub_code": "isv.missing-parameter:-41003",
+      "sub_msg": "缺少必选参数 (如：operator_info 身份信息为空 或 operator_id 为空)"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法的参数 (如：分页参数 page 小于等于 0，或 page_size 不在 1~100 之间)（sub_code: isv.parameter-invalid:-41004）",
+      "action": "请检查并修正分页参数，确保 page > 0 且 0 < page_size <= 100",
+      "sub_code": "isv.parameter-invalid:-41004",
+      "sub_msg": "非法的参数 (如：分页参数 page 小于等于 0，或 page_size 不在 1~100 之间)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理失败 (如：获取商品信息失败)（sub_code: isv.business-failed:-41005）",
+      "action": "请检查商品查询条件（如品类ID、品牌ID等）是否合法，或稍后重试",
+      "sub_code": "isv.business-failed:-41005",
+      "sub_msg": "业务处理失败 (如：获取商品信息失败)"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/inspection/getShopProductAndSkuInfo?app_key=your_appkey_here&method=inspection.getShopProductAndSkuInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "product_list": [
+            {
+              "check_status": "3",
+              "image_url": "xx",
+              "product_id": "3816659558231834776",
+              "product_name": "未拆封 Apple/苹果",
+              "sku_list": [
+                {
+                  "sku_id": "3664044248560898",
+                  "sku_name": "16GB+256GB/典雅黑",
+                  "sku_price": "300000",
+                  "spec_id": "1863612837722265"
+                }
+              ],
+              "status": "0"
+            }
+          ],
+          "total": "60"
+        },
+        "msg": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:-41003",
+      "sub_msg": "缺少必选参数 (如：operator_info 身份信息为空 或 operator_id 为空)"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8256",
+  "updatedAt": "2026-04-28",
+  "_file_stem": "industry-inspection-getShopProductAndSkuInfo"
+}

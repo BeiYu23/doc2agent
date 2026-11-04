@@ -1,0 +1,141 @@
+{
+  "id": "doudian.order.order.batchDecrypt",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.batchDecrypt",
+  "description": "1、接口支持解密在文档字段有“密文”红色标识字段值：收件人电话收件人姓名；详细地址；账号值；证件号；证件姓名\n2、不支持解密doudian_open_id字段加密用户ID串\n3、最大支持一次解密50条数据\n4、cipher_infos字段待解密的密文列表示",
+  "method": "GET",
+  "path": "/order/batchDecrypt",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 物流商"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V6.15）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cipher_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "待解密值集合，最大支持一次解密50条。待解密的密文列表示例，入参结构{\"cipher_infos\":[{\"auth_id”:”订单号”,”cipher_text”:”待解密值”},{“auth_id”:”订单号”,”cipher_text”:”待解密值”}]}",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "auth_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "正向解密使用订单号，逆向退款解密使用售后单号",
+      "example": "4933609365066313446",
+      "_depth": 1
+    },
+    {
+      "name": "cipher_text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "待解密值",
+      "example": "$c0qBj0QrZm9qae50eoBTInPj8PWvCjUyafxWt5cELI0=$YOUR_SECRET_KEY*YOUR_SECRET_KEY$1$$,#ML3B#YOUR_SECRET_KEY*YOUR_SECRET_KEY#1##",
+      "_depth": 1
+    },
+    {
+      "name": "account_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务商账号体系中，商户的账户ID，每个ISV下需要保证唯一，可选格式:独立生成的账户唯一标识",
+      "example": "dy1001",
+      "_depth": 0
+    },
+    {
+      "name": "account_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商户的账户ID类型；服务商账号中的主-main_account；子账号-sub_account；",
+      "example": "main_account",
+      "_depth": 0
+    },
+    {
+      "name": "need_virtual_phone",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "仅代拍场景下使用该字段，不传或传入0：表示使用代拍虚拟号逻辑，1：表示不使用代拍虚拟号逻辑",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "decrypt_infos",
+      "type": "array",
+      "description": "解密列表",
+      "example": ""
+    },
+    {
+      "name": "custom_err",
+      "type": "object",
+      "description": "业务错误",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理失败,详情请看sub_msg（sub_code: isv.business-failed:300003）",
+      "action": "无",
+      "sub_code": "isv.business-failed:300003",
+      "sub_msg": "业务处理失败,详情请看sub_msg"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 300008:解密接口存在部分失败（sub_code: isv.business-failed:300008）",
+      "action": "无",
+      "sub_code": "isv.business-failed:300008",
+      "sub_msg": "300008:解密接口存在部分失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 300001:解密错误: 批量解密存在部分失败（sub_code: isv.business-failed:300001）",
+      "action": "无",
+      "sub_code": "isv.business-failed:300001",
+      "sub_msg": "300001:解密错误: 批量解密存在部分失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 300007:解密错误: 批量解密存在部分失败（sub_code: isv.business-failed:300007）",
+      "action": "300007:解密错误: 批量解密存在部分失败",
+      "sub_code": "isv.business-failed:300007",
+      "sub_msg": "300007:解密错误: 批量解密存在部分失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:300003",
+      "sub_msg": "业务处理失败,详情请看sub_msg"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/982",
+  "updatedAt": "2023-12-25",
+  "_file_stem": "order-order-batchDecrypt"
+}

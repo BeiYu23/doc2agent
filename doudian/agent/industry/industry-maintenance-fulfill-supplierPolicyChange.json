@@ -1,0 +1,204 @@
+{
+  "id": "doudian.industry.maintenance.fulfill.supplierPolicyChange",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "maintenance.fulfill.supplierPolicyChange",
+  "description": "服务商回传保单信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "policy_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "保单信息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "insured_person",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被保险人名称",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "insurance_company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "投保保司名称",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "insurance_days",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "投保年限（天）",
+      "example": "365",
+      "_depth": 1
+    },
+    {
+      "name": "insured_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "投保时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "2026-01-01 10:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "policy_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保单状态：1 生效中，2 已退保，3 已终止，4 已理赔；\n无状态传 0；",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "actual_insured_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "订单实际投保金额，单位分",
+      "example": "199900",
+      "_depth": 1
+    },
+    {
+      "name": "insured_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保额，单位分",
+      "example": "199900",
+      "_depth": 1
+    },
+    {
+      "name": "policy_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "保单失效时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "2026-12-31 23:59:59",
+      "_depth": 1
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务店铺订单号",
+      "example": "6930810465707234468",
+      "_depth": 1
+    },
+    {
+      "name": "policy_start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "保单生效时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "2026-01-02 00:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "policy_holder",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "投保人名称",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "insurance_product",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "投保产品名称",
+      "example": "两年笔记本全保换新服务",
+      "_depth": 1
+    },
+    {
+      "name": "policy_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "保单号",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "policy_operate_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "保单操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "2026-01-01 10:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "policy_event",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保单事件：1 发起投保，2 发起退保；",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 10000000:请求参数错误（sub_code: isv.parameter-invalid:10000000）",
+      "action": "10000000:请求参数错误",
+      "sub_code": "isv.parameter-invalid:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统内部错误",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=maintenance.fulfill.supplierPolicyChange&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8581",
+  "updatedAt": "2026-09-04",
+  "_file_stem": "industry-maintenance-fulfill-supplierPolicyChange"
+}

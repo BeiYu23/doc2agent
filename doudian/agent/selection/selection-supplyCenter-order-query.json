@@ -1,0 +1,89 @@
+{
+  "id": "doudian.selection.supplyCenter.order.query",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.order.query",
+  "description": "查询采购单信息",
+  "method": "GET",
+  "path": "/supplyCenter/order/query",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pur_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "采购单号",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "pur_order_info",
+      "type": "object",
+      "description": "采购单信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 300202:无此采购单信息（sub_code: isv.business-failed:300202）",
+      "action": "确认店铺下采购单号是否存在",
+      "sub_code": "isv.business-failed:300202",
+      "sub_msg": "300202:无此采购单信息"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/qualityTask?app_key=your_appkey_here&method=product.qualityTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_standard": "true",
+        "meet_standard_num": "1",
+        "problem_num_to_improve": "10",
+        "problem_num_total": "10",
+        "problem_type_distribution": [
+          {
+            "num": "2",
+            "type_key": "1",
+            "type_name": "商品信息不规范"
+          }
+        ],
+        "product_num_finished": "10",
+        "product_num_to_improve_total": "10",
+        "product_num_total": "10",
+        "standard_rate": "10",
+        "task_finish_time": "2021-09-07 01:21:46",
+        "task_id": "15293",
+        "task_status": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:300202",
+      "sub_msg": "300202:无此采购单信息"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5617",
+  "updatedAt": "2023-11-10",
+  "_file_stem": "selection-supplyCenter-order-query"
+}

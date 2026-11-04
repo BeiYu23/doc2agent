@@ -1,0 +1,85 @@
+{
+  "id": "doudian.sms.sms.getTobTrafficDrivingLinkList",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.getTobTrafficDrivingLinkList",
+  "description": "查询引流链接",
+  "method": "GET",
+  "path": "/sms/getTobTrafficDrivingLinkList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "link",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "链接",
+      "example": "https://test-xxx.com/demo",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "list",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "19"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/getTobTrafficDrivingLinkList?app_key=your_appkey_here&method=sms.getTobTrafficDrivingLinkList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "list": [
+          {
+            "jump_link": "https://test.com/path",
+            "jump_link_domain": "test.com",
+            "jump_link_domain_icp": "test-icp",
+            "jump_link_domain_icp_body": "test-icpBody",
+            "jump_link_path": "https://test-xxx.com/demo",
+            "link": "https://test.com/path",
+            "link_domain": "test.com",
+            "link_domain_icp": "test-icp",
+            "link_domain_icp_body": "test-icpBody",
+            "link_path": "/path",
+            "protocol": "https",
+            "use_volc_link": "false"
+          }
+        ],
+        "total": "19"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/8435",
+  "updatedAt": "2026-07-28",
+  "_file_stem": "sms-sms-getTobTrafficDrivingLinkList"
+}

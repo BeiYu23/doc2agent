@@ -1,0 +1,920 @@
+{
+  "id": "doudian.warehouse.yunc.cloudCreateOutboundOrder",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.cloudCreateOutboundOrder",
+  "description": "云仓出库接单",
+  "method": "GET",
+  "path": "/yunc/cloudCreateOutboundOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V11.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "delivery_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "交货方式",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "platform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "平台交易单号",
+      "example": "1234234",
+      "_depth": 0
+    },
+    {
+      "name": "erp_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ERP出库单号",
+      "example": "1234234",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "订单类型 1:销售出库",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "expected_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "应发数量",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "source_platform_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单来源平台编码",
+      "example": "2222",
+      "_depth": 0
+    },
+    {
+      "name": "source_platform_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单来源平台名称",
+      "example": "德化仓",
+      "_depth": 0
+    },
+    {
+      "name": "order_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "前台订单下单时间",
+      "example": "1612202522000",
+      "_depth": 0
+    },
+    {
+      "name": "review_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "审单时间",
+      "example": "1612202522000",
+      "_depth": 0
+    },
+    {
+      "name": "express_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "express_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递公司名称",
+      "example": "顺丰",
+      "_depth": 0
+    },
+    {
+      "name": "is_insure",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否保价",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "insure_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保价金额",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "express_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递产品类型",
+      "example": "shunfeng001",
+      "_depth": 0
+    },
+    {
+      "name": "express_product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递产品名称",
+      "example": "顺丰次日达",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "DY传shopid，非DY传erp的店铺编码",
+      "example": "2345",
+      "_depth": 0
+    },
+    {
+      "name": "allow_merge",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否允许合单",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sender_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "发件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称（必传）",
+      "example": "合肥市",
+      "_depth": 1
+    },
+    {
+      "name": "tel_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区编码",
+      "example": "003",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址（必传）",
+      "example": "西溪八方城",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "004",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份名称（必传）",
+      "example": "安徽省",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "002",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "闲林街道",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "地区名称（必传）",
+      "example": "蜀山区",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "oaids",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地址id",
+      "example": "地址id",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "收件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份名称（必传）",
+      "example": "安徽省",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称（必传）",
+      "example": "合肥市",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "闲林街道",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "002",
+      "_depth": 1
+    },
+    {
+      "name": "tel_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话",
+      "example": "18766611111",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区编码",
+      "example": "003",
+      "_depth": 1
+    },
+    {
+      "name": "oaids",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地址id",
+      "example": "地址id",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "姓名",
+      "example": "李四",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址（必传）",
+      "example": "西溪八方城",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式",
+      "example": "18766611111",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "地区名称（必传）",
+      "example": "蜀山区",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "004",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "轻拿轻放",
+      "_depth": 0
+    },
+    {
+      "name": "buyer_message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "买家备注",
+      "example": "放门口",
+      "_depth": 0
+    },
+    {
+      "name": "seller_message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卖家备注",
+      "example": "贵重物品",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单详情",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "下单时间",
+      "example": "1649833646",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台货品编码",
+      "example": "23232",
+      "_depth": 1
+    },
+    {
+      "name": "platform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台订单号",
+      "example": "999891234567010821",
+      "_depth": 1
+    },
+    {
+      "name": "category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目名称",
+      "example": "服饰",
+      "_depth": 1
+    },
+    {
+      "name": "barcode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品条码（barcode字段要求为4-19位）",
+      "example": "23423423",
+      "_depth": 1
+    },
+    {
+      "name": "sku_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称",
+      "example": "鲜花",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP商品编码",
+      "example": "23234234",
+      "_depth": 1
+    },
+    {
+      "name": "pay_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "支付时间",
+      "example": "1649833646",
+      "_depth": 1
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期",
+      "example": "1612202522000",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存类型 1正品 2次品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "过期日期",
+      "example": "1612202522000",
+      "_depth": 1
+    },
+    {
+      "name": "subplatform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台交易子订单号",
+      "example": "999891234567010821",
+      "_depth": 1
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "出库单行号",
+      "example": "22323",
+      "_depth": 1
+    },
+    {
+      "name": "merge_shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "店铺ID",
+      "example": "1111241785",
+      "_depth": 1
+    },
+    {
+      "name": "expected_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "订单数量",
+      "example": "12",
+      "_depth": 1
+    },
+    {
+      "name": "platform_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台商品编码",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存状态 1正常 2质检 3冻结",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓编码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码(必填！！)",
+      "example": "11",
+      "_depth": 0
+    },
+    {
+      "name": "add_biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "附加业务类型 A100:代发",
+      "example": "A100",
+      "_depth": 0
+    },
+    {
+      "name": "out_batch_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "合单数量",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "package_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "订单类型（一单一包:1 拆单:2 合单:3）",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "pay_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "支付时间",
+      "example": "161220252",
+      "_depth": 0
+    },
+    {
+      "name": "shop_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺名称",
+      "example": "测试店铺",
+      "_depth": 0
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{key:val}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 货品不存在（sub_code: isv.business-failed:62302630）",
+      "action": "货品信息校验不通过，按提示修改",
+      "sub_code": "isv.business-failed:62302630",
+      "sub_msg": "货品不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 承运商不存在（sub_code: isv.business-failed:100100）",
+      "action": "根据提示修改，请检查快递编码",
+      "sub_code": "isv.business-failed:100100",
+      "sub_msg": "承运商不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1002:Redis加锁失败（sub_code: isv.business-failed:1002）",
+      "action": "并发推送出库单失败，请重试",
+      "sub_code": "isv.business-failed:1002",
+      "sub_msg": "1002:Redis加锁失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302604:获取lo失败（sub_code: isv.business-failed:62302604）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:62302604",
+      "sub_msg": "62302604:获取lo失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302625:接收订单异常，商家未入驻（sub_code: isv.business-failed:62302625）",
+      "action": "商家未入驻云仓，请检查是否开通云仓服务",
+      "sub_code": "isv.business-failed:62302625",
+      "sub_msg": "62302625:接收订单异常，商家未入驻"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500:500（sub_code: isv.business-failed:500）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "500:500"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1001:并发处理失败（sub_code: isv.business-failed:1001）",
+      "action": "并发处理失败，请重试",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:并发处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302628:快递不可达，无推荐快递（sub_code: isv.business-failed:62302628）",
+      "action": "快递不可达，请联系买家",
+      "sub_code": "isv.business-failed:62302628",
+      "sub_msg": "62302628:快递不可达，无推荐快递"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302605:构建物流订单失败（sub_code: isv.business-failed:62302605）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:62302605",
+      "sub_msg": "62302605:构建物流订单失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62301121:重复接单（sub_code: isv.business-failed:62301121）",
+      "action": "请检查订单信息",
+      "sub_code": "isv.business-failed:62301121",
+      "sub_msg": "62301121:重复接单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302635:库存不足（sub_code: isv.business-failed:62302635）",
+      "action": "请检查库存信息",
+      "sub_code": "isv.business-failed:62302635",
+      "sub_msg": "62302635:库存不足"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302633:并发推送erp单据失败，请重新下发（sub_code: isv.business-failed:62302633）",
+      "action": "请重新下发！",
+      "sub_code": "isv.business-failed:62302633",
+      "sub_msg": "62302633:并发推送erp单据失败，请重新下发"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302601:调用库存中心失败（sub_code: isv.business-failed:62302601）",
+      "action": "请重试！",
+      "sub_code": "isv.business-failed:62302601",
+      "sub_msg": "62302601:调用库存中心失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1249:该订单已存在，无需重复下发（sub_code: isv.business-failed:1249）",
+      "action": "无需重复下发！",
+      "sub_code": "isv.business-failed:1249",
+      "sub_msg": "1249:该订单已存在，无需重复下发"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302632:该单号已存在，请换一个手工单号重新下发（sub_code: isv.business-failed:62302632）",
+      "action": "该单号已存在，请换一个手工单号重新下发",
+      "sub_code": "isv.business-failed:62302632",
+      "sub_msg": "62302632:该单号已存在，请换一个手工单号重新下发"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 999999:下游RPC超时（sub_code: isv.business-failed:999999）",
+      "action": "请重试！",
+      "sub_code": "isv.business-failed:999999",
+      "sub_msg": "999999:下游RPC超时"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:请求内部服务超时（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:请求内部服务超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -20001:没有足够的预占产能释放（sub_code: isv.business-failed:-20001）",
+      "action": "没有足够的预占产能释放",
+      "sub_code": "isv.business-failed:-20001",
+      "sub_msg": "-20001:没有足够的预占产能释放"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1003:请求内部服务异常,请重试（sub_code: isv.business-failed:1003）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "1003:请求内部服务异常,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302606:构建物流履行单失败（sub_code: isv.business-failed:62302606）",
+      "action": "构建物流履行单失败",
+      "sub_code": "isv.business-failed:62302606",
+      "sub_msg": "62302606:构建物流履行单失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1271:手工单号重复，请更换（sub_code: isv.business-failed:1271）",
+      "action": "手工单号重复，请更换",
+      "sub_code": "isv.business-failed:1271",
+      "sub_msg": "1271:手工单号重复，请更换"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1200:标准化地址异常（sub_code: isv.business-failed:1200）",
+      "action": "标准化地址异常",
+      "sub_code": "isv.business-failed:1200",
+      "sub_msg": "1200:标准化地址异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1252:仓快递配置信息不存在（sub_code: isv.business-failed:1252）",
+      "action": "仓快递配置信息不存在",
+      "sub_code": "isv.business-failed:1252",
+      "sub_msg": "1252:仓快递配置信息不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1401:规则查询缓存失败（sub_code: isv.business-failed:1401）",
+      "action": "规则查询缓存失败",
+      "sub_code": "isv.business-failed:1401",
+      "sub_msg": "1401:规则查询缓存失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:请求详情列表（index=0）目的地-节点信息-省编码不能为空，请检查！（sub_code: isv.business-failed:-1）",
+      "action": "请求详情列表（index=0）目的地-节点信息-省编码不能为空，请检查！",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:请求详情列表（index=0）目的地-节点信息-省编码不能为空，请检查！"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1100:查询店铺与货主绑定关系失败，请重试！（sub_code: isv.business-failed:1100）",
+      "action": "查询店铺与货主绑定关系失败，请重试！",
+      "sub_code": "isv.business-failed:1100",
+      "sub_msg": "1100:查询店铺与货主绑定关系失败，请重试！"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1253:货主和店铺绑定关系不存在，请在scm进行货主和店铺关系绑定后重推数据！（sub_code: isv.business-failed:1253）",
+      "action": "货主和店铺绑定关系不存在，请在scm进行货主和店铺关系绑定后重推数据！",
+      "sub_code": "isv.business-failed:1253",
+      "sub_msg": "1253:货主和店铺绑定关系不存在，请在scm进行货主和店铺关系绑定后重推数据！"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/cloudCreateOutboundOrder?app_key=your_appkey_here&method=yunc.cloudCreateOutboundOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:62302630",
+      "sub_msg": "货品不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/898",
+  "updatedAt": "2026-08-26",
+  "_file_stem": "warehouse-yunc-cloudCreateOutboundOrder"
+}

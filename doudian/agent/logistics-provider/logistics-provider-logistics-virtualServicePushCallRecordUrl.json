@@ -1,0 +1,99 @@
+{
+  "id": "doudian.logistics-provider.logistics.virtualServicePushCallRecordUrl",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.virtualServicePushCallRecordUrl",
+  "description": "通话录音url回传接口",
+  "method": "GET",
+  "path": "/logistics/virtualServicePushCallRecordUrl",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供应商唯一标识；需联系群内抖店虚拟号研发配置生成；",
+      "example": "volcengine",
+      "_depth": 0
+    },
+    {
+      "name": "call_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供应商通话id，由供应商自定义，需要保持唯一，标识该次通话，幂等；",
+      "example": "xxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "record_url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供应商通话录音文件url，公网可访问",
+      "example": "xxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "left_sound_channel_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商通话录音文件url（左声道），公网可访问",
+      "example": "xxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "right_sound_channel_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商通话录音文件url（右声道），公网可访问",
+      "example": "xxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/virtualServicePushCallRecordUrl?app_key=your_appkey_here&method=logistics.virtualServicePushCallRecordUrl&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2777",
+  "updatedAt": "2024-12-03",
+  "_file_stem": "logistics-provider-logistics-virtualServicePushCallRecordUrl"
+}

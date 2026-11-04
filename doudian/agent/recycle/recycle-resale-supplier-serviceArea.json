@@ -1,0 +1,400 @@
+{
+  "id": "doudian.recycle.resale.supplier.serviceArea",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "resale.supplier.serviceArea",
+  "description": "【上门回收】更新上门服务范围信息同步",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商实体编码，抖音研发给出",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "service_area_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "- EFENCE：电子围栏信息同步 - REGION：四级国标地址信息同步",
+      "example": "EFENCE",
+      "_depth": 0
+    },
+    {
+      "name": "service_areas",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "地理位置信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级区县名称",
+      "example": "宝山区",
+      "_depth": 1
+    },
+    {
+      "name": "support_category_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "地址所支持类目列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "fourth_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目ID",
+      "example": "\"444\"",
+      "_depth": 2
+    },
+    {
+      "name": "third_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目ID",
+      "example": "\"333\"",
+      "_depth": 2
+    },
+    {
+      "name": "second_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目ID",
+      "example": "\"222\"",
+      "_depth": 2
+    },
+    {
+      "name": "first_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目ID",
+      "example": "\"111\"",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级区国标",
+      "example": "\"1111\"",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级街道国标",
+      "example": "\"1111\"",
+      "_depth": 1
+    },
+    {
+      "name": "service_area_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1-可用，0-不可用",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级省名称",
+      "example": "广东省",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级城市名称",
+      "example": "深圳市",
+      "_depth": 1
+    },
+    {
+      "name": "support_modes",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "支持的回收模式，不传默认为分离式，[0]:分离式，[1]:一站式，都支持：传入[0,1]",
+      "example": "[0]",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级省国标",
+      "example": "\"111\"",
+      "_depth": 1
+    },
+    {
+      "name": "fences",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "围栏信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "support_category_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "围栏所支持类目列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "third_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目ID",
+      "example": "\"333\"",
+      "_depth": 3
+    },
+    {
+      "name": "first_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目ID",
+      "example": "\"111\"",
+      "_depth": 3
+    },
+    {
+      "name": "fourth_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目ID",
+      "example": "\"444\"",
+      "_depth": 3
+    },
+    {
+      "name": "second_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目ID",
+      "example": "\"222\"",
+      "_depth": 3
+    },
+    {
+      "name": "points",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "围栏经纬度列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "lat",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度信息",
+      "example": "20.232433",
+      "_depth": 3
+    },
+    {
+      "name": "lng",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度信息",
+      "example": "20.232433",
+      "_depth": 3
+    },
+    {
+      "name": "support_modes",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "支持的回收模式，不传默认为分离式，[0]:分离式，[1]:一站式，都支持：传入[0,1]",
+      "example": "[0]",
+      "_depth": 2
+    },
+    {
+      "name": "fence_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "围栏ID",
+      "example": "\"11111111111\"",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级街道名称",
+      "example": "龙岗街道",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级市国标",
+      "example": "\"1111\"",
+      "_depth": 1
+    },
+    {
+      "name": "service_coordinate_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "service_area_type为电子围栏时选填",
+      "example": "\"BD09\"",
+      "_depth": 0
+    },
+    {
+      "name": "support_category_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "范围所支持类目列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "third_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目ID",
+      "example": "\"333\"",
+      "_depth": 1
+    },
+    {
+      "name": "first_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目ID",
+      "example": "\"111\"",
+      "_depth": 1
+    },
+    {
+      "name": "fourth_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目ID",
+      "example": "\"444\"",
+      "_depth": 1
+    },
+    {
+      "name": "second_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目ID",
+      "example": "\"222\"",
+      "_depth": 1
+    },
+    {
+      "name": "contains_category",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否包含范围支持的类目：0-不包含，1-包含",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "category_type_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "指定推送的范围关联的类目类型列表，1：大家电，2： 3C行业，3：小家电",
+      "example": "1,2",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "10001",
+      "meaning": "请求部分失败 / 批量请求部分失败（sub_code: isv.business-part-failed:-8）",
+      "action": "检查部分地址是否符合标准",
+      "sub_code": "isv.business-part-failed:-8",
+      "sub_msg": "批量请求部分失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数不合法（sub_code: isv.parameter-invalid:-3）",
+      "action": "请检查检查请求参数",
+      "sub_code": "isv.parameter-invalid:-3",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:-1）",
+      "action": "请联系开发者",
+      "sub_code": "isp.service-error:-1",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=resale.supplier.serviceArea&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 10001,
+      "msg": "请求部分失败",
+      "sub_code": "isv.business-part-failed:-8",
+      "sub_msg": "批量请求部分失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/4497",
+  "updatedAt": "2026-03-26",
+  "_file_stem": "recycle-resale-supplier-serviceArea"
+}

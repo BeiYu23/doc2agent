@@ -1,0 +1,68 @@
+{
+  "id": "doudian.product.mini.product.willingList",
+  "platform": "doudian",
+  "group": "product",
+  "name": "mini.product.willingList",
+  "description": "商品收藏列表查询",
+  "method": "GET",
+  "path": "/mini/product/willingList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 小程序"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询收藏列表失败，请检查参数重试（sub_code: isv.business-failed:605013003）",
+      "action": "检查参数重试",
+      "sub_code": "isv.business-failed:605013003",
+      "sub_msg": "查询收藏列表失败，请检查参数重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=mini.product.willingList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "name": "xxx",
+            "pic": "xxx",
+            "product_id": "123"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:605013003",
+      "sub_msg": "查询收藏列表失败，请检查参数重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4234",
+  "updatedAt": "2023-08-10",
+  "_file_stem": "product-mini-product-willingList"
+}

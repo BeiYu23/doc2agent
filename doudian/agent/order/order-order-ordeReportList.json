@@ -1,0 +1,128 @@
+{
+  "id": "doudian.order.order.ordeReportList",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.ordeReportList",
+  "description": "明文手机号报备接口",
+  "method": "GET",
+  "path": "/order/ordeReportList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V2.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "add_real_mobile_whites",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "报备请求",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单号，订单号和售后单号只需选择一个传入即可",
+      "example": "4878621053383018305",
+      "_depth": 1
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后单号，订单号和售后单号只需选择一个传入即可",
+      "example": "7043704348588900652",
+      "_depth": 1
+    },
+    {
+      "name": "reason_no",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "报备原因编码：1-无法发货，2-无法处理售后，3-无法处理客诉，4-无法处理物流包裹，5-其他原因",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报备备注",
+      "example": "需要联系买家",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "add_real_mobile_whites",
+      "type": "array",
+      "description": "报备响应",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:88888）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:88888",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 申请数量不能超过100（sub_code: isv.parameter-invalid:10005）",
+      "action": "减少请求量",
+      "sub_code": "isv.parameter-invalid:10005",
+      "sub_msg": "申请数量不能超过100"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 申请信息不能为空（sub_code: isv.missing-parameter:10004）",
+      "action": "输入请求参数",
+      "sub_code": "isv.missing-parameter:10004",
+      "sub_msg": "申请信息不能为空"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/ordeReportList?app_key=your_appkey_here&method=order.ordeReportList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "add_real_mobile_whites": [
+          {
+            "after_sale_id": "7043704348588900652",
+            "msg": "请输入正确的申请原因编码",
+            "order_id": "4878621053383018305"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:88888",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1550",
+  "updatedAt": "2021-12-20",
+  "_file_stem": "order-order-ordeReportList"
+}

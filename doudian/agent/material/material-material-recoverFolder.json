@@ -1,0 +1,70 @@
+{
+  "id": "doudian.material.material.recoverFolder",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.recoverFolder",
+  "description": "从回收站恢复文件夹",
+  "method": "GET",
+  "path": "/material/recoverFolder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "folder_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要恢复的文件夹的id列表，不能操作系统文件夹（0：根目录 -1：回收站）。批量操作每次最多20个。",
+      "example": "[\"7000254886243746092\", \"7000254886243746093\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_ids",
+      "type": "array",
+      "description": "操作成功的文件夹列表",
+      "example": "[\"7000254886243746092\", \"7000254886243746093\"]"
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "操作失败的文件夹及失败的详情",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/recoverFolder?app_key=your_appkey_here&method=material.recoverFolder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "failed_map": {},
+        "success_ids": "[\"7000254886243746092\", \"7000254886243746093\"]"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1096",
+  "updatedAt": "2022-09-06",
+  "_file_stem": "material-material-recoverFolder"
+}

@@ -1,0 +1,399 @@
+{
+  "id": "doudian.logistics-provider.logistics.submitNetworkInfo",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.submitNetworkInfo",
+  "description": "物流商提报线路信息",
+  "method": "GET",
+  "path": "/logistics/submitNetworkInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "report_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "提报类型，1: 线路时效数据；2：线路揽收时间数据；",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "line_time_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "线路时效信息，当report_type为1时，传入该数据；可以选择传入明细list或文件，只可二选一，都传入取数优先级：明细list > 文件url",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1：生效，2：失效",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "origin_city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-市",
+      "example": "南京市",
+      "_depth": 1
+    },
+    {
+      "name": "origin_district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-区，是否传入请根据提供的线路粒度决定",
+      "example": "鼓楼区",
+      "_depth": 1
+    },
+    {
+      "name": "target_province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "终点-省",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "target_street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "终点-街道，是否传入请根据提供的线路粒度决定",
+      "example": "仓前街道",
+      "_depth": 1
+    },
+    {
+      "name": "last_delivery_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "最晚送达时间，不同业务类型有不同的格式要求",
+      "example": "1D",
+      "_depth": 1
+    },
+    {
+      "name": "origin_province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-省",
+      "example": "江苏省",
+      "_depth": 1
+    },
+    {
+      "name": "origin_street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-街道，是否传入请根据提供的线路粒度决定",
+      "example": "中央门街道",
+      "_depth": 1
+    },
+    {
+      "name": "target_city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "终点-市",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "target_district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "终点-区，是否传入请根据提供的线路粒度决定",
+      "example": "余杭区",
+      "_depth": 1
+    },
+    {
+      "name": "product_type_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "与抖音约定的物流产品名称",
+      "example": "标快",
+      "_depth": 1
+    },
+    {
+      "name": "product_type_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "与抖音约定的物流产品编码",
+      "example": "XX",
+      "_depth": 1
+    },
+    {
+      "name": "line_collect_time_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "线路揽收时间信息，当report_type为2时，传入该数据；可以选择传入明细list或文件，只可二选一，都传入取数优先级：明细list > 文件url",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "origin_province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-省",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "origin_city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-市",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "origin_district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-区，是否传入请根据提供的线路粒度决定",
+      "example": "余杭区",
+      "_depth": 1
+    },
+    {
+      "name": "origin_street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起点-街道，是否传入请根据提供的线路粒度决定",
+      "example": "仓前街道",
+      "_depth": 1
+    },
+    {
+      "name": "last_collect_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "最晚揽收时间，“nDhh:mm:ss”格式，示例：0D20:00:00",
+      "example": "0D20:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1：生效，2：失效",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "product_type_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "与抖音约定的物流产品名称",
+      "example": "标快",
+      "_depth": 1
+    },
+    {
+      "name": "product_type_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "与抖音约定的物流产品编码",
+      "example": "XX",
+      "_depth": 1
+    },
+    {
+      "name": "line_time_info_file_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "线路时效信息文件地址，当report_type为1时，可以选择传入明细list或文件，只可二选一，都传入取数优先级：明细list > 文件url",
+      "example": "https://xx.xx.xx",
+      "_depth": 0
+    },
+    {
+      "name": "line_collect_time_info_file_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "线路揽收时间信息文件地址，当report_type为2时，可以选择传入明细list或文件，只可二选一，都传入取数优先级：明细list > 文件url",
+      "example": "https://xx.xx.xx",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_sign",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商签名，用于鉴权，请妥善保管",
+      "example": "xxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "business_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "线路业务类型，1:承诺达线路，2:即时零售线路",
+      "example": "线路的业务类型",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "fail_reason_list",
+      "type": "array",
+      "description": "失败原因列表",
+      "example": "[\"产品类型编码为空\";\"产品类型名称为空\"]"
+    },
+    {
+      "name": "report_id",
+      "type": "mixed",
+      "description": "提报单id",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 信息提报失败（sub_code: isv.business-failed:-1001）",
+      "action": "修改参数或重试",
+      "sub_code": "isv.business-failed:-1001",
+      "sub_msg": "信息提报失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 线路信息参数不合法（sub_code: isv.parameter-invalid:-1002）",
+      "action": "修改参数",
+      "sub_code": "isv.parameter-invalid:-1002",
+      "sub_msg": "线路信息参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不支持的提报类型（sub_code: isv.parameter-invalid:-1003）",
+      "action": "修改提报类型",
+      "sub_code": "isv.parameter-invalid:-1003",
+      "sub_msg": "不支持的提报类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 线路信息明细数量超出最大限制（sub_code: isv.parameter-invalid:-1004）",
+      "action": "减少提报数据数量",
+      "sub_code": "isv.parameter-invalid:-1004",
+      "sub_msg": "线路信息明细数量超出最大限制"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 线路信息数量为空（sub_code: isv.parameter-invalid:-1005）",
+      "action": "确认提报数据存在",
+      "sub_code": "isv.parameter-invalid:-1005",
+      "sub_msg": "线路信息数量为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流商编码(LogisticsCode)为空（sub_code: isv.parameter-invalid:-1006）",
+      "action": "确认物流商编码(LogisticsCode)已传",
+      "sub_code": "isv.parameter-invalid:-1006",
+      "sub_msg": "物流商编码(LogisticsCode)为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流商签名(LogisticsSign)为空（sub_code: isv.parameter-invalid:-1007）",
+      "action": "确认物流商编码(LogisticsSign)已传",
+      "sub_code": "isv.parameter-invalid:-1007",
+      "sub_msg": "物流商签名(LogisticsSign)为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不支持的业务类型（sub_code: isv.parameter-invalid:-1008）",
+      "action": "确认业务类型的取值",
+      "sub_code": "isv.parameter-invalid:-1008",
+      "sub_msg": "不支持的业务类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流商签名校验失败（sub_code: isv.parameter-invalid:-1009）",
+      "action": "确认签名值合法",
+      "sub_code": "isv.parameter-invalid:-1009",
+      "sub_msg": "物流商签名校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 线路信息不存在（sub_code: isv.parameter-invalid:-1010）",
+      "action": "确认线路是否已提报",
+      "sub_code": "isv.parameter-invalid:-1010",
+      "sub_msg": "线路信息不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 线路揽收信息不存在（sub_code: isv.parameter-invalid:-1011）",
+      "action": "确认线路揽收信息是否已提报",
+      "sub_code": "isv.parameter-invalid:-1011",
+      "sub_msg": "线路揽收信息不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 时间格式异常（sub_code: isv.parameter-invalid:-1012）",
+      "action": "确认时间字段是否符合要求",
+      "sub_code": "isv.parameter-invalid:-1012",
+      "sub_msg": "时间格式异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/submitNetworkInfo?app_key=your_appkey_here&method=logistics.submitNetworkInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fail_reason_list": "[\"产品类型编码为空\";\"产品类型名称为空\"]",
+        "report_id": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1001",
+      "sub_msg": "信息提报失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7046",
+  "updatedAt": "2025-06-09",
+  "_file_stem": "logistics-provider-logistics-submitNetworkInfo"
+}

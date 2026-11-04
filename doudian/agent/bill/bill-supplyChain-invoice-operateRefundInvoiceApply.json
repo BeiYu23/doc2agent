@@ -1,0 +1,246 @@
+{
+  "id": "doudian.bill.supplyChain.invoice.operateRefundInvoiceApply",
+  "platform": "doudian",
+  "group": "bill",
+  "name": "supplyChain.invoice.operateRefundInvoiceApply",
+  "description": "红字确认单上传",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 账单API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "applyNo",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "退票申请单号",
+      "example": "IAO7585313919070241123",
+      "_depth": 0
+    },
+    {
+      "name": "refundInfo",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "提交信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "applyReason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "申请原因\n1：开票有误，2：服务终止，3：销货退回，4：销售折让",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "redInfoAttachment",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "红字信息列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "redInfoWordNo",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "红字信息表号码",
+      "example": "44430426041004976777",
+      "_depth": 2
+    },
+    {
+      "name": "amount",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "红字金额",
+      "example": "-2478.01",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "红字信息表url",
+      "example": "url",
+      "_depth": 2
+    },
+    {
+      "name": "isRedReversal",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否部分红冲 false",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "invoiceDataList",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "选择的发票列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "invoiceNo",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发票号码",
+      "example": "25442000000540330123",
+      "_depth": 2
+    },
+    {
+      "name": "invoice_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发票状态",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "taxAmountStr",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发票税额",
+      "example": "23944.67",
+      "_depth": 2
+    },
+    {
+      "name": "invoiceAuthed",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "发票是否认证",
+      "example": "true",
+      "_depth": 2
+    },
+    {
+      "name": "createTime",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "开票时间",
+      "example": "1750888817",
+      "_depth": 2
+    },
+    {
+      "name": "amountStr",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发票金额",
+      "example": "1248.67",
+      "_depth": 2
+    },
+    {
+      "name": "invoiceCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发票代码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "oApplyNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "oA申请单号",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "isChoose",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "发票是否选择",
+      "example": "true",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "string",
+      "description": "错误码，\"0\"代表请求成功",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误码说明",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常:%s（sub_code: isp.service-error:1001）",
+      "action": "重试或联系内部人员",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "系统异常:%s"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常:%s（sub_code: isv.parameter-invalid:1002）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:1002",
+      "sub_msg": "参数异常:%s"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前状态不支持当前指令（sub_code: isv.business-failed:1003）",
+      "action": "检查当前流程操作是否正确",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "当前状态不支持当前指令"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.invoice.operateRefundInvoiceApply&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "系统异常:%s"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/46/7999",
+  "updatedAt": "2026-04-23",
+  "_file_stem": "bill-supplyChain-invoice-operateRefundInvoiceApply"
+}

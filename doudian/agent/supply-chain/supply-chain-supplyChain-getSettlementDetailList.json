@@ -1,0 +1,237 @@
+{
+  "id": "doudian.supply-chain.supplyChain.getSettlementDetailList",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.getSettlementDetailList",
+  "description": "结算单列表查询",
+  "method": "GET",
+  "path": "/supplyChain/getSettlementDetailList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "结算状态 1-待结算 4-已结算",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "biz_codes",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结算模式 代销分账-SUPPLY-CHAIN#SEPARATE-ACCOUNTING  担保交易-SUPPLY-CHAIN#SECURED-TRANSACTIONS 赔付-SUPPLY-CHAIN-COMPENSATION",
+      "example": "SUPPLY-CHAIN#SEPARATE-ACCOUNTING",
+      "_depth": 0
+    },
+    {
+      "name": "settle_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "结算方式 1-分账 2-转账",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "请求页大小，最大值100",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "settle_time_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "结算完成开始时间（时间戳到秒）",
+      "example": "1744958170",
+      "_depth": 0
+    },
+    {
+      "name": "settle_time_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "结算完成结束时间（时间戳到秒）",
+      "example": "1744958170",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖店订单号",
+      "example": "69123123123123123",
+      "_depth": 0
+    },
+    {
+      "name": "trade_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供货单号",
+      "example": "CT123123123123123",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "分销商id",
+      "example": "12312312312312",
+      "_depth": 0
+    },
+    {
+      "name": "biz_time_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货单发货结束时间（时间戳到秒）",
+      "example": "1744958170",
+      "_depth": 0
+    },
+    {
+      "name": "transfer_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "转账状态 1-转账成功 2-转账失败",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码 1-xxx（从1开始）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "settlement_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结算单号",
+      "example": "SO123123123123123",
+      "_depth": 0
+    },
+    {
+      "name": "biz_time_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供货发货开始时间（时间戳到秒）",
+      "example": "1744958170",
+      "_depth": 0
+    },
+    {
+      "name": "account_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "动账账户类型 PA-聚合账户 微信账户-NEW_WX 支付宝-ZFB 抖音支付-NEW_HZ 保证金账户-BZJ",
+      "example": "PA",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "单据总条数",
+      "example": "999"
+    },
+    {
+      "name": "order_list",
+      "type": "array",
+      "description": "结算单列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务错误（sub_code: isp.service-error:1000）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1020）",
+      "action": "请传入正确的参数",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:2000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/getSettlementDetailList?app_key=your_appkey_here&method=supplyChain.getSettlementDetailList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "order_list": [
+          {
+            "account_type": "PA",
+            "after_sale_amount": "123",
+            "biz_code": "SUPPLY-CHAIN#SEPARATE-ACCOUNTING",
+            "biz_time": "1744958170",
+            "distributorId": "12312312312321",
+            "order_id": "6912321321321321",
+            "payer_name": "分销商",
+            "settle_mode": "1",
+            "settle_time": "1744958170",
+            "settlement_amount": "123",
+            "settlement_no": "SO123123123",
+            "status": "1",
+            "supply_order_amount": "123",
+            "trade_order_no": "CTxxxxxxxxxxxx",
+            "transfer_status": "1"
+          }
+        ],
+        "total": "999"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/7420",
+  "updatedAt": "2025-04-24",
+  "_file_stem": "supply-chain-supplyChain-getSettlementDetailList"
+}

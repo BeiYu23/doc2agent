@@ -1,0 +1,123 @@
+{
+  "id": "doudian.industry.inspection.combinedOrder.supplierUpdateAppointment",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "inspection.combinedOrder.supplierUpdateAppointment",
+  "description": "上门检测一体服务商更新预约信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上门师傅名字",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上门师傅手机号，格式，真实号：主机号；虚拟号：主机号-分机号；",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "主单号",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "appointment_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预约时间，格式：\"yyyy-MM-dd HH:mm:ss~yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "注意：只支持\"UNABLE_TO_CONTACT_CONSUMER\"和\"AGREEMENT_WITH_CONSUMER\" 这两个原因，不能填其他原因，否则改约会不通过",
+      "example": "\"UNABLE_TO_CONTACT_CONSUMER\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000000:请求参数错误（sub_code: isv.business-failed:10000000）",
+      "action": "10000000:请求参数错误",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统内部错误",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=inspection.combinedOrder.supplierUpdateAppointment&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8411",
+  "updatedAt": "2026-08-11",
+  "_file_stem": "industry-inspection-combinedOrder-supplierUpdateAppointment"
+}

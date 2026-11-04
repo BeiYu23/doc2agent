@@ -1,0 +1,162 @@
+{
+  "id": "doudian.shop.warehouse.create",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "warehouse.create",
+  "description": "创建单个区域仓",
+  "method": "GET",
+  "path": "/warehouse/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓库ID，一个店铺下，同一个外部ID只能创建一个仓库",
+      "example": "abc",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库名称",
+      "example": "test",
+      "_depth": 0
+    },
+    {
+      "name": "intro",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库介绍",
+      "example": "test",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_location",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓地址编码",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "address_id1",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "省地址编码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "address_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "市地址编码",
+      "example": "110000",
+      "_depth": 2
+    },
+    {
+      "name": "address_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "区地址编码",
+      "example": "110101",
+      "_depth": 2
+    },
+    {
+      "name": "address_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "街道地址编码",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "address_detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "xx区xx号",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "number",
+      "description": "仓库id",
+      "example": "6853386941874864391"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 外部仓库编码out_warehouse_id重复，请检查后重试（sub_code: isv.business-failed:2）",
+      "action": "使用编辑接口操作",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "外部仓库编码out_warehouse_id重复，请检查后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 处理失败，请重试（sub_code: isv.business-failed:1005）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1005",
+      "sub_msg": "处理失败，请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/create?app_key=your_appkey_here&method=warehouse.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "6853386941874864391"
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "外部仓库编码out_warehouse_id重复，请检查后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2075",
+  "updatedAt": "2022-07-12",
+  "_file_stem": "shop-warehouse-create"
+}

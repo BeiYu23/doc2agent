@@ -1,0 +1,111 @@
+{
+  "id": "doudian.shop.supplyChain.warehouse.list",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "supplyChain.warehouse.list",
+  "description": "外部仓列表",
+  "method": "GET",
+  "path": "/supplyChain/warehouse/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部仓编码",
+      "example": "w1111111",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库名称",
+      "example": "测试仓名称",
+      "_depth": 0
+    },
+    {
+      "name": "out_warehouse_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "外部仓编码列表",
+      "example": "[\"w1111111\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouse_list",
+      "type": "array",
+      "description": "区域仓列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20000）",
+      "action": "系统错误",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/warehouse/list?app_key=your_appkey_here&method=supplyChain.warehouse.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "warehouse_list": [
+          {
+            "addr": [
+              {
+                "addr_id1": "100",
+                "addr_id2": "100100",
+                "addr_id3": "100110",
+                "addr_id4": "100111",
+                "create_time": "1623918481",
+                "update_time": "1623918481"
+              }
+            ],
+            "create_time": "1623918481",
+            "intro": "介绍",
+            "name": "名字",
+            "out_warehouse_id": "w111111",
+            "update_time": "1623918481",
+            "warehouse_id": "6853386941874864391"
+          }
+        ]
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2122",
+  "updatedAt": "2022-06-28",
+  "_file_stem": "shop-supplyChain-warehouse-list"
+}

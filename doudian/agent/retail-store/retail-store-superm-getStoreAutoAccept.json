@@ -1,0 +1,114 @@
+{
+  "id": "doudian.retail-store.superm.getStoreAutoAccept",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.getStoreAutoAccept",
+  "description": "获取自动接单配置",
+  "method": "GET",
+  "path": "/superm/getStoreAutoAccept",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "门店id",
+      "example": "123321",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "auto_dispatcher_status",
+      "type": "number",
+      "description": "自动接单状态，1关闭2开启",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 店铺ID不能为空（sub_code: isv.missing-parameter:40011）",
+      "action": "店铺ID不能为空",
+      "sub_code": "isv.missing-parameter:40011",
+      "sub_msg": "店铺ID不能为空"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 门店ID不能为空（sub_code: isv.missing-parameter:40012）",
+      "action": "门店ID不能为空",
+      "sub_code": "isv.missing-parameter:40012",
+      "sub_msg": "门店ID不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请输入正确的操作信息（sub_code: isv.business-failed:40100）",
+      "action": "请输入正确的操作信息",
+      "sub_code": "isv.business-failed:40100",
+      "sub_msg": "请输入正确的操作信息"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统繁忙，请稍后重试（sub_code: isp.service-error:20201）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-error:20201",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统繁忙，请稍后重试（sub_code: isp.service-error:20112）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-error:20112",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID（sub_code: isv.business-failed:50114）",
+      "action": "store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID",
+      "sub_code": "isv.business-failed:50114",
+      "sub_msg": "store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未开通平台运力服务（sub_code: isv.business-failed:50111）",
+      "action": "未开通平台运力服务",
+      "sub_code": "isv.business-failed:50111",
+      "sub_msg": "未开通平台运力服务"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/getStoreAutoAccept?app_key=your_appkey_here&method=superm.getStoreAutoAccept&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "auto_dispatcher_status": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:40011",
+      "sub_msg": "店铺ID不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2964",
+  "updatedAt": "2023-09-19",
+  "_file_stem": "retail-store-superm-getStoreAutoAccept"
+}

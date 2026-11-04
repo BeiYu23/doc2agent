@@ -1,0 +1,41 @@
+{
+  "id": "doudian.logistics.address.cityList",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "address.cityList",
+  "description": "获取市列表（6.30下线）",
+  "method": "GET",
+  "path": "/address/cityList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 ）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?method=address.cityList&param_json={}'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success"
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/102",
+  "updatedAt": "2021-05-07",
+  "_file_stem": "logistics-address-cityList"
+}

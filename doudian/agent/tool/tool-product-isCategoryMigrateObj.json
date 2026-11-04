@@ -1,0 +1,75 @@
+{
+  "id": "doudian.tool.product.isCategoryMigrateObj",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "product.isCategoryMigrateObj",
+  "description": "主要用于类目树升级场景，判断店铺和类目的信息是否已经升级需使用新的类目信息做相关操作，如商品发布，商品更新等",
+  "method": "GET",
+  "path": "/product/isCategoryMigrateObj",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "类目id，非必填参数，传入会查询判断类目是新的还是老的。",
+      "example": "20117",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_result",
+      "type": "boolean",
+      "description": "判断店铺是否已经升级为类目树（新类目店铺），true-已升级，false-未升级",
+      "example": "true"
+    },
+    {
+      "name": "category_result",
+      "type": "boolean",
+      "description": "判断类目是否已经升级为类目树（新类目信息），true-新类目，false-旧类目",
+      "example": "false"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常,请重试（sub_code: isp.service-error:2010001）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "系统异常,请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "系统异常,请重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/8058",
+  "updatedAt": "2026-01-21",
+  "_file_stem": "tool-product-isCategoryMigrateObj"
+}

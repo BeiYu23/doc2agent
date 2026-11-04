@@ -1,0 +1,120 @@
+{
+  "id": "doudian.product.promise.QueryBenefitTraction",
+  "platform": "doudian",
+  "group": "product",
+  "name": "promise.QueryBenefitTraction",
+  "description": "查询店铺维度利益点和库存推荐",
+  "method": "GET",
+  "path": "/promise/QueryBenefitTraction",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "need_aggregation_benefit_by_shop",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "true=店铺维度聚合利益点",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "need_query_sales_volume_last14_days",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "true=返回近 14 天预售订单量",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "need_stock_increment_suggestion",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "true=返回商品和 SKU 维度库存建议增量",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "need_sort_by_product_recommendation",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "true=按商品库存建议值倒排",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "merchant_ship_rate48h",
+      "type": "string",
+      "description": "商家 48h 发货占比",
+      "example": "0.49"
+    },
+    {
+      "name": "traction_info_by_fulfillment_mode_map",
+      "type": "string",
+      "description": "key为发货模式。\nenum FulfillmentMode {\n    IN_STOCK_PRE_SALE     = 1,  // (新)现货+预售\n    FULL_PAYMENT_PRE_SALE = 2  // 全款预售\n    ALL=3 // [(新)现货+预售]+[全款预售]\n}",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 下游强依赖全部限流失败（sub_code: isp.traffic-limited:1001001）",
+      "action": "请稍等重试",
+      "sub_code": "isp.traffic-limited:1001001",
+      "sub_msg": "下游强依赖全部限流失败"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 下游强依赖全部超时失败（sub_code: isp.service-timeout-error:1001002）",
+      "action": "请稍等重试",
+      "sub_code": "isp.service-timeout-error:1001002",
+      "sub_msg": "下游强依赖全部超时失败"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数（sub_code: isv.missing-parameter:1001003）",
+      "action": "请检查参数",
+      "sub_code": "isv.missing-parameter:1001003",
+      "sub_msg": "缺少必选参数"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/promise/QueryBenefitTraction?app_key=your_appkey_here&method=promise.QueryBenefitTraction&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "merchant_ship_rate48h": "0.49",
+        "traction_info_by_fulfillment_mode_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 60000,
+      "msg": "触发限流，请稍后重试",
+      "sub_code": "isp.traffic-limited:1001001",
+      "sub_msg": "下游强依赖全部限流失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/8154",
+  "updatedAt": "2026-03-25",
+  "_file_stem": "product-promise-QueryBenefitTraction"
+}

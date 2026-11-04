@@ -1,0 +1,114 @@
+{
+  "id": "doudian.video.shopVideo.genUploadAuth",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.genUploadAuth",
+  "description": "获取SDK上传视频的授权",
+  "method": "GET",
+  "path": "/shopVideo/genUploadAuth",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "upload_scene",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "上传场景：1-短视频发稿",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "current_time",
+      "type": "string",
+      "description": "生成授权时间",
+      "example": "2024-12-11T16:15:34+08:00"
+    },
+    {
+      "name": "access_key_id",
+      "type": "string",
+      "description": "临时的accessKeyId",
+      "example": "YOUR_ACCESS_KEY_ID"
+    },
+    {
+      "name": "secret_access_key",
+      "type": "string",
+      "description": "临时的secretAccessKey",
+      "example": "YOUR_SECRET_KEY"
+    },
+    {
+      "name": "session_token",
+      "type": "string",
+      "description": "临时的会话token",
+      "example": "STS2eyJMVEFjY2Vzc0tleUlEIjoiQUtMVE9USTBOamd5TTJJeE5XTTROR0l3WTJGalpESmxaV1F6T0RrMU56SmhOVGMiLCJBY2Nlc3NLZXlJRCI6IkFLVFBPVFZtWkRObU1USTJOemMyTkRsaFpHRmxOekF6TW1WaFlqaGtNbVpsWkdJIiwiU2lnbmVkU2VjcmV0QWNjZXNzS2V5IjoiSXgwaS9INHVhL3cxL2lWb2dic1cwNDZKQTZJTURQQTl6UlpOTGhjR2RRUkF5Uy80MlF6UFR5UXlQZDlxc2FVT1dwM1ZzSCs4ZVMrMjhHTDk4d3VEUi9oSjRUaVcwZFYxSzFSaCtWY09LbVU9IiwiRXhwaXJlZFRpbWUiOjE3MzM5MDU1MzQsIlBvbGljeVN0cmluZyI6IntcIlN0YXRlbWVudFwiOlt7XCJFZmZlY3RcIjpcIkFsbG93XCIsXCJBY3Rpb25cIjpbXCJ2b2Q6QXBwbHlVcGxvYWRcIixcInZvZDpBcHBseVVwbG9hZElubmVyXCIsXCJ2b2Q6Q29tbWl0VXBsb2FkXCIsXCJ2b2Q6Q29tbWl0VXBsb2FkSW5uZXJcIixcInZvZDpHZXRVcGxvYWRDYW5kaWRhdGVzXCIsXCJJbWFnZVg6QXBwbHlJbWFnZVVwbG9hZFwiLFwiSW1hZ2VYOkNvbW1pdEltYWdlVXBsb2FkXCIsXCJJbWFnZVg6QXBwbHlVcGxvYWRJbWFnZUZpbGVcIixcIkltYWdlWDpDb21taXRVcGxvYWRJbWFnZUZpbGVcIl0sXCJSZXNvdXJjZVwiOltcIipcIl0sXCJDb25kaXRpb25cIjpcIntcXFwiUFNNXFxcIjpcXFwiY21wLmVjb20ub3Blbl9hYmlsaXR5XFxcIixcXFwiVXNlcklkXFxcIjpcXFwiNzQyNDQ1MjA3NTU0OTI5NjE2NlxcXCJ9XCJ9XX0iLCJTaWduYXR1cmUiOiJjYzc2MWJmNmQzNGY3MTM1OTU4OThmZjIwYTI4YmRlNWY5MGYxMzI0OGM1MDM2YjRlZDFhMTFlOWY5ZWQ4MTFkIn0="
+    },
+    {
+      "name": "space_name",
+      "type": "string",
+      "description": "空间名，上传时必须使用该空间，否则会上传失败",
+      "example": "ecom-shop-material"
+    },
+    {
+      "name": "expired_time",
+      "type": "string",
+      "description": "授权过期时间",
+      "example": "2024-12-11T16:25:34+08:00"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:605025001）",
+      "action": "根据提示文案修改参数",
+      "sub_code": "isv.parameter-invalid:605025001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 生成授权失败（sub_code: isp.service-error:605025002）",
+      "action": "正常情况不会出现，可尝试重试",
+      "sub_code": "isp.service-error:605025002",
+      "sub_msg": "生成授权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/genUploadAuth?app_key=your_appkey_here&method=shopVideo.genUploadAuth&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "access_key_id": "YOUR_ACCESS_KEY_ID",
+        "current_time": "2024-12-11T16:15:34+08:00",
+        "expired_time": "2024-12-11T16:25:34+08:00",
+        "secret_access_key": "YOUR_SECRET_KEY",
+        "session_token": "STS2eyJMVEFjY2Vzc0tleUlEIjoiQUtMVE9USTBOamd5TTJJeE5XTTROR0l3WTJGalpESmxaV1F6T0RrMU56SmhOVGMiLCJBY2Nlc3NLZXlJRCI6IkFLVFBPVFZtWkRObU1USTJOemMyTkRsaFpHRmxOekF6TW1WaFlqaGtNbVpsWkdJIiwiU2lnbmVkU2VjcmV0QWNjZXNzS2V5IjoiSXgwaS9INHVhL3cxL2lWb2dic1cwNDZKQTZJTURQQTl6UlpOTGhjR2RRUkF5Uy80MlF6UFR5UXlQZDlxc2FVT1dwM1ZzSCs4ZVMrMjhHTDk4d3VEUi9oSjRUaVcwZFYxSzFSaCtWY09LbVU9IiwiRXhwaXJlZFRpbWUiOjE3MzM5MDU1MzQsIlBvbGljeVN0cmluZyI6IntcIlN0YXRlbWVudFwiOlt7XCJFZmZlY3RcIjpcIkFsbG93XCIsXCJBY3Rpb25cIjpbXCJ2b2Q6QXBwbHlVcGxvYWRcIixcInZvZDpBcHBseVVwbG9hZElubmVyXCIsXCJ2b2Q6Q29tbWl0VXBsb2FkXCIsXCJ2b2Q6Q29tbWl0VXBsb2FkSW5uZXJcIixcInZvZDpHZXRVcGxvYWRDYW5kaWRhdGVzXCIsXCJJbWFnZVg6QXBwbHlJbWFnZVVwbG9hZFwiLFwiSW1hZ2VYOkNvbW1pdEltYWdlVXBsb2FkXCIsXCJJbWFnZVg6QXBwbHlVcGxvYWRJbWFnZUZpbGVcIixcIkltYWdlWDpDb21taXRVcGxvYWRJbWFnZUZpbGVcIl0sXCJSZXNvdXJjZVwiOltcIipcIl0sXCJDb25kaXRpb25cIjpcIntcXFwiUFNNXFxcIjpcXFwiY21wLmVjb20ub3Blbl9hYmlsaXR5XFxcIixcXFwiVXNlcklkXFxcIjpcXFwiNzQyNDQ1MjA3NTU0OTI5NjE2NlxcXCJ9XCJ9XX0iLCJTaWduYXR1cmUiOiJjYzc2MWJmNmQzNGY3MTM1OTU4OThmZjIwYTI4YmRlNWY5MGYxMzI0OGM1MDM2YjRlZDFhMTFlOWY5ZWQ4MTFkIn0=",
+        "space_name": "ecom-shop-material"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:605025001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7150",
+  "updatedAt": "2024-12-12",
+  "_file_stem": "video-shopVideo-genUploadAuth"
+}

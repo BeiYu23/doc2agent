@@ -1,0 +1,143 @@
+{
+  "id": "doudian.selection.supplyCenter.refund.operate",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.refund.operate",
+  "description": "退款驱动",
+  "method": "GET",
+  "path": "/supplyCenter/refund/operate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sku_refund_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "退款操作的子单号",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "reject_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "退款拒绝原因",
+      "example": "商品已经发货了",
+      "_depth": 1
+    },
+    {
+      "name": "close_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "关单原因",
+      "example": "支付取消",
+      "_depth": 1
+    },
+    {
+      "name": "pur_sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "精选货源子单号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "operation_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型0、发起售后 1、同意退款 2、同意退货 3、拒绝退款 4、售后成功 5、售后关闭",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "地址信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "xx省xx市xx街道xx小区",
+      "_depth": 2
+    },
+    {
+      "name": "user_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户名称",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号",
+      "example": "17012341234",
+      "_depth": 2
+    },
+    {
+      "name": "aftersale_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "售后类型，发起售后时，需传入 1、售后仅退款 2、售前仅退款 3、申请退货退款",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "pur_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "精选货源单号",
+      "example": "12345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.refund.operate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/4818",
+  "updatedAt": "2023-11-03",
+  "_file_stem": "selection-supplyCenter-refund-operate"
+}

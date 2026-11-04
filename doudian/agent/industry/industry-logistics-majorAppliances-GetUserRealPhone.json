@@ -1,0 +1,86 @@
+{
+  "id": "doudian.industry.logistics.majorAppliances.GetUserRealPhone",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "logistics.majorAppliances.GetUserRealPhone",
+  "description": "获取用户真实手机号",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pickup_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件单号",
+      "example": "LBFxxxxxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "user_phone",
+      "type": "string",
+      "description": "用户手机号",
+      "example": "18000000000"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单信息不存在（sub_code: isv.business-failed:12000）",
+      "action": "检查订单号",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "订单信息不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 调用次数达到上限（sub_code: isv.business-failed:17006）",
+      "action": "使用虚拟号联系用户",
+      "sub_code": "isv.business-failed:17006",
+      "sub_msg": "调用次数达到上限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 风控限制无法获取用户手机号（sub_code: isv.business-failed:17008）",
+      "action": "联系平台处理",
+      "sub_code": "isv.business-failed:17008",
+      "sub_msg": "风控限制无法获取用户手机号"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.majorAppliances.GetUserRealPhone&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "user_phone": "18000000000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "订单信息不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8277",
+  "updatedAt": "2026-05-12",
+  "_file_stem": "industry-logistics-majorAppliances-GetUserRealPhone"
+}

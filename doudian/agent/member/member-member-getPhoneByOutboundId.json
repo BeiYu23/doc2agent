@@ -1,0 +1,95 @@
+{
+  "id": "doudian.member.member.getPhoneByOutboundId",
+  "platform": "doudian",
+  "group": "member",
+  "name": "member.getPhoneByOutboundId",
+  "description": "根据外呼id获取手机号（火山专用）",
+  "method": "GET",
+  "path": "/member/getPhoneByOutboundId",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "outbound_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外呼id",
+      "example": "1705042185-vIHAKNwhR",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "火山账号id",
+      "example": "111111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "encrypt_phone",
+      "type": "string",
+      "description": "加密手机号",
+      "example": "972cc1908c1c2ae452d4ee256761acafe7e7bb1955d8e2887a5a8b"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "入参错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 火山账号与开发者账号不匹配（sub_code: isv.business-failed:628002004）",
+      "action": "火山账号与开发者账号不匹配",
+      "sub_code": "isv.business-failed:628002004",
+      "sub_msg": "火山账号与开发者账号不匹配"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 外呼id已过期（sub_code: isv.business-failed:628003201）",
+      "action": "外呼id已过期",
+      "sub_code": "isv.business-failed:628003201",
+      "sub_msg": "外呼id已过期"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/getPhoneByOutboundId?app_key=your_appkey_here&method=member.getPhoneByOutboundId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "encrypt_phone": "972cc1908c1c2ae452d4ee256761acafe7e7bb1955d8e2887a5a8b"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "入参错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6062",
+  "updatedAt": "2024-01-12",
+  "_file_stem": "member-member-getPhoneByOutboundId"
+}

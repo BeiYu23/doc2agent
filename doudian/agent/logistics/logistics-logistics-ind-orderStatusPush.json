@@ -1,0 +1,285 @@
+{
+  "id": "doudian.logistics.logistics.ind.orderStatusPush",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.ind.orderStatusPush",
+  "description": "订单状态回传",
+  "method": "GET",
+  "path": "/logistics/ind/orderStatusPush",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "承运商单据号",
+      "example": "xx123456",
+      "_depth": 0
+    },
+    {
+      "name": "transport_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音单据号",
+      "example": "DY123456",
+      "_depth": 0
+    },
+    {
+      "name": "order_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单状态(待接单＝1,配送员接单＝2,配送员到店＝3,配送员取货=4,配送员配送中=5,已取消＝6,订单逆向返回中=7, 订单逆向返回完成=8,骑手更换=9,订单妥投=10",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "exception_status",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "异常情况",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单拒收=1,配送异常=2",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配送异常feature：订单拒收=1,配送异常=2 配送异常feature： { 1001,商家出货慢, 1002,商家出错货, 1003,商家缺货, 2001,破损, 2002,丢失, 2003,骑手取错货, 2004,骑手无法送达 3001,小票码错误, 3002,商家地址错误, 3003,消费者地址错误, 3004, 订单重量偏差过大, 4001,消费者拒收, 4002,消费者电话未接通, 4003,消费者不在家, 4004,消费者线下联系修改地址, 5001,其他 }",
+      "example": "1001",
+      "_depth": 1
+    },
+    {
+      "name": "estimate_sign_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "计划应妥投时间，时间戳",
+      "example": "1663294915",
+      "_depth": 0
+    },
+    {
+      "name": "estimate_fetch_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "计划应取件时间",
+      "example": "1663294915",
+      "_depth": 0
+    },
+    {
+      "name": "rider",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "骑手信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "rider_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手id",
+      "example": "骑手id",
+      "_depth": 1
+    },
+    {
+      "name": "rider_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手name",
+      "example": "骑手name",
+      "_depth": 1
+    },
+    {
+      "name": "temperature",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手温度",
+      "example": "骑手温度",
+      "_depth": 1
+    },
+    {
+      "name": "vaccine",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手疫苗情况  0=未接种,1=一针,2=2针,3=3针",
+      "example": "骑手疫苗接种情况",
+      "_depth": 1
+    },
+    {
+      "name": "covid_report",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手健康码情况 0 - 绿码且24h内核酸 1 - 绿码且48h内核酸 2 - 绿码且48h外核酸 3 - 黄码 4 - 红码",
+      "example": "骑手健康码情况",
+      "_depth": 1
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "骑手联系方式",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电话",
+      "example": "电话",
+      "_depth": 2
+    },
+    {
+      "name": "tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号码",
+      "example": "18294311234",
+      "_depth": 2
+    },
+    {
+      "name": "location",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "骑手位置信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "经度",
+      "example": "111.23",
+      "_depth": 1
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "维度",
+      "example": "111.32",
+      "_depth": 1
+    },
+    {
+      "name": "standard",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "使用的地图",
+      "example": "GaoDe",
+      "_depth": 1
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "本次状态流更新时间",
+      "example": "1663294915",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_out_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "承运商单据号，电子面单号、用作打印面单使用",
+      "example": "承运商单据号，电子面单号、用作打印面单使用",
+      "_depth": 0
+    },
+    {
+      "name": "to_aoi_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接驳商圈名称，接驳模式下运力服务商返回的接驳商圈，需要在面单打印",
+      "example": "接驳商圈名称，接驳模式下运力服务商返回的接驳商圈，需要在面单打印",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "return_code",
+      "type": "string",
+      "description": "错误码，0表示成功",
+      "example": "0"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "错误消息，失败时填写",
+      "example": "数据插入失败"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/addresSwitchConfig?app_key=your_appkey_here&method=order.addresSwitchConfig&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "authorized_status": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2456",
+  "updatedAt": "2023-04-24",
+  "_file_stem": "logistics-logistics-ind-orderStatusPush"
+}

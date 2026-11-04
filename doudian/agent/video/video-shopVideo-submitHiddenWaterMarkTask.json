@@ -1,0 +1,109 @@
+{
+  "id": "doudian.video.shopVideo.submitHiddenWaterMarkTask",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.submitHiddenWaterMarkTask",
+  "description": "提交加暗水印任务",
+  "method": "GET",
+  "path": "/shopVideo/submitHiddenWaterMarkTask",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "mediaId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通过sdk上传后的获取到的mediaId，url和mediaId必须传一个",
+      "example": "v0d27cg10001csve2qfog65o283c1h0g",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频url，必须公网可访问，url和mediaId必须传一个，优先mediaId",
+      "example": "https://v3-cold.douyinvod.com/b6fb2946ffc92fb4e",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "description": "任务id",
+      "example": "7458213968494985526"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:605025001）",
+      "action": "根据异常描述调整参数",
+      "sub_code": "isv.parameter-invalid:605025001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / vod上传授权失败（sub_code: isv.business-failed:605025002）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:605025002",
+      "sub_msg": "vod上传授权失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 数据存储失败（sub_code: isp.service-error:605025004）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:605025004",
+      "sub_msg": "数据存储失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 视频url不合法（sub_code: isv.business-failed:605025007）",
+      "action": "检查视频url",
+      "sub_code": "isv.business-failed:605025007",
+      "sub_msg": "视频url不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 转码失败（sub_code: isv.business-failed:605025010）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:605025010",
+      "sub_msg": "转码失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/submitHiddenWaterMarkTask?app_key=your_appkey_here&method=shopVideo.submitHiddenWaterMarkTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "task_id": "7458213968494985526"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:605025001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7208",
+  "updatedAt": "2025-01-15",
+  "_file_stem": "video-shopVideo-submitHiddenWaterMarkTask"
+}

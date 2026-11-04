@@ -1,0 +1,79 @@
+{
+  "id": "doudian.product.brand.convert",
+  "platform": "doudian",
+  "group": "product",
+  "name": "brand.convert",
+  "description": "兼容老品牌id转为新品牌id",
+  "method": "GET",
+  "path": "/brand/convert",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "related_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "品牌关系id，即/shop/brandList返回的id",
+      "example": "12345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "brand_id",
+      "type": "number",
+      "description": "品牌id，对应商品发布接口standard_brand_id字段",
+      "example": "12345"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 品牌授权信息不存在（sub_code: isv.business-failed:2010004）",
+      "action": "品牌授权信息不存在，请检查",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "品牌授权信息不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询品牌授权信息失败（sub_code: isv.business-failed:2010001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "查询品牌授权信息失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/brand/convert?app_key=your_appkey_here&method=brand.convert&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "brand_id": "12345"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "品牌授权信息不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1500",
+  "updatedAt": "2021-11-26",
+  "_file_stem": "product-brand-convert"
+}

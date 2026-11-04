@@ -1,0 +1,133 @@
+{
+  "id": "doudian.supply-goods.supplyChain.inspection.OperateInspectionReports",
+  "platform": "doudian",
+  "group": "supply-goods",
+  "name": "supplyChain.inspection.OperateInspectionReports",
+  "description": "操作验机报告（绑定/解绑 SKU、上架/下架）",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销货品管理（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operate_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作类型\n1.绑定\n2.解绑\n3.上架\n4.下架\n5.更新备注信息",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "operation_target_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "待操作的报告列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_for_bind_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "绑定列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "product_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "分销品sku",
+      "example": "1111122",
+      "_depth": 2
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "分销品id",
+      "example": "1112221",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注信息",
+      "example": "备注信息",
+      "_depth": 1
+    },
+    {
+      "name": "inspection_report_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报告id",
+      "example": "11122111",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回值",
+      "example": ""
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "执行编码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "执行结果",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.inspection.OperateInspectionReports&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "inspection_report_operate_result_map": {}
+        },
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1523/8263",
+  "updatedAt": "2026-05-06",
+  "_file_stem": "supply-goods-supplyChain-inspection-OperateInspectionReports"
+}

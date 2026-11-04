@@ -1,0 +1,301 @@
+{
+  "id": "doudian.warehouse.yunc.syncInventorySnapshotV2",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.syncInventorySnapshotV2",
+  "description": "库存快照回传V2",
+  "method": "GET",
+  "path": "/yunc/syncInventorySnapshotV2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "idempotent_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(20):幂等键",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "total_lines",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):总行数",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "current_page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):当前页，一次性回传的话，传1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):当前页数量，一次性回传的话，值等于总行数",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "occur_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):发生时间，秒级时间戳；比如1.31凌晨2点回传前一天的快照，时间应该是1.30 23点59分59秒",
+      "example": "1660752000",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(16):仓code",
+      "example": "W0001",
+      "_depth": 0
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(16):仓code",
+      "example": "BD10000029",
+      "_depth": 0
+    },
+    {
+      "name": "api_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):接口请求时间，秒级时间戳",
+      "example": "1660752000",
+      "_depth": 0
+    },
+    {
+      "name": "details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(64):货品code",
+      "example": "AD1234",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(2):货品类型，默认1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(2):库存类型，1正品；2次品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(2):库存状态，1正常；2质检；3冻结",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "scm_inbound_order",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(20):scm入库单号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(20):供应商id",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):生产日期，秒级时间戳",
+      "example": "1660752000",
+      "_depth": 1
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):失效日期，秒级时间戳",
+      "example": "1660752000",
+      "_depth": 1
+    },
+    {
+      "name": "receipt_date",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "字段长度(10):接收时间，秒级时间戳",
+      "example": "1660752000",
+      "_depth": 1
+    },
+    {
+      "name": "batch_number",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(26):批次号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "opening_inventory",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(10):期初库存",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "ending_inventory",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(10):期末库存",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "occupied_inventory",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "占用库存数量",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "lot_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(128):批次ID 唯一标识一组批次属性 batch_number + product_date + expire_date + receipt_date + supplier_id + scm_inbound_order + batch_extend",
+      "example": "1831341",
+      "_depth": 1
+    },
+    {
+      "name": "batch_extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批属性扩展字段，json形式(仅接收规定key)",
+      "example": "{\"batch_no\": \"123\"}",
+      "_depth": 1
+    },
+    {
+      "name": "vendor_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "NBFL",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id_out",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺ID",
+      "example": "13614013",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1001）",
+      "action": "根据提示处理",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 鉴权失败（sub_code: isv.business-failed:1003）",
+      "action": "根据提示处理",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "鉴权失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1004）",
+      "action": "根据提示处理",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/syncInventorySnapshotV2?app_key=your_appkey_here&method=yunc.syncInventorySnapshotV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2399",
+  "updatedAt": "2025-12-09",
+  "_file_stem": "warehouse-yunc-syncInventorySnapshotV2"
+}

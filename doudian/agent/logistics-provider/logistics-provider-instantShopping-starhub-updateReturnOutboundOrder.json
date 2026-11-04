@@ -1,0 +1,197 @@
+{
+  "id": "doudian.logistics-provider.instantShopping.starhub.updateReturnOutboundOrder",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "instantShopping.starhub.updateReturnOutboundOrder",
+  "description": "退供出库场景，服务商通知抖音退仓出库单状态",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "return_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "退仓出库主单ID",
+      "example": "12414124124",
+      "_depth": 0
+    },
+    {
+      "name": "return_order_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单据类型\n- 1：退仓出库",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sub_orders",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "出库子单(明细)，当200状态下必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "return_sub_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "退仓出库子单ID(行号)",
+      "example": "123123123",
+      "_depth": 1
+    },
+    {
+      "name": "production_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期，秒级时间戳(当200情况下必填)",
+      "example": "1724817747",
+      "_depth": 1
+    },
+    {
+      "name": "expire_day",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保质期（天）(当200情况下必填)",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "receive_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "入库时间，秒级时间戳(当200情况下必填)",
+      "example": "1724817747",
+      "_depth": 1
+    },
+    {
+      "name": "outbound_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实际出库数量(当200情况下必填，不允许超发，允许少发可以为0)",
+      "example": "20",
+      "_depth": 1
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人姓名",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单据状态，参考状态机",
+      "example": "200",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "业务时间，秒级时间戳",
+      "example": "1724817747",
+      "_depth": 0
+    },
+    {
+      "name": "attachments",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "附件信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "attachment_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "附件名",
+      "example": "xxx退仓出库说明",
+      "_depth": 1
+    },
+    {
+      "name": "attachment_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "附件资源下载URL",
+      "example": "https://xxx.docx",
+      "_depth": 1
+    },
+    {
+      "name": "attachment_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "附件类型 1:文件 2:图片 3:视频",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "operator_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "能定位到服务商操作人的唯一键",
+      "example": "1232131",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40001）",
+      "action": "传入合法入参",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.starhub.updateReturnOutboundOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7023",
+  "updatedAt": "2024-10-23",
+  "_file_stem": "logistics-provider-instantShopping-starhub-updateReturnOutboundOrder"
+}

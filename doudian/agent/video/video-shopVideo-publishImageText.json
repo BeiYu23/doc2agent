@@ -1,0 +1,321 @@
+{
+  "id": "doudian.video.shopVideo.publishImageText",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.publishImageText",
+  "description": "发布图文接口，支持渠道号",
+  "method": "GET",
+  "path": "/shopVideo/publishImageText",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "anchor_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "锚点信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "anchors",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "锚点列表，当前多锚点传递仅支持【挂车+看后搜】",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "电商锚点商品id",
+      "example": "11111",
+      "_depth": 2
+    },
+    {
+      "name": "after_search_words",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "看后搜小蓝词，必须传3个词，提报词之间用英文逗号分割，每个词最长14字符",
+      "example": "针织衫怎么穿",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预留字段：锚点文案",
+      "example": "爆款针织衫",
+      "_depth": 2
+    },
+    {
+      "name": "keyword",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "锚点标题，例如小黄车的标题",
+      "example": "测试标题",
+      "_depth": 2
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "锚点类型，小黄车-3，看后搜-90",
+      "example": "3",
+      "_depth": 2
+    },
+    {
+      "name": "products",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "看后搜承接商品需要设置商品ID+商品名称",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称",
+      "example": "测试商品名称",
+      "_depth": 3
+    },
+    {
+      "name": "is_main_recommend",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否主推品，看后搜必须设置一个主推品",
+      "example": "true",
+      "_depth": 3
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id",
+      "example": "1111111",
+      "_depth": 3
+    },
+    {
+      "name": "related_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "关联话题信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "topics",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "话题信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "topic_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "话题id",
+      "example": "1111",
+      "_depth": 2
+    },
+    {
+      "name": "topic_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动名称",
+      "example": "测试活动111",
+      "_depth": 2
+    },
+    {
+      "name": "hot_sentence",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "热点词",
+      "example": "热点词111",
+      "_depth": 1
+    },
+    {
+      "name": "publish_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "发布信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "schedule_publish_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "定时发布时间",
+      "example": "1772701966",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户id，不传则为人店一体账号",
+      "example": "12121212",
+      "_depth": 1
+    },
+    {
+      "name": "image_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "图文信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "audio_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "音乐信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "segment_end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "结束时间，毫秒",
+      "example": "120000",
+      "_depth": 2
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "音量",
+      "example": "12",
+      "_depth": 2
+    },
+    {
+      "name": "segment_start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "开始时间，毫秒",
+      "example": "10000",
+      "_depth": 2
+    },
+    {
+      "name": "clip_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "音乐id",
+      "example": "1212121212",
+      "_depth": 2
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "图文正文文案",
+      "example": "正文文案",
+      "_depth": 1
+    },
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "标题",
+      "example": "标题",
+      "_depth": 1
+    },
+    {
+      "name": "image_url_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "图片url列表，需先上传到素材中心https://op.jinritemai.com/docs/guide-docs/171/1719",
+      "example": "https://xxx",
+      "_depth": 1
+    },
+    {
+      "name": "cover_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "封面图",
+      "example": "https://xxx",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "发布结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图文发布失败（sub_code: isv.business-failed:60488027）",
+      "action": "图文发布失败",
+      "sub_code": "isv.business-failed:60488027",
+      "sub_msg": "图文发布失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:60488027",
+      "sub_msg": "图文发布失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8139",
+  "updatedAt": "2026-03-11",
+  "_file_stem": "video-shopVideo-publishImageText"
+}

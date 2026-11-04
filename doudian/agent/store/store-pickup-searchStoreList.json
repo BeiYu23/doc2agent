@@ -1,0 +1,261 @@
+{
+  "id": "doudian.store.pickup.searchStoreList",
+  "platform": "doudian",
+  "group": "store",
+  "name": "pickup.searchStoreList",
+  "description": "门店列表搜索",
+  "method": "GET",
+  "path": "/pickup/searchStoreList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 自提门店API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区编码，如 110108、440106",
+      "example": "110108",
+      "_depth": 0
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店类型 2:到店自提",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码 如 11、44",
+      "example": "11",
+      "_depth": 0
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码，如 110108011、440106010",
+      "example": "110108011",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "单页大小，限制1000以内",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "store_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店编码",
+      "example": "1138991967",
+      "_depth": 0
+    },
+    {
+      "name": "poi_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店poi列表",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市编码，如 110000、440100",
+      "example": "110000",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码, 从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "store_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店id",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店名称",
+      "example": "测试门店1",
+      "_depth": 0
+    },
+    {
+      "name": "search_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店信息查询类型 Effective=0生效门店,Script=1审批中门店",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "state_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店主状态 门店主状态，init=0初始化，poi_auditing=1poi审核中，poi_audit_success=2poi审核成功，qual_auditing=3资质审核中，qual_audit_success=4资质审核成功，open=5正常营业，suspend=6暂停营业",
+      "example": "[1]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "门店信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pickup/searchStoreList?app_key=your_appkey_here&method=pickup.searchStoreList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "store_detail_list": [
+            {
+              "store_script_search_info": {
+                "address": "江湾城路96号",
+                "announcement": "正常营业",
+                "biz_type": "2",
+                "bound_time": "1.73753701e+09",
+                "city": "上海市",
+                "city_code": "310000",
+                "contact": "19812122322",
+                "create_time": "1.737531505e+09",
+                "district": "杨浦区",
+                "district_code": "310110",
+                "ext": {
+                  "audit_reject_reason": "-"
+                },
+                "latitude": "31.270755",
+                "library_id_list": "-",
+                "longitude": "121.522797",
+                "name": "测试门店3",
+                "open_account_state": "0",
+                "open_account_time": "0",
+                "open_time": {
+                  "custom": "-",
+                  "day_map": {}
+                },
+                "poi_audit_state": "0",
+                "poi_id": "7462662814935566380",
+                "province": "上海市",
+                "province_code": "31",
+                "qual_pass_time": "0",
+                "qual_state": "0",
+                "rel_shop_id": "1111241785",
+                "remit_pass_time": "0",
+                "remit_state": "0",
+                "state": "5",
+                "store_code": "A013",
+                "store_id": "1138991967",
+                "street": "江浦路街道",
+                "street_code": "310110008",
+                "suspend_type": "0",
+                "threshold": "100",
+                "update_time": "1.737537016e+09"
+              },
+              "store_search_info": {
+                "address": "江湾城路96号",
+                "announcement": "正常营业",
+                "biz_type": "2",
+                "bound_time": "1737537010",
+                "city": "上海市",
+                "city_code": "310000",
+                "contact": "19812122322",
+                "create_time": "1737537010",
+                "district": "杨浦区",
+                "district_code": "310110",
+                "ext": {
+                  "audit_reject_reason": "-"
+                },
+                "latitude": "31.270755",
+                "library_id_list": "-",
+                "longitude": "121.522797",
+                "name": "测试门店3",
+                "open_account_state": "0",
+                "open_account_time": "0",
+                "open_time": {
+                  "custom": "-",
+                  "day_map": {}
+                },
+                "poi_audit_state": "0",
+                "poi_id": "7462662814935566380",
+                "province": "上海市",
+                "province_code": "31",
+                "qual_pass_time": "0",
+                "qual_state": "0",
+                "rel_shop_id": "1111241785",
+                "remit_pass_time": "0",
+                "remit_state": "0",
+                "state": "5",
+                "store_code": "A013",
+                "store_id": "1138991967",
+                "street": "江浦路街道",
+                "street_code": "310110008",
+                "suspend_type": "0",
+                "threshold": "100",
+                "update_time": "1.737537016e+09"
+              }
+            }
+          ],
+          "total": "3"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1559/7232",
+  "updatedAt": "2026-06-23",
+  "_file_stem": "store-pickup-searchStoreList"
+}

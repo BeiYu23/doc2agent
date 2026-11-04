@@ -1,0 +1,98 @@
+{
+  "id": "doudian.refund.afterSale.OpenAfterSaleChannel",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.OpenAfterSaleChannel",
+  "description": "商家打开售后通道",
+  "method": "GET",
+  "path": "/afterSale/OpenAfterSaleChannel",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V2.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "订单ID",
+      "example": "4810811637262779447",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "conclusion",
+      "type": "object",
+      "description": "打开售后通道结论",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无权操作此订单（sub_code: isv.business-failed:11001）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:11001",
+      "sub_msg": "无权操作此订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误，请重试（sub_code: isv.business-failed:10000）",
+      "action": "系统错误，请重试",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "系统错误，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 售后入口已经打开，请联系买家在用户端申请售后（sub_code: isv.business-failed:12000）",
+      "action": "售后入口已经打开，请联系买家在用户端申请售后",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "售后入口已经打开，请联系买家在用户端申请售后"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 12001:售后入口已经打开，请联系买家在用户端申请售后（sub_code: isv.business-failed:12001）",
+      "action": "12001:售后入口已经打开，请联系买家在用户端申请售后",
+      "sub_code": "isv.business-failed:12001",
+      "sub_msg": "12001:售后入口已经打开，请联系买家在用户端申请售后"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/OpenAfterSaleChannel?app_key=your_appkey_here&method=afterSale.OpenAfterSaleChannel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "conclusion": {
+          "can_apply_type_list": "[1,2]",
+          "match_conclusion": "1",
+          "match_message": "\"\"",
+          "match_success": "true"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:11001",
+      "sub_msg": "无权操作此订单"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/764",
+  "updatedAt": "2021-08-13",
+  "_file_stem": "refund-afterSale-OpenAfterSaleChannel"
+}

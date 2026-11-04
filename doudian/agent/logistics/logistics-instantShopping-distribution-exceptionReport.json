@@ -1,0 +1,212 @@
+{
+  "id": "doudian.logistics.instantShopping.distribution.exceptionReport",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "instantShopping.distribution.exceptionReport",
+  "description": "骑手上报异常",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音运单id(以此id为主)",
+      "example": "\"a_7372453214286987305\"",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配送商运单id",
+      "example": "\"DH2024052459066015\"",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音为每个配送商分配的标识信息",
+      "example": "\"MOCK_DELIVERY\"",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "运单状态，见附录F02",
+      "example": "102",
+      "_depth": 0
+    },
+    {
+      "name": "rider_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手姓名",
+      "example": "\"朱涛\"",
+      "_depth": 0
+    },
+    {
+      "name": "rider_phone",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手电话",
+      "example": "\"13168887777\"",
+      "_depth": 0
+    },
+    {
+      "name": "rider_lat",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手位置纬度 （火星坐标系GCJ02）",
+      "example": "39.980042",
+      "_depth": 0
+    },
+    {
+      "name": "rider_lng",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手位置经度 （火星坐标系GCJ02）",
+      "example": "116.374061",
+      "_depth": 0
+    },
+    {
+      "name": "exception_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "骑手上报运单异常的时间，时间戳(秒)",
+      "example": "1716538402",
+      "_depth": 0
+    },
+    {
+      "name": "audit_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "异常上报审核通过时间，时间戳(秒)",
+      "example": "1716538420",
+      "_depth": 0
+    },
+    {
+      "name": "exception_code",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "骑手选择的异常场景code，详见：F07:  配送商异常CODE",
+      "example": "30000",
+      "_depth": 0
+    },
+    {
+      "name": "exception_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手选择的异常场景",
+      "example": "\"车辆故障/没电/事故\"",
+      "_depth": 0
+    },
+    {
+      "name": "exception_descr",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手填写的异常描述",
+      "example": "\"电瓶车故障\"",
+      "_depth": 0
+    },
+    {
+      "name": "exception_images",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手上传的图片url-list，特定异常场景下，必传(逗号分割的字符串，list先传进来时骑手第一张发布的图片)",
+      "example": "\"https://loc-1258916733.cos.ap-shanghai.myqcloud.com/orderpic/6bc5fb1d13f43c565245a2c3d7e87882.jpeg?sign=q-sign-algorithm%3Dsha1%26q-ak%3DYOUR_ACCESS_KEY_ID%26q-sign-time%3D1717376767%3B1719968827%26q-key-time%3D1717376767%3B1719968827%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D4eb4639571763578fb52aacc118099d515b3cf77\"",
+      "_depth": 0
+    },
+    {
+      "name": "expect_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "新的预计送达时间，时间戳(秒)",
+      "example": "1716539958",
+      "_depth": 0
+    },
+    {
+      "name": "notify_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "系统通知时间，时间戳(秒)",
+      "example": "1716538423",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "delivery_id",
+      "type": "string",
+      "description": "抖音运单id",
+      "example": "\"a_7372453214286987305\""
+    },
+    {
+      "name": "distributor_delivery_id",
+      "type": "string",
+      "description": "配送商运单id",
+      "example": "\"DH2024052459066015\""
+    },
+    {
+      "name": "notify_time",
+      "type": "mixed",
+      "description": "通知时间",
+      "example": "1716538423"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.distribution.exceptionReport&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "delivery_id": "\"a_7372453214286987305\"",
+        "distributor_delivery_id": "\"DH2024052459066015\"",
+        "notify_time": "1716538423"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/6584",
+  "updatedAt": "2024-06-14",
+  "_file_stem": "logistics-instantShopping-distribution-exceptionReport"
+}

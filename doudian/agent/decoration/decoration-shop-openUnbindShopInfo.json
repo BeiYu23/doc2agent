@@ -1,0 +1,141 @@
+{
+  "id": "doudian.decoration.shop.openUnbindShopInfo",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.openUnbindShopInfo",
+  "description": "店铺装修-解绑门店-门店信息",
+  "method": "GET",
+  "path": "/shop/openUnbindShopInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "tmp_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "页面id",
+      "example": "7332399246898888986",
+      "_depth": 0
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "时间排序方式\n0：不排序\n1：绑定时间从新到老\n2：绑定时间从老到新",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "一页个数",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "shop_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模糊查询名称",
+      "example": "店铺",
+      "_depth": 0
+    },
+    {
+      "name": "page_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店状态（搜索用，仅有   PENDING = 1 //未生效， USING = 2 // 生效）",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data_result",
+      "type": "array",
+      "description": "返回值",
+      "example": ""
+    },
+    {
+      "name": "page_result",
+      "type": "object",
+      "description": "页面参数",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / RPC调用失败（sub_code: isp.service-error:10004）",
+      "action": "根据报错内容排查",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/openUnbindShopInfo?app_key=your_appkey_here&method=shop.openUnbindShopInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data_result": [
+          {
+            "bind_time": "1708423512",
+            "describe": "1111",
+            "operator": {
+              "operator_id": "155749636",
+              "operator_name": "系统",
+              "shop_id": "155753860"
+            },
+            "shop_id": "155753860",
+            "shop_name": "开放平台入驻资质免审测试01",
+            "status": "1"
+          }
+        ],
+        "page_result": {
+          "page_no": "1",
+          "page_size": "10",
+          "total": "4"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6300",
+  "updatedAt": "2026-04-02",
+  "_file_stem": "decoration-shop-openUnbindShopInfo"
+}

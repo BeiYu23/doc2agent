@@ -1,0 +1,94 @@
+{
+  "id": "doudian.alliance.alliance.materialsProductCategory",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.materialsProductCategory",
+  "description": "类目查询",
+  "method": "GET",
+  "path": "/alliance/materialsProductCategory",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "parent_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "父类目 （0表示查询一级类目列表）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目 0:default 门捷列夫 1:std 标准类目树",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "类目总数",
+      "example": "123"
+    },
+    {
+      "name": "category_list",
+      "type": "array",
+      "description": "类目列表（包含查询的父类目和下一级子类目）",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/materialsProductCategory?app_key=your_appkey_here&method=alliance.materialsProductCategory&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "category_list": [
+          {
+            "id": "2",
+            "level": "1",
+            "name": "家电"
+          }
+        ],
+        "total": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/637",
+  "updatedAt": "2026-02-27",
+  "_file_stem": "alliance-alliance-materialsProductCategory"
+}

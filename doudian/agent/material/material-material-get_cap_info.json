@@ -1,0 +1,128 @@
+{
+  "id": "doudian.material.material.get_cap_info",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.get_cap_info",
+  "description": "获取商家容量详情",
+  "method": "GET",
+  "path": "/material/get_cap_info",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "total_capacity",
+      "type": "number",
+      "description": "总容量，单位KB",
+      "example": "188743680"
+    },
+    {
+      "name": "total_capacity_used",
+      "type": "number",
+      "description": "已使用容量，单位KB",
+      "example": "681717"
+    },
+    {
+      "name": "photo_capacity",
+      "type": "number",
+      "description": "图片总容量，单位KB",
+      "example": "83886080"
+    },
+    {
+      "name": "photo_capacity_used",
+      "type": "number",
+      "description": "图片已使用容量，单位KB",
+      "example": "74280"
+    },
+    {
+      "name": "video_capacity",
+      "type": "number",
+      "description": "视频总容量，单位KB",
+      "example": "104857600"
+    },
+    {
+      "name": "video_capacity_used",
+      "type": "number",
+      "description": "视频已使用容量，单位KB",
+      "example": "607437"
+    },
+    {
+      "name": "equity_info",
+      "type": "array",
+      "description": "当前生效的权益列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 店铺ID错误，请输入正确的店铺ID（sub_code: isv.missing-parameter:20001）",
+      "action": "补充ShopId",
+      "sub_code": "isv.missing-parameter:20001",
+      "sub_msg": "店铺ID错误，请输入正确的店铺ID"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10004）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材中心已失效，请联系客服处理（sub_code: isv.parameter-invalid:30004）",
+      "action": "联系客服",
+      "sub_code": "isv.parameter-invalid:30004",
+      "sub_msg": "素材中心已失效，请联系客服处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/get_cap_info?app_key=your_appkey_here&method=material.get_cap_info&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "equity_info": [
+          {
+            "begin_time": "1641034518",
+            "end_time": "1672570518",
+            "equity_type": "B",
+            "equity_type_desc": "B类商家权益",
+            "photo_capacity": "20971520",
+            "total_capacity": "41943040",
+            "video_capacity": "20971520"
+          }
+        ],
+        "photo_capacity": "83886080",
+        "photo_capacity_used": "74280",
+        "total_capacity": "188743680",
+        "total_capacity_used": "681717",
+        "video_capacity": "104857600",
+        "video_capacity_used": "607437"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:20001",
+      "sub_msg": "店铺ID错误，请输入正确的店铺ID"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1694",
+  "updatedAt": "2022-11-17",
+  "_file_stem": "material-material-get_cap_info"
+}

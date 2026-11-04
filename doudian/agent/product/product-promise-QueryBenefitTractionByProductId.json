@@ -1,0 +1,95 @@
+{
+  "id": "doudian.product.promise.QueryBenefitTractionByProductId",
+  "platform": "doudian",
+  "group": "product",
+  "name": "promise.QueryBenefitTractionByProductId",
+  "description": "商品维度查询利益点和库存建议",
+  "method": "GET",
+  "path": "/promise/QueryBenefitTractionByProductId",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品 ID",
+      "example": "10021410013",
+      "_depth": 0
+    },
+    {
+      "name": "need_stock_increment_suggestion",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "true=返回商品和 SKU 维度库存建议增量",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "traction_info_by_fulfillment_mode_map",
+      "type": "string",
+      "description": "商品维度利益点",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 流程强依赖下游全部超时（sub_code: isp.service-timeout-error:1001001）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-timeout-error:1001001",
+      "sub_msg": "流程强依赖下游全部超时"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 流程强依赖下游全部限流（sub_code: isp.traffic-limited:1001002）",
+      "action": "请稍后重试",
+      "sub_code": "isp.traffic-limited:1001002",
+      "sub_msg": "流程强依赖下游全部限流"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:1001003）",
+      "action": "请稍后重试",
+      "sub_code": "isv.missing-parameter:1001003",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/promise/QueryBenefitTractionByProductId?app_key=your_appkey_here&method=promise.QueryBenefitTractionByProductId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "traction_info_by_fulfillment_mode_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20001,
+      "msg": "内部服务超时",
+      "sub_code": "isp.service-timeout-error:1001001",
+      "sub_msg": "流程强依赖下游全部超时"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/8153",
+  "updatedAt": "2026-03-23",
+  "_file_stem": "product-promise-QueryBenefitTractionByProductId"
+}

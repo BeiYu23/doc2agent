@@ -1,0 +1,70 @@
+{
+  "id": "doudian.industry.logistics.majorAppliances.ReGenerateVirtualPhone",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "logistics.majorAppliances.ReGenerateVirtualPhone",
+  "description": "重新生成虚拟号",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pickup_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件单号",
+      "example": "LBFxxxxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result_type",
+      "type": "mixed",
+      "description": "获取结果类型：1-原虚拟号(未过期情况);2-新虚拟号(过期情况)；3-生成虚拟号失败(过期情况)",
+      "example": "2"
+    },
+    {
+      "name": "virtual_phone",
+      "type": "string",
+      "description": "用户手机虚拟号",
+      "example": "700xxxxxxx"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.majorAppliances.ReGenerateVirtualPhone&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result_type": "2",
+        "virtual_phone": "700xxxxxxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8309",
+  "updatedAt": "2026-05-18",
+  "_file_stem": "industry-logistics-majorAppliances-ReGenerateVirtualPhone"
+}

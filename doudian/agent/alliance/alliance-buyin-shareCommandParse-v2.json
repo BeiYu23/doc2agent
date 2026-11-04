@@ -1,0 +1,114 @@
+{
+  "id": "doudian.alliance.buyin.shareCommandParse.v2",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.shareCommandParse.v2",
+  "description": "商品口令转商品解析",
+  "method": "GET",
+  "path": "/buyin/shareCommandParse/v2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 抖客, 团长, MCN机构"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "command",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音口令（仅商品口令）",
+      "example": "0:/ 长按鍑[旺柴]➕ 此条消息，咑[偷笑]剀ɒ[加油]，查看商品详情ÊÊqmg6uF7qnZFq8▽▽\\t##qmguF79nZFq8##",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_info",
+      "type": "object",
+      "description": "商品信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:256）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:256",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:255）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:255",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非联盟商品（sub_code: isv.business-failed:4172）",
+      "action": "非联盟商品",
+      "sub_code": "isv.business-failed:4172",
+      "sub_msg": "非联盟商品"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效商品口令（sub_code: isv.business-failed:4171）",
+      "action": "无效商品口令",
+      "sub_code": "isv.business-failed:4171",
+      "sub_msg": "无效商品口令"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 亲爱的用户，因服务器升级，商品展示可能异常，带来不便，敬请见谅。（sub_code: isv.business-failed:8193）",
+      "action": "亲爱的用户，因服务器升级，商品展示可能异常，带来不便，敬请见谅。",
+      "sub_code": "isv.business-failed:8193",
+      "sub_msg": "亲爱的用户，因服务器升级，商品展示可能异常，带来不便，敬请见谅。"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/shareCommandParse/v2?app_key=your_appkey_here&method=buyin.shareCommandParse.v2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_info": {
+          "cos_fee": "1",
+          "cos_ratio": "10",
+          "detail_url": "https://haohuo.jinritemai.com/views/product/item2?id=3400312511185213726",
+          "product_id": "1234567",
+          "promotable": "true",
+          "title": "测试商品"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:256",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/6469",
+  "updatedAt": "2026-09-29",
+  "_file_stem": "alliance-buyin-shareCommandParse-v2"
+}

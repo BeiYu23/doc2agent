@@ -1,0 +1,133 @@
+{
+  "id": "doudian.shop.supplyChain.CouponZoneFeeds",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "supplyChain.CouponZoneFeeds",
+  "description": "二级承接页初始化",
+  "method": "GET",
+  "path": "/supplyChain/CouponZoneFeeds",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "coupon_meta_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "优惠券id",
+      "example": "7173718548748321035",
+      "_depth": 0
+    },
+    {
+      "name": "scene",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "场景，根据时新客还是老客，调用不同的Feed策略。1-新客 2-老客",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "enter_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "进入页面的时间，单位：秒",
+      "example": "16721287591",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tab_list",
+      "type": "array",
+      "description": "tab列表",
+      "example": ""
+    },
+    {
+      "name": "coupon_info",
+      "type": "object",
+      "description": "优惠券信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 网络错误，请稍后重试（sub_code: isp.service-error:300）",
+      "action": "网络错误，请稍后重试",
+      "sub_code": "isp.service-error:300",
+      "sub_msg": "网络错误，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/CouponZoneFeeds?app_key=your_appkey_here&method=supplyChain.CouponZoneFeeds&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "coupon_info": {
+          "apply_token": "164b615fef5d56f453e7b80c32e23990e02d003dd65d9e30db7d4541d95baec5",
+          "coupon_apply_status": "1",
+          "coupon_meta_id": "7173718548748321036",
+          "credit": "400",
+          "expire_time": "1675180799",
+          "start_time": "1675094400",
+          "status": "2",
+          "threshold": "4000"
+        },
+        "tab_list": [
+          {
+            "goods_feed": {
+              "cursor": "1",
+              "feed_end": "false",
+              "goods_cards": [
+                {
+                  "detail_url": "略",
+                  "img_url": "略",
+                  "is_activity_price": "false",
+                  "is_live_product": "true",
+                  "product_id": "略",
+                  "promotion_id": "略",
+                  "promotion_source": "1",
+                  "sell_num": "123",
+                  "show_hot_sell_tag": "true",
+                  "show_new_user_tag": "true",
+                  "show_price": "123",
+                  "tags": "略",
+                  "title": "略"
+                }
+              ]
+            },
+            "is_tab_name_show": "true",
+            "tab_code": "1",
+            "tab_name": "100元好物"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300",
+      "sub_msg": "网络错误，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2854",
+  "updatedAt": "2023-03-09",
+  "_file_stem": "shop-supplyChain-CouponZoneFeeds"
+}

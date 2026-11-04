@@ -1,0 +1,237 @@
+{
+  "id": "doudian.order.coupons.SendCodeByPlatform",
+  "platform": "doudian",
+  "group": "order",
+  "name": "coupons.SendCodeByPlatform",
+  "description": "商家接单（触发平台发码）",
+  "method": "GET",
+  "path": "/coupons/SendCodeByPlatform",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺单号",
+      "example": "693434343434343421",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:000002）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:000002",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常,请稍后重试（sub_code: isp.service-error:030001）",
+      "action": "数据库访问异常",
+      "sub_code": "isp.service-error:030001",
+      "sub_msg": "系统异常,请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部异常,请求失败,等待人工处理（sub_code: isp.service-error:010003）",
+      "action": "订单为空,但是券码不为空",
+      "sub_code": "isp.service-error:010003",
+      "sub_msg": "系统内部异常,请求失败,等待人工处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求参数和之前的参数不一致（sub_code: isv.parameter-invalid:010004）",
+      "action": "幂等性校验失败,请求参数和库中已经存在的参数不一致",
+      "sub_code": "isv.parameter-invalid:010004",
+      "sub_msg": "请求参数和之前的参数不一致"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单包含的卡券没有完全发放完成,不允许不允许同步订单（sub_code: isv.business-failed:010005）",
+      "action": "订单包含的卡券没有完全发放完成,不允许不允许同步订单",
+      "sub_code": "isv.business-failed:010005",
+      "sub_msg": "订单包含的卡券没有完全发放完成,不允许不允许同步订单"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 卡券为空（sub_code: isv.parameter-invalid:010006）",
+      "action": "卡券为空",
+      "sub_code": "isv.parameter-invalid:010006",
+      "sub_msg": "卡券为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 履约单为空（sub_code: isv.parameter-invalid:020010）",
+      "action": "履约单为空",
+      "sub_code": "isv.parameter-invalid:020010",
+      "sub_msg": "履约单为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010013:并发请求,请稍后重试（sub_code: isv.business-failed:010013）",
+      "action": "010013:并发请求,请稍后重试",
+      "sub_code": "isv.business-failed:010013",
+      "sub_msg": "010013:并发请求,请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010023:校验发放卡券数量错误（sub_code: isv.business-failed:010023）",
+      "action": "010023:校验发放卡券数量错误",
+      "sub_code": "isv.business-failed:010023",
+      "sub_msg": "010023:校验发放卡券数量错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010020:卡券映射信息重入错误（sub_code: isv.business-failed:010020）",
+      "action": "010020:卡券映射信息重入错误",
+      "sub_code": "isv.business-failed:010020",
+      "sub_msg": "010020:卡券映射信息重入错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010012:卡券同步超出24小时（sub_code: isv.business-failed:010012）",
+      "action": "010012:卡券同步超出24小时",
+      "sub_code": "isv.business-failed:010012",
+      "sub_msg": "010012:卡券同步超出24小时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 000006:类型转换错误（sub_code: isv.business-failed:000006）",
+      "action": "000006:类型转换错误",
+      "sub_code": "isv.business-failed:000006",
+      "sub_msg": "000006:类型转换错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020007:履约单查询异常（sub_code: isv.business-failed:020007）",
+      "action": "020007:履约单查询异常",
+      "sub_code": "isv.business-failed:020007",
+      "sub_msg": "020007:履约单查询异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 030004:系统繁忙,请稍后重试（sub_code: isv.business-failed:030004）",
+      "action": "030004:系统繁忙,请稍后重试",
+      "sub_code": "isv.business-failed:030004",
+      "sub_msg": "030004:系统繁忙,请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010008:非卡券中心业务（sub_code: isv.business-failed:10008）",
+      "action": "010008:非卡券中心业务",
+      "sub_code": "isv.business-failed:10008",
+      "sub_msg": "010008:非卡券中心业务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 000008:请求已处理（sub_code: isv.business-failed:000008）",
+      "action": "000008:请求已处理",
+      "sub_code": "isv.business-failed:000008",
+      "sub_msg": "000008:请求已处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 000008:请求已处理（sub_code: isv.business-failed:8）",
+      "action": "000008:请求已处理",
+      "sub_code": "isv.business-failed:8",
+      "sub_msg": "000008:请求已处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 009999:系统繁忙,请稍后重试（sub_code: isv.business-failed:9999）",
+      "action": "009999:系统繁忙,请稍后重试",
+      "sub_code": "isv.business-failed:9999",
+      "sub_msg": "009999:系统繁忙,请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020008:券码重复（sub_code: isv.business-failed:20008）",
+      "action": "020008:券码重复",
+      "sub_code": "isv.business-failed:20008",
+      "sub_msg": "020008:券码重复"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020011:ByteScheduler处理失败（sub_code: isv.business-failed:20011）",
+      "action": "020011:ByteScheduler处理失败",
+      "sub_code": "isv.business-failed:20011",
+      "sub_msg": "020011:ByteScheduler处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010081:订单在退款流程中，不允许发码（sub_code: isv.business-failed:10081）",
+      "action": "010081:订单在退款流程中，不允许发码",
+      "sub_code": "isv.business-failed:10081",
+      "sub_msg": "010081:订单在退款流程中，不允许发码"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020005:查询订单失败（sub_code: isv.business-failed:20005）",
+      "action": "020005:查询订单失败",
+      "sub_code": "isv.business-failed:20005",
+      "sub_msg": "020005:查询订单失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010024:该订单状态下无法同步卡券（sub_code: isv.business-failed:10024）",
+      "action": "010024:该订单状态下无法同步卡券",
+      "sub_code": "isv.business-failed:10024",
+      "sub_msg": "010024:该订单状态下无法同步卡券"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010010:履约订单不包含资源信息（sub_code: isv.business-failed:10010）",
+      "action": "010010:履约订单不包含资源信息",
+      "sub_code": "isv.business-failed:10010",
+      "sub_msg": "010010:履约订单不包含资源信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 030002:数据处理失败（sub_code: isv.business-failed:30002）",
+      "action": "030002:数据处理失败",
+      "sub_code": "isv.business-failed:30002",
+      "sub_msg": "030002:数据处理失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常,请稍后重试（sub_code: isp.service-error:020011）",
+      "action": "系统异常,请稍后重试",
+      "sub_code": "isp.service-error:020011",
+      "sub_msg": "系统异常,请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/SendCodeByPlatform?app_key=your_appkey_here&method=coupons.SendCodeByPlatform&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:000002",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/7110",
+  "updatedAt": "2025-09-11",
+  "_file_stem": "order-coupons-SendCodeByPlatform"
+}

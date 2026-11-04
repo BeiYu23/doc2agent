@@ -1,0 +1,88 @@
+{
+  "id": "doudian.alliance.buyin.getDeliveryActivityProds",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.getDeliveryActivityProds",
+  "description": "三方获取活动页商品货池",
+  "method": "GET",
+  "path": "/buyin/getDeliveryActivityProds",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "上限为1",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "上限1000",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "商品id总数",
+      "example": "0"
+    },
+    {
+      "name": "prod_id",
+      "type": "array",
+      "description": "商品id列表",
+      "example": "[]"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/getDeliveryActivityProds?app_key=your_appkey_here&method=buyin.getDeliveryActivityProds&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "prod_id": "[]",
+        "total": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/7460",
+  "updatedAt": "2025-06-25",
+  "_file_stem": "alliance-buyin-getDeliveryActivityProds"
+}

@@ -1,0 +1,314 @@
+{
+  "id": "doudian.logistics-provider.gis.serviceArea.sync",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "gis.serviceArea.sync",
+  "description": "同步服务范围数据",
+  "method": "GET",
+  "path": "/gis/serviceArea/sync",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "express",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商编码，接口研发提供",
+      "example": "jdexpress",
+      "_depth": 0
+    },
+    {
+      "name": "ability_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "能力表达，接口研发提供",
+      "example": "delivery",
+      "_depth": 0
+    },
+    {
+      "name": "service_areas",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "服务范围结构体",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家国标码",
+      "example": "cn",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省国标码",
+      "example": "310000",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市国标码",
+      "example": "311200",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区国标码",
+      "example": "311223",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道国标码",
+      "example": "311223003",
+      "_depth": 1
+    },
+    {
+      "name": "fence",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "围栏结构体",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "围栏形状，multipolygon，polygon",
+      "example": "multipolygon",
+      "_depth": 2
+    },
+    {
+      "name": "standard",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "坐标规范",
+      "example": "GaoDe",
+      "_depth": 2
+    },
+    {
+      "name": "multipolygon",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "多多边形结构体",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "polygons",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "带洞多边形结构体",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "polygon",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "简单多边形结构体",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "经度",
+      "example": "120.1232",
+      "_depth": 5
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "纬度",
+      "example": "45.12389",
+      "_depth": 5
+    },
+    {
+      "name": "service_area_express",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否能送货上门 1-能送货上门 2-不能送货上门",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "service_area_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务范围类型 EFENCE-围栏 REGION-行政区划",
+      "example": "EFENCE",
+      "_depth": 1
+    },
+    {
+      "name": "country_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家名称",
+      "example": "中国",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市名称",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "余杭区",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "仓前街道",
+      "_depth": 1
+    },
+    {
+      "name": "resource_ability",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "资源能力表达",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "resource_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资源code",
+      "example": "1234",
+      "_depth": 1
+    },
+    {
+      "name": "resource_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资源类型",
+      "example": "fence",
+      "_depth": 1
+    },
+    {
+      "name": "ability_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "能力code",
+      "example": "delivery",
+      "_depth": 1
+    },
+    {
+      "name": "ability_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "能力类型",
+      "example": "delivery",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1:服务范围列表不能为空/最多100（sub_code: isv.business-failed:1）",
+      "action": "1:服务范围列表不能为空/最多100",
+      "sub_code": "isv.business-failed:1",
+      "sub_msg": "1:服务范围列表不能为空/最多100"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/partner/GetPartnerInfo?app_key=your_appkey_here&method=partner.GetPartnerInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "partner_app": {
+          "app_name": "1",
+          "extra": {},
+          "partner_id": "1",
+          "partner_name": "1",
+          "secret": "1"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1",
+      "sub_msg": "1:服务范围列表不能为空/最多100"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2883",
+  "updatedAt": "2023-02-28",
+  "_file_stem": "logistics-provider-gis-serviceArea-sync"
+}

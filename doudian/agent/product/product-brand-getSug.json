@@ -1,0 +1,213 @@
+{
+  "id": "doudian.product.brand.getSug",
+  "platform": "doudian",
+  "group": "product",
+  "name": "brand.getSug",
+  "description": "通过前缀匹配召回品牌信息",
+  "method": "GET",
+  "path": "/brand/getSug",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "query",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "前缀匹配的品牌名",
+      "example": "apple",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "用户ID，可用默认值0",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "filter_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "过滤用参数，不填则是全量召回",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "brand_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "品牌ids",
+      "example": "[202132132342,213123443543]",
+      "_depth": 1
+    },
+    {
+      "name": "brand_category",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "品牌类别",
+      "example": "[20220]",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "品牌状态: 1.在线 2.离线",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "related_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "品牌商标关联Id",
+      "example": "[12123123123,4323423423]",
+      "_depth": 1
+    },
+    {
+      "name": "trade_mark_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商标IDs",
+      "example": "[\"21312323134\"]",
+      "_depth": 1
+    },
+    {
+      "name": "audit_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "废弃字段，请勿填写: 1. 审核中 2. 审核通过 3. 审核拒绝 4. 送审失败",
+      "example": "[2]",
+      "_depth": 1
+    },
+    {
+      "name": "read_old",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否读取老数据 默认为false",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "biz_types",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "业务线类型: 0. 国内品牌 1. 跨境品牌 3. 广告",
+      "example": "[0]",
+      "_depth": 0
+    },
+    {
+      "name": "enable_deduplicate",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否去重，一般选择true",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "extra_config",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "额外配置，无特殊需求请按描述填写",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "use_origin_brand_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否忽略去重 使用原始品牌信息，默认取false",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "use_brand_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否忽略新旧映射 使用老品牌信息，默认取false",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "use_brand_name_deduplicate",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "使用品牌名去重，需要和抖店一致请取true",
+      "example": "true",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "sug_list",
+      "type": "array",
+      "description": "品牌信息列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/brand/getSug?app_key=your_appkey_here&method=brand.getSug&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "sug_list": [
+          {
+            "audit_status": "2",
+            "biz_type": "0",
+            "brand_alias": "苹果/apple",
+            "brand_id": "324234234",
+            "brand_name_c_n": "苹果",
+            "brand_name_e_n": "apple",
+            "create_timestamp": "1636011982",
+            "extra": {},
+            "level": "0",
+            "logo": "url地址",
+            "status": "1",
+            "update_timestamp": "1636011982"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1436",
+  "updatedAt": "2021-11-05",
+  "_file_stem": "product-brand-getSug"
+}

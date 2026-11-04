@@ -1,0 +1,135 @@
+{
+  "id": "doudian.miniapp.mini.follow.check",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.follow.check",
+  "description": "检查小程序是否允许关注店铺",
+  "method": "GET",
+  "path": "/mini/follow/check",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 小程序"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "follow_shop_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "待关注的店铺ID，如不填写会使用当前小程序绑定的店铺ID",
+      "example": "77977",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "bc_check_success",
+      "type": "boolean",
+      "description": "关系检查正常",
+      "example": "true"
+    },
+    {
+      "name": "shop_uid",
+      "type": "string",
+      "description": "店铺uid",
+      "example": "8213121232"
+    },
+    {
+      "name": "follow_result",
+      "type": "boolean",
+      "description": "是否已关注",
+      "example": "false"
+    },
+    {
+      "name": "aweme_id",
+      "type": "string",
+      "description": "抖音号ID",
+      "example": "123123123"
+    },
+    {
+      "name": "aweme_nick",
+      "type": "string",
+      "description": "抖音号昵称",
+      "example": "vda112"
+    },
+    {
+      "name": "avatar",
+      "type": "string",
+      "description": "抖音头像",
+      "example": "https://p11.douyinpic.com/img/aweme-avatar/tos-cn-avt-0015_6f08413fa71c50856524d20e8ca76dd6~c5_300x300.jpeg?from=3782654143"
+    },
+    {
+      "name": "shop_name",
+      "type": "string",
+      "description": "店铺名称",
+      "example": "vda112"
+    },
+    {
+      "name": "shop_score",
+      "type": "string",
+      "description": "店铺评分",
+      "example": "4.99"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前店铺没有绑定小程序，请检查（sub_code: isv.business-failed:605014001）",
+      "action": "当前店铺没有绑定小程序，请检查",
+      "sub_code": "isv.business-failed:605014001",
+      "sub_msg": "当前店铺没有绑定小程序，请检查"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺信息查询异常，请稍后重试（sub_code: isv.business-failed:605014002）",
+      "action": "店铺信息查询异常，请稍后重试",
+      "sub_code": "isv.business-failed:605014002",
+      "sub_msg": "店铺信息查询异常，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务异常，请稍后重试（sub_code: isp.service-error:605090001）",
+      "action": "服务异常，请稍后重试",
+      "sub_code": "isp.service-error:605090001",
+      "sub_msg": "服务异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/follow/check?app_key=your_appkey_here&method=mini.follow.check&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "avatar": "https://p11.douyinpic.com/img/aweme-avatar/tos-cn-avt-0015_6f08413fa71c50856524d20e8ca76dd6~c5_300x300.jpeg?from=3782654143",
+        "aweme_id": "123123123",
+        "aweme_nick": "vda112",
+        "bc_check_success": "true",
+        "follow_result": "false",
+        "shop_name": "vda112",
+        "shop_score": "4.99",
+        "shop_uid": "8213121232"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:605014001",
+      "sub_msg": "当前店铺没有绑定小程序，请检查"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/5083",
+  "updatedAt": "2023-11-06",
+  "_file_stem": "miniapp-mini-follow-check"
+}

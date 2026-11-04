@@ -1,0 +1,93 @@
+{
+  "id": "doudian.retail-store.warehouse.getFencesByStore",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "warehouse.getFencesByStore",
+  "description": "根据门店查询围栏",
+  "method": "GET",
+  "path": "/warehouse/getFencesByStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "门店ID列表，最多一次传20个",
+      "example": "123345,12333332",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "fence_map",
+      "type": "string",
+      "description": "key为门店ID，value为围栏详细内容",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:2122）",
+      "action": "修改后重试",
+      "sub_code": "isv.parameter-invalid:2122",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2129999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2129999",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:2121006）",
+      "action": "根据返回内容判断",
+      "sub_code": "isv.business-failed:2121006",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取相关数据失败（sub_code: isv.business-failed:212000264）",
+      "action": "根据返回内容判断",
+      "sub_code": "isv.business-failed:212000264",
+      "sub_msg": "获取相关数据失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/getFencesByStore?app_key=your_appkey_here&method=warehouse.getFencesByStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fence_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2122",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/6374",
+  "updatedAt": "2024-08-20",
+  "_file_stem": "retail-store-warehouse-getFencesByStore"
+}

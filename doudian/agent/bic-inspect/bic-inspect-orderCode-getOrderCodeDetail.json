@@ -1,0 +1,115 @@
+{
+  "id": "doudian.bic-inspect.orderCode.getOrderCodeDetail",
+  "platform": "doudian",
+  "group": "bic-inspect",
+  "name": "orderCode.getOrderCodeDetail",
+  "description": "通过订单码和商家信息查询订单码绑定的订单详情信息(包括材质、镶嵌材质、质量、商品名称等)",
+  "method": "GET",
+  "path": "/orderCode/getOrderCodeDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BIC质检API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "orderCodes",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单码列表，最多支持50个订单码一起查询，超过50个取前50个订单码",
+      "example": "[\n    \"0117457223\",\n    \"0402702663\",\n    \"0738431303\",\n    \"1006866759\"\n  ]",
+      "_depth": 0
+    },
+    {
+      "name": "shopId",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺ID",
+      "example": "1111228346",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_id",
+      "type": "number",
+      "description": "店铺ID",
+      "example": "1111228346"
+    },
+    {
+      "name": "shop_name",
+      "type": "string",
+      "description": "店铺名称",
+      "example": "订单测试店铺"
+    },
+    {
+      "name": "order_detail_list",
+      "type": "array",
+      "description": "订单明细列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 入参为空（sub_code: isv.missing-parameter:20001）",
+      "action": "入参不能为空，填入合法参数",
+      "sub_code": "isv.missing-parameter:20001",
+      "sub_msg": "入参为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单查询失败（sub_code: isv.business-failed:20002）",
+      "action": "不是qic商家",
+      "sub_code": "isv.business-failed:20002",
+      "sub_msg": "订单查询失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前商家不是ERP商家（sub_code: isv.parameter-invalid:20005）",
+      "action": "当前商家不是ERP商家",
+      "sub_code": "isv.parameter-invalid:20005",
+      "sub_msg": "当前商家不是ERP商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不存在（sub_code: isv.business-failed:20004）",
+      "action": "订单不存在",
+      "sub_code": "isv.business-failed:20004",
+      "sub_msg": "订单不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comtest/encrypt/2?app_key=your_appkey_here&method=test.encrypt.2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "2",
+        "or": "7"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:20001",
+      "sub_msg": "入参为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/51/2857",
+  "updatedAt": "2024-07-30",
+  "_file_stem": "bic-inspect-orderCode-getOrderCodeDetail"
+}

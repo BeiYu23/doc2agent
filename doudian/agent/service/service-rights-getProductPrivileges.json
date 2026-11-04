@@ -1,0 +1,180 @@
+{
+  "id": "doudian.service.rights.getProductPrivileges",
+  "platform": "doudian",
+  "group": "service",
+  "name": "rights.getProductPrivileges",
+  "description": "查询商品服务权益",
+  "method": "GET",
+  "path": "/rights/getProductPrivileges",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 三方客服API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "client_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "非必传，用户客户端查询参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "用户客户端id，不传默认抖音app",
+      "example": "1128",
+      "_depth": 1
+    },
+    {
+      "name": "app_version",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "客户端版本",
+      "example": "370000",
+      "_depth": 1
+    },
+    {
+      "name": "product_params",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "必传，商品查询参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "author_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "非必传，带货达人id",
+      "example": "2228068890454395",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "必传，商品id",
+      "example": "3580838793961427240",
+      "_depth": 1
+    },
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "非必传，doudian_open_id，用于解析消费者uid，传入则会校验用户权益资格",
+      "example": "1@#YOUR_SECRET_KEY",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_privilege",
+      "type": "array",
+      "description": "商品权益列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 未知错误（sub_code: isp.service-error:1601000000）",
+      "action": "需要联系开发者",
+      "sub_code": "isp.service-error:1601000000",
+      "sub_msg": "未知错误"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少商品参数（sub_code: isv.missing-parameter:1601000013）",
+      "action": "检查商品信息是否传入",
+      "sub_code": "isv.missing-parameter:1601000013",
+      "sub_msg": "缺少商品参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品信息查询失败（sub_code: isp.service-error:1601100043）",
+      "action": "优先重试，重试仍不成功检查商品是否已下架或商品Id是否有误",
+      "sub_code": "isp.service-error:1601100043",
+      "sub_msg": "商品信息查询失败"
+    },
+    {
+      "code": "10001",
+      "meaning": "请求部分失败 / 部分商品信息查询失败（sub_code: isv.business-part-failed:1601100044）",
+      "action": "检查是否有商品已下架",
+      "sub_code": "isv.business-part-failed:1601100044",
+      "sub_msg": "部分商品信息查询失败"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 查询运费险失败（sub_code: isp.service-timeout-error:1601100018）",
+      "action": "可重试",
+      "sub_code": "isp.service-timeout-error:1601100018",
+      "sub_msg": "查询运费险失败"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 查询运费险失败（sub_code: isp.service-timeout-error:1601100019）",
+      "action": "可重试",
+      "sub_code": "isp.service-timeout-error:1601100019",
+      "sub_msg": "查询运费险失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询商品失败，非授权商家商品（sub_code: isp.service-error:1601100054）",
+      "action": "查询的商品非授权商家的商品",
+      "sub_code": "isp.service-error:1601100054",
+      "sub_msg": "查询商品失败，非授权商家商品"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/rights/getProductPrivileges?app_key=your_appkey_here&method=rights.getProductPrivileges&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_privilege": [
+          {
+            "privilege_infos": [
+              {
+                "code": "insurance_freight",
+                "inner_code": "insurance_freight_shop_bulk",
+                "label": "大件运费险"
+              }
+            ],
+            "product_id": "3580838793961427240",
+            "product_id_str": "\"3580838793961427240\""
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1601000000",
+      "sub_msg": "未知错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1532/7961",
+  "updatedAt": "2025-12-19",
+  "_file_stem": "service-rights-getProductPrivileges"
+}

@@ -1,0 +1,428 @@
+{
+  "id": "doudian.product.product.addChannelProduct",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.addChannelProduct",
+  "description": "创建销售渠道品",
+  "method": "GET",
+  "path": "/product/addChannelProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "main_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "主商品ID",
+      "example": "3627614096842696400",
+      "_depth": 0
+    },
+    {
+      "name": "channel_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "渠道类型\n3：商家自卖\n4：达人带货",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道品定制标题。必填",
+      "example": "【直播专属】电竞椅台式电脑桌",
+      "_depth": 0
+    },
+    {
+      "name": "main_img_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "渠道品定制主图，最高支持5张。可省略，默认使用主商品主图列表",
+      "example": "[\"https://tosv.boe.byted.org/obj/ecom-shop-material/ayoJLG_m_290637ca0b8211e45bf4a441fc10b938_sx_47135_www600-600\", \"https://tosv.boe.byted.org/obj/ecom-shop-material/ayoJLG_m_290637ca0b8211e45bf4a441fc10b938_sx_47135_www600-600\"]",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "有效期开始时间。不填开始和结束时间，代表长期有效",
+      "example": "2023-07-13 17:42:03",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "有效期结束时间。不填开始和结束时间，代表长期有效",
+      "example": "2023-07-15 17:42:06",
+      "_depth": 0
+    },
+    {
+      "name": "price_follow_main",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "渠道品SKU价格是否跟随主品",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "share_main_stock",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "渠道品SKU库存是否与主商品共享库存",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "is_kol_exclusive",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否『达人专属』渠道品",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "channel_buy_limit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "渠道品限购信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "total_buy_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单用户累计购买上限数",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "max_buy_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每次购买上限数",
+      "example": "5",
+      "_depth": 1
+    },
+    {
+      "name": "min_buy_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每次至少购买数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sku_channel",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "渠道SKU相关信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "stock_set_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存编辑模式，0=设置绝对值，1=增量设置",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道品定制SKU商家编码。可忽略，默认使用主商品SKU商家编码。",
+      "example": "49374",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "主商品SkuID",
+      "example": "1771295549374468",
+      "_depth": 1
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "价格，单位分。设置价格跟随主品时，可不填",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存，勿大于主SKU的可售库存。设置库存与主商品共享时，可不填",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "detail_brief_img",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "渠道品定制详情图，最高支持50张。detail_brief_follow_main值为false时，必须设置商详图",
+      "example": "[\"https://tosv.boe.byted.org/obj/ecom-shop-material/ayoJLG_m_290637ca0b8211e45bf4a441fc10b938_sx_47135_www600-600\", \"https://tosv.boe.byted.org/obj/ecom-shop-material/ayoJLG_m_290637ca0b8211e45bf4a441fc10b938_sx_47135_www600-600\"]",
+      "_depth": 0
+    },
+    {
+      "name": "freight_template",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "运费模板信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "freight_follow_main",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "渠道品运费模板是否与主品保持一致",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "freight_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "渠道品定制运费模板ID，当设置了freight_follow_main=true时与主品运费模板保持一致；否则需要传值。",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "sku_code_follow_main",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "商家编码与主品保持一致",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "detail_brief_follow_main",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "商详与主品保持一致配置，true：保持一致；false：单独配置（此时必须传入商详图片，否则渠道品在c端将没有商详图）",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "name_prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标题前缀",
+      "example": "标题前缀",
+      "_depth": 0
+    },
+    {
+      "name": "name_subject",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标题内容。注意：后续推荐使用name_prefix和name_subject设置标题，不建议使用name字段。并且name字段和name_prefix\\name_subject2套传参互斥",
+      "example": "标题内容",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "shop_id",
+      "type": "mixed",
+      "description": "店铺ID",
+      "example": "95078"
+    },
+    {
+      "name": "product_id",
+      "type": "mixed",
+      "description": "主商品ID",
+      "example": "3627614096842696400"
+    },
+    {
+      "name": "channel",
+      "type": "object",
+      "description": "渠道信息",
+      "example": ""
+    },
+    {
+      "name": "is_kol_exclusive",
+      "type": "boolean",
+      "description": "是否『达人专属』渠道品",
+      "example": "false"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 达人专属配置不支持库存与主品共享（sub_code: isv.parameter-invalid:400002）",
+      "action": "取消勾选库存共享，设置库存信息",
+      "sub_code": "isv.parameter-invalid:400002",
+      "sub_msg": "达人专属配置不支持库存与主品共享"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 精选联盟权限校验失败（sub_code: isv.parameter-invalid:400001）",
+      "action": "请按返回的详细错误信息处理",
+      "sub_code": "isv.parameter-invalid:400001",
+      "sub_msg": "精选联盟权限校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 渠道主商品为在线审核通过状态才可以创建（sub_code: isv.parameter-invalid:101045）",
+      "action": "变更主商品状态",
+      "sub_code": "isv.parameter-invalid:101045",
+      "sub_msg": "渠道主商品为在线审核通过状态才可以创建"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不支持该商品类型创建渠道品（sub_code: isv.parameter-invalid:101046）",
+      "action": "暂不支持奖品、拍卖商品、非卖品、保证金品、闪购商品、定金找货、保险业务等主商品创建渠道品",
+      "sub_code": "isv.parameter-invalid:101046",
+      "sub_msg": "不支持该商品类型创建渠道品"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 渠道商详链接不合法（sub_code: isv.parameter-invalid:2010001）",
+      "action": "请检查商详图片链接格式以及是否可用",
+      "sub_code": "isv.parameter-invalid:2010001",
+      "sub_msg": "渠道商详链接不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 开始时间解析异常（sub_code: isv.parameter-invalid:2010004）",
+      "action": "请检查开始时间格式",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "开始时间解析异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 仅达人带货渠道品可设置达人专属（sub_code: isv.parameter-invalid:110101051）",
+      "action": "仅达人带货渠道品可设置达人专属",
+      "sub_code": "isv.parameter-invalid:110101051",
+      "sub_msg": "仅达人带货渠道品可设置达人专属"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效的渠道SKU（sub_code: isv.business-failed:110103009）",
+      "action": "无效的渠道SKU",
+      "sub_code": "isv.business-failed:110103009",
+      "sub_msg": "无效的渠道SKU"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺尚未开通联盟权限，暂无法创建达人渠道品，请先前往精选联盟完成权限开通。（sub_code: isv.business-failed:110102140）",
+      "action": "店铺尚未开通联盟权限，暂无法创建达人渠道品，请先前往精选联盟完成权限开通。",
+      "sub_code": "isv.business-failed:110102140",
+      "sub_msg": "店铺尚未开通联盟权限，暂无法创建达人渠道品，请先前往精选联盟完成权限开通。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 渠道主商品为在线审核通过状态才可以创建（sub_code: isv.business-failed:110101045）",
+      "action": "渠道主商品为在线审核通过状态才可以创建",
+      "sub_code": "isv.business-failed:110101045",
+      "sub_msg": "渠道主商品为在线审核通过状态才可以创建"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品不存在（sub_code: isv.business-failed:2010058）",
+      "action": "商品不存在",
+      "sub_code": "isv.business-failed:2010058",
+      "sub_msg": "商品不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 每次限购件数不能超过累计限购件数（sub_code: isv.business-failed:110280111）",
+      "action": "每次限购件数不能超过累计限购件数",
+      "sub_code": "isv.business-failed:110280111",
+      "sub_msg": "每次限购件数不能超过累计限购件数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 限购值最大可设置200（sub_code: isv.business-failed:110280114）",
+      "action": "限购值最大可设置200",
+      "sub_code": "isv.business-failed:110280114",
+      "sub_msg": "限购值最大可设置200"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品标题最长不能超过30个汉字（60个字符）（sub_code: isv.business-failed:110101150）",
+      "action": "商品标题最长不能超过30个汉字（60个字符）",
+      "sub_code": "isv.business-failed:110101150",
+      "sub_msg": "商品标题最长不能超过30个汉字（60个字符）"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 奖品不支持创建渠道品（sub_code: isv.business-failed:110101046）",
+      "action": "奖品不支持创建渠道品",
+      "sub_code": "isv.business-failed:110101046",
+      "sub_msg": "奖品不支持创建渠道品"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/addChannelProduct?app_key=your_appkey_here&method=product.addChannelProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "channel": {
+          "channel_id": "1771297785994256",
+          "channel_type": "3"
+        },
+        "is_kol_exclusive": "false",
+        "product_id": "3627614096842696400",
+        "shop_id": "95078"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:400002",
+      "sub_msg": "达人专属配置不支持库存与主品共享"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4462",
+  "updatedAt": "2025-09-08",
+  "_file_stem": "product-product-addChannelProduct"
+}

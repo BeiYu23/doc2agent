@@ -1,0 +1,79 @@
+{
+  "id": "doudian.warehouse.instantShopping.starhub.queryAftersaleInboundOrder",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "instantShopping.starhub.queryAftersaleInboundOrder",
+  "description": "查询退供出库单状态数据",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inbound_sub_order_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "抖音入库子单ID列表\n上限20个    QPS 100",
+      "example": "734672346823411",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "inbound_sub_order_info_map",
+      "type": "string",
+      "description": "入库单列表明细",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法入参（sub_code: isv.parameter-invalid:40001）",
+      "action": "传入合法入参",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法入参"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 没有权限操作出库单（sub_code: isv.parameter-invalid:40006）",
+      "action": "传入有权限的入库单id",
+      "sub_code": "isv.parameter-invalid:40006",
+      "sub_msg": "没有权限操作出库单"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.starhub.queryAftersaleInboundOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "inbound_sub_order_info_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法入参"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/6533",
+  "updatedAt": "2024-05-24",
+  "_file_stem": "warehouse-instantShopping-starhub-queryAftersaleInboundOrder"
+}

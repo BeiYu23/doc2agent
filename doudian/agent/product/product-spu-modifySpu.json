@@ -1,0 +1,296 @@
+{
+  "id": "doudian.product.spu.modifySpu",
+  "platform": "doudian",
+  "group": "product",
+  "name": "spu.modifySpu",
+  "description": "修改spu信息",
+  "method": "GET",
+  "path": "/spu/modifySpu",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "spu_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "要修改的 SPU ID",
+      "example": "7670734202869924140",
+      "_depth": 0
+    },
+    {
+      "name": "property_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "全量属性；传入且非空则覆盖，不传/传空列表则沿用原SPU属性（不会清空）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "property_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性项id",
+      "example": "1618",
+      "_depth": 1
+    },
+    {
+      "name": "property_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性项名称",
+      "example": "ISBN编号",
+      "_depth": 1
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "属性值信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0：门捷列夫，1：标准类目2.0",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值ID，如果可输入类型valueId传0",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "value_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性值名称",
+      "example": "小王子",
+      "_depth": 2
+    },
+    {
+      "name": "materials",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材（type=Image时回填主图）；传入且非空则覆盖原主图，不传/传空列表则沿用原主图（不会清空）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "素材类型名称",
+      "example": "主图",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "素材类型，枚举值：1-主图",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "description",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "描述信息",
+      "example": "该主图用于xxx",
+      "_depth": 1
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材内容",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "内容",
+      "example": "https://p3-ecom-spu.byteimg.com/tos-cn-i-89jsre2ap7/dc491713470d4d6c8e49733f20283e18~tplv-89jsre2ap7-image.image",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文件名",
+      "example": "主图1",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "spu_id",
+      "type": "mixed",
+      "description": "若修改了关键属性，则返回的是新spuid,否则就是老spuid",
+      "example": "7120712486076088620"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / spuId非法（sub_code: isv.parameter-invalid:1003042）",
+      "action": "检查入参的spuID是否合法",
+      "sub_code": "isv.parameter-invalid:1003042",
+      "sub_msg": "spuId非法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无权限调用ModifySpu4Open（sub_code: isv.parameter-invalid:1003047）",
+      "action": "无权限修改spu信息",
+      "sub_code": "isv.parameter-invalid:1003047",
+      "sub_msg": "无权限调用ModifySpu4Open"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询原SPU失败（sub_code: isv.business-failed:1006249）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1006249",
+      "sub_msg": "查询原SPU失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / SPU不存在（sub_code: isv.parameter-invalid:1003044）",
+      "action": "检查操作的spu是否确实存在",
+      "sub_code": "isv.parameter-invalid:1003044",
+      "sub_msg": "SPU不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 构建类目渠道上下文失败（sub_code: isv.business-failed:1003045）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1003045",
+      "sub_msg": "构建类目渠道上下文失败"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 触发限流,请稍后再试（sub_code: isp.traffic-limited:1000027）",
+      "action": "稍后重试",
+      "sub_code": "isp.traffic-limited:1000027",
+      "sub_msg": "触发限流,请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取商家信息失败（sub_code: isv.business-failed:1000025）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1000025",
+      "sub_msg": "获取商家信息失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商家不存在（sub_code: isv.parameter-invalid:1003043）",
+      "action": "检查商家是否确实存在",
+      "sub_code": "isv.parameter-invalid:1003043",
+      "sub_msg": "商家不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求参数转换失败（sub_code: isv.parameter-invalid:1003046）",
+      "action": "检查请求入参",
+      "sub_code": "isv.parameter-invalid:1003046",
+      "sub_msg": "请求参数转换失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取店铺标签失败（sub_code: isv.business-failed:1000030）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1000030",
+      "sub_msg": "获取店铺标签失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 品牌id不一致（sub_code: isv.business-failed:20121014）",
+      "action": "检查品牌id",
+      "sub_code": "isv.business-failed:20121014",
+      "sub_msg": "品牌id不一致"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 属性项有空属性值（sub_code: isv.business-failed:20121013）",
+      "action": "检查是否存在空属性值",
+      "sub_code": "isv.business-failed:20121013",
+      "sub_msg": "属性项有空属性值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / SPU状态不合法（sub_code: isv.business-failed:2012004）",
+      "action": "检查操作的spu是否为上线状态",
+      "sub_code": "isv.business-failed:2012004",
+      "sub_msg": "SPU状态不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不允许关键属性为空（sub_code: isv.business-failed:20121009）",
+      "action": "检查关键属性值是否为空",
+      "sub_code": "isv.business-failed:20121009",
+      "sub_msg": "不允许关键属性为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 新增关键属性或级联失败（sub_code: isv.business-failed:2012001）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:2012001",
+      "sub_msg": "新增关键属性或级联失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/spu/modifySpu?app_key=your_appkey_here&method=spu.modifySpu&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "spu_id": "7120712486076088620"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1003042",
+      "sub_msg": "spuId非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/8481",
+  "updatedAt": "2026-08-20",
+  "_file_stem": "product-spu-modifySpu"
+}

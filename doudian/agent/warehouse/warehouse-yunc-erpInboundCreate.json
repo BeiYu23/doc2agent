@@ -1,0 +1,374 @@
+{
+  "id": "doudian.warehouse.yunc.erpInboundCreate",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.erpInboundCreate",
+  "description": "erp创建入库单",
+  "method": "GET",
+  "path": "/yunc/erpInboundCreate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V5.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库单号",
+      "example": "IB0001",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺id（不强校验，填0即可）",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "\"CGRK\" 采购入库  \"DBRK\" 调拨入库 \"QTRK\"其它入库  \"SCRK\"生产入库 \"2BXTRK\" 2B销退入库",
+      "example": "CGRK",
+      "_depth": 0
+    },
+    {
+      "name": "action_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型 1：新增",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "related_orders",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "关联单据信息",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "plan_arr_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "计划到达时间",
+      "example": "1627622162",
+      "_depth": 0
+    },
+    {
+      "name": "late_arr_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "最晚到达时间",
+      "example": "1627622162",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商编码",
+      "example": "S001",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商名称",
+      "example": "供应商1",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_mode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配送模式（1：物流 2：快递 3：自送）",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送扩展字段",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓code",
+      "example": "W001",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "无",
+      "_depth": 0
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "单号",
+      "example": "IB001",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台货品编码 平台货品编码/商品编码两者必填其一，建议优先填写平台货品编码",
+      "example": "21342",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品编码 平台货品编码/商品编码两者必填其一，建议优先填写平台货品编码",
+      "example": "31425",
+      "_depth": 1
+    },
+    {
+      "name": "expect_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "预计收货数量",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存类型 1：正品 2：次品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存状态 1：正常 2：质检 3：冻结",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "is_batch_assigned",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否指定批次",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "sn_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "唯一码",
+      "example": "SN001",
+      "_depth": 1
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "生产日期",
+      "example": "1627622162",
+      "_depth": 1
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "过期时间",
+      "example": "1627622162",
+      "_depth": 1
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次编码",
+      "example": "B001",
+      "_depth": 1
+    },
+    {
+      "name": "purchase_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "采购价格",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "currency",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "币种",
+      "example": "CNY",
+      "_depth": 1
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{}",
+      "_depth": 1
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 下发仓储单据失败（sub_code: isp.service-error:62303009）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:62303009",
+      "sub_msg": "下发仓储单据失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 部分货品不存在[\"BNS012-黑色踩脚\"]（sub_code: isv.business-failed:62302630）",
+      "action": "货品信息校验不通过，按提示修改",
+      "sub_code": "isv.business-failed:62302630",
+      "sub_msg": "部分货品不存在[\"BNS012-黑色踩脚\"]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62302617:查询条件不能为空（sub_code: isv.business-failed:62302617）",
+      "action": "查询条件不能为空",
+      "sub_code": "isv.business-failed:62302617",
+      "sub_msg": "62302617:查询条件不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1249:该订单已存在，无需重复下发（sub_code: isv.business-failed:1249）",
+      "action": "该订单已存在，无需重复下发",
+      "sub_code": "isv.business-failed:1249",
+      "sub_msg": "1249:该订单已存在，无需重复下发"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100100:expectedQty字段缺失（sub_code: isv.business-failed:100100）",
+      "action": "请检查expect_qty字段",
+      "sub_code": "isv.business-failed:100100",
+      "sub_msg": "100100:expectedQty字段缺失"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100102:库存异常（sub_code: isv.business-failed:100102）",
+      "action": "库存异常，请检查库存之后操作",
+      "sub_code": "isv.business-failed:100102",
+      "sub_msg": "100102:库存异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9021:缺少必要参数：送仓明细（sub_code: isv.business-failed:9021）",
+      "action": "缺少必要参数：送仓明细",
+      "sub_code": "isv.business-failed:9021",
+      "sub_msg": "9021:缺少必要参数：送仓明细"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/erpInboundCreate?app_key=your_appkey_here&method=yunc.erpInboundCreate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:62303009",
+      "sub_msg": "下发仓储单据失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/899",
+  "updatedAt": "2023-01-17",
+  "_file_stem": "warehouse-yunc-erpInboundCreate"
+}

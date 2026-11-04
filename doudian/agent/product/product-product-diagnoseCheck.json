@@ -1,0 +1,768 @@
+{
+  "id": "doudian.product.product.diagnoseCheck",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.diagnoseCheck",
+  "description": "发布前校验",
+  "method": "GET",
+  "path": "/product/diagnoseCheck",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_format_new",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性实体",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "纯棉",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性值名称",
+      "example": "聚酯纤维",
+      "_depth": 1
+    },
+    {
+      "name": "diy_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否为商家自定义属性值，1为是，0为不是，默认为0",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "short_product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "短标题",
+      "example": "商品短标题",
+      "_depth": 0
+    },
+    {
+      "name": "spec_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规格名",
+      "example": "颜色分类",
+      "_depth": 0
+    },
+    {
+      "name": "spec_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规格词",
+      "example": "红色",
+      "_depth": 0
+    },
+    {
+      "name": "sku_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品sku",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "价格",
+      "example": "1000",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku名称用属性项和属性值拼接组成，格式：\n规格项1:规格值1;规格项2:规格值2;",
+      "example": "颜色分类:红色;尺码:M;",
+      "_depth": 1
+    },
+    {
+      "name": "stock",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "库存",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "image_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规格图片",
+      "example": "ecom-shop-material/jpeg_m_bb06b738f66a8e34355a2f6d65856010_sx_592497_www800-800",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuid",
+      "example": "232323",
+      "_depth": 1
+    },
+    {
+      "name": "spec_detail_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "规格id列表",
+      "example": "[\n                \"1825226749200409\",\n                \"1825226749202489\"\n            ]",
+      "_depth": 1
+    },
+    {
+      "name": "sku_classification_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku分类",
+      "example": "无",
+      "_depth": 1
+    },
+    {
+      "name": "sell_properties",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销售属性",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "property_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售属性项名称",
+      "example": "颜色分类",
+      "_depth": 2
+    },
+    {
+      "name": "value_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售属性值名字",
+      "example": "黄色",
+      "_depth": 2
+    },
+    {
+      "name": "measure_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "标准化的公式模板ID",
+      "example": "1212",
+      "_depth": 3
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "度量衡值组",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "前缀：如日用",
+      "example": "日用",
+      "_depth": 4
+    },
+    {
+      "name": "module_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模块ID",
+      "example": "122",
+      "_depth": 4
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "值：如10",
+      "example": "10",
+      "_depth": 4
+    },
+    {
+      "name": "unit_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单位ID",
+      "example": "23",
+      "_depth": 4
+    },
+    {
+      "name": "unit_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单位名称：如抽",
+      "example": "抽",
+      "_depth": 4
+    },
+    {
+      "name": "suffix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "后缀：如*",
+      "example": "*",
+      "_depth": 4
+    },
+    {
+      "name": "quality_score_version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质量分",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "product_main_pic",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "主图信息，主图1：1和主图3：4",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片url",
+      "example": "https://p3-aio.ecombdimg.com/obj/ecom-shop-material/png_m_abf25b2634afc5710defa529796f97bd_sx_859041_www600-800",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "图片类型",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "pic_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "图片id",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "poi_use_condition",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卡券使用条件",
+      "example": "无",
+      "_depth": 0
+    },
+    {
+      "name": "size_info_template_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "尺码模板id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "props",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性",
+      "example": "废弃",
+      "_depth": 0
+    },
+    {
+      "name": "biz_kind",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0:普通商品，1:教育类商品 2:跨境商品",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "desc_text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详情文字",
+      "example": "详情文字",
+      "_depth": 0
+    },
+    {
+      "name": "risk_prop",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "高危词判断",
+      "example": "高危词判断",
+      "_depth": 0
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品类型",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "category",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "叶子类目ID",
+      "example": "24981",
+      "_depth": 0
+    },
+    {
+      "name": "pic",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "主图",
+      "example": "[\"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_8f6130a19c5af35f7fbe9d56ef24e25e_sx_707570_www800-800\",\"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_8f6130a19c5af35f7fbe9d56ef24e25e_sx_707570_www800-800\"]",
+      "_depth": 0
+    },
+    {
+      "name": "product_material_map",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品素材信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "media_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "素材类型",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "urls",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材图片url",
+      "example": "[\n                \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_85c0dbe86f70bc22ccb3f20353ebc721_sx_318770_www800-800\"\n            ]",
+      "_depth": 1
+    },
+    {
+      "name": "resource_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "视频id",
+      "example": "[\n                \"v0227cg10001cv2q9ivog65p1fpta0ug\"\n            ]",
+      "_depth": 1
+    },
+    {
+      "name": "material_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "素材ID",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品id",
+      "example": "351111111111111",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称",
+      "example": "商品名称",
+      "_depth": 0
+    },
+    {
+      "name": "product_biz",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "业务类型",
+      "example": "1223233423232",
+      "_depth": 0
+    },
+    {
+      "name": "is_template_opened",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "尺码模板开关",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "poi_notification",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品卡券领取",
+      "example": "废弃",
+      "_depth": 0
+    },
+    {
+      "name": "check_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "场景 1发布 2诊断",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "brand_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌ID",
+      "example": "122323",
+      "_depth": 0
+    },
+    {
+      "name": "desc_pic",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "详情图",
+      "example": "[\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_bb06b738f66a8e34355a2f6d65856010_sx_592497_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_a3bd8b131292c606714addb42ac49994_sx_515811_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_1204eabbf5dd783f2763e8c2e448e4f8_sx_621215_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_c44f2b860c07f9391682c43acc60372d_sx_491669_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_776be48ff5bdc35311d0eb8ba18024fd_sx_578742_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_4730dfb87ade298e5bebf26224a5e7a2_sx_728745_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_b71a3bbdefc5cc1ee6342855ba2bf245_sx_646607_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_58956b9470b717a582797969f84ffbe5_sx_771903_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_0c8133579f1befff9493bf421740bff7_sx_824777_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_77878fc69879a331b916c3e253cace78_sx_894403_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_61b5b9a136704383a9482970d52478e8_sx_758447_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_692481144791458665a93017af20ad1b_sx_794850_www800-800\",\n        \"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/jpeg_m_48ba5b33e39dd2b7cbf80238caed839b_sx_691435_www800-800\"\n    ]",
+      "_depth": 0
+    },
+    {
+      "name": "cross_border",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否跨境 0 否 1 是",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "brand_related_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌关联ID",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "component_template",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "尺码结构及详细数据",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "template_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板类型: size_info(尺码表)",
+      "example": "size_info",
+      "_depth": 1
+    },
+    {
+      "name": "template_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "指定模板类型: clothing、undies、shoes、children_clothing",
+      "example": "clothing",
+      "_depth": 1
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "模板名称",
+      "_depth": 1
+    },
+    {
+      "name": "component_front_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品组件编辑器源数据 json",
+      "example": "{\\\"title\\\":\\\"连身衣/爬服/哈衣\\\",\\\"desc\\\":\\\"连身衣/爬服/哈衣\\\",\\\"tempName\\\":\\\"\\\",\\\"configTable\\\":[{\\\"size\\\":\\\"66cm\\\",\\\"specMap\\\":{\\\"体重(斤)\\\":\\\"5-7\\\",\\\"身高(CM)\\\":\\\"66\\\"}},{\\\"size\\\":\\\"73cm\\\",\\\"specMap\\\":{\\\"体重(斤)\\\":\\\"7-9\\\",\\\"身高(CM)\\\":\\\"73\\\"}},{\\\"size\\\":\\\"80cm\\\",\\\"specMap\\\":{\\\"体重(斤)\\\":\\\"9-12\\\",\\\"身高(CM)\\\":\\\"80\\\"}},{\\\"size\\\":\\\"90cm\\\",\\\"specMap\\\":{\\\"体重(斤)\\\":\\\"11-15\\\",\\\"身高(CM)\\\":\\\"90\\\"}}],\\\"selectedSpecs\\\":[\\\"身高(CM)\\\",\\\"体重(斤)\\\"],\\\"headerName\\\":\\\"尺码\\\",\\\"specOptions\\\":[\\\"身高(CM)\\\",\\\"体重(斤)\\\"],\\\"selectedSize\\\":[\\\"66cm\\\",\\\"73cm\\\",\\\"80cm\\\",\\\"90cm\\\"],\\\"selectedSizeSpecValMap\\\":{}}",
+      "_depth": 1
+    },
+    {
+      "name": "component_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品组件数据 json",
+      "example": "{\\\"title\\\":\\\"连身衣/爬服/哈衣\\\",\\\"sub_title\\\":\\\"连身衣/爬服/哈衣\\\",\\\"selected_size\\\":[\\\"66cm\\\",\\\"73cm\\\",\\\"80cm\\\",\\\"90cm\\\"],\\\"selected_specs\\\":[\\\"身高(CM)\\\",\\\"体重(斤)\\\"],\\\"config\\\":{\\\"66cm\\\":{\\\"体重(斤)\\\":\\\"5-7\\\",\\\"身高(CM)\\\":\\\"66\\\"},\\\"73cm\\\":{\\\"体重(斤)\\\":\\\"7-9\\\",\\\"身高(CM)\\\":\\\"73\\\"},\\\"80cm\\\":{\\\"体重(斤)\\\":\\\"9-12\\\",\\\"身高(CM)\\\":\\\"80\\\"},\\\"90cm\\\":{\\\"体重(斤)\\\":\\\"11-15\\\",\\\"身高(CM)\\\":\\\"90\\\"}},\\\"selected_size_spec_val_map\\\":{}}",
+      "_depth": 1
+    },
+    {
+      "name": "shareable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否可共享",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "recommend_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品推荐语",
+      "example": "废弃",
+      "_depth": 0
+    },
+    {
+      "name": "only_base_score",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否仅需要基础分相关诊断项",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "quality_score",
+      "type": "object",
+      "description": "质量分",
+      "example": ""
+    },
+    {
+      "name": "diagnose_essential_material",
+      "type": "object",
+      "description": "必要图文",
+      "example": ""
+    },
+    {
+      "name": "quality_score_calculating",
+      "type": "boolean",
+      "description": "质量分是否计算中",
+      "example": "true"
+    },
+    {
+      "name": "field_problem",
+      "type": "array",
+      "description": "字段问题",
+      "example": ""
+    },
+    {
+      "name": "base_score",
+      "type": "mixed",
+      "description": "基础分",
+      "example": "无"
+    },
+    {
+      "name": "diagnose_recommend",
+      "type": "object",
+      "description": "推荐值",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2030001:商品诊断失败（sub_code: isv.business-failed:2030001）",
+      "action": "报错",
+      "sub_code": "isv.business-failed:2030001",
+      "sub_msg": "2030001:商品诊断失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/diagnoseCheck?app_key=your_appkey_here&method=product.diagnoseCheck&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "base_score": "无",
+        "diagnose_essential_material": {
+          "essential_material_info_list": [
+            {
+              "code": "0",
+              "material_component_id": "0",
+              "material_source": "无",
+              "url": "无"
+            }
+          ]
+        },
+        "diagnose_recommend": {
+          "ai_suggest_prop": [
+            {
+              "property_id": "无",
+              "property_name": "无",
+              "value_id": "无",
+              "value_name": "无"
+            }
+          ],
+          "name": "无",
+          "prop_map": {},
+          "recommend_tag_info_list": [
+            {
+              "name": "无",
+              "tag_type": "无"
+            }
+          ],
+          "suggest_seo_title_words": "无"
+        },
+        "field_problem": [
+          {
+            "detail_link": "无",
+            "diagnose_target": "无",
+            "field_key": "props",
+            "field_name": "主图",
+            "first_optimization_type": "无",
+            "index": "0",
+            "is_app_support": "false",
+            "is_base_score": "false",
+            "is_block": "false",
+            "is_empty_type": "false",
+            "is_fatal": "false",
+            "is_ignored": "false",
+            "is_quality_score": "true",
+            "is_support_exemption": "true",
+            "is_support_ignore": "无",
+            "item_rcmd_effect": {
+              "effct_desc": "无",
+              "improve_value_lower_bound": "无",
+              "improve_value_upper_bound": "无",
+              "optimization_info": {
+                "default_event_type": "无",
+                "default_index_value": "[1,2,3]",
+                "optimization_key": "无",
+                "optimization_name": "无",
+                "optimization_status": "无",
+                "unavailable_reason": "无"
+              },
+              "peer_usage_rate": "无"
+            },
+            "jump_link": "无",
+            "optimization_issue": "无",
+            "optimization_object": "无",
+            "optimization_type": "无",
+            "problem_affect_describe": "无",
+            "problem_biz_extra": {
+              "conflict_props_docs_map": {},
+              "similar_product_list": "无",
+              "title_typo": "无"
+            },
+            "problem_category": "suggest_problem",
+            "problem_desc": "无",
+            "problem_key": "2002",
+            "problem_name": "商品缺少白底图",
+            "problem_position": "无",
+            "problem_score": "12",
+            "problem_simple_name": "商品缺少白底图",
+            "problem_type": "废弃",
+            "prop_ids": "[1,2,3]",
+            "second_optimization_type": "无",
+            "suggestion": "商品缺少白底图素材，影响商品活动报名，建议补充纯白背景加商品主体图片",
+            "tab_optimization_type": "无"
+          }
+        ],
+        "quality_score": {
+          "level": "lv2",
+          "score": "100",
+          "version": "new_quality_score"
+        },
+        "quality_score_calculating": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2030001",
+      "sub_msg": "2030001:商品诊断失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/7342",
+  "updatedAt": "2025-04-24",
+  "_file_stem": "product-product-diagnoseCheck"
+}

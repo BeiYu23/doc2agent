@@ -1,0 +1,114 @@
+{
+  "id": "doudian.dongchedi.second.category.getChildItems",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.category.getChildItems",
+  "description": "【二方接口】根据类目ID，查询下级类目信息，允许指定层级",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "downLevel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "downLevel",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "onlyOnline",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "onlyOnline",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "ids",
+      "example": "[10001]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "items",
+      "type": "array",
+      "description": "items",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / ids不能为空（sub_code: isp.service-error:300001）",
+      "action": "ids不能为空",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "ids不能为空"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.category.getChildItems&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "items": [
+          {
+            "key": "1001",
+            "values": [
+              {
+                "auditStatus": "1",
+                "bizSourceInfoList": [
+                  {
+                    "bizSource": "1",
+                    "desc": "1",
+                    "name": "1"
+                  }
+                ],
+                "id": "1001",
+                "isLeaf": "false",
+                "level": "1",
+                "name": "test",
+                "opType": "1",
+                "parentId": "1",
+                "sequence": "1",
+                "status": "1"
+              }
+            ]
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "ids不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6921",
+  "updatedAt": "2024-10-08",
+  "_file_stem": "dongchedi-second-category-getChildItems"
+}

@@ -1,0 +1,202 @@
+{
+  "id": "doudian.member.member.JoinShopMemberWithMobileId",
+  "platform": "doudian",
+  "group": "member",
+  "name": "member.JoinShopMemberWithMobileId",
+  "description": "加入会员接口",
+  "method": "GET",
+  "path": "/member/JoinShopMemberWithMobileId",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 小程序"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V2.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_line",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务线:电商1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "inner_shop_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺号",
+      "example": "77977",
+      "_depth": 0
+    },
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "账号组id:抖音固定1128",
+      "example": "1128",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "用户号",
+      "example": "2121",
+      "_depth": 0
+    },
+    {
+      "name": "mobile_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "手机号id",
+      "example": "2121211",
+      "_depth": 0
+    },
+    {
+      "name": "join_channel",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入会渠道",
+      "example": "dy_member_microapp",
+      "_depth": 0
+    },
+    {
+      "name": "join_channel_extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "子渠道:小程序传裂变id",
+      "example": "3232",
+      "_depth": 0
+    },
+    {
+      "name": "biz_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务描述",
+      "example": "outer_id",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商家未开通会员功能（sub_code: isv.parameter-invalid:628005200）",
+      "action": "商家未开通会员功能",
+      "sub_code": "isv.parameter-invalid:628005200",
+      "sub_msg": "商家未开通会员功能"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求超时（sub_code: isp.service-error:628004002）",
+      "action": "请求超时",
+      "sub_code": "isp.service-error:628004002",
+      "sub_msg": "请求超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004401:调用ISV失败（sub_code: isv.business-failed:628004401）",
+      "action": "调用ISV失败",
+      "sub_code": "isv.business-failed:628004401",
+      "sub_msg": "628004401:调用ISV失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 628003001:当前手机号码已被他人绑定，请换个号码吧（sub_code: isv.parameter-invalid:628003001）",
+      "action": "当前手机号码已被他人绑定，请换个号码吧",
+      "sub_code": "isv.parameter-invalid:628003001",
+      "sub_msg": "628003001:当前手机号码已被他人绑定，请换个号码吧"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 628002001:您输入参数不正确，请检查后重试（sub_code: isv.parameter-invalid:628002001）",
+      "action": "参数不正确",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "628002001:您输入参数不正确，请检查后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004100:Duplicate entry '(1128,13057269,82231757866)' for key 'PRIMARY'（sub_code: isv.business-failed:628004100）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:628004100",
+      "sub_msg": "628004100:Duplicate entry '(1128,13057269,82231757866)' for key 'PRIMARY'"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004000:服务器开小差了，请稍后重试（sub_code: isv.business-failed:628004000）",
+      "action": "服务器开小差",
+      "sub_code": "isv.business-failed:628004000",
+      "sub_msg": "628004000:服务器开小差了，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004103:Query Error: BYTEKV_ERR_CAS_FAILED（sub_code: isv.business-failed:628004103）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:628004103",
+      "sub_msg": "628004103:Query Error: BYTEKV_ERR_CAS_FAILED"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004001:RPC通用错误（sub_code: isv.business-failed:628004001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:628004001",
+      "sub_msg": "628004001:RPC通用错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628215028:请求频率受到限制, key=outer_member_point_create_point_account:4597028_1711278893311261（sub_code: isv.business-failed:628215028）",
+      "action": "请求频率受限，请稍后重试",
+      "sub_code": "isv.business-failed:628215028",
+      "sub_msg": "628215028:请求频率受到限制, key=outer_member_point_create_point_account:4597028_1711278893311261"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628003005:测试手机号禁止入会线上非测试店铺商家（sub_code: isv.business-failed:628003005）",
+      "action": "628003005:测试手机号禁止入会线上非测试店铺商家",
+      "sub_code": "isv.business-failed:628003005",
+      "sub_msg": "628003005:测试手机号禁止入会线上非测试店铺商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628225002:JoinOuterShopMemberV2 GetLock failed. key=syncJoin:s:4597028_u:95283369217（sub_code: isv.business-failed:628225002）",
+      "action": "628225002:JoinOuterShopMemberV2 GetLock failed. key=syncJoin:s:4597028_u:95283369217",
+      "sub_code": "isv.business-failed:628225002",
+      "sub_msg": "628225002:JoinOuterShopMemberV2 GetLock failed. key=syncJoin:s:4597028_u:95283369217"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/JoinShopMemberWithMobileId?app_key=your_appkey_here&method=member.JoinShopMemberWithMobileId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628005200",
+      "sub_msg": "商家未开通会员功能"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/1806",
+  "updatedAt": "2022-04-29",
+  "_file_stem": "member-member-JoinShopMemberWithMobileId"
+}

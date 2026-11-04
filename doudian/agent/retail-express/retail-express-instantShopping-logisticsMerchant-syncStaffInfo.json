@@ -1,0 +1,143 @@
+{
+  "id": "doudian.retail-express.instantShopping.logisticsMerchant.syncStaffInfo",
+  "platform": "doudian",
+  "group": "retail-express",
+  "name": "instantShopping.logisticsMerchant.syncStaffInfo",
+  "description": "同步部门员工信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 合作快递【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operate_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作类型：1-新增，2-修改，3-启用，4-停用，5-删除",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ext_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单扩展信息，json格式，线下约定不同承运商的kv结构",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "staff_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "人员信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "人员状态（0-已启用，1-已停用，2-已删除）",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "organize_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "所属组织架构id，不填人员会挂在根节点",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人员ID",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人员名称",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "人员手机号，不支持修改",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "role_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "角色id（范围抖音提供）【功能权限】",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "perm_org_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "有权限的组织架构id列表，不传默认人员所属组织架构【数据权限】",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "is_test",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "测试标（0：正式数据，1：测试数据）如未传：测试环境（抖音boe&ppe）默认为测试数据，正式环境默认为正式数据",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.logisticsMerchant.syncStaffInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1584/7302",
+  "updatedAt": "2025-02-27",
+  "_file_stem": "retail-express-instantShopping-logisticsMerchant-syncStaffInfo"
+}

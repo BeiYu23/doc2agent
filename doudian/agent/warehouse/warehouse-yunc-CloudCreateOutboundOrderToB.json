@@ -1,0 +1,619 @@
+{
+  "id": "doudian.warehouse.yunc.CloudCreateOutboundOrderToB",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.CloudCreateOutboundOrderToB",
+  "description": "云仓出库接单toB",
+  "method": "GET",
+  "path": "/yunc/CloudCreateOutboundOrderToB",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓编码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "in_warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库仓库",
+      "example": "99",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_mode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "交货方式",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "erp_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ERP出库单号",
+      "example": "1234234",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "expected_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "应发数量",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "source_platform_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单来源平台编码",
+      "example": "2222",
+      "_depth": 0
+    },
+    {
+      "name": "source_platform_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单来源平台名称",
+      "example": "德化仓",
+      "_depth": 0
+    },
+    {
+      "name": "order_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "前台订单下单时间",
+      "example": "1612202522000",
+      "_depth": 0
+    },
+    {
+      "name": "review_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "审单时间",
+      "example": "1612202522000",
+      "_depth": 0
+    },
+    {
+      "name": "express_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "express_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递公司名称",
+      "example": "顺丰",
+      "_depth": 0
+    },
+    {
+      "name": "is_insure",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否保价",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "insure_amount",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "保价金额",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "express_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递产品类型",
+      "example": "shunfeng001",
+      "_depth": 0
+    },
+    {
+      "name": "express_product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递产品名称",
+      "example": "顺丰次日达",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺id",
+      "example": "2345",
+      "_depth": 0
+    },
+    {
+      "name": "shop_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺名",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "allow_merge",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否允许合单",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sender_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "发件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份名称",
+      "example": "安徽省",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "002",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称",
+      "example": "合肥市",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区编码",
+      "example": "003",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "地区名称",
+      "example": "蜀山区",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "004",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "闲林街道",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "西溪八方城",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "tel_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "收件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称",
+      "example": "合肥省",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "合肥市",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区名称",
+      "example": "蜀山区",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "001",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "西溪八方城",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地址",
+      "example": "北京",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "tel_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电话",
+      "example": "15677711111",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "轻拿轻放",
+      "_depth": 0
+    },
+    {
+      "name": "buyer_message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "买家备注",
+      "example": "放门口",
+      "_depth": 0
+    },
+    {
+      "name": "seller_message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卖家备注",
+      "example": "贵重物品",
+      "_depth": 0
+    },
+    {
+      "name": "order_details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单详情",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "出库单行号",
+      "example": "22323",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台货品编码",
+      "example": "23232",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP商品编码",
+      "example": "23234234",
+      "_depth": 1
+    },
+    {
+      "name": "sku_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称",
+      "example": "鲜花",
+      "_depth": 1
+    },
+    {
+      "name": "expected_qty",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单数量",
+      "example": "12",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存状态",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "barcode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品条码",
+      "example": "23423423",
+      "_depth": 1
+    },
+    {
+      "name": "category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目名称",
+      "example": "服饰",
+      "_depth": 1
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "生产日期",
+      "example": "1612202522000",
+      "_depth": 1
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "过期日期",
+      "example": "1612202522000",
+      "_depth": 1
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{key:val}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/CloudCreateOutboundOrderToB?app_key=your_appkey_here&method=yunc.CloudCreateOutboundOrderToB&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1198",
+  "updatedAt": "2021-09-17",
+  "_file_stem": "warehouse-yunc-CloudCreateOutboundOrderToB"
+}

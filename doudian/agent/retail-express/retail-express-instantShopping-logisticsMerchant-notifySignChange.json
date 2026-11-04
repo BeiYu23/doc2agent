@@ -1,0 +1,80 @@
+{
+  "id": "doudian.retail-express.instantShopping.logisticsMerchant.notifySignChange",
+  "platform": "doudian",
+  "group": "retail-express",
+  "name": "instantShopping.logisticsMerchant.notifySignChange",
+  "description": "签约信息变更通知",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 合作快递【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ext_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单扩展信息，json格式，线下约定不同承运商的kv结构",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "store_product_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商家的经营门店/仓配送产品信息（最大200条）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_type_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送产品，双方约定",
+      "example": "\"001\"",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商家的经营门店/仓id（经营子门店id）",
+      "example": "123",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.logisticsMerchant.notifySignChange&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1584/7301",
+  "updatedAt": "2025-03-03",
+  "_file_stem": "retail-express-instantShopping-logisticsMerchant-notifySignChange"
+}

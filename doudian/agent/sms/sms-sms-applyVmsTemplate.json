@@ -1,0 +1,208 @@
+{
+  "id": "doudian.sms.sms.applyVmsTemplate",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.applyVmsTemplate",
+  "description": "申请创建图文短信模板",
+  "method": "GET",
+  "path": "/sms/applyVmsTemplate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sms_account",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信account",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模板名称",
+      "example": "618大促",
+      "_depth": 0
+    },
+    {
+      "name": "template_theme",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模板主题",
+      "example": "营销视频短信",
+      "_depth": 0
+    },
+    {
+      "name": "contents",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "短信模板内容",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "source_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文本：text/string\njpg图片：image/jpg\npng图片：image/png \ngif图片：image/gif",
+      "example": "text/string",
+      "_depth": 1
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文本类型：传string utf-8，其他类型传image_url字段。\n文本内容结尾需要带上固定文案：TD退订、T退订或者N退订。",
+      "example": "内容",
+      "_depth": 1
+    },
+    {
+      "name": "image_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "当sourceType为image/jpg \n image/png image/gif时必填。总大小不超过1.9M。",
+      "example": "image/gif",
+      "_depth": 1
+    },
+    {
+      "name": "signature",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信签名",
+      "example": "测试旗舰店",
+      "_depth": 0
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板描述",
+      "example": "这是描述",
+      "_depth": 0
+    },
+    {
+      "name": "template_biz_sub_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模板业务子类型",
+      "example": "100000",
+      "_depth": 0
+    },
+    {
+      "name": "template_biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模板业务类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "版本",
+      "example": "v2",
+      "_depth": 0
+    },
+    {
+      "name": "is_public",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否公域短信",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "template_id",
+      "type": "string",
+      "description": "模板id",
+      "example": "VT_1234"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:628005100）",
+      "action": "业务处理失败，请检查请求参数",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求入参非法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "请检查请求入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "请求入参非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004001:RPC通用错误（sub_code: isv.business-failed:628004001）",
+      "action": "检查参数并稍后重试",
+      "sub_code": "isv.business-failed:628004001",
+      "sub_msg": "628004001:RPC通用错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 暂不支持的内容类型（sub_code: isv.parameter-invalid:628003401）",
+      "action": "请检查sourceType入参是否满足平台要求",
+      "sub_code": "isv.parameter-invalid:628003401",
+      "sub_msg": "暂不支持的内容类型"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图文内容不合法（sub_code: isv.business-failed:628003400）",
+      "action": "图文内容不合法",
+      "sub_code": "isv.business-failed:628003400",
+      "sub_msg": "图文内容不合法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/applyVmsTemplate?app_key=your_appkey_here&method=sms.applyVmsTemplate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "template_id": "VT_1234"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/4014",
+  "updatedAt": "2026-05-14",
+  "_file_stem": "sms-sms-applyVmsTemplate"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "doudian.miniapp.mini.fans.userInfo",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.fans.userInfo",
+  "description": "获取用户的购物粉丝团等级",
+  "method": "GET",
+  "path": "/mini/fans/userInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "author_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "达人uid",
+      "example": "20497802913801293",
+      "_depth": 0
+    },
+    {
+      "name": "dy_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "c端用户抖音openId",
+      "example": "fdhiejoadsf_912070213",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "intimacy",
+      "type": "mixed",
+      "description": "亲密度",
+      "example": "1000"
+    },
+    {
+      "name": "level",
+      "type": "mixed",
+      "description": "亲密度等级",
+      "example": "2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606010000:入参UserId非法（sub_code: isv.business-failed:606010000）",
+      "action": "传用户抖音openid",
+      "sub_code": "isv.business-failed:606010000",
+      "sub_msg": "606010000:入参UserId非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606000102:RPCError{PSM:[ecom.fans.club] Method:[MGetUserFansInfo] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1204 cds_key=THRIFT_EGRESS|cmp.ecom.open_trade:default:lf:|ecom.fans.club:default::|MGetUserFansInfo|prod| reas（sub_code: isv.business-failed:606000102）",
+      "action": "606000102:RPCError{PSM:[ecom.fans.club] Method:[MGetUserFansInfo] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1204 cds_key=THRIFT_EGRESS|cmp.ecom.open_trade:default:lf:|ecom.fans.club:default::|MGetUserFansInfo|prod| reas",
+      "sub_code": "isv.business-failed:606000102",
+      "sub_msg": "606000102:RPCError{PSM:[ecom.fans.club] Method:[MGetUserFansInfo] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1204 cds_key=THRIFT_EGRESS|cmp.ecom.open_trade:default:lf:|ecom.fans.club:default::|MGetUserFansInfo|prod| reas"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/materialsProductStatus?app_key=your_appkey_here&method=buyin.materialsProductStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "can_share": "true",
+            "join_alliance": "true",
+            "product_url": "https://haohuo.jinritemai.com/views/product/detail?id=798754293457134",
+            "promotion_status": "2",
+            "status": "0"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:606010000",
+      "sub_msg": "606010000:入参UserId非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/6932",
+  "updatedAt": "2024-10-18",
+  "_file_stem": "miniapp-mini-fans-userInfo"
+}

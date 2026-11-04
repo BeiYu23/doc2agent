@@ -1,0 +1,144 @@
+{
+  "id": "doudian.bill.order.downloadSettleItemToShop",
+  "platform": "doudian",
+  "group": "bill",
+  "name": "order.downloadSettleItemToShop",
+  "description": "1、通过url方式，下载文件生成结算账单下单接口，调用接口生成个download_id ，通过返回的download_id调用【/order/downloadToShop】查询下载url文件链接。如果当天账单数据未完全生成会拦截下载请求。\n2、如需非url",
+  "method": "GET",
+  "path": "/order/downloadSettleItemToShop",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 账单API（版本 V2.07）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "开始时间",
+      "example": "2021-02-01 17:06:49",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "结束时间",
+      "example": "2021-03-21 17:06:49",
+      "_depth": 0
+    },
+    {
+      "name": "time_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "时间类型 0:结算时间 1：下单时间",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单ID",
+      "example": "1222333333",
+      "_depth": 0
+    },
+    {
+      "name": "bill_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段已作废,勿填",
+      "example": "1234555",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品ID",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "pay_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结算账户 0:全部 1:微信（升级前） 2:微信 3:支付宝 4:合众支付 5:聚合账户",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "flow_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务类型，不传则默认为0 0:全部 1:巨量千川, 2:值点商城, 3:精选联盟  4:小店自卖",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "download_id",
+      "type": "string",
+      "description": "下载id，通过返回的download_id调用【/order/downloadToShop】查询下载url文件链接。",
+      "example": "DL202108191056192174226975"
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "description": "状态码",
+      "example": "100000"
+    },
+    {
+      "name": "code_msg",
+      "type": "string",
+      "description": "状态信息",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 账单明细未完全生成，暂不支持下载，避免下载的明细数据不全（sub_code: isv.business-failed:100027）",
+      "action": "等5分钟之后重试",
+      "sub_code": "isv.business-failed:100027",
+      "sub_msg": "账单明细未完全生成，暂不支持下载，避免下载的明细数据不全"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:100027",
+      "sub_msg": "账单明细未完全生成，暂不支持下载，避免下载的明细数据不全"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/46/1191",
+  "updatedAt": "2023-01-12",
+  "_file_stem": "bill-order-downloadSettleItemToShop"
+}

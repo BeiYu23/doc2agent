@@ -1,0 +1,141 @@
+{
+  "id": "doudian.alliance.buyin.doukePidCreate",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.doukePidCreate",
+  "description": "独立抖客PID创建",
+  "method": "GET",
+  "path": "/buyin/doukePidCreate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 抖客"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "media_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "推广媒体类型，0:其他, 1:微信, 2:QQ, 3:微博, 4:抖音, 5:头条",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "media_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道名称，没有media_id时自动创建渠道；存在media_id时无效",
+      "example": "微信1群",
+      "_depth": 0
+    },
+    {
+      "name": "media_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "渠道ID，和media_name二选一",
+      "example": "222",
+      "_depth": 0
+    },
+    {
+      "name": "site_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "推广位名称(最长10个字符)",
+      "example": "张三",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "pid",
+      "type": "string",
+      "description": "抖客PID",
+      "example": "dy_xxx_xxx_xxx"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效渠道类型（sub_code: isv.parameter-invalid:4201）",
+      "action": "无效渠道类型",
+      "sub_code": "isv.parameter-invalid:4201",
+      "sub_msg": "无效渠道类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效渠道名称（sub_code: isv.parameter-invalid:4200）",
+      "action": "无效渠道名称",
+      "sub_code": "isv.parameter-invalid:4200",
+      "sub_msg": "无效渠道名称"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 最多可创建2000个推广位（sub_code: isv.parameter-invalid:4202）",
+      "action": "最多可创建2000个推广位",
+      "sub_code": "isv.parameter-invalid:4202",
+      "sub_msg": "最多可创建2000个推广位"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 没有此渠道（sub_code: isv.business-failed:4198）",
+      "action": "没有此渠道",
+      "sub_code": "isv.business-failed:4198",
+      "sub_msg": "没有此渠道"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 需【独立抖客】角色授权后访问（sub_code: isv.parameter-invalid:8198）",
+      "action": "需【独立抖客】角色授权后访问",
+      "sub_code": "isv.parameter-invalid:8198",
+      "sub_msg": "需【独立抖客】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效推广位名称（sub_code: isv.business-failed:4199）",
+      "action": "无效推广位名称",
+      "sub_code": "isv.business-failed:4199",
+      "sub_msg": "无效推广位名称"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/doukePidCreate?app_key=your_appkey_here&method=buyin.doukePidCreate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "pid": "dy_xxx_xxx_xxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4201",
+      "sub_msg": "无效渠道类型"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/3081",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-doukePidCreate"
+}

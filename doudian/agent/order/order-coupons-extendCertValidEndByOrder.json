@@ -1,0 +1,154 @@
+{
+  "id": "doudian.order.coupons.extendCertValidEndByOrder",
+  "platform": "doudian",
+  "group": "order",
+  "name": "coupons.extendCertValidEndByOrder",
+  "description": "三方卡券延期",
+  "method": "GET",
+  "path": "/coupons/extendCertValidEndByOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品单id",
+      "example": "4910456132661405505",
+      "_depth": 0
+    },
+    {
+      "name": "batch_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "请求唯一编号",
+      "example": "batch000001",
+      "_depth": 0
+    },
+    {
+      "name": "extend_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "延期时间",
+      "example": "1647399907",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "延期原因。1-疫情原因，2-商家缺货，100-其他原因",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "op",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "操作人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "platform",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人平台",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "op_uid",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "操作人id",
+      "example": "1234",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ret_status",
+      "type": "string",
+      "description": "是否成功",
+      "example": "SUCCESS"
+    },
+    {
+      "name": "ret_code",
+      "type": "string",
+      "description": "错误码",
+      "example": "010027"
+    },
+    {
+      "name": "ret_message",
+      "type": "string",
+      "description": "错误描述",
+      "example": "只能延长卡券有效期，请检查"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 延期失败（sub_code: isv.business-failed:010027）",
+      "action": "延期失败",
+      "sub_code": "isv.business-failed:010027",
+      "sub_msg": "延期失败"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / extendTime不能为空（sub_code: isv.missing-parameter:000002）",
+      "action": "补充必要参数",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "extendTime不能为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单不存在（sub_code: isv.parameter-invalid:010006）",
+      "action": "修改参数",
+      "sub_code": "isv.parameter-invalid:010006",
+      "sub_msg": "订单不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/extendCertValidEndByOrder?app_key=your_appkey_here&method=coupons.extendCertValidEndByOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ret_code": "010027",
+        "ret_message": "只能延长卡券有效期，请检查",
+        "ret_status": "SUCCESS"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:010027",
+      "sub_msg": "延期失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1730",
+  "updatedAt": "2022-03-22",
+  "_file_stem": "order-coupons-extendCertValidEndByOrder"
+}

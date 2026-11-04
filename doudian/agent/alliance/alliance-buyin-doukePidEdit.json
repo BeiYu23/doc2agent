@@ -1,0 +1,92 @@
+{
+  "id": "doudian.alliance.buyin.doukePidEdit",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.doukePidEdit",
+  "description": "独立抖客PID编辑",
+  "method": "GET",
+  "path": "/buyin/doukePidEdit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 抖客"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "PID",
+      "example": "dy_234_5767",
+      "_depth": 0
+    },
+    {
+      "name": "site_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "推广位名称，不能和已有的重复(最长10个字符)",
+      "example": "微信2群",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:4097）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效 PID（sub_code: isv.parameter-invalid:4102）",
+      "action": "参数校验失败：无效 PID",
+      "sub_code": "isv.parameter-invalid:4102",
+      "sub_msg": "参数校验失败：无效 PID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 推广位名称重复，请更换（sub_code: isv.parameter-invalid:4204）",
+      "action": "推广位名称重复，请更换",
+      "sub_code": "isv.parameter-invalid:4204",
+      "sub_msg": "推广位名称重复，请更换"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/doukePidEdit?app_key=your_appkey_here&method=buyin.doukePidEdit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/3080",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-doukePidEdit"
+}

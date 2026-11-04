@@ -1,0 +1,342 @@
+{
+  "id": "doudian.logistics.instantShopping.distribution.notifyDeliveryStatus",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "instantShopping.distribution.notifyDeliveryStatus",
+  "description": "抖音侧订单状态变更回调",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音运单id(以此id为主)",
+      "example": "\"a_7372453214286987305\"",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配送商运单id",
+      "example": "\"DH2024052459066015\"",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音为每个配送商分配的标识信息",
+      "example": "\"MOCK_DELIVERY\"",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "运单状态，见附录F02",
+      "example": "102",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "状态变更时间，格式为秒时间戳",
+      "example": "1716537685",
+      "_depth": 0
+    },
+    {
+      "name": "rider_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手姓名",
+      "example": "\"朱涛\"",
+      "_depth": 0
+    },
+    {
+      "name": "rider_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手电话",
+      "example": "\"13684541145\"",
+      "_depth": 0
+    },
+    {
+      "name": "rider_lat",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手当前所在纬度（火星坐标系GCJ02）",
+      "example": "39.973390",
+      "_depth": 0
+    },
+    {
+      "name": "rider_lng",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手当前所在经度（火星坐标系GCJ02）",
+      "example": "116.347004",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_code",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "取消原因code，取消态必填",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取消原因描述，取消态必填",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "notify_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "通知时间",
+      "example": "1716537685",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_rider_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送商骑手id",
+      "example": "\"4575457\"",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "取消费用，单位：分，取消运单时必填",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_reverse",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "返件相关信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "reverse_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "返件单ID",
+      "example": "7257267285",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "返件状态枚举：\n- 返件初始化：100\n- 返件中：200\n- 返件完成：300\n- 返件取消：400\n- 无需返件：900",
+      "example": "900",
+      "_depth": 1
+    },
+    {
+      "name": "delivered_images",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "妥投举证图片；（图片url，如果是多个，通过逗号分隔）",
+      "example": "\"https://media-order-jd.imdada.cn/order-finish/d640f142063a40ccb919439fc413d221.jpeg,https://media-order-jd.imdada.cn/order-finish/031652144dcf4ff6be0e15f3ab5078ee.jpeg\"",
+      "_depth": 0
+    },
+    {
+      "name": "delivered_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "妥投描述",
+      "example": "\"放在家门口\"",
+      "_depth": 0
+    },
+    {
+      "name": "rider_im_open_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "骑手IM功能开启标记，0：未知；1：开启；2：不开启",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "delivery_id",
+      "type": "string",
+      "description": "抖音运单id",
+      "example": "\"DHT46816515646\""
+    },
+    {
+      "name": "distributor_delivery_id",
+      "type": "string",
+      "description": "配送商运单id",
+      "example": "\"ecom_732542145416\""
+    },
+    {
+      "name": "notify_time",
+      "type": "mixed",
+      "description": "通知时间",
+      "example": "1717397898"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2075000311:取货码同步失败（sub_code: isv.business-failed:2075000311）",
+      "action": "2075000311:取货码同步失败",
+      "sub_code": "isv.business-failed:2075000311",
+      "sub_msg": "2075000311:取货码同步失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1075020309:UpdateDelivery lock err（sub_code: isv.business-failed:1075020309）",
+      "action": "1075020309:UpdateDelivery lock err",
+      "sub_code": "isv.business-failed:1075020309",
+      "sub_msg": "1075020309:UpdateDelivery lock err"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 999001001:RPCError{PSM:[life.distribution.call_delivery] Method:[NotifyCallStatus] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[1000021001] BizStatusMessage:[呼单锁定失败]}（sub_code: isv.business-failed:999001001）",
+      "action": "999001001:RPCError{PSM:[life.distribution.call_delivery] Method:[NotifyCallStatus] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[1000021001] BizStatusMessage:[呼单锁定失败]}",
+      "sub_code": "isv.business-failed:999001001",
+      "sub_msg": "999001001:RPCError{PSM:[life.distribution.call_delivery] Method:[NotifyCallStatus] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[1000021001] BizStatusMessage:[呼单锁定失败]}"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1075039998:服务异常，请稍后再试#（sub_code: isv.business-failed:1075039998）",
+      "action": "1075039998:服务异常，请稍后再试#",
+      "sub_code": "isv.business-failed:1075039998",
+      "sub_msg": "1075039998:服务异常，请稍后再试#"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/getCatePropertyV2?app_key=your_appkey_here&method=product.getCatePropertyV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "category_id": "31918",
+            "cid": "31918",
+            "diy_type": "1",
+            "has_sub_property": "false",
+            "important_type": "1",
+            "measure_templates": [
+              {
+                "display_name": "xx模版",
+                "template_id": "23",
+                "value_modules": [
+                  {
+                    "input_type": "input",
+                    "module_id": "123",
+                    "prefix": "\"\"",
+                    "suffix": "\"\"",
+                    "units": [
+                      {
+                        "unit_id": "1",
+                        "unit_name": "克"
+                      }
+                    ],
+                    "validate_rule": {
+                      "data_type": "integer",
+                      "max": "10",
+                      "min": "2",
+                      "precision": "2",
+                      "time_format": "YYYY-MM-DD",
+                      "unit_rules": [
+                        {
+                          "max": "10",
+                          "min": "2",
+                          "unit_id": "1"
+                        }
+                      ]
+                    },
+                    "value_required": "true",
+                    "values": [
+                      {
+                        "value_name": "棉"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "multi_select_max": "5",
+            "options": [
+              {
+                "name": "ON:THE BODY/安宝笛",
+                "sequence": "2",
+                "value": "1062254699",
+                "value_id": "1"
+              }
+            ],
+            "property_id": "14133",
+            "property_name": "\"材质\"",
+            "property_type": "1",
+            "relation_id": "1",
+            "required": "0",
+            "sequence": "2",
+            "status": "1",
+            "type": "text"
+          }
+        ],
+        "tpl_type": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2075000311",
+      "sub_msg": "2075000311:取货码同步失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/6585",
+  "updatedAt": "2024-06-14",
+  "_file_stem": "logistics-instantShopping-distribution-notifyDeliveryStatus"
+}

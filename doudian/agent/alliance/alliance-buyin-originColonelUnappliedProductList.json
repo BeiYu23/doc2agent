@@ -1,0 +1,176 @@
+{
+  "id": "doudian.alliance.buyin.originColonelUnappliedProductList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.originColonelUnappliedProductList",
+  "description": "团长获取可提报二级团长活动的商品列表",
+  "method": "GET",
+  "path": "/buyin/originColonelUnappliedProductList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页条数，最大20",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "活动ID",
+      "example": "54321",
+      "_depth": 0
+    },
+    {
+      "name": "product_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称 or 商品ID",
+      "example": "一个商品",
+      "_depth": 0
+    },
+    {
+      "name": "retrieve_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "获取模式。0: 分页模式（默认），最多返回10000条数据；1: 游标模式（推荐），返回条数无限制",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cursor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "游标。首页不需要传，请求下一页时需传入上一次请求响应的next_cursor值",
+      "example": "cefe2r3r2332dcd2/ddf32",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "数据",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "100"
+    },
+    {
+      "name": "next_cursor",
+      "type": "string",
+      "description": "下一页游标。游标模式下返回，最后一页返回空",
+      "example": "ee2k23i492njwtio5j435ij34n5n34"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "4200:账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/originColonelUnappliedProductList?app_key=your_appkey_here&method=buyin.originColonelUnappliedProductList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "ad_commission_rate": "10.5",
+            "ad_service_rate": "5.5",
+            "applied_by_others": "true",
+            "can_apply": "true",
+            "can_promote": "true",
+            "cannot_apply_reason": "商品未开启普通计划，暂不支持报名",
+            "category_id": "1",
+            "category_name": "1对应的类目名称",
+            "commission_rate": "10.5",
+            "cos_type": "1",
+            "origin_activity_id": "51261",
+            "origin_activity_name": "原始团长名称",
+            "product_id": "73618234123",
+            "product_img": "https:www.baidu.com",
+            "product_name": "一个商品",
+            "product_price": "100",
+            "product_stock": "100",
+            "promote_end_time": "2022-02-20",
+            "promote_start_time": "2022-01-10",
+            "service_rate": "10.5",
+            "update_time": "1688356428"
+          }
+        ],
+        "next_cursor": "ee2k23i492njwtio5j435ij34n5n34",
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1677",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-originColonelUnappliedProductList"
+}

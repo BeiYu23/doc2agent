@@ -1,0 +1,96 @@
+{
+  "id": "doudian.retail-store.sendHome.msgComponent.getToken",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "sendHome.msgComponent.getToken",
+  "description": "获取消息组件token",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店id，如果不传默认用总店维度获取消息",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "outer_store_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部门店编码，如果传了store_id优先使用store_id",
+      "example": "abc",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "token",
+      "type": "string",
+      "description": "消息组件token",
+      "example": "abcde"
+    },
+    {
+      "name": "expire_time",
+      "type": "mixed",
+      "description": "过期时间戳 秒级",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 5000001:未查询到门店组织信息（sub_code: isv.business-failed:5000001）",
+      "action": "5000001:未查询到门店组织信息",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "5000001:未查询到门店组织信息"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/iop/waybillReturn?app_key=your_appkey_here&method=iop.waybillReturn&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "delivery_id": "982734",
+        "pack_list": [
+          {
+            "company_code": "jd",
+            "deliver_id": "982734",
+            "ship_num": "1",
+            "track_no": "12345"
+          }
+        ],
+        "return_result": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "5000001:未查询到门店组织信息"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/6750",
+  "updatedAt": "2024-08-21",
+  "_file_stem": "retail-store-sendHome-msgComponent-getToken"
+}

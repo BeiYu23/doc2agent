@@ -1,0 +1,142 @@
+{
+  "id": "doudian.logistics-provider.inspection.printCallback",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "inspection.printCallback",
+  "description": "qic外部系统打印回调",
+  "method": "GET",
+  "path": "/inspection/printCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: , 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "agencyId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "质检机构 ID；QMS 仍需根据任务数据校验，不能只信任入参。",
+      "example": "6",
+      "_depth": 0
+    },
+    {
+      "name": "operatorPhone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "映射为原打印回调的操作人信息；手机号映射失败不卡流程。",
+      "example": "操作人手机号",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人姓名",
+      "example": "操作人姓名",
+      "_depth": 0
+    },
+    {
+      "name": "batchList",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "按批次执行，ngtc 确认同批次完成才会回调",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "printTime",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "打印时间戳",
+      "example": "1790065409",
+      "_depth": 1
+    },
+    {
+      "name": "inspectionBatchId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "质检批次号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "inspectionRecheckFinishTime",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "复核完成时间",
+      "example": "1790065000",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "打印状态，1-失败，2-成功",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "string",
+      "description": "结果编码",
+      "example": "10000"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "结果描述",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务异常（sub_code: isv.business-failed:500）",
+      "action": "排查 or重试",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "业务异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/inspection/printCallback?app_key=your_appkey_here&method=inspection.printCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "10000",
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "业务异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8646",
+  "updatedAt": "2026-10-08",
+  "_file_stem": "logistics-provider-inspection-printCallback"
+}

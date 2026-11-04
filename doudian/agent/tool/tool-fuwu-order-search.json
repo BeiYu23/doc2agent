@@ -1,0 +1,220 @@
+{
+  "id": "doudian.tool.fuwu.order.search",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "fuwu.order.search",
+  "description": "服务市场商家订购搜索接口",
+  "method": "GET",
+  "path": "/fuwu/order/search",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "订单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "buyer_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "买家id（买家是购买服务市场服务的用户，比如商家）",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "service_type_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "服务类型：1-软件类",
+      "example": "[1]",
+      "_depth": 0
+    },
+    {
+      "name": "order_status_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "订单状态：1-订单创建，105-订单已支付，2-订单待履约，3-订单履约中，4-订单取消（关闭)，5-订单完成",
+      "example": "[1]",
+      "_depth": 0
+    },
+    {
+      "name": "payment_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "支付流水号",
+      "example": "GTPA6586364464625012047115",
+      "_depth": 0
+    },
+    {
+      "name": "time_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选时间类型：1-下单时间，2-支付时间，3-服务开始时间，4-服务结束时间",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选开始时间，匹配时间类型，时间戳，单位：秒",
+      "example": "1716376322",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选结束时间，匹配时间类型，时间戳，单位：秒",
+      "example": "1716376422",
+      "_depth": 0
+    },
+    {
+      "name": "order_by",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "排序条件：1-服务结束时间，2-订单创建时间，3-服务开始时间，4-支付时间",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "order_asc",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "排序类型，小到大或大到小，默认大到小",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页数，第一页从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页订单数，最大100",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "orders",
+      "type": "array",
+      "description": "订单列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "订单总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1000001）",
+      "action": "根据错误描述修改请求参数",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:1000000）",
+      "action": "请求重试，一直失败请联系平台",
+      "sub_code": "isp.service-error:1000000",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统错误（用于内部识别异常原因）（sub_code: isp.service-error:1000003）",
+      "action": "请求重试，一直失败请联系平台",
+      "sub_code": "isp.service-error:1000003",
+      "sub_msg": "系统错误（用于内部识别异常原因）"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统错误（用于内部识别异常原因）（sub_code: isp.service-error:1000002）",
+      "action": "请求重试，一直失败请联系平台",
+      "sub_code": "isp.service-error:1000002",
+      "sub_msg": "系统错误（用于内部识别异常原因）"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/fuwu/order/search?app_key=your_appkey_here&method=fuwu.order.search&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "orders": [
+          {
+            "order": {
+              "buyer_id": "2",
+              "buyer_name": "xx店铺",
+              "create_time": "1716376222",
+              "num": "1",
+              "order_id": "12323241243",
+              "order_status": "1",
+              "pay_amount": "100",
+              "pay_time": "1716376322",
+              "pay_type": "16",
+              "price": "100",
+              "remark": "备注",
+              "service_begin_time": "1716376322",
+              "service_end_time": "1716377322",
+              "service_id": "23",
+              "service_name": "这是一个服务",
+              "update_time": "1716376232"
+            }
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/6529",
+  "updatedAt": "2024-07-01",
+  "_file_stem": "tool-fuwu-order-search"
+}

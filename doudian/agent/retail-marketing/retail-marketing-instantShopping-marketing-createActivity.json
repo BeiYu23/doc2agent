@@ -1,0 +1,297 @@
+{
+  "id": "doudian.retail-marketing.instantShopping.marketing.createActivity",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "instantShopping.marketing.createActivity",
+  "description": "创建活动",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "活动信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "activity_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动标题，最大25字符",
+      "example": "测试活动标题",
+      "_depth": 1
+    },
+    {
+      "name": "activity_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动类型，10：限时限量购，20：店铺券； 30：商品券",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "activity_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动子类型， 101限时秒杀，102，普通降价促销",
+      "example": "101",
+      "_depth": 1
+    },
+    {
+      "name": "activity_base_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动规则",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "limit_activity_stock",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否限制活动库存，0：不限活动库存；1：限活动库存",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "activity_start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动开始时间，秒",
+      "example": "1711265959",
+      "_depth": 2
+    },
+    {
+      "name": "activity_end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动结束时间，秒",
+      "example": "1711266959",
+      "_depth": 2
+    },
+    {
+      "name": "order_cancel_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "订单取消时间，秒",
+      "example": "300",
+      "_depth": 2
+    },
+    {
+      "name": "activity_stock_sold_setting",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动库存售罄策略，0：恢复为原价继续售卖；1：停止售卖，商品标示“已抢光”",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "warm_up",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否预热，目前仅支持不预热",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "coupon_base_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "券规则",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "credit",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "优惠金额，分",
+      "example": "100",
+      "_depth": 2
+    },
+    {
+      "name": "threshold",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门槛，满减券专属",
+      "example": "500",
+      "_depth": 2
+    },
+    {
+      "name": "discount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "折扣，打折券专属",
+      "example": "9.8",
+      "_depth": 2
+    },
+    {
+      "name": "activity_start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "领取开始时间",
+      "example": "1711265959",
+      "_depth": 2
+    },
+    {
+      "name": "activity_end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "领取结束时间",
+      "example": "1711266959",
+      "_depth": 2
+    },
+    {
+      "name": "apply_way",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "有效开始时间类型，1：领取后xx日-xx日有效， 2：领取后x天内有效",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "apply_start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "使用开始时间，秒",
+      "example": "1711265959",
+      "_depth": 2
+    },
+    {
+      "name": "apply_end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "使用结束时间，秒",
+      "example": "1711266959",
+      "_depth": 2
+    },
+    {
+      "name": "valid_period",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "有效期，天",
+      "example": "7",
+      "_depth": 2
+    },
+    {
+      "name": "total_amount",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "券发放量",
+      "example": "100",
+      "_depth": 2
+    },
+    {
+      "name": "max_apply_times",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每人最多可领取次数",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "幂等ID，长度最大100个字符",
+      "example": "1111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "activity_id",
+      "type": "string",
+      "description": "活动ID",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-40000）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 越权错误（sub_code: isv.parameter-invalid:-50001）",
+      "action": "检查当前用户是否有权限操作",
+      "sub_code": "isv.parameter-invalid:-50001",
+      "sub_msg": "越权错误"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 系统繁忙，请稍后重试（sub_code: isp.service-timeout-error:-10000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-timeout-error:-10000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请联系技术人员排查（sub_code: isp.service-error:-11450）",
+      "action": "系统异常，请联系技术人员排查",
+      "sub_code": "isp.service-error:-11450",
+      "sub_msg": "系统异常，请联系技术人员排查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comcrossborder/msg/push?app_key=your_appkey_here&method=crossborder.msg.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/6385",
+  "updatedAt": "2024-05-11",
+  "_file_stem": "retail-marketing-instantShopping-marketing-createActivity"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "doudian.alliance.buyin.colonelMultiParseActivityUrl",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.colonelMultiParseActivityUrl",
+  "description": "批量解析团长活动推广链接",
+  "method": "GET",
+  "path": "/buyin/colonelMultiParseActivityUrl",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_url",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "活动商品链接列表，最多20个",
+      "example": "[\"https://haohuo.jinritemai.com/views/product/detail?id=3566195499839129569&ins_activity_param=eNkdXXR\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "results",
+      "type": "string",
+      "description": "结果集，key：活动商品链接，value:链接信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/colonelMultiParseActivityUrl?app_key=your_appkey_here&method=buyin.colonelMultiParseActivityUrl&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "results": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/2429",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-colonelMultiParseActivityUrl"
+}

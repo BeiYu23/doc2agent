@@ -1,0 +1,168 @@
+{
+  "id": "doudian.alliance.buyin.orienPlanList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.orienPlanList",
+  "description": "商品定向计划查询",
+  "method": "GET",
+  "path": "/buyin/orienPlanList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.06）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "分页。最小值取1，最大取100",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页数目。默认20，最大40",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "按商品ID搜索",
+      "example": "3482204602722574252",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "按商品名称搜索",
+      "example": "测试商品",
+      "_depth": 0
+    },
+    {
+      "name": "orien_plan_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "定向计划ID",
+      "example": "1231",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "number",
+      "description": "定向计划总数",
+      "example": "122"
+    },
+    {
+      "name": "orien_plans",
+      "type": "array",
+      "description": "商品定向计划列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商家已被关闭推广，无法使用平台功能（sub_code: isv.business-failed:4102）",
+      "action": "商家已被关闭推广，无法使用平台功能",
+      "sub_code": "isv.business-failed:4102",
+      "sub_msg": "商家已被关闭推广，无法使用平台功能"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍候再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍候再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍候再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4101:商家未同意百应协议（sub_code: isv.business-failed:4101）",
+      "action": "4101:商家未同意百应协议",
+      "sub_code": "isv.business-failed:4101",
+      "sub_msg": "4101:商家未同意百应协议"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4096:获取店铺ID失败（sub_code: isv.business-failed:4096）",
+      "action": "4096:获取店铺ID失败",
+      "sub_code": "isv.business-failed:4096",
+      "sub_msg": "4096:获取店铺ID失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/orienPlanList?app_key=your_appkey_here&method=buyin.orienPlanList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "orien_plans": [
+          {
+            "orien_plans": [
+              {
+                "apply_type": "1",
+                "audit_type": "1",
+                "author_level": "1",
+                "cos_ratio": "50",
+                "cover": "https://tosv.boe.byted.org/obj/temai/7e92a281163e33cedef99d8735d1e90bwww828-708",
+                "create_time": "1625480546",
+                "end_time": "1625480546",
+                "kol_num": "1",
+                "new_cos_ratio": "0",
+                "new_cos_ratio_start_time": "1625480546",
+                "orien_plan_id": "111",
+                "plan_status": "2",
+                "price": "120",
+                "product_id": "3482204602722574252",
+                "product_name": "测试商品",
+                "restricted_type": "1",
+                "start_time": "1625480546"
+              }
+            ],
+            "product_id": "3482204602722574252"
+          }
+        ],
+        "total": "122"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/705",
+  "updatedAt": "2021-08-06",
+  "_file_stem": "alliance-buyin-orienPlanList"
+}

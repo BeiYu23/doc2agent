@@ -1,0 +1,160 @@
+{
+  "id": "doudian.logistics-provider.power.sendServiceMessage",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "power.sendServiceMessage",
+  "description": "客服发消息",
+  "method": "GET",
+  "path": "/power/sendServiceMessage",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sessionId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "会话id",
+      "example": "11111112222",
+      "_depth": 0
+    },
+    {
+      "name": "dealerId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "客服id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "messageId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "消息id",
+      "example": "45566",
+      "_depth": 0
+    },
+    {
+      "name": "actionTime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间",
+      "example": "1677478601",
+      "_depth": 0
+    },
+    {
+      "name": "messageType",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "消息类型，0是文本，1是图片",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文本内容，当消息类型为0时为必填",
+      "example": "欢迎进线",
+      "_depth": 0
+    },
+    {
+      "name": "attachUrl",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片内容的url，当消息类型为1时为必填",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务商编码",
+      "example": "powertestexpress",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:10000）",
+      "action": "必填项校验失败或未按文档要求传参数",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常（sub_code: isv.business-failed:10002）",
+      "action": "服务内部异常",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 会话id不存在（sub_code: isv.business-failed:10003）",
+      "action": "会话id不存在",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "会话id不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图片大小超出阀值（sub_code: isv.business-failed:12001）",
+      "action": "图片大小超出阀值",
+      "sub_code": "isv.business-failed:12001",
+      "sub_msg": "图片大小超出阀值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图片格式不兼容（sub_code: isv.business-failed:12002）",
+      "action": "-",
+      "sub_code": "isv.business-failed:12002",
+      "sub_msg": "图片格式不兼容"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图片无法访问（sub_code: isv.business-failed:12003）",
+      "action": "根据图片url无法正确访问",
+      "sub_code": "isv.business-failed:12003",
+      "sub_msg": "图片无法访问"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/sendServiceMessage?app_key=your_appkey_here&method=power.sendServiceMessage&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2995",
+  "updatedAt": "2023-02-27",
+  "_file_stem": "logistics-provider-power-sendServiceMessage"
+}

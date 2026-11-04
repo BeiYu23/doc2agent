@@ -1,0 +1,190 @@
+{
+  "id": "doudian.product.product.qualityTask",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.qualityTask",
+  "description": "商品每日诊断任务查询API",
+  "method": "GET",
+  "path": "/product/qualityTask",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "brief_only",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否只返回简要信息，不写默认false",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_num_total",
+      "type": "number",
+      "description": "总共需要诊断的商品数",
+      "example": "10"
+    },
+    {
+      "name": "product_num_finished",
+      "type": "number",
+      "description": "已经诊断过的商品数",
+      "example": "10"
+    },
+    {
+      "name": "task_status",
+      "type": "number",
+      "description": "任务状态，0-初始化，1-进行中，2-已完成",
+      "example": "2"
+    },
+    {
+      "name": "product_num_to_improve_total",
+      "type": "number",
+      "description": "待优化商品数，仅brief_only为false返回",
+      "example": "10"
+    },
+    {
+      "name": "problem_num_total",
+      "type": "number",
+      "description": "可优化项总数，仅brief_only为false返回",
+      "example": "10"
+    },
+    {
+      "name": "problem_num_to_improve",
+      "type": "number",
+      "description": "待优化项数量，仅brief_only为false返回",
+      "example": "10"
+    },
+    {
+      "name": "task_finish_time",
+      "type": "string",
+      "description": "任务完成时间，仅brief_only为false返回",
+      "example": "2021-09-07 01:21:46"
+    },
+    {
+      "name": "problem_type_distribution",
+      "type": "array",
+      "description": "问题类型分布，仅brief_only为false返回",
+      "example": ""
+    },
+    {
+      "name": "task_id",
+      "type": "number",
+      "description": "任务ID",
+      "example": "15293"
+    },
+    {
+      "name": "standard_rate",
+      "type": "string",
+      "description": "达标率，百分比",
+      "example": "10"
+    },
+    {
+      "name": "is_standard",
+      "type": "boolean",
+      "description": "是否达标",
+      "example": "true"
+    },
+    {
+      "name": "meet_standard_num",
+      "type": "number",
+      "description": "达标商品数",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:2030001）",
+      "action": "等待后重试",
+      "sub_code": "isp.service-error:2030001",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 处理超时（sub_code: isv.business-failed:2030002）",
+      "action": "等待后重试",
+      "sub_code": "isv.business-failed:2030002",
+      "sub_msg": "处理超时"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必要参数（sub_code: isv.missing-parameter:2030003）",
+      "action": "补充必要参数",
+      "sub_code": "isv.missing-parameter:2030003",
+      "sub_msg": "缺少必要参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数值非法（sub_code: isv.parameter-invalid:2030004）",
+      "action": "按要求填写参数值",
+      "sub_code": "isv.parameter-invalid:2030004",
+      "sub_msg": "参数值非法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 读取数据失败（sub_code: isp.service-error:2030201）",
+      "action": "等待后重试",
+      "sub_code": "isp.service-error:2030201",
+      "sub_msg": "读取数据失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2030013:读取任务失败（sub_code: isv.business-failed:2030013）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2030013",
+      "sub_msg": "2030013:读取任务失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/qualityTask?app_key=your_appkey_here&method=product.qualityTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_standard": "true",
+        "meet_standard_num": "1",
+        "problem_num_to_improve": "10",
+        "problem_num_total": "10",
+        "problem_type_distribution": [
+          {
+            "num": "2",
+            "type_key": "1",
+            "type_name": "商品信息不规范"
+          }
+        ],
+        "product_num_finished": "10",
+        "product_num_to_improve_total": "10",
+        "product_num_total": "10",
+        "standard_rate": "10",
+        "task_finish_time": "2021-09-07 01:21:46",
+        "task_id": "15293",
+        "task_status": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:2030001",
+      "sub_msg": "系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1829",
+  "updatedAt": "2021-09-08",
+  "_file_stem": "product-product-qualityTask"
+}

@@ -1,0 +1,165 @@
+{
+  "id": "doudian.video.shopVideo.listRelatableProduct",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.listRelatableProduct",
+  "description": "查询短视频可关联商品列表",
+  "method": "GET",
+  "path": "/shopVideo/listRelatableProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品id列表",
+      "example": "[1234567]",
+      "_depth": 0
+    },
+    {
+      "name": "sell_num_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "销量左区间",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "sell_num_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "销量右区间",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "category_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "类目id列表",
+      "example": "34",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称",
+      "example": "衬衫",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_list",
+      "type": "array",
+      "description": "商品列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "100"
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "当前页",
+      "example": "1"
+    },
+    {
+      "name": "page_size",
+      "type": "mixed",
+      "description": "每页数量",
+      "example": "20"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "10001",
+      "meaning": "请求部分失败 / 查询商品失败（sub_code: isv.business-part-failed:628004001）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-part-failed:628004001",
+      "sub_msg": "查询商品失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "根据提示文案调整请求参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/listRelatableProduct?app_key=your_appkey_here&method=shopVideo.listRelatableProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "page": "1",
+        "page_size": "20",
+        "product_list": [
+          {
+            "check_status": "3",
+            "draft_status": "1",
+            "img": "https://p3-aio.ecombdimg.com/obj/ecom-shop-material/lyRChMMc_m_2edc6702f8657f0b60ff6c4e0c8cf0ac_sx_38948_www720-720",
+            "market_price": "10000",
+            "name": "衬衫",
+            "product_id": "1234567",
+            "status": "0",
+            "stock_num": "3"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 10001,
+      "msg": "请求部分失败",
+      "sub_code": "isv.business-part-failed:628004001",
+      "sub_msg": "查询商品失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7149",
+  "updatedAt": "2024-12-19",
+  "_file_stem": "video-shopVideo-listRelatableProduct"
+}

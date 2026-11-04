@@ -1,0 +1,98 @@
+{
+  "id": "doudian.phone-industry.maintenance.fulfill.supplierReturn",
+  "platform": "doudian",
+  "group": "phone-industry",
+  "name": "maintenance.fulfill.supplierReturn",
+  "description": "维修服务商寄回主品",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 手机行业管理（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "reverse_express_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "逆向物流单号（服务商寄回主品）",
+      "example": "JD123456789",
+      "_depth": 0
+    },
+    {
+      "name": "reverse_express_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "逆向物流服务商编码（见附录）",
+      "example": "jd",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务商寄回主品时间（填写物流单号时间）",
+      "example": "2025-11-27 12:30:00",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务实体编码，与平台对接的服务商枚举值",
+      "example": "nanjingxingcan",
+      "_depth": 0
+    },
+    {
+      "name": "fulfill_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一次履约发起行为的唯一标识",
+      "example": "BSO117077558018",
+      "_depth": 0
+    },
+    {
+      "name": "fulfill_operation_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "履约操作类型：服务商寄回主品",
+      "example": "SupplierReturn",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=maintenance.fulfill.supplierReturn&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1520/7893",
+  "updatedAt": "2025-11-27",
+  "_file_stem": "phone-industry-maintenance-fulfill-supplierReturn"
+}

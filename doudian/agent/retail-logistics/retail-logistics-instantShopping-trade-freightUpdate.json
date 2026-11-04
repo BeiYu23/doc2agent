@@ -1,0 +1,458 @@
+{
+  "id": "doudian.retail-logistics.instantShopping.trade.freightUpdate",
+  "platform": "doudian",
+  "group": "retail-logistics",
+  "name": "instantShopping.trade.freightUpdate",
+  "description": "即时零售运费模板更新接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "运费模板",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "模板名称",
+      "_depth": 1
+    },
+    {
+      "name": "calculate_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "解析column中calculate_type字段：计价方式-1.按重量计价 2.按数量计价",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "product_city",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发货城市id",
+      "example": "110000",
+      "_depth": 1
+    },
+    {
+      "name": "product_province",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发货省份id",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "fixed_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "固定运费金额（单位：分）",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "rule_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计价方式 0:阶梯计价 1:固定运费 2:卖家包邮 6:混合履约模式；固定值传6",
+      "example": "6",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "模板id",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "transfer_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "固定值1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "columns",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "运费规则",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "add_weight_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "续重价格(单位:元) 按重量计价必填 0.00-30.00之间的小数，小数点后两位",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "add_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "续件(单位:个) 按数量计价必填 1-999的整数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "over_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "满xx重量包邮 单位：kg",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "province_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "当前规则生效的地址，统一以List<Struct>结构返回，该结构为嵌套结构。对应的json格式为[{\"id\":\"32\",\"children\":[{\"id\":\"320500\",\"children\":[{\"id\":\"320508\",\"children\":[{\"id\":\"320508014\"},{\"id\":\"320508004\"}]}]}]}] 注意：返回的为最新的四级地址版本（地址存储升级变更的可能，以最新的返回）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "地址id，第一级是省份、第二级是城市、第三级是区、第四级是街道",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "children",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "当前规则生效的地址，统一以List<Struct>结构返回，该结构为嵌套结构。对应的json格式为[{\"id\":\"32\",\"children\":[{\"id\":\"320500\",\"children\":[{\"id\":\"320508\",\"children\":[{\"id\":\"320508014\"},{\"id\":\"320508004\"}]}]}]}] 注意：返回的为最新的四级地址版本（地址存储升级变更的可能，以最新的返回）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "children",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "当前规则生效的地址，统一以List<Struct>结构返回，该结构为嵌套结构。对应的json格式为[{\"id\":\"32\",\"children\":[{\"id\":\"320500\",\"children\":[{\"id\":\"320508\",\"children\":[{\"id\":\"320508014\"},{\"id\":\"320508004\"}]}]}]}] 注意：返回的为最新的四级地址版本（地址存储升级变更的可能，以最新的返回）",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "children",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "当前规则生效的地址，统一以List<Struct>结构返回，该结构为嵌套结构。对应的json格式为[{\"id\":\"32\",\"children\":[{\"id\":\"320500\",\"children\":[{\"id\":\"320508\",\"children\":[{\"id\":\"320508014\"},{\"id\":\"320508004\"}]}]}]}] 注意：返回的为最新的四级地址版本（地址存储升级变更的可能，以最新的返回）",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "地址id，第一级是省份、第二级是城市、第三级是区、第四级是街道",
+      "example": "11000000",
+      "_depth": 5
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "地址id，第一级是省份、第二级是城市、第三级是区、第四级是街道",
+      "example": "110000",
+      "_depth": 4
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "地址id，第一级是省份、第二级是城市、第三级是区、第四级是街道",
+      "example": "1100",
+      "_depth": 3
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "限售自动解除时间戳，单位秒",
+      "example": "-",
+      "_depth": 1
+    },
+    {
+      "name": "first_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "首件数量(单位:个) 按数量计价必填 1-999的整数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "first_num_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "首件价格(单位:元)按数量计价必填 0.00-30.00之间的小数，小数点后两位",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "is_default",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否默认计价方式(1:是；0:不是)",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "is_limited",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否限运规则",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "min_sku_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最小商品金额限制条件",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "限售原因。枚举值 distance_shipping_cost_high：因配送距离导致运费过高 weight_shipping_cost_high：因商品重量导致运费过高 force_majeure：因不可抗力（如会议赛事、自然灾害）不配送 cooperation_express_not_deliver：合作快递不配送 cooperation_express_poor_service：合作快递该区域服务差 other：其他",
+      "example": "-",
+      "_depth": 1
+    },
+    {
+      "name": "calculate_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计价方式-1.按重量计价 2.按数量计价",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "max_sku_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最大商品金额限制条件",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "rule_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "运费规则类型，同template.rule_type字段;\n0:阶梯计价；1:固定运费；2:卖家包邮",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "first_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "首重(单位:kg) 按重量计价必填 0.1-999.9之间的小数，小数点后一位",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "add_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "续重(单位:kg) 按重量计价必填 0.1-999.9之间的小数，小数点后一位",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "fixed_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "固定运费金额（单位：分）",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "is_over_free",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否条件包邮",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "first_weight_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "首重价格(单位:元) 按重量计价必填 0.00-30.00之间的小数，小数点后两位",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "add_num_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "续件价格(单位:元) 按数量计价必填 0.00-30.00之间的小数，小数点后两位",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "over_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "满xx件包邮",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "over_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "满xx金额包邮 单位：分",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "delivery_fulfillment_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "履约模式：1：即配，2：次日达，3：全国送",
+      "example": "2",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "template_id",
+      "type": "mixed",
+      "description": "运费模板id",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参校验未通过（sub_code: isv.parameter-invalid:422）",
+      "action": "-",
+      "sub_code": "isv.parameter-invalid:422",
+      "sub_msg": "入参校验未通过"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 运费规则和普通运费规则选择的地址有冲突（sub_code: isv.parameter-invalid:425）",
+      "action": "-",
+      "sub_code": "isv.parameter-invalid:425",
+      "sub_msg": "运费规则和普通运费规则选择的地址有冲突"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 模板被锁定（sub_code: isv.parameter-invalid:426）",
+      "action": "-",
+      "sub_code": "isv.parameter-invalid:426",
+      "sub_msg": "模板被锁定"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 发货地址为空（sub_code: isv.parameter-invalid:428）",
+      "action": "补充发货省份或者城市",
+      "sub_code": "isv.parameter-invalid:428",
+      "sub_msg": "发货地址为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非拍卖资质的商家不可创建运费到付的模板（sub_code: isv.parameter-invalid:429）",
+      "action": "-",
+      "sub_code": "isv.parameter-invalid:429",
+      "sub_msg": "非拍卖资质的商家不可创建运费到付的模板"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部异常，请重试（sub_code: isp.service-error:500）",
+      "action": "-",
+      "sub_code": "isp.service-error:500",
+      "sub_msg": "内部异常，请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.trade.freightUpdate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "template_id": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:422",
+      "sub_msg": "入参校验未通过"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1530/7424",
+  "updatedAt": "2025-04-24",
+  "_file_stem": "retail-logistics-instantShopping-trade-freightUpdate"
+}

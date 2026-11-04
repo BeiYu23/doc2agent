@@ -1,0 +1,215 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyProductV2.createComponentTemplate",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyProductV2.createComponentTemplate",
+  "description": "创建尺码模板",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板类型: size_info(尺码表)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "template_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "指定模板类型: clothing、undies、shoes、children_clothing",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "component_front_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品组件数据 json",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "shareable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否可共享 0：是 1：否",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目id，用来确定模板类型",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "only_check",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_commit",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否是草稿提交",
+      "example": "",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "返回code",
+      "example": "100"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "返回msg",
+      "example": "“”"
+    },
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否成功",
+      "example": "true"
+    },
+    {
+      "name": "template_id",
+      "type": "mixed",
+      "description": "模版id",
+      "example": "111"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2000:业务处理异常|RPCError{PSM:[cmp.ecom.product_backend] Method:[CreateComponentTemplateV2] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110250112] BizStatusMessage:[选中的尺码数量和表格行数量不一致]}（sub_code: isv.business-failed:2000）",
+      "action": "2000:业务处理异常|RPCError{PSM:[cmp.ecom.product_backend] Method:[CreateComponentTemplateV2] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110250112] BizStatusMessage:[选中的尺码数量和表格行数量不一致]}",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "2000:业务处理异常|RPCError{PSM:[cmp.ecom.product_backend] Method:[CreateComponentTemplateV2] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110250112] BizStatusMessage:[选中的尺码数量和表格行数量不一致]}"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1020:参数异常，请检查后重试|供应商信息异常（sub_code: isv.business-failed:1020）",
+      "action": "1020:参数异常，请检查后重试|供应商信息异常",
+      "sub_code": "isv.business-failed:1020",
+      "sub_msg": "1020:参数异常，请检查后重试|供应商信息异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/getShopAccountItem?app_key=your_appkey_here&method=order.getShopAccountItem&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "10000",
+        "code_msg": "SUCCESS",
+        "data": [
+          {
+            "account_amount": "96",
+            "account_bill_desc": "订单结算",
+            "account_bill_desc_tag": "3",
+            "account_trade_no": "AS202110050707321602785799467_IN",
+            "account_type": "1",
+            "account_type_desc": "微信",
+            "actual_zr_pay_promotion": "0",
+            "actual_zt_pay_promotion": "0",
+            "after_sale_service_no": "SS7015036721667375372",
+            "author_coupon_subsidy": "0",
+            "author_id": "123123123",
+            "author_name": "达人名称示例",
+            "bank_pay_promotion_amount": "0",
+            "bill_time": "2021-10-01 10:10:11",
+            "biz_type": "1",
+            "biz_type_desc": "鲁班广告",
+            "business_order_create_time": "2021-09-26 20:46:16",
+            "channel_fee": "0",
+            "channel_promotion_fee": "0",
+            "colonel_service_fee": "0",
+            "commission": "-1",
+            "free_commission_flag": "是",
+            "fund_flow": "1",
+            "fund_flow_desc": "出账",
+            "gov_promotion_amount": "0",
+            "order_id": "4847151209529677080",
+            "order_type": "0",
+            "order_type_desc": "普通订单",
+            "other_sharing_amount": "0",
+            "partner_commission": "0",
+            "pay_amount": "100",
+            "platform_service_fee": "-3",
+            "post_amount": "0",
+            "post_promotion_amount": "0",
+            "product_id": "3494738440426276563",
+            "product_name": "商品名称示例",
+            "promotion_amount": "0",
+            "real_free_commission_amount": "0",
+            "recycler_amount": "0",
+            "refund_amount": "0",
+            "remark": "无",
+            "shop_id": "12344",
+            "shop_order_id": "4847151209529677080",
+            "trans_scene": "消费者赔付",
+            "trans_scene_tag": "1"
+          }
+        ],
+        "data_size": "100",
+        "is_end": "1",
+        "next_start_index": "d746da31eee45e65d07b20f87d6844bbf72041350acc66af1711408070b62428",
+        "next_start_time": "2021-10-01 06:00:00",
+        "size": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "2000:业务处理异常|RPCError{PSM:[cmp.ecom.product_backend] Method:[CreateComponentTemplateV2] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110250112] BizStatusMessage:[选中的尺码数量和表格行数量不一致]}"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/6673",
+  "updatedAt": "2024-07-04",
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-createComponentTemplate"
+}

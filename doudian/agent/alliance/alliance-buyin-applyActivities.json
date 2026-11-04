@@ -1,0 +1,258 @@
+{
+  "id": "doudian.alliance.buyin.applyActivities",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.applyActivities",
+  "description": "商品团长活动提报接口",
+  "method": "GET",
+  "path": "/buyin/applyActivities",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V7.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "团长活动ID",
+      "example": "1234234123",
+      "_depth": 0
+    },
+    {
+      "name": "service_rate",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "招商服务费率。 服务费率+佣金率小于90（废弃）",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "phone_number",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺联系电话",
+      "example": "12318726321",
+      "_depth": 0
+    },
+    {
+      "name": "products",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "promotion_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品推广结束时间（不传默认为当前时间往后数90天）",
+      "example": "2022-02-11",
+      "_depth": 1
+    },
+    {
+      "name": "gift_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "赠品（15个字以内，填写可提供赠品详情）",
+      "example": "无赠品",
+      "_depth": 1
+    },
+    {
+      "name": "product_ad_activity_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期佣金比例（小数）,这里传字符串是为了便于比较小数位数",
+      "example": "20.5",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品ID",
+      "example": "12312313123",
+      "_depth": 1
+    },
+    {
+      "name": "commission_rate",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "佣金比例，设置范围[1%,50%]不小于改团长活动设置佣金率（废弃）",
+      "example": "20",
+      "_depth": 1
+    },
+    {
+      "name": "promotion_stock",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "参与活动库存",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "promotion_step",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动价实现方式（15个字以内，如满减、提供优惠券、拍立减、限时活动价）",
+      "example": "满减",
+      "_depth": 1
+    },
+    {
+      "name": "product_activity_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "佣金比例，设置范围[0,80%]，并且不能不小于该团长活动设置佣金率（必须为两位小数）",
+      "example": "20.50",
+      "_depth": 1
+    },
+    {
+      "name": "months_of_protection",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "开启独家保护的时长。单位：月；范围：[0,12]，0表示不开启",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "activity_price",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "活动价（单位分）",
+      "example": "200",
+      "_depth": 1
+    },
+    {
+      "name": "service_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "招商服务费率。 服务费率+佣金率小于90（必须为两位小数）",
+      "example": "20.50",
+      "_depth": 0
+    },
+    {
+      "name": "cos_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "佣金类型 0:固定佣金 1:双佣金",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ad_service_ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "双佣金投放期服务费率（小数）",
+      "example": "15.0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "操作的商品数量",
+      "example": "20"
+    },
+    {
+      "name": "result",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动报名时间已结束，不支持继续报名（sub_code: isv.business-failed:110110）",
+      "action": "活动报名时间已结束，不支持继续报名",
+      "sub_code": "isv.business-failed:110110",
+      "sub_msg": "活动报名时间已结束，不支持继续报名"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:500）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 小数服务费率不合法，必须为两位小数（sub_code: isv.business-failed:8192）",
+      "action": "小数服务费率不合法，必须为两位小数",
+      "sub_code": "isv.business-failed:8192",
+      "sub_msg": "小数服务费率不合法，必须为两位小数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请检查输入参数（sub_code: isv.business-failed:10001）",
+      "action": "请检查输入参数",
+      "sub_code": "isv.business-failed:10001",
+      "sub_msg": "请检查输入参数"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/applyActivities?app_key=your_appkey_here&method=buyin.applyActivities&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "error_code": "0",
+            "error_msg": "success",
+            "is_success": "true",
+            "product_id": "123123123123"
+          }
+        ],
+        "total": "20"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/744",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-applyActivities"
+}

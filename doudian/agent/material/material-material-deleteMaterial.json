@@ -1,0 +1,100 @@
+{
+  "id": "doudian.material.material.deleteMaterial",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.deleteMaterial",
+  "description": "彻底删除素材",
+  "method": "GET",
+  "path": "/material/deleteMaterial",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "material_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "要删除的素材id列表，最大不得超过100个，只支持删除同一级目录下的素材",
+      "example": "[\"123\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_ids",
+      "type": "array",
+      "description": "操作成功的素材id",
+      "example": "[\"123\"]"
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "操作失败的素材id和原因",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10004）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材ID无效或状态错误（sub_code: isv.parameter-invalid:20001）",
+      "action": "素材不存在，原因有：已被删除或主从延迟导致素材不存在",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "素材ID无效或状态错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 数据可能已被修改，请刷新后重新提交（sub_code: isv.parameter-invalid:22004）",
+      "action": "有并发请求，修改参数重新请求",
+      "sub_code": "isv.parameter-invalid:22004",
+      "sub_msg": "数据可能已被修改，请刷新后重新提交"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求已生效，请勿重复请求（sub_code: isv.parameter-invalid:31001）",
+      "action": "并发请求，不要重试",
+      "sub_code": "isv.parameter-invalid:31001",
+      "sub_msg": "请求已生效，请勿重复请求"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/deleteMaterial?app_key=your_appkey_here&method=material.deleteMaterial&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "failed_map": {},
+        "success_ids": "[\"123\"]"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1138",
+  "updatedAt": "2022-09-06",
+  "_file_stem": "material-material-deleteMaterial"
+}

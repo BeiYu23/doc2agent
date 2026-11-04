@@ -1,0 +1,236 @@
+{
+  "id": "doudian.cross-border.crossBorder.notifyWarehouseFeeOrder",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossBorder.notifyWarehouseFeeOrder",
+  "description": "服务商回传仓租计费明细",
+  "method": "GET",
+  "path": "/crossBorder/notifyWarehouseFeeOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ws_store_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓租单号",
+      "example": "WS123456",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "fee_date",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "计费日期。 十位秒级时间戳，需要截断时分秒，否则会被校验住报错。 如 1640966400  表示2022-01-01 00:00:00",
+      "example": "1640966400",
+      "_depth": 0
+    },
+    {
+      "name": "need_charge",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否需要计费",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "GZJS",
+      "_depth": 0
+    },
+    {
+      "name": "detail_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "当仓租单需要计费时必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "7074780",
+      "_depth": 1
+    },
+    {
+      "name": "order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "7234512",
+      "_depth": 1
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单类型  采购入库：PURCHASE_IN;  销退入库：SALE_RETURN_IN;  库存调整（盘盈）：INVENTORY_ADJUST",
+      "example": "PURCHASE_IN",
+      "_depth": 1
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "结算库存数（T-1日期末库存）",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_area_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库区类型：  1-普通区 2-恒温区 3-冷藏区 4-冷冻区 5-急冻区 6-深冷区",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "storage_age",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "库龄（单位是天），10天",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "bar_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品条码",
+      "example": "123456",
+      "_depth": 1
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "长（单位 mm）",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "宽（单位 mm）",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "height",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "高（单位 mm）",
+      "example": "10",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:1005）",
+      "action": "联系平台研发",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:20001）",
+      "action": "修正参数重新传参",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:20002）",
+      "action": "联系平台研发",
+      "sub_code": "isp.service-error:20002",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效的状态越迁（sub_code: isv.business-failed:20003）",
+      "action": "联系平台研发",
+      "sub_code": "isv.business-failed:20003",
+      "sub_msg": "无效的状态越迁"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 存在重复的记录（sub_code: isv.business-failed:20004）",
+      "action": "联系平台研发",
+      "sub_code": "isv.business-failed:20004",
+      "sub_msg": "存在重复的记录"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 未授权访问（sub_code: isv.risk-control-failed:20005）",
+      "action": "获取授权",
+      "sub_code": "isv.risk-control-failed:20005",
+      "sub_msg": "未授权访问"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comtest/encrypt/2?app_key=your_appkey_here&method=test.encrypt.2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "2",
+        "or": "7"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "系统内部错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/2824",
+  "updatedAt": "2022-12-22",
+  "_file_stem": "cross-border-crossBorder-notifyWarehouseFeeOrder"
+}

@@ -1,0 +1,335 @@
+{
+  "id": "doudian.member.sms.audience.getTaskTransform",
+  "platform": "doudian",
+  "group": "member",
+  "name": "sms.audience.getTaskTransform",
+  "description": "获取任务转化数据",
+  "method": "GET",
+  "path": "/sms/audience/getTaskTransform",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "task_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "任务ID。当任务id传0，返回单条发送&批量发送的转化效果",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "send_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发送时间，仅在taskId=0时有效。格式为'yyyyMMdd'",
+      "example": "20250618",
+      "_depth": 0
+    },
+    {
+      "name": "data_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时间分区，格式为yyyyMMdd;不传入则返回最新分区的数据",
+      "example": "20251010",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_cnt",
+      "type": "mixed",
+      "description": "成功数量",
+      "example": "10"
+    },
+    {
+      "name": "seven_day_order_user_cnt",
+      "type": "mixed",
+      "description": "7天下单用户数",
+      "example": "11"
+    },
+    {
+      "name": "one_day_order_amt",
+      "type": "mixed",
+      "description": "24h订单金额转化（单位：分）",
+      "example": "12"
+    },
+    {
+      "name": "one_day_order_user_cnt",
+      "type": "mixed",
+      "description": "24h下单用户数",
+      "example": "12"
+    },
+    {
+      "name": "date_partition",
+      "type": "string",
+      "description": "日期分区",
+      "example": "20240823"
+    },
+    {
+      "name": "task_id",
+      "type": "mixed",
+      "description": "任务ID",
+      "example": "12"
+    },
+    {
+      "name": "success_bill_cnt",
+      "type": "mixed",
+      "description": "成功计费条数",
+      "example": "2312"
+    },
+    {
+      "name": "seven_day_order_amt",
+      "type": "mixed",
+      "description": "7天订单金额转化（单位：分）",
+      "example": "123121"
+    },
+    {
+      "name": "one_day_recall_user_cnt",
+      "type": "mixed",
+      "description": "24h召回用户数",
+      "example": "1212"
+    },
+    {
+      "name": "one_day_prod_show_cnt",
+      "type": "mixed",
+      "description": "24h商品详情页PV",
+      "example": "123"
+    },
+    {
+      "name": "one_day_pay_prod_cnt",
+      "type": "mixed",
+      "description": "24h付款件数",
+      "example": "123"
+    },
+    {
+      "name": "seven_day_crt_ord_user_cnt",
+      "type": "mixed",
+      "description": "7d下单人数",
+      "example": "123"
+    },
+    {
+      "name": "seven_day_crt_amt",
+      "type": "mixed",
+      "description": "7d下单金额(单位：分)",
+      "example": "1234"
+    },
+    {
+      "name": "seven_day_join_user_cnt",
+      "type": "mixed",
+      "description": "7d新入会人数",
+      "example": "123"
+    },
+    {
+      "name": "one_day_prod_show_user_cnt",
+      "type": "mixed",
+      "description": "24h商品详情页UV",
+      "example": "123"
+    },
+    {
+      "name": "seven_day_prod_show_user_cnt",
+      "type": "mixed",
+      "description": "7d商品详情页UV",
+      "example": "123"
+    },
+    {
+      "name": "seven_day_join_pay_ord_cnt",
+      "type": "mixed",
+      "description": "7d新入会购买次数",
+      "example": "111"
+    },
+    {
+      "name": "seven_day_prod_wish_user_cnt",
+      "type": "mixed",
+      "description": "7d收藏UV",
+      "example": "123"
+    },
+    {
+      "name": "one_day_pay_ord_cnt",
+      "type": "mixed",
+      "description": "24h付款PV",
+      "example": "111"
+    },
+    {
+      "name": "seven_day_pay_prod_cnt",
+      "type": "mixed",
+      "description": "7d付款件数",
+      "example": "123"
+    },
+    {
+      "name": "one_day_crt_ord_user_cnt",
+      "type": "mixed",
+      "description": "24h下单人数",
+      "example": "123"
+    },
+    {
+      "name": "seven_day_join_pay_ord_user_cnt",
+      "type": "mixed",
+      "description": "7d新入会购买UV",
+      "example": "543"
+    },
+    {
+      "name": "seven_day_crt_prod_cnt",
+      "type": "mixed",
+      "description": "7d下单件数",
+      "example": "534"
+    },
+    {
+      "name": "one_day_join_user_cnt",
+      "type": "mixed",
+      "description": "24h新入会人数",
+      "example": "53"
+    },
+    {
+      "name": "seven_day_prod_show_cnt",
+      "type": "mixed",
+      "description": "7d商品详情页PV",
+      "example": "12"
+    },
+    {
+      "name": "one_day_crt_ord_cnt",
+      "type": "mixed",
+      "description": "24h下单PV",
+      "example": "42"
+    },
+    {
+      "name": "seven_day_crt_ord_cnt",
+      "type": "mixed",
+      "description": "7d下单PV",
+      "example": "64"
+    },
+    {
+      "name": "one_day_crt_prod_cnt",
+      "type": "mixed",
+      "description": "24h下单件数",
+      "example": "123"
+    },
+    {
+      "name": "seven_day_pay_ord_cnt",
+      "type": "mixed",
+      "description": "7d付款PV",
+      "example": "543"
+    },
+    {
+      "name": "one_day_crt_amt",
+      "type": "mixed",
+      "description": "24h下单金额",
+      "example": "123"
+    },
+    {
+      "name": "send_cnt",
+      "type": "mixed",
+      "description": "触达人数",
+      "example": "341"
+    },
+    {
+      "name": "one_day_join_pay_ord_cnt",
+      "type": "mixed",
+      "description": "24h新入会购买PV",
+      "example": "123"
+    },
+    {
+      "name": "one_day_join_pay_ord_user_cnt",
+      "type": "mixed",
+      "description": "24h新入会购买UV",
+      "example": "123"
+    },
+    {
+      "name": "one_day_prod_wish_user_cnt",
+      "type": "mixed",
+      "description": "24h收藏UV",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "请重新检查入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628003309:暂未查询到任务转化数据（sub_code: isv.business-failed:628003309）",
+      "action": "628003309:暂未查询到任务转化数据",
+      "sub_code": "isv.business-failed:628003309",
+      "sub_msg": "628003309:暂未查询到任务转化数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004000:系统错误（sub_code: isv.business-failed:628004000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:628004000",
+      "sub_msg": "628004000:系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=sms.audience.getTaskTransform&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "date_partition": "20240823",
+        "one_day_crt_amt": "123",
+        "one_day_crt_ord_cnt": "42",
+        "one_day_crt_ord_user_cnt": "123",
+        "one_day_crt_prod_cnt": "123",
+        "one_day_join_pay_ord_cnt": "123",
+        "one_day_join_pay_ord_user_cnt": "123",
+        "one_day_join_user_cnt": "53",
+        "one_day_order_amt": "12",
+        "one_day_order_user_cnt": "12",
+        "one_day_pay_ord_cnt": "111",
+        "one_day_pay_prod_cnt": "123",
+        "one_day_prod_show_cnt": "123",
+        "one_day_prod_show_user_cnt": "123",
+        "one_day_prod_wish_user_cnt": "123",
+        "one_day_recall_user_cnt": "1212",
+        "send_cnt": "341",
+        "seven_day_crt_amt": "1234",
+        "seven_day_crt_ord_cnt": "64",
+        "seven_day_crt_ord_user_cnt": "123",
+        "seven_day_crt_prod_cnt": "534",
+        "seven_day_join_pay_ord_cnt": "111",
+        "seven_day_join_pay_ord_user_cnt": "543",
+        "seven_day_join_user_cnt": "123",
+        "seven_day_order_amt": "123121",
+        "seven_day_order_user_cnt": "11",
+        "seven_day_pay_ord_cnt": "543",
+        "seven_day_pay_prod_cnt": "123",
+        "seven_day_prod_show_cnt": "12",
+        "seven_day_prod_show_user_cnt": "123",
+        "seven_day_prod_wish_user_cnt": "123",
+        "success_bill_cnt": "2312",
+        "success_cnt": "10",
+        "task_id": "12"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6751",
+  "updatedAt": "2025-10-15",
+  "_file_stem": "member-sms-audience-getTaskTransform"
+}

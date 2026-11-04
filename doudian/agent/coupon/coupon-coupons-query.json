@@ -1,0 +1,96 @@
+{
+  "id": "doudian.coupon.coupons.query",
+  "platform": "doudian",
+  "group": "coupon",
+  "name": "coupons.query",
+  "description": "查询卡券（无需授权）",
+  "method": "GET",
+  "path": "/coupons/query",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 卡券API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "supplier_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务商Code",
+      "example": "112233",
+      "_depth": 0
+    },
+    {
+      "name": "virtual_no_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "卡券号",
+      "example": "[\"112233\"]",
+      "_depth": 0
+    },
+    {
+      "name": "query_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "查询方式(仅支持卡券号查询，参数赋值为2)",
+      "example": "2",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "virtual_order_info_list",
+      "type": "array",
+      "description": "卡券列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:000002）",
+      "action": "传正确参数",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/query?app_key=your_appkey_here&method=coupons.query&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "virtual_order_info_list": [
+          {
+            "cert_no": "112233",
+            "order_id": "6900002012222",
+            "shop_id": "1234435"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/52/7584",
+  "updatedAt": "2025-07-10",
+  "_file_stem": "coupon-coupons-query"
+}

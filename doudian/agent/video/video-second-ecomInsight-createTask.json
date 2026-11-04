@@ -1,0 +1,1502 @@
+{
+  "id": "doudian.video.second.ecomInsight.createTask",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.createTask",
+  "description": "创建task任务接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "video_by_pic_first_frame_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "视频生成-基于首帧",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "first_frame_asset",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "首帧素材",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "file_element",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件，内容包括视频url、商品id、图片url、素材id等，根据type传入",
+      "example": "xxxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "asset(素材，fileElement使用素材id)，path（图片或视频url，必须是公网可访问的），video_id（抖音视频id）， product_id（商品id（主图视频））",
+      "example": "path",
+      "_depth": 2
+    },
+    {
+      "name": "fps",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "帧数",
+      "example": "25",
+      "_depth": 1
+    },
+    {
+      "name": "return_last_frame",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回尾帧",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名（不可重复）",
+      "example": "电商任务1",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "VideoByPicFirstFrame",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "首帧生成视频支持模型：\nDoubao-Seedance-1.0-pro-fast",
+      "example": "Doubao-Seedance-1.0-pro-fast",
+      "_depth": 2
+    },
+    {
+      "name": "generate_audio",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否生成对应音频",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文生视频、图生视频中在text后添加--参数的方式添加对应视频参数（参数必填）。   --rt 比例 --dur 视频时长  --fps 视频帧数  --rs 清晰度  --wm 是否包含水印 -- cf 是否固定摄像头",
+      "example": "示例：指定生成视频的宽高比为16:9，时长为 5 秒，帧率为 24 fps，分辨率为720p，包含水印，不固定摄像头\n一位身穿绿色亮片礼服的女性站在粉红色背景前，周围飘落着五彩斑斓的彩纸 --rt 16:9 --dur 5 --fps 24 --rs 720p --wm true --cf false",
+      "_depth": 1
+    },
+    {
+      "name": "video_by_pic_first_last_frame_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "视频生成-基于首尾帧",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文生视频、图生视频中在text后添加--参数的方式添加对应视频参数（参数必填）。   --rt 比例 --dur 视频时长  --fps 视频帧数  --rs 清晰度  --wm 是否包含水印 -- cf 是否固定摄像头",
+      "example": "示例：指定生成视频的宽高比为16:9，时长为 5 秒，帧率为 24 fps，分辨率为720p，包含水印，不固定摄像头\n一位身穿绿色亮片礼服的女性站在粉红色背景前，周围飘落着五彩斑斓的彩纸 --rt 16:9 --dur 5 --fps 24 --rs 720p --wm true --cf false",
+      "_depth": 1
+    },
+    {
+      "name": "return_last_frame",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回尾帧数",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "电商任务1",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "首尾帧支持模型：\nDoubao-Seedance-1.0-pro",
+      "example": "Doubao-Seedance-1.0-pro",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "VideoByPicFirstLastFrame",
+      "_depth": 2
+    },
+    {
+      "name": "first_frame_asset",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "首帧素材",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "asset(素材，fileElement使用素材id)，path（图片或视频url，必须是公网可访问的），video_id（抖音视频id）， product_id（商品id（主图视频））",
+      "example": "path",
+      "_depth": 2
+    },
+    {
+      "name": "file_element",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件，内容包括视频url、商品id、图片url、素材id等，根据type传入",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "last_frame_asset",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "尾帧素材",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "asset(素材，fileElement使用素材id)，path（图片或视频url，必须是公网可访问的），video_id（抖音视频id）， product_id（商品id（主图视频））",
+      "example": "path",
+      "_depth": 2
+    },
+    {
+      "name": "file_element",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件，内容包括视频url、商品id、图片url、素材id等，根据type传入",
+      "example": "xxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "generate_audio",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回音频",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "fps",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "帧数",
+      "example": "25",
+      "_depth": 1
+    },
+    {
+      "name": "video_understand_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "视频理解",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "描述",
+      "example": "视频中有几个人？",
+      "_depth": 1
+    },
+    {
+      "name": "video_asset",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "理解视频素材",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "file_element",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件，内容包括视频url、商品id、图片url、素材id等，根据type传入",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "asset(素材，fileElement使用素材id)，path（图片或视频url，必须是公网可访问的），video_id（抖音视频id）， product_id（商品id（主图视频））",
+      "example": "video_id",
+      "_depth": 2
+    },
+    {
+      "name": "standard_prompt",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否使用标准模版输出",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "xxxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "VideoUnderstand",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频理解支持模型：\nDoubao-Seed-1.6-vision",
+      "example": "Doubao-Seed-1.6-vision",
+      "_depth": 2
+    },
+    {
+      "name": "max_tokens",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结果最大tokens，默认4096，最大32000",
+      "example": "4096",
+      "_depth": 1
+    },
+    {
+      "name": "fps",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频理解的帧数，会根据输入的帧数抽帧进行视频理解",
+      "example": "25",
+      "_depth": 1
+    },
+    {
+      "name": "video_by_pic_ref_and_video_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "VideoPilot生成视频参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "传入对应model",
+      "example": "无",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "VideoByPicRefAndVideo",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "xxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "duration",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生成视频时长，仅支持整数，单位：秒。\n取值范围：[4,15] 或设置为-1(自动适配时长)",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "watermark",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否添加水印",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "tools",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "使用联网搜索",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "web_search",
+      "example": "web_search",
+      "_depth": 2
+    },
+    {
+      "name": "return_last_frame",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回尾帧",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "generate_audio",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回音频",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "resolution",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "分辨率:\n480p、720p",
+      "example": "720p",
+      "_depth": 1
+    },
+    {
+      "name": "ratio",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "生成视频的宽高比例。不同宽高比对应的宽高像素值见下方:\n- 16:9 \n- 4:3\n- 1:1\n- 3:4\n- 9:16\n- 21:9\n- adaptive：根据输入自动选择最合适的宽高比",
+      "example": "16:9",
+      "_depth": 1
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "请求数据",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "attachment_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "附件",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "目前附件只支持公网可访问的pdf文件地址",
+      "example": "https://ark-project.tos-cn-beijing.volces.com/xxxxx.pdf",
+      "_depth": 3
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "目前类型仅支持输入 path",
+      "example": "path",
+      "_depth": 3
+    },
+    {
+      "name": "role",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片或者视频的位置或用途。\n图片：first_frame（首帧）、last_frame（尾帧）、reference_image（参考图1～9张）\n视频：reference_video（参考视频，单个视频时长 [2, 15] s，最多传入 3 个参考视频，所有视频总时长不超过 15s）\n音频：reference_audio（单个音频时长 [2, 15] s，最多传入 3 段参考音频，所有音频总时长不超过 15 s）",
+      "example": "reference_video",
+      "_depth": 2
+    },
+    {
+      "name": "image_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "图片数据",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片url地址（公网可访问，不可以直接传图片文件）",
+      "example": "xxxx",
+      "_depth": 3
+    },
+    {
+      "name": "audio_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "音频url信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "音频url地址（公网可访问，不可以直接传音频文件）",
+      "example": "xxxx",
+      "_depth": 3
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "传入content类型：text（图片）、image_url（图片）、video_url(视频)",
+      "example": "text",
+      "_depth": 2
+    },
+    {
+      "name": "video_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "视频url信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频url地址（公网可访问，不可以直接传图片文件）、抖音视频id、主图榜单商品id",
+      "example": "xxxx",
+      "_depth": 3
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "根据类型在url中传入对应的信息，path（图片或视频url，必须是公网可访问的），video_id（抖音视频id）， product_id（商品id（主图视频））",
+      "example": "path",
+      "_depth": 3
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "提示词",
+      "example": "生成一个视频",
+      "_depth": 2
+    },
+    {
+      "name": "pic_by_text_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "文生图",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名（不可重复）",
+      "example": "xxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文生图支持模型：\nDoubao-Seedream-4.0",
+      "example": "Doubao-Seedream-4.0",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型：\nPicByText",
+      "example": "PicByText",
+      "_depth": 2
+    },
+    {
+      "name": "sequential_image_generation",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否生成组图 disabled - 不生成，auto - 生成",
+      "example": "disabled",
+      "_depth": 1
+    },
+    {
+      "name": "prompt",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "需要进行的图片风格的描述",
+      "example": "生成一张老虎晒太阳的图片",
+      "_depth": 1
+    },
+    {
+      "name": "image",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "图片素材",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "file_element",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文件，内容包括视频url、商品id、图片url、素材id等，根据type传入",
+      "example": "xxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "asset(素材，fileElement使用素材id)，path（图片或视频url，必须是公网可访问的），video_id（抖音视频id）， product_id（商品id（主图视频））",
+      "example": "path",
+      "_depth": 2
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "生成图片的大小：2K",
+      "example": "2K",
+      "_depth": 1
+    },
+    {
+      "name": "watermark",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否生成水印",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "video_by_text_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "文生视频",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名（不可重复）",
+      "example": "xxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文生视频支持模型：\nDoubao-Seedance-1.0-pro-fast",
+      "example": "Doubao-Seedance-1.0-pro-fast",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型：VideoByText",
+      "example": "VideoByText",
+      "_depth": 2
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文生视频、图生视频中在text后添加--参数的方式添加对应视频参数（参数必填） --rt 比例、 --dur 视频时长、--fps 视频帧数、--rs 清晰度  --wm 是否包含水印 -- cf 是否固定摄像头",
+      "example": "指定生成视频的宽高比为16:9，时长为 5 秒，帧率为 24 fps，分辨率为720p，包含水印，不固定摄像头\n对应text：一位身穿绿色亮片礼服的女性站在粉红色背景前，周围飘落着五彩斑斓的彩纸 --rt 16:9 --dur 5 --fps 24 --rs 720p --wm true --cf false",
+      "_depth": 1
+    },
+    {
+      "name": "generate_audio",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回音频",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "return_last_frame",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否返回尾帧",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "pic_edit_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "图片修改",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prompt",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文本",
+      "example": "将图中的小狗替换为一只老虎",
+      "_depth": 1
+    },
+    {
+      "name": "seed",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "随机数种子，用于控制模型生成内容的随机性。取值范围为 [-1, 2147483647]",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "image",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "图片文件的url",
+      "example": "https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imageToimage.png",
+      "_depth": 1
+    },
+    {
+      "name": "watermark",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否生成水印",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "guidance_scale",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模型输出结果与prompt的一致程度，生成图像的自由度，又称为文本权重；值越大，模型自由度越小，与用户输入的提示词相关性越强。取值范围1-10",
+      "example": "7.5",
+      "_depth": 1
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "xxx",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "PicEdit",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模型名",
+      "example": "Doubao-SeedEdit-3.0-i2i",
+      "_depth": 2
+    },
+    {
+      "name": "speech_by_text_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "语音生成结构",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "emotion_scale",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "调用emotion设置情感参数后可使用emotion_scale进一步设置情绪值，范围1~5，不设置时默认值为4。\n注：理论上情绪值越大，情感越明显。但情绪值1~5实际为非线性增长，可能存在超过某个值后，情绪增加不明显，例如设置3和5时情绪值可能接近。",
+      "example": "4",
+      "_depth": 1
+    },
+    {
+      "name": "speech_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "语速，取值范围[-50,100]，100代表2.0倍速，-50代表0.5倍数，默认值0",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "context_texts",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "语音合成的辅助信息，用于模型对话式合成，能更好的体现语音情感；\n可以探索，比如常见示例有以下几种：\n1. 语速调整\n  1. 比如：context_texts: [\"你可以说慢一点吗？\"]\n2. 情绪/语气调整\n  1. 比如：context_texts=[\"你可以用特别特别痛心的语气说话吗?\"]\n  2. 比如：context_texts=[\"嗯，你的语气再欢乐一点\"]\n3. 音量调整\n  1. 比如：context_texts=[\"你嗓门再小点。\"]\n4. 音感调整\n  1. 比如：context_texts=[\"你能用骄傲的语气来说话吗？\"]\n注意：\n1. 该字段仅适用于\"豆包语音合成模型2.0\"的音色\n2. 当前字符串列表只第一个值有效\n3. 该字段文本不参与计费",
+      "example": "[\"你可以说慢一点吗？\"]",
+      "_depth": 1
+    },
+    {
+      "name": "section_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "其他合成语音的会话id(session_id)，用于辅助当前语音合成，提供更多的上下文信息；\n取值，参见接口交互中的session_id\n示例：\n1. section_id=\"bf5b5771-31cd-4f7a-b30c-f4ddcbf2f9da\"\n注意：\n1. 该字段仅适用于\"豆包语音合成模型2.0\"的音色\n2. 历史上下文的session_id 有效期：\n  1. 最长30轮\n  2. 最长10分钟",
+      "example": "xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础参数",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "SpeechByText",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模型：Seed-TTS-2.0 Seed-TTS-1.0",
+      "example": "Seed-TTS-2.0",
+      "_depth": 2
+    },
+    {
+      "name": "context_language",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 不给定 西欧语种采用英语\n- id 西欧语种采用印尼\n- es 西欧语种采用墨西\n- pt 西欧语种采用巴葡",
+      "example": "pt",
+      "_depth": 1
+    },
+    {
+      "name": "unsupported_char_ratio_thresh",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "默认: 0.3，最大值: 1.0\n检测出不支持合成的文本超过设置的比例，则会返回错误。",
+      "example": "0.3",
+      "_depth": 1
+    },
+    {
+      "name": "silence_duration",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "设置该参数可在句尾增加静音时长，范围0~30000ms。（注：增加的句尾静音主要针对传入文本最后的句尾，而非每句话的句尾），默认值0",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "loudness_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "音量，取值范围[-50,100]，100代表2.0倍音量，-50代表0.5倍音量（mix音色暂不支持），默认值0",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "post_process_pitch",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "音调取值范围是[-12,12]，默认0",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "emotion",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "情感设置，可设置angry等，https://www.volcengine.com/docs/6561/1257544?lang=zh",
+      "example": "shy",
+      "_depth": 1
+    },
+    {
+      "name": "encoding",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "音频编码格式，mp3/ogg_opus/pcm，默认mp3",
+      "example": "mp3",
+      "_depth": 1
+    },
+    {
+      "name": "enable_language_detector",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "自动识别语种，默认值false",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "max_length_to_filter_parenthesis",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否过滤括号内的部分，0为不过滤，100为过滤，默认值100",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "aigc_watermark",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "默认：false\n是否在合成结尾增加音频节奏标识",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "disable_emoji_filter",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "开启emoji表情在文本中不过滤显示，默认为false，建议搭配时间戳参数一起使用。",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "sample_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "音频采样率，可选值 [8000,16000,22050,24000,32000,44100,48000]，默认值24000",
+      "example": "24000",
+      "_depth": 1
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文本",
+      "example": "xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "bit_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "音频比特率，可传16000、32000等。bit_rate默认设置范围为64k～160k，默认值8000",
+      "example": "8000",
+      "_depth": 1
+    },
+    {
+      "name": "explicit_language",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- 不给定参数，启用多语种前端zh,en,ja,es-mx,id,pt-br,de,fr\n- zh,en,ja,es-mx,id,pt-br,de,fr 启用多语种前端\n- zh-cn 中文为主，支持中英混\n- en 仅英文\n- ja 仅日文\n- es-mx 仅墨西\n- id 仅印尼\n- pt-br 仅巴葡\n- de 仅德语\n- fr 仅法语",
+      "example": "zh",
+      "_depth": 1
+    },
+    {
+      "name": "aigc_metadata_enable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否启用隐式水印，默认false",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "voice",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "嗓音支持2.0部分语言，https://www.volcengine.com/docs/6561/1257544?lang=zh",
+      "example": "zh_female_vv_uranus_bigtts",
+      "_depth": 1
+    },
+    {
+      "name": "disable_markdown_filter",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否开启markdown解析过滤，\n为true时，解析并过滤markdown语法，例如，你好，会读为“你好”，\n为false时，不解析不过滤，例如，你好，会读为“星星‘你好’星星”，默认值false",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "pic_understand_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "图片理解",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "max_tokens",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结果最大tokens，默认4096，最大32000",
+      "example": "4096",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "- low：“低分辨率”模式，处理速度会提高，适合图片本身细节较少或者只需模型理解图片大致信息或者对速度有要求的场景。\n- high：“高分辨率”模式，模型可感知图片更多的细节，但是处理图片速度会降低，适合图像像素值高且需关注细节信息的场景，如街道地图分析等。",
+      "example": "low",
+      "_depth": 1
+    },
+    {
+      "name": "image",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片url，image或images参数最少一个有数据",
+      "example": "xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "images",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "图片url集合，image或images参数最少一个有数据",
+      "example": "[xxxx,xxxx]",
+      "_depth": 1
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础参数",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "xxx",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "PicUnderstand",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模型",
+      "example": "Doubao-Seed-1.6",
+      "_depth": 2
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文本",
+      "example": "图中的动物是什么？",
+      "_depth": 1
+    },
+    {
+      "name": "deep_think_request",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "深度思考",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "previous_response_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上次深度思考返回的id",
+      "example": "xxxxx",
+      "_depth": 1
+    },
+    {
+      "name": "messages",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "message消息结构",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "role",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "角色：\n输入消息的角色，可以是 user，system ，assistant或 developer。",
+      "example": "user",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "内容结构",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "video_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "视频参数结构",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频文件url",
+      "example": "https://ark-project.tos-cn-beijing.volces.com/xxxxx.mp4",
+      "_depth": 4
+    },
+    {
+      "name": "fps",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频理解的帧数，会根据输入的帧数抽帧进行视频理解",
+      "example": "25",
+      "_depth": 4
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "消息输入的类型，\nimage_url、text、video_url",
+      "example": "text",
+      "_depth": 3
+    },
+    {
+      "name": "image_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "图片参数结构",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片文件url",
+      "example": "https://ark-project.tos-cn-beijing.volces.com/doc_image/ark_demo_img_1.png",
+      "_depth": 4
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "- low：“低分辨率”模式，处理速度会提高，适合图片本身细节较少或者只需模型理解图片大致信息或者对速度有要求的场景。\n- high：“高分辨率”模式，模型可感知图片更多的细节，但是处理图片速度会降低，适合图像像素值高且需关注细节信息的场景，如街道地图分析等。",
+      "example": "high",
+      "_depth": 4
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "type为text类型时，使用的文本",
+      "example": "文艺复兴三杰是？",
+      "_depth": 3
+    },
+    {
+      "name": "attachment_url",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "附件",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "目前类型仅支持path",
+      "example": "path",
+      "_depth": 4
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "只能是公网可访问的pdf文件链接",
+      "example": "https://ark-project.tos-cn-beijing.volces.com/xxxxx.pdf",
+      "_depth": 4
+    },
+    {
+      "name": "base",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "基础参数",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务名",
+      "example": "xxxx",
+      "_depth": 2
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型",
+      "example": "DeepThink",
+      "_depth": 2
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "Doubao-Seed-1.6-thinking,\nDoubao-Seed-1.6-flash",
+      "example": "Doubao-Seed-1.6-thinking",
+      "_depth": 2
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文本",
+      "example": "xxx",
+      "_depth": 1
+    },
+    {
+      "name": "max_tokens",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结果最大tokens，默认4096，最大32000",
+      "example": "4096",
+      "_depth": 1
+    },
+    {
+      "name": "reasoning",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "限制深度思考的工作量。减少深度思考工作量可使响应速度更快，并且深度思考的 token 用量更小。\nminimal：关闭思考，直接回答。\nlow：轻量思考，侧重快速响应。\nmedium：均衡模式，兼顾速度与深度。\nhigh：深度分析，处理复杂问题。\n仅模型 doubao-seed-1-8-251228、doubao-seed-1-6-lite-251015、doubao-seed-1-6-251015 支持该字段。",
+      "example": "medium",
+      "_depth": 1
+    },
+    {
+      "name": "thinking",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "disabled：强制关闭深度思考能力，模型不输出思维链内容。\nenabled：强制开启深度思考能力，模型强制输出思维链内容。\nDoubao-Seed-1.6-thinking只支持enabled\nDoubao-Seed-1.6-flash支持enabled或disabled\nauto：模型自行判断是否需要进行深度思考。",
+      "example": "enabled",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回结构体",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "消息",
+      "example": "xxxx"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "状态码",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 处理失败（sub_code: isv.business-failed:400）",
+      "action": "查看具体报错信息",
+      "sub_code": "isv.business-failed:400",
+      "sub_msg": "处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.createTask&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "create_info": "xxxx",
+          "create_time": "xxxxx",
+          "id": "123",
+          "model_task_id": "xxxx",
+          "msg": "success",
+          "name": "xxxx",
+          "pilot_task_id": "xxx",
+          "status": "0",
+          "task_result": "xxxx",
+          "task_type": "VideoByText",
+          "update_time": "xxxx"
+        },
+        "msg": "xxxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:400",
+      "sub_msg": "处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7935",
+  "updatedAt": "2026-07-23",
+  "_file_stem": "video-second-ecomInsight-createTask"
+}

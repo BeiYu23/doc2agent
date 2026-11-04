@@ -1,0 +1,97 @@
+{
+  "id": "doudian.sms.sms.getVmsApplyTemplateStatus",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.getVmsApplyTemplateStatus",
+  "description": "查询视频短信模板申请状态",
+  "method": "GET",
+  "path": "/sms/getVmsApplyTemplateStatus",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sms_account",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信account",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "申请的模板id",
+      "example": "VT_1234",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "array",
+      "description": "响应结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:628005100）",
+      "action": "业务处理失败，请检查请求参数",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求入参非法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "请检查请求入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "请求入参非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/getVmsApplyTemplateStatus?app_key=your_appkey_here&method=sms.getVmsApplyTemplateStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "approve_time": "1697610232",
+            "carrier": "China Mobile",
+            "expire_time": "1697610232",
+            "reason": "有敏感词",
+            "rest_valid_days": "30",
+            "status": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:628005100",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/4015",
+  "updatedAt": "2024-12-23",
+  "_file_stem": "sms-sms-getVmsApplyTemplateStatus"
+}

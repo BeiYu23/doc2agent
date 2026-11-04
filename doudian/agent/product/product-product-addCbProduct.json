@@ -1,0 +1,996 @@
+{
+  "id": "doudian.product.product.addCbProduct",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.addCbProduct",
+  "description": "新增跨境/海南商品",
+  "method": "GET",
+  "path": "/product/addCbProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "outer_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "推荐使用，外部商家编码，支持字符串",
+      "example": "232334",
+      "_depth": 0
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "0-普通，3-虚拟，6玉石闪购，7云闪购",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "叶子类目ID通过/shop/getShopCategory接口获取",
+      "example": "20000",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称，最多60个字符(30个汉字)，不能含emoj表情",
+      "example": "xx补水液",
+      "_depth": 0
+    },
+    {
+      "name": "recommend_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家推荐语，不能含emoj表情",
+      "example": "这个商品很好啊",
+      "_depth": 0
+    },
+    {
+      "name": "pic",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品轮播图，多张图片用 \\\"|\\\" 分开，第一张图为主图，最多5张，至少600x600，大小不超过1M 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "description",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品描述，目前只支持图片。多张图片用 \\\"|\\\" 分开。不能用其他网站的文本粘贴，这样会出现css样式不兼容 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "pay_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "支付方式，0货到付款 1在线支付，2，货到付款+在线支付",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_method",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "海南免税生效。 0:离岛免税、1:邮寄、2:离岛自提+邮寄",
+      "example": "7",
+      "_depth": 0
+    },
+    {
+      "name": "cdf_category",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "海南免税：海关限购分类编码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "reduce_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "1 减库存类型：1-拍下减库存 2-付款减库存",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "assoc_ids",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "同店商品推荐：为空表示使用系统推荐；多个product_id使用“|”分开",
+      "example": "1|2|3",
+      "_depth": 0
+    },
+    {
+      "name": "freight_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "运费模板id，传0表示包邮，通过/freightTemplate/list接口获取",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "重量",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "weight_unit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "重量单位，0-kg, 1-g",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_delay_day",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "delivery_delay_day： 承诺发货时间，单位是天,不传则默认为2天。现货发货(presell_type=0)和阶梯发货模式(presell_type=2)时必填，支持传入9999 、1、 2 （分别表示当日发、次日发、48小时发），具体支持传入的参数范围/product/getProductUpdateRule",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "presell_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发货模式，0-现货发货，1-预售发货，2-阶梯发货，默认0",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "presell_delay",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "全款预售模式时的发货时间/阶梯模式下阶梯发货时间，具体支持传入的参数范围/product/getProductUpdateRule",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "presell_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预售结束时间，格式2020-02-21 18:54:27，最多支持设置距离当前30天",
+      "example": "2020-02-21 18:54:27",
+      "_depth": 0
+    },
+    {
+      "name": "supply_7day_return",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "【该字段将在2023年4月30日下线，请开发使用最新的after_sale_service字段传值；】是否支持7天无理由，0不支持，1支持，2支持（拆封后不支持）",
+      "example": "该字段将在2023年4月30日下线，请开发使用最新的after_sale_service字段传值；",
+      "_depth": 0
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "客服电话号码",
+      "example": "40012345",
+      "_depth": 0
+    },
+    {
+      "name": "commit",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "false仅保存，true保存+提审",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家可见备注",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "out_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外部product_id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "quality_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "资质，可通过/product/qualificationConfig获取",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "quality_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "资质key",
+      "example": "3457***9470978",
+      "_depth": 1
+    },
+    {
+      "name": "quality_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "资质名称",
+      "example": "进货凭证",
+      "_depth": 1
+    },
+    {
+      "name": "quality_attachments",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "资质",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "media_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1-图片，2-pdf",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "凭证url",
+      "example": "\\\"http://www.byted***.com/YYYY\\\"",
+      "_depth": 2
+    },
+    {
+      "name": "spec_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如果不填，则规格名为各级规格名用 \\\"-\\\" 自动生成",
+      "example": "颜色-尺码",
+      "_depth": 0
+    },
+    {
+      "name": "specs",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺通用规格，能被同类商品通用。多规格用^分隔，规格与规格值用|分隔，多个规格值用,分隔。如果创建或编辑现货+预售商品或新预售商品时，须包含发货时效，如：颜色|黑色,白色,黄色^尺码|S,M,L^发货时效|5天内发货,15天内发货",
+      "example": "颜色|红色,黑色^尺码|S,M",
+      "_depth": 0
+    },
+    {
+      "name": "spec_prices",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku详情，数量应该等于规格1规格2规格3，sku数量和规格组合数必须一致 sku不可售时，库存可设置为0",
+      "example": "[{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":11,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"},{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":22,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":44,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":55,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"}]",
+      "_depth": 0
+    },
+    {
+      "name": "spec_pic",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如颜色-尺寸, 颜色就是主规格, 颜色如黑,白,黄,它们图片url以逗号分隔 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张",
+      "example": "img_url,img_url,img_url",
+      "_depth": 0
+    },
+    {
+      "name": "maximum_per_order",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每个用户每次下单限购件数",
+      "example": "200",
+      "_depth": 0
+    },
+    {
+      "name": "limit_per_buyer",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每个用户累计限购件数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "minimum_per_order",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "每个用户每次下单至少购买的件数",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "product_format_new",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通过/product/getCatePropertyV2获取 格式：{\"property_id\":[{\"value\":value,\"name\":\"property_name\",\"diy_type\":0}]} name的类型是string，value和diy_type的类型是number",
+      "example": "{\"1542\":[{\"value\":23964,\"name\":\"是\",\"diy_type\":0}],\"1633\":[{\"value\":38417,\"name\":\"锁水\",\"diy_type\":0}],\"1687\":[{\"value\":111004867,\"name\":\"12/12\",\"diy_type\":0}],\"1880\":[{\"value\":4171,\"name\":\"韩国\",\"diy_type\":0}],\"2685\":[{\"value\":0,\"name\":\"1\",\"diy_type\":0}],\"2976\":[{\"value\":0,\"name\":\"1\",\"diy_type\":0}],\"2988\":[{\"value\":0,\"name\":\"2\",\"diy_type\":0}],\"3299\":[{\"value\":0,\"name\":\"2\",\"diy_type\":0}]}",
+      "_depth": 0
+    },
+    {
+      "name": "spu_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "spu_id",
+      "example": "14567",
+      "_depth": 0
+    },
+    {
+      "name": "appoint_delivery_day",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "可预约发货天数",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "third_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "third_url",
+      "example": "http://img.alicdn.com/xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "extra",
+      "example": "略",
+      "_depth": 0
+    },
+    {
+      "name": "src",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "src",
+      "example": "略",
+      "_depth": 0
+    },
+    {
+      "name": "need_check_out",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "卡券类型需要传true",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "poi_resource",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "卡券信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "valid_days",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "有效时间段，从领取日开始计算，优先级高于ValidStart-ValidEnd",
+      "example": "5",
+      "_depth": 1
+    },
+    {
+      "name": "valid_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "卡券有效开始时间，秒单位时间戳",
+      "example": "1636616483",
+      "_depth": 1
+    },
+    {
+      "name": "valid_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "卡券有效截止时间，秒单位时间戳",
+      "example": "1636616483",
+      "_depth": 1
+    },
+    {
+      "name": "service_num",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "客服电话",
+      "example": "13111111111",
+      "_depth": 1
+    },
+    {
+      "name": "notification",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "领取须知",
+      "example": "领取须知",
+      "_depth": 1
+    },
+    {
+      "name": "code_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "平台产生券码: 1 ; 合作方api实时传入的券码: 4",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "券码总量，0/-1表示不限制，平台券时须\\u003e0",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "couponSecondExchange",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0-不支持二次兑换，1-支持二次兑换",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "total_can_use_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "可核销总次数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "link",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "兑换链接",
+      "example": "https://xxx.xxx.xxx",
+      "_depth": 1
+    },
+    {
+      "name": "condition",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "券码使用条件",
+      "example": "券码使用条件",
+      "_depth": 1
+    },
+    {
+      "name": "car_vin_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "汽车vin码",
+      "example": "BA111111111111111",
+      "_depth": 0
+    },
+    {
+      "name": "need_recharge_mode",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "充值模式",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "presell_config_level",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0：全款预售，1：sku预售，2：现货+预售 ，3：新预售",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "account_template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "账号模板id",
+      "example": "122112",
+      "_depth": 0
+    },
+    {
+      "name": "presell_delivery_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "全款预售和sku预售时传递，其他不传： 0 预售结束后发货 1支付完成后发货",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "white_back_ground_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "白底图url(仅素材中心url有效)",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "long_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "3:4长图url(仅素材中心url有效)",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_service",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后服务参数,key:value格式 ,supply_7day_return(7天无理由)： 0不支持，1支持，2支持（拆封后不支持） supply_day_return_selector(7天无理由标签)：N天-政策代号，N只支持7和15 supply_red_ass_return（红屁屁无忧）：0不支持，1支持 supply_allergy_return（过敏无忧,仅跨境可选）：0不支持，1支持 damaged_order_return（坏损包退）：0不支持，1支持 support_allergy_returnV2（过敏包退，境内可选）：0不支持，1支持",
+      "example": "7-1",
+      "_depth": 0
+    },
+    {
+      "name": "sell_channel",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "售卖方式;0:全渠道售卖,1:仅指定直播间售卖",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "start_sale_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "审核通过后上架售卖时间配置:0-立即上架售卖 1-放入仓库",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "{\"customs_clear_type\":4,\"origin_region_id\": 3573511,\"source_region_id\": 3573511,\"brand_region_id\": 174982,\"net_weight_qty\":13.4,\"tax_payer\":0}",
+      "example": "跨境物流信息",
+      "_depth": 0
+    },
+    {
+      "name": "price_has_tax",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品价格是否含税",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "biz_kind",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品是否跨境、教育等（跨境/海南商品填写2））",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "standard_brand_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "standard_brand_id，通过/brand/list获取，无品牌id则传596120136",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "discount_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售价，单位分，含税价",
+      "example": "11000",
+      "_depth": 0
+    },
+    {
+      "name": "market_price",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "划线价，单位分，含税价(在spec_prices设置)",
+      "example": "13345",
+      "_depth": 0
+    },
+    {
+      "name": "size_info_template_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "尺码表",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_id",
+      "type": "mixed",
+      "description": "product_id",
+      "example": "123"
+    },
+    {
+      "name": "out_product_id",
+      "type": "mixed",
+      "description": "out_product_id",
+      "example": "out_product_id"
+    },
+    {
+      "name": "outer_product_id",
+      "type": "string",
+      "description": "outer_product_id",
+      "example": "outer_product_id"
+    },
+    {
+      "name": "create_time",
+      "type": "string",
+      "description": "create_time",
+      "example": "create_time"
+    },
+    {
+      "name": "sku",
+      "type": "array",
+      "description": "1",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败：图片上传错误（sub_code: isv.parameter-invalid:99）",
+      "action": "建议接入素材中心",
+      "sub_code": "isv.parameter-invalid:99",
+      "sub_msg": "商品创建失败：图片上传错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败: 系统错误（sub_code: isp.service-error:2010001）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "商品创建失败: 系统错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败: 请求超时（sub_code: isp.service-error:2010002）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010002",
+      "sub_msg": "商品创建失败: 请求超时"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 商品创建失败: 缺少参数（sub_code: isv.missing-parameter:2010003）",
+      "action": "请重新进入页面进行补充",
+      "sub_code": "isv.missing-parameter:2010003",
+      "sub_msg": "商品创建失败: 缺少参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 非法参数（sub_code: isv.parameter-invalid:2010004）",
+      "action": "输入正确参数",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "商品创建失败: 非法参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 无访问权限（sub_code: isv.parameter-invalid:2010005）",
+      "action": "输入正确参数",
+      "sub_code": "isv.parameter-invalid:2010005",
+      "sub_msg": "商品创建失败: 无访问权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品创建失败: 新建商品失败（sub_code: isv.business-failed:2010011）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010011",
+      "sub_msg": "商品创建失败: 新建商品失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品创建失败: 读取失败（sub_code: isv.business-failed:2010013）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "商品创建失败: 读取失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 资质类属性必填拒绝（sub_code: isv.parameter-invalid:2010020）",
+      "action": "输入正确参数",
+      "sub_code": "isv.parameter-invalid:2010020",
+      "sub_msg": "商品创建失败: 资质类属性必填拒绝"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 商品状态错误（sub_code: isv.parameter-invalid:2010022）",
+      "action": "输入正确参数",
+      "sub_code": "isv.parameter-invalid:2010022",
+      "sub_msg": "商品创建失败: 商品状态错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 类目校验（sub_code: isv.parameter-invalid:2010044）",
+      "action": "请重新选择类目进行商品发布",
+      "sub_code": "isv.parameter-invalid:2010044",
+      "sub_msg": "商品创建失败: 类目校验"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 店铺需要绑定（sub_code: isv.parameter-invalid:2010050）",
+      "action": "完成账号绑定",
+      "sub_code": "isv.parameter-invalid:2010050",
+      "sub_msg": "商品创建失败: 店铺需要绑定"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 类目相关信息过期（sub_code: isv.parameter-invalid:2010053）",
+      "action": "待资质审核通过后再提交",
+      "sub_code": "isv.parameter-invalid:2010053",
+      "sub_msg": "商品创建失败: 类目相关信息过期"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 商品创建失败: 资质不合法（sub_code: isv.missing-parameter:2010101）",
+      "action": "请上传版权页图",
+      "sub_code": "isv.missing-parameter:2010101",
+      "sub_msg": "商品创建失败: 资质不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 品牌不合法（sub_code: isv.parameter-invalid:2010104）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.parameter-invalid:2010104",
+      "sub_msg": "商品创建失败: 品牌不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品创建失败: 获取类目信息失败（sub_code: isv.business-failed:2010201）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010201",
+      "sub_msg": "商品创建失败: 获取类目信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品创建失败: 调用成功，但填充返回数据时失败,无影响（sub_code: isv.business-failed:2010204）",
+      "action": "无影响，可忽略",
+      "sub_code": "isv.business-failed:2010204",
+      "sub_msg": "商品创建失败: 调用成功，但填充返回数据时失败,无影响"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败: 查询品牌库失败（sub_code: isp.service-error:2010206）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010206",
+      "sub_msg": "商品创建失败: 查询品牌库失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败: 查询商家资质失败（sub_code: isp.service-error:2010207）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2010207",
+      "sub_msg": "商品创建失败: 查询商家资质失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 必须支持7天无理由退货（sub_code: isv.parameter-invalid:2010316）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.parameter-invalid:2010316",
+      "sub_msg": "商品创建失败: 必须支持7天无理由退货"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 商品创建失败: 品牌受限（sub_code: isv.missing-parameter:2010317）",
+      "action": "补充参数",
+      "sub_code": "isv.missing-parameter:2010317",
+      "sub_msg": "商品创建失败: 品牌受限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 使用的品牌没有授权（sub_code: isv.parameter-invalid:2010319）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.parameter-invalid:2010319",
+      "sub_msg": "商品创建失败: 使用的品牌没有授权"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 品牌必填（sub_code: isv.parameter-invalid:2010320）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.parameter-invalid:2010320",
+      "sub_msg": "商品创建失败: 品牌必填"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 商品创建失败: 缺少属性（sub_code: isv.missing-parameter:2010321）",
+      "action": "重新进入页面补充",
+      "sub_code": "isv.missing-parameter:2010321",
+      "sub_msg": "商品创建失败: 缺少属性"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商品创建失败: 发布诊断失败（sub_code: isv.parameter-invalid:2010501）",
+      "action": "补充参数",
+      "sub_code": "isv.parameter-invalid:2010501",
+      "sub_msg": "商品创建失败: 发布诊断失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:4）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.parameter-invalid:4",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:7）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:7",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败：接口限流（sub_code: isp.service-error:2010055）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010055",
+      "sub_msg": "商品创建失败：接口限流"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品创建失败: 因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看（sub_code: isv.business-failed:2010326）",
+      "action": "检查店铺状态后重试",
+      "sub_code": "isv.business-failed:2010326",
+      "sub_msg": "商品创建失败: 因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败: 获取类目配置失败（sub_code: isp.service-error:2010202）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010202",
+      "sub_msg": "商品创建失败: 获取类目配置失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 商品创建失败: 保存素材失败（sub_code: isp.service-error:2010024）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:2010024",
+      "sub_msg": "商品创建失败: 保存素材失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010329:商品创建失败: 当前店铺类型下，不支持在该类目发布此品牌商品。您可查看对应“行业管理规范”的入驻方式。请跳转https://zjsms.com/NE7whg4/（sub_code: isv.business-failed:2010329）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010329",
+      "sub_msg": "2010329:商品创建失败: 当前店铺类型下，不支持在该类目发布此品牌商品。您可查看对应“行业管理规范”的入驻方式。请跳转https://zjsms.com/NE7whg4/"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010061:商品创建失败: 请求权益信息失败（sub_code: isv.business-failed:2010061）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010061",
+      "sub_msg": "2010061:商品创建失败: 请求权益信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010063:商品创建失败: 当前店铺在架商品量已达上限，暂无法创建商品，详细规则可查看商品数限额实施细则（sub_code: isv.business-failed:2010063）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010063",
+      "sub_msg": "2010063:商品创建失败: 当前店铺在架商品量已达上限，暂无法创建商品，详细规则可查看商品数限额实施细则"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010021:商品创建失败: 更新库存数失败: 幂等ID重复（sub_code: isv.business-failed:2010021）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010021",
+      "sub_msg": "2010021:商品创建失败: 更新库存数失败: 幂等ID重复"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/addCbProduct?app_key=your_appkey_here&method=product.addCbProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "create_time": "create_time",
+        "out_product_id": "out_product_id",
+        "outer_product_id": "outer_product_id",
+        "product_id": "123",
+        "sku": [
+          {
+            "code": "1",
+            "out_sku_id": "1",
+            "outer_sku_id": "1",
+            "sku_id": "1",
+            "spec_detail_id1": "1",
+            "spec_detail_id2": "1",
+            "spec_detail_id3": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:99",
+      "sub_msg": "商品创建失败：图片上传错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/499",
+  "updatedAt": "2026-07-14",
+  "_file_stem": "product-product-addCbProduct"
+}

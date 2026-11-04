@@ -1,0 +1,109 @@
+{
+  "id": "doudian.shop.trade.batchGetTradeLimitTemplateList",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "trade.batchGetTradeLimitTemplateList",
+  "description": "批量查询限购模板",
+  "method": "GET",
+  "path": "/trade/batchGetTradeLimitTemplateList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "trade_limit_template_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "限购模板ID列表",
+      "example": "7130507373692584001",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "trade_limit_template_list",
+      "type": "array",
+      "description": "限购模板信息列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/trade/batchGetTradeLimitTemplateList?app_key=your_appkey_here&method=trade.batchGetTradeLimitTemplateList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "trade_limit_template_list": [
+          {
+            "shop_id": "9041",
+            "trade_limit_rule_list": [
+              {
+                "time_period": {
+                  "time_period_fixed": {
+                    "cyclic": "false",
+                    "cyclic_option": {
+                      "cyclic_interval": "1",
+                      "cyclic_unit": "1",
+                      "expire_time": "100",
+                      "frequency": "1"
+                    },
+                    "end_time": "1660745000",
+                    "start_time": "1660742928"
+                  },
+                  "time_period_pattern": "1",
+                  "time_period_sliding_window": {
+                    "time_shift": "0",
+                    "window_size": "100"
+                  }
+                },
+                "trade_limit_model": "1",
+                "trade_limit_pattern": {
+                  "cumulative_max": "10",
+                  "maximum": "5",
+                  "minimum": "1"
+                },
+                "trade_limit_resource": "1",
+                "trade_limit_resource_object": {
+                  "product_category_list": [
+                    {
+                      "first_cid": "1",
+                      "fourth_cid": "4",
+                      "second_cid": "2",
+                      "thrid_cid": "3"
+                    }
+                  ],
+                  "trade_limit_resource_id_list": "[\"1\"]"
+                },
+                "trade_limit_subject": "1"
+              }
+            ],
+            "trade_limit_template_id": "7130507373692584000"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2438",
+  "updatedAt": "2024-06-12",
+  "_file_stem": "shop-trade-batchGetTradeLimitTemplateList"
+}

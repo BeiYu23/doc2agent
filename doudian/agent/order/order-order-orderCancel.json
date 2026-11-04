@@ -1,0 +1,211 @@
+{
+  "id": "doudian.order.order.orderCancel",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.orderCancel",
+  "description": "商家取消待支付订单",
+  "method": "GET",
+  "path": "/order/orderCancel",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺主订单号",
+      "example": "5050438739367795793",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因必须是如下枚举之一：①：用户重复下单②：用户不想买了③：用户买错了/信息填错了④重新下单、联系不上用户⑥：快递无法配送至用户地址⑦：其他；注意请使用枚举值信息，如“用户重复下单”必须要一致，开发者请勿自定义或带有空格等信息，否则无法通过接口校验；",
+      "example": "用户不想买了",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单已取消（sub_code: isv.business-failed:50005）",
+      "action": "订单已取消，无需重试",
+      "sub_code": "isv.business-failed:50005",
+      "sub_msg": "订单已取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 距用户下单时间未超过1分钟，请稍后再试（sub_code: isv.business-failed:50007）",
+      "action": "距用户下单时间未超过1分钟，请稍后再试",
+      "sub_code": "isv.business-failed:50007",
+      "sub_msg": "距用户下单时间未超过1分钟，请稍后再试"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 订单id不能为空（sub_code: isv.missing-parameter:50001）",
+      "action": "订单id不能为空",
+      "sub_code": "isv.missing-parameter:50001",
+      "sub_msg": "订单id不能为空"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数（sub_code: isv.missing-parameter:50002）",
+      "action": "请检查参数",
+      "sub_code": "isv.missing-parameter:50002",
+      "sub_msg": "缺少必选参数"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数（sub_code: isv.missing-parameter:50003）",
+      "action": "请检查参数",
+      "sub_code": "isv.missing-parameter:50003",
+      "sub_msg": "缺少必选参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:50004）",
+      "action": "业务处理失败，请稍后重试",
+      "sub_code": "isv.business-failed:50004",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:70007）",
+      "action": "业务处理失败，请稍后重试",
+      "sub_code": "isv.business-failed:70007",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:50021）",
+      "action": "业务处理失败，请稍后重试",
+      "sub_code": "isv.business-failed:50021",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:50060）",
+      "action": "业务处理失败，请稍后重试",
+      "sub_code": "isv.business-failed:50060",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 定金预售订单不支持取消（sub_code: isv.business-failed:50047）",
+      "action": "定金预售订单不支持取消",
+      "sub_code": "isv.business-failed:50047",
+      "sub_msg": "定金预售订单不支持取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前订单为竞拍订单，不允许取消（sub_code: isv.business-failed:50061）",
+      "action": "当前订单为竞拍订单，不允许取消",
+      "sub_code": "isv.business-failed:50061",
+      "sub_msg": "当前订单为竞拍订单，不允许取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前订单使用了跨店优惠，仅允许买家主动取消（sub_code: isv.business-failed:50048）",
+      "action": "当前订单使用了跨店优惠，仅允许买家主动取消",
+      "sub_code": "isv.business-failed:50048",
+      "sub_msg": "当前订单使用了跨店优惠，仅允许买家主动取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 保险类订单不支持取消（sub_code: isv.business-failed:50046）",
+      "action": "保险类订单不支持取消",
+      "sub_code": "isv.business-failed:50046",
+      "sub_msg": "保险类订单不支持取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 拍卖类订单不支持取消（sub_code: isv.business-failed:50057）",
+      "action": "拍卖类订单不支持取消",
+      "sub_code": "isv.business-failed:50057",
+      "sub_msg": "拍卖类订单不支持取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 拍卖保证金订单不支持取消（sub_code: isv.business-failed:50058）",
+      "action": "拍卖保证金订单不支持取消",
+      "sub_code": "isv.business-failed:50058",
+      "sub_msg": "拍卖保证金订单不支持取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 货到付款订单已完成后不允许取消（sub_code: isv.business-failed:50059）",
+      "action": "货到付款订单已完成后不允许取消",
+      "sub_code": "isv.business-failed:50059",
+      "sub_msg": "货到付款订单已完成后不允许取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 货到付款订单已发货后不允许取（sub_code: isv.business-failed:50008）",
+      "action": "货到付款订单已发货后不允许取",
+      "sub_code": "isv.business-failed:50008",
+      "sub_msg": "货到付款订单已发货后不允许取"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 业务处理失败（sub_code: isv.risk-control-failed:50999）",
+      "action": "业务处理失败，请检查取消原因",
+      "sub_code": "isv.risk-control-failed:50999",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:20003）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:20003",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:50009）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:50009",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 已付款订单不允许取消（sub_code: isv.business-failed:50006）",
+      "action": "已付款订单不允许取消",
+      "sub_code": "isv.business-failed:50006",
+      "sub_msg": "已付款订单不允许取消"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/orderCancel?app_key=your_appkey_here&method=order.orderCancel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:50005",
+      "sub_msg": "订单已取消"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/3381",
+  "updatedAt": "2023-03-30",
+  "_file_stem": "order-order-orderCancel"
+}

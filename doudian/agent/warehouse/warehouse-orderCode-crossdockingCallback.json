@@ -1,0 +1,321 @@
+{
+  "id": "doudian.warehouse.orderCode.crossdockingCallback",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "orderCode.crossdockingCallback",
+  "description": "仓储中心越库单状态回告接口",
+  "method": "GET",
+  "path": "/orderCode/crossdockingCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cross_docking_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "越库单号，必填",
+      "example": "\"CD739774441779845xxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "outbound_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "出库参数 eventType= 600（已出库）时，必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "film_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "为空表示没有贴膜服务\n0 表示未贴膜\n**如果下发单据时携带了是否贴膜标识，则贴膜数量不能为空**",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "express_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "快递信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "logistis_source",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "通过平台取号，回传的快递单号以及快递公司编码，应与从平台取的面单号保持一致。\n\n线下取号，平台不会对快递单号和快递公司编码做平台取号一致性校验。但是需要注意快递商Code只能回传指定类型（目前支持：jd/shunfeng，如需新增可以联系平台配置）",
+      "example": "0-平台取号\n1-线下取号",
+      "_depth": 2
+    },
+    {
+      "name": "logistics_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流单号",
+      "example": "\"75530161931237\"",
+      "_depth": 2
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递公司编码",
+      "example": "\"zhongtong\"",
+      "_depth": 2
+    },
+    {
+      "name": "outbound_details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "出库单明细",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品ID",
+      "example": "\"3697741457885666185\"",
+      "_depth": 2
+    },
+    {
+      "name": "pm_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "包材信息，选填",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "pm_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包材id",
+      "example": "305468",
+      "_depth": 3
+    },
+    {
+      "name": "pm_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "包材名称",
+      "example": "\"机构内包装盒\"",
+      "_depth": 3
+    },
+    {
+      "name": "pm_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包材数量",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "inbound_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "入库参数 eventType= 801（入库拒收）时，必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "rejection_reason",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "拒收原因",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "rejection_reason_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "拒收原因Code",
+      "example": "枚举值参考：\nE301：货不对版\\商品信息不一致\nE302：无货\\少件\nE303：空包裹",
+      "_depth": 2
+    },
+    {
+      "name": "rejection_reason_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "拒收原因描述",
+      "example": "枚举值参考：\nE301：货不对版\\商品信息不一致\nE302：无货\\少件\nE303：空包裹",
+      "_depth": 2
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓code，必填",
+      "example": "\"501\"",
+      "_depth": 0
+    },
+    {
+      "name": "event_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "越库事件类型，必填\n300-入库(收货)完成\n801-入库拒收，退回商家\n600-发货完成（已出仓）\n350-质检通过\n750-质检不通过，退回商家",
+      "example": "300",
+      "_depth": 0
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码，必填",
+      "example": "\"0520254260\"",
+      "_depth": 0
+    },
+    {
+      "name": "qualify_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "质检参数 eventType= 750（质检不通过）时，必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "fail_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检不通过原因",
+      "example": "\"货不对板\"",
+      "_depth": 1
+    },
+    {
+      "name": "event_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "事件发生时间 秒级时间戳",
+      "example": "1722515548",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "\"这是备注信息\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "失败异常码",
+      "example": "1004"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "详细失败原因",
+      "example": "参数非法"
+    },
+    {
+      "name": "data",
+      "type": "string",
+      "description": "越库单回告事件结果",
+      "example": "\"\""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1004）",
+      "action": "参数异常，根据错误信息调整参数后重试",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部错误-可重试（sub_code: isp.service-error:1001）",
+      "action": "重试",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "内部错误-可重试"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 接口超时（sub_code: isp.service-timeout-error:1204）",
+      "action": "重试",
+      "sub_code": "isp.service-timeout-error:1204",
+      "sub_msg": "接口超时"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 接口限流（sub_code: isp.traffic-limited:1604）",
+      "action": "重试",
+      "sub_code": "isp.traffic-limited:1604",
+      "sub_msg": "接口限流"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 单据状态校验失败（sub_code: isv.parameter-invalid:4004）",
+      "action": "核实回告的事件类型，并重新回告",
+      "sub_code": "isv.parameter-invalid:4004",
+      "sub_msg": "单据状态校验失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/orderCode/crossdockingCallback?app_key=your_appkey_here&method=orderCode.crossdockingCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "1004",
+        "data": "\"\"",
+        "msg": "参数非法"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/6758",
+  "updatedAt": "2025-07-22",
+  "_file_stem": "warehouse-orderCode-crossdockingCallback"
+}

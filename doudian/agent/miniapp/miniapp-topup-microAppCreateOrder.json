@@ -1,0 +1,108 @@
+{
+  "id": "doudian.miniapp.topup.microAppCreateOrder",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "topup.microAppCreateOrder",
+  "description": "运营商小程序下单",
+  "method": "GET",
+  "path": "/topup/microAppCreateOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "token",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "下单token",
+      "example": "202505190833318155DAF78404669DBAC7",
+      "_depth": 0
+    },
+    {
+      "name": "phone_number",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "手机号",
+      "example": "13012345678",
+      "_depth": 0
+    },
+    {
+      "name": "amount",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "充值面额，单位分",
+      "example": "5000",
+      "_depth": 0
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "优惠后价格，单位分",
+      "example": "5000",
+      "_depth": 0
+    },
+    {
+      "name": "seller_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "移动侧订单号",
+      "example": "123456",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "url",
+      "type": "string",
+      "description": "下单schema",
+      "example": "sslocal://microapp?app_id=ttcfe7b95a50e94b4901&bdp_log=%7B%22enter_from_merge%22%3A%22recharge_center%22%2C%22enter_position%22%3A%22china_mobile%22%2C%22entrance_form%22%3A%22recharge%22%2C%22launch_from%22%3A%22recharge_center%22%7D&launch_config=%7B%22xscreen_config%22%3A%7B%22rate%22%3A0.7%7D%7D&launch_mode=hostStack&scene=0&start_page=pages%2Findex%2Fcharge%3Famount%3D5100%26env%3Dppe_topup_jiyun%26order_token%3D20250818143943490F6A0CFC0C774E8FCE%26phone_number%3D18301360128%26price%3D5000%26shop_id%3D63141224&uniq_id=S202508181439434821957331557731942400b6dd50568b87&version=v2&version_type=latest&bdpsum=567c3aa"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前页面停留时间过长，请返回上级页面后重试（sub_code: isv.business-failed:1）",
+      "action": "当前页面停留时间过长，请返回上级页面后重试",
+      "sub_code": "isv.business-failed:1",
+      "sub_msg": "当前页面停留时间过长，请返回上级页面后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/topup/microAppCreateOrder?app_key=your_appkey_here&method=topup.microAppCreateOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "url": "sslocal://microapp?app_id=ttcfe7b95a50e94b4901&bdp_log=%7B%22enter_from_merge%22%3A%22recharge_center%22%2C%22enter_position%22%3A%22china_mobile%22%2C%22entrance_form%22%3A%22recharge%22%2C%22launch_from%22%3A%22recharge_center%22%7D&launch_config=%7B%22xscreen_config%22%3A%7B%22rate%22%3A0.7%7D%7D&launch_mode=hostStack&scene=0&start_page=pages%2Findex%2Fcharge%3Famount%3D5100%26env%3Dppe_topup_jiyun%26order_token%3D20250818143943490F6A0CFC0C774E8FCE%26phone_number%3D18301360128%26price%3D5000%26shop_id%3D63141224&uniq_id=S202508181439434821957331557731942400b6dd50568b87&version=v2&version_type=latest&bdpsum=567c3aa"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1",
+      "sub_msg": "当前页面停留时间过长，请返回上级页面后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/7705",
+  "updatedAt": "2025-08-18",
+  "_file_stem": "miniapp-topup-microAppCreateOrder"
+}

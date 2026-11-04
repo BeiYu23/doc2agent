@@ -1,0 +1,153 @@
+{
+  "id": "doudian.shop.shop.getStoreDetail",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "shop.getStoreDetail",
+  "description": "单个获取门店信息",
+  "method": "GET",
+  "path": "/shop/getStoreDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "门店ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "is_need_poi_audit_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要poi审核信息，注：只要审核状态的审核不要传true，需要详细的提交信息时传true",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "is_need_rel_shop_user",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要关联的抖店信息，注：只要shopId不要传true，需要关联店铺名称等信息时传true",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "is_need_charge_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要负责人信息",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store_detail",
+      "type": "object",
+      "description": "门店信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/getStoreDetail?app_key=your_appkey_here&method=shop.getStoreDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "store_detail": {
+          "poi_audit_info": {
+            "address": "",
+            "city": "",
+            "contact": "",
+            "district": "",
+            "latitude": "",
+            "longitude": "",
+            "name": "",
+            "open_time": {
+              "custom": "",
+              "day_map": {}
+            },
+            "poi_audit_id": "",
+            "poi_audit_state": "0",
+            "province": "",
+            "reject_reason": "",
+            "store_code": "",
+            "store_id": "0"
+          },
+          "rel_shop_user": {
+            "biz_type": "0",
+            "id": "0",
+            "ocean_id": "0",
+            "operate_status": "0",
+            "shop_charge_name": "",
+            "shop_name": "",
+            "shop_type": "0",
+            "toutiao_id": "0",
+            "v_type": "0"
+          },
+          "store": {
+            "address": "",
+            "city": "",
+            "city_code": "",
+            "contact": "",
+            "district": "",
+            "district_code": "",
+            "is_open_now": "0",
+            "latitude": "",
+            "longitude": "",
+            "name": "",
+            "open_account_state": "0",
+            "open_time": {
+              "custom": "",
+              "day_map": {}
+            },
+            "poi_id": "0",
+            "province": "",
+            "province_code": "",
+            "rel_shop_id": "0",
+            "state": "0",
+            "store_code": "",
+            "store_id": "0",
+            "town": "",
+            "town_code": ""
+          },
+          "store_charge_info": {
+            "charge_mobile": "123123",
+            "charge_name": "xxx"
+          }
+        }
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2043",
+  "updatedAt": "2022-06-27",
+  "_file_stem": "shop-shop-getStoreDetail"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "doudian.feige.pigeon.getStaffList",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.getStaffList",
+  "description": "查询店铺下的客服列表",
+  "method": "GET",
+  "path": "/pigeon/getStaffList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "is_include_delete",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否查询已删除的",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "staff_list",
+      "type": "array",
+      "description": "客服列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossBorder/orderOperate?app_key=your_appkey_here&method=crossBorder.orderOperate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/5347",
+  "updatedAt": "2023-11-08",
+  "_file_stem": "feige-pigeon-getStaffList"
+}

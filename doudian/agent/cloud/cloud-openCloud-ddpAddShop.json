@@ -1,0 +1,194 @@
+{
+  "id": "doudian.cloud.openCloud.ddpAddShop",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.ddpAddShop",
+  "description": "数据推送，添加数据推送店铺",
+  "method": "GET",
+  "path": "/openCloud/ddpAddShop",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺id",
+      "example": "77977",
+      "_depth": 0
+    },
+    {
+      "name": "rds_instance_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "数据库实例id",
+      "example": "mysql-xxxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "history_days",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "历史推送天数",
+      "example": "60",
+      "_depth": 0
+    },
+    {
+      "name": "interval_calc",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "添加店铺绑定时，历史任务区间计算方式： 0默认 1按店铺历史推送天数计算区间 2取店铺历史推送天数和默认区间的最大值",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 701:RPCError{PSM:[cmp.ecom.open_captain] Method:[GetAppDetail] ErrType:[RPC_FAILED] OriginalErr:[rpc timeout: timeout=1s, to=cmp.ecom.open_captain, method=GetAppDetail, remote=[fdbd:dc02:108:339::132]:9244] BizStatusCode:[0] BizStatusMessage:[]}（sub_code: isv.business-failed:701）",
+      "action": "请检查网络",
+      "sub_code": "isv.business-failed:701",
+      "sub_msg": "701:RPCError{PSM:[cmp.ecom.open_captain] Method:[GetAppDetail] ErrType:[RPC_FAILED] OriginalErr:[rpc timeout: timeout=1s, to=cmp.ecom.open_captain, method=GetAppDetail, remote=[fdbd:dc02:108:339::132]:9244] BizStatusCode:[0] BizStatusMessage:[]}"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62207001:GetAppDetailFromAppId failed（sub_code: isv.business-failed:62207001）",
+      "action": "请联系服务方",
+      "sub_code": "isv.business-failed:62207001",
+      "sub_msg": "62207001:GetAppDetailFromAppId failed"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 811:此App已删除或被禁用（sub_code: isv.business-failed:811）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:811",
+      "sub_msg": "811:此App已删除或被禁用"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数非法（sub_code: isv.business-failed:602）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:602",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 函数流程错误（sub_code: isv.business-failed:812）",
+      "action": "请联系服务方",
+      "sub_code": "isv.business-failed:812",
+      "sub_msg": "函数流程错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该用户没有操作权限（sub_code: isv.business-failed:807）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:807",
+      "sub_msg": "该用户没有操作权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该用户没有此应用权限（sub_code: isv.business-failed:808）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:808",
+      "sub_msg": "该用户没有此应用权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该用户没有此数据库实例权限（sub_code: isv.business-failed:809）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:809",
+      "sub_msg": "该用户没有此数据库实例权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该用户没有此店铺权限（sub_code: isv.business-failed:810）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:810",
+      "sub_msg": "该用户没有此店铺权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该店铺已经添加到其他数据库实例（sub_code: isv.business-failed:62208201）",
+      "action": "无",
+      "sub_code": "isv.business-failed:62208201",
+      "sub_msg": "该店铺已经添加到其他数据库实例"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该店铺不存在（sub_code: isv.business-failed:62208202）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:62208202",
+      "sub_msg": "该店铺不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该店铺未对此应用授权（sub_code: isv.business-failed:62208203）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:62208203",
+      "sub_msg": "该店铺未对此应用授权"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效历史推送天数（sub_code: isv.business-failed:62208009）",
+      "action": "请检查自身请求",
+      "sub_code": "isv.business-failed:62208009",
+      "sub_msg": "无效历史推送天数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务器错误，请稍后重试（sub_code: isv.business-failed:10000000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "服务器错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62208042:数据库实例状态异常（sub_code: isv.business-failed:62208042）",
+      "action": "62208042:数据库实例状态异常",
+      "sub_code": "isv.business-failed:62208042",
+      "sub_msg": "62208042:数据库实例状态异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62208010:数据推送数据库实例不存在（sub_code: isv.business-failed:62208010）",
+      "action": "62208010:数据推送数据库实例不存在",
+      "sub_code": "isv.business-failed:62208010",
+      "sub_msg": "62208010:数据推送数据库实例不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/ddpAddShop?app_key=your_appkey_here&method=openCloud.ddpAddShop&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:701",
+      "sub_msg": "701:RPCError{PSM:[cmp.ecom.open_captain] Method:[GetAppDetail] ErrType:[RPC_FAILED] OriginalErr:[rpc timeout: timeout=1s, to=cmp.ecom.open_captain, method=GetAppDetail, remote=[fdbd:dc02:108:339::132]:9244] BizStatusCode:[0] BizStatusMessage:[]}"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/1402",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-ddpAddShop"
+}

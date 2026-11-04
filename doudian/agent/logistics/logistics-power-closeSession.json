@@ -1,0 +1,89 @@
+{
+  "id": "doudian.logistics.power.closeSession",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.closeSession",
+  "description": "客服关闭会话",
+  "method": "GET",
+  "path": "/power/closeSession",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sessionId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "111111",
+      "_depth": 0
+    },
+    {
+      "name": "actionTime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "-",
+      "example": "123456789",
+      "_depth": 0
+    },
+    {
+      "name": "dealerId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "powerTest",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:10003）",
+      "action": "无",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/closeSession?app_key=your_appkey_here&method=power.closeSession&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1562",
+  "updatedAt": "2023-02-24",
+  "_file_stem": "logistics-power-closeSession"
+}

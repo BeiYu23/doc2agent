@@ -1,0 +1,81 @@
+{
+  "id": "doudian.supply-chain.supplyChain.warehouse.create",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.warehouse.create",
+  "description": "创建区域仓",
+  "method": "GET",
+  "path": "/supplyChain/warehouse/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓id",
+      "example": "w11111111",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区域仓名称",
+      "example": "测试仓",
+      "_depth": 0
+    },
+    {
+      "name": "intro",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区域仓信息描述",
+      "example": "测试仓简介",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouse_id",
+      "type": "string",
+      "description": "平台侧返回的仓编码与out_warehouse_id一一对应",
+      "example": "w11111111"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/warehouse/create?app_key=your_appkey_here&method=supplyChain.warehouse.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "warehouse_id": "w11111111"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/2560",
+  "updatedAt": "2022-09-28",
+  "_file_stem": "supply-chain-supplyChain-warehouse-create"
+}

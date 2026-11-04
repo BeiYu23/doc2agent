@@ -1,0 +1,169 @@
+{
+  "id": "doudian.decoration.shop.batchUpdateCategory",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.batchUpdateCategory",
+  "description": "批量更新分类",
+  "method": "GET",
+  "path": "/shop/batchUpdateCategory",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "tmp_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "页面id,请使用【/shop/openShopPageManagementList】接口查询页面id或访问店铺装修列表页面获取页面id。",
+      "example": "735278978958386",
+      "_depth": 0
+    },
+    {
+      "name": "category_info_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "一级页面分类列表，最大支持一次传入一级+二级类目总数500个。",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "一级类目id",
+      "example": "735278978958385",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "新一级类目名称，不填则默认不修改",
+      "example": "水果",
+      "_depth": 1
+    },
+    {
+      "name": "children_category_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "二级类目列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "cid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "二级类目id",
+      "example": "735278978958385",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "新二级类目名称，不填则默认不修改",
+      "example": "葡萄",
+      "_depth": 2
+    },
+    {
+      "name": "rank",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "新的类目排序，不填则默认不修改。在同级别优先级权重，越大则越靠前，可选范围[100000]，相同排序数字，创建时间最新的靠前排列。0排序在最后面，以此类推。",
+      "example": "100",
+      "_depth": 2
+    },
+    {
+      "name": "rank",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "新的类目排序，不填则默认不修改。在同级别优先级权重，越大则越靠前，可选范围[100000]，相同排序数字，创建时间最新的靠前排列。0排序在最后面，以此类推。",
+      "example": "100",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tmp_id",
+      "type": "string",
+      "description": "页面id，成功时有值。",
+      "example": "7352789789583868197"
+    },
+    {
+      "name": "category_list",
+      "type": "array",
+      "description": "一级分类列表。成功后返回页面完整分类列表。",
+      "example": ""
+    },
+    {
+      "name": "failed_category_list",
+      "type": "array",
+      "description": "失败分类列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/batchUpdateCategory?app_key=your_appkey_here&method=shop.batchUpdateCategory&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "category_list": [
+          {
+            "children_category_list": [
+              {
+                "cid": "7352789789583868196",
+                "name": "葡萄",
+                "rank": "100"
+              }
+            ],
+            "cid": "7352789789583868198",
+            "name": "水果",
+            "rank": "100"
+          }
+        ],
+        "failed_category_list": [
+          {
+            "cid": "7352789789583868195",
+            "level": "2",
+            "msg": "rank值超出范围(0~100000)",
+            "name": "葡萄"
+          }
+        ],
+        "tmp_id": "7352789789583868197"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6517",
+  "updatedAt": "2024-05-15",
+  "_file_stem": "decoration-shop-batchUpdateCategory"
+}

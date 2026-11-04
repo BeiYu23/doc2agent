@@ -1,0 +1,277 @@
+{
+  "id": "doudian.product.product.previewChannelProduct",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.previewChannelProduct",
+  "description": "预览渠道品信息",
+  "method": "GET",
+  "path": "/product/previewChannelProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "main_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "主商品ID",
+      "example": "3631654780608339610",
+      "_depth": 0
+    },
+    {
+      "name": "channel_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "渠道ID",
+      "example": "1775199232748660",
+      "_depth": 0
+    },
+    {
+      "name": "channel_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "渠道类型",
+      "example": "3",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "main_product_id",
+      "type": "mixed",
+      "description": "主商品ID",
+      "example": "3631654780608339610"
+    },
+    {
+      "name": "channel_id",
+      "type": "mixed",
+      "description": "渠道ID",
+      "example": "1775199232748660"
+    },
+    {
+      "name": "channel_type",
+      "type": "mixed",
+      "description": "渠道类型",
+      "example": "3"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "渠道品标题，包含标题前缀+标题内容",
+      "example": "半身裙"
+    },
+    {
+      "name": "start_time",
+      "type": "string",
+      "description": "有效期开始时间",
+      "example": "2023-02-21 16:46:21"
+    },
+    {
+      "name": "end_time",
+      "type": "string",
+      "description": "有效期结束时间",
+      "example": "2023-02-21 16:46:21"
+    },
+    {
+      "name": "price_follow_main",
+      "type": "boolean",
+      "description": "价格是否跟随主品",
+      "example": "true"
+    },
+    {
+      "name": "share_main_stock",
+      "type": "boolean",
+      "description": "库存是否与主品共享",
+      "example": "true"
+    },
+    {
+      "name": "is_kol_exclusive",
+      "type": "boolean",
+      "description": "是否『达人专属』渠道品",
+      "example": "true"
+    },
+    {
+      "name": "status",
+      "type": "mixed",
+      "description": "渠道品状态\n0：下架\n2：上架\n3：封禁",
+      "example": "1"
+    },
+    {
+      "name": "channel_buy_limit",
+      "type": "object",
+      "description": "限购信息",
+      "example": ""
+    },
+    {
+      "name": "sku_channel",
+      "type": "array",
+      "description": "SKU信息",
+      "example": ""
+    },
+    {
+      "name": "main_img_material",
+      "type": "object",
+      "description": "渠道品主图信息",
+      "example": ""
+    },
+    {
+      "name": "detail_brief_material",
+      "type": "object",
+      "description": "渠道品详情图信息",
+      "example": ""
+    },
+    {
+      "name": "freight_template",
+      "type": "object",
+      "description": "运费模板配置",
+      "example": ""
+    },
+    {
+      "name": "sku_code_follow_main",
+      "type": "boolean",
+      "description": "商家编码与主品保持一致配置，true-与主品保持一致，false-自定义",
+      "example": "false"
+    },
+    {
+      "name": "check_status",
+      "type": "mixed",
+      "description": "渠道品审核状态，1：未提交审核；2：审核中；3：审核通过；4：审核拒绝",
+      "example": "3"
+    },
+    {
+      "name": "name_prefix",
+      "type": "string",
+      "description": "标题前缀",
+      "example": "标题前缀"
+    },
+    {
+      "name": "name_subject",
+      "type": "string",
+      "description": "标题内容",
+      "example": "标题内容"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品不存在或已彻底删除（sub_code: isv.business-failed:2010058）",
+      "action": "商品不存在或已彻底删除",
+      "sub_code": "isv.business-failed:2010058",
+      "sub_msg": "商品不存在或已彻底删除"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 渠道品查询失败，请重试（sub_code: isv.business-failed:2010001）",
+      "action": "渠道品查询失败，请重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "渠道品查询失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询品牌信息失败（sub_code: isv.business-failed:2010013）",
+      "action": "查询品牌信息失败",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "查询品牌信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 渠道类型不合法（sub_code: isv.business-failed:2010004）",
+      "action": "渠道类型不合法",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "渠道类型不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110103019:渠道品不存在（sub_code: isv.business-failed:110103019）",
+      "action": "110103019:渠道品不存在",
+      "sub_code": "isv.business-failed:110103019",
+      "sub_msg": "110103019:渠道品不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/previewChannelProduct?app_key=your_appkey_here&method=product.previewChannelProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "channel_buy_limit": {
+          "max_buy_num": "2",
+          "min_buy_num": "1",
+          "total_buy_num": "5"
+        },
+        "channel_id": "1775199232748660",
+        "channel_type": "3",
+        "check_status": "3",
+        "detail_brief_material": {
+          "img_list": "[\"xxxx\", \"xxxx\"]",
+          "material_status": "1",
+          "material_type": "18",
+          "reject_reason": "不清晰"
+        },
+        "end_time": "2023-02-21 16:46:21",
+        "freight_template": {
+          "freight_follow_main": "true",
+          "freight_id": "0"
+        },
+        "is_kol_exclusive": "true",
+        "main_img_material": {
+          "img_list": "[\"xxxx\", \"xxxx\"]",
+          "material_status": "1",
+          "material_type": "18",
+          "reject_reason": "不清晰"
+        },
+        "main_product_id": "3631654780608339610",
+        "name": "半身裙",
+        "name_prefix": "标题前缀",
+        "name_subject": "标题内容",
+        "price_follow_main": "true",
+        "share_main_stock": "true",
+        "sku_channel": [
+          {
+            "name": "红色",
+            "sku_channel": {
+              "code": "11111",
+              "price": "1111",
+              "sku_id": "12323232132",
+              "stock_num": "11"
+            },
+            "sku_id": "12323232132",
+            "sku_main": {
+              "price": "1111",
+              "stock": "11"
+            },
+            "status": "1"
+          }
+        ],
+        "sku_code_follow_main": "false",
+        "start_time": "2023-02-21 16:46:21",
+        "status": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010058",
+      "sub_msg": "商品不存在或已彻底删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4467",
+  "updatedAt": "2025-09-08",
+  "_file_stem": "product-product-previewChannelProduct"
+}

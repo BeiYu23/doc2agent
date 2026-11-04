@@ -1,0 +1,104 @@
+{
+  "id": "doudian.virtual.order.PackageProcessFail",
+  "platform": "doudian",
+  "group": "virtual",
+  "name": "order.PackageProcessFail",
+  "description": "套餐办理失败",
+  "method": "GET",
+  "path": "/order/PackageProcessFail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 虚拟充值API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "\"123456\"",
+      "_depth": 0
+    },
+    {
+      "name": "op",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "风控相关信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "platform",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作平台",
+      "example": "\"system\"",
+      "_depth": 1
+    },
+    {
+      "name": "op_uid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作人uid",
+      "example": "123456",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ret_status",
+      "type": "string",
+      "description": "返回状态",
+      "example": "\"Success\""
+    },
+    {
+      "name": "ret_code",
+      "type": "string",
+      "description": "返回码",
+      "example": "0"
+    },
+    {
+      "name": "ret_message",
+      "type": "string",
+      "description": "返回信息",
+      "example": "\"成功\""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/PackageProcessFail?app_key=your_appkey_here&method=order.PackageProcessFail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ret_code": "0",
+        "ret_message": "\"成功\"",
+        "ret_status": "\"Success\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/164/6904",
+  "updatedAt": "2024-09-24",
+  "_file_stem": "virtual-order-PackageProcessFail"
+}

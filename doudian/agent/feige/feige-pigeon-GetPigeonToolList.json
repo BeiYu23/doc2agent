@@ -1,0 +1,83 @@
+{
+  "id": "doudian.feige.pigeon.GetPigeonToolList",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.GetPigeonToolList",
+  "description": "该接口用于根据业务身份和相关参数获取可用的客服工具列表。主要应用场景包括：\n\n1. 初始化时获取可用工具\n2. 根据不同业务场景动态展示工具列表\n3. 支持多种业务身份和客服场景的工具配置\n4. 提供扩展字段支持未来功能迭代\n\n请求参数包括必需的业务身份标",
+  "method": "GET",
+  "path": "/pigeon/GetPigeonToolList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pigeon_biz_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "业务ID",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tool_list",
+      "type": "array",
+      "description": "工具列表",
+      "example": "[\n      \"BASIC_SCRIPT\",\n      \"URGE_PURCHASE\",\n      \"GOODS_RECOMMEND\",\n      \"ACK_ORDER_ADDRESS\",\n      \"APPLY_REFUND\",\n      \"APPLY_EXCHANGE\",\n      \"APPLY_AFTERSALE\",\n      \"URGE_DELIVERY\",\n      \"CLARIFY_ORDER\",\n      \"URGE_AFTERSALE\",\n      \"AFTERSALE_PROGRESS\",\n      \"SENDBACK_GOODS\",\n      \"REVERSE_LOGISTIC\",\n      \"FREIGHT_REFUND\",\n      \"LOGISTIC\",\n      \"GIFT_ORDER\",\n      \"GIFT_LOGISTIC\",\n      \"DIRECT_SWITCH_HUMAN\"\n    ]"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1001:pigeon_biz_type参数错误，当前只允许传入值2（sub_code: isv.business-failed:-1001）",
+      "action": "pigeon_biz_type目前只允许传入值2（商家）",
+      "sub_code": "isv.business-failed:-1001",
+      "sub_msg": "-1001:pigeon_biz_type参数错误，当前只允许传入值2"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.track.bytedance.query&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "\"{\\\"timestamp\\\":\\\"2020-09-10 12:04:05\\\",\\\"track_no\\\":\\\"123456\\\",\\\"traces\\\": [{\\\"trace_type\\\":\\\"GOT\\\",\\\"trace_sub_type\\\":\\\"GOT_SUCCESS\\\",\\\"timestamp\\\":\\\"2020-09-09 12:04:05\\\",\\\"content\\\":\\\"您的订单已被收件员揽收,【东莞寮步镇横坑营业部】库存中\\\",\\\"site_name\\\":\\\"东莞寮步镇横坑营业部\\\",\\\"site_code\\\":\\\"123\\\"}]}\"",
+        "result": "true",
+        "returnCode": "\"200\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1001",
+      "sub_msg": "-1001:pigeon_biz_type参数错误，当前只允许传入值2"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/7668",
+  "updatedAt": "2025-08-04",
+  "_file_stem": "feige-pigeon-GetPigeonToolList"
+}

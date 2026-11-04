@@ -1,0 +1,206 @@
+{
+  "id": "doudian.waybill.logistics.pushOnlineServiceConfig",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.pushOnlineServiceConfig",
+  "description": "物流商推送面单服务的配置",
+  "method": "GET",
+  "path": "/logistics/pushOnlineServiceConfig",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务类型。0-增值服务；1-产品类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务描述",
+      "example": "该服务提供了更快更优的派送体验",
+      "_depth": 0
+    },
+    {
+      "name": "is_auto_open",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否自动开通。0-否；1-是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人名称",
+      "example": "李四",
+      "_depth": 0
+    },
+    {
+      "name": "operator_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务名称（也是面单打印的名称）",
+      "example": "航空件",
+      "_depth": 0
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务code",
+      "example": "XXX",
+      "_depth": 0
+    },
+    {
+      "name": "route_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "线路限制",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "send_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "寄件地址",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地区名称",
+      "example": "区县",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称",
+      "example": "省份",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "街道",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "城市",
+      "_depth": 2
+    },
+    {
+      "name": "rece_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "收件地址",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "街道",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称",
+      "example": "省份",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "城市",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "区县",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/pushOnlineServiceConfig?app_key=your_appkey_here&method=logistics.pushOnlineServiceConfig&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/6744",
+  "updatedAt": "2024-08-02",
+  "_file_stem": "waybill-logistics-pushOnlineServiceConfig"
+}

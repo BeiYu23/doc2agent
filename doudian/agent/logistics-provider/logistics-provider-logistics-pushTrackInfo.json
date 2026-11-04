@@ -1,0 +1,152 @@
+{
+  "id": "doudian.logistics-provider.logistics.pushTrackInfo",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.pushTrackInfo",
+  "description": "异步推送面单运单信息",
+  "method": "GET",
+  "path": "/logistics/pushTrackInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "collect_net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实际的揽收网点编码",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "service_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "增值服务列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "service_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "增值服务取值（如段码内容、JSON 等，长度上限 1MB）",
+      "example": "{\"value\":\"1\"}",
+      "_depth": 1
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "增值服务编码",
+      "example": "SVC-XX",
+      "_depth": 1
+    },
+    {
+      "name": "trans_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "运输方式列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "trans_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运输方式\nairfreight：空运\nrailway：铁路\nwaterway：水路\nhighway：公路",
+      "example": "airfreight",
+      "_depth": 1
+    },
+    {
+      "name": "calc_net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实际的派件网点编码",
+      "example": "234343",
+      "_depth": 0
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品类型",
+      "example": "byte_tk",
+      "_depth": 0
+    },
+    {
+      "name": "route_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "此运单的全局路由（揽收网点-首分拨...-末分拨-派件网点），需要传完整序列，若存在多个规划路由，传主路由",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "route_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "路由类型\ncollectNet：揽收网点\nfirstDistribution：首分拨\nterminalDistribution：末分拨\ndeliveryNet：派件网点",
+      "example": "collectNet",
+      "_depth": 1
+    },
+    {
+      "name": "route_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "路由编码\ncollectNetCode：揽收网点编码\nfirstDistributionCode：首分拨编码\nterminalDistributionCode：末分拨编码\ndeliveryNetCode：派件网点编码",
+      "example": "1234",
+      "_depth": 1
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/pushTrackInfo?app_key=your_appkey_here&method=logistics.pushTrackInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8373",
+  "updatedAt": "2026-06-24",
+  "_file_stem": "logistics-provider-logistics-pushTrackInfo"
+}

@@ -1,0 +1,189 @@
+{
+  "id": "doudian.logistics-provider.power.operateTicket",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "power.operateTicket",
+  "description": "服务商回复工单",
+  "method": "GET",
+  "path": "/power/operateTicket",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ticketId",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工单号",
+      "example": "7204346045755982115",
+      "_depth": 0
+    },
+    {
+      "name": "trackNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "7204346045755",
+      "_depth": 0
+    },
+    {
+      "name": "opType",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "第一次处理：handle\n第二次处理：appeal/noappeal",
+      "example": "handle",
+      "_depth": 0
+    },
+    {
+      "name": "opTime",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "操作时间",
+      "example": "1677478601",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "处理备注",
+      "example": "处理完成",
+      "_depth": 0
+    },
+    {
+      "name": "compensateState",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "是否赔付， \n1 未赔付 \n2 已赔付",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "compensateAmount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "赔付金额，单位为分。在compensate_state为2是必填",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "compensateReason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "赔付原因： \nlose 丢失 \ndamage 破损 \nother 其他",
+      "example": "lose",
+      "_depth": 0
+    },
+    {
+      "name": "attachment",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "附件",
+      "example": "[\"www.baidu.com\"]",
+      "_depth": 0
+    },
+    {
+      "name": "extension",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{\"key\":\"value\"}",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务商编码",
+      "example": "powertestexpress",
+      "_depth": 0
+    },
+    {
+      "name": "handleResponse",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "处理结果：\n1 认责\n2 不认责",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 如参数不合法、工单id不存在等（sub_code: isv.business-failed:10000）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "如参数不合法、工单id不存在等"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常（sub_code: isv.business-failed:10002）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前的工单，物流商已经处理完成，不需要操作（sub_code: isv.business-failed:10003）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "当前的工单，物流商已经处理完成，不需要操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 禁止处理其他家物流商的工单（sub_code: isv.business-failed:10004）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10004",
+      "sub_msg": "禁止处理其他家物流商的工单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 由于接口下发失败或者工单没有通过接口下发，需要物流商在协同平台处理（sub_code: isv.business-failed:10005）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10005",
+      "sub_msg": "由于接口下发失败或者工单没有通过接口下发，需要物流商在协同平台处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/operateTicket?app_key=your_appkey_here&method=power.operateTicket&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "如参数不合法、工单id不存在等"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2993",
+  "updatedAt": "2023-02-27",
+  "_file_stem": "logistics-provider-power-operateTicket"
+}

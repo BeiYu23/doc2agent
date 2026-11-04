@@ -1,0 +1,136 @@
+{
+  "id": "doudian.cloud.openCloud.v1.imageVersion.list",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.v1.imageVersion.list",
+  "description": "查询镜像列表",
+  "method": "GET",
+  "path": "/openCloud/v1/imageVersion/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "容器服务id",
+      "example": "7241847582434591010",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "镜像创建的开始时间",
+      "example": "1687165378",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "镜像创建的开始时间",
+      "example": "1687165378",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "构建状态 1:构建中，2：构建成功；3：构建异常",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100044514",
+      "_depth": 0
+    },
+    {
+      "name": "page_index",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量，最大100个",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "image_versions",
+      "type": "array",
+      "description": "镜像列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "镜像总数",
+      "example": "20"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=openCloud.v1.imageVersion.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "image_versions": [
+          {
+            "create_time": "1685675755",
+            "cs_id": "7239708175753249068",
+            "cs_name": "ykzhu20230601",
+            "failed_reason": "\"\"",
+            "file_name": "1bc0a0ad0abf4b06abd4161064d99050.jar",
+            "remark": "测试",
+            "status": "2",
+            "version_id": "7239916236111348012",
+            "version_name": "v1.4"
+          }
+        ],
+        "total": "20"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/4156",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-v1-imageVersion-list"
+}

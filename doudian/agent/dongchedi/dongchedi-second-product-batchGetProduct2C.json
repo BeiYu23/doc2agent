@@ -1,0 +1,194 @@
+{
+  "id": "doudian.dongchedi.second.product.batchGetProduct2C",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.product.batchGetProduct2C",
+  "description": "【二方接口】批量获取商品信息",
+  "method": "GET",
+  "path": "/second/product/batchGetProduct2C",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "option",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "need_sku",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要sku",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "need_sell_num",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要销量",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "need_tag",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要tag",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "need_product_pic",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要列表图",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "param",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品ID 必填",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sku_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "products",
+      "type": "array",
+      "description": "成功查询出的product",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.product.batchGetProduct2C&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "products": [
+          {
+            "brand_id": "1",
+            "category_id": "1",
+            "check_status": "1",
+            "description": "1",
+            "main_img": {
+              "Height": "1",
+              "picType": "1",
+              "pic_id": "1",
+              "trackInfo": "1",
+              "url": "1",
+              "width": "11"
+            },
+            "mobile": "1",
+            "name": "1",
+            "new_category": {
+              "first_c_name": "1",
+              "first_cid": "1",
+              "fourth_c_name": "1",
+              "fourth_cid": "1",
+              "second_c_name": "1",
+              "second_cid": "1",
+              "third_c_name": "1",
+              "third_cid": "1"
+            },
+            "original_price": "1",
+            "product_id": "1",
+            "sale_price": "1",
+            "sell_num": "1",
+            "shop_id": "1",
+            "skus": [
+              {
+                "channel_main_sku_id": "1",
+                "code": "1",
+                "id": "1",
+                "out_sku_id": "1",
+                "outer_sku_id": "1",
+                "presell_delay": "1",
+                "presell_type": "1",
+                "price": "1",
+                "product_id": "1",
+                "sale_property_values": [
+                  {
+                    "pair_id": "1",
+                    "pic": {
+                      "height": "1",
+                      "url": "1",
+                      "width": "1"
+                    },
+                    "property": {
+                      "property_id": "1",
+                      "property_name": "1"
+                    },
+                    "seq": "1"
+                  }
+                ],
+                "sku_biz": "1",
+                "spec_id": "1",
+                "supplier_id": "1",
+                "type": "1"
+              }
+            ],
+            "spec_id": "1",
+            "status": "1",
+            "store_id": "1",
+            "tag_list": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6950",
+  "updatedAt": "2024-10-18",
+  "_file_stem": "dongchedi-second-product-batchGetProduct2C"
+}

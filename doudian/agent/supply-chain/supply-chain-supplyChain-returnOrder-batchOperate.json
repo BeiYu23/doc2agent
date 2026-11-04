@@ -1,0 +1,132 @@
+{
+  "id": "doudian.supply-chain.supplyChain.returnOrder.batchOperate",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.returnOrder.batchOperate",
+  "description": "批量操作售后单",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "return_order_no_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "售后单号",
+      "example": "\"GSH123123123123\"",
+      "_depth": 0
+    },
+    {
+      "name": "operate_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型，目前支持\n同意退款：CONFIRM_REFUNDD\n确认收货：CONFIRM_RETURNED\n拒绝售后：REJECT",
+      "example": "\"CONFIRM_RETURNED\"",
+      "_depth": 0
+    },
+    {
+      "name": "refuse_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后拒绝原因",
+      "example": "\"售后拒绝原因\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "响应码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应信息",
+      "example": "success"
+    },
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否操作成功",
+      "example": "true"
+    },
+    {
+      "name": "success_order_no_list",
+      "type": "array",
+      "description": "处理成功售后单号列表",
+      "example": "{\"GSH123123123\"}"
+    },
+    {
+      "name": "failed_order_no_list",
+      "type": "array",
+      "description": "处理失败售后单号列表",
+      "example": "{\"GSH321321321\"}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求参数异常（sub_code: isv.business-failed:1020）",
+      "action": "修改请求入参",
+      "sub_code": "isv.business-failed:1020",
+      "sub_msg": "请求参数异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 业务处理失败（sub_code: isp.service-error:1040）",
+      "action": "根据提示处理",
+      "sub_code": "isp.service-error:1040",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1000）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.returnOrder.batchOperate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "failed_order_no_list": "{\"GSH321321321\"}",
+        "msg": "success",
+        "success": "true",
+        "success_order_no_list": "{\"GSH123123123\"}"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1020",
+      "sub_msg": "请求参数异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/4036",
+  "updatedAt": "2023-06-05",
+  "_file_stem": "supply-chain-supplyChain-returnOrder-batchOperate"
+}

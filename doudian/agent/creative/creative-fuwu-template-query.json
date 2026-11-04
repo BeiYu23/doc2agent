@@ -1,0 +1,126 @@
+{
+  "id": "doudian.creative.fuwu.template.query",
+  "platform": "doudian",
+  "group": "creative",
+  "name": "fuwu.template.query",
+  "description": "查询模板服务列表",
+  "method": "GET",
+  "path": "/fuwu/template/query",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 创意管理API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "起始页(从1开始)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "页大小(0～100)",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "status_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "服务状态：-2删除，-1初始化，0上架，1 审核中, 2下架，",
+      "example": "[0]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "template_list",
+      "type": "array",
+      "description": "模板列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总条数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:100001）",
+      "action": "按 sub_code 定位问题后处理",
+      "sub_code": "isv.business-failed:100001"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/fuwu/template/query?app_key=your_appkey_here&method=fuwu.template.query&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "template_list": [
+          {
+            "labels": "[1,2]",
+            "preview_info": {
+              "picture_paths": "['1.jpeg']",
+              "thumbnail": "cover.jpg",
+              "video_path": "xxx.mp4"
+            },
+            "service_id": "111111",
+            "service_type": "1",
+            "skus": [
+              {
+                "duration_id": "6",
+                "price": "100",
+                "price_type": "0"
+              }
+            ],
+            "status": "0",
+            "suite_industry": {
+              "industry_ids": "[123]",
+              "suite_type": "2"
+            },
+            "template_code": "111111",
+            "template_info": {
+              "displaying_text": "1",
+              "para_graph_num": "0",
+              "size": "1"
+            },
+            "template_name": "模版"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:100001",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1358/4201",
+  "updatedAt": "2023-08-04",
+  "_file_stem": "creative-fuwu-template-query"
+}

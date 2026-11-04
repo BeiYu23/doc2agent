@@ -1,0 +1,254 @@
+{
+  "id": "doudian.cloud.openCloud.v1.deployTicket.create",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.v1.deployTicket.create",
+  "description": "创建发布单",
+  "method": "GET",
+  "path": "/openCloud/v1/deployTicket/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "config_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配置id",
+      "example": "7239908695869063468",
+      "_depth": 0
+    },
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器服务id",
+      "example": "7239708175753249068",
+      "_depth": 0
+    },
+    {
+      "name": "image_version_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "镜像版本id",
+      "example": "7239916236111348012",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "upgrade_strategy",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实例更新策略。1:滚动更新；2:重新创建",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "max_unavailable",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最大不可用，百分比，范围[0-100]",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "max_surge",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最大超量，百分比，范围[0-100]",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "cron_job_advanced_conf",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "高级配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "successful_jobs_history_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "成功任务保留数, 取值: \"空,[0,65535]\", 默认 空",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "failed_jobs_history_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "失败任务保留数, 取值: \"空,[0,65535]\", 默认 空",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "concurrency_policy",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "并发策略, 默认 Allow。 0:允许, 默认；1：禁止；2:替换",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "completions",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "成功运行次数, 取值: \"空,[0,65535]\", 默认 空",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "parallelism",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "可并行数, 取值: \"空,[0,65535]\", 默认 空",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "active_deadline_seconds",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最大超时时间, 取值: \"空,[0,65535]\" 默认 空, 单位: 秒",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "backoff_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "重试次数, 取值: \"空,[0,65535]\", 默认 空",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "restart_policy",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "重启策略。0:永不重启；1：失败时重启",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100044514",
+      "_depth": 0
+    },
+    {
+      "name": "custom_Image",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "自定义镜像版本，仅自带程序包的自定义镜像发布需传该参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "repo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义镜像名称",
+      "example": "test-image",
+      "_depth": 1
+    },
+    {
+      "name": "tag_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镜像版本",
+      "example": "1.0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ticket",
+      "type": "object",
+      "description": "发布单信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=openCloud.v1.deployTicket.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ticket": {
+          "config_id": "7239908695869063468",
+          "confirm_time": "-2006054656",
+          "create_time": "1685696029",
+          "cs_id": "7239708175753249068",
+          "extra": {},
+          "image_version_id": "7239916236111348012",
+          "max_surge": "1",
+          "max_surge_num": "1",
+          "max_unavailable": "0",
+          "max_unavailable_num": "0",
+          "name": "测试",
+          "remark": "test",
+          "show_instance_list": "false",
+          "ticket_id": "7239916236111413548",
+          "ticket_status": "10",
+          "ticket_type": "0",
+          "update_time": "1685696029",
+          "upgrade_strategy": "1",
+          "use_time": "0"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/4149",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-v1-deployTicket-create"
+}

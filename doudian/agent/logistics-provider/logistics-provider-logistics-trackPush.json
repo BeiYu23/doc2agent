@@ -1,0 +1,1115 @@
+{
+  "id": "doudian.logistics-provider.logistics.trackPush",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.trackPush",
+  "description": "快递模式轨迹推送",
+  "method": "GET",
+  "path": "/logistics/trackPush",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cur_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "推送时间",
+      "example": "2022-04-28 10:17:51",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司编码",
+      "example": "powertestexpress",
+      "_depth": 0
+    },
+    {
+      "name": "trace_msgs",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "消息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "SF0001",
+      "_depth": 1
+    },
+    {
+      "name": "traces",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "运单对应的轨迹列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "trace_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "轨迹的一级类型",
+      "example": "ORDER",
+      "_depth": 2
+    },
+    {
+      "name": "trace_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "轨迹的二级类型",
+      "example": "ORDER_RECEIVED",
+      "_depth": 2
+    },
+    {
+      "name": "op_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "当前轨迹的操作时间",
+      "example": "2020-09-09 12:04:05",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "轨迹文案",
+      "example": "西湖网点已揽收",
+      "_depth": 2
+    },
+    {
+      "name": "current_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "操作网点地址",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称",
+      "example": "浙江省",
+      "_depth": 3
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "33",
+      "_depth": 3
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "杭州市",
+      "_depth": 3
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "3306",
+      "_depth": 3
+    },
+    {
+      "name": "town",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "西湖区",
+      "_depth": 3
+    },
+    {
+      "name": "town_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "330666",
+      "_depth": 3
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "西湖街道",
+      "_depth": 3
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "33066666",
+      "_depth": 3
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "西湖",
+      "_depth": 3
+    },
+    {
+      "name": "next_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "发件轨迹等发往下一网点的地址",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称",
+      "example": "浙江省",
+      "_depth": 3
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "33",
+      "_depth": 3
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "杭州市",
+      "_depth": 3
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "3306",
+      "_depth": 3
+    },
+    {
+      "name": "town",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "西湖区",
+      "_depth": 3
+    },
+    {
+      "name": "town_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "330666",
+      "_depth": 3
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "西湖街道",
+      "_depth": 3
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "33066666",
+      "_depth": 3
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "西湖",
+      "_depth": 3
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "原因",
+      "example": "原因",
+      "_depth": 2
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点所在城市",
+      "example": "杭州市",
+      "_depth": 2
+    },
+    {
+      "name": "site_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点名称",
+      "example": "西湖一区网点",
+      "_depth": 2
+    },
+    {
+      "name": "site_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点编码",
+      "example": "00001",
+      "_depth": 2
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作员姓名",
+      "example": "小张",
+      "_depth": 2
+    },
+    {
+      "name": "operator_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作员电话",
+      "example": "17812345678",
+      "_depth": 2
+    },
+    {
+      "name": "facility_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点类型",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "next_site_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "下一网点编码",
+      "example": "00002",
+      "_depth": 2
+    },
+    {
+      "name": "exception_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常编码",
+      "example": "1000001",
+      "_depth": 2
+    },
+    {
+      "name": "description",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常原因描述",
+      "example": "道路原因",
+      "_depth": 2
+    },
+    {
+      "name": "new_track_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "换单单号",
+      "example": "SF00002",
+      "_depth": 2
+    },
+    {
+      "name": "new_company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "换单快递公司编码",
+      "example": "powertestexpress",
+      "_depth": 2
+    },
+    {
+      "name": "time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "预约时间",
+      "example": "2022-04-28 10:17:54",
+      "_depth": 2
+    },
+    {
+      "name": "third_sort_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三段码",
+      "example": "x",
+      "_depth": 2
+    },
+    {
+      "name": "is_not_learning",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "无需学习标记（布尔类型）",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "courier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "派件人ID",
+      "example": "x",
+      "_depth": 2
+    },
+    {
+      "name": "third_party_company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "代派公司编码",
+      "example": "shunfeng",
+      "_depth": 2
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "提货地址/驿站地址",
+      "example": "小区门口右转第一家驿站",
+      "_depth": 2
+    },
+    {
+      "name": "pick_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "提货码",
+      "example": "15-2-0",
+      "_depth": 2
+    },
+    {
+      "name": "station_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站名称",
+      "example": "xx驿站",
+      "_depth": 2
+    },
+    {
+      "name": "station_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站电话",
+      "example": "17712345678",
+      "_depth": 2
+    },
+    {
+      "name": "cabinet_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自提柜名称",
+      "example": "xx小区11幢旁自提柜",
+      "_depth": 2
+    },
+    {
+      "name": "reason_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "原因类型编码，不同二级事件下传不同的类型",
+      "example": "01",
+      "_depth": 2
+    },
+    {
+      "name": "new_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "改地址新地址",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称",
+      "example": "浙江省",
+      "_depth": 3
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "33",
+      "_depth": 3
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "杭州市",
+      "_depth": 3
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "3306",
+      "_depth": 3
+    },
+    {
+      "name": "town",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "西湖区",
+      "_depth": 3
+    },
+    {
+      "name": "town_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "330666",
+      "_depth": 3
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "西湖街道",
+      "_depth": 3
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "33066666",
+      "_depth": 3
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "西湖",
+      "_depth": 3
+    },
+    {
+      "name": "new_receiver",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "改地址新收件人",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "改地址新收件人姓名",
+      "example": "小李",
+      "_depth": 3
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "改地址新收件人电话",
+      "example": "17712345678",
+      "_depth": 3
+    },
+    {
+      "name": "signer_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签收人",
+      "example": "本人",
+      "_depth": 2
+    },
+    {
+      "name": "operator_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作类型",
+      "example": "移库",
+      "_depth": 2
+    },
+    {
+      "name": "delivery_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "派件方式",
+      "example": "驿站上门",
+      "_depth": 2
+    },
+    {
+      "name": "scrap_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报废类型",
+      "example": "遗失",
+      "_depth": 2
+    },
+    {
+      "name": "take_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取出方式",
+      "example": "CourierTake",
+      "_depth": 2
+    },
+    {
+      "name": "station_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站类型",
+      "example": "PostStation",
+      "_depth": 2
+    },
+    {
+      "name": "trans_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运输方式",
+      "example": "Airfreight",
+      "_depth": 2
+    },
+    {
+      "name": "location",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "定位信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "32.222222",
+      "_depth": 3
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "13.111111",
+      "_depth": 3
+    },
+    {
+      "name": "standard",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "坐标系",
+      "example": "GaoDe",
+      "_depth": 3
+    },
+    {
+      "name": "city_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市属性",
+      "example": "origin",
+      "_depth": 2
+    },
+    {
+      "name": "pick_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自提时间",
+      "example": "2022-04-28 10:17:54",
+      "_depth": 2
+    },
+    {
+      "name": "service_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "test",
+      "example": "test",
+      "_depth": 2
+    },
+    {
+      "name": "photo_message",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "签收拍照",
+      "example": "[\"url\"]",
+      "_depth": 2
+    },
+    {
+      "name": "installation_worker",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "送装师傅名称",
+      "example": "test",
+      "_depth": 2
+    },
+    {
+      "name": "time_info",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "时效信息列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "time_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时效类型",
+      "example": "1: 预计送达时效\n2: 预计中转/网点发出时间\n3: 预计到达下一站时间\n4: 预约派送时间\n5: 预约揽收时间",
+      "_depth": 3
+    },
+    {
+      "name": "date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时效日期",
+      "example": "2024-07-17",
+      "_depth": 3
+    },
+    {
+      "name": "time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时效时间",
+      "example": "14:22:00",
+      "_depth": 3
+    },
+    {
+      "name": "is_display",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "物流商是否在轨迹文案里展示了这个时间",
+      "example": "true",
+      "_depth": 3
+    },
+    {
+      "name": "phone_contact",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "电联信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "contact_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "拨打时间",
+      "example": "2024-07-17 10:10:55",
+      "_depth": 3
+    },
+    {
+      "name": "is_phone_contacted",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否电联",
+      "example": "false",
+      "_depth": 3
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否接通",
+      "example": "false",
+      "_depth": 3
+    },
+    {
+      "name": "ring_duration",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "振铃时长",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "call_duration",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "通话时长",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "installation_completion_picture",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "安装服务完成截图",
+      "example": "test",
+      "_depth": 2
+    },
+    {
+      "name": "installation_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "送装师傅电话",
+      "example": "test",
+      "_depth": 2
+    },
+    {
+      "name": "voice_message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "语音留言",
+      "example": "录音url",
+      "_depth": 2
+    },
+    {
+      "name": "installation_completion_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "安装服务完成时间",
+      "example": "2024-07-17 10:10:55",
+      "_depth": 2
+    },
+    {
+      "name": "partner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "第三方服务提供商编码",
+      "example": "第三方服务提供商编码",
+      "_depth": 2
+    },
+    {
+      "name": "event_originator",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "事件发起方",
+      "example": "事件发起方",
+      "_depth": 2
+    },
+    {
+      "name": "partner_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "第三方服务提供商名称",
+      "example": "第三方服务提供商名称",
+      "_depth": 2
+    },
+    {
+      "name": "station_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站编码",
+      "example": "驿站编码",
+      "_depth": 2
+    },
+    {
+      "name": "cabinet_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自提柜编码",
+      "example": "自提柜编码",
+      "_depth": 2
+    },
+    {
+      "name": "cabinet_contactor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自提柜联系人",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "pick_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "驿站/自提柜地址",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "杭州市",
+      "_depth": 3
+    },
+    {
+      "name": "town",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称",
+      "example": "西湖区",
+      "_depth": 3
+    },
+    {
+      "name": "town_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "330666",
+      "_depth": 3
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "西湖街道",
+      "_depth": 3
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "西湖",
+      "_depth": 3
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称",
+      "example": "浙江省",
+      "_depth": 3
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "3306",
+      "_depth": 3
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "33066666",
+      "_depth": 3
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "33",
+      "_depth": 3
+    },
+    {
+      "name": "station_contactor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站联系人",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "pick_location",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "驿站/自提柜经纬度",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "32.222222",
+      "_depth": 3
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "13.111111",
+      "_depth": 3
+    },
+    {
+      "name": "standard",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "轨迹的经纬度标准",
+      "example": "GaoDe",
+      "_depth": 3
+    },
+    {
+      "name": "cabinet_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自提柜联系电话",
+      "example": "17712345678",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 轨迹参数解析错误（sub_code: isv.parameter-invalid:-20005）",
+      "action": "检查请求入参",
+      "sub_code": "isv.parameter-invalid:-20005",
+      "sub_msg": "轨迹参数解析错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/trackPush?app_key=your_appkey_here&method=logistics.trackPush&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:-20005",
+      "sub_msg": "轨迹参数解析错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2643",
+  "updatedAt": "2025-08-22",
+  "_file_stem": "logistics-provider-logistics-trackPush"
+}

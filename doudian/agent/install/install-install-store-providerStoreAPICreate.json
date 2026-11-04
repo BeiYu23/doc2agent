@@ -1,0 +1,198 @@
+{
+  "id": "doudian.install.install.store.providerStoreAPICreate",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.providerStoreAPICreate",
+  "description": "行业服务到店安装门店创建API",
+  "method": "GET",
+  "path": "/install/store/providerStoreAPICreate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "门店结构体",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区/县",
+      "example": "海淀区",
+      "_depth": 1
+    },
+    {
+      "name": "open_time_desc",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "字符串数组，写为如下格式：\n周一至周五 10:00-17:00\n周六至周日 10:00-17:00\n周一至周五 和 周六至周日 是固定枚举，时间段写一个，要符合hh:mm的格式，周一至周五与营业时间之间是个空格分隔。营业开始时间和结束时间使用-符号分隔",
+      "example": "[\"周一至周五 10:00-18:00\", \"周六至周日 10:00-22:00\"]",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址信息",
+      "example": "中兴大厦",
+      "_depth": 1
+    },
+    {
+      "name": "business_license_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "营业执照的链接url",
+      "example": "https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/b07d37c8-3c30-45a3-a353-d9be31d9b3b5.jpeg",
+      "_depth": 1
+    },
+    {
+      "name": "door_image_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门头照链接",
+      "example": "https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/b07d37c8-3c30-45a3-a353-d9be31d9b3b5.jpeg",
+      "_depth": 1
+    },
+    {
+      "name": "contactor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式(全数字字符串，不要出现-字符)",
+      "example": "18600000000",
+      "_depth": 1
+    },
+    {
+      "name": "back_up_contactor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备用手机号",
+      "example": "18600000000",
+      "_depth": 1
+    },
+    {
+      "name": "contactor_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系人名字",
+      "example": "刘先生",
+      "_depth": 1
+    },
+    {
+      "name": "store_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店名称",
+      "example": "门店名称",
+      "_depth": 1
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道",
+      "example": "花园路街道",
+      "_depth": 1
+    },
+    {
+      "name": "business_license_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "营业执照上的地址",
+      "example": "北京市海淀区花园路街道中兴大厦",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "room_image_url",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "店内照片",
+      "example": "[\"https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/b07d37c8-3c30-45a3-a353-d9be31d9b3b5.jpeg\"]",
+      "_depth": 1
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "store_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店编码",
+      "example": "自用编码123",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store_id",
+      "type": "mixed",
+      "description": "返回的门店id",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.providerStoreAPICreate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "store_id": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7681",
+  "updatedAt": "2026-06-02",
+  "_file_stem": "install-install-store-providerStoreAPICreate"
+}

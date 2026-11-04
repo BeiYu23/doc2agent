@@ -1,0 +1,125 @@
+{
+  "id": "doudian.recycle.resale.order.returnLogistics",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "resale.order.returnLogistics",
+  "description": "【邮寄回收】退货物流状态",
+  "method": "GET",
+  "path": "/resale/order/returnLogistics",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "内部单号",
+      "example": "\"1232323213\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码，平台提供",
+      "example": "\"xxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员姓名",
+      "example": "\"张三\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "快递员手机号",
+      "example": "\"1888888888\"",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递单号",
+      "example": "\"xxxxxxxxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_company",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "快递公司，1 ：顺丰快递；2： 京东快递；3：EMS",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "退货物流状态，0：待揽收；1：已揽收；2：已签收",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ship_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "寄件方地址",
+      "example": "\"xxxxxxxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间",
+      "example": "\"yyyy-MM-dd hh:MM:ss\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=resale.order.returnLogistics&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/4625",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "recycle-resale-order-returnLogistics"
+}

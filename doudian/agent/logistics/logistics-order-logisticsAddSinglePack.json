@@ -1,0 +1,562 @@
+{
+  "id": "doudian.logistics.order.logisticsAddSinglePack",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "order.logisticsAddSinglePack",
+  "description": "支持同一店铺同一收货人的多个订单发同一个物流包裹",
+  "method": "GET",
+  "path": "/order/logisticsAddSinglePack",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.12）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "父订单ID列表",
+      "example": "[\"4846347827301748265\",\"4846341672614340433\"]",
+      "_depth": 0
+    },
+    {
+      "name": "shipped_order_info",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "需要发货的子订单信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "serial_nos_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "发货需要回传的SN/69/IMEI码信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "码的类型\n对于空调国补，内机SN对应SN_INDOOR，外机SN对应SN_OUTDOOR",
+      "example": "SN",
+      "_depth": 2
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "SN/69/IMEI码的值",
+      "example": "[\"123443\",\"51432\"]",
+      "_depth": 2
+    },
+    {
+      "name": "shipped_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "需要发货的子订单号",
+      "example": "4788856825297700215",
+      "_depth": 1
+    },
+    {
+      "name": "shipped_num",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "上述子订单的待发货数",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "shipped_item_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "已废弃",
+      "example": "[\"13123123\",\"442432423\"]",
+      "_depth": 1
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "9595123123",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司名字",
+      "example": "顺丰",
+      "_depth": 0
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "请求唯一标识，相同request_id多次请求，第一次请求成功后，后续的请求会触发幂等，会直接返回第一次请求成功的结果，不会实际触发发货。",
+      "example": "1267250f-8b9d-4d9e-9fad-0cd9629c83de",
+      "_depth": 0
+    },
+    {
+      "name": "is_reject_refund",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否拒绝退款申请（true表示拒绝退款，并继续发货；不传或为false表示有退款需要处理，拒绝发货），is_refund_reject和is_reject_refund随机使用一个即可",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "已废弃。物流公司ID。请使用company_code字段。",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司Code，由接口/order/logisticsCompanyLis查询物流公司列表获得，必填",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "address_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货地址id",
+      "example": "12",
+      "_depth": 0
+    },
+    {
+      "name": "order_serial_number",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "订单序列号",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "父订单号",
+      "example": "4846347827301748265",
+      "_depth": 1
+    },
+    {
+      "name": "serial_number_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品序列号，单个序列号长度不能超过30位字符，其中手机序列号仅支持填写15～17位数字",
+      "example": "[\"546443524543534\"]",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店ID",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "退货地址ID,通过地址库列表【/address/list】接口查询。当传入该字段时，可实现自动审核场景买家退货至商家指定退货地址：例如商家配置的售后小助手以及平台闪电退货规则，会获取发货时传入的after_sale_address_id地址id对应的地址给买家展示进行商品退回；",
+      "example": "12",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "pack_id",
+      "type": "string",
+      "description": "包裹id",
+      "example": "7425745832857"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无默认售后地址，请先设置然后操作发货（sub_code: isv.business-failed:70016）",
+      "action": "请到【抖店左侧导航栏-物流-地址库管理】设置默认售后地址后再操作发货",
+      "sub_code": "isv.business-failed:70016",
+      "sub_msg": "无默认售后地址，请先设置然后操作发货"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 发货失败，请稍后重试（sub_code: isp.service-error:70014）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:70014",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前订单存在处理中流程，请稍后重试（sub_code: isv.business-failed:70011）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:70011",
+      "sub_msg": "当前订单存在处理中流程，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 发货失败，请稍后重试（sub_code: isp.service-error:70002）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:70002",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单已售前退款成功，不能发货（sub_code: isv.business-failed:60068）",
+      "action": "请更新订单信息",
+      "sub_code": "isv.business-failed:60068",
+      "sub_msg": "该订单已售前退款成功，不能发货"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 手机序列号仅支持填写15～17位数字（sub_code: isv.parameter-invalid:60062）",
+      "action": "请输入正确的序列号",
+      "sub_code": "isv.parameter-invalid:60062",
+      "sub_msg": "手机序列号仅支持填写15～17位数字"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 补贴商品发货时需要上传商品序列号（sub_code: isv.missing-parameter:60056）",
+      "action": "补贴商品必须传入序列号，请输入序列号",
+      "sub_code": "isv.missing-parameter:60056",
+      "sub_msg": "补贴商品发货时需要上传商品序列号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货订单中有退款申请需要处理，请先处理（sub_code: isv.business-failed:60040）",
+      "action": "请先处理该订单的售后单，然后再进行发货",
+      "sub_code": "isv.business-failed:60040",
+      "sub_msg": "发货订单中有退款申请需要处理，请先处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 未查询到此订单（sub_code: isv.parameter-invalid:60033）",
+      "action": "订单号不存在，请检查",
+      "sub_code": "isv.parameter-invalid:60033",
+      "sub_msg": "未查询到此订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该店铺无默认售后地址，请到【抖店左侧导航栏-物流-地址库管理】设置后再操作发货（sub_code: isv.business-failed:60027）",
+      "action": "请到【抖店左侧导航栏-物流-地址库管理】设置默认售后地址后再操作发货",
+      "sub_code": "isv.business-failed:60027",
+      "sub_msg": "该店铺无默认售后地址，请到【抖店左侧导航栏-物流-地址库管理】设置后再操作发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单已取消，不支持发货（sub_code: isv.business-failed:60021）",
+      "action": "请更新订单信息",
+      "sub_code": "isv.business-failed:60021",
+      "sub_msg": "订单已取消，不支持发货"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 暂不支持该物流公司或物流商已失效（sub_code: isv.parameter-invalid:60018）",
+      "action": "company_code参数错误。请通过/order/logisticsCompanyList接口获取company_code",
+      "sub_code": "isv.parameter-invalid:60018",
+      "sub_msg": "暂不支持该物流公司或物流商已失效"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 物流单号不符合规则（sub_code: isv.parameter-invalid:60017）",
+      "action": "company_code和logistics_code不匹配，请检查物流公司和单号是否正确",
+      "sub_code": "isv.parameter-invalid:60017",
+      "sub_msg": "物流单号不符合规则"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 物流公司Code不能为空（sub_code: isv.missing-parameter:60011）",
+      "action": "company_code参数错误。请通过/order/logisticsCompanyList接口获取company_code",
+      "sub_code": "isv.missing-parameter:60011",
+      "sub_msg": "物流公司Code不能为空"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 订单号不能为空（sub_code: isv.missing-parameter:50049）",
+      "action": "请输入正确的订单号",
+      "sub_code": "isv.missing-parameter:50049",
+      "sub_msg": "订单号不能为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单号为空或格式错误（sub_code: isv.parameter-invalid:50001）",
+      "action": "请输入正确的订单号",
+      "sub_code": "isv.parameter-invalid:50001",
+      "sub_msg": "订单号为空或格式错误"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 物流公司编码(company_code)字段不能为空。注：物流公司ID(logisitcs_id)字段已废弃（sub_code: isv.missing-parameter:60083）",
+      "action": "请通过/order/logisticsCompanyList接口获取company_code",
+      "sub_code": "isv.missing-parameter:60083",
+      "sub_msg": "物流公司编码(company_code)字段不能为空。注：物流公司ID(logisitcs_id)字段已废弃"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60072:该店铺无默认发货地址，请到【抖店左侧导航栏-物流-地址库管理】设置后再操作发货（sub_code: isv.business-failed:60072）",
+      "action": "该店铺无默认发货地址，请到【抖店左侧导航栏-物流-地址库管理】设置后再操作发货",
+      "sub_code": "isv.business-failed:60072",
+      "sub_msg": "60072:该店铺无默认发货地址，请到【抖店左侧导航栏-物流-地址库管理】设置后再操作发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60046:序列号长度不能超过30位字符（sub_code: isv.business-failed:60046）",
+      "action": "若传入了序列号，则序列号长度需要在1-30位字符之间，请检查后重新发货",
+      "sub_code": "isv.business-failed:60046",
+      "sub_msg": "60046:序列号长度不能超过30位字符"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60069:该订单为质检订单，请在商家后台送检页面进行送检发货操作（sub_code: isv.business-failed:60069）",
+      "action": "该订单为质检订单，请在商家后台送检页面进行送检发货操作",
+      "sub_code": "isv.business-failed:60069",
+      "sub_msg": "60069:该订单为质检订单，请在商家后台送检页面进行送检发货操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前发货地址存在异常，请前往抖店PC端「物流-地址库管理」修改后重试（sub_code: isv.business-failed:60070）",
+      "action": "当前发货地址存在异常，请前往抖店PC端「物流-地址库管理」修改后重试",
+      "sub_code": "isv.business-failed:60070",
+      "sub_msg": "当前发货地址存在异常，请前往抖店PC端「物流-地址库管理」修改后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单补贴商品的序列号已经上传，请重新填写（sub_code: isv.business-failed:60047）",
+      "action": "该订单补贴商品的序列号已经上传，请重新填写",
+      "sub_code": "isv.business-failed:60047",
+      "sub_msg": "该订单补贴商品的序列号已经上传，请重新填写"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货失败，请稍后重试（sub_code: isv.business-failed:70009）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:70009",
+      "sub_msg": "发货失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单不支持使用其它物流进行发货（sub_code: isv.business-failed:60026）",
+      "action": "请检查订单和物流信息",
+      "sub_code": "isv.business-failed:60026",
+      "sub_msg": "该订单不支持使用其它物流进行发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70023:没有能发货的订单，请修改后重试（sub_code: isv.business-failed:70023）",
+      "action": "没有能发货的订单，请修改后重试",
+      "sub_code": "isv.business-failed:70023",
+      "sub_msg": "70023:没有能发货的订单，请修改后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70020:运单号收件人电话及地址与该订单收件人电话及地址均不一致，请核实后更新快递单号（sub_code: isv.business-failed:70020）",
+      "action": "运单号收件人电话及地址与该订单收件人电话及地址均不一致，请核实后更新快递单号",
+      "sub_code": "isv.business-failed:70020",
+      "sub_msg": "70020:运单号收件人电话及地址与该订单收件人电话及地址均不一致，请核实后更新快递单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60016:商品单单号为空或者格式错误（sub_code: isv.business-failed:60016）",
+      "action": "商品单单号为空或者格式错误",
+      "sub_code": "isv.business-failed:60016",
+      "sub_msg": "60016:商品单单号为空或者格式错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60127:发货信息填写有误，请检查物流单号、物流公司是否填写/选择正确（sub_code: isv.business-failed:60127）",
+      "action": "发货信息填写有误，请检查物流单号、物流公司是否填写/选择正确",
+      "sub_code": "isv.business-failed:60127",
+      "sub_msg": "60127:发货信息填写有误，请检查物流单号、物流公司是否填写/选择正确"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60110:订单已发货，不允许再次执行发货（sub_code: isv.business-failed:60110）",
+      "action": "订单已发货，不允许再次执行发货",
+      "sub_code": "isv.business-failed:60110",
+      "sub_msg": "60110:订单已发货，不允许再次执行发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60113:订单已完结，禁止发货（sub_code: isv.business-failed:60113）",
+      "action": "订单已完结，禁止发货",
+      "sub_code": "isv.business-failed:60113",
+      "sub_msg": "60113:订单已完结，禁止发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60124:系统连接错误，请稍后再试（sub_code: isv.business-failed:60124）",
+      "action": "系统连接错误，请稍后再试",
+      "sub_code": "isv.business-failed:60124",
+      "sub_msg": "60124:系统连接错误，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8888:系统繁忙，请稍后重试（sub_code: isv.business-failed:8888）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:8888",
+      "sub_msg": "8888:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60109:订单正在风控审核中，风控审核时效1~2小时，请等待订单变为“备货中”状态后重试（sub_code: isv.business-failed:60109）",
+      "action": "订单正在风控审核中，风控审核时效1~2小时，请等待订单变为“备货中”状态后重试",
+      "sub_code": "isv.business-failed:60109",
+      "sub_msg": "60109:订单正在风控审核中，风控审核时效1~2小时，请等待订单变为“备货中”状态后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60123:当前订单为供应链订单，需: 海口珍珠恋服饰设计有限公司 帮助发货（sub_code: isv.business-failed:60123）",
+      "action": "当前订单为供应链订单，需: 海口珍珠恋服饰设计有限公司 帮助发货",
+      "sub_code": "isv.business-failed:60123",
+      "sub_msg": "60123:当前订单为供应链订单，需: 海口珍珠恋服饰设计有限公司 帮助发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60138:订单需送货上门，请使用支持送货上门的物流公司发货（sub_code: isv.business-failed:60138）",
+      "action": "订单需送货上门，请使用支持送货上门的物流公司发货",
+      "sub_code": "isv.business-failed:60138",
+      "sub_msg": "60138:订单需送货上门，请使用支持送货上门的物流公司发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70021:多个订单的收货人手机号/收货地址不一致，请核对发货数据（sub_code: isv.business-failed:70021）",
+      "action": "多个订单的收货人手机号/收货地址不一致，请核对发货数据",
+      "sub_code": "isv.business-failed:70021",
+      "sub_msg": "70021:多个订单的收货人手机号/收货地址不一致，请核对发货数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60101:非本店铺订单，操作失败（sub_code: isv.business-failed:60101）",
+      "action": "非本店铺订单，操作失败",
+      "sub_code": "isv.business-failed:60101",
+      "sub_msg": "60101:非本店铺订单，操作失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请传入退货地址，提高退换货的履约准确率（sub_code: isv.business-failed:700029）",
+      "action": "请传入退货地址，提高退换货的履约准确率",
+      "sub_code": "isv.business-failed:700029",
+      "sub_msg": "请传入退货地址，提高退换货的履约准确率"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70019:物流单号首条轨迹产生时间早于订单支付时间，请核实后更新单号（sub_code: isv.business-failed:70019）",
+      "action": "请检查单号时间",
+      "sub_code": "isv.business-failed:70019",
+      "sub_msg": "70019:物流单号首条轨迹产生时间早于订单支付时间，请核实后更新单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70018:物流单号已被快递回收或取消，无法继续使用，请核实后更新单号（sub_code: isv.business-failed:70018）",
+      "action": "请检查单号状态",
+      "sub_code": "isv.business-failed:70018",
+      "sub_msg": "70018:物流单号已被快递回收或取消，无法继续使用，请核实后更新单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60116:订单中商品由平台仓发货，无需手动发货（sub_code: isv.business-failed:60116）",
+      "action": "该订单无需手动发货",
+      "sub_code": "isv.business-failed:60116",
+      "sub_msg": "60116:订单中商品由平台仓发货，无需手动发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60118:订单售后信息异常，请稍后重试（sub_code: isv.business-failed:60118）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:60118",
+      "sub_msg": "60118:订单售后信息异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 70022:物流单号已被其他订单使用，且收货人手机号/收货地址不一致，请核实后更新单号（sub_code: isv.business-failed:70022）",
+      "action": "请跟换物流单号",
+      "sub_code": "isv.business-failed:70022",
+      "sub_msg": "70022:物流单号已被其他订单使用，且收货人手机号/收货地址不一致，请核实后更新单号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700006:小时达订单不支持拆单发货（sub_code: isv.business-failed:700006）",
+      "action": "不支持拆单发货",
+      "sub_code": "isv.business-failed:700006",
+      "sub_msg": "700006:小时达订单不支持拆单发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值（sub_code: isv.business-failed:120064）",
+      "action": "120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值",
+      "sub_code": "isv.business-failed:120064",
+      "sub_msg": "120064:该订单为偏远地区中转订单，您的账户余额不够支付中转运费，不能进行中转，请前往管家账户充值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60143:周期购订单非最新一期sku单不允许发货（sub_code: isv.business-failed:60143）",
+      "action": "60143:周期购订单非最新一期sku单不允许发货",
+      "sub_code": "isv.business-failed:60143",
+      "sub_msg": "60143:周期购订单非最新一期sku单不允许发货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单为收礼订单，不支持发货，请对对应送礼单操作（sub_code: isv.business-failed:700088）",
+      "action": "该订单为收礼订单，不支持发货，请对对应送礼单操作",
+      "sub_code": "isv.business-failed:700088",
+      "sub_msg": "该订单为收礼订单，不支持发货，请对对应送礼单操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:70016",
+      "sub_msg": "无默认售后地址，请先设置然后操作发货"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/563",
+  "updatedAt": "2025-01-22",
+  "_file_stem": "logistics-order-logisticsAddSinglePack"
+}

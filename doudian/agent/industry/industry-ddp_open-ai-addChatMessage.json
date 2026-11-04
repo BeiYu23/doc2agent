@@ -1,0 +1,143 @@
+{
+  "id": "doudian.industry.ddp_open.ai.addChatMessage",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "ddp_open.ai.addChatMessage",
+  "description": "主动推送消息",
+  "method": "GET",
+  "path": "/ddp_open/ai/addChatMessage",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "message",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "消息体",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "role",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "本期固定为assistant",
+      "example": "assistant",
+      "_depth": 1
+    },
+    {
+      "name": "outer_message_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "isv生成的消息id",
+      "example": "outer_sef12321",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "消息类型 固定为answer",
+      "example": "answer",
+      "_depth": 1
+    },
+    {
+      "name": "parent_message_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "父消息ID（上一条）",
+      "example": "12321421",
+      "_depth": 1
+    },
+    {
+      "name": "conversation_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "会话ID",
+      "example": "12534543",
+      "_depth": 1
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "消息内容",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "展示文本",
+      "example": "mardown文本",
+      "_depth": 2
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "本期固定为mixed_card",
+      "example": "mixed_card",
+      "_depth": 2
+    },
+    {
+      "name": "action",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "交互行为 common",
+      "example": "common",
+      "_depth": 1
+    },
+    {
+      "name": "auth_user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "账号id",
+      "example": "12321",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/ddp_open/ai/addChatMessage?app_key=your_appkey_here&method=ddp_open.ai.addChatMessage&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8347",
+  "updatedAt": "2026-07-07",
+  "_file_stem": "industry-ddp_open-ai-addChatMessage"
+}

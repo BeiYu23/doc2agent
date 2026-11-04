@@ -1,0 +1,514 @@
+{
+  "id": "doudian.retail-store.superm.shopOrderDispatcher",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.shopOrderDispatcher",
+  "description": "呼叫运力或取消",
+  "method": "GET",
+  "path": "/superm/shopOrderDispatcher",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺ID",
+      "example": "1111409547",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "4993668078886578045",
+      "_depth": 0
+    },
+    {
+      "name": "dispatcher_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "enum DispatcherType {     Call   = 1 // 呼叫运力     Cancel = 2 // 取消运力 }",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "serial_number_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "序列码列表，如果包含有多个序列码，请用\"_\"英文下划线分割（属于数码手机类目的商品订单才需要传序列码。）",
+      "example": "353245234",
+      "_depth": 0
+    },
+    {
+      "name": "verify_code_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否需要取件码(针对呼叫运力)\n0否1是",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "insurance_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "保价金额，单位：分",
+      "example": "9900",
+      "_depth": 0
+    },
+    {
+      "name": "need_receiver_code",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要收件码（针对呼叫运力）\ntrue：需要；false：不需要",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "sku_trace_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku单的医疗溯源码信息;",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "对应sku单id",
+      "example": "4945222777763599988",
+      "_depth": 1
+    },
+    {
+      "name": "batch_and_trace_code_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批次+溯源码list（设计为list是可能有多个item单）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次code",
+      "example": "12345",
+      "_depth": 2
+    },
+    {
+      "name": "trace_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "溯源码code",
+      "example": "12345",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "pickup_code",
+      "type": "string",
+      "description": "取件码",
+      "example": "3301"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 店铺ID不能为空（sub_code: isv.missing-parameter:40001）",
+      "action": "店铺ID不能为空",
+      "sub_code": "isv.missing-parameter:40001",
+      "sub_msg": "店铺ID不能为空"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 门店ID不能为空（sub_code: isv.missing-parameter:40002）",
+      "action": "门店ID不能为空",
+      "sub_code": "isv.missing-parameter:40002",
+      "sub_msg": "门店ID不能为空"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 订单不能为空（sub_code: isv.missing-parameter:40003）",
+      "action": "订单不能为空",
+      "sub_code": "isv.missing-parameter:40003",
+      "sub_msg": "订单不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20101）",
+      "action": "订单查询失败",
+      "sub_code": "isv.business-failed:20101",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20102）",
+      "action": "门店信息获取失败",
+      "sub_code": "isv.business-failed:20102",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20103）",
+      "action": "执行单不存在,原错误码80002",
+      "sub_code": "isv.business-failed:20103",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20104）",
+      "action": "流水号为空",
+      "sub_code": "isv.business-failed:20104",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20200）",
+      "action": "履约内部rpc调用失败,原错误码503",
+      "sub_code": "isv.business-failed:20200",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20201）",
+      "action": "调用履约呼叫运力失败",
+      "sub_code": "isv.business-failed:20201",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20202）",
+      "action": "deliverId生成失败,原错误码505",
+      "sub_code": "isv.business-failed:20202",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非小时达订单不允许使用呼叫运力（sub_code: isv.business-failed:50100）",
+      "action": "非小时达订单不允许使用呼叫运力",
+      "sub_code": "isv.business-failed:50100",
+      "sub_msg": "非小时达订单不允许使用呼叫运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未开通平台运力服务，无法使用。（sub_code: isv.business-failed:50101）",
+      "action": "未开通平台运力服务，无法使用。",
+      "sub_code": "isv.business-failed:50101",
+      "sub_msg": "未开通平台运力服务，无法使用。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非本店铺订单，呼叫运力失败（sub_code: isv.business-failed:50102）",
+      "action": "非本店铺订单，呼叫运力失败",
+      "sub_code": "isv.business-failed:50102",
+      "sub_msg": "非本店铺订单，呼叫运力失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货订单包含非本门店订单，请重试（sub_code: isv.business-failed:50103）",
+      "action": "发货订单包含非本门店订单，请重试",
+      "sub_code": "isv.business-failed:50103",
+      "sub_msg": "发货订单包含非本门店订单，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID（sub_code: isv.business-failed:50104）",
+      "action": "store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID",
+      "sub_code": "isv.business-failed:50104",
+      "sub_msg": "store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运费获取失败，请重新获取。（sub_code: isv.business-failed:50201）",
+      "action": "订单信息异常，sku信息为空",
+      "sub_code": "isv.business-failed:50201",
+      "sub_msg": "运费获取失败，请重新获取。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运费获取失败，请重新获取。（sub_code: isv.business-failed:50202）",
+      "action": "订单信息异常，地址信息解析失败",
+      "sub_code": "isv.business-failed:50202",
+      "sub_msg": "运费获取失败，请重新获取。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运费获取失败，请重新获取。（sub_code: isv.business-failed:50203）",
+      "action": "订单信息异常，地址信息解析失败",
+      "sub_code": "isv.business-failed:50203",
+      "sub_msg": "运费获取失败，请重新获取。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运费获取失败，请重新获取。（sub_code: isv.business-failed:50204）",
+      "action": "订单信息异常，重量为空",
+      "sub_code": "isv.business-failed:50204",
+      "sub_msg": "运费获取失败，请重新获取。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运费获取失败，请重新获取。（sub_code: isv.business-failed:50205）",
+      "action": "订单信息异常，门店作业时间为空",
+      "sub_code": "isv.business-failed:50205",
+      "sub_msg": "运费获取失败，请重新获取。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:50206）",
+      "action": "收件人信息解析失败",
+      "sub_code": "isv.business-failed:50206",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单当前状态无法取消运力（sub_code: isv.business-failed:50301）",
+      "action": "订单当前状态无法取消运力",
+      "sub_code": "isv.business-failed:50301",
+      "sub_msg": "订单当前状态无法取消运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未开通平台运力服务，无法使用（sub_code: isv.business-failed:50111）",
+      "action": "未开通平台运力服务，无法使用",
+      "sub_code": "isv.business-failed:50111",
+      "sub_msg": "未开通平台运力服务，无法使用"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:20113）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:20113",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单当前状态无法取消运力（sub_code: isv.business-failed:50311）",
+      "action": "订单当前状态无法取消运力",
+      "sub_code": "isv.business-failed:50311",
+      "sub_msg": "订单当前状态无法取消运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 呼叫运力失败，请稍后重试（sub_code: isv.business-failed:120047）",
+      "action": "呼叫运力失败，请稍后重试",
+      "sub_code": "isv.business-failed:120047",
+      "sub_msg": "呼叫运力失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单未成功呼叫运力，取消失败（sub_code: isv.business-failed:20211）",
+      "action": "订单未成功呼叫运力，取消失败",
+      "sub_code": "isv.business-failed:20211",
+      "sub_msg": "订单未成功呼叫运力，取消失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不存在（sub_code: isv.business-failed:20111）",
+      "action": "订单不存在",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "订单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20214）",
+      "action": "保价服务失败",
+      "sub_code": "isv.business-failed:20214",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 订单已有骑手接单配送，无需重复呼叫运力（sub_code: isp.service-timeout-error:20301）",
+      "action": "订单已有骑手接单配送，无需重复呼叫运力",
+      "sub_code": "isp.service-timeout-error:20301",
+      "sub_msg": "订单已有骑手接单配送，无需重复呼叫运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:50211）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:50211",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店未订购平台运力服务，无法呼叫运力（sub_code: isv.business-failed:60000）",
+      "action": "门店未订购平台运力服务，无法呼叫运力",
+      "sub_code": "isv.business-failed:60000",
+      "sub_msg": "门店未订购平台运力服务，无法呼叫运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60021:订单已取消，无需呼叫运力（sub_code: isv.business-failed:60021）",
+      "action": "订单已取消，无需呼叫运力",
+      "sub_code": "isv.business-failed:60021",
+      "sub_msg": "60021:订单已取消，无需呼叫运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单暂不支持保价（sub_code: isv.business-failed:60113）",
+      "action": "该订单暂不支持保价",
+      "sub_code": "isv.business-failed:60113",
+      "sub_msg": "该订单暂不支持保价"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未开通平台运力服务（sub_code: isv.business-failed:120051）",
+      "action": "未开通平台运力服务",
+      "sub_code": "isv.business-failed:120051",
+      "sub_msg": "未开通平台运力服务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运力状态发生已发生变化, 请刷新后重试（sub_code: isv.business-failed:10013）",
+      "action": "运力状态发生已发生变化, 请刷新后重试",
+      "sub_code": "isv.business-failed:10013",
+      "sub_msg": "运力状态发生已发生变化, 请刷新后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求处理中，请稍后重试（sub_code: isv.business-failed:507）",
+      "action": "请求处理中，请稍后重试",
+      "sub_code": "isv.business-failed:507",
+      "sub_msg": "请求处理中，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700077:三方应用不允许对自配订单呼叫运力（sub_code: isv.business-failed:700077）",
+      "action": "700077:三方应用不允许对自配订单呼叫运力",
+      "sub_code": "isv.business-failed:700077",
+      "sub_msg": "700077:三方应用不允许对自配订单呼叫运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20212:取消运力失败，请稍后重试（sub_code: isv.business-failed:20212）",
+      "action": "20212:取消运力失败，请稍后重试",
+      "sub_code": "isv.business-failed:20212",
+      "sub_msg": "20212:取消运力失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500001:该门店未查询到有效的三方配送授权关系；请到配送模块-三方配送管理中完成授权后再次发单（sub_code: isv.business-failed:500001）",
+      "action": "500001:该门店未查询到有效的三方配送授权关系；请到配送模块-三方配送管理中完成授权后再次发单",
+      "sub_code": "isv.business-failed:500001",
+      "sub_msg": "500001:该门店未查询到有效的三方配送授权关系；请到配送模块-三方配送管理中完成授权后再次发单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20112:RPCError{PSM:[cmp.ecom.shop_info] Method:[GetShopUserListByIds] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1204 cds_key=THRIFT_EGRESS|cmp.ecom.vshop:default:lf:|cmp.ecom.shop_info:default:::|GetShopUserListByIds|pr（sub_code: isv.business-failed:20112）",
+      "action": "20112:RPCError{PSM:[cmp.ecom.shop_info] Method:[GetShopUserListByIds] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1204 cds_key=THRIFT_EGRESS|cmp.ecom.vshop:default:lf:|cmp.ecom.shop_info:default:::|GetShopUserListByIds|pr",
+      "sub_code": "isv.business-failed:20112",
+      "sub_msg": "20112:RPCError{PSM:[cmp.ecom.shop_info] Method:[GetShopUserListByIds] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1204 cds_key=THRIFT_EGRESS|cmp.ecom.vshop:default:lf:|cmp.ecom.shop_info:default:::|GetShopUserListByIds|pr"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 120048:取消运力失败，请稍后重试（sub_code: isv.business-failed:120048）",
+      "action": "120048:取消运力失败，请稍后重试",
+      "sub_code": "isv.business-failed:120048",
+      "sub_msg": "120048:取消运力失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 700002:发货订单包含非本门店订单，请重试（sub_code: isv.business-failed:700002）",
+      "action": "700002:发货订单包含非本门店订单，请重试",
+      "sub_code": "isv.business-failed:700002",
+      "sub_msg": "700002:发货订单包含非本门店订单，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 702:查询数据失败，请稍后重试（sub_code: isv.business-failed:702）",
+      "action": "702:查询数据失败，请稍后重试",
+      "sub_code": "isv.business-failed:702",
+      "sub_msg": "702:查询数据失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 99999:合约单查询失败，请稍后重试（sub_code: isv.business-failed:99999）",
+      "action": "99999:合约单查询失败，请稍后重试",
+      "sub_code": "isv.business-failed:99999",
+      "sub_msg": "99999:合约单查询失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20114:系统繁忙，请稍后重试（sub_code: isv.business-failed:20114）",
+      "action": "20114:系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:20114",
+      "sub_msg": "20114:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50216:系统繁忙，请稍后重试（sub_code: isv.business-failed:50216）",
+      "action": "50216:系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:50216",
+      "sub_msg": "50216:系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 501:售后完结，订单关闭（sub_code: isv.business-failed:501）",
+      "action": "501:售后完结，订单关闭",
+      "sub_code": "isv.business-failed:501",
+      "sub_msg": "501:售后完结，订单关闭"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 310014:门店ID不能为空（sub_code: isv.business-failed:310014）",
+      "action": "310014:门店ID不能为空",
+      "sub_code": "isv.business-failed:310014",
+      "sub_msg": "310014:门店ID不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40100:请输入正确的运力操作（sub_code: isv.business-failed:40100）",
+      "action": "40100:请输入正确的运力操作",
+      "sub_code": "isv.business-failed:40100",
+      "sub_msg": "40100:请输入正确的运力操作"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/shopOrderDispatcher?app_key=your_appkey_here&method=superm.shopOrderDispatcher&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "pickup_code": "3301"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:40001",
+      "sub_msg": "店铺ID不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2736",
+  "updatedAt": "2025-09-09",
+  "_file_stem": "retail-store-superm-shopOrderDispatcher"
+}

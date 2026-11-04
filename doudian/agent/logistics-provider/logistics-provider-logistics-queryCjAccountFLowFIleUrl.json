@@ -1,0 +1,122 @@
+{
+  "id": "doudian.logistics-provider.logistics.queryCjAccountFLowFIleUrl",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.queryCjAccountFLowFIleUrl",
+  "description": "获取物流服务商对应账户的资金日账单",
+  "method": "GET",
+  "path": "/logistics/queryCjAccountFLowFIleUrl",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: , 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "fetch_day",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "日期，日期格式为yyyy-MM-dd",
+      "example": "2026-03-19",
+      "_depth": 0
+    },
+    {
+      "name": "account_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "账户类型, PA：合众账户，WX：微信账户，BZJ：保障金账户",
+      "example": "PA",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "file_infos",
+      "type": "array",
+      "description": "文件列表，日账单可能会分为多个文件",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 必填参数为空（sub_code: isv.missing-parameter:16001）",
+      "action": "调整请求参数",
+      "sub_code": "isv.missing-parameter:16001",
+      "sub_msg": "必填参数为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不能导出一年前的数据（sub_code: isv.parameter-invalid:16002）",
+      "action": "调整请求参数",
+      "sub_code": "isv.parameter-invalid:16002",
+      "sub_msg": "不能导出一年前的数据"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 账户类型错误（sub_code: isv.parameter-invalid:16003）",
+      "action": "调整请求参数",
+      "sub_code": "isv.parameter-invalid:16003",
+      "sub_msg": "账户类型错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 文件暂未生成（sub_code: isv.business-failed:16004）",
+      "action": "等待文件生成后再调用",
+      "sub_code": "isv.business-failed:16004",
+      "sub_msg": "文件暂未生成"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 日期格式错误（sub_code: isv.parameter-invalid:16005）",
+      "action": "调整请求参数",
+      "sub_code": "isv.parameter-invalid:16005",
+      "sub_msg": "日期格式错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 未知错误（sub_code: isp.service-error:16006）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:16006",
+      "sub_msg": "未知错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/queryCjAccountFLowFIleUrl?app_key=your_appkey_here&method=logistics.queryCjAccountFLowFIleUrl&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "file_infos": [
+          {
+            "begin_time": "1773849600",
+            "end_time": "1773935999",
+            "url": "xxx"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:16001",
+      "sub_msg": "必填参数为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8159",
+  "updatedAt": "2026-03-25",
+  "_file_stem": "logistics-provider-logistics-queryCjAccountFLowFIleUrl"
+}

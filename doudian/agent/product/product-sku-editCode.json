@@ -1,0 +1,126 @@
+{
+  "id": "doudian.product.sku.editCode",
+  "platform": "doudian",
+  "group": "product",
+  "name": "sku.editCode",
+  "description": "修改sku编码",
+  "method": "GET",
+  "path": "/sku/editCode",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "编码",
+      "example": "abc",
+      "_depth": 0
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "skuid",
+      "example": "123246",
+      "_depth": 0
+    },
+    {
+      "name": "out_sku_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "外部skuid",
+      "example": "32135135",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品id",
+      "example": "321545421545474",
+      "_depth": 0
+    },
+    {
+      "name": "out_product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "外部商品id",
+      "example": "3234156453136545",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 系统错误:商品已删除，不可更新（sub_code: isv.parameter-invalid:7）",
+      "action": "请重新选择商品",
+      "sub_code": "isv.parameter-invalid:7",
+      "sub_msg": "系统错误:商品已删除，不可更新"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少sku_id参数（sub_code: isv.missing-parameter:4）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.missing-parameter:4",
+      "sub_msg": "缺少sku_id参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 找不到对应的sku（sub_code: isv.business-failed:5）",
+      "action": "请检查sku信息",
+      "sub_code": "isv.business-failed:5",
+      "sub_msg": "找不到对应的sku"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010401:请求被限流, 请稍后再试（sub_code: isv.business-failed:2010401）",
+      "action": "2010401:请求被限流, 请稍后再试",
+      "sub_code": "isv.business-failed:2010401",
+      "sub_msg": "2010401:请求被限流, 请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:shopId: 196067705, 找不到对应的店铺（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:shopId: 196067705, 找不到对应的店铺",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:shopId: 196067705, 找不到对应的店铺"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sku/editCode?app_key=your_appkey_here&method=sku.editCode&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:7",
+      "sub_msg": "系统错误:商品已删除，不可更新"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/86",
+  "updatedAt": "2020-11-24",
+  "_file_stem": "product-sku-editCode"
+}

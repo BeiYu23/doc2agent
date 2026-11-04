@@ -1,0 +1,71 @@
+{
+  "id": "doudian.permission.second.SetLiveRoomRhythmValue",
+  "platform": "doudian",
+  "group": "permission",
+  "name": "second.SetLiveRoomRhythmValue",
+  "description": "设置主播节奏大师阈值",
+  "method": "GET",
+  "path": "/second/SetLiveRoomRhythmValue",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 二方开放权限组（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "anchor_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主播ID",
+      "example": "test",
+      "_depth": 0
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "阈值类型",
+      "example": "price_offer",
+      "_depth": 0
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "阈值数值",
+      "example": "12.3",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/SetLiveRoomRhythmValue?app_key=your_appkey_here&method=second.SetLiveRoomRhythmValue&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1506/7916",
+  "updatedAt": "2025-12-02",
+  "_file_stem": "permission-second-SetLiveRoomRhythmValue"
+}

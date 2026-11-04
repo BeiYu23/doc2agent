@@ -1,0 +1,78 @@
+{
+  "id": "doudian.order.bigCustomer.queryCounting",
+  "platform": "doudian",
+  "group": "order",
+  "name": "bigCustomer.queryCounting",
+  "description": "查询统计销量结果",
+  "method": "GET",
+  "path": "/bigCustomer/queryCounting",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "查询列表（size <= 200）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "平台商品ID",
+      "example": "3672279718683607404",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "平台SkuId",
+      "example": "3453363154713090",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "items",
+      "type": "array",
+      "description": "计数返回结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/callback?app_key=your_appkey_here&method=logistics.callback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/7650",
+  "updatedAt": "2025-07-31",
+  "_file_stem": "order-bigCustomer-queryCounting"
+}

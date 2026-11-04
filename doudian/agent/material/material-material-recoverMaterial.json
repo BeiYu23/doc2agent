@@ -1,0 +1,79 @@
+{
+  "id": "doudian.material.material.recoverMaterial",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.recoverMaterial",
+  "description": "从回收站中恢复素材",
+  "method": "GET",
+  "path": "/material/recoverMaterial",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "material_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "素材id列表",
+      "example": "[\"7000291764753940780\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_ids",
+      "type": "array",
+      "description": "成功操作的素材id列表",
+      "example": "[7000291764753940780]"
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "失败素材列表及失败原因",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20001:素材ID无效，请输入正确的素材ID（sub_code: isv.business-failed:20001）",
+      "action": "20001:素材ID无效，请输入正确的素材ID",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "20001:素材ID无效，请输入正确的素材ID"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/recoverMaterial?app_key=your_appkey_here&method=material.recoverMaterial&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "failed_map": {},
+        "success_ids": "[7000291764753940780]"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "20001:素材ID无效，请输入正确的素材ID"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/954",
+  "updatedAt": "2022-09-06",
+  "_file_stem": "material-material-recoverMaterial"
+}

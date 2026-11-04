@@ -1,0 +1,123 @@
+{
+  "id": "doudian.recycle.recycle.createPrice",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "recycle.createPrice",
+  "description": "上传估价",
+  "method": "GET",
+  "path": "/recycle/createPrice",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "is_agree",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否同意",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "clue_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "线索单ID",
+      "example": "4782813149182887526",
+      "_depth": 0
+    },
+    {
+      "name": "recycle_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "回收价，单位分 is_agree为true的时候recycle_price和consignment_price至少传1个 用户到手价格。",
+      "example": "4000",
+      "_depth": 0
+    },
+    {
+      "name": "consignment_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "寄卖价，单位分 is_agree为true的时候recycle_price和consignment_price至少传1个 商家寄卖的价格，商家根据平台固定抽佣规则抽佣。",
+      "example": "3000",
+      "_depth": 0
+    },
+    {
+      "name": "refuse_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "拒绝理由 1：货品成色差； 2：货品为假； 3：其他",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "地址库id 可以通过/address/list接口获取 https://op.jinritemai.com/docs/api-docs/13/558",
+      "example": "11111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 状态非法，不支持流转（sub_code: isv.business-failed:-1）",
+      "action": "请检查状态",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "状态非法，不支持流转"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 价格参数错误（sub_code: isv.business-failed:10002）",
+      "action": "请检查价格参数信息",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "价格参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/recycle/createPrice?app_key=your_appkey_here&method=recycle.createPrice&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "状态非法，不支持流转"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/1883",
+  "updatedAt": "2021-09-03",
+  "_file_stem": "recycle-recycle-createPrice"
+}

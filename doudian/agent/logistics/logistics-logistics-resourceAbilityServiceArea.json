@@ -1,0 +1,206 @@
+{
+  "id": "doudian.logistics.logistics.resourceAbilityServiceArea",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.resourceAbilityServiceArea",
+  "description": "比如服务商送货上门的服务范围",
+  "method": "GET",
+  "path": "/logistics/resourceAbilityServiceArea",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ability_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商能力编码，例如送货上门能力的编码，由抖音电商侧提供",
+      "example": "AC_INT_HOME_TEST0000001",
+      "_depth": 0
+    },
+    {
+      "name": "service_areas",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "能力服务范围列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家编码，serviceAreaType=REGION时有效，且必填",
+      "example": "CN",
+      "_depth": 1
+    },
+    {
+      "name": "country_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家名称，serviceAreaType=REGION时有效，且必填",
+      "example": "中华人民共和国",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码，serviceAreaType=REGION时有效，且必填",
+      "example": "44",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称，serviceAreaType=REGION时有效，且必填",
+      "example": "广东省",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码，serviceAreaType=REGION时有效，且必填",
+      "example": "440300",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称，serviceAreaType=REGION时有效，且必填",
+      "example": "深圳市",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码，serviceAreaType=REGION时有效，且必填",
+      "example": "440306",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称，serviceAreaType=REGION时有效，且必填",
+      "example": "宝安区",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码，serviceAreaType=REGION时有效，且必填",
+      "example": "440306024",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称，serviceAreaType=REGION时有效，且必填",
+      "example": "松岗街道",
+      "_depth": 1
+    },
+    {
+      "name": "service_fence",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电子围栏serviceAreaType=EFENCE时有效，且必填",
+      "example": "{}",
+      "_depth": 1
+    },
+    {
+      "name": "service_area_express",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "能力表达：1-能(送货上门)，2-不能(送货上门)",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "service_area_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "服务范围定义类型： REGION（行政区划4级地址）  EFENCE（电子围栏）——暂不支持 2种之一。",
+      "example": "REGION",
+      "_depth": 1
+    },
+    {
+      "name": "extend_dimension_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "针对上门拆旧是【一级-二级-三级回收类目编码】",
+      "example": "扩展维度",
+      "_depth": 0
+    },
+    {
+      "name": "busines_sense",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "douchao：抖超",
+      "example": "业务场景",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 传入参数错误（sub_code: isv.business-failed:-10000）",
+      "action": "修正参数之后，再次调用接口",
+      "sub_code": "isv.business-failed:-10000",
+      "sub_msg": "传入参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-10000",
+      "sub_msg": "传入参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2147",
+  "updatedAt": "2025-05-09",
+  "_file_stem": "logistics-logistics-resourceAbilityServiceArea"
+}

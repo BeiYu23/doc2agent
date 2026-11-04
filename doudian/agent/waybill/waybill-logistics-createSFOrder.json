@@ -1,0 +1,41 @@
+{
+  "id": "doudian.waybill.logistics.createSFOrder",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.createSFOrder",
+  "description": "顺丰新下单接口，建议顺丰下单都走该接口，功能更齐全",
+  "method": "GET",
+  "path": "/logistics/createSFOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V1.08）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?method=logistics.createSFOrder&param_json={}'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success"
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/1847",
+  "updatedAt": "2021-03-15",
+  "_file_stem": "waybill-logistics-createSFOrder"
+}

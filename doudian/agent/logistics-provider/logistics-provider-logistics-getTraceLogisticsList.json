@@ -1,0 +1,119 @@
+{
+  "id": "doudian.logistics-provider.logistics.getTraceLogisticsList",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.getTraceLogisticsList",
+  "description": "获取溯源物流信息",
+  "method": "GET",
+  "path": "/logistics/getTraceLogisticsList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_start",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务开始时间，yyyyMMddHHmmss 格式",
+      "example": "20220320000000",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_end",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务结束时间，yyyyMMddHHmmss 格式",
+      "example": "20220320235959",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "list",
+      "type": "array",
+      "description": "物流信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "231"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部异常（sub_code: isp.service-error:10001）",
+      "action": "咨询连接平台入驻人员",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统内部异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getTraceLogisticsList?app_key=your_appkey_here&method=logistics.getTraceLogisticsList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "list": [
+          {
+            "cargo_code": "7278177207393141031",
+            "city_name": "杭州市",
+            "district_name": "西湖区",
+            "is_gov": "Y",
+            "is_gov_subsidy": "Y",
+            "is_subsidy": "Y",
+            "province_name": "浙江省",
+            "shop_order_id": "7943843932343",
+            "sign_time": "20220320010101",
+            "trace_code": "SHXH534NRLYW"
+          }
+        ],
+        "total": "231"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统内部异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7653",
+  "updatedAt": "2025-07-31",
+  "_file_stem": "logistics-provider-logistics-getTraceLogisticsList"
+}

@@ -1,0 +1,178 @@
+{
+  "id": "doudian.logistics.logistics.ind.aoi.push",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.ind.aoi.push",
+  "description": "门店入驻后，自动/手动向承运商同步门店信息",
+  "method": "GET",
+  "path": "/logistics/ind/aoi/push",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店编码，由字节在门店创建/更新时同步给抖音平台",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "instant_delivery_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部运力公司业务身份",
+      "example": "外部公司入驻时的code码",
+      "_depth": 0
+    },
+    {
+      "name": "aoi_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "电子围栏的id,运力公司保障一个电子围栏id唯一性",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "aoi_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "回传的电子围栏是标准圆形还是多边形",
+      "example": "circle,polygon",
+      "_depth": 0
+    },
+    {
+      "name": "aoi_area_circle",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "若aoi_type=circle，必填 单位: m 圆心+半径",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "location",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "圆心经纬度",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "经度",
+      "example": "111.23",
+      "_depth": 2
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "维度",
+      "example": "111.23",
+      "_depth": 2
+    },
+    {
+      "name": "standard",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "地图标准",
+      "example": "GaoDe",
+      "_depth": 2
+    },
+    {
+      "name": "circle_radius",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "半径",
+      "example": "10000",
+      "_depth": 1
+    },
+    {
+      "name": "aoi_area_polygon_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "若aoi_category=polygon，则回传经纬度点集合 构成的电子围栏多边形的经纬度坐标(高德体系经纬度) 例如: {   经度A,纬度A;    经度B,纬度B;   经度C,纬度C; }",
+      "example": "{{   经度A,纬度A;    经度B,纬度B;   经度C,纬度C; }}",
+      "_depth": 0
+    },
+    {
+      "name": "aoi_op_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "变更类型",
+      "example": "{aoi_type=1,新增门店可达电子围栏} {aoi_type=2,修改门店可达电子围栏} {aoi_type=3,启用门店可达电子围栏} {aoi_type=4,停用门店可达电子围栏}",
+      "_depth": 0
+    },
+    {
+      "name": "fulfill_service",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店到此电子围栏的服务",
+      "example": "无接触派送",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "return_code",
+      "type": "string",
+      "description": "错误码，0 - 成功",
+      "example": "0"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "错误信息，失败时填写",
+      "example": "xx错了"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.ind.aoi.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "message": "xx错了",
+        "return_code": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2455",
+  "updatedAt": "2022-11-02",
+  "_file_stem": "logistics-logistics-ind-aoi-push"
+}

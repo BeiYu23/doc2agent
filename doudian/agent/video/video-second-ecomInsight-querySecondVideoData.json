@@ -1,0 +1,109 @@
+{
+  "id": "doudian.video.second.ecomInsight.querySecondVideoData",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.querySecondVideoData",
+  "description": "获取秒级追踪数据",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "second_track_video_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需追踪秒级数据视频id列表",
+      "example": "[\"123123\"]",
+      "_depth": 0
+    },
+    {
+      "name": "start_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "开始日期",
+      "example": "2026-09-04",
+      "_depth": 0
+    },
+    {
+      "name": "end_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "结束日期",
+      "example": "2026-09-04",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "全局返回码，0表示成功，非0表示失败",
+      "example": "0"
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回的业务数据主体",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "全局返回信息描述",
+      "example": "请求成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.querySecondVideoData&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "msg": "成功",
+          "records": [
+            {
+              "click_cnt": "[0.0,0.2,0.4,0.0]",
+              "comment_cnt": "[0.0,0.2,0.4,0.0]",
+              "interact_cnt": "[0.0,0.2,0.4,0.0]",
+              "like_cnt": "[0.0,0.2,0.4,0.0]",
+              "loss_cnt": "[0.0,0.2,0.4,0.0]",
+              "video_duration": "120.5",
+              "video_id": "789012"
+            }
+          ],
+          "status": "0"
+        },
+        "msg": "请求成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8633",
+  "updatedAt": "2026-09-18",
+  "_file_stem": "video-second-ecomInsight-querySecondVideoData"
+}

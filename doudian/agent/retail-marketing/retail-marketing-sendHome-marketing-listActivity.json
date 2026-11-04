@@ -1,0 +1,176 @@
+{
+  "id": "doudian.retail-marketing.sendHome.marketing.listActivity",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "sendHome.marketing.listActivity",
+  "description": "查询营销活动列表",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "活动ID列表",
+      "example": "{123}",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "默认1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "默认20",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动状态\nInit = 10,       // 创建中\nFail = 20,       // 创建失败\nInvaliding = 30, // 失效中\nInvalid = 40,    // 失效\nDelete = 50,     // 已删除\nSuccess = 90,    // 创建成功",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "activity_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动类型\nTimeLimitedBuy = 10,    // 限时限量购\nFullDiscount = 40,      // 满减",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "activity_sub_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠类型\nSecKill = 101,                   // 限时秒杀\nPriceOff = 102,                  // 普通降价促销\n\nNthPriceForDiscount = 401,       // 满N元优惠\nNthPieceForDiscount = 402,       // 满N件优惠",
+      "example": "101",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "活动列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100003）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100002）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100002",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必填参数（sub_code: isv.missing-parameter:4100001）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.missing-parameter:4100001",
+      "sub_msg": "缺少必填参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务系统异常，请联系开平人员（sub_code: isv.business-failed:5000001）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "业务系统异常，请联系开平人员"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，可尝试重试（sub_code: isp.service-error:5000002）",
+      "action": "系统异常，可尝试重试",
+      "sub_code": "isp.service-error:5000002",
+      "sub_msg": "系统异常，可尝试重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=sendHome.marketing.listActivity&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "activity_base_info": {
+              "activity_end_time": "1723451737",
+              "activity_id": "123",
+              "activity_start_time": "1723451737",
+              "activity_status": "10",
+              "activity_sub_type": "401",
+              "activity_title": "\"月末满减活动\"",
+              "activity_type": "40"
+            },
+            "activity_detail_info": {
+              "full_discount_info": {
+                "condition_type": "1",
+                "discount_rules": [
+                  {
+                    "condition_value": "10",
+                    "discount_value": "1"
+                  }
+                ],
+                "discount_type": "1"
+              }
+            }
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/6809",
+  "updatedAt": "2024-08-27",
+  "_file_stem": "retail-marketing-sendHome-marketing-listActivity"
+}

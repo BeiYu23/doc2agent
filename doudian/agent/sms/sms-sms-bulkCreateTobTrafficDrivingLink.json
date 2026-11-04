@@ -1,0 +1,125 @@
+{
+  "id": "doudian.sms.sms.bulkCreateTobTrafficDrivingLink",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.bulkCreateTobTrafficDrivingLink",
+  "description": "批量创建引流链接",
+  "method": "GET",
+  "path": "/sms/bulkCreateTobTrafficDrivingLink",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "data",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "数据",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "link_domain_icp_body",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文案链接域名备案主体，不使用火山短链时必填，使用火山短链时不可填",
+      "example": "test-icpBody",
+      "_depth": 1
+    },
+    {
+      "name": "jump_link",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "跳转链接",
+      "example": "https://test-xxx.com/demo",
+      "_depth": 1
+    },
+    {
+      "name": "protocol",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "协议，参考：https://docs.volcengine.com/docs/6361/1856289?lang=zh",
+      "example": "https",
+      "_depth": 1
+    },
+    {
+      "name": "link",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "链接，参考：https://docs.volcengine.com/docs/6361/1856289?lang=zh",
+      "example": "https://test-xxx.com/demo",
+      "_depth": 1
+    },
+    {
+      "name": "jump_link_domain_icp",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "跳转链接域名备案",
+      "example": "test-icp",
+      "_depth": 1
+    },
+    {
+      "name": "jump_link_domain_icp_body",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文案链接域名备案主体，不使用火山短链时必填，使用火山短链时不可填",
+      "example": "test-icpBody",
+      "_depth": 1
+    },
+    {
+      "name": "use_volc_link",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否使用火山链接",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "link_domain_icp",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文案链接域名备案号，不使用火山短链时必填，使用火山短链时不可填",
+      "example": "test-icp",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/bulkCreateTobTrafficDrivingLink?app_key=your_appkey_here&method=sms.bulkCreateTobTrafficDrivingLink&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/8438",
+  "updatedAt": "2026-07-28",
+  "_file_stem": "sms-sms-bulkCreateTobTrafficDrivingLink"
+}

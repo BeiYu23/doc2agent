@@ -1,0 +1,205 @@
+{
+  "id": "doudian.alliance.buyin.queryShopAllianceProducts",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.queryShopAllianceProducts",
+  "description": "联盟商家-查询店铺联盟推广",
+  "method": "GET",
+  "path": "/buyin/queryShopAllianceProducts",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页页数，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页大小，最大20",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品ID列表，用“,”分隔",
+      "example": "35632345453243,34242532432",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品状态。2：商品在架；3：商家关闭推广；4：商品下架；6：平台治理关闭；99：商家删除",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称",
+      "example": "测试商品的名称",
+      "_depth": 0
+    },
+    {
+      "name": "in_stock",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否有库存",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "check_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "审核状态。 0：未审核；2：审核未通过；3：审核通过",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "sort_by",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序字段。 update_time: 更新时间; cos_ratio: 佣金率",
+      "example": "update_time",
+      "_depth": 0
+    },
+    {
+      "name": "sort_order",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序方式（Desc或者Asc）。Desc：降序；Asc：生序",
+      "example": "Desc",
+      "_depth": 0
+    },
+    {
+      "name": "fields",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "加载更多的字段，如 is_exclusive",
+      "example": "[\"is_exclusive\"]",
+      "_depth": 0
+    },
+    {
+      "name": "launch",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0或者不填：原联盟计划商品 1：查询新投放商品",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数，最大10000",
+      "example": "200"
+    },
+    {
+      "name": "product_list",
+      "type": "array",
+      "description": "商品列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效size（sub_code: isv.parameter-invalid:1031）",
+      "action": "无效分页大小",
+      "sub_code": "isv.parameter-invalid:1031",
+      "sub_msg": "无效size"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/queryShopAllianceProducts?app_key=your_appkey_here&method=buyin.queryShopAllianceProducts&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_list": [
+          {
+            "check_status": "3",
+            "cos_fee": "50",
+            "cos_ratio": "50.00",
+            "cover": "https://sf1-ttcdn-tos.pstatp.com/img/temai/Fpt8fam5_q50.webp",
+            "create_time": "1650007266",
+            "detail_url": "https://haohuo.jinritemai.com/views/product/item2?id=34312324232145",
+            "imgs": "[\"https://p3-aio.ecombdimg.com/obj/temai/5f2e085982cbad84cadb30a100d42a09ww\"]",
+            "is_exclusive": "false",
+            "market_price": "100",
+            "price": "100",
+            "product_id": "34312324232145",
+            "sales": "0",
+            "sample_conf": {
+              "buy_style": "1",
+              "buy_volume_limit": "5"
+            },
+            "status": "2",
+            "title": "测试商品的名称",
+            "update_time": "1660790303"
+          }
+        ],
+        "total": "200"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1031",
+      "sub_msg": "无效size"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/2408",
+  "updatedAt": "2023-12-14",
+  "_file_stem": "alliance-buyin-queryShopAllianceProducts"
+}

@@ -1,0 +1,127 @@
+{
+  "id": "doudian.cross-border.crossborder.OrderInterception",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossborder.OrderInterception",
+  "description": "服务商锁单结果回告",
+  "method": "GET",
+  "path": "/crossborder/OrderInterception",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V3.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "GZJS",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "交易单号",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "节点发生时间 yyyy-MM-dd HH:mm:ss",
+      "example": "2021-09-07 20:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "节点状态 4：锁单成功 5：锁单失败",
+      "example": "4",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "响应状态码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应信息",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 接口调用异常，请重试，多次失败请人工反馈（sub_code: isp.service-error:1005）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 回告节点时序有误，请先回告出库完成节点（sub_code: isv.business-failed:10002）",
+      "action": "请先回告出库完成节点",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "回告节点时序有误，请先回告出库完成节点"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 接口调用异常，请重试，多次失败请人工反馈（sub_code: isp.service-error:99999）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:99999",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 交易单已关闭，请核实交易单状态（sub_code: isv.business-failed:10003）",
+      "action": "请核实交易单状态",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "交易单已关闭，请核实交易单状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossborder/OrderInterception?app_key=your_appkey_here&method=crossborder.OrderInterception&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/920",
+  "updatedAt": "2021-09-07",
+  "_file_stem": "cross-border-crossborder-OrderInterception"
+}

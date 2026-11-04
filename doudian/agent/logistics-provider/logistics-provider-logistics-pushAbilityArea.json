@@ -1,0 +1,495 @@
+{
+  "id": "doudian.logistics-provider.logistics.pushAbilityArea",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.pushAbilityArea",
+  "description": "能力服务范围推送",
+  "method": "GET",
+  "path": "/logistics/pushAbilityArea",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "param",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "入参对象",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "ability_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "能力编码，由字节分配提供",
+      "example": "AC_INT_HOME_TEST0000001",
+      "_depth": 1
+    },
+    {
+      "name": "area_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "范围类型 1-行政区划，2-电子围栏",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "ability_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "能力类型，由字节分配提供",
+      "example": "NATIONAL_SUBSIDY",
+      "_depth": 1
+    },
+    {
+      "name": "region_areas",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "行政区划范围列表，最多支持100条",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "properties",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性信息，有业务诉求时可传入，传入前需向字节申请属性Key",
+      "example": "key：netCode，value：0001",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "440300",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "深圳市",
+      "_depth": 2
+    },
+    {
+      "name": "ability_area_express",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "该范围是否支持该能力，1-支持/生效，2-不支持/不生效",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区域名称",
+      "example": "宝安区",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区域编码",
+      "example": "440306024",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区域名称",
+      "example": "松岗街道",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "xxxx小区xxx",
+      "_depth": 2
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "44",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份名称",
+      "example": "广东省",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区域编码",
+      "example": "440306",
+      "_depth": 2
+    },
+    {
+      "name": "fence_areas",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "电子围栏范围列表，最多支持100条",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "coordinate",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "坐标系，1-高德，2-百度",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "shape",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "围栏形状：1-圆，2-单多边形，3-带洞多边形，4-多个（带洞）多边形",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "circular",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "圆形区域,shape = 1时必填",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "point",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "圆心",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "23.5300",
+      "_depth": 4
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "118.9400",
+      "_depth": 4
+    },
+    {
+      "name": "radius",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "半径，单位：米",
+      "example": "2300.10",
+      "_depth": 3
+    },
+    {
+      "name": "polygon_old",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "单多边形区域,shape = 2时必填",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "23.5300",
+      "_depth": 3
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "118.9400",
+      "_depth": 3
+    },
+    {
+      "name": "polygon",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "带洞多边形,shape = 3时必填",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "points",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "Point列表对象",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "2300.10",
+      "_depth": 4
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "118.9400",
+      "_depth": 4
+    },
+    {
+      "name": "multi_polygon",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "多（带洞）多边形,shape = 4时必填",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "arrs",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "Point列表数组对象",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "points",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "Point列表对象",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "118.9400",
+      "_depth": 5
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "23.5300",
+      "_depth": 5
+    },
+    {
+      "name": "fence_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "围栏ID",
+      "example": "a0001",
+      "_depth": 2
+    },
+    {
+      "name": "properties",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性信息，有业务诉求时可传入，传入前需向字节申请属性Key",
+      "example": "key：netCode，value：0001",
+      "_depth": 2
+    },
+    {
+      "name": "fence_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "围栏名称",
+      "example": "xxxx围栏",
+      "_depth": 2
+    },
+    {
+      "name": "ability_area_express",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "该范围是否支持该能力，1-支持/生效，2-不支持/不生效",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "business_sense",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务场景（dapan：大盘，douchao：抖超，jishilingshou:即时零售）",
+      "example": "douchao",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回数据对象",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-10000）",
+      "action": "修正入参，重新调用",
+      "sub_code": "isv.business-failed:-10000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/pushAbilityArea?app_key=your_appkey_here&method=logistics.pushAbilityArea&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "ability_code": "AC_INT_HOME_TEST0000001",
+          "ability_type": "NATIONAL_SUBSIDY",
+          "area_type": "1",
+          "fail_fence_areas": [
+            {
+              "ability_area_express": "1",
+              "circular": {
+                "point": {
+                  "latitude": "118.9400",
+                  "longitude": "23.5300"
+                },
+                "radius": "2300.10"
+              },
+              "coordinate": "1",
+              "fence_id": "a0001",
+              "fence_name": "xxxx围栏",
+              "multi_polygon": [
+                {
+                  "arrs": [
+                    {
+                      "points": [
+                        {
+                          "latitude": "23.5300",
+                          "longitude": "118.9400"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "polygon": [
+                {
+                  "points": [
+                    {
+                      "latitude": "23.5300",
+                      "longitude": "118.9400"
+                    }
+                  ]
+                }
+              ],
+              "polygon_old": [
+                {
+                  "latitude": "23.5300",
+                  "longitude": "118.9400"
+                }
+              ],
+              "properties": {},
+              "shape": "2"
+            }
+          ],
+          "fail_region_areas": [
+            {
+              "ability_area_express": "1",
+              "city_name": "深圳市",
+              "detail_address": "xxxx小区xxx",
+              "district_name": "宝安区",
+              "properties": {},
+              "province_name": "广东省",
+              "street_name": "松岗街道"
+            }
+          ],
+          "lp_code": "power_test"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-10000",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7510",
+  "updatedAt": "2025-06-23",
+  "_file_stem": "logistics-provider-logistics-pushAbilityArea"
+}

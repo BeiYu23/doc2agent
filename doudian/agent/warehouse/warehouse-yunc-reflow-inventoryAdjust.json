@@ -1,0 +1,304 @@
+{
+  "id": "doudian.warehouse.yunc.reflow.inventoryAdjust",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.reflow.inventoryAdjust",
+  "description": "库存调整接口",
+  "method": "GET",
+  "path": "/yunc/reflow/inventoryAdjust",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码",
+      "example": "W1009",
+      "_depth": 0
+    },
+    {
+      "name": "adjust_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部调整单号",
+      "example": "ADJ20220801001",
+      "_depth": 0
+    },
+    {
+      "name": "adjust_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "调整类型（1=库存盘点，2=库存转移）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "adjust_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "调整时间（业务发生时间）",
+      "example": "1658914474",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "备注",
+      "example": "备注内容",
+      "_depth": 0
+    },
+    {
+      "name": "details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "调整明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "7072665065857597721",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品名称",
+      "example": "测试货品",
+      "_depth": 1
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP商品ID",
+      "example": "E123456",
+      "_depth": 1
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "BD10000028",
+      "_depth": 1
+    },
+    {
+      "name": "owner_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主名称",
+      "example": "测试货主",
+      "_depth": 1
+    },
+    {
+      "name": "shopid",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "店铺ID",
+      "example": "123456",
+      "_depth": 1
+    },
+    {
+      "name": "shop_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺名称",
+      "example": "测试店铺",
+      "_depth": 1
+    },
+    {
+      "name": "adjust_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "调整列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "adjust_direction",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "调整方向（1-调增，2-调减）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "adjust_qty",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "调整数量（正数）",
+      "example": "10",
+      "_depth": 2
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存类型（1-正品，2-残品）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存状态（1-正常，2-质检，3-冻结）",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "batch_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "批次信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "batch_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次号",
+      "example": "123456",
+      "_depth": 3
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "生产日期",
+      "example": "1658914474",
+      "_depth": 3
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "失效日期",
+      "example": "1658914474",
+      "_depth": 3
+    },
+    {
+      "name": "receipt_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "入库日期",
+      "example": "1658914474",
+      "_depth": 3
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商ID",
+      "example": "123456",
+      "_depth": 3
+    },
+    {
+      "name": "scm_inbound_order",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "SCM入库单号",
+      "example": "SC123456",
+      "_depth": 3
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "错误码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误信息",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1001:库存调整数量必须大于0（sub_code: isv.business-failed:1001）",
+      "action": "1001:库存调整数量必须大于0",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:库存调整数量必须大于0"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/reflow/inventoryAdjust?app_key=your_appkey_here&method=yunc.reflow.inventoryAdjust&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:库存调整数量必须大于0"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2277",
+  "updatedAt": "2022-08-01",
+  "_file_stem": "warehouse-yunc-reflow-inventoryAdjust"
+}

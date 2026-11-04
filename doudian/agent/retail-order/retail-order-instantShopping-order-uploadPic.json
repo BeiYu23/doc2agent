@@ -1,0 +1,108 @@
+{
+  "id": "doudian.retail-order.instantShopping.order.uploadPic",
+  "platform": "doudian",
+  "group": "retail-order",
+  "name": "instantShopping.order.uploadPic",
+  "description": "商家上传图片",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺单号",
+      "example": "\"6954957304399009191\"",
+      "_depth": 0
+    },
+    {
+      "name": "url_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商家上传的图片列表",
+      "example": "[\"https://cloud.maiyatian.com/order_YOUR_SECRET_KEY.jpg\",\"https://cloud.maiyatian.com/order_YOUR_SECRET_KEY.jpg\"]",
+      "_depth": 0
+    },
+    {
+      "name": "scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务场景标识。鲜花场景赋值为\"realShot\"",
+      "example": "realShot",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:100001）",
+      "action": "参数错误",
+      "sub_code": "isv.missing-parameter:100001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非本店铺订单，不允许操作（sub_code: isv.business-failed:200000202）",
+      "action": "更换店铺订单",
+      "sub_code": "isv.business-failed:200000202",
+      "sub_msg": "非本店铺订单，不允许操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询订单失败，请重试（sub_code: isv.business-failed:200000102）",
+      "action": "查询订单失败，请重试",
+      "sub_code": "isv.business-failed:200000102",
+      "sub_msg": "查询订单失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 处理图片信息失败，请重试（sub_code: isv.business-failed:200000405）",
+      "action": "处理图片信息失败，请重试",
+      "sub_code": "isv.business-failed:200000405",
+      "sub_msg": "处理图片信息失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图片包含敏感信息，请更换后重试（sub_code: isv.business-failed:200000404）",
+      "action": "图片包含敏感信息，请更换后重试",
+      "sub_code": "isv.business-failed:200000404",
+      "sub_msg": "图片包含敏感信息，请更换后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.order.uploadPic&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:100001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1531/8558",
+  "updatedAt": "2026-08-31",
+  "_file_stem": "retail-order-instantShopping-order-uploadPic"
+}

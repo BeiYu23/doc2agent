@@ -1,0 +1,69 @@
+{
+  "id": "doudian.logistics-provider.inspection.inspectionTags",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "inspection.inspectionTags",
+  "description": "需要给外部服务商提供一些订单/商品/商家等维度的标签数据查询，服务商会根据标签结果做对应的质检逻辑判定",
+  "method": "GET",
+  "path": "/inspection/inspectionTags",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "1234566",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tag_map",
+      "type": "string",
+      "description": "标签信息 key是标签的类型，value是标签的值 方便后面扩展，inspection_check_use_purchase_channel 表示质检结果是否依赖货品渠道，值为标准项的ID，反序列化后，不为空则认为不依赖;x_detection表示质检是否要过 X 光，反序列化后不为空（目前只有\"true\"值）表示要过 X 光",
+      "example": "\"tagMap\": {\n        \"inspection_check_use_purchase_channel\": \"[\\\"7369139374136492297\\\",\\\"7369139374136492297\\\"]\",\"x_detection\": \"[\\\"true\\\"]\"\n    },"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 质检任务不存在（sub_code: isv.business-failed:1006）",
+      "action": "联系研发",
+      "sub_code": "isv.business-failed:1006",
+      "sub_msg": "质检任务不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1006",
+      "sub_msg": "质检任务不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/6926",
+  "updatedAt": "2024-10-16",
+  "_file_stem": "logistics-provider-inspection-inspectionTags"
+}

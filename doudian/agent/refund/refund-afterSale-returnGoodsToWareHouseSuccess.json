@@ -1,0 +1,131 @@
+{
+  "id": "doudian.refund.afterSale.returnGoodsToWareHouseSuccess",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.returnGoodsToWareHouseSuccess",
+  "description": "商家确认售后单对应的用户退货入仓成功",
+  "method": "GET",
+  "path": "/afterSale/returnGoodsToWareHouseSuccess",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V6.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "售后单Id",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "op_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商家确认退货入仓时间，Unix时间戳，时间为秒",
+      "example": "1627905819",
+      "_depth": 0
+    },
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户退货物流单号",
+      "example": "SF12334",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_company_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司代号",
+      "example": "shunfeng",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 序列化错误（sub_code: isv.parameter-invalid:11004）",
+      "action": "通常为入参问题，请检查后重试",
+      "sub_code": "isv.parameter-invalid:11004",
+      "sub_msg": "序列化错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:10002）",
+      "action": "通常为严重的系统错误问题，请检查并谨慎重试。",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误，请重试（sub_code: isv.business-failed:10000）",
+      "action": "通常为超时，请检查后重试",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "系统错误，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 售后单类型与策略限制不符合，未命中此策略（sub_code: isv.business-failed:12001）",
+      "action": "检查后重试",
+      "sub_code": "isv.business-failed:12001",
+      "sub_msg": "售后单类型与策略限制不符合，未命中此策略"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺未设置或启用售后小助手策略，请店铺通过抖店后台或以下链接进行设置：https://fxg.jinritemai.YOUR_SECRET_KEY（sub_code: isv.business-failed:11002）",
+      "action": "检查小助手是否开启",
+      "sub_code": "isv.business-failed:11002",
+      "sub_msg": "店铺未设置或启用售后小助手策略，请店铺通过抖店后台或以下链接进行设置：https://fxg.jinritemai.YOUR_SECRET_KEY"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:11000）",
+      "action": "通常为入参错误，请检查",
+      "sub_code": "isv.business-failed:11000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取售后小助手策略失败（sub_code: isv.business-failed:12000）",
+      "action": "请检查后重试",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "获取售后小助手策略失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/returnGoodsToWareHouseSuccess?app_key=your_appkey_here&method=afterSale.returnGoodsToWareHouseSuccess&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:11004",
+      "sub_msg": "序列化错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/815",
+  "updatedAt": "2021-08-11",
+  "_file_stem": "refund-afterSale-returnGoodsToWareHouseSuccess"
+}

@@ -1,0 +1,796 @@
+{
+  "id": "doudian.warehouse.yunc.wmsInboundCallback",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.wmsInboundCallback",
+  "description": "wms入库单回告",
+  "method": "GET",
+  "path": "/yunc/wmsInboundCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(64)：入库单号",
+      "example": "IB01",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(8)：单据类型，CGRK=采购入库 DBRK=调拨入库 QTRK=其他入库 SCRK=生产入库 XTRK=销退入库",
+      "example": "XTRK",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "状态：22-包裹交接/到货登记 26-拆包质检（ToC） 2-部分收货 3-收货完成 6-上架完成  701-异常提报 30-复原项完结  其中3必填，其他状态可不传；",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "作业时间",
+      "example": "1627622162",
+      "_depth": 0
+    },
+    {
+      "name": "operator",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(32)：操作人",
+      "example": "C1",
+      "_depth": 0
+    },
+    {
+      "name": "reamrk",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(200)：备注",
+      "example": "无",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(16)：仓库编码",
+      "example": "99",
+      "_depth": 0
+    },
+    {
+      "name": "details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sn_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(1024)：唯一码",
+      "example": "SN01",
+      "_depth": 1
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(64)：批次编码",
+      "example": "B01",
+      "_depth": 1
+    },
+    {
+      "name": "batch_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "批属性(20220715增加)",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "scm_inbound_order",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(64)：SCM入库单号",
+      "example": "\"12846128309281\"",
+      "_depth": 2
+    },
+    {
+      "name": "specify_batch_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "指定批次信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "expire_date_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "过期日期结束",
+      "example": "1763551337",
+      "_depth": 3
+    },
+    {
+      "name": "expire_date_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "过期日期开始",
+      "example": "1763551337",
+      "_depth": 3
+    },
+    {
+      "name": "product_date_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期结束",
+      "example": "1763551337",
+      "_depth": 3
+    },
+    {
+      "name": "product_date_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期开始，秒级时间戳",
+      "example": "1763551337",
+      "_depth": 3
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "失效日期",
+      "example": "1657805905",
+      "_depth": 2
+    },
+    {
+      "name": "lot_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(64): 批次id",
+      "example": "\"122345566\"",
+      "_depth": 2
+    },
+    {
+      "name": "receipt_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "入库日期",
+      "example": "1657805905",
+      "_depth": 2
+    },
+    {
+      "name": "batch_extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(2048): 批次扩展字段，json结构",
+      "example": "{\"batch_number\": \"1234\"}",
+      "_depth": 2
+    },
+    {
+      "name": "batch_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(64)：批次号",
+      "example": "\"122345566\"",
+      "_depth": 2
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期",
+      "example": "1657805905",
+      "_depth": 2
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(64)：供应商ID",
+      "example": "\"123\"",
+      "_depth": 2
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存类型 1-正品,2-次品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(2048)：扩展字段",
+      "example": "{}",
+      "_depth": 1
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产时间",
+      "example": "1627622591",
+      "_depth": 1
+    },
+    {
+      "name": "total_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "累计实收",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "received_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "本次实收",
+      "example": "5",
+      "_depth": 1
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "过期时间",
+      "example": "1627622591",
+      "_depth": 1
+    },
+    {
+      "name": "defect_reason",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "残次品原因",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "desc_msg",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "描述信息",
+      "example": "这是描述",
+      "_depth": 2
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "原因编码",
+      "example": "CC1234",
+      "_depth": 2
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(32)：货主编码",
+      "example": "O001",
+      "_depth": 1
+    },
+    {
+      "name": "inbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(64)：单号",
+      "example": "IB01",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "库存状态，1 正常 2 质检 3 冻结",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(1024)：备注",
+      "example": "无",
+      "_depth": 1
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(32)：行号 \n以推单下发的行号为准，用于定位对应的明细行",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "out_biz_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(64)：幂等号（回传部分收货时，必传且需要保证唯一）",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "rejection_details",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "拒收明细(20220715增加)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(32)：行号",
+      "example": "\"1\"",
+      "_depth": 1
+    },
+    {
+      "name": "rejection_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(200)：拒收原因",
+      "example": "\"效期原因\"",
+      "_depth": 1
+    },
+    {
+      "name": "rejection_qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "拒收数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "rejection_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(200)：拒收说明",
+      "example": "\"生产日期xxx\"",
+      "_depth": 1
+    },
+    {
+      "name": "sign_detail",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "到货登记信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "plate_number",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "车牌号",
+      "example": "\"XXXX\"",
+      "_depth": 1
+    },
+    {
+      "name": "express",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司",
+      "example": "\"XXX公司\"",
+      "_depth": 1
+    },
+    {
+      "name": "contact_way",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "联系方式",
+      "example": "\"1XXXXXXX\"",
+      "_depth": 1
+    },
+    {
+      "name": "way_bill_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递单号",
+      "example": "\"KDxxxx\"",
+      "_depth": 1
+    },
+    {
+      "name": "driver",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "送货人",
+      "example": "\"XXX\"",
+      "_depth": 1
+    },
+    {
+      "name": "event_type_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字段长度(200)：作业节点说明",
+      "example": "外箱完好",
+      "_depth": 0
+    },
+    {
+      "name": "picture_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "销退入库时回传图片列表",
+      "example": "[\"123\",\"123\"]",
+      "_depth": 0
+    },
+    {
+      "name": "abnormal_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "异常信息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "abnormal_source",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(64)：来源，WMS，QMS",
+      "example": "WMS",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品名称",
+      "example": "测试货品名称",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_bar_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品条码",
+      "example": "6786789678",
+      "_depth": 1
+    },
+    {
+      "name": "abnormal_info_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(64)：异常原因分类",
+      "example": "实物与资料不符-效期异常",
+      "_depth": 1
+    },
+    {
+      "name": "video_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "视频列表",
+      "example": "[\"http://xxxxx\",\"http://xxxxx\"]",
+      "_depth": 1
+    },
+    {
+      "name": "abnormal_info_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常原因编码",
+      "example": "C0001",
+      "_depth": 1
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "abnormal_info_remark",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(200)：异常原因说明",
+      "example": "XXXX",
+      "_depth": 1
+    },
+    {
+      "name": "qty",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "数量",
+      "example": "134",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "字段长度(64)：货品编码",
+      "example": "78912893813",
+      "_depth": 1
+    },
+    {
+      "name": "abnormal_picture_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "图片列表",
+      "example": "[\"12313\",\"123\"]",
+      "_depth": 1
+    },
+    {
+      "name": "recovery_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "复原信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "798788678657657",
+      "_depth": 1
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "recovery_item_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "复原项名称",
+      "example": "熨烫",
+      "_depth": 1
+    },
+    {
+      "name": "recovery_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "复原数量",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "recovery_item_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "复原项Code",
+      "example": "305",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品名称",
+      "example": "测试货品名称",
+      "_depth": 1
+    },
+    {
+      "name": "package_material",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "复原使用的包材信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "包材名称",
+      "example": "包装膜",
+      "_depth": 2
+    },
+    {
+      "name": "count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "包材数量",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "包材Code",
+      "example": "101",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "错误码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "异常信息",
+      "example": "\"系统内部异常\""
+    },
+    {
+      "name": "data",
+      "type": "string",
+      "description": "data",
+      "example": "data"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 13003:更新库存失败（sub_code: isv.business-failed:13003）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:13003",
+      "sub_msg": "13003:更新库存失败"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / outBizCode is required（sub_code: isv.missing-parameter:13000）",
+      "action": "部分收货（分批次回传）的场景，OutBizCode需必传，请填充该字段后重试",
+      "sub_code": "isv.missing-parameter:13000",
+      "sub_msg": "outBizCode is required"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / order not found（sub_code: isv.business-failed:13001）",
+      "action": "请检查入库单号后重试",
+      "sub_code": "isv.business-failed:13001",
+      "sub_msg": "order not found"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 仓库编码鉴权失败，操作仓和鉴权仓不一致（sub_code: isv.business-failed:1003）",
+      "action": "检查操作仓Code",
+      "sub_code": "isv.business-failed:1003",
+      "sub_msg": "仓库编码鉴权失败，操作仓和鉴权仓不一致"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1004）",
+      "action": "检查报错",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:1001）",
+      "action": "检查参数重新回传",
+      "sub_code": "isv.missing-parameter:1001",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/wmsInboundCallback?app_key=your_appkey_here&method=yunc.wmsInboundCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": "data",
+        "msg": "\"系统内部异常\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:13003",
+      "sub_msg": "13003:更新库存失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/929",
+  "updatedAt": "2025-12-09",
+  "_file_stem": "warehouse-yunc-wmsInboundCallback"
+}

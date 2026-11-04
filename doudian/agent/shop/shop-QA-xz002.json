@@ -1,0 +1,84 @@
+{
+  "id": "doudian.shop.QA.xz002",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "QA.xz002",
+  "description": "接口描述11",
+  "method": "GET",
+  "path": "/QA/xz002",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.34）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_tag",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ppppp",
+      "example": "ppppp",
+      "_depth": 0
+    },
+    {
+      "name": "tags",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "ppppp",
+      "example": "ppppp",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "custom_err",
+      "type": "object",
+      "description": "ppppp",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/logisticsAddMultiPack?app_key=your_appkey_here&method=order.logisticsAddMultiPack&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "pack_list": [
+          {
+            "logistics_code": "111111111111111",
+            "pack_id": "4705288465508532862",
+            "shipped_order_info": [
+              {
+                "shipped_item_ids": "[\"123123\"]",
+                "shipped_num": "1",
+                "shipped_order_id": "123123"
+              }
+            ]
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2494",
+  "updatedAt": "2022-09-15",
+  "_file_stem": "shop-QA-xz002"
+}

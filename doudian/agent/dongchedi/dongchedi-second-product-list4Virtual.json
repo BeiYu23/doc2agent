@@ -1,0 +1,328 @@
+{
+  "id": "doudian.dongchedi.second.product.list4Virtual",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.product.list4Virtual",
+  "description": "【二方接口】获取商品列表",
+  "method": "GET",
+  "path": "/second/product/list4Virtual",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "uid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商业化账号组uid，用作鉴权",
+      "example": "15495388485",
+      "_depth": 0
+    },
+    {
+      "name": "productId",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "小店商品id",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "小店商品名称",
+      "example": "dde7ab64",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "小店商品状态，0-上架中，1-下架中，2-删除中",
+      "example": "8439796",
+      "_depth": 0
+    },
+    {
+      "name": "checkStatus",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "小店商品审核状态，1-待提交，2-审核中，3-审核通过，4-审核被驳回，5-被封禁",
+      "example": "5946554",
+      "_depth": 0
+    },
+    {
+      "name": "shopId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "fields:ShopId  小店店铺id",
+      "example": "690582",
+      "_depth": 0
+    },
+    {
+      "name": "brandId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "fields:BrandId, 品牌关联id",
+      "example": "521150",
+      "_depth": 0
+    },
+    {
+      "name": "isOnline",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "在线商品筛选",
+      "example": "5096401",
+      "_depth": 0
+    },
+    {
+      "name": "isOffline",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "下架中",
+      "example": "5462059",
+      "_depth": 0
+    },
+    {
+      "name": "categoryIds",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "新类目id列表",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "tagCode",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "标签code，精确匹配",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "excludeTagCode",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "排除标签code，精确匹配",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "sortField",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序字段，默认按创建时间",
+      "example": "deb3322b",
+      "_depth": 0
+    },
+    {
+      "name": "sortDirection",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序顺序，asc-升序，desc-降序，默认desc",
+      "example": "a6d727e1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "page",
+      "example": "6264706",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "size",
+      "example": "6754427",
+      "_depth": 0
+    },
+    {
+      "name": "fields",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "指定需要获取的字段，字段名从ListInfo4Virtual中取",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "scrollId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "scroll_id",
+      "example": "14d4adeb",
+      "_depth": 0
+    },
+    {
+      "name": "isPackageProduct",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "fields:IsPackageProduct. 是否是组套商品",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "data",
+      "example": "[]"
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "total",
+      "example": "3122445"
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "page",
+      "example": "6264706"
+    },
+    {
+      "name": "size",
+      "type": "mixed",
+      "description": "size",
+      "example": "6754427"
+    },
+    {
+      "name": "scrollId",
+      "type": "string",
+      "description": "scroll_id",
+      "example": "14d4adeb"
+    },
+    {
+      "name": "cursorId",
+      "type": "string",
+      "description": "游标id，如果需要遍历则下次查询带上",
+      "example": "a6595738"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / uid不能为空（sub_code: isp.service-error:300001）",
+      "action": "uid不能为空",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / shopId不能为空（sub_code: isp.service-error:300002）",
+      "action": "shopId不能为空",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "shopId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 店铺鉴权失败（sub_code: isp.service-error:500004）",
+      "action": "店铺鉴权失败",
+      "sub_code": "isp.service-error:500004",
+      "sub_msg": "店铺鉴权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.product.list4Virtual&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "cursorId": "a6595738",
+        "data": [
+          {
+            "categoryDetail": {
+              "enable": "false",
+              "firstCid": "1375707",
+              "firstCname": "7ac3063b",
+              "fourthCid": "9914671",
+              "fourthCname": "3c4caaf3",
+              "is_leaf": "false",
+              "secondCid": "2935859",
+              "secondCname": "9cdbc5c8",
+              "thirdCid": "1110923",
+              "thirdCname": "db0265c9"
+            },
+            "categoryId": "6710316",
+            "checkStatus": "2157014",
+            "discountPrice": "6314216",
+            "draftStatus": "1731286",
+            "firstCid": "1395781",
+            "firstCidName": "7c23adc2",
+            "img": "db52d060",
+            "marketPrice": "5126398",
+            "name": "[]",
+            "outerProductId": "eebd9cc8",
+            "productId": "2253082",
+            "secondCid": "5995184",
+            "secondCidName": "3aea3310",
+            "shopId": "690582",
+            "specPrices": [
+              {
+                "id": "2679991"
+              }
+            ],
+            "status": "5551946",
+            "tags": [
+              {
+                "tagCode": "a8efe3ca",
+                "tagName": "6694f4e9",
+                "tagSource": "5c0ff8f9",
+                "values": "[]"
+              }
+            ],
+            "thirdCid": "4286276",
+            "thirdCidName": "31a72c84"
+          }
+        ],
+        "page": "6264706",
+        "scrollId": "14d4adeb",
+        "size": "6754427",
+        "total": "3122445"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/7015",
+  "updatedAt": "2024-10-21",
+  "_file_stem": "dongchedi-second-product-list4Virtual"
+}

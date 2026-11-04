@@ -1,0 +1,244 @@
+{
+  "id": "doudian.retail-waybill.instantShopping.order.stockingCompleted",
+  "platform": "doudian",
+  "group": "retail-waybill",
+  "name": "instantShopping.order.stockingCompleted",
+  "description": "自提订单商家上报备货完成",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店id",
+      "example": "155339026",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主订单号",
+      "example": "6939269863945017210",
+      "_depth": 0
+    },
+    {
+      "name": "device_code_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "设备码列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "子订单号",
+      "example": "6935074313978779194",
+      "_depth": 1
+    },
+    {
+      "name": "bar_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "69码",
+      "example": "456",
+      "_depth": 1
+    },
+    {
+      "name": "serial_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "序列码",
+      "example": "789",
+      "_depth": 1
+    },
+    {
+      "name": "imei_code",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "IMEI码",
+      "example": "[\"1234\"]",
+      "_depth": 1
+    },
+    {
+      "name": "sku_order_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku单信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku单id",
+      "example": "\"6935074313978779194\"",
+      "_depth": 1
+    },
+    {
+      "name": "trace_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "溯源码信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "对应sku单id",
+      "example": "\"6935074313978779194\"",
+      "_depth": 2
+    },
+    {
+      "name": "batch_and_trace_code_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批次+溯源码list（设计为list是可能有多个item单）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次code",
+      "example": "“123”",
+      "_depth": 3
+    },
+    {
+      "name": "trace_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "溯源码code",
+      "example": "“123”",
+      "_depth": 3
+    },
+    {
+      "name": "scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "场景，上传溯源码【必传】upload_medical_trace_info",
+      "example": "upload_medical_trace_info",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:100001）",
+      "action": "参数错误",
+      "sub_code": "isv.missing-parameter:100001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非本店铺订单，不允许操作（sub_code: isv.business-failed:200009）",
+      "action": "更换本店铺订单",
+      "sub_code": "isv.business-failed:200009",
+      "sub_msg": "非本店铺订单，不允许操作"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询订单失败，请重试（sub_code: isp.service-error:200010）",
+      "action": "查询订单失败，请重试",
+      "sub_code": "isp.service-error:200010",
+      "sub_msg": "查询订单失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 设备码必填信息为空（sub_code: isv.business-failed:200028）",
+      "action": "设备码必填信息为空",
+      "sub_code": "isv.business-failed:200028",
+      "sub_msg": "设备码必填信息为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 设备码校验失败（sub_code: isv.business-failed:200029）",
+      "action": "设备码校验失败",
+      "sub_code": "isv.business-failed:200029",
+      "sub_msg": "设备码校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 设备码保存失败（sub_code: isv.business-failed:200030）",
+      "action": "设备码保存失败",
+      "sub_code": "isv.business-failed:200030",
+      "sub_msg": "设备码保存失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 设备码占用失败（sub_code: isv.business-failed:200031）",
+      "action": "设备码占用失败",
+      "sub_code": "isv.business-failed:200031",
+      "sub_msg": "设备码占用失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 核销发码失败（sub_code: isv.business-failed:200032）",
+      "action": "核销发码失败",
+      "sub_code": "isv.business-failed:200032",
+      "sub_msg": "核销发码失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常（sub_code: isv.business-failed:10001）",
+      "action": "系统异常",
+      "sub_code": "isv.business-failed:10001",
+      "sub_msg": "系统异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.order.stockingCompleted&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:100001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1578/7258",
+  "updatedAt": "2025-08-14",
+  "_file_stem": "retail-waybill-instantShopping-order-stockingCompleted"
+}

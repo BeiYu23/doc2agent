@@ -1,0 +1,97 @@
+{
+  "id": "doudian.logistics.freightTemplate.detail",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "freightTemplate.detail",
+  "description": "获取运费模板详情",
+  "method": "GET",
+  "path": "/freightTemplate/detail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "freight_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "模板id",
+      "example": "3748974",
+      "_depth": 0
+    },
+    {
+      "name": "query_option",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "查询请求",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "query_transfer_rule",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否查询中转规则，默认false",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "模板详情",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 模板丢失（sub_code: isp.service-error:3）",
+      "action": "模板丢失",
+      "sub_code": "isp.service-error:3",
+      "sub_msg": "模板丢失"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 模板未找到（sub_code: isp.service-error:2）",
+      "action": "模板未找到",
+      "sub_code": "isp.service-error:2",
+      "sub_msg": "模板未找到"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/freightTemplate/detail?app_key=your_appkey_here&method=freightTemplate.detail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:3",
+      "sub_msg": "模板丢失"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2157",
+  "updatedAt": "2025-03-11",
+  "_file_stem": "logistics-freightTemplate-detail"
+}

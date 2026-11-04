@@ -1,0 +1,159 @@
+{
+  "id": "doudian.retail-waybill.instantShopping.logistics.listShopNetsite",
+  "platform": "doudian",
+  "group": "retail-waybill",
+  "name": "instantShopping.logistics.listShopNetsite",
+  "description": "查询商家和物流商的订购关系以及物流单号使用情况",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商服务编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发货仓id",
+      "example": "1234",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "netsites",
+      "type": "array",
+      "description": "网点信息列表",
+      "example": ""
+    },
+    {
+      "name": "company",
+      "type": "string",
+      "description": "快递公司编码",
+      "example": "顺丰"
+    },
+    {
+      "name": "company_type",
+      "type": "mixed",
+      "description": "物流服务商业务类型 1：直营 2：加盟 3：落地配 4：直营带网点",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4006:店铺ID非法（sub_code: isv.business-failed:4006）",
+      "action": "请检查您的店铺id是否正确",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "4006:店铺ID非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40006:请传入正确的门店id（sub_code: isv.business-failed:40006）",
+      "action": "请传入正确的门店id",
+      "sub_code": "isv.business-failed:40006",
+      "sub_msg": "40006:请传入正确的门店id"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40001:无效的门店信息（sub_code: isv.business-failed:40001）",
+      "action": "无效的门店信息",
+      "sub_code": "isv.business-failed:40001",
+      "sub_msg": "40001:无效的门店信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50040:系统开小差了，请稍后重试（sub_code: isv.business-failed:50040）",
+      "action": "系统开小差了，请稍后重试",
+      "sub_code": "isv.business-failed:50040",
+      "sub_msg": "50040:系统开小差了，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:Internal Server Error（sub_code: isv.business-failed:1004）",
+      "action": "系统开小差了，请稍后重试",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:Internal Server Error"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.logistics.listShopNetsite&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "company": "顺丰",
+        "company_type": "1",
+        "netsites": [
+          {
+            "allocated_quantity": "1",
+            "amount": "1",
+            "cancelled_quantity": "1",
+            "company": "shunfeng",
+            "company_type": "1",
+            "ebill_type": "0",
+            "netsite_code": "1",
+            "netsite_name": "E世界",
+            "out_warehouse_id": "1234",
+            "product_type": "[]",
+            "recycled_quantity": "1",
+            "sender_address": [
+              {
+                "address_type": "0",
+                "city_name": "北京市",
+                "detail_address": "E世界",
+                "district_name": "海淀区",
+                "province_name": "北京",
+                "street_name": "E世界"
+              }
+            ],
+            "store_id": "123",
+            "store_name": "蔬果店",
+            "warehouse_name": "北京仓"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "4006:店铺ID非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1578/7240",
+  "updatedAt": "2025-04-23",
+  "_file_stem": "retail-waybill-instantShopping-logistics-listShopNetsite"
+}

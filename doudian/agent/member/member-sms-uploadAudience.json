@@ -1,0 +1,90 @@
+{
+  "id": "doudian.member.sms.uploadAudience",
+  "platform": "doudian",
+  "group": "member",
+  "name": "sms.uploadAudience",
+  "description": "上传人群",
+  "method": "GET",
+  "path": "/sms/uploadAudience",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "手机号hash文件地址uri",
+      "example": "/tos-cn-i-7veqoeduo3/2b2acab2be994a77bcced42475523d67",
+      "_depth": 0
+    },
+    {
+      "name": "audience_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "人群名称",
+      "example": "自定义人群",
+      "_depth": 0
+    },
+    {
+      "name": "upload_data_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "上传数据的类型：0默认手机号；1为openId",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "temporary_audience",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否临时人群，临时人群有效期30天",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "audience_id",
+      "type": "mixed",
+      "description": "人群id",
+      "example": "22074278516698983"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/uploadAudience?app_key=your_appkey_here&method=sms.uploadAudience&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "audience_id": "22074278516698983"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6680",
+  "updatedAt": "2024-10-14",
+  "_file_stem": "member-sms-uploadAudience"
+}

@@ -1,0 +1,172 @@
+{
+  "id": "doudian.supply-chain.supplyChain.queryWhInventoryRecord",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.queryWhInventoryRecord",
+  "description": "查询品仓库存流水",
+  "method": "GET",
+  "path": "/supplyChain/queryWhInventoryRecord",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "单页大小",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_start",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存流水时间起始",
+      "example": "2025-06-18 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "data_date_end",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存流水时间终止",
+      "example": "2025-06-20 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "logistic_status_time_start",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流状态更新时间起始",
+      "example": "2025-06-18 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "logistic_status_time_end",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流状态更新时间终止",
+      "example": "2025-06-20 00:00:00",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "record_list",
+      "type": "array",
+      "description": "库存流水列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部异常（sub_code: isp.service-error:10000）",
+      "action": "咨询内部技术人员",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "系统内部异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / isp.service-error:10001（sub_code: isp.service-error:30000）",
+      "action": "咨询连接平台技术人员",
+      "sub_code": "isp.service-error:30000",
+      "sub_msg": "isp.service-error:10001"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/queryWhInventoryRecord?app_key=your_appkey_here&method=supplyChain.queryWhInventoryRecord&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "record_list": [
+          {
+            "cargoCode": "货品code",
+            "courierName": "SF",
+            "deliveryTime": "2025-06-18 00:00:00",
+            "erpOrderNo": "123456789",
+            "erpRefNo": "123456",
+            "fromLocationCode": "W0066",
+            "fromLocationName": "自营仓编码",
+            "fromLocationType": "2",
+            "hqId": "4019383",
+            "hqName": "岩禾（上海）贸易有限公司",
+            "invType": "1",
+            "isFinish": "1/0",
+            "isGov": "1/0",
+            "isSubsidy": "1/0",
+            "logisticStatus": "SEND_OFF",
+            "logisticStatusTime": "2025-06-18 00:00:00",
+            "mpnCode": "mpnCode",
+            "mpnName": "iphone16新款",
+            "outerBizID": "123456",
+            "packageVolumn": "10.34",
+            "packageWeight": "0.482",
+            "pickupTime": "2025-06-18 00:00:00",
+            "qty": "10",
+            "serialNumbers": "S1248972",
+            "toLocationCity": "苏州市",
+            "toLocationCode": "江苏省",
+            "toLocationName": "收货仓库名称",
+            "toLocationProvince": "江苏省",
+            "toLocationType": "2",
+            "totalQty": "10",
+            "transactionId": "123456",
+            "transactionTime": "2025-06-18 00:00:00",
+            "transactionType": "1001",
+            "transactionTypeName": "2C销售出库",
+            "whCity": "江苏省苏州市",
+            "whCode": "自营仓编码",
+            "whName": "自营仓名称",
+            "whType": "2C"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "系统内部异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/7439",
+  "updatedAt": "2025-10-17",
+  "_file_stem": "supply-chain-supplyChain-queryWhInventoryRecord"
+}

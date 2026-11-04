@@ -1,0 +1,121 @@
+{
+  "id": "doudian.install.install.store.ProviderStoreAPIDetail",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.ProviderStoreAPIDetail",
+  "description": "服务商门店详情接口",
+  "method": "GET",
+  "path": "/install/store/ProviderStoreAPIDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "category_channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目渠道",
+      "example": "类目渠道 0 表示旧类目体系，1表示新类目体系",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store_detail",
+      "type": "object",
+      "description": "返回的门店详情",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-3）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.ProviderStoreAPIDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "store_detail": {
+          "address": "中兴大厦",
+          "audit_failed_reason": "审核失败",
+          "audit_status": "1",
+          "back_up_contactor": "18600000000",
+          "business_license_address": "中兴大厦",
+          "business_license_url": "\"https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/ShopInstall/image_1753333758527825153\"",
+          "city": "北京市",
+          "contactor": "18600000000",
+          "contactor_name": "刘先生",
+          "district": "海淀区",
+          "door_image_url": "\"https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/ShopInstall/image_1753333758527825153\"",
+          "last_call_status": "true",
+          "open_time_desc": "[\"周一至周五 10:00-21:00\"]",
+          "province": "北京市",
+          "room_image_url": "[\"https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/ShopInstall/image_1753333758527825153\"]",
+          "status": "1",
+          "store_abilities": [
+            {
+              "abilities": [
+                {
+                  "ability_id": "\"123\"",
+                  "ability_name": "\"123\""
+                }
+              ],
+              "category_type": "\"123\"",
+              "first_category_id": "\"123\"",
+              "first_category_name": "\"123\"",
+              "fourth_category_id": "\"123\"",
+              "fourth_category_name": "\"123\"",
+              "second_category_id": "\"123\"",
+              "second_category_name": "\"123\"",
+              "third_category_id": "\"123\"",
+              "third_category_name": "\"123\""
+            }
+          ],
+          "store_code": "\"123\"",
+          "store_id": "12344",
+          "store_name": "测试门店",
+          "street": "花园路街道"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7677",
+  "updatedAt": "2026-05-25",
+  "_file_stem": "install-install-store-ProviderStoreAPIDetail"
+}

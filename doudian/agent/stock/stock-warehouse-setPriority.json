@@ -1,0 +1,98 @@
+{
+  "id": "doudian.stock.warehouse.setPriority",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.setPriority",
+  "description": "设置指定地址下的仓的优先级",
+  "method": "GET",
+  "path": "/warehouse/setPriority",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 ）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "addr",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "配送地址",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "addr_id1",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "一级地址id",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "二级地址id",
+      "example": "100100",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "三级地址id",
+      "example": "100110",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "四级地址id",
+      "example": "100111",
+      "_depth": 1
+    },
+    {
+      "name": "priorities",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "前面是out_warehouse_id，后面是仓优先级 仓优先级，0-5，0优先级最高，5最低",
+      "example": "{\"123213\":0,\"123214\":1}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/setPriority?app_key=your_appkey_here&method=warehouse.setPriority&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/1863",
+  "updatedAt": "2020-11-29",
+  "_file_stem": "stock-warehouse-setPriority"
+}

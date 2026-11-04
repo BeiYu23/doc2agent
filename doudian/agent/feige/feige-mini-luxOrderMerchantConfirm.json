@@ -1,0 +1,109 @@
+{
+  "id": "doudian.feige.mini.luxOrderMerchantConfirm",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "mini.luxOrderMerchantConfirm",
+  "description": "奢品订单商家确认接口",
+  "method": "GET",
+  "path": "/mini/luxOrderMerchantConfirm",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "sku订单id",
+      "example": "6954158301937669XXX",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "店铺订单id",
+      "example": "6954158301937669YYY",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "成功为true，否则为false",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 请求参数问题（sub_code: isv.missing-parameter:28007004）",
+      "action": "请按要求传递所有必填参数",
+      "sub_code": "isv.missing-parameter:28007004",
+      "sub_msg": "请求参数问题"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单查询失败（sub_code: isv.parameter-invalid:28007006）",
+      "action": "请咨询技术支持检查订单详细信息",
+      "sub_code": "isv.parameter-invalid:28007006",
+      "sub_msg": "订单查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不合法的业务处理，有很多可能性，都是不符合奢品定制订单确认的情况，根据返回消息来确认具体的错误原因（sub_code: isv.business-failed:28007005）",
+      "action": "根据返回消息进行确认",
+      "sub_code": "isv.business-failed:28007005",
+      "sub_msg": "不合法的业务处理，有很多可能性，都是不符合奢品定制订单确认的情况，根据返回消息来确认具体的错误原因"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 拒绝请求（sub_code: isp.traffic-limited:28007001）",
+      "action": "qps问题或锁竞争问题，降低请求频次",
+      "sub_code": "isp.traffic-limited:28007001",
+      "sub_msg": "拒绝请求"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统组件相关错误（sub_code: isp.service-error:28001005）",
+      "action": "提供logId咨询技术支持",
+      "sub_code": "isp.service-error:28001005",
+      "sub_msg": "系统组件相关错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/luxOrderMerchantConfirm?app_key=your_appkey_here&method=mini.luxOrderMerchantConfirm&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:28007004",
+      "sub_msg": "请求参数问题"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/8392",
+  "updatedAt": "2026-07-06",
+  "_file_stem": "feige-mini-luxOrderMerchantConfirm"
+}

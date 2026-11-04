@@ -1,0 +1,97 @@
+{
+  "id": "doudian.alliance.buyin.activityProductCancel",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.activityProductCancel",
+  "description": "一级团长取消活动提报申请接口",
+  "method": "GET",
+  "path": "/buyin/activityProductCancel",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动 id",
+      "example": "54321",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商品 id",
+      "example": "174913561741412435",
+      "_depth": 0
+    },
+    {
+      "name": "origin_activity_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "原始活动 id",
+      "example": "375162",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "操作结果（true：操作成功）",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8192:已经取消的商品无需再次取消（sub_code: isv.business-failed:8192）",
+      "action": "8192:已经取消的商品无需再次取消",
+      "sub_code": "isv.business-failed:8192",
+      "sub_msg": "8192:已经取消的商品无需再次取消"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/activityProductCancel?app_key=your_appkey_here&method=buyin.activityProductCancel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1927",
+  "updatedAt": "2022-09-07",
+  "_file_stem": "alliance-buyin-activityProductCancel"
+}

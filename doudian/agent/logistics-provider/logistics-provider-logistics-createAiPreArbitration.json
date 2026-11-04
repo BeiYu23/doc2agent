@@ -1,0 +1,185 @@
+{
+  "id": "doudian.logistics-provider.logistics.createAiPreArbitration",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.createAiPreArbitration",
+  "description": "创建AI预校验",
+  "method": "GET",
+  "path": "/logistics/createAiPreArbitration",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "opType",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作类型 handle处理，appeal 申诉",
+      "example": "handle",
+      "_depth": 0
+    },
+    {
+      "name": "opTime",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作时间",
+      "example": "1778742224",
+      "_depth": 0
+    },
+    {
+      "name": "attachment",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "附件链接（1.支持图片 2.不展示给消费者）",
+      "example": "[https://lf3-static.bytednsdoc.com/obj/eden-cn/qteh7plmvhpeuhbf/vs.png]",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商编码",
+      "example": "ems",
+      "_depth": 0
+    },
+    {
+      "name": "handleResponse",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "处理结果 1.认责 2.不认责",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ticketId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "字节工单ID",
+      "example": "7639638117879906575",
+      "_depth": 0
+    },
+    {
+      "name": "trackNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "1357711411111",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注内容",
+      "_depth": 0
+    },
+    {
+      "name": "extension",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "''",
+      "_depth": 0
+    },
+    {
+      "name": "compensateState",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否赔付,\n1未赔付\n2已赔付",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "compensateAmount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "赔付金额，单位为分。在compensate_state为2是必填",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "compensateReason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "赔付原因： \nlose 丢失 \ndamage 破损 \nother 其他",
+      "example": "lose",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "taskId",
+      "type": "string",
+      "description": "任务id",
+      "example": "7637053321475309874"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:10004）",
+      "action": "更新参数",
+      "sub_code": "isv.parameter-invalid:10004",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 判责失败（sub_code: isp.service-error:14001）",
+      "action": "重新触发请求",
+      "sub_code": "isp.service-error:14001",
+      "sub_msg": "判责失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-1）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/createAiPreArbitration?app_key=your_appkey_here&method=logistics.createAiPreArbitration&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "taskId": "7637053321475309874"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10004",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8311",
+  "updatedAt": "2026-06-09",
+  "_file_stem": "logistics-provider-logistics-createAiPreArbitration"
+}

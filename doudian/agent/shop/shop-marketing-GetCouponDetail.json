@@ -1,0 +1,92 @@
+{
+  "id": "doudian.shop.marketing.GetCouponDetail",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "marketing.GetCouponDetail",
+  "description": "优惠券详细信息查询",
+  "method": "GET",
+  "path": "/marketing/GetCouponDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "coupon_meta_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠券ID",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "coupon_meta",
+      "type": "object",
+      "description": "优惠券",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/marketing/GetCouponDetail?app_key=your_appkey_here&method=marketing.GetCouponDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "coupon_meta": {
+          "coupon_meta_id": "123",
+          "coupon_name": "券的名称",
+          "coupon_string": "券标签文案",
+          "credit": "10",
+          "end_apply_time": "2021-05-06 15:04:05",
+          "expire_time": "2021-05-06 15:04:05",
+          "is_show": "1",
+          "left_amount": "1",
+          "max_apply_times": "1",
+          "max_discount_limit": "1",
+          "pay_type": "1",
+          "period_type": "1",
+          "shop_id": "1111",
+          "shop_logo": "1",
+          "shop_name": "店铺名称",
+          "start_apply_time": "2021-05-06 15:04:05",
+          "start_time": "2021-05-06 15:04:05",
+          "status": "1",
+          "threshold": "10",
+          "total_amount": "11",
+          "type": "21",
+          "type_detail": "指定店铺/商品id集合",
+          "type_string": "券限制描述文案",
+          "url": "https://www.xxx.xxx",
+          "used_amount": "1",
+          "user_apply_times": "10",
+          "valid_period": "1",
+          "what_coupon": "券类型文案"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/518",
+  "updatedAt": "2024-07-17",
+  "_file_stem": "shop-marketing-GetCouponDetail"
+}

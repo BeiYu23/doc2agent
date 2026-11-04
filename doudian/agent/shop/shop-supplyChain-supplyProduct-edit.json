@@ -1,0 +1,325 @@
+{
+  "id": "doudian.shop.supplyChain.supplyProduct.edit",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "supplyChain.supplyProduct.edit",
+  "description": "编辑产品",
+  "method": "GET",
+  "path": "/supplyChain/supplyProduct/edit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "产品id",
+      "example": "3506108675121111111",
+      "_depth": 0
+    },
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "叶子类目ID通过getSupplyProductUpdateRule",
+      "example": "20000",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称，最多60个字符(30个汉字)，不能含emoj表情",
+      "example": "xxx补水液",
+      "_depth": 0
+    },
+    {
+      "name": "recommend_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家推荐语，不能含emoj表情商品轮播图，多张图片用 \\\"|\\\" 分开，第一张图为主图，最多5张，至少600x600，大小不超过1M 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "这个商品很好啊",
+      "_depth": 0
+    },
+    {
+      "name": "pic",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品轮播图，多张图片用 \\\"|\\\" 分开，第一张图为主图，最多5张，至少600x600，大小不超过1M 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "description",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品描述，目前只支持图片。多张图片用 \\\"|\\\" 分开。不能用其他网站的文本粘贴，这样会出现css样式不兼容。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "重量",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "weight_unit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "重量单位，0-kg, 1-g",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家可见备注",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "out_product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "外部product_id",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "quality_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "资质列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "quality_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资质key",
+      "example": "3457***9470978",
+      "_depth": 1
+    },
+    {
+      "name": "quality_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资质名称",
+      "example": "进货凭证",
+      "_depth": 1
+    },
+    {
+      "name": "quality_attachments",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "资质",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "media_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1-图片，2-pdf",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "凭证url",
+      "example": "\\\"http://www.byted***.com/YYYY\\\"",
+      "_depth": 2
+    },
+    {
+      "name": "spec_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如果不填，则规格名为各级规格名用 \\\"-\\\" 自动生成",
+      "example": "颜色-尺码",
+      "_depth": 0
+    },
+    {
+      "name": "specs",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通用规格，能被同类商品通用。多规格用^分隔，规格与规格值用|分隔，多个规格值用,分隔。",
+      "example": "颜色|红色,黑色^尺码|S,M",
+      "_depth": 0
+    },
+    {
+      "name": "spec_prices",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku详情，数量应该等于规格1规格2规格3，sku数量和规格组合数必须一致 sku不可售时，库存可设置为0。",
+      "example": "[{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":11,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"},{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":22,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":44,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"stock_num\\\":55,\\\"price\\\":100,\\\"code\\\":\\\"\\\",\\\"step_stock_num\\\":0,\\\"supplier_id\\\":\\\"\\\",\\\"outer_sku_id\\\":\\\"\\\"}]",
+      "_depth": 0
+    },
+    {
+      "name": "spec_pic",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如颜色-尺寸, 颜色就是主规格, 颜色如黑,白,黄,它们图片url以逗号分隔 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url,img_url,img_url",
+      "_depth": 0
+    },
+    {
+      "name": "product_format_new",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性，通过/supplyProduct/getSupplyProductUpdateRule获取 格式：{\"property_id\":[{\"value\":value,\"name\":\"property_name\",\"diy_type\":0}]} name的类型是string，value和diy_type的类型是number",
+      "example": "{\\\"405\\\":[{\\\"value\\\":27664,\\\"name\\\":\\\"复习资料\\\",\\\"diy_type\\\":0}],\\\"449\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"佚名\\\",\\\"diy_type\\\":0}],\\\"501\\\":[{\\\"value\\\":7310,\\\"name\\\":\\\"否\\\",\\\"diy_type\\\":0}],\\\"855\\\":[{\\\"value\\\":61683,\\\"name\\\":\\\"北京出版社\\\",\\\"diy_type\\\":0}],\\\"1088\\\":[{\\\"value\\\":407,\\\"name\\\":\\\"小学五年级\\\",\\\"diy_type\\\":0}],\\\"1319\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"1\\\",\\\"diy_type\\\":0}],\\\"1601\\\":[{\\\"value\\\":13911,\\\"name\\\":\\\"通用版\\\",\\\"diy_type\\\":0}],\\\"1618\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"9787218122861\\\",\\\"diy_type\\\":0}],\\\"1831\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"小学英语看图说话写话二年级\\\",\\\"diy_type\\\":0}],\\\"2000\\\":[{\\\"value\\\":34762,\\\"name\\\":\\\"无\\\",\\\"diy_type\\\":0}],\\\"2229\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"1\\\",\\\"diy_type\\\":0}],\\\"2763\\\":[{\\\"value\\\":25193,\\\"name\\\":\\\"英语\\\",\\\"diy_type\\\":0}],\\\"3271\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"1\\\",\\\"diy_type\\\":0}],\\\"3296\\\":[{\\\"value\\\":0,\\\"name\\\":\\\"16.80元\\\",\\\"diy_type\\\":0}]}",
+      "_depth": 0
+    },
+    {
+      "name": "spu_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "spu_id",
+      "example": "14567",
+      "_depth": 0
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "extra",
+      "example": "略",
+      "_depth": 0
+    },
+    {
+      "name": "outer_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部product id",
+      "example": "11111111111111",
+      "_depth": 0
+    },
+    {
+      "name": "standard_brand_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "品牌id，通过/supplyProduct/getSupplyProductUpdateRule获取，无品牌id则传596120136",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "force_use_quality_list",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "使用qualityList覆盖当前商品资质，qualityList传空代表清空",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "white_back_ground_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "白底图url",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "long_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "3:4长图url",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "size_info_template_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "预留字段，当前供销平台不支持",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "material_video_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "主图视频ID,当前供销平台不支持",
+      "example": "vaaaa",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20000）",
+      "action": "系统错误",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/supplyProduct/edit?app_key=your_appkey_here&method=supplyChain.supplyProduct.edit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2126",
+  "updatedAt": "2022-06-28",
+  "_file_stem": "shop-supplyChain-supplyProduct-edit"
+}

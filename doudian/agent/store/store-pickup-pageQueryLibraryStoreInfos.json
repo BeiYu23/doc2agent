@@ -1,0 +1,165 @@
+{
+  "id": "doudian.store.pickup.pageQueryLibraryStoreInfos",
+  "platform": "doudian",
+  "group": "store",
+  "name": "pickup.pageQueryLibraryStoreInfos",
+  "description": "门店组绑定门店列表查询",
+  "method": "GET",
+  "path": "/pickup/pageQueryLibraryStoreInfos",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 自提门店API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "library_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店组id",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页大小",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级市编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "source",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "业务类型：2-到店自提",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店id",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "store_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "store_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店名称",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store_infos",
+      "type": "array",
+      "description": "\"\"",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "门店数量",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000000001:业务身份错误,无法解析（sub_code: isv.business-failed:1000000001）",
+      "action": "请确认业务身份类型参数",
+      "sub_code": "isv.business-failed:1000000001",
+      "sub_msg": "1000000001:业务身份错误,无法解析"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pickup/pageQueryLibraryStoreInfos?app_key=your_appkey_here&method=pickup.pageQueryLibraryStoreInfos&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "store_infos": [
+          {
+            "name": "\"\"",
+            "store_id": "\"\""
+          }
+        ],
+        "total": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1000000001",
+      "sub_msg": "1000000001:业务身份错误,无法解析"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1559/7104",
+  "updatedAt": "2026-06-23",
+  "_file_stem": "store-pickup-pageQueryLibraryStoreInfos"
+}

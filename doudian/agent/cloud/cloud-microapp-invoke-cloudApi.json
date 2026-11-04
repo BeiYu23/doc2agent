@@ -1,0 +1,198 @@
+{
+  "id": "doudian.cloud.microapp.invoke.cloudApi",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "microapp.invoke.cloudApi",
+  "description": "调用ISV云内应用接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "interface_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "云内应用提供的接口名",
+      "example": "testName",
+      "_depth": 0
+    },
+    {
+      "name": "biz_param_json",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入参，json字符串",
+      "example": "{\"name\":\"test}",
+      "_depth": 0
+    },
+    {
+      "name": "use_test",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否调用至\"测试环境\"云内应用的接口",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "biz_result_json",
+      "type": "string",
+      "description": "后端接口的返回值，json string",
+      "example": "{\"age\":12345}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 触发商品流控（sub_code: isp.traffic-limited:1000207）",
+      "action": "联系平台同学",
+      "sub_code": "isp.traffic-limited:1000207",
+      "sub_msg": "触发商品流控"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000014:http client请求返回值非200（sub_code: isv.business-failed:1000014）",
+      "action": "联系平台同学",
+      "sub_code": "isv.business-failed:1000014",
+      "sub_msg": "1000014:http client请求返回值非200"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000130:调用后端地址异常（sub_code: isv.business-failed:1000130）",
+      "action": "后端转发地址有问题，请检测是否在产品页面填写，并且确认后端服务是否启动成功",
+      "sub_code": "isv.business-failed:1000130",
+      "sub_msg": "1000130:调用后端地址异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100000:参数错误（sub_code: isv.business-failed:100000）",
+      "action": "请再次检测参数问题",
+      "sub_code": "isv.business-failed:100000",
+      "sub_msg": "100000:参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000301:没有匹配上应用申请的域名，请检测是否有申请（sub_code: isv.business-failed:1000301）",
+      "action": "没有找到已申请的入云服务单，请先申请",
+      "sub_code": "isv.business-failed:1000301",
+      "sub_msg": "1000301:没有匹配上应用申请的域名，请检测是否有申请"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000201:request转换list<>失败，key:available_coupons（sub_code: isv.business-failed:1000201）",
+      "action": "参数转换失败，确认一下实际入参与服务单入参是否一致",
+      "sub_code": "isv.business-failed:1000201",
+      "sub_msg": "1000201:request转换list<>失败，key:available_coupons"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000131:调用失败（sub_code: isv.business-failed:1000131）",
+      "action": "1000131:调用失败",
+      "sub_code": "isv.business-failed:1000131",
+      "sub_msg": "1000131:调用失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/getCatePropertyV2?app_key=your_appkey_here&method=product.getCatePropertyV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "category_id": "31918",
+            "cid": "31918",
+            "diy_type": "1",
+            "has_sub_property": "false",
+            "important_type": "1",
+            "measure_templates": [
+              {
+                "display_name": "xx模版",
+                "template_id": "23",
+                "value_modules": [
+                  {
+                    "input_type": "input",
+                    "module_id": "123",
+                    "prefix": "\"\"",
+                    "suffix": "\"\"",
+                    "units": [
+                      {
+                        "unit_id": "1",
+                        "unit_name": "克"
+                      }
+                    ],
+                    "validate_rule": {
+                      "data_type": "integer",
+                      "max": "10",
+                      "min": "2",
+                      "precision": "2",
+                      "time_format": "YYYY-MM-DD",
+                      "unit_rules": [
+                        {
+                          "max": "10",
+                          "min": "2",
+                          "unit_id": "1"
+                        }
+                      ]
+                    },
+                    "value_required": "true",
+                    "values": [
+                      {
+                        "value_name": "棉"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "multi_select_max": "5",
+            "options": [
+              {
+                "name": "ON:THE BODY/安宝笛",
+                "sequence": "2",
+                "value": "1062254699",
+                "value_id": "1"
+              }
+            ],
+            "property_id": "14133",
+            "property_name": "\"材质\"",
+            "property_type": "1",
+            "relation_id": "1",
+            "required": "0",
+            "sequence": "2",
+            "status": "1",
+            "type": "text"
+          }
+        ],
+        "tpl_type": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 60000,
+      "msg": "触发限流，请稍后重试",
+      "sub_code": "isp.traffic-limited:1000207",
+      "sub_msg": "触发商品流控"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/6523",
+  "updatedAt": "2024-05-27",
+  "_file_stem": "cloud-microapp-invoke-cloudApi"
+}

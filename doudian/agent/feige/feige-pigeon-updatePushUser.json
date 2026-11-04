@@ -1,0 +1,79 @@
+{
+  "id": "doudian.feige.pigeon.updatePushUser",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.updatePushUser",
+  "description": "飞鸽消息推送店铺设置",
+  "method": "GET",
+  "path": "/pigeon/updatePushUser",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "valid",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否开通，true开通，false关闭",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否开通成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请重试（sub_code: isp.service-error:605090001）",
+      "action": "系统异常，请重试",
+      "sub_code": "isp.service-error:605090001",
+      "sub_msg": "系统异常，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺授权失效（sub_code: isv.business-failed:605010102）",
+      "action": "请重新引导店铺完成授权",
+      "sub_code": "isv.business-failed:605010102",
+      "sub_msg": "店铺授权失效"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/updatePushUser?app_key=your_appkey_here&method=pigeon.updatePushUser&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:605090001",
+      "sub_msg": "系统异常，请重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/6016",
+  "updatedAt": "2024-01-17",
+  "_file_stem": "feige-pigeon-updatePushUser"
+}

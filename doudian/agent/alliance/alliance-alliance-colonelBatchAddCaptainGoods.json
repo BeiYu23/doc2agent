@@ -1,0 +1,115 @@
+{
+  "id": "doudian.alliance.alliance.colonelBatchAddCaptainGoods",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.colonelBatchAddCaptainGoods",
+  "description": "批量加商品到指定活动",
+  "method": "GET",
+  "path": "/alliance/colonelBatchAddCaptainGoods",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "批量报名记录, 每个元素是单商品报名记录，商品不能重复，重复的只取第一个",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品id",
+      "example": "1235123412",
+      "_depth": 1
+    },
+    {
+      "name": "origin_activity_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "- 如果是团长投放商品\n   - 如果原始团是招商活动，传原始团长活动id\n   - 如果原始团是托管商品，传0\n- 如果是商家投放商品，传-1",
+      "example": "123412",
+      "_depth": 1
+    },
+    {
+      "name": "activity_ids",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "报名的团长活动列表，逗号分割（限制最多3个）",
+      "example": "623462,1235125",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "BaseResponse",
+      "type": "object",
+      "description": "报名结果",
+      "example": ""
+    },
+    {
+      "name": "fail_item",
+      "type": "array",
+      "description": "添加失败的记录（key：商品，value：<活动：失败原因>）",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/getUserOrderList?app_key=your_appkey_here&method=order.getUserOrderList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "page": "0",
+        "shop_order_list": [
+          {
+            "create_time": "1617355413",
+            "order_id": "4781320682406083640",
+            "order_status": "3",
+            "pay_amount": "500",
+            "sku_order_list": [
+              {
+                "sku_info": {
+                  "product_id": "3473196049974326153",
+                  "product_name": "衣服",
+                  "sku_id": "3254535"
+                }
+              }
+            ]
+          }
+        ],
+        "size": "20",
+        "total": "1000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/8228",
+  "updatedAt": "2026-06-09",
+  "_file_stem": "alliance-alliance-colonelBatchAddCaptainGoods"
+}

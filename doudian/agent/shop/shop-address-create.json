@@ -1,0 +1,224 @@
+{
+  "id": "doudian.shop.address.create",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "address.create",
+  "description": "创建店铺地址库",
+  "method": "GET",
+  "path": "/address/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V2.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "地址信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "user_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "联系人姓名",
+      "example": "张三",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号码",
+      "example": "18012345678",
+      "_depth": 1
+    },
+    {
+      "name": "province_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "省份ID",
+      "example": "32",
+      "_depth": 1
+    },
+    {
+      "name": "city_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "城市ID",
+      "example": "330700",
+      "_depth": 1
+    },
+    {
+      "name": "town_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "区ID",
+      "example": "330782",
+      "_depth": 1
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "xxxxx",
+      "_depth": 1
+    },
+    {
+      "name": "street_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "街道ID",
+      "example": "330782003",
+      "_depth": 1
+    },
+    {
+      "name": "link_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "联系方式类型(0-手机,1-普通座机,2-企业座机)",
+      "example": "0-手机,1-普通座机,2-企业座机",
+      "_depth": 1
+    },
+    {
+      "name": "fixed_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "普通座机格式：区号-座机号-分机号(分机号选填)、区号3~4位、座机号7~8位、分机号不超过5位。企业座机：400/800开头不超过10位、95开头在5~8we",
+      "example": "普通座机：400-12345678-1234，企业座机：40012345",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后备注，限制200字符",
+      "example": "拒收到付",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店ID（新建地址绑定在该门店下，非门店场景无需填写）",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "address_id",
+      "type": "number",
+      "description": "新建地址ID",
+      "example": "10000"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 已达到50条新建地址上限（sub_code: isv.parameter-invalid:100003）",
+      "action": "删除多余",
+      "sub_code": "isv.parameter-invalid:100003",
+      "sub_msg": "已达到50条新建地址上限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 已有对应的记录:${address_id}（sub_code: isv.parameter-invalid:100002）",
+      "action": "可获取错误信息中已存在的address_id",
+      "sub_code": "isv.parameter-invalid:100002",
+      "sub_msg": "已有对应的记录:${address_id}"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 系统繁忙，请稍后重试（sub_code: isv.parameter-invalid:6000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.parameter-invalid:6000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 联系人不能超过32字（sub_code: isv.parameter-invalid:4000）",
+      "action": "请修改联系人信息",
+      "sub_code": "isv.parameter-invalid:4000",
+      "sub_msg": "联系人不能超过32字"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 操作过于频繁，请稍后重试（sub_code: isv.business-failed:100001）",
+      "action": "操作过于频繁，请稍后重试",
+      "sub_code": "isv.business-failed:100001",
+      "sub_msg": "操作过于频繁，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 暂不支持该区号（sub_code: isv.business-failed:100009）",
+      "action": "暂不支持该区号",
+      "sub_code": "isv.business-failed:100009",
+      "sub_msg": "暂不支持该区号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:5001）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:5001",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4002:地址详细信息中存在冗余内容【(开了扣眼修改过吊牌损坏以及穿过洗过等影响二次销售不予退换货)转】，需将地址详细信息精简为【暄悦东街24号1楼T2】后再重新提交（sub_code: isv.business-failed:4002）",
+      "action": "4002:地址详细信息中存在冗余内容【(开了扣眼修改过吊牌损坏以及穿过洗过等影响二次销售不予退换货)转】，需将地址详细信息精简为【暄悦东街24号1楼T2】后再重新提交",
+      "sub_code": "isv.business-failed:4002",
+      "sub_msg": "4002:地址详细信息中存在冗余内容【(开了扣眼修改过吊牌损坏以及穿过洗过等影响二次销售不予退换货)转】，需将地址详细信息精简为【暄悦东街24号1楼T2】后再重新提交"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4001:当前输入的地址未精确到村、组、门牌号、楼栋、支路等，请核查修改后提交。（sub_code: isv.business-failed:4001）",
+      "action": "4001:当前输入的地址未精确到村、组、门牌号、楼栋、支路等，请核查修改后提交。",
+      "sub_code": "isv.business-failed:4001",
+      "sub_msg": "4001:当前输入的地址未精确到村、组、门牌号、楼栋、支路等，请核查修改后提交。"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:100003",
+      "sub_msg": "已达到50条新建地址上限"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/1510",
+  "updatedAt": "2023-10-19",
+  "_file_stem": "shop-address-create"
+}

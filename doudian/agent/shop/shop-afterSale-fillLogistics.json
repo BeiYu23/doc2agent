@@ -1,0 +1,153 @@
+{
+  "id": "doudian.shop.afterSale.fillLogistics",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "afterSale.fillLogistics",
+  "description": "售后商家发货",
+  "method": "GET",
+  "path": "/afterSale/fillLogistics",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "售后单ID",
+      "example": "7085126861562380588",
+      "_depth": 0
+    },
+    {
+      "name": "send_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发货类型，目前仅支持补寄(1)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流公司编号",
+      "example": "yuantong",
+      "_depth": 0
+    },
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流单号",
+      "example": "YT1231231231",
+      "_depth": 0
+    },
+    {
+      "name": "book_time_begin",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "预约上门取货时间戳-目前只超市用",
+      "example": "1655955000",
+      "_depth": 0
+    },
+    {
+      "name": "book_time_end",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "预约上门取货时间戳-目前只超市用",
+      "example": "1655955600",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店ID",
+      "example": "",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 12000:物流信息校验失败（sub_code: isv.business-failed:12000）",
+      "action": "填入有效物流信息",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "12000:物流信息校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流信息校验失败（sub_code: isv.business-failed:602001）",
+      "action": "填入有效物流信息",
+      "sub_code": "isv.business-failed:602001",
+      "sub_msg": "物流信息校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 网络异常稍后重试（sub_code: isp.service-error:10000）",
+      "action": "重试",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "网络异常稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 网络异常稍后重试（sub_code: isp.service-error:10002）",
+      "action": "重试",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "网络异常稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 物流信息校验失败（sub_code: isv.business-failed:50002）",
+      "action": "填入有效物流信息",
+      "sub_code": "isv.business-failed:50002",
+      "sub_msg": "物流信息校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效售后单（sub_code: isv.business-failed:11000）",
+      "action": "请检查售后单信息",
+      "sub_code": "isv.business-failed:11000",
+      "sub_msg": "无效售后单"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/fillLogistics?app_key=your_appkey_here&method=afterSale.fillLogistics&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "12000:物流信息校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2068",
+  "updatedAt": "2022-06-27",
+  "_file_stem": "shop-afterSale-fillLogistics"
+}

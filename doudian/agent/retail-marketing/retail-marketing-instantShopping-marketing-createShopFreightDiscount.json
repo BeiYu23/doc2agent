@@ -1,0 +1,234 @@
+{
+  "id": "doudian.retail-marketing.instantShopping.marketing.createShopFreightDiscount",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "instantShopping.marketing.createShopFreightDiscount",
+  "description": "创建配送费营销活动",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "活动信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "activity_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动名称，最大25个字符",
+      "example": "测试活动标题",
+      "_depth": 1
+    },
+    {
+      "name": "activity_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动类型，50：配送费营销",
+      "example": "50",
+      "_depth": 1
+    },
+    {
+      "name": "activity_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动子类型，502:配送费满减",
+      "example": "502",
+      "_depth": 1
+    },
+    {
+      "name": "activity_base_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "活动基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "subsidy_apply_way",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ALL_ACTIVITY_TIME：活动时间内都补贴; SPECIFIED_TIME_PERIOD：指定时间段补贴",
+      "example": "ALL_ACTIVITY_TIME",
+      "_depth": 2
+    },
+    {
+      "name": "is_free_freight",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否包邮（配送费0元）",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "activity_end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动结束时间",
+      "example": "1782748799",
+      "_depth": 2
+    },
+    {
+      "name": "discount_rules",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "满减规则，满减规则数量限制为1-5个，\n多级，其中满额和减额分别需要大于上一级的满额和减额",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "condition_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "满足XX金额，补贴生效，单位：分，最多1位小数",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "discount_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送费减免金额，单位：分，最多1位小数",
+      "example": "0.1",
+      "_depth": 3
+    },
+    {
+      "name": "activity_start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "活动开始时间",
+      "example": "1751212800",
+      "_depth": 2
+    },
+    {
+      "name": "limit_week",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "活动期间内生效的时间段，\n若subsidy_apply_way为SPECIFIED_TIME_PERIOD，则需要指定生效时间为周几",
+      "example": "[1,2,3,4,5,6,7]",
+      "_depth": 2
+    },
+    {
+      "name": "day_time_range",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "活动生效的每日时间段，[0,86399]为全天生效，限制不超过10个",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "活动生效日期内，每日的开始时间",
+      "example": "0",
+      "_depth": 3
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "活动生效日期内，每日的结束时间",
+      "example": "86399",
+      "_depth": 3
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "幂等ID，长度最大100个字符",
+      "example": "test111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "activity_id",
+      "type": "string",
+      "description": "活动ID",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-40000）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 系统繁忙，请稍后重试（sub_code: isp.service-timeout-error:-10000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-timeout-error:-10000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 越权错误（sub_code: isv.parameter-invalid:-50001）",
+      "action": "检查当前用户是否有权限操作",
+      "sub_code": "isv.parameter-invalid:-50001",
+      "sub_msg": "越权错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请联系技术人员排查（sub_code: isp.service-error:-11450）",
+      "action": "系统异常，请联系技术人员排查",
+      "sub_code": "isp.service-error:-11450",
+      "sub_msg": "系统异常，请联系技术人员排查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossborder/orderCustomClearance?app_key=your_appkey_here&method=crossborder.orderCustomClearance&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/7551",
+  "updatedAt": "2025-07-03",
+  "_file_stem": "retail-marketing-instantShopping-marketing-createShopFreightDiscount"
+}

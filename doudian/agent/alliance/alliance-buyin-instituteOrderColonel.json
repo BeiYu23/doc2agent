@@ -1,0 +1,191 @@
+{
+  "id": "doudian.alliance.buyin.instituteOrderColonel",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.instituteOrderColonel",
+  "description": "查询团长抖音、火山、头条和西瓜订单，需要团长百应授权",
+  "method": "GET",
+  "path": "/buyin/instituteOrderColonel",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V10.06）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页订单数目，取值区间： [1, 200]",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "cursor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "下一页索引（第一页传“0”）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "支付时间开始，最早支持90天前",
+      "example": "2006-01-02 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "支付时间结束",
+      "example": "2006-01-02 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "order_ids",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单号，时间范围和订单号必须指定至少一个。多个订单号用英文 , 分隔，最多支持10个订单号",
+      "example": "4737996432465788974,4737996432465780075",
+      "_depth": 0
+    },
+    {
+      "name": "time_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "查询时间类型。pay: 支付时间（默认）; update：联盟侧更新时间，非订单状态更新时间",
+      "example": "pay",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效size（sub_code: isv.parameter-invalid:1031）",
+      "action": "参数校验失败：无效size",
+      "sub_code": "isv.parameter-invalid:1031",
+      "sub_msg": "无效size"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效order_ids（sub_code: isv.parameter-invalid:1032）",
+      "action": "参数校验失败：无效order_ids",
+      "sub_code": "isv.parameter-invalid:1032",
+      "sub_msg": "无效order_ids"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请指定时间范围或订单号（sub_code: isv.parameter-invalid:1033）",
+      "action": "参数校验失败: 请指定时间范围或订单号",
+      "sub_code": "isv.parameter-invalid:1033",
+      "sub_msg": "请指定时间范围或订单号"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效开始时间（sub_code: isv.parameter-invalid:1034）",
+      "action": "参数校验失败：无效开始时间",
+      "sub_code": "isv.parameter-invalid:1034",
+      "sub_msg": "无效开始时间"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效结束时间（sub_code: isv.parameter-invalid:1035）",
+      "action": "参数校验失败：无效结束时间",
+      "sub_code": "isv.parameter-invalid:1035",
+      "sub_msg": "无效结束时间"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效时间区间（开始时间不能大于结束时间，并且不能小于t-90d）（sub_code: isv.parameter-invalid:1036）",
+      "action": "参数校验失败：无效时间区间（开始时间不能大于结束时间，并且不能小于t-90d）",
+      "sub_code": "isv.parameter-invalid:1036",
+      "sub_msg": "无效时间区间（开始时间不能大于结束时间，并且不能小于t-90d）"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 起始查询时间超过了最久查询限制（sub_code: isv.parameter-invalid:4168）",
+      "action": "起始查询时间超过了最久查询限制",
+      "sub_code": "isv.parameter-invalid:4168",
+      "sub_msg": "起始查询时间超过了最久查询限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "请检查账号是否可以正常使用，比如是否完成协议签署、是否被清退/关闭等",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "账号状态异常，请检查账号状态"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4497:仅支持查询支付时间近1年的订单数据（sub_code: isv.business-failed:4497）",
+      "action": "4497:仅支持查询支付时间近1年的订单数据",
+      "sub_code": "isv.business-failed:4497",
+      "sub_msg": "4497:仅支持查询支付时间近1年的订单数据"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1603",
+  "updatedAt": "2023-04-18",
+  "_file_stem": "alliance-buyin-instituteOrderColonel"
+}

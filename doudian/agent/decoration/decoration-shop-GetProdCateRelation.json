@@ -1,0 +1,60 @@
+{
+  "id": "doudian.decoration.shop.GetProdCateRelation",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.GetProdCateRelation",
+  "description": "即时零售，分类页场景，通过商品ID查询对应关联的页面分类信息。仅返回映射关系，具体生效情况，以查询到的tmp_id、cate_id查询为准。 如果页面是下线状态，仍可以查询到映射关系。\n\n无法查询的原因：\n1.  绑定关系不存在。\n2. 绑定的分类已经被删",
+  "method": "GET",
+  "path": "/shop/GetProdCateRelation",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "店铺主品信息，单次限制查询50个以内。商品状态需要是上架、审核通过。",
+      "example": "[ \"3706833482023043077\", \"3706838030552793344\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "pid_cid_map",
+      "type": "string",
+      "description": "商品对应前台类目信息",
+      "example": "object"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comcrossborder/msg/push?app_key=your_appkey_here&method=crossborder.msg.push&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6874",
+  "updatedAt": "2024-09-12",
+  "_file_stem": "decoration-shop-GetProdCateRelation"
+}

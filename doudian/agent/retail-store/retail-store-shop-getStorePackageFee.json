@@ -1,0 +1,95 @@
+{
+  "id": "doudian.retail-store.shop.getStorePackageFee",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "shop.getStorePackageFee",
+  "description": "获取门店打包费",
+  "method": "GET",
+  "path": "/shop/getStorePackageFee",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店id",
+      "example": "12345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "package_fee",
+      "type": "object",
+      "description": "打包费",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1）",
+      "action": "参考文档，重新配置",
+      "sub_code": "isv.parameter-invalid:1",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:100）",
+      "action": "可重试，若仍然失败可oncall反馈",
+      "sub_code": "isp.service-error:100",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 操作数据库失败（sub_code: isv.business-failed:3）",
+      "action": "可重试，若仍然失败可oncall反馈",
+      "sub_code": "isv.business-failed:3",
+      "sub_msg": "操作数据库失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店不存在（sub_code: isv.business-failed:8）",
+      "action": "查看storeId是否正确",
+      "sub_code": "isv.business-failed:8",
+      "sub_msg": "门店不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/getStorePackageFee?app_key=your_appkey_here&method=shop.getStorePackageFee&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "package_fee": {
+          "amount": "100"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2634",
+  "updatedAt": "2024-02-26",
+  "_file_stem": "retail-store-shop-getStorePackageFee"
+}

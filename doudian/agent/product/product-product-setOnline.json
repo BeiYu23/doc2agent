@@ -1,0 +1,153 @@
+{
+  "id": "doudian.product.product.setOnline",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.setOnline",
+  "description": "拍卖商品上架接口-仅限拍卖商品使用",
+  "method": "GET",
+  "path": "/product/setOnline",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品id",
+      "example": "355653216545615442145",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 【重复操作】商品操作重复，当前状态：上架（sub_code: isv.parameter-invalid:2010001）",
+      "action": "请重新选择商品",
+      "sub_code": "isv.parameter-invalid:2010001",
+      "sub_msg": "【重复操作】商品操作重复，当前状态：上架"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 商户状态不合法（sub_code: isv.parameter-invalid:10008）",
+      "action": "请检查店铺状态",
+      "sub_code": "isv.parameter-invalid:10008",
+      "sub_msg": "商户状态不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取店铺标签错误（sub_code: isv.business-failed:2010013）",
+      "action": "请检查店铺状态",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "获取店铺标签错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取类目信息失败（sub_code: isv.business-failed:2010005）",
+      "action": "检查参数后重试",
+      "sub_code": "isv.business-failed:2010005",
+      "sub_msg": "获取类目信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看（sub_code: isv.business-failed:2010326）",
+      "action": "请检查店铺状态",
+      "sub_code": "isv.business-failed:2010326",
+      "sub_msg": "因为店铺受到处置，限制发品，更多请到商家后台奖惩中心查看"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 缺少必要参数（sub_code: isv.business-failed:20024）",
+      "action": "请检查必填参数后重试",
+      "sub_code": "isv.business-failed:20024",
+      "sub_msg": "缺少必要参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 【重复操作】商品操作重复，当前状态：上架（sub_code: isv.business-failed:2010021）",
+      "action": "请检查商品状态",
+      "sub_code": "isv.business-failed:2010021",
+      "sub_msg": "【重复操作】商品操作重复，当前状态：上架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:组合商品无法直接上线（sub_code: isv.business-failed:2010004）",
+      "action": "组合商品无法直接上线，请检查",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:组合商品无法直接上线"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010050:由于您尚未进行店铺官方账号绑定，店铺部分功能不可用，当前无法发布或上架商品，请前往【店铺】-【店铺设置】-【店铺官方账号】页面完成绑定（sub_code: isv.business-failed:2010050）",
+      "action": "由于您尚未进行店铺官方账号绑定，店铺部分功能不可用，当前无法发布或上架商品，请前往【店铺】-【店铺设置】-【店铺官方账号】页面完成绑定",
+      "sub_code": "isv.business-failed:2010050",
+      "sub_msg": "2010050:由于您尚未进行店铺官方账号绑定，店铺部分功能不可用，当前无法发布或上架商品，请前往【店铺】-【店铺设置】-【店铺官方账号】页面完成绑定"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010022:【状态非法】商品状态错误, 当前状态: 删除（sub_code: isv.business-failed:2010022）",
+      "action": "2010022:【状态非法】商品状态错误, 当前状态: 删除",
+      "sub_code": "isv.business-failed:2010022",
+      "sub_msg": "2010022:【状态非法】商品状态错误, 当前状态: 删除"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110200024:发布当前类目商品，还需缴纳1983.37元保证金，点击“<a href='/ffa/content/shop_deposit' target=\"_blank\">立即充值</a>”补全对应保证金后方可发布商品，详见<a href='https://school.jinritemai.com/doudian/web/article/101830?from=shop_table&btm_ppre=a4977.b4369.c0.d0&btm_pre=a4977.b6444.c0.d0&btm_（sub_code: isv.business-failed:110200024）",
+      "action": "110200024:发布当前类目商品，还需缴纳1983.37元保证金，点击“<a href='/ffa/content/shop_deposit' target=\"_blank\">立即充值</a>”补全对应保证金后方可发布商品，详见<a href='https://school.jinritemai.com/doudian/web/article/101830?from=shop_table&btm_ppre=a4977.b4369.c0.d0&btm_pre=a4977.b6444.c0.d0&btm_",
+      "sub_code": "isv.business-failed:110200024",
+      "sub_msg": "110200024:发布当前类目商品，还需缴纳1983.37元保证金，点击“<a href='/ffa/content/shop_deposit' target=\"_blank\">立即充值</a>”补全对应保证金后方可发布商品，详见<a href='https://school.jinritemai.com/doudian/web/article/101830?from=shop_table&btm_ppre=a4977.b4369.c0.d0&btm_pre=a4977.b6444.c0.d0&btm_"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010401:请求被限流, 请稍后再试（sub_code: isv.business-failed:2010401）",
+      "action": "2010401:请求被限流, 请稍后再试",
+      "sub_code": "isv.business-failed:2010401",
+      "sub_msg": "2010401:请求被限流, 请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110502062:移动电源缺少产品数字标识，无法上架。请编辑商品，在\"产品数字标识\"专区填写（sub_code: isv.business-failed:110502062）",
+      "action": "110502062:移动电源缺少产品数字标识，无法上架。请编辑商品，在\"产品数字标识\"专区填写",
+      "sub_code": "isv.business-failed:110502062",
+      "sub_msg": "110502062:移动电源缺少产品数字标识，无法上架。请编辑商品，在\"产品数字标识\"专区填写"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110320001:组合商品无法直接上线（sub_code: isv.business-failed:110320001）",
+      "action": "110320001:组合商品无法直接上线",
+      "sub_code": "isv.business-failed:110320001",
+      "sub_msg": "110320001:组合商品无法直接上线"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/setOnline?app_key=your_appkey_here&method=product.setOnline&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2010001",
+      "sub_msg": "【重复操作】商品操作重复，当前状态：上架"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/251",
+  "updatedAt": "2026-07-14",
+  "_file_stem": "product-product-setOnline"
+}

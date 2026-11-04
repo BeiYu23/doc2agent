@@ -1,0 +1,72 @@
+{
+  "id": "doudian.waybill.logistics.deliveryNotice",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.deliveryNotice",
+  "description": "顺丰极效前置订单放行/回退；",
+  "method": "GET",
+  "path": "/logistics/deliveryNotice",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V1.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "SF1345778775768",
+      "_depth": 0
+    },
+    {
+      "name": "notice_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "放行/回退",
+      "example": "71",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "boolean",
+      "description": "是否成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/deliveryNotice?app_key=your_appkey_here&method=logistics.deliveryNotice&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/1578",
+  "updatedAt": "2021-12-28",
+  "_file_stem": "waybill-logistics-deliveryNotice"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "doudian.logistics.power.queryPaymentStatus",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.queryPaymentStatus",
+  "description": "逆向支付信息查询",
+  "method": "GET",
+  "path": "/power/queryPaymentStatus",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单号",
+      "example": "LBF123",
+      "_depth": 0
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务类型",
+      "example": "ReversePickUp",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "payment_status",
+      "type": "string",
+      "description": "1--已支付 0--核重未支付 2--未核重",
+      "example": "1"
+    },
+    {
+      "name": "payment_fee",
+      "type": "number",
+      "description": "用户支付金额（分）",
+      "example": "1"
+    },
+    {
+      "name": "insurance_claim_fee",
+      "type": "number",
+      "description": "应理赔金额（分）= 激励金额 + 保险理赔金额",
+      "example": "1"
+    },
+    {
+      "name": "encourage_fee",
+      "type": "number",
+      "description": "激励金额（分）",
+      "example": "1"
+    },
+    {
+      "name": "platform_allowance",
+      "type": "number",
+      "description": "平台补贴金额(分)",
+      "example": "1"
+    },
+    {
+      "name": "insure_claim_fee",
+      "type": "number",
+      "description": "保险理赔金额(分)",
+      "example": "1"
+    },
+    {
+      "name": "operation_time",
+      "type": "string",
+      "description": "状态对应的操作时间",
+      "example": "2022-09-06 10:00:00"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:不存在对应的取件信息（sub_code: isv.business-failed:10000）",
+      "action": "输入的订单不存在，不可重试",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:不存在对应的取件信息"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/queryPaymentStatus?app_key=your_appkey_here&method=power.queryPaymentStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "encourage_fee": "1",
+        "insurance_claim_fee": "1",
+        "insure_claim_fee": "1",
+        "operation_time": "2022-09-06 10:00:00",
+        "payment_fee": "1",
+        "payment_status": "1",
+        "platform_allowance": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:不存在对应的取件信息"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1774",
+  "updatedAt": "2022-12-26",
+  "_file_stem": "logistics-power-queryPaymentStatus"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "doudian.logistics.logistics.operatorCancelEvent",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.operatorCancelEvent",
+  "description": "服务商主动取消上门事件通知",
+  "method": "GET",
+  "path": "/logistics/operatorCancelEvent",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: , 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务编码",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因code",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "xxx",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "xxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/operatorCancelEvent?app_key=your_appkey_here&method=logistics.operatorCancelEvent&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/3554",
+  "updatedAt": "2023-04-18",
+  "_file_stem": "logistics-logistics-operatorCancelEvent"
+}

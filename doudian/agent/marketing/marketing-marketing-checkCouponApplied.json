@@ -1,0 +1,88 @@
+{
+  "id": "doudian.marketing.marketing.checkCouponApplied",
+  "platform": "doudian",
+  "group": "marketing",
+  "name": "marketing.checkCouponApplied",
+  "description": "查询用户已领取优惠券核销数量",
+  "method": "GET",
+  "path": "/marketing/checkCouponApplied",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "coupon_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "优惠券ID",
+      "example": "7261824374827712828",
+      "_depth": 0
+    },
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "抖店用户open_id",
+      "example": "1@#YOUR_SECRET_KEY",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "used_count",
+      "type": "number",
+      "description": "这个活动优惠id下，用户已使用（已核销）优惠券数量；该统计维度仅包含只包含已领取且已使用。如用户未领取或已领取未使用均不统计；",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:605012000）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:605012000",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 优惠券不存在，请填写正确的券ID（sub_code: isv.parameter-invalid:605012020）",
+      "action": "请填写正确的券ID",
+      "sub_code": "isv.parameter-invalid:605012020",
+      "sub_msg": "优惠券不存在，请填写正确的券ID"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/marketing/checkCouponApplied?app_key=your_appkey_here&method=marketing.checkCouponApplied&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "used_count": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:605012000",
+      "sub_msg": "系统异常，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1361/4258",
+  "updatedAt": "2023-08-04",
+  "_file_stem": "marketing-marketing-checkCouponApplied"
+}

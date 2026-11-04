@@ -1,0 +1,164 @@
+{
+  "id": "doudian.retail-express.instantShopping.queryErpWarehouseBom",
+  "platform": "doudian",
+  "group": "retail-express",
+  "name": "instantShopping.queryErpWarehouseBom",
+  "description": "erp服务商",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 合作快递【即时零售】（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "org_shop_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音店铺ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "request_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "关系修改的时间字段(使用业务动作发生时候的时间戳即可)，抖音侧基于时间字段会进行接口幂等的操作；\n幂等逻辑 sku_id+request_time\n同一个sku_id只有request_time更大的场景才会更新关系",
+      "example": "1750240270",
+      "_depth": 0
+    },
+    {
+      "name": "erp_sku_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "erp货品列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音侧商品id",
+      "example": "1750240270",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音侧skuid",
+      "example": "1750240270",
+      "_depth": 1
+    },
+    {
+      "name": "bom_relation_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "erp货品列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_service_provider_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓服务商身份标,与ERP通过固定代码的方式约定得仓服务商的身份标志",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "goods_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "warehouse_goods_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓服务商侧货品id",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "warehouse_owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓服务商的货主编码。",
+      "example": "111",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:40004）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:40004",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:50040）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:50040",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:40001）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:40001",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:51040）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:51040",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.queryErpWarehouseBom&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:40004",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1584/7521",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "retail-express-instantShopping-queryErpWarehouseBom"
+}

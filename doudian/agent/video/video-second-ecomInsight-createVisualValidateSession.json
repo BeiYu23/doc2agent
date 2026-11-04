@@ -1,0 +1,81 @@
+{
+  "id": "doudian.video.second.ecomInsight.createVisualValidateSession",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.createVisualValidateSession",
+  "description": "创建活体检测链接",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "callback_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "回调url",
+      "example": "xxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "消息",
+      "example": "xxxx"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "状态码",
+      "example": "xxx"
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "description": "数据信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.createVisualValidateSession&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "xxx",
+        "data": {
+          "byted_token": "xxx",
+          "callback_url": "xxx",
+          "h5_link": "xxx"
+        },
+        "msg": "xxxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8220",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "video-second-ecomInsight-createVisualValidateSession"
+}

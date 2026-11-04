@@ -1,0 +1,125 @@
+{
+  "id": "doudian.creative.product.material.QueryMaterialsForOpen",
+  "platform": "doudian",
+  "group": "creative",
+  "name": "product.material.QueryMaterialsForOpen",
+  "description": "查询作品素材信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 创意管理API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品id列表",
+      "example": "[1111,222,333]",
+      "_depth": 0
+    },
+    {
+      "name": "material_types",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材类型 0-主图视频 1-白底图",
+      "example": "[0,1]",
+      "_depth": 0
+    },
+    {
+      "name": "material_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "素材状态 -1:已删除 0:待发布 1:审核中 2:已上线 3:审核未通过",
+      "example": "[0,1]",
+      "_depth": 0
+    },
+    {
+      "name": "material_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "作品素材id列表",
+      "example": "[111,333,222]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "materials",
+      "type": "array",
+      "description": "作品素材列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材查询异常（sub_code: isv.business-failed:20121019）",
+      "action": "联系或者重试",
+      "sub_code": "isv.business-failed:20121019",
+      "sub_msg": "素材查询异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效入参（sub_code: isv.parameter-invalid:2012004）",
+      "action": "请重新校验入参",
+      "sub_code": "isv.parameter-invalid:2012004",
+      "sub_msg": "无效入参"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2012001）",
+      "action": "联系或者重试",
+      "sub_code": "isp.service-error:2012001",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=product.material.QueryMaterialsForOpen&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "materials": [
+          {
+            "audit_time": "1690510680",
+            "create_time": "1690510680",
+            "material_id": "1231",
+            "material_status": "1",
+            "material_type": "0",
+            "product_id": "12323",
+            "reject_reason": "不过关",
+            "shop_id": "123",
+            "update_time": "1690510680"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20121019",
+      "sub_msg": "素材查询异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1358/4256",
+  "updatedAt": "2023-08-03",
+  "_file_stem": "creative-product-material-QueryMaterialsForOpen"
+}

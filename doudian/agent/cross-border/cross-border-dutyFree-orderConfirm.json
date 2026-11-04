@@ -1,0 +1,114 @@
+{
+  "id": "doudian.cross-border.dutyFree.orderConfirm",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "dutyFree.orderConfirm",
+  "description": "商家接单",
+  "method": "GET",
+  "path": "/dutyFree/orderConfirm",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单ID",
+      "example": "3214321413241",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "接单状态：0 接单成功， 1 接单失败",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流状态的真实发生时间，yyyy-MM-dd hh:mi:ss（北京时间）",
+      "example": "2018-06-03 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "error_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "接单失败，status传入1时必填",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "error_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "返回失败编码，商家只回传不可逆转的失败。",
+      "example": "ERR_100",
+      "_depth": 1
+    },
+    {
+      "name": "error_msg",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "返回详细失败原因",
+      "example": "库存不足",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:1005）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 推送的物流状态不对，请查证后重试, 当前状态是 服务商接单成功（sub_code: isv.business-failed:1004）",
+      "action": "物流状态不对，请查证后重试",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "推送的物流状态不对，请查证后重试, 当前状态是 服务商接单成功"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/dutyFree/orderConfirm?app_key=your_appkey_here&method=dutyFree.orderConfirm&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/1873",
+  "updatedAt": "2021-07-22",
+  "_file_stem": "cross-border-dutyFree-orderConfirm"
+}

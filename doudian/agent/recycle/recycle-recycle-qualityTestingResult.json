@@ -1,0 +1,89 @@
+{
+  "id": "doudian.recycle.recycle.qualityTestingResult",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "recycle.qualityTestingResult",
+  "description": "回传质检通过和价格",
+  "method": "GET",
+  "path": "/recycle/qualityTestingResult",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "recycle_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "回收价",
+      "example": "11300",
+      "_depth": 0
+    },
+    {
+      "name": "consignment_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "寄卖价",
+      "example": "11300",
+      "_depth": 0
+    },
+    {
+      "name": "clue_order_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "回收订单ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "is_passed",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "是否通过 1: 通过 2:不通过",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "failed_reason",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "不通过必传 不通过理由 1 货品成色太差； 2 货品与线索单不一致；  3 货品为假； 4 协商一致退货； 5 其他。",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/recycle/qualityTestingResult?app_key=your_appkey_here&method=recycle.qualityTestingResult&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/1885",
+  "updatedAt": "2021-09-03",
+  "_file_stem": "recycle-recycle-qualityTestingResult"
+}

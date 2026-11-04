@@ -1,0 +1,345 @@
+{
+  "id": "doudian.marketing.marketing.queryFinalPrice",
+  "platform": "doudian",
+  "group": "marketing",
+  "name": "marketing.queryFinalPrice",
+  "description": "查询到手价",
+  "method": "GET",
+  "path": "/marketing/queryFinalPrice",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "final_price_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "到手价类型。lowest_final_price 最低到手价；general_final_price 普惠到手价",
+      "example": "lowest_final_price",
+      "_depth": 0
+    },
+    {
+      "name": "promotion_scope_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠作用范围(商品/sku)",
+      "example": "sku",
+      "_depth": 0
+    },
+    {
+      "name": "promotion_subject_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "优惠对象信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "promotion_subject_item_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优惠对象单项信息列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "promotion_subject_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "优惠对象ID。商品ID_0_0_SKUID",
+      "example": "3763985059208626177_0_0_3516339652312834",
+      "_depth": 2
+    },
+    {
+      "name": "discount_rule_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优惠规则列表(门槛、门槛值、优惠类型、优惠值)",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "discount_threshold",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "优惠门槛",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "threshold_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠门槛类型。固定传 2,2 代表满元。",
+      "example": "2",
+      "_depth": 4
+    },
+    {
+      "name": "threshold_value",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门槛值。固定传0",
+      "example": "0",
+      "_depth": 4
+    },
+    {
+      "name": "discount_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "优惠信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "activity_price_discount",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "价格类优惠",
+      "example": "",
+      "_depth": 4
+    },
+    {
+      "name": "discount_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠方式。1: 打折; 2: 一口价; 3: 直降",
+      "example": "2",
+      "_depth": 5
+    },
+    {
+      "name": "discount_value",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠值",
+      "example": "700",
+      "_depth": 5
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠开始时间",
+      "example": "1753332162",
+      "_depth": 1
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "优惠结束时间",
+      "example": "1759248000",
+      "_depth": 1
+    },
+    {
+      "name": "source_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "来源端。固定传 10。代表开放平台",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "common_ctx_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "上下文信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "source_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "来源类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "operator_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "authority_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "isv_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "第三方应用信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "app_key",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "isv应用id",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "app_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ISV应用名称",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "shop_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "店铺信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "authority_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "店铺ID",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "activity_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "玩法编码。LimitTimeTimeBuy: 限时抢购; LimitQuantityTimeBuy: 限量抢购; OrdinaryTimeBuy: 普通降价促销。",
+      "example": "LimitTimeTimeBuy",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "query_final_price_res",
+      "type": "object",
+      "description": "到手价结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:510050002）",
+      "action": "联系开放平台技术排查",
+      "sub_code": "isp.service-error:510050002",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:510000001）",
+      "action": "调整参数",
+      "sub_code": "isv.parameter-invalid:510000001",
+      "sub_msg": "参数非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/marketing/queryFinalPrice?app_key=your_appkey_here&method=marketing.queryFinalPrice&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "query_final_price_res": {
+          "activity_code": "LimitTimeTimeBuy",
+          "final_price_info": {
+            "promotion_subject_final_price_info_list": [
+              {
+                "promotion_scope_type": "sku",
+                "promotion_subject_id": "1_0_0_1",
+                "sku_final_price_info": {
+                  "channel_id": "0",
+                  "channel_type": "0",
+                  "ext_info": {},
+                  "final_price_sku_type": "1",
+                  "price_risk_level": "redline",
+                  "pricing_promotion_group_list": [
+                    {
+                      "pricing_promotion_group_type": "SINGLE_PRODUCT_PROMOTION",
+                      "pricing_promotion_instance_list": [
+                        {
+                          "begin_time": "2025/08/05 00:00:00",
+                          "discount_value": "500",
+                          "end_time": "2025/08/05 00:00:00",
+                          "merchant_activity_id": "ACT202409001",
+                          "promotion_desc": "多单立减券：直减3",
+                          "promotion_id": "PROMO20240901001",
+                          "promotion_name": "9月单品直降"
+                        }
+                      ]
+                    }
+                  ],
+                  "product_id": "3633954572898306915",
+                  "shop_risk_discount": "80",
+                  "sku_final_price": "100",
+                  "sku_id": "3412091095817474",
+                  "sku_origin_price": "100",
+                  "sku_redline_price": "80",
+                  "sku_spec": "1"
+                }
+              }
+            ]
+          },
+          "promotion_scope_type": "sku"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:510050002",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1361/7773",
+  "updatedAt": "2025-09-16",
+  "_file_stem": "marketing-marketing-queryFinalPrice"
+}

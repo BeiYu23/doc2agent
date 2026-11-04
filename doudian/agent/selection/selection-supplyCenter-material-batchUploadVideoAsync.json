@@ -1,0 +1,145 @@
+{
+  "id": "doudian.selection.supplyCenter.material.batchUploadVideoAsync",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.material.batchUploadVideoAsync",
+  "description": "精选货源平台批量上传视频到素材中心",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "materials",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "素材信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "该参数仅有2个作用：（1）一次请求中素材的唯一标示；（2）接口防并发，规则是：不同请求所有request_id排序之后拼接起来，若相同视为同一次请求",
+      "example": "123456789",
+      "_depth": 1
+    },
+    {
+      "name": "material_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材类型，请传固定值：video",
+      "example": "video",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材名称，长度限制为50个字符，最好带上后缀",
+      "example": "这是一个视频.mp4",
+      "_depth": 1
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频url。如果是二进制上传，请使用file_uri字段。url和file_uri二选一，不能同时为空",
+      "example": "https://origin/xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二进制文件对应的uri，获取方式请参考：https://op.jinritemai.com/docs/guide-docs/171/1719",
+      "example": "tos-cn-i-7veqoeduo3/9e1df78157524c63abf7caa9bb1e88e0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_map",
+      "type": "string",
+      "description": "成功上传的素材，key为参数中的request_id",
+      "example": ""
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "失败的素材，key为参数中的request_id",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照批量上传视频接口（sub_code: isv.parameter-invalid:40002）",
+      "action": "https://op.jinritemai.com/docs/api-docs/69/1617",
+      "sub_code": "isv.parameter-invalid:40002",
+      "sub_msg": "参照批量上传视频接口"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照批量上传视频接口（sub_code: isv.parameter-invalid:40004）",
+      "action": "https://op.jinritemai.com/docs/api-docs/69/1617",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "参照批量上传视频接口"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参照批量上传视频接口（sub_code: isv.business-failed:50002）",
+      "action": "https://op.jinritemai.com/docs/api-docs/69/1617",
+      "sub_code": "isv.business-failed:50002",
+      "sub_msg": "参照批量上传视频接口"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参照批量上传视频接口（sub_code: isp.service-error:20000）",
+      "action": "https://op.jinritemai.com/docs/api-docs/69/1617",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "参照批量上传视频接口"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.material.batchUploadVideoAsync&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "failed_map": {},
+        "success_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40002",
+      "sub_msg": "参照批量上传视频接口"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5330",
+  "updatedAt": "2023-11-07",
+  "_file_stem": "selection-supplyCenter-material-batchUploadVideoAsync"
+}

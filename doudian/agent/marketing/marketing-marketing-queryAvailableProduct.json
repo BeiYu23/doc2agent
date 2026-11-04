@@ -1,0 +1,169 @@
+{
+  "id": "doudian.marketing.marketing.queryAvailableProduct",
+  "platform": "doudian",
+  "group": "marketing",
+  "name": "marketing.queryAvailableProduct",
+  "description": "支持根据特定条件查询营销可用商品",
+  "method": "GET",
+  "path": "/marketing/queryAvailableProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "玩法结束时间",
+      "example": "1755267804",
+      "_depth": 0
+    },
+    {
+      "name": "product_query_condition_option",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商品查询条件选项",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_str_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品ID列表或者商品名称列表",
+      "example": "3641483758168855009",
+      "_depth": 1
+    },
+    {
+      "name": "product_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品号，商家内部编号",
+      "example": "2033HH",
+      "_depth": 1
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页大小。最多支持100。",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "activity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "玩法编码。限时抢购：LimitTimeTimeBuy；限量抢购：LimitQuantityTimeBuy；普通降级促销：OrdinaryTimeBuy",
+      "example": "LimitTimeTimeBuy",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "玩法开始时间",
+      "example": "1755267804",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页号。",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "common_ctx_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "通用上下文",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "shop_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "店铺信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "isv_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "第三方应用信息",
+      "example": "",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "query_available_product_res",
+      "type": "object",
+      "description": "可用品结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:510050002）",
+      "action": "联系技术排查",
+      "sub_code": "isp.service-error:510050002",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:510000001）",
+      "action": "调整参数重新请求",
+      "sub_code": "isv.parameter-invalid:510000001",
+      "sub_msg": "参数非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/updateConsign?app_key=your_appkey_here&method=supplyChain.updateConsign&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:510050002",
+      "sub_msg": "系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1361/7776",
+  "updatedAt": "2025-09-16",
+  "_file_stem": "marketing-marketing-queryAvailableProduct"
+}

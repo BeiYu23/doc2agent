@@ -1,0 +1,183 @@
+{
+  "id": "doudian.retail-marketing.sendHome.marketing.listActivityProduct",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "sendHome.marketing.listActivityProduct",
+  "description": "查询营销活动门店绑定的商品",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动绑定商品状态\nInit = 10,           // 创建中\nFail = 20,           // 创建失败\nDelete = 40,         // 删除\nPartialSuccess = 50, // 部分成功\nSuccess = 90,        // 创建成功",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "main_product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "主商品列表",
+      "example": "{123}",
+      "_depth": 0
+    },
+    {
+      "name": "sub_product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "子商品列表",
+      "example": "{123}",
+      "_depth": 0
+    },
+    {
+      "name": "store_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店id，用于多选",
+      "example": "{123}",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页大小",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动id",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "10"
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "description": "主商品列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100003）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100002）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100002",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必填参数（sub_code: isv.missing-parameter:4100001）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.missing-parameter:4100001",
+      "sub_msg": "缺少必填参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务系统异常，请联系开平人员（sub_code: isv.business-failed:5000001）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "业务系统异常，请联系开平人员"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，可尝试重试（sub_code: isp.service-error:5000002）",
+      "action": "系统异常，可尝试重试",
+      "sub_code": "isp.service-error:5000002",
+      "sub_msg": "系统异常，可尝试重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=sendHome.marketing.listActivityProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "create_time": "123",
+            "detail_status": "10",
+            "detail_status_reason": "abc",
+            "main_product": {
+              "id": "123",
+              "img": "url",
+              "name": "abc"
+            },
+            "store": {
+              "shop_address": "abc",
+              "shop_id": "123",
+              "shop_name": "abc"
+            },
+            "sub_product": {
+              "id": "123",
+              "img": "url",
+              "name": "abc"
+            },
+            "update_time": "123"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/6811",
+  "updatedAt": "2024-08-27",
+  "_file_stem": "retail-marketing-sendHome-marketing-listActivityProduct"
+}

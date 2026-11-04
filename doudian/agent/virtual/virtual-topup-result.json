@@ -1,0 +1,170 @@
+{
+  "id": "doudian.virtual.topup.result",
+  "platform": "doudian",
+  "group": "virtual",
+  "name": "topup.result",
+  "description": "商家充值结果回调",
+  "method": "GET",
+  "path": "/topup/result",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 虚拟充值API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "trade_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "47544092076043809181",
+      "_depth": 0
+    },
+    {
+      "name": "topup_biz",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "充值业务",
+      "example": "MOBILE_TOPUP",
+      "_depth": 0
+    },
+    {
+      "name": "seller_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商家充值单号",
+      "example": "DY8123123",
+      "_depth": 0
+    },
+    {
+      "name": "seller_order_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "充值结果",
+      "example": "SUCCESS",
+      "_depth": 0
+    },
+    {
+      "name": "err_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "错误码",
+      "example": "1003",
+      "_depth": 0
+    },
+    {
+      "name": "err_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "错误信息",
+      "example": "参数校验失败",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "去使用链接",
+      "example": "https://xxxx.com",
+      "_depth": 0
+    },
+    {
+      "name": "url_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "去使用链接类型\n小程序：microapp\n普通链接：normal",
+      "example": "normal",
+      "_depth": 0
+    },
+    {
+      "name": "topup_failure_reason_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "充值失败错误码\n10001：手机号码无效\n10002：商家缺货\n10003 ： 命中运营商风控策略",
+      "example": "10001",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "trade_order_no",
+      "type": "string",
+      "description": "平台订单号.",
+      "example": "4754409207604380918"
+    },
+    {
+      "name": "topup_biz",
+      "type": "string",
+      "description": "充值业务",
+      "example": "MOBILE_TOPUP"
+    },
+    {
+      "name": "result",
+      "type": "string",
+      "description": "平台接口充值结果失败",
+      "example": "FAILED"
+    },
+    {
+      "name": "seller_order_no",
+      "type": "string",
+      "description": "商家充值单号",
+      "example": "DY8123123"
+    },
+    {
+      "name": "err_code",
+      "type": "string",
+      "description": "错误码",
+      "example": "-1"
+    },
+    {
+      "name": "err_desc",
+      "type": "string",
+      "description": "错误信息",
+      "example": "内部错误"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/topup/result?app_key=your_appkey_here&method=topup.result&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "err_code": "-1",
+        "err_desc": "内部错误",
+        "result": "FAILED",
+        "seller_order_no": "DY8123123",
+        "topup_biz": "MOBILE_TOPUP",
+        "trade_order_no": "4754409207604380918"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/164/1639",
+  "updatedAt": "2024-10-21",
+  "_file_stem": "virtual-topup-result"
+}

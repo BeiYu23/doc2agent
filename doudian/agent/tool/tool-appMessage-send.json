@@ -1,0 +1,136 @@
+{
+  "id": "doudian.tool.appMessage.send",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "appMessage.send",
+  "description": "发送服务市场应用消息",
+  "method": "GET",
+  "path": "/appMessage/send",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "模板id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "msg_param",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "模板参数，jump_url是跳转链接，是必传参数。如果跳转web，需包含http或者https协议头",
+      "example": "{\n    \"warning_title\":\"物流异常\",\n    \"warning_content\":\"您的728笔订单，物流出现异常情况，请及时查看。\",\n    \"jump_url\":\"https://www.baidu.com/\"\n}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "rid",
+      "type": "string",
+      "description": "业务key",
+      "example": "ee726838-f44b-34c3-528f-fa5451c46226"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 发送消息失败（sub_code: isp.service-error:301200）",
+      "action": "检查消息模板",
+      "sub_code": "isp.service-error:301200",
+      "sub_msg": "发送消息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 消息重复发送（sub_code: isv.business-failed:301201）",
+      "action": "3秒内不要发送重复消息",
+      "sub_code": "isv.business-failed:301201",
+      "sub_msg": "消息重复发送"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 没有模板权限（sub_code: isv.business-failed:301202）",
+      "action": "申请模板权限",
+      "sub_code": "isv.business-failed:301202",
+      "sub_msg": "没有模板权限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 消息参数解析失败（sub_code: isv.parameter-invalid:500002）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:500002",
+      "sub_msg": "消息参数解析失败"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数（sub_code: isv.missing-parameter:100002）",
+      "action": "检查参数",
+      "sub_code": "isv.missing-parameter:100002",
+      "sub_msg": "缺少必选参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 消息内容解析失败（sub_code: isv.parameter-invalid:301203）",
+      "action": "检查消息模板参数",
+      "sub_code": "isv.parameter-invalid:301203",
+      "sub_msg": "消息内容解析失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 安全检查错误（sub_code: isv.business-failed:200000）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:200000",
+      "sub_msg": "安全检查错误"
+    },
+    {
+      "code": "80000",
+      "meaning": "风控拦截 / 安全检查不通过（sub_code: isv.risk-control-failed:301204）",
+      "action": "检查消息模板参数",
+      "sub_code": "isv.risk-control-failed:301204",
+      "sub_msg": "安全检查不通过"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:100）",
+      "action": "按 sub_code 定位问题后处理",
+      "sub_code": "isv.business-failed:100"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/appMessage/send?app_key=your_appkey_here&method=appMessage.send&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "rid": "ee726838-f44b-34c3-528f-fa5451c46226"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:301200",
+      "sub_msg": "发送消息失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/3644",
+  "updatedAt": "2023-05-17",
+  "_file_stem": "tool-appMessage-send"
+}

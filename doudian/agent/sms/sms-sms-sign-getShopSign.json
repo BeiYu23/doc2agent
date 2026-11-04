@@ -1,0 +1,79 @@
+{
+  "id": "doudian.sms.sms.sign.getShopSign",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.sign.getShopSign",
+  "description": "获取商家在抖店的最新审核通过签名",
+  "method": "GET",
+  "path": "/sms/sign/getShopSign",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "signature_info",
+      "type": "object",
+      "description": "签名信息",
+      "example": ""
+    },
+    {
+      "name": "message_group_info",
+      "type": "object",
+      "description": "消息组",
+      "example": ""
+    },
+    {
+      "name": "isv_available_sign_list",
+      "type": "array",
+      "description": "仅ISV专用消息组下的签名，sms_account=ISV消息组id",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/sign/getShopSign?app_key=your_appkey_here&method=sms.sign.getShopSign&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "isv_available_sign_list": [
+          {
+            "apply_time": "1232312",
+            "sign": "北京基石泰来",
+            "sms_account": "osjfoae"
+          }
+        ],
+        "message_group_info": {
+          "default_message_group": "seofj",
+          "isv_message_group": "osjfoae"
+        },
+        "signature_info": {
+          "has_signature": "true",
+          "signature_content": "基石泰来"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/8148",
+  "updatedAt": "2026-03-24",
+  "_file_stem": "sms-sms-sign-getShopSign"
+}

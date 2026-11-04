@@ -1,0 +1,183 @@
+{
+  "id": "doudian.doubao.contentAIGC.previewAIVideoTaskOpen",
+  "platform": "doudian",
+  "group": "doubao",
+  "name": "contentAIGC.previewAIVideoTaskOpen",
+  "description": "预校验成片参数与积分，不占用额度",
+  "method": "GET",
+  "path": "/contentAIGC/previewAIVideoTaskOpen",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 豆包工作（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "待生成商品 ID。",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "params",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "当前已选成片参数。",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "paradigm_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "已选范式标识。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "resolution",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "已选分辨率。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "model_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模型编码；未指定时由服务端按默认规则选择。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "target",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "已选成片目标，复用现有枚举。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "duration",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "已选时长档位，复用配置查询中的定义。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "max_seconds",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "档位最大时长，单位秒；不小于 minSeconds。",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "min_seconds",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "档位最小时长，单位秒。",
+      "example": "",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "required_credits",
+      "type": "mixed",
+      "description": "本次预计实际消耗积分，免费为 0；可生成时必返，无法计算时缺省。",
+      "example": ""
+    },
+    {
+      "name": "available_credits",
+      "type": "mixed",
+      "description": "成功时必返，当前剩余可用积分。",
+      "example": ""
+    },
+    {
+      "name": "reason",
+      "type": "string",
+      "description": "不可生成时返回原因；余额不足且可算费用时仍返回 requiredCredits。",
+      "example": ""
+    },
+    {
+      "name": "base_resp",
+      "type": "object",
+      "description": "正常校验不通过与依赖查询失败分开处理。",
+      "example": ""
+    },
+    {
+      "name": "can_create",
+      "type": "boolean",
+      "description": "成功时必返，当前条件下是否可生成；不占用额度或积分。",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:1000000）",
+      "action": "请稍后重试；创建任务重试时请保持原 requestId 不变。若持续失败，请联系技术支持。",
+      "sub_code": "isp.service-error:1000000",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求参数错误（sub_code: isv.parameter-invalid:1000001）",
+      "action": "请按接口文档检查必填字段、参数类型及取值后重试。",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "请求参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/contentAIGC/previewAIVideoTaskOpen?app_key=your_appkey_here&method=contentAIGC.previewAIVideoTaskOpen&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "available_credits": "0",
+        "base_resp": {
+          "extra": {},
+          "status_code": "0",
+          "status_message": ""
+        },
+        "can_create": "0",
+        "reason": "",
+        "required_credits": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1000000",
+      "sub_msg": "系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1627/8657",
+  "updatedAt": "2026-09-23",
+  "_file_stem": "doubao-contentAIGC-previewAIVideoTaskOpen"
+}

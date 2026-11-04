@@ -1,0 +1,130 @@
+{
+  "id": "doudian.product.superm.product.queryProductSyncTask",
+  "platform": "doudian",
+  "group": "product",
+  "name": "superm.product.queryProductSyncTask",
+  "description": "查询异步执行的根任务列表",
+  "method": "GET",
+  "path": "/superm/product/queryProductSyncTask",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "任务类型。支持的任务类型有：batch_redistribute_sub_product - 重新分配店铺主品对应的门店子品; sync_sub_products_price - 将店铺主品的价格应用至门店子品；sync_sub_products - 主商品变更后变更结果同步至子商品",
+      "example": "batch_redistribute_sub_product",
+      "_depth": 0
+    },
+    {
+      "name": "task_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "任务ID",
+      "example": "7158439918014824735",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "起始页 (从0开始)",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页尺寸 (最大值50)",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "主商品ID，传入则查询该主商品的相关任务",
+      "example": "3xxxxxxxxxxxxxxxxxxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "task_list",
+      "type": "array",
+      "description": "任务列表",
+      "example": ""
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "起始页 (从0开始)",
+      "example": "0"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": "每页尺寸 (最大值50)",
+      "example": "10"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "任务总数",
+      "example": "30"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:查询Task信息出错，请稍后重试（sub_code: isv.business-failed:2010001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:查询Task信息出错，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:当前登录的用户信息不合法（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:当前登录的用户信息不合法",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:当前登录的用户信息不合法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:查询Task信息出错，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/2696",
+  "updatedAt": "2023-04-10",
+  "_file_stem": "product-superm-product-queryProductSyncTask"
+}

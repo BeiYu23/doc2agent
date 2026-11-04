@@ -1,0 +1,239 @@
+{
+  "id": "doudian.cross-border.crossborder.takingLogisticsInfo",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossborder.takingLogisticsInfo",
+  "description": "运单信息回告",
+  "method": "GET",
+  "path": "/crossborder/takingLogisticsInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "NBFL",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "交易单号",
+      "example": "4853003828309985089",
+      "_depth": 0
+    },
+    {
+      "name": "domestic_carrier",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流公司编码",
+      "example": "yuantong",
+      "_depth": 0
+    },
+    {
+      "name": "domestic_trans_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流单号",
+      "example": "YT1634023916000",
+      "_depth": 0
+    },
+    {
+      "name": "express_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流企业代码，四字中文编码",
+      "example": "中通速递",
+      "_depth": 0
+    },
+    {
+      "name": "express_cop_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流企业海关编码",
+      "example": "3122480063",
+      "_depth": 0
+    },
+    {
+      "name": "express_cop_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流企业名称",
+      "example": "上海大誉国际物流有限公司",
+      "_depth": 0
+    },
+    {
+      "name": "sort_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三段码",
+      "example": "801- 503 55,北京转香河",
+      "_depth": 0
+    },
+    {
+      "name": "remark01",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段01",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark02",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段02",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark03",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段03",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark04",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段04",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark05",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段05",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark06",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段06",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark07",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段07",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark08",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段08",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark09",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段09",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    },
+    {
+      "name": "remark10",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流备用字段10",
+      "example": "服务商自行透传，平台不限制",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "成功",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "成功",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "服务不可用 / 接口调用异常，请重试，多次失败请人工反馈（sub_code: isp.service-error:1005）",
+      "action": "按 sub_code 定位问题后处理",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    },
+    {
+      "code": "20000",
+      "meaning": "服务不可用 / NotifyLogisticsInfo err（sub_code: isp.service-error:-1）",
+      "action": "按 sub_code 定位问题后处理",
+      "sub_code": "isp.service-error:-1",
+      "sub_msg": "NotifyLogisticsInfo err"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossborder/takingLogisticsInfo?app_key=your_appkey_here&method=crossborder.takingLogisticsInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "服务不可用",
+      "sub_code": "isp.service-error:1005",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/1293",
+  "updatedAt": "2021-09-27",
+  "_file_stem": "cross-border-crossborder-takingLogisticsInfo"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "doudian.stock.warehouse.setAddrBatch",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.setAddrBatch",
+  "description": "批量绑定地址与区域仓",
+  "method": "GET",
+  "path": "/warehouse/setAddrBatch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 ）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓库ID",
+      "example": "abc",
+      "_depth": 0
+    },
+    {
+      "name": "addr_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "仓库配送地址列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "addr_id1",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "一级地址id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "二级地址id",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "三级地址id",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "四级地址id",
+      "example": "4",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/setAddrBatch?app_key=your_appkey_here&method=warehouse.setAddrBatch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/1861",
+  "updatedAt": "2020-11-29",
+  "_file_stem": "stock-warehouse-setAddrBatch"
+}

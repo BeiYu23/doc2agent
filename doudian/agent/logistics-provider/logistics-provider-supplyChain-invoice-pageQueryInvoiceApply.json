@@ -1,0 +1,190 @@
+{
+  "id": "doudian.logistics-provider.supplyChain.invoice.pageQueryInvoiceApply",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "supplyChain.invoice.pageQueryInvoiceApply",
+  "description": "分页查询开票申请",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "apply_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "开票申请单号",
+      "example": "IAO7366832755336380690",
+      "_depth": 0
+    },
+    {
+      "name": "seller_role",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "销方角色(SERVICE_MARKET_PROVIDER_LP:服务商市场服务商)",
+      "example": "SERVICE_MARKET_PROVIDER_LP",
+      "_depth": 0
+    },
+    {
+      "name": "biz_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务线(WH-FFAZ-3PL:付费安装)",
+      "example": "WH-FFAZ-3PL",
+      "_depth": 0
+    },
+    {
+      "name": "apply_order_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "申请单状态编码(approving:待开票,invoiced:已开票)",
+      "example": "approving",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_gte",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "申请时间大于等于(秒级时间戳)",
+      "example": "1726297637",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_lte",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "申请时间小于等于(秒级时间戳)",
+      "example": "1726297637",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页数，默认50，不能高于100",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量，从1开始，page*page_size不超过2万",
+      "example": "50",
+      "_depth": 0
+    },
+    {
+      "name": "sort_field",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序字段, 默认按申请时间倒序(create_time:申请时间, invoice_amount:开票金额)",
+      "example": "create_time",
+      "_depth": 0
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序字段(asc:升序, desc:降序)",
+      "example": "desc",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "数据",
+      "example": ""
+    },
+    {
+      "name": "ret_code",
+      "type": "string",
+      "description": "错误码，\"000000\"代表请求成功",
+      "example": "000000"
+    },
+    {
+      "name": "ret_msg",
+      "type": "string",
+      "description": "错误码说明",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.invoice.pageQueryInvoiceApply&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "list": [
+            {
+              "apply_no": "IAO7418495025201152296",
+              "apply_order_status": "approving",
+              "apply_record_no": "IAR7367275749566316854",
+              "biz_code": "WH-FFAZ-3PL",
+              "biz_no": "6934482450979296642",
+              "buyer_entity_info": {
+                "address": "浙江省杭州市余杭区xx号",
+                "bank_account": "6228210669002516829",
+                "bank_name": "中国工商银行上海市徐泾支行",
+                "email": "124289076@qq.com",
+                "entity_name": "北京字跳网络技术有限公司",
+                "entity_type": "company",
+                "id": "4053272734729401",
+                "mobile_number": "18088888888",
+                "name": "小明",
+                "phone_no": "18088888888",
+                "role": "CUSTOMER",
+                "tax_no": "91110108MA01F2L25J"
+              },
+              "create_time": "1726297637",
+              "invoice_amount_str": "11.31",
+              "invoice_type": "2",
+              "main_shop_order_no": "6934482450979296642",
+              "operate_no": "BSO50595841538"
+            }
+          ],
+          "page": "1",
+          "page_size": "50",
+          "total": "8372"
+        },
+        "ret_code": "000000",
+        "ret_msg": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/6937",
+  "updatedAt": "2024-10-17",
+  "_file_stem": "logistics-provider-supplyChain-invoice-pageQueryInvoiceApply"
+}

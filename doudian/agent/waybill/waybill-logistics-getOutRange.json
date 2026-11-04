@@ -1,0 +1,361 @@
+{
+  "id": "doudian.waybill.logistics.getOutRange",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.getOutRange",
+  "description": "查询地址快递是否可以送达",
+  "method": "GET",
+  "path": "/logistics/getOutRange",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司编码",
+      "example": "jtexpress",
+      "_depth": 0
+    },
+    {
+      "name": "sender_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "发货地址",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区名称",
+      "example": "滨江区",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "长河街道",
+      "_depth": 1
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "CHN",
+      "example": "CHN",
+      "_depth": 1
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "XX小区X幢",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份名称",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "收件地址",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区名称",
+      "example": "滨江区",
+      "_depth": 1
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址，支持密文",
+      "example": "XX小区X幢",
+      "_depth": 1
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "CHN",
+      "example": "CHN",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "长河街道",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省份名称",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "类型（0-揽派合一；1-揽收区域；2-派送区域） 0：取senderAddress, receiverAddress值 1：取senderAddress值 2：取receiverAddress值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "service_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "增值服务 目前只支持德邦",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "service_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "value",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "code",
+      "example": "SVC-INSURE",
+      "_depth": 1
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品类型 目前只支持德邦",
+      "example": "ll-sd-m",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_req",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "投递要求 目前只支持德邦",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_center_delivery",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否接受仅镇中心派送  目前仅支持德邦",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "is_pickup_self",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否接受合伙人自提，目前仅支持德邦",
+      "example": "true",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_out_range",
+      "type": "boolean",
+      "description": "是否超区响应结果（超区-true；未超区-fasle）",
+      "example": "false"
+    },
+    {
+      "name": "out_range_reason",
+      "type": "string",
+      "description": "超区原因，1、疫情管控 2、洪涝台风等自然灾害 3、特殊会议管控 4、网点经营问题 5、其他原因",
+      "example": "地址未覆盖"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求物流服务商超时（sub_code: isp.service-error:4009）",
+      "action": "可等待一段时间进行重试",
+      "sub_code": "isp.service-error:4009",
+      "sub_msg": "请求物流服务商超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部数据格式非法（sub_code: isv.business-failed:4008）",
+      "action": "可等待一段时间进行重试",
+      "sub_code": "isv.business-failed:4008",
+      "sub_msg": "内部数据格式非法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 请求物流服务商异常，请重试（sub_code: isp.service-error:4007）",
+      "action": "可等待一段时间进行重试",
+      "sub_code": "isp.service-error:4007",
+      "sub_msg": "请求物流服务商异常，请重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / youzhengguonei 物流服务商不支持该接口（sub_code: isv.parameter-invalid:4006）",
+      "action": "以文档上面支持的为准",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "youzhengguonei 物流服务商不支持该接口"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500:发生异常，请咨询对接人（sub_code: isv.business-failed:500）",
+      "action": "无",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "500:发生异常，请咨询对接人"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10002:服务异常～（sub_code: isv.business-failed:10002）",
+      "action": "无",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "10002:服务异常～"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3017:筛单异常（sub_code: isv.business-failed:3017）",
+      "action": "无",
+      "sub_code": "isv.business-failed:3017",
+      "sub_msg": "3017:筛单异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000:request param [receiverAddress.detailAddress] can not be null（sub_code: isv.business-failed:1000）",
+      "action": "1000:request param [receiverAddress.detailAddress] can not be null",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "1000:request param [receiverAddress.detailAddress] can not be null"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9020501:请求失败，请重试（sub_code: isv.business-failed:9020501）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:9020501",
+      "sub_msg": "9020501:请求失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4001:系统发生数据错误或运行时异常（sub_code: isv.business-failed:4001）",
+      "action": "统发生数据错误或运行时异常",
+      "sub_code": "isv.business-failed:4001",
+      "sub_msg": "4001:系统发生数据错误或运行时异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10001:无效签名（sub_code: isv.business-failed:10001）",
+      "action": "无效签名",
+      "sub_code": "isv.business-failed:10001",
+      "sub_msg": "10001:无效签名"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11102:收件地址解析失败（sub_code: isv.business-failed:11102）",
+      "action": "请检查收件地址信息",
+      "sub_code": "isv.business-failed:11102",
+      "sub_msg": "11102:收件地址解析失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11108:{\"outRangeRsason\":\"该收件地址属于偏远地区暂时无法下单。\",\"isOutRange\":true}（sub_code: isv.business-failed:11108）",
+      "action": "请调整地址",
+      "sub_code": "isv.business-failed:11108",
+      "sub_msg": "11108:{\"outRangeRsason\":\"该收件地址属于偏远地区暂时无法下单。\",\"isOutRange\":true}"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getOutRange?app_key=your_appkey_here&method=logistics.getOutRange&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_out_range": "false",
+        "out_range_reason": "地址未覆盖"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:4009",
+      "sub_msg": "请求物流服务商超时"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/582",
+  "updatedAt": "2026-08-12",
+  "_file_stem": "waybill-logistics-getOutRange"
+}

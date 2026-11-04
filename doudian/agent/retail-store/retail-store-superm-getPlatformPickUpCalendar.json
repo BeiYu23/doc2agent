@@ -1,0 +1,91 @@
+{
+  "id": "doudian.retail-store.superm.getPlatformPickUpCalendar",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.getPlatformPickUpCalendar",
+  "description": "售后单查询运力时间段日历",
+  "method": "GET",
+  "path": "/superm/getPlatformPickUpCalendar",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "售后单号",
+      "example": "7161813415244218654",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_support",
+      "type": "boolean",
+      "description": "是否支持查询",
+      "example": "true"
+    },
+    {
+      "name": "un_support_reason",
+      "type": "string",
+      "description": "不支持的原因",
+      "example": "\"\""
+    },
+    {
+      "name": "period_list",
+      "type": "array",
+      "description": "时间段",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50112:售后单[146708678695909124]不属于当前店铺, 请输入正确的售后单号（sub_code: isv.business-failed:50112）",
+      "action": "50112:售后单[146708678695909124]不属于当前店铺, 请输入正确的售后单号",
+      "sub_code": "isv.business-failed:50112",
+      "sub_msg": "50112:售后单[146708678695909124]不属于当前店铺, 请输入正确的售后单号"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/getPlatformPickUpCalendar?app_key=your_appkey_here&method=superm.getPlatformPickUpCalendar&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "is_support": "true",
+        "period_list": [
+          {
+            "time_begin_ts": "166779000",
+            "time_end_ts": "1667793600"
+          }
+        ],
+        "un_support_reason": "\"\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:50112",
+      "sub_msg": "50112:售后单[146708678695909124]不属于当前店铺, 请输入正确的售后单号"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2738",
+  "updatedAt": "2025-12-11",
+  "_file_stem": "retail-store-superm-getPlatformPickUpCalendar"
+}

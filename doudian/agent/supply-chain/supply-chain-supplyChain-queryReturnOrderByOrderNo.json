@@ -1,0 +1,228 @@
+{
+  "id": "doudian.supply-chain.supplyChain.queryReturnOrderByOrderNo",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.queryReturnOrderByOrderNo",
+  "description": "通过售后单ID或者渠道交易单ID查询售后明细",
+  "method": "GET",
+  "path": "/supplyChain/queryReturnOrderByOrderNo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "after_sale_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后单号，一定要注意是售后单号。 与渠道单号不能同时为空",
+      "example": "GSH23031612561361",
+      "_depth": 0
+    },
+    {
+      "name": "channel_trade_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道交易单号，与售后单号不能同时为空",
+      "example": "CT7211002433110327596",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "是否成功",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "接口是否成功",
+      "example": "success"
+    },
+    {
+      "name": "return_order_info_list",
+      "type": "array",
+      "description": "售后单列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1000）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 业务处理失败（可以直接展示给用户）（sub_code: isp.service-error:1040）",
+      "action": "根据提示处理",
+      "sub_code": "isp.service-error:1040",
+      "sub_msg": "业务处理失败（可以直接展示给用户）"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数问题（sub_code: isv.parameter-invalid:1020）",
+      "action": "修改参数",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "参数问题"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2000:（sub_code: isv.business-failed:2000）",
+      "action": "2000:",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "2000:"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:（sub_code: isv.business-failed:-1）",
+      "action": "-1:",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1015）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1015",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/getCatePropertyV2?app_key=your_appkey_here&method=product.getCatePropertyV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "category_id": "31918",
+            "cid": "31918",
+            "diy_type": "1",
+            "feature_type_list": "[48]",
+            "has_sub_property": "false",
+            "important_type": "1",
+            "measure_templates": [
+              {
+                "display_name": "xx模版",
+                "input_rule": {
+                  "dependency_check_rules": [
+                    {
+                      "rule_condition": {
+                        "module_id": "0",
+                        "operator": "\"\"",
+                        "value": "\"\""
+                      },
+                      "rule_constraint": {
+                        "err_msg": "\"\"",
+                        "group_func": "\"\"",
+                        "module_id": "0",
+                        "operator": "\"\"",
+                        "value": "\"\""
+                      },
+                      "template_id": "0"
+                    }
+                  ],
+                  "global_check_rules": [
+                    {
+                      "err_msg": "\"\"",
+                      "module_id": "0",
+                      "operator": "\"\"",
+                      "target_value": "\"\"",
+                      "template_id": "0"
+                    }
+                  ]
+                },
+                "template_id": "23",
+                "value_modules": [
+                  {
+                    "extra": {},
+                    "input_type": "input",
+                    "module_id": "123",
+                    "prefix": "\"\"",
+                    "suffix": "\"\"",
+                    "units": [
+                      {
+                        "unit_id": "1",
+                        "unit_name": "克"
+                      }
+                    ],
+                    "validate_rule": {
+                      "data_type": "integer",
+                      "max": "10",
+                      "min": "2",
+                      "precision": "2",
+                      "time_format": "YYYY-MM-DD",
+                      "unit_rules": [
+                        {
+                          "max": "10",
+                          "min": "2",
+                          "unit_id": "1"
+                        }
+                      ]
+                    },
+                    "value_required": "true",
+                    "values": [
+                      {
+                        "value_name": "棉"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "multi_select_max": "5",
+            "options": [
+              {
+                "name": "ON:THE BODY/安宝笛",
+                "sequence": "2",
+                "value": "1062254699",
+                "value_id": "1"
+              }
+            ],
+            "property_id": "14133",
+            "property_name": "\"材质\"",
+            "property_pic_rule": {
+              "available": "true",
+              "required": "true"
+            },
+            "property_type": "1",
+            "relation_id": "1",
+            "required": "0",
+            "sequence": "2",
+            "status": "1",
+            "type": "text"
+          }
+        ],
+        "tpl_type": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/3360",
+  "updatedAt": "2026-03-05",
+  "_file_stem": "supply-chain-supplyChain-queryReturnOrderByOrderNo"
+}

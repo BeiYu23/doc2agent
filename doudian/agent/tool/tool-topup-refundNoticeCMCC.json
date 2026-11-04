@@ -1,0 +1,126 @@
+{
+  "id": "doudian.tool.topup.refundNoticeCMCC",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "topup.refundNoticeCMCC",
+  "description": "中国移动订单退款通知",
+  "method": "GET",
+  "path": "/topup/refundNoticeCMCC",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "merchantId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商户ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "orderNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "金科侧订单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接口类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接口版本",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "退款金额（单位：分）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "mobileNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "requestId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音电商订单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "refundTime",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "退款时间，格式：yyyyMMddHHmmss",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "string",
+      "description": "响应固定字符串：\"SUCCESS\"",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/topup/refundNoticeCMCC?app_key=your_appkey_here&method=topup.refundNoticeCMCC&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7621",
+  "updatedAt": "2026-01-26",
+  "_file_stem": "tool-topup-refundNoticeCMCC"
+}

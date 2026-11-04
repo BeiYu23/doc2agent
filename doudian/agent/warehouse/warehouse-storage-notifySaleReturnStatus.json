@@ -1,0 +1,158 @@
+{
+  "id": "doudian.warehouse.storage.notifySaleReturnStatus",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "storage.notifySaleReturnStatus",
+  "description": "回告销退单状态",
+  "method": "GET",
+  "path": "/storage/notifySaleReturnStatus",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流订单号",
+      "example": "LB00001",
+      "_depth": 0
+    },
+    {
+      "name": "vendor",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码",
+      "example": "Vendor1",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "状态",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "业务发生时间",
+      "example": "1620647951",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注，格式严格校验",
+      "example": "{\"error_code\": \"\",\"error_message\": \"\"}",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_fulfil_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流履约单号",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓编码",
+      "example": "W001",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / InnerError（sub_code: isp.service-error:1001）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "InnerError"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 5002:sale return order not found（sub_code: isv.business-failed:5002）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:5002",
+      "sub_msg": "5002:sale return order not found"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / request cannot be nil（sub_code: isv.missing-parameter:1004）",
+      "action": "请检查请求体后重试",
+      "sub_code": "isv.missing-parameter:1004",
+      "sub_msg": "request cannot be nil"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / logisticsNo is illegal（sub_code: isv.missing-parameter:1004）",
+      "action": "请检查logisticsNo后重试",
+      "sub_code": "isv.missing-parameter:1004",
+      "sub_msg": "logisticsNo is illegal"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / VendorNo is illegal（sub_code: isv.missing-parameter:1004）",
+      "action": "请检查VendorNo后重试",
+      "sub_code": "isv.missing-parameter:1004",
+      "sub_msg": "VendorNo is illegal"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / Status is illegal（sub_code: isv.missing-parameter:1004）",
+      "action": "请检查Status后重试",
+      "sub_code": "isv.missing-parameter:1004",
+      "sub_msg": "Status is illegal"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / remark format is illegal（sub_code: isv.parameter-invalid:1004）",
+      "action": "请检查remark格式后重试",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "remark format is illegal"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/storage/notifySaleReturnStatus?app_key=your_appkey_here&method=storage.notifySaleReturnStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "InnerError"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1866",
+  "updatedAt": "2023-01-04",
+  "_file_stem": "warehouse-storage-notifySaleReturnStatus"
+}

@@ -1,0 +1,278 @@
+# supplyChain.supplyProductV2.previewProduct
+
+> 预览货品详情
+
+| 元信息 | 值 |
+| --- | --- |
+| 接口 ID | `doudian.supply-chain.supplyChain.supplyProductV2.previewProduct` |
+| 平台 | `doudian` |
+| 请求方法 | `GET` |
+| 接口路径 | `YOUR_SECRET_KEY` |
+| Base URL | `https://openapi-fxg.jinritemai.com` |
+| 鉴权方式 | `access_token+sign` |
+| 文档来源 | https://op.jinritemai.com/docs/api-docs/172/6678 |
+| 更新日期 | `2026-08-05` |
+
+## 接口说明
+
+- 文档书: 供销平台API（版本 V2.01）
+- 公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json
+
+## 请求参数
+
+| 参数名 | 位置 | 类型 | 必填 | 说明 | 示例 |
+| --- | --- | --- | --- | --- | --- |
+| `product_id` | body | mixed | 否 | 商货品id | `1111` |
+
+## 请求示例
+
+```bash
+curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.supplyProductV2.previewProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'
+```
+
+## 响应参数
+
+| 字段名 | 类型 | 说明 | 示例 |
+| --- | --- | --- | --- |
+| `msg` | string | 返回信息 | `xxx` |
+| `product_detail` | object | 商品明细 | `` |
+| `code` | mixed | 返回码 | `10000` |
+
+## 响应码
+
+| code | 含义 | 处理建议 |
+| --- | --- | --- |
+| `10000` | success | 正常处理 |
+| `50002` | 业务处理失败 / 1020:参数异常，请检查后重试\|货品Id异常（sub_code: isv.business-failed:1020） | 1020:参数异常，请检查后重试\|货品Id异常 |
+| `50002` | 业务处理失败 / 8009:预览商品失败\|RPCError{PSM:[cmp.ecom.product_backend] Method:[PreviewProductForOpen] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[2010001] BizStatusMessage:[商品信息获取失败]}（sub_code: isv.business-failed:8009） | 8009:预览商品失败\|RPCError{PSM:[cmp.ecom.product_backend] Method:[PreviewProductForOpen] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[2010001] BizStatusMessage:[商品信息获取失败]} |
+| `50002` | 业务处理失败 / 8011:查询货品和虚拟商品绑定关系失败\|RPCError{PSM:[ecom.bscp.gongxiao_manage] Method:[GetSkuBindingRelation] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1604 cds_key=THRIFT_INGRESS\|ecom.bscp.scm_open:default:lq:\|ecom.bscp.gongxiao_manage（sub_code: isv.business-failed:8011） | 8011:查询货品和虚拟商品绑定关系失败\|RPCError{PSM:[ecom.bscp.gongxiao_manage] Method:[GetSkuBindingRelation] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1604 cds_key=THRIFT_INGRESS\|ecom.bscp.scm_open:default:lq:\|ecom.bscp.gongxiao_manage |
+| `50002` | 业务处理失败 / 2000:业务处理异常\|sku数量不符合（sub_code: isv.business-failed:2000） | 2000:业务处理异常\|sku数量不符合 |
+| `50002` | 业务处理失败 / 8013:查询货品失败（sub_code: isv.business-failed:8013） | 8013:查询货品失败 |
+| `50002` | 业务处理失败 / 8015:货品已删除（sub_code: isv.business-failed:8015） | 8015:货品已删除 |
+
+## 响应示例
+
+成功：
+
+```json
+{
+  "data": {
+    "code": "10000",
+    "msg": "xxx",
+    "product_detail": {
+      "after_sale_service": "{\"supply_7day_return\":\"2\"}",
+      "after_sale_service_v2": {
+        "is_large_product": "0",
+        "three_guarantees": {
+          "duration": "2",
+          "service_type": "1"
+        }
+      },
+      "ban_scheme_code": "xxx",
+      "category_detail": {
+        "enable": "true",
+        "first_cid": "1",
+        "first_cname": "xx",
+        "fourth_cid": "1111",
+        "fourth_cname": "xxxx",
+        "is_leaf": "true",
+        "second_cid": "11",
+        "second_cname": "xx",
+        "third_cid": "111",
+        "third_cname": "xxx"
+      },
+      "delivery_delay_day": "2",
+      "description": "xxx",
+      "distribution_status": "distributable",
+      "extra": "{\\\"category_detail\\\":{\\\"first_cid\\\":20117,\\\"second_cid\\\":22139,\\\"third_cid\\\":28901,\\\"fourth_cid\\\":31800,\\\"first_cname\\\":\\\"本地生活服务\\\",\\\"second_cname\\\":\\\"餐饮美食卡券\\\",\\\"third_cname\\\":\\\"甜品/冰淇淋/咖啡/冷饮\\\",\\\"fourth_cname\\\":\\\"咖啡\\\",\\\"is_leaf\\\":true},\\\"class_quality\\\":\\\"\\\",\\\"is_publish\\\":1,\\\"quality_opId\\\":\\\"7132044312682119463\\\",\\\"quality_report\\\":\\\"\\\"}",
+      "filter_cause": {
+        "price_filter": "0",
+        "price_filter_cause": "该商品价格竞争力不足，商品分销曝光可能会受到影响，建议调整价格",
+        "product_filter": "0",
+        "product_filter_cause": "货品可用库存>50才可在「精选货源」被分销商铺货。建议尽快调整库存,避免被过滤"
+      },
+      "freight_id": "1",
+      "long_pic_url": "xx",
+      "main_image_three_to_four": "xxx",
+      "material_video_id": "xxx",
+      "name": "xx",
+      "non_distributable_reason": "因货品信息缺失，该货品已在抖店已不可被分销，请尽快完成货品信息的补充，补充后货品将在次日于\"抖店-精选货源\"中恢复展示。",
+      "original_category_detail": {
+        "first_cid": "1111111",
+        "first_cname": "一级类目名称",
+        "fourth_cid": "11111",
+        "fourth_cname": "四级类目名称",
+        "second_cid": "111111",
+        "second_cname": "二级类目名称",
+        "third_cid": "111111",
+        "third_cname": "三级类目名称"
+      },
+      "outer_product_id": "xxx",
+      "pic": "[\"https://p9-aio.ecombdimg.com/obj/ecom-shop-material/v1_xPfNJOkX_71153427046487984750183_661ff1f563801d97f382e0ac114a09e6_sx_805824_www933-933\", \"https://p6-aio.ecombdimg.com/obj/ecom-shop-material/v1_xPfNJOkX_71153429136760998540183_e3d0578bd8b499ff9dee11a0fd040070_sx_889253_www3072-3072\", \"https://p9-aio.ecombdimg.com/obj/ecom-shop-material/v1_xPfNJOkX_71153465665006472060183_1d037ea9f83818829d3a502df6135ae4_sx_280269_www1080-1080\"]",
+      "presell_type": "0",
+      "product_format": "xx",
+      "product_format_new": "{\"1088\":[{\"Value\":0,\"Name\":\"小33学二年级\",\"PropertyId\":1088,\"PropertyName\":\"适用学龄段\",\"diy_type\":1}],\"1319\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":1319,\"PropertyName\":\"适用地区\",\"diy_type\":0}],\"1618\":[{\"Value\":0,\"Name\":\"9787218122861\",\"PropertyId\":1618,\"PropertyName\":\"ISBN编号\",\"diy_type\":0}],\"1831\":[{\"Value\":0,\"Name\":\"小学英语看图说话写话二年级\",\"PropertyId\":1831,\"PropertyName\":\"书名\",\"diy_type\":0}],\"2000\":[{\"Value\":34762,\"Name\":\"无\",\"PropertyId\":2000,\"PropertyName\":\"作者地区\",\"diy_type\":0}],\"2229\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":2229,\"PropertyName\":\"编者\",\"diy_type\":0}],\"3271\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":3271,\"PropertyName\":\"出版时间\",\"diy_type\":0}],\"449\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":449,\"PropertyName\":\"作者\",\"diy_type\":0}],\"501\":[{\"Value\":7310,\"Name\":\"否\",\"PropertyId\":501,\"PropertyName\":\"是否是套装\",\"diy_type\":0}],\"855\":[{\"Value\":0,\"Name\":\"陕西人民教育出版社\",\"PropertyId\":855,\"PropertyName\":\"出版社名称\",\"diy_type\":0}]}",
+      "product_id": "xx",
+      "quality_list": [
+        {
+          "quality_attachments": [
+            {
+              "media_type": "1",
+              "url": "1"
+            }
+          ],
+          "quality_content_name": "1",
+          "quality_id": "1",
+          "quality_key": "1",
+          "quality_name": "1"
+        }
+      ],
+      "recommend_remark": "xx",
+      "return_address_id": "1",
+      "short_product_name": "xxx",
+      "size_info_template_id": "1",
+      "spec_pics": [
+        {
+          "pic": "xxx",
+          "spec_detail_id": "1"
+        }
+      ],
+      "spec_prices": [
+        {
+          "barcodes": "xxx",
+          "cargo": {
+            "cargo_id": "cargo_id",
+            "source_type": "source_type"
+          },
+          "code": "xxx",
+          "outer_sku_id": "111",
+          "price": "1000",
+          "sell_properties": [
+            {
+              "cpv_path": [
+                {
+                  "cpid": "1",
+                  "cpvid": "1"
+                }
+              ],
+              "measure_info": {
+                "template_id": "1",
+                "values": [
+                  {
+                    "module_id": "1",
+                    "prefix": "xx",
+                    "suffix": "xx",
+                    "unit_id": "11",
+                    "unit_name": "xx",
+                    "value": "xx"
+                  }
+                ]
+              },
+              "measurement": {
+                "measure_unit": "g",
+                "measure_unit_id": "111",
+                "value": "111"
+              },
+              "property_id": "1",
+              "property_name": "xx",
+              "remark": "111",
+              "value_id": "1",
+              "value_name": "xxx",
+              "value_spec_detail_id": "1"
+            }
+          ],
+          "sku_id": "1111",
+          "sku_type": "0",
+          "stock_num": "100",
+          "supply_price": "1000",
+          "virtual_sku_id": "111"
+        }
+      ],
+      "specs": [
+        {
+          "display_content": "xx",
+          "ext_id": "1",
+          "id": "1",
+          "is_leaf": "1",
+          "is_required": "true",
+          "name": "1",
+          "op_type": "1",
+          "pid": "1",
+          "sell_property_id": "1",
+          "spec_id": "1",
+          "spec_type": "1",
+          "support_diy": "true",
+          "support_remark": "xx",
+          "values": [
+            {
+              "ext_id": "1",
+              "extra": {
+                "cpv_path": [
+                  {
+                    "cpid": "1",
+                    "cpvid": "1"
+                  }
+                ],
+                "measure_info": {
+                  "template_id": "1",
+                  "values": [
+                    {
+                      "module_id": "1",
+                      "prefix": "前缀",
+                      "suffix": "后缀",
+                      "unit_id": "1",
+                      "unit_name": "xxx",
+                      "value": "xxx"
+                    }
+                  ]
+                }
+              },
+              "id": "1",
+              "is_leaf": "1",
+              "is_recommend": "true",
+              "is_select": "true",
+              "measurement": {
+                "measure_unit": "g",
+                "measure_unit_id": "1",
+                "value": "xx"
+              },
+              "name": "x x",
+              "op_type": "1",
+              "pid": "1",
+              "remark": "remark",
+              "sell_property_value_id": "1",
+              "spec_id": "1",
+              "status": "1"
+            }
+          ]
+        }
+      ],
+      "standard_brand_id": "111",
+      "status": "1",
+      "sub_status": "1",
+      "virtual_product_id": "1",
+      "weight_unit": "0",
+      "weight_value": "1",
+      "white_back_ground_pic_url": "xx",
+      "zhili_reject_reasons": "[ \"分销品标题未明确描述分销品品名，请重新填写。\" ]"
+    }
+  },
+  "code": 10000,
+  "msg": "success",
+  "sub_code": "",
+  "sub_msg": ""
+}
+```
+
+失败：
+
+```json
+{
+  "code": 50002,
+  "msg": "业务处理失败",
+  "sub_code": "isv.business-failed:1020",
+  "sub_msg": "1020:参数异常，请检查后重试|货品Id异常"
+}
+```
+
+## 备注

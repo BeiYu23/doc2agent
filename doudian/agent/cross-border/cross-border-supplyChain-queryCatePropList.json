@@ -1,0 +1,258 @@
+{
+  "id": "doudian.cross-border.supplyChain.queryCatePropList",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "supplyChain.queryCatePropList",
+  "description": "类目属性规则查询",
+  "method": "GET",
+  "path": "/supplyChain/queryCatePropList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "类目id",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "item_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品类型 1:普通货品",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "bmp_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行业身份（跨境pop：xiaodian.crossborder）",
+      "example": "xiaodian.crossborder",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回值",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部服务返回错误（sub_code: isp.service-error:200001）",
+      "action": "请检查传入的参数并稍后重试",
+      "sub_code": "isp.service-error:200001",
+      "sub_msg": "内部服务返回错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 无权限（sub_code: isp.service-error:300001）",
+      "action": "请检查调用方身份信息并重试",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "无权限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数（sub_code: isv.parameter-invalid:400001）",
+      "action": "请检查传入的参数并重试",
+      "sub_code": "isv.parameter-invalid:400001",
+      "sub_msg": "非法的参数"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少行业身份（sub_code: isv.missing-parameter:400002）",
+      "action": "请检查传入的 BmpCode 参数并重试",
+      "sub_code": "isv.missing-parameter:400002",
+      "sub_msg": "缺少行业身份"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 行业身份不支持（sub_code: isv.parameter-invalid:400003）",
+      "action": "请检查传入的 BmpCode 参数并重试",
+      "sub_code": "isv.parameter-invalid:400003",
+      "sub_msg": "行业身份不支持"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询类目属性错误（sub_code: isp.service-error:200011）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:200011",
+      "sub_msg": "查询类目属性错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询类目属性单位信息错误（sub_code: isp.service-error:200012）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:200012",
+      "sub_msg": "查询类目属性单位信息错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/queryCatePropList?app_key=your_appkey_here&method=supplyChain.queryCatePropList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "batch_prop_list": [
+            {
+              "prop_key": {
+                "prop_code": "brand",
+                "prop_key": "品牌",
+                "prop_key_id": "111"
+              },
+              "prop_meta": {
+                "customize": "false",
+                "enumerable": "false",
+                "is_required": "false",
+                "max": "9999",
+                "measure_unit_name": "毫米",
+                "min": "1",
+                "multi_choice": "false",
+                "prop_type": "Common"
+              },
+              "prop_val": [
+                {
+                  "prop_value": "是",
+                  "prop_value_id": "111"
+                }
+              ]
+            }
+          ],
+          "category_prop_list": [
+            {
+              "prop_key": {
+                "prop_code": "brand",
+                "prop_key": "品牌",
+                "prop_key_id": "111"
+              },
+              "prop_meta": {
+                "customize": "false",
+                "enumerable": "false",
+                "is_required": "false",
+                "max": "9999",
+                "measure_unit_name": "毫米",
+                "min": "1",
+                "multi_choice": "false",
+                "prop_type": "Common"
+              },
+              "prop_val": [
+                {
+                  "prop_value": "是",
+                  "prop_value_id": "111"
+                }
+              ]
+            }
+          ],
+          "period_prop_list": [
+            {
+              "prop_key": {
+                "prop_code": "brand",
+                "prop_key": "品牌",
+                "prop_key_id": "111"
+              },
+              "prop_meta": {
+                "customize": "false",
+                "enumerable": "false",
+                "is_required": "false",
+                "max": "9999",
+                "measure_unit_name": "毫米",
+                "min": "1",
+                "multi_choice": "false",
+                "prop_type": "Common"
+              },
+              "prop_val": [
+                {
+                  "prop_value": "是",
+                  "prop_value_id": "111"
+                }
+              ]
+            }
+          ],
+          "sale_prop_list": [
+            {
+              "prop_key": {
+                "prop_code": "brand",
+                "prop_key": "品牌",
+                "prop_key_id": "111"
+              },
+              "prop_meta": {
+                "customize": "false",
+                "enumerable": "false",
+                "is_required": "false",
+                "max": "9999",
+                "measure_unit_name": "毫米",
+                "min": "1",
+                "multi_choice": "false",
+                "prop_type": "Common"
+              },
+              "prop_val": [
+                {
+                  "prop_value": "是",
+                  "prop_value_id": "111"
+                }
+              ]
+            }
+          ],
+          "sku_category_prop_list": [
+            {
+              "prop_key": {
+                "prop_code": "brand",
+                "prop_key": "品牌",
+                "prop_key_id": "111"
+              },
+              "prop_meta": {
+                "customize": "false",
+                "enumerable": "false",
+                "is_required": "false",
+                "max": "9999",
+                "measure_unit_name": "毫米",
+                "min": "1",
+                "multi_choice": "false",
+                "prop_type": "Common"
+              },
+              "prop_val": [
+                {
+                  "prop_value": "是",
+                  "prop_value_id": "111"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:200001",
+      "sub_msg": "内部服务返回错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6323",
+  "updatedAt": "2024-04-26",
+  "_file_stem": "cross-border-supplyChain-queryCatePropList"
+}

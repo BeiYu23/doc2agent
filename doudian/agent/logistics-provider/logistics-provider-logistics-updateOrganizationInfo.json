@@ -1,0 +1,291 @@
+{
+  "id": "doudian.logistics-provider.logistics.updateOrganizationInfo",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.updateOrganizationInfo",
+  "description": "更新服务商组织信息",
+  "method": "GET",
+  "path": "/logistics/updateOrganizationInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商, "
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "org_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "组织列表（最多支持50条数据）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "site_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "站点类型；1-揽收网点，2-派送网点，3-揽派网点，4-干线分拨，5-集散中心",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "org_contact",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "联系人信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "名称",
+      "example": "小李",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电话",
+      "example": "138xxxxxxxx",
+      "_depth": 2
+    },
+    {
+      "name": "org_status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "组织状态\n1：生效\n2：不生效",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "org_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "组织编码（网点编码）",
+      "example": "test_011",
+      "_depth": 1
+    },
+    {
+      "name": "org_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "组织名称（网点名称）",
+      "example": "北京省区测试",
+      "_depth": 1
+    },
+    {
+      "name": "org_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "组织类型（网点类型）\nZONG_BU：总部\nSHENG_QU：省区\nFEN_BO_GUAN_LI：分拨管理\nWANG_DIAN_GUAN_LI：网点管理\nFEN_BO_ZHONG_XIN：分拨中心\nWANG_DIAN：网点",
+      "example": "SHENG_QU",
+      "_depth": 1
+    },
+    {
+      "name": "father_org_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上级组织编码（父网点编码）",
+      "example": "test_001",
+      "_depth": 1
+    },
+    {
+      "name": "father_org_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上级组织名称（父网点名称）",
+      "example": "测试总部网点",
+      "_depth": 1
+    },
+    {
+      "name": "org_address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "组织地址（网点地址）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称\norg_type = SHENG_QU，FEN_BO_ZHONG_XIN，WANG_DIAN时必填",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市编码",
+      "example": "110000",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市名称\norg_type = SHENG_QU，FEN_BO_ZHONG_XIN，WANG_DIAN 时必填",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "110108",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称\norg_type = FEN_BO_ZHONG_XIN，WANG_DIAN 时必填",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "110108018",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "花园路街道",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "中兴大厦",
+      "_depth": 2
+    },
+    {
+      "name": "lon",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "121.223344",
+      "_depth": 2
+    },
+    {
+      "name": "lat",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "37.334422",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "fail_records",
+      "type": "array",
+      "description": "失败记录",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/updateOrganizationInfo?app_key=your_appkey_here&method=logistics.updateOrganizationInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fail_records": [
+          {
+            "fail_desc": "xx",
+            "org_info": {
+              "father_org_code": "xx",
+              "father_org_name": "xx",
+              "org_address": {
+                "city_code": "xx",
+                "city_name": "xx",
+                "detail_address": "xx",
+                "district_code": "xx",
+                "district_name": "xx",
+                "lat": "xx",
+                "lon": "xx",
+                "province_code": "xx",
+                "province_name": "xx",
+                "street_code": "xx",
+                "street_name": "xx"
+              },
+              "org_code": "xx",
+              "org_contact": {
+                "name": "xx",
+                "phone": "xx"
+              },
+              "org_name": "xx",
+              "org_status": "1",
+              "org_type": "ZONG_BU",
+              "site_type": "1"
+            }
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5677",
+  "updatedAt": "2025-06-10",
+  "_file_stem": "logistics-provider-logistics-updateOrganizationInfo"
+}

@@ -1,0 +1,273 @@
+{
+  "id": "doudian.warehouse.yunc.reflow.inboundCallback",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.reflow.inboundCallback",
+  "description": "翻仓入库单回告接口",
+  "method": "GET",
+  "path": "/yunc/reflow/inboundCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码",
+      "example": "W1009",
+      "_depth": 0
+    },
+    {
+      "name": "inbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库单号",
+      "example": "IB123456",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "单据类型（CGRK-采购入库，XTRK-销退入库，DBRK-调拨入库，SCRK-生产入库，QTRK-其他入库）",
+      "example": "CGRK",
+      "_depth": 0
+    },
+    {
+      "name": "event_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "事件类型（1-已创建，2-分批收货，3-收货完成，4-已取消，6-上架完成，22-已登记）",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "slip_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "幂等号（唯一流水号）",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "occur_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "事件发生时间",
+      "example": "1658198430",
+      "_depth": 0
+    },
+    {
+      "name": "details",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "入库单明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品编码",
+      "example": "7072665065857597721",
+      "_depth": 1
+    },
+    {
+      "name": "total_qty",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "累计实收",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "received_qty",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "本次实收",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存类型（1-正品，2-残品）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "inventory_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "库存状态（1-正常，2-质检，3-冻结）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "batch_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "批次信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "batch_number",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次号",
+      "example": "123456",
+      "_depth": 2
+    },
+    {
+      "name": "product_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "生产日期",
+      "example": "1658198430",
+      "_depth": 2
+    },
+    {
+      "name": "expire_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "失效日期",
+      "example": "1658198430",
+      "_depth": 2
+    },
+    {
+      "name": "receipt_date",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "入库日期",
+      "example": "1658198430",
+      "_depth": 2
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供应商ID",
+      "example": "123456",
+      "_depth": 2
+    },
+    {
+      "name": "scm_inbound_order",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "SCM入库单号",
+      "example": "SC123456",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "错误码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误信息",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1207:入库单号不存在（sub_code: isv.business-failed:1207）",
+      "action": "1207:入库单号不存在",
+      "sub_code": "isv.business-failed:1207",
+      "sub_msg": "1207:入库单号不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1001:入库单[IB7437109344049987840]下明细不存在, 货品编码为[RL-KQ500D03], 行号为[521839041]（sub_code: isv.business-failed:1001）",
+      "action": "1001:入库单[IB7437109344049987840]下明细不存在, 货品编码为[RL-KQ500D03], 行号为[521839041]",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:入库单[IB7437109344049987840]下明细不存在, 货品编码为[RL-KQ500D03], 行号为[521839041]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 12000:获取仓库信息失败，请检查编码是否有效（sub_code: isv.business-failed:12000）",
+      "action": "12000:获取仓库信息失败，请检查编码是否有效",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "12000:获取仓库信息失败，请检查编码是否有效"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/reflow/inboundCallback?app_key=your_appkey_here&method=yunc.reflow.inboundCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "msg": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1207",
+      "sub_msg": "1207:入库单号不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2279",
+  "updatedAt": "2022-08-01",
+  "_file_stem": "warehouse-yunc-reflow-inboundCallback"
+}

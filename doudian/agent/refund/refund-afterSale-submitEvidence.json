@@ -1,0 +1,71 @@
+{
+  "id": "doudian.refund.afterSale.submitEvidence",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.submitEvidence",
+  "description": "卖家提交举证信息",
+  "method": "GET",
+  "path": "/afterSale/submitEvidence",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "售后单ID ，通过[/trade/refundListSearch](https://op.jinritemai.com/docs/api-docs/17/254) 或者 [/afterSale/refundProcessDetail](https://op.jinritemai.com/docs/api-docs/17/96) 获取",
+      "example": "1122",
+      "_depth": 0
+    },
+    {
+      "name": "comment",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "备注",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "evidence",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "[https://xxxx.jpg](https://xxxx.jpg/) | 凭证，最多四张",
+      "example": "[https://xxxx.jpg]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/submitEvidence?app_key=your_appkey_here&method=afterSale.submitEvidence&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/1853",
+  "updatedAt": "2021-01-04",
+  "_file_stem": "refund-afterSale-submitEvidence"
+}

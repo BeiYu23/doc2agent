@@ -1,0 +1,152 @@
+{
+  "id": "doudian.logistics.logistics.homeDeliveryCallback",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.homeDeliveryCallback",
+  "description": "履约结果推送",
+  "method": "GET",
+  "path": "/logistics/homeDeliveryCallback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "resource_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资源编码",
+      "example": "shentong",
+      "_depth": 0
+    },
+    {
+      "name": "waybill_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "123456789",
+      "_depth": 0
+    },
+    {
+      "name": "number_calls",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "电联次数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否接通\n0 未接通\n1 已接通",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "connect_result",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接通结果（消费者意愿）\n1 要上门\n2 要入柜\n3 不确定",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "time_ring_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "电联明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_connected",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "是否接通\n0 未接通\n1 已接通",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "time_ring",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电联时长，单位秒",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "is_home_delivery",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "是否送货上门\n1 本人签收\n2 家人代签\n3 朋友代签\n4 入柜\n5 入驿站\n6 入超市等代收点\n7 其他方代签\n8 其他",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "home_delivery_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "送货上门备注",
+      "example": "送货上门备注",
+      "_depth": 0
+    },
+    {
+      "name": "photograph",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签收图片",
+      "example": "图片信息",
+      "_depth": 0
+    },
+    {
+      "name": "biz_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务场景\nHomeDelivery -- 音需达\nSignAndReturn -- 签单返回\nFakeSign--派前电联",
+      "example": "SignAndReturn",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/homeDeliveryCallback?app_key=your_appkey_here&method=logistics.homeDeliveryCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2731",
+  "updatedAt": "2022-12-14",
+  "_file_stem": "logistics-logistics-homeDeliveryCallback"
+}

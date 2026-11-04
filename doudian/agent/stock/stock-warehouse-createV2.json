@@ -1,0 +1,160 @@
+{
+  "id": "doudian.stock.warehouse.createV2",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.createV2",
+  "description": "单个仓创建v2版本",
+  "method": "GET",
+  "path": "/warehouse/createV2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "仓相关信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_location",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "仓的地址编码",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "address_id1",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "地址1级编码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "address_id2",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "地址2级编码",
+      "example": "110000",
+      "_depth": 2
+    },
+    {
+      "name": "address_id3",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "地址3级编码",
+      "example": "110105",
+      "_depth": 2
+    },
+    {
+      "name": "address_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "地址4级编码",
+      "example": "110105023",
+      "_depth": 2
+    },
+    {
+      "name": "address_detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓的地址详情",
+      "example": "朝阳区东风乡将台洼村铁道路口西北",
+      "_depth": 1
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓名称",
+      "example": "测试仓",
+      "_depth": 0
+    },
+    {
+      "name": "intro",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓介绍",
+      "example": "介绍一下仓",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouse_id",
+      "type": "string",
+      "description": "内部仓id",
+      "example": "7020436784400253228"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:2）",
+      "action": "修改后重试",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:9999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:9999",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/createV2?app_key=your_appkey_here&method=warehouse.createV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "warehouse_id": "7020436784400253228"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/2390",
+  "updatedAt": "2022-08-18",
+  "_file_stem": "stock-warehouse-createV2"
+}

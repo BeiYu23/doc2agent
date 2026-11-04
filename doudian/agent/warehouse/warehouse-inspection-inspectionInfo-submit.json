@@ -1,0 +1,307 @@
+{
+  "id": "doudian.warehouse.inspection.inspectionInfo.submit",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "inspection.inspectionInfo.submit",
+  "description": "品控中心-质检结果回传",
+  "method": "GET",
+  "path": "/inspection/inspectionInfo/submit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inspection_result_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检结果",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_re_inspection",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否复检",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "inspection_items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "标准项",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "material_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "填写材料信息，根据获取检测模版接口下发的模版，上传符合条件的材料数据",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "select_item_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "材料类型为【单选】、【多选】时需要填充的信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "select_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "填写模版下发的select_code值",
+      "example": "item_code_1_test",
+      "_depth": 4
+    },
+    {
+      "name": "files",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "材料类型为【图片】、【视频】时需要填充的信息",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片、视频的url，需要保证能正常下载",
+      "example": "http://xx.jpg",
+      "_depth": 4
+    },
+    {
+      "name": "material_rule_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "材料id",
+      "example": "75623718441",
+      "_depth": 3
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "材料类型为【数字】、【单行文本】、【多行文本】时需要填充的信息",
+      "example": "测试",
+      "_depth": 3
+    },
+    {
+      "name": "material_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "填写材料信息，只给二手3C业务场景定制使用，其余场景使用material_info_list字段填写材料信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "文本形式结果",
+      "example": "九成新",
+      "_depth": 3
+    },
+    {
+      "name": "item_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准项code",
+      "example": "7369142527871615258_6",
+      "_depth": 2
+    },
+    {
+      "name": "reject_reason_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驳回原因code\n【Q301】禁售型号: 老旧型号 \n【Q302】成色不符: 成色差异驳回\n【Q303】货不对版或商品信息不一致",
+      "example": "Q301",
+      "_depth": 1
+    },
+    {
+      "name": "img_url",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检结果图片url,最多上传30张，图片大小不超过2MB。",
+      "example": "http://xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "inspection_result",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "质检结果枚举，1-合格，2-不合格",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "具体备注信息",
+      "_depth": 1
+    },
+    {
+      "name": "biz_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务身份参数，固定：second_hand_inspection",
+      "example": "second_hand_inspection",
+      "_depth": 0
+    },
+    {
+      "name": "task_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务身份参数，固定：each_goods_inspection",
+      "example": "each_goods_inspection",
+      "_depth": 0
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "1057157943",
+      "_depth": 0
+    },
+    {
+      "name": "event_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "结果回传时间秒级时间戳，如果传入则以传入为准，不传则以接口调用时间作为回传时间",
+      "example": "1719370910",
+      "_depth": 0
+    },
+    {
+      "name": "collection_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "示例如下(具体的标准集code需要对接研发核实，后续业务标准集如果有变动，也需要修改标准集code参数)\n1.平板传入：7369403576672141577_21\n2.笔记本电脑传入：7369424017386406171_23\n3.手机传入：7369157534777409802_22",
+      "example": "7369403576672141577_21",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 通用参数错误（sub_code: isv.parameter-invalid:30000）",
+      "action": "确认入参",
+      "sub_code": "isv.parameter-invalid:30000",
+      "sub_msg": "通用参数错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 上传结果个数不正确，共xx条任务（sub_code: isv.parameter-invalid:30201）",
+      "action": "上传正确个数的结果",
+      "sub_code": "isv.parameter-invalid:30201",
+      "sub_msg": "上传结果个数不正确，共xx条任务"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 备注超出限制（sub_code: isv.parameter-invalid:30202）",
+      "action": "备注需要在1000字内",
+      "sub_code": "isv.parameter-invalid:30202",
+      "sub_msg": "备注超出限制"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 驳回原因未填写（sub_code: isv.parameter-invalid:30203）",
+      "action": "不合格需要填写驳回原因",
+      "sub_code": "isv.parameter-invalid:30203",
+      "sub_msg": "驳回原因未填写"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 图片大小超出限制（sub_code: isv.parameter-invalid:30204）",
+      "action": "图片大小最大不超过10MB",
+      "sub_code": "isv.parameter-invalid:30204",
+      "sub_msg": "图片大小超出限制"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 图片个数超出限制（sub_code: isv.parameter-invalid:30205）",
+      "action": "单个质检结果最多50张报告",
+      "sub_code": "isv.parameter-invalid:30205",
+      "sub_msg": "图片个数超出限制"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:50000）",
+      "action": "联系研发",
+      "sub_code": "isp.service-error:50000",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50003:tosClient.PutObject error: success=-1 httpCode=429 code=8002 message=too many concurrency update cas conflict, please try again later. remoteAddr=[fdbd:dc02:22:517::35]:8789 reqID=527e4d3c7a66521d673c7a66-a9e9123, objectId: 17320167424662872960c69bc（sub_code: isv.business-failed:50003）",
+      "action": "50003:tosClient.PutObject error: success=-1 httpCode=429 code=8002 message=too many concurrency update cas conflict, please try again later. remoteAddr=[fdbd:dc02:22:517::35]:8789 reqID=527e4d3c7a66521d673c7a66-a9e9123, objectId: 17320167424662872960c69bc",
+      "sub_code": "isv.business-failed:50003",
+      "sub_msg": "50003:tosClient.PutObject error: success=-1 httpCode=429 code=8002 message=too many concurrency update cas conflict, please try again later. remoteAddr=[fdbd:dc02:22:517::35]:8789 reqID=527e4d3c7a66521d673c7a66-a9e9123, objectId: 17320167424662872960c69bc"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50001:商品信息获取失败，请重试（sub_code: isv.business-failed:50001）",
+      "action": "50001:商品信息获取失败，请重试",
+      "sub_code": "isv.business-failed:50001",
+      "sub_msg": "50001:商品信息获取失败，请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:30000",
+      "sub_msg": "通用参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/6768",
+  "updatedAt": "2025-10-24",
+  "_file_stem": "warehouse-inspection-inspectionInfo-submit"
+}

@@ -1,0 +1,135 @@
+{
+  "id": "doudian.sms.sms.bindTrafficDrivingParams",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.bindTrafficDrivingParams",
+  "description": "绑定引流链接",
+  "method": "GET",
+  "path": "/sms/bindTrafficDrivingParams",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级模板id",
+      "example": "S1T_xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "second_template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级模板id",
+      "example": "S2T_yyy",
+      "_depth": 0
+    },
+    {
+      "name": "template_traffic_driving_groups",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "引流信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "params",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "引流变量",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "param_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "变量类型 1普通变量 2链接",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "变量名",
+      "example": "url",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "变量内容",
+      "example": "z.douyin.com/iw",
+      "_depth": 2
+    },
+    {
+      "name": "sub_account",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "消息组id",
+      "example": "sfije",
+      "_depth": 0
+    },
+    {
+      "name": "signature",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签名",
+      "example": "北京基石泰来",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "string",
+      "description": "绑定结果",
+      "example": "failed"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/bindTrafficDrivingParams?app_key=your_appkey_here&method=sms.bindTrafficDrivingParams&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": "failed"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/8548",
+  "updatedAt": "2026-09-03",
+  "_file_stem": "sms-sms-bindTrafficDrivingParams"
+}

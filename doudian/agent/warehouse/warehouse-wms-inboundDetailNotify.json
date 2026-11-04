@@ -1,0 +1,269 @@
+{
+  "id": "doudian.warehouse.wms.inboundDetailNotify",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "wms.inboundDetailNotify",
+  "description": "入库明细回传，WMS回传入库数据时，使用该接口回传",
+  "method": "GET",
+  "path": "/wms/inboundDetailNotify",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "business_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务单据号",
+      "example": "12w",
+      "_depth": 0
+    },
+    {
+      "name": "reciept_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "WMS入库单据号",
+      "example": "q121",
+      "_depth": 0
+    },
+    {
+      "name": "sku_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "sku列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku编号",
+      "example": "\\\"12213\\\"",
+      "_depth": 1
+    },
+    {
+      "name": "sku_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku名称",
+      "example": "大力台灯",
+      "_depth": 1
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sn_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sn列表",
+      "example": "[\\\"12w\\\",\\\"12\\\"]",
+      "_depth": 1
+    },
+    {
+      "name": "quality_level",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品质等级：1 良品，2 不良品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "line_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "行号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "batchs",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批次",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "batch_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次号",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "production_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "生产日期",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "expiration_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "过期日期",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "origin_area",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "原产地",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "business_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务类型，10采购，20销售，30，其他入库，40调拨入库",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "入库仓库编码，外部编码",
+      "example": "qw23w",
+      "_depth": 0
+    },
+    {
+      "name": "sub_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "子类型，暂不使用，保留字段",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库时间",
+      "example": "2021-09-08 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "box_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "box",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku编码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "box_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "箱单id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "origin_area",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "原产地",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "data_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "生产日期",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/wms/inboundDetailNotify?app_key=your_appkey_here&method=wms.inboundDetailNotify&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1357",
+  "updatedAt": "2021-09-29",
+  "_file_stem": "warehouse-wms-inboundDetailNotify"
+}

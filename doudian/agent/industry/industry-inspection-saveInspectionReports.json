@@ -1,0 +1,494 @@
+{
+  "id": "doudian.industry.inspection.saveInspectionReports",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "inspection.saveInspectionReports",
+  "description": "创建/编辑验机报告",
+  "method": "GET",
+  "path": "/inspection/saveInspectionReports",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inspection_report_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要创建/保存的验机报告列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "reject_detail_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "驳回详情列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实拍图类型（如果驳回内容是实拍图）\nenum InspectionReportAppearanceImageType {\n    Unknown               = 0  // 其他\n    ScreenBack            = 10 // 屏幕背面\n    ScreenFront           = 11 // 屏幕正面\n    FrameTop              = 20 // 顶部边框\n    FrameBottom           = 21 // 底部边框\n    FrameLeft             = 22 // 左边框\n    FrameRight            = 23 // 右边框\n    FrameTopLeft45        = 24 // 顶-左边框 45°\n    FrameTopRight45       = 25 // 顶-右边框 45°\n    FrameBottomLeft45     = 26 // 底-左边框 45°\n    FrameBottomRight45    = 27 // 底-右边框 45°\n}",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "reject_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驳回原因",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "reject_content_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "驳回内容类型\nenum InspectionReportRejectContentType {\n    AppearanceImage = 1 // 实拍图\n    DefectImage     = 2 // 瑕疵图\n}",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "reject_content_index",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "驳回内容索引（从0开始）",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "base_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "验机报告基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "reject_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驳回原因",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "model_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "型号 ID",
+      "example": "559043",
+      "_depth": 2
+    },
+    {
+      "name": "category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目名",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "brand_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌 ID",
+      "example": "685293256",
+      "_depth": 2
+    },
+    {
+      "name": "qc_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检中心的验机报告编号",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "create_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建时间（时间戳）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "fineness",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "成色",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "inspection_report_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "验机报告 ID（填写了此id代表编辑报告，未填代表创建新报告）",
+      "example": "2026906645216366592",
+      "_depth": 2
+    },
+    {
+      "name": "model_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "型号名",
+      "example": "iPhone 17 Pro Max",
+      "_depth": 2
+    },
+    {
+      "name": "imei",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "IMEI",
+      "example": "123451234512345",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "验机报告备注",
+      "_depth": 2
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目 ID",
+      "example": "1000007628",
+      "_depth": 2
+    },
+    {
+      "name": "std_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准类目名",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "brand_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌名",
+      "example": "APPLE/苹果",
+      "_depth": 2
+    },
+    {
+      "name": "reject_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "驳回时间（时间戳）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "std_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准类目 ID",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "cover_image",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "封面图（用于列表页展示）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片 URL",
+      "example": "xx",
+      "_depth": 3
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外观图片类别\nenum InspectionReportAppearanceImageType {\n    Unknown               = 0  // 其他\n    ScreenBack            = 10 // 屏幕背面\n    ScreenFront           = 11 // 屏幕正面\n    FrameTop              = 20 // 顶部边框\n    FrameBottom           = 21 // 底部边框\n    FrameLeft             = 22 // 左边框\n    FrameRight            = 23 // 右边框\n    FrameTopLeft45        = 24 // 顶-左边框 45°\n    FrameTopRight45       = 25 // 顶-右边框 45°\n    FrameBottomLeft45     = 26 // 底-左边框 45°\n    FrameBottomRight45    = 27 // 底-右边框 45°\n}",
+      "example": "10",
+      "_depth": 3
+    },
+    {
+      "name": "collection_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准集编码（需要优先查询/inspection/getStandardCollection接口拿到标准集信息）",
+      "example": "7457180029220159759_152",
+      "_depth": 2
+    },
+    {
+      "name": "image_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "验机报告图片信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "defect_images",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "瑕疵实拍图",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外观图片类别\nenum InspectionReportAppearanceImageType {\n    Unknown               = 0  // 其他\n    ScreenBack            = 10 // 屏幕背面\n    ScreenFront           = 11 // 屏幕正面\n    FrameTop              = 20 // 顶部边框\n    FrameBottom           = 21 // 底部边框\n    FrameLeft             = 22 // 左边框\n    FrameRight            = 23 // 右边框\n    FrameTopLeft45        = 24 // 顶-左边框 45°\n    FrameTopRight45       = 25 // 顶-右边框 45°\n    FrameBottomLeft45     = 26 // 底-左边框 45°\n    FrameBottomRight45    = 27 // 底-右边框 45°\n}",
+      "example": "10",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片 URL",
+      "example": "xx",
+      "_depth": 3
+    },
+    {
+      "name": "appearance_images",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "外观实拍图（TaggedImage）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外观图片类型\nenum InspectionReportAppearanceImageType {\n    Unknown               = 0  // 其他\n    ScreenBack            = 10 // 屏幕背面\n    ScreenFront           = 11 // 屏幕正面\n    FrameTop              = 20 // 顶部边框\n    FrameBottom           = 21 // 底部边框\n    FrameLeft             = 22 // 左边框\n    FrameRight            = 23 // 右边框\n    FrameTopLeft45        = 24 // 顶-左边框 45°\n    FrameTopRight45       = 25 // 顶-右边框 45°\n    FrameBottomLeft45     = 26 // 底-左边框 45°\n    FrameBottomRight45    = 27 // 底-右边框 45°\n}",
+      "example": "10",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片 URL",
+      "example": "xx",
+      "_depth": 3
+    },
+    {
+      "name": "flow_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检流程列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "item_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检项的列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "item_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准项code",
+      "example": "7457181828446535988_2",
+      "_depth": 3
+    },
+    {
+      "name": "item_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准项名称",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "标准项值",
+      "example": "国行",
+      "_depth": 3
+    },
+    {
+      "name": "flow_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检流程的名称",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "flow_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检流程的 ID",
+      "example": "7611460237148815643",
+      "_depth": 2
+    },
+    {
+      "name": "merge_duplicate_imei",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否合并重复 IMEI 的报告（创建新报告时，控制IMEI重复时是编辑原有报告内容还是报错拦截）",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "响应code",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应message",
+      "example": ""
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必选参数（如 operator_info , operator_info.operator_id , inspection_report_list , base_info 不能为空）（sub_code: isv.missing-parameter:-41003）",
+      "action": "请检查并补充请求体中缺失的必传字段",
+      "sub_code": "isv.missing-parameter:-41003",
+      "sub_msg": "缺少必选参数（如 operator_info , operator_info.operator_id , inspection_report_list , base_info 不能为空）"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 传入的参数非法或不在允许范围内（例如 operator_id 非法、类目ID/型号ID不在可配置列表中、质检标准集不匹配或必填项未满足）（sub_code: isv.parameter-invalid:-41004）",
+      "action": "请根据错误提示检查类目ID、型号ID及标准集流等参数的正确性",
+      "sub_code": "isv.parameter-invalid:-41004",
+      "sub_msg": "传入的参数非法或不在允许范围内（例如 operator_id 非法、类目ID/型号ID不在可配置列表中、质检标准集不匹配或必填项未满足）"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 保存质检报告失败（sub_code: isv.business-failed:-41005）",
+      "action": "请检查报告数据是否正确，若重试仍失败请联系服务提供方",
+      "sub_code": "isv.business-failed:-41005",
+      "sub_msg": "保存质检报告失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 保存质检报告失败，服务无响应（sub_code: isp.service-error:-41002）",
+      "action": "服务端内部异常，请稍后重试或联系服务提供方",
+      "sub_code": "isp.service-error:-41002",
+      "sub_msg": "保存质检报告失败，服务无响应"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/inspection/saveInspectionReports?app_key=your_appkey_here&method=inspection.saveInspectionReports&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "result_list": [
+            {
+              "fail_reason": "",
+              "inspection_report_id": "2026906645216366592",
+              "is_duplicate_imei": "false",
+              "succeed": "true"
+            }
+          ]
+        },
+        "msg": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:-41003",
+      "sub_msg": "缺少必选参数（如 operator_info , operator_info.operator_id , inspection_report_list , base_info 不能为空）"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8259",
+  "updatedAt": "2026-04-28",
+  "_file_stem": "industry-inspection-saveInspectionReports"
+}

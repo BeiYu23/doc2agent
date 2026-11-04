@@ -1,0 +1,112 @@
+{
+  "id": "doudian.order.antispam.orderSend",
+  "platform": "doudian",
+  "group": "order",
+  "name": "antispam.orderSend",
+  "description": "支持使用在ISV系统商户发送（外部系统或模块，如快递平台）场景",
+  "method": "GET",
+  "path": "/antispam/orderSend",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "event_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "事件时间",
+      "example": "1624514492",
+      "_depth": 0
+    },
+    {
+      "name": "user",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "用户",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "uid_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户类型",
+      "example": "12",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "用户 ID",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "params",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "可变参数",
+      "example": "{\"account_id\":12345}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "decision",
+      "type": "object",
+      "description": "决策",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:-1）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/antispam/orderSend?app_key=your_appkey_here&method=antispam.orderSend&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "decision": {
+          "decision": "PASS",
+          "decision_detail": "detail",
+          "hit_status": "hint"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1840",
+  "updatedAt": "2021-07-05",
+  "_file_stem": "order-antispam-orderSend"
+}

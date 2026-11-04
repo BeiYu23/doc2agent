@@ -1,0 +1,68 @@
+{
+  "id": "doudian.install.install.store.providerStoreAbilityTemplate",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.providerStoreAbilityTemplate",
+  "description": "服务商的能力模板列表",
+  "method": "GET",
+  "path": "/install/store/providerStoreAbilityTemplate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目渠道",
+      "example": "类目渠道，0表示旧类目体系，1表示新类目体系",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "abilities",
+      "type": "array",
+      "description": "能力列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.providerStoreAbilityTemplate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "abilities": [
+          {
+            "ability_id": "34226_304099_7696",
+            "ability_name": "安装刹车片(不含解码)_黄色"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7657",
+  "updatedAt": "2026-02-05",
+  "_file_stem": "install-install-store-providerStoreAbilityTemplate"
+}

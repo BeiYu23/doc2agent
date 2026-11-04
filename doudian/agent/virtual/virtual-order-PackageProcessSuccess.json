@@ -1,0 +1,147 @@
+{
+  "id": "doudian.virtual.order.PackageProcessSuccess",
+  "platform": "doudian",
+  "group": "virtual",
+  "name": "order.PackageProcessSuccess",
+  "description": "套餐办理成功",
+  "method": "GET",
+  "path": "/order/PackageProcessSuccess",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 虚拟充值API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "子订单id",
+      "example": "\"123456\"",
+      "_depth": 0
+    },
+    {
+      "name": "combo_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "skuid",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "cert_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "卡券信息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "cert_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号与上面订单号保持一致",
+      "example": "\"123456\"",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "卡券状态",
+      "example": "固定值传2",
+      "_depth": 1
+    },
+    {
+      "name": "grant_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "发券时间,格式:秒级时间戳",
+      "example": "当前时间戳，秒级",
+      "_depth": 1
+    },
+    {
+      "name": "op",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "风控相关信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "platform",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作平台",
+      "example": "\"system\"",
+      "_depth": 1
+    },
+    {
+      "name": "op_uid",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "操作人uid",
+      "example": "123",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ret_message",
+      "type": "string",
+      "description": "返回信息",
+      "example": "\"成功\""
+    },
+    {
+      "name": "ret_status",
+      "type": "string",
+      "description": "返回状态,依据状态判定是否需要重试",
+      "example": "\"Success\""
+    },
+    {
+      "name": "ret_code",
+      "type": "string",
+      "description": "返回码",
+      "example": "\"0\""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/decryptByteDanceMobile?app_key=your_appkey_here&method=power.decryptByteDanceMobile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "real_tel_no": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/164/6903",
+  "updatedAt": "2024-09-24",
+  "_file_stem": "virtual-order-PackageProcessSuccess"
+}

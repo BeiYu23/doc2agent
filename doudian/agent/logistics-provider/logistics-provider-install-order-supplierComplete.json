@@ -1,0 +1,294 @@
+{
+  "id": "doudian.logistics-provider.install.order.supplierComplete",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "install.order.supplierComplete",
+  "description": "服务完成",
+  "method": "GET",
+  "path": "/install/order/supplierComplete",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "real_service_num",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "实际完成服务数量",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "report_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "报告列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报告链接",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "expiration_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报告过期时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "has_extra_fee",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "有无额外费用",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "install_fee_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "安装收费信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "structured_fee_detail_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "结构化收费明细列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "fee_item",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "收费项目",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "actual_total_amount_cent",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "实际单项总收费金额，单位分",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "price_unit",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "计价单位",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "fee_item_desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "收费项说明",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "actual_unit_price_cent",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "实际单价，单位分",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "actual_quantity",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实际发生数量",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "other_proof",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "其他证明(图片/pdf/html) url形式",
+      "example": "-",
+      "_depth": 1
+    },
+    {
+      "name": "special_case_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "特殊情况说明",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "unstructured_fee_detail_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "非结构化收费明细列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "fee_bill_material_url_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "收费单材料(图片/pdf/html) url形式",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "install_staff_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "安装人员信息",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "report_method",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "回传方式 1-结构化回传 2-非结构化回传",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "customer_confirmation_proof",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "用户确认证明(图片/pdf/html) url形式",
+      "example": "-",
+      "_depth": 1
+    },
+    {
+      "name": "supplement_install_fee_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否补录安装收费信息",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000006:状态机跃迁校验错误（sub_code: isv.business-failed:10000006）",
+      "action": "10000006:状态机跃迁校验错误",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000000:请求参数错误（sub_code: isv.business-failed:10000000）",
+      "action": "10000000:请求参数错误",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "10000000:请求参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000004:系统内部错误（sub_code: isv.business-failed:10000004）",
+      "action": "10000004:系统内部错误",
+      "sub_code": "isv.business-failed:10000004",
+      "sub_msg": "10000004:系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000031:不在安装收费信息补录时间窗口范围内（sub_code: isv.business-failed:10000031）",
+      "action": "10000031:不在安装收费信息补录时间窗口范围内",
+      "sub_code": "isv.business-failed:10000031",
+      "sub_msg": "10000031:不在安装收费信息补录时间窗口范围内"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/recycle/applyChangePrice?app_key=your_appkey_here&method=recycle.applyChangePrice&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "err_no": "1",
+        "message": "ok"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000006",
+      "sub_msg": "10000006:状态机跃迁校验错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5788",
+  "updatedAt": "2026-07-23",
+  "_file_stem": "logistics-provider-install-order-supplierComplete"
+}

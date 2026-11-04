@@ -1,0 +1,99 @@
+{
+  "id": "doudian.order.order.AddressAppliedSwitch",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.AddressAppliedSwitch",
+  "description": "支持调用后打开（或关闭）卖家针对买家收货地址变更的审核流程",
+  "method": "GET",
+  "path": "/order/AddressAppliedSwitch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "is_allowed",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "0代表关闭，不需要审核 1代表开启审核，买家变更需要审核",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "review_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0代表异步审核，1表示实时审核",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请重试（sub_code: isv.business-failed:20003）",
+      "action": "-",
+      "sub_code": "isv.business-failed:20003",
+      "sub_msg": "系统异常，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 开通失败，当前应用未接入spi接口（sub_code: isv.business-failed:30002）",
+      "action": "-",
+      "sub_code": "isv.business-failed:30002",
+      "sub_msg": "开通失败，当前应用未接入spi接口"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 关闭失败，无权关闭该权限（sub_code: isv.business-failed:50044）",
+      "action": "-",
+      "sub_code": "isv.business-failed:50044",
+      "sub_msg": "关闭失败，无权关闭该权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 开启失败，已存在有权限审核改地址的应用（sub_code: isv.business-failed:50045）",
+      "action": "-",
+      "sub_code": "isv.business-failed:50045",
+      "sub_msg": "开启失败，已存在有权限审核改地址的应用"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务器开小差了，请稍后重试（sub_code: isv.business-failed:20001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "服务器开小差了，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/AddressAppliedSwitch?app_key=your_appkey_here&method=order.AddressAppliedSwitch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20003",
+      "sub_msg": "系统异常，请重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/500",
+  "updatedAt": "2024-06-24",
+  "_file_stem": "order-order-AddressAppliedSwitch"
+}

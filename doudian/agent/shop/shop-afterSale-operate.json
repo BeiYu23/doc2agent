@@ -1,0 +1,353 @@
+{
+  "id": "doudian.shop.afterSale.operate",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "afterSale.operate",
+  "description": "售后审核接口聚合版",
+  "method": "GET",
+  "path": "/afterSale/operate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V5.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型；请查看API描述枚举值说明",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "操作售后详情",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "售后单号",
+      "example": "6959800000297566494",
+      "_depth": 1
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作原因，拒绝操作必填",
+      "example": "商品有破损",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作评论，拒绝操作必填",
+      "example": "商品有污渍，影响二次销售",
+      "_depth": 1
+    },
+    {
+      "name": "evidence",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "操作凭证编码，当【afterSale/rejectReasonCodeList】接口响应参数evidence_need=Y时，该参数必填；使用【afterSale/rejectReasonCodeList】接口获取响应参数中的reject_reason_code字段。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "凭证类型，1:图片，2:视频，3:音频(暂不支持展示)，4:文字(暂不支持展示)。“用户可见备注”为remark字段",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "凭证url",
+      "example": "http://xxxxxxxx.jpg",
+      "_depth": 2
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "凭证描述",
+      "example": "过敏部位图片",
+      "_depth": 2
+    },
+    {
+      "name": "logistics",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "同意退货/同意换货物流信息，当前type=101，301，311是该集合需要传值。",
+      "example": "-",
+      "_depth": 1
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流公司code，使用【/order/logisticsCompanyList】接口获取；type=311仅换货时需要填入",
+      "example": "yuantong",
+      "_depth": 2
+    },
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流单号（快递单号），仅type=311仅换货时需要填入",
+      "example": "YT31368712931",
+      "_depth": 2
+    },
+    {
+      "name": "receiver_address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "收件地址id（推荐使用），必须通过【/address/list】获取【address_id】填入。和after_sale_address_detail字段集合二选一；",
+      "example": "95251",
+      "_depth": 2
+    },
+    {
+      "name": "sender_address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "已废弃字段，（隐藏时间20220610）发件地址id",
+      "example": "95252",
+      "_depth": 2
+    },
+    {
+      "name": "after_sale_address_detail",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "商家同意退货/同意换货收件地址详情（不推荐使用）；和receiver_address_id字段二选一（推荐使用）；商家可以自定义退货地址。",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省；使用【/address/getProvince】接口获取",
+      "example": "北京",
+      "_depth": 3
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市；需要使用【/address/getAreasByProvince】接口响应参数获取",
+      "example": "北京",
+      "_depth": 3
+    },
+    {
+      "name": "town_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区；需要使用【/address/getAreasByProvince】接口响应参数获取",
+      "example": "海淀",
+      "_depth": 3
+    },
+    {
+      "name": "detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "地址详情",
+      "example": "北京市海淀区丹棱街1号305",
+      "_depth": 3
+    },
+    {
+      "name": "user_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人",
+      "example": "张三",
+      "_depth": 3
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系电话，支持手机号和固定电话；固定电话需要传入区号。注意：区号和号码之间一定要传入“-”传值示例：0571-1234567；否则会报错电话号码不合法。",
+      "example": "17777777777",
+      "_depth": 3
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "丹棱街",
+      "_depth": 3
+    },
+    {
+      "name": "province_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "省id；使用【/address/getProvince】接口获取",
+      "example": "10",
+      "_depth": 3
+    },
+    {
+      "name": "city_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "市id；需要使用【/address/getAreasByProvince】接口响应参数获取",
+      "example": "10",
+      "_depth": 3
+    },
+    {
+      "name": "town_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "区id；需要使用【/address/getAreasByProvince】接口响应参数获取",
+      "example": "01",
+      "_depth": 3
+    },
+    {
+      "name": "street_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "街道id；需要使用【/address/getAreasByProvince】接口响应参数获取",
+      "example": "12",
+      "_depth": 3
+    },
+    {
+      "name": "reject_reason_code",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "售后拒绝原因码，拒绝时必填填。通过/afterSale/rejectReasonCodeList获取",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "售后版本",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "门店ID",
+      "example": "",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "items",
+      "type": "array",
+      "description": "审核结果",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误，电话号码不合法（sub_code: isv.parameter-invalid:11000）",
+      "action": "检查电话号码后重试",
+      "sub_code": "isv.parameter-invalid:11000",
+      "sub_msg": "参数错误，电话号码不合法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 存在无效的售后单（sub_code: isp.service-error:10000）",
+      "action": "检查售后单后重试",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "存在无效的售后单"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 返回内容为空，重试后若错误继续存在，请联系平台（sub_code: isp.service-error:10002）",
+      "action": "重试",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "返回内容为空，重试后若错误继续存在，请联系平台"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 操作失败（sub_code: isv.business-failed:11005）",
+      "action": "检查后重试",
+      "sub_code": "isv.business-failed:11005",
+      "sub_msg": "操作失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/operate?app_key=your_appkey_here&method=afterSale.operate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "items": [
+          {
+            "aftersale_id": "6959800000297566494",
+            "status_code": "0",
+            "status_msg": "success"
+          }
+        ]
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:11000",
+      "sub_msg": "参数错误，电话号码不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2037",
+  "updatedAt": "2022-06-27",
+  "_file_stem": "shop-afterSale-operate"
+}

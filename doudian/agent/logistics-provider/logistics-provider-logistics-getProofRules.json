@@ -1,0 +1,88 @@
+{
+  "id": "doudian.logistics-provider.logistics.getProofRules",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.getProofRules",
+  "description": "查询举证规则",
+  "method": "GET",
+  "path": "/logistics/getProofRules",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓, 物流商, "
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "载体编码",
+      "example": "ems",
+      "_depth": 0
+    },
+    {
+      "name": "ticketType",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级工单类型码，多个以英文逗号拼接（例：\"11713,11714\"），为空时返回所有",
+      "example": "11501,11502",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ext",
+      "type": "string",
+      "description": "预留扩展字段",
+      "example": "\"\""
+    },
+    {
+      "name": "rule_map",
+      "type": "string",
+      "description": "key: 三级工单类型码 (typeCode), value: 该工单类型对应的规则结构",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40004）",
+      "action": "更新参数",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getProofRules?app_key=your_appkey_here&method=logistics.getProofRules&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ext": {},
+        "rule_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8391",
+  "updatedAt": "2026-07-13",
+  "_file_stem": "logistics-provider-logistics-getProofRules"
+}

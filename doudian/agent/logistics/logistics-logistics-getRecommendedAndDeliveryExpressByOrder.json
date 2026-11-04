@@ -1,0 +1,290 @@
+{
+  "id": "doudian.logistics.logistics.getRecommendedAndDeliveryExpressByOrder",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.getRecommendedAndDeliveryExpressByOrder",
+  "description": "查询订单维度快递可达及推荐服务",
+  "method": "GET",
+  "path": "/logistics/getRecommendedAndDeliveryExpressByOrder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sender_address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "发货地址",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "zip_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址，如果没有则传空字符串即可",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区",
+      "example": "海淀区",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道",
+      "example": "中关村街道",
+      "_depth": 1
+    },
+    {
+      "name": "address_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "order_info_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单信息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品类型，可不传",
+      "example": "byte_pt",
+      "_depth": 1
+    },
+    {
+      "name": "express_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "物流商集合，不传默认：yuantong、zhongtong、yunda、shunfeng、jd、jtexpress、shentong",
+      "example": "['zhongtong','yundan','shunfeng']",
+      "_depth": 1
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "order_channel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单平台来源编码，不传默认抖店",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回值",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:4006）",
+      "action": "根据错误描述检查参数",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:4007）",
+      "action": "一般重试可解决，若一直报错请联系oncall",
+      "sub_code": "isp.service-error:4007",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询订单信息失败（sub_code: isp.service-error:15000）",
+      "action": "一般重试可解决，若一直报错请联系oncall",
+      "sub_code": "isp.service-error:15000",
+      "sub_msg": "查询订单信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单信息不存在（sub_code: isv.business-failed:15002）",
+      "action": "检查传入订单号是否是抖店正确订单号",
+      "sub_code": "isv.business-failed:15002",
+      "sub_msg": "订单信息不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 用户未开通该服务（sub_code: isv.parameter-invalid:100001）",
+      "action": "抖店后台-物流服务-开通发货探查服务",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "用户未开通该服务"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getRecommendedAndDeliveryExpressByOrder?app_key=your_appkey_here&method=logistics.getRecommendedAndDeliveryExpressByOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "express_info_list": [
+              {
+                "ccr_Info": {
+                  "ccr_rate": "0.001",
+                  "level_percent": "0.2",
+                  "optimized_percent": "0.34"
+                },
+                "collect_sign_info": {
+                  "avg_cost_hours": "60.10",
+                  "level_percent": "23.86",
+                  "optimized_percent": "6.1"
+                },
+                "express": "zhongtong",
+                "is_deliverable": "true",
+                "is_recommended": "true",
+                "is_shop_eBill": "true",
+                "rank_route": "1",
+                "recommend_reason": "推荐原因",
+                "tail_Info": {
+                  "level_percent": "0.34",
+                  "optimized_percent": "0.2",
+                  "tail_rate": "0.001"
+                },
+                "undeliverable_reason": "服务不可达"
+              }
+            ],
+            "order_id": "123",
+            "order_privilege_info_list": [
+              {
+                "code": "priority_delivery",
+                "label": "优先发货",
+                "reason": "用户负反馈率高"
+              }
+            ]
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2856",
+  "updatedAt": "2026-08-12",
+  "_file_stem": "logistics-logistics-getRecommendedAndDeliveryExpressByOrder"
+}

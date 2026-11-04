@@ -1,0 +1,157 @@
+{
+  "id": "doudian.material.material.batchUploadVideoAsync",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.batchUploadVideoAsync",
+  "description": "批量上传视频到素材中心",
+  "method": "GET",
+  "path": "/material/batchUploadVideoAsync",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "materials",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "素材信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "该参数仅有2个作用：（1）一次请求中素材的唯一标示；（2）接口防并发，规则是：不同请求所有request_id排序之后拼接起来，若相同视为同一次请求",
+      "example": "123456789",
+      "_depth": 1
+    },
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件夹id，“0”为素材中心根目录。若想创建文件夹，请参考：https://ehome.bytedance.YOUR_SECRET_KEY?doc=true",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材名称，长度限制为50个字符，最好带上后缀",
+      "example": "这是一个视频.mp4",
+      "_depth": 1
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "视频url。如果是二进制上传，请使用file_uri字段。url和file_uri二选一，不能同时为空",
+      "example": "https://origin/xxxx",
+      "_depth": 1
+    },
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二进制文件对应的uri，获取方式请参考：https://op.jinritemai.com/docs/guide-docs/171/1719",
+      "example": "tos-cn-i-7veqoeduo3/9e1df78157524c63abf7caa9bb1e88e0",
+      "_depth": 1
+    },
+    {
+      "name": "material_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材类型，请传固定值：video",
+      "example": "video",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_map",
+      "type": "string",
+      "description": "成功上传的素材，key为参数中的request_id",
+      "example": ""
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "失败的素材，key为参数中的request_id",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参数错误（sub_code: isp.service-error:20001）",
+      "action": "检查参数",
+      "sub_code": "isp.service-error:20001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 30001:素材库容量不足（sub_code: isv.business-failed:30001）",
+      "action": "30001:素材库容量不足",
+      "sub_code": "isv.business-failed:30001",
+      "sub_msg": "30001:素材库容量不足"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 22006:当前文件夹下不支持创建该类素材（sub_code: isv.business-failed:22006）",
+      "action": "22006:当前文件夹下不支持创建该类素材",
+      "sub_code": "isv.business-failed:22006",
+      "sub_msg": "22006:当前文件夹下不支持创建该类素材"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31001:请求已生效，请勿重复请求（sub_code: isv.business-failed:31001）",
+      "action": "31001:请求已生效，请勿重复请求",
+      "sub_code": "isv.business-failed:31001",
+      "sub_msg": "31001:请求已生效，请勿重复请求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 22001:素材大小超出限制，图片限10M、视频限200M（sub_code: isv.business-failed:22001）",
+      "action": "22001:素材大小超出限制，图片限10M、视频限200M",
+      "sub_code": "isv.business-failed:22001",
+      "sub_msg": "22001:素材大小超出限制，图片限10M、视频限200M"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:20001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1617",
+  "updatedAt": "2022-10-11",
+  "_file_stem": "material-material-batchUploadVideoAsync"
+}

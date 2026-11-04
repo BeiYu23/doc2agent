@@ -1,0 +1,481 @@
+{
+  "id": "doudian.retail-product.instantShopping.product.editSchema",
+  "platform": "doudian",
+  "group": "retail-product",
+  "name": "instantShopping.product.editSchema",
+  "description": "商品发布schema编辑接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "commit",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否提审 true提审、false保存草稿",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "token",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品发布token",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "schema数据",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:schemaV2解析失败（sub_code: isv.business-failed:2010001）",
+      "action": "2010001:schemaV2解析失败",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:schemaV2解析失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010501:商品短标题未明确描述商品品名，请重新填写。（sub_code: isv.business-failed:2010501）",
+      "action": "2010501:商品短标题未明确描述商品品名，请重新填写。",
+      "sub_code": "isv.business-failed:2010501",
+      "sub_msg": "2010501:商品短标题未明确描述商品品名，请重新填写。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010041:商品信息审核中，不可编辑（sub_code: isv.business-failed:2010041）",
+      "action": "2010041:商品信息审核中，不可编辑",
+      "sub_code": "isv.business-failed:2010041",
+      "sub_msg": "2010041:商品信息审核中，不可编辑"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110215137:属性“面料材质“的填写格式已升级，属性值“棉“不符合填写格式要求，请点击属性输入框重新填写（sub_code: isv.business-failed:110215137）",
+      "action": "110215137:属性“面料材质“的填写格式已升级，属性值“棉“不符合填写格式要求，请点击属性输入框重新填写",
+      "sub_code": "isv.business-failed:110215137",
+      "sub_msg": "110215137:属性“面料材质“的填写格式已升级，属性值“棉“不符合填写格式要求，请点击属性输入框重新填写"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010102:系统检测审核不通过，内容未做修改，请修改后提交审核（sub_code: isv.business-failed:2010102）",
+      "action": "2010102:系统检测审核不通过，内容未做修改，请修改后提交审核",
+      "sub_code": "isv.business-failed:2010102",
+      "sub_msg": "2010102:系统检测审核不通过，内容未做修改，请修改后提交审核"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250121:尺码表需包含所有规格中的尺码，请补充尺码（sub_code: isv.business-failed:110250121）",
+      "action": "110250121:尺码表需包含所有规格中的尺码，请补充尺码",
+      "sub_code": "isv.business-failed:110250121",
+      "sub_msg": "110250121:尺码表需包含所有规格中的尺码，请补充尺码"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110215105:属性值“超迁”不在“帮面材质”的最新可选范围，请删除后重新选择（sub_code: isv.business-failed:110215105）",
+      "action": "110215105:属性值“超迁”不在“帮面材质”的最新可选范围，请删除后重新选择",
+      "sub_code": "isv.business-failed:110215105",
+      "sub_msg": "110215105:属性值“超迁”不在“帮面材质”的最新可选范围，请删除后重新选择"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010042:商品已删除，请先将商品恢复，再做修改（sub_code: isv.business-failed:2010042）",
+      "action": "2010042:商品已删除，请先将商品恢复，再做修改",
+      "sub_code": "isv.business-failed:2010042",
+      "sub_msg": "2010042:商品已删除，请先将商品恢复，再做修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250127:图片长宽比非1:1（sub_code: isv.business-failed:110250127）",
+      "action": "110250127:图片长宽比非1:1",
+      "sub_code": "isv.business-failed:110250127",
+      "sub_msg": "110250127:图片长宽比非1:1"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250015:白底图比例要求1:1（sub_code: isv.business-failed:110250015）",
+      "action": "110250015:白底图比例要求1:1",
+      "sub_code": "isv.business-failed:110250015",
+      "sub_msg": "110250015:白底图比例要求1:1"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101150:商品标题最长不能超过30个汉字（60个字符）（sub_code: isv.business-failed:110101150）",
+      "action": "110101150:商品标题最长不能超过30个汉字（60个字符）",
+      "sub_code": "isv.business-failed:110101150",
+      "sub_msg": "110101150:商品标题最长不能超过30个汉字（60个字符）"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:商品详情内容不能为空（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:商品详情内容不能为空",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:商品详情内容不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010003:类目属性填写不完整，请补充：CCC证书编号（sub_code: isv.business-failed:2010003）",
+      "action": "2010003:类目属性填写不完整，请补充：CCC证书编号",
+      "sub_code": "isv.business-failed:2010003",
+      "sub_msg": "2010003:类目属性填写不完整，请补充：CCC证书编号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110370101:商品属性[面料成分含量]填写格式不正确，不支持发布（sub_code: isv.business-failed:110370101）",
+      "action": "110370101:商品属性[面料成分含量]填写格式不正确，不支持发布",
+      "sub_code": "isv.business-failed:110370101",
+      "sub_msg": "110370101:商品属性[面料成分含量]填写格式不正确，不支持发布"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110290001:请上传食品生产许可证（sub_code: isv.business-failed:110290001）",
+      "action": "110290001:请上传食品生产许可证",
+      "sub_code": "isv.business-failed:110290001",
+      "sub_msg": "110290001:请上传食品生产许可证"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010316:该类目需要支持7天无理由退货（sub_code: isv.business-failed:2010316）",
+      "action": "2010316:该类目需要支持7天无理由退货",
+      "sub_code": "isv.business-failed:2010316",
+      "sub_msg": "2010316:该类目需要支持7天无理由退货"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110330102:请修改“售后服务“，该类目已不再支持该售后政策（sub_code: isv.business-failed:110330102）",
+      "action": "110330102:请修改“售后服务“，该类目已不再支持该售后政策",
+      "sub_code": "isv.business-failed:110330102",
+      "sub_msg": "110330102:请修改“售后服务“，该类目已不再支持该售后政策"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010020:型号：该型号填写非法，请按商品对应的实际型号填写（sub_code: isv.business-failed:2010020）",
+      "action": "2010020:型号：该型号填写非法，请按商品对应的实际型号填写",
+      "sub_code": "isv.business-failed:2010020",
+      "sub_msg": "2010020:型号：该型号填写非法，请按商品对应的实际型号填写"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250128:主图3：4比例要求3:4（sub_code: isv.business-failed:110250128）",
+      "action": "110250128:主图3：4比例要求3:4",
+      "sub_code": "isv.business-failed:110250128",
+      "sub_msg": "110250128:主图3：4比例要求3:4"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110200024:须补缴保证金<b>¥9.00</b>(保证金余额<b>¥1,991.00</b>；发布此商品应缴纳类目基础保证金<b>¥2,000.00</b>)，点击“<a href='/ffa/content/shop_deposit' target=\"_blank\">立即充值</a>”补充保证金后可发布商品，详见<a href='https://school.jinritemai.com/doudian/web/article/101830?from=shop_table&btm_ppre=a4（sub_code: isv.business-failed:110200024）",
+      "action": "110200024:须补缴保证金<b>¥9.00</b>(保证金余额<b>¥1,991.00</b>；发布此商品应缴纳类目基础保证金<b>¥2,000.00</b>)，点击“<a href='/ffa/content/shop_deposit' target=\"_blank\">立即充值</a>”补充保证金后可发布商品，详见<a href='https://school.jinritemai.com/doudian/web/article/101830?from=shop_table&btm_ppre=a4",
+      "sub_code": "isv.business-failed:110200024",
+      "sub_msg": "110200024:须补缴保证金<b>¥9.00</b>(保证金余额<b>¥1,991.00</b>；发布此商品应缴纳类目基础保证金<b>¥2,000.00</b>)，点击“<a href='/ffa/content/shop_deposit' target=\"_blank\">立即充值</a>”补充保证金后可发布商品，详见<a href='https://school.jinritemai.com/doudian/web/article/101830?from=shop_table&btm_ppre=a4"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270180:校验预售发货信息失败暂不支持该发货模式（sub_code: isv.business-failed:110270180）",
+      "action": "110270180:校验预售发货信息失败暂不支持该发货模式",
+      "sub_code": "isv.business-failed:110270180",
+      "sub_msg": "110270180:校验预售发货信息失败暂不支持该发货模式"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220132:当前商品从现货+预售模式切换，请移除发货时效规（sub_code: isv.business-failed:110220132）",
+      "action": "110220132:当前商品从现货+预售模式切换，请移除发货时效规",
+      "sub_code": "isv.business-failed:110220132",
+      "sub_msg": "110220132:当前商品从现货+预售模式切换，请移除发货时效规"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220109:规格图片长宽比非1:1（sub_code: isv.business-failed:110220109）",
+      "action": "110220109:规格图片长宽比非1:1",
+      "sub_code": "isv.business-failed:110220109",
+      "sub_msg": "110220109:规格图片长宽比非1:1"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250123:您上传的商品主图存在重复，请核对后重新上传（sub_code: isv.business-failed:110250123）",
+      "action": "110250123:您上传的商品主图存在重复，请核对后重新上传",
+      "sub_code": "isv.business-failed:110250123",
+      "sub_msg": "110250123:您上传的商品主图存在重复，请核对后重新上传"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220165:属性填写不符合要求,面料材质属性值含量之和要求为100%, 请至抖店商品编辑页面刷新页面重试（sub_code: isv.business-failed:110220165）",
+      "action": "110220165:属性填写不符合要求,面料材质属性值含量之和要求为100%, 请至抖店商品编辑页面刷新页面重试",
+      "sub_code": "isv.business-failed:110220165",
+      "sub_msg": "110220165:属性填写不符合要求,面料材质属性值含量之和要求为100%, 请至抖店商品编辑页面刷新页面重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010013:查询品牌信息失败（sub_code: isv.business-failed:2010013）",
+      "action": "2010013:查询品牌信息失败",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "2010013:查询品牌信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101131:短标题必须在4~12个字（sub_code: isv.business-failed:110101131）",
+      "action": "110101131:短标题必须在4~12个字",
+      "sub_code": "isv.business-failed:110101131",
+      "sub_msg": "110101131:短标题必须在4~12个字"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110105004:规格信息和sku信息必须同时更新（sub_code: isv.business-failed:110105004）",
+      "action": "110105004:规格信息和sku信息必须同时更新",
+      "sub_code": "isv.business-failed:110105004",
+      "sub_msg": "110105004:规格信息和sku信息必须同时更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010063:为保障消费者权益，“0元入驻”试运营期间的商家店铺会进行发品数量的限制，商品已达上限，暂不支持添加商品，您可通过【抖店-资金-店铺保证金】缴纳保证金至足额后继续此操作，相关详情可查阅《抖音电商“0元入驻”试运营规范》。（sub_code: isv.business-failed:2010063）",
+      "action": "2010063:为保障消费者权益，“0元入驻”试运营期间的商家店铺会进行发品数量的限制，商品已达上限，暂不支持添加商品，您可通过【抖店-资金-店铺保证金】缴纳保证金至足额后继续此操作，相关详情可查阅《抖音电商“0元入驻”试运营规范》。",
+      "sub_code": "isv.business-failed:2010063",
+      "sub_msg": "2010063:为保障消费者权益，“0元入驻”试运营期间的商家店铺会进行发品数量的限制，商品已达上限，暂不支持添加商品，您可通过【抖店-资金-店铺保证金】缴纳保证金至足额后继续此操作，相关详情可查阅《抖音电商“0元入驻”试运营规范》。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110240107:该商品已报名限时特卖，不可修改库存类型（sub_code: isv.business-failed:110240107）",
+      "action": "110240107:该商品已报名限时特卖，不可修改库存类型",
+      "sub_code": "isv.business-failed:110240107",
+      "sub_msg": "110240107:该商品已报名限时特卖，不可修改库存类型"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220162:至少启用一个SKU，不允许所有SKU都为下架（sub_code: isv.business-failed:110220162）",
+      "action": "110220162:至少启用一个SKU，不允许所有SKU都为下架",
+      "sub_code": "isv.business-failed:110220162",
+      "sub_msg": "110220162:至少启用一个SKU，不允许所有SKU都为下架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270179:校验预售发货信息失败发货时间配置不满足要求（sub_code: isv.business-failed:110270179）",
+      "action": "110270179:校验预售发货信息失败发货时间配置不满足要求",
+      "sub_code": "isv.business-failed:110270179",
+      "sub_msg": "110270179:校验预售发货信息失败发货时间配置不满足要求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250142:区间值前后至少有一个数字（sub_code: isv.business-failed:110250142）",
+      "action": "110250142:区间值前后至少有一个数字",
+      "sub_code": "isv.business-failed:110250142",
+      "sub_msg": "110250142:区间值前后至少有一个数字"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010043:商品已被封禁（sub_code: isv.business-failed:2010043）",
+      "action": "2010043:商品已被封禁",
+      "sub_code": "isv.business-failed:2010043",
+      "sub_msg": "2010043:商品已被封禁"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110215118:属性厚度的属性值不在属性值选项列表中，属性值的自定义类型diy_type需要=1（sub_code: isv.business-failed:110215118）",
+      "action": "110215118:属性厚度的属性值不在属性值选项列表中，属性值的自定义类型diy_type需要=1",
+      "sub_code": "isv.business-failed:110215118",
+      "sub_msg": "110215118:属性厚度的属性值不在属性值选项列表中，属性值的自定义类型diy_type需要=1"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220153:规格值的备注:350g辣炒料*1袋（大包装）【保质期至24年12月】 长度不能大于18,请修改后重试（sub_code: isv.business-failed:110220153）",
+      "action": "110220153:规格值的备注:350g辣炒料*1袋（大包装）【保质期至24年12月】 长度不能大于18,请修改后重试",
+      "sub_code": "isv.business-failed:110220153",
+      "sub_msg": "110220153:规格值的备注:350g辣炒料*1袋（大包装）【保质期至24年12月】 长度不能大于18,请修改后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270166:请填写重量（sub_code: isv.business-failed:110270166）",
+      "action": "110270166:请填写重量",
+      "sub_code": "isv.business-failed:110270166",
+      "sub_msg": "110270166:请填写重量"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010022:【状态非法】商品审核状态错误, 当前状态: 待审核（sub_code: isv.business-failed:2010022）",
+      "action": "2010022:【状态非法】商品审核状态错误, 当前状态: 待审核",
+      "sub_code": "isv.business-failed:2010022",
+      "sub_msg": "2010022:【状态非法】商品审核状态错误, 当前状态: 待审核"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110310110:当前商品正在参与活动 30-秒杀20241117 20:28:18，商品sku价格不得低于活动到手价格￥503.49元，请修改后重新提交。（sub_code: isv.business-failed:110310110）",
+      "action": "110310110:当前商品正在参与活动 30-秒杀20241117 20:28:18，商品sku价格不得低于活动到手价格￥503.49元，请修改后重新提交。",
+      "sub_code": "isv.business-failed:110310110",
+      "sub_msg": "110310110:当前商品正在参与活动 30-秒杀20241117 20:28:18，商品sku价格不得低于活动到手价格￥503.49元，请修改后重新提交。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010340:当前商品使用的品牌未关联当前类目，请切换品牌或者前往商家资质中心补全品牌资质信息，之后再上架商品。（sub_code: isv.business-failed:2010340）",
+      "action": "2010340:当前商品使用的品牌未关联当前类目，请切换品牌或者前往商家资质中心补全品牌资质信息，之后再上架商品。",
+      "sub_code": "isv.business-failed:2010340",
+      "sub_msg": "2010340:当前商品使用的品牌未关联当前类目，请切换品牌或者前往商家资质中心补全品牌资质信息，之后再上架商品。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010021:提交商品失败（sub_code: isv.business-failed:2010021）",
+      "action": "2010021:提交商品失败",
+      "sub_code": "isv.business-failed:2010021",
+      "sub_msg": "2010021:提交商品失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010005:<span>该商品的类目【服饰配件/皮带/帽子/围巾/围巾/丝巾/披肩】无资质授权,请前往<a href='/ffa/grs/qualification/list' target='_blank'>【店铺-店铺信息设置-店铺资质-行业资质】</a>中申请授权</span>（sub_code: isv.business-failed:2010005）",
+      "action": "2010005:<span>该商品的类目【服饰配件/皮带/帽子/围巾/围巾/丝巾/披肩】无资质授权,请前往<a href='/ffa/grs/qualification/list' target='_blank'>【店铺-店铺信息设置-店铺资质-行业资质】</a>中申请授权</span>",
+      "sub_code": "isv.business-failed:2010005",
+      "sub_msg": "2010005:<span>该商品的类目【服饰配件/皮带/帽子/围巾/围巾/丝巾/披肩】无资质授权,请前往<a href='/ffa/grs/qualification/list' target='_blank'>【店铺-店铺信息设置-店铺资质-行业资质】</a>中申请授权</span>"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010329:当前店铺类型下, 使用/品牌，需要去资质中心上传品牌资质。去上传>https://zjsms.com/NEvh47E/（sub_code: isv.business-failed:2010329）",
+      "action": "2010329:当前店铺类型下, 使用/品牌，需要去资质中心上传品牌资质。去上传>https://zjsms.com/NEvh47E/",
+      "sub_code": "isv.business-failed:2010329",
+      "sub_msg": "2010329:当前店铺类型下, 使用/品牌，需要去资质中心上传品牌资质。去上传>https://zjsms.com/NEvh47E/"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110215012:类目属性「层数」长度过长，请修改后重试；（sub_code: isv.business-failed:110215012）",
+      "action": "110215012:类目属性「层数」长度过长，请修改后重试；",
+      "sub_code": "isv.business-failed:110215012",
+      "sub_msg": "110215012:类目属性「层数」长度过长，请修改后重试；"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220143:属性:面料材质填写不符合要求,面料材质样式已调整,请至抖店商品编辑页面刷新页面重试（sub_code: isv.business-failed:110220143）",
+      "action": "110220143:属性:面料材质填写不符合要求,面料材质样式已调整,请至抖店商品编辑页面刷新页面重试",
+      "sub_code": "isv.business-failed:110220143",
+      "sub_msg": "110220143:属性:面料材质填写不符合要求,面料材质样式已调整,请至抖店商品编辑页面刷新页面重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110210021:该商品对应的类目已处于禁发状态，需先修改商品对应类目为合适类目（sub_code: isv.business-failed:110210021）",
+      "action": "110210021:该商品对应的类目已处于禁发状态，需先修改商品对应类目为合适类目",
+      "sub_code": "isv.business-failed:110210021",
+      "sub_msg": "110210021:该商品对应的类目已处于禁发状态，需先修改商品对应类目为合适类目"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010320:品牌必填，请重新选择品牌（sub_code: isv.business-failed:2010320）",
+      "action": "2010320:品牌必填，请重新选择品牌",
+      "sub_code": "isv.business-failed:2010320",
+      "sub_msg": "2010320:品牌必填，请重新选择品牌"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101214:商品因处置下架且未修改商品信息，请先修改商品再重新提交上架（sub_code: isv.business-failed:110101214）",
+      "action": "110101214:商品因处置下架且未修改商品信息，请先修改商品再重新提交上架",
+      "sub_code": "isv.business-failed:110101214",
+      "sub_msg": "110101214:商品因处置下架且未修改商品信息，请先修改商品再重新提交上架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110270152:校验预售发货信息失败预售结束时间小于当前时间（sub_code: isv.business-failed:110270152）",
+      "action": "110270152:校验预售发货信息失败预售结束时间小于当前时间",
+      "sub_code": "isv.business-failed:110270152",
+      "sub_msg": "110270152:校验预售发货信息失败预售结束时间小于当前时间"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010318:当前商品选择的品牌信息已过期，请更新品牌资质信息，或更换商品品牌后，再提交商品发布。（sub_code: isv.business-failed:2010318）",
+      "action": "2010318:当前商品选择的品牌信息已过期，请更新品牌资质信息，或更换商品品牌后，再提交商品发布。",
+      "sub_code": "isv.business-failed:2010318",
+      "sub_msg": "2010318:当前商品选择的品牌信息已过期，请更新品牌资质信息，或更换商品品牌后，再提交商品发布。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101145:“商品标题”不可含有Tab符（sub_code: isv.business-failed:110101145）",
+      "action": "110101145:“商品标题”不可含有Tab符",
+      "sub_code": "isv.business-failed:110101145",
+      "sub_msg": "110101145:“商品标题”不可含有Tab符"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220137:规格填写不符合要求:支持填写[[口味分类 总净重]],实际填写[[总净含量 总净重]]（sub_code: isv.business-failed:110220137）",
+      "action": "110220137:规格填写不符合要求:支持填写[[口味分类 总净重]],实际填写[[总净含量 总净重]]",
+      "sub_code": "isv.business-failed:110220137",
+      "sub_msg": "110220137:规格填写不符合要求:支持填写[[口味分类 总净重]],实际填写[[总净含量 总净重]]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110220138:规格填写不符合要求:[总净重]必填（sub_code: isv.business-failed:110220138）",
+      "action": "110220138:规格填写不符合要求:[总净重]必填",
+      "sub_code": "isv.business-failed:110220138",
+      "sub_msg": "110220138:规格填写不符合要求:[总净重]必填"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250126:您上传的商品主图存在重复，请核对后重新上传（sub_code: isv.business-failed:110250126）",
+      "action": "110250126:您上传的商品主图存在重复，请核对后重新上传",
+      "sub_code": "isv.business-failed:110250126",
+      "sub_msg": "110250126:您上传的商品主图存在重复，请核对后重新上传"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110101146:“短标题”不可含有emoji表情等特殊符号（sub_code: isv.business-failed:110101146）",
+      "action": "110101146:“短标题”不可含有emoji表情等特殊符号",
+      "sub_code": "isv.business-failed:110101146",
+      "sub_msg": "110101146:“短标题”不可含有emoji表情等特殊符号"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010339:存在审批中素材(白底图)，请等待审批（sub_code: isv.business-failed:2010339）",
+      "action": "2010339:存在审批中素材(白底图)，请等待审批",
+      "sub_code": "isv.business-failed:2010339",
+      "sub_msg": "2010339:存在审批中素材(白底图)，请等待审批"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110330124:该商品必须配置三包服务承诺（sub_code: isv.business-failed:110330124）",
+      "action": "110330124:该商品必须配置三包服务承诺",
+      "sub_code": "isv.business-failed:110330124",
+      "sub_msg": "110330124:该商品必须配置三包服务承诺"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.product.editSchema&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:schemaV2解析失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1570/7451",
+  "updatedAt": "2026-07-15",
+  "_file_stem": "retail-product-instantShopping-product-editSchema"
+}

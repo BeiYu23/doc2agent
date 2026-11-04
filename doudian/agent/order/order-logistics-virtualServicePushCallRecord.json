@@ -1,0 +1,319 @@
+{
+  "id": "doudian.order.logistics.virtualServicePushCallRecord",
+  "platform": "doudian",
+  "group": "order",
+  "name": "logistics.virtualServicePushCallRecord",
+  "description": "虚拟号服务商通话记录回传",
+  "method": "GET",
+  "path": "/logistics/virtualServicePushCallRecord",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务id",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商标识",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_a",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "被叫号码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_x",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "虚拟主号",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_b",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "主叫号码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_y",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "来显号码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "sub_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "绑定id",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "10：A号主叫，即A回呼 11：A号被叫，即A呼入 12：未输入分机号放弃呼叫 20：无绑定关系，即Xx无绑定号码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发起呼叫时间 格式: yyyy-MM-dd HH:mm:ss",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ringing_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "振铃开始时间格式: yyyy-MM-dd HH:mm:ss",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "通话开始时间格式: yyyy-MM-dd HH:mm:ss",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "release_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "通话结束时间格式: yyyy-MM-dd HH:mm:ss",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_duration",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "通话时长",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ringing_duration",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "振铃时长",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "通话标识",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "release_dir",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "释放方向1表示主叫, 2表示被叫，0表示平台释放",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "release_cause",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "释放原因",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_display",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "来显控制当其他号码为主叫时，是否在被叫上显示其他号码的真实号码。 0：不显示真实号码；1：显示真实号码。默认是0不显示真实号码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_recording",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "录音控制",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "record_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通话录音地址",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ringing_record_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "振铃录音地址",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "area_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "对应绑定请求中areacode",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接入商自有字段",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "tel_xext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四位分机号",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "collect_num_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发起收号时获取的时间。格式YYYY-MM-DD HH:mm:SS",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "call_state",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "呼叫状态 ANSWERED通话成功，被叫接通，双方成功建立通话 BUSY被叫正忙 NO_ANSWER被叫无应答 REJECT被叫拒接 HANGUP主叫放弃 INVALID_NUMBER空号，话务平台返回的号码是空号，非返回字段为空 POWER_OFF被叫关机 UNAVAILABLE被叫暂时无法接听，不在服务区、暂时无法接通（不关机拔电池）等SUSPEND被叫停机 NO_BINDING无绑定关系 BANNED无权呼叫 OTHER其他失败情形",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外字段",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:获取分布式锁失败（sub_code: isv.business-failed:-1）",
+      "action": "-1:获取分布式锁失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:获取分布式锁失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/orienPlanAuthors?app_key=your_appkey_here&method=buyin.orienPlanAuthors&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "orien_plan_authors": [
+          {
+            "apply_id": "1",
+            "apply_info": "申请加入",
+            "apply_suc_time": "1625480546",
+            "apply_time": "1625480546",
+            "audit_status": "1",
+            "buyin_id": "11111",
+            "end_time": "end_time",
+            "orien_plan_id": "1233221",
+            "user_name": "达人昵称"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:获取分布式锁失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/2735",
+  "updatedAt": "2022-11-14",
+  "_file_stem": "order-logistics-virtualServicePushCallRecord"
+}

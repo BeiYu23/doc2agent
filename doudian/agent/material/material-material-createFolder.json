@@ -1,0 +1,151 @@
+{
+  "id": "doudian.material.material.createFolder",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.createFolder",
+  "description": "创建文件夹",
+  "method": "GET",
+  "path": "/material/createFolder",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商, 小程序"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V4.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件夹名称。最多20字符",
+      "example": "商品图片素材",
+      "_depth": 0
+    },
+    {
+      "name": "parent_folder_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "父文件夹id，根目录为0。不传该参数默认在根目录下创建文件夹",
+      "example": "70036799713989921721250",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "folder_id",
+      "type": "string",
+      "description": "文件夹id，全局唯一",
+      "example": "7000254886243811628"
+    },
+    {
+      "name": "parent_folder_id",
+      "type": "string",
+      "description": "父文件夹id，全局唯一",
+      "example": "7000254886243746092"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "文件夹名称",
+      "example": "商品图片素材"
+    },
+    {
+      "name": "type",
+      "type": "mixed",
+      "description": "文件夹类型。0-用户自建 1-默认 2-系统文件夹",
+      "example": "1"
+    },
+    {
+      "name": "is_new",
+      "type": "boolean",
+      "description": "判断文件夹是否为新创建的；\n若父文件夹下存在同名文件夹，创建时返回该同名文件夹id，is_new为false；\n若不存在同名文件夹且创建成功，则is_new为true，表示为新创建的文件夹。",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误，请调整参数（sub_code: isv.parameter-invalid:20001）",
+      "action": "参数不正确，调整参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "参数错误，请调整参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10004）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 同一父文件夹下，最多有100个子文件夹（sub_code: isv.parameter-invalid:21001）",
+      "action": "同一父文件夹下，最多有100个子文件夹",
+      "sub_code": "isv.parameter-invalid:21001",
+      "sub_msg": "同一父文件夹下，最多有100个子文件夹"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 待创建的文件夹属性和父级文件夹属性不一致（sub_code: isv.parameter-invalid:21007）",
+      "action": "图片文件夹只能存文件，视频文件夹只能存视频",
+      "sub_code": "isv.parameter-invalid:21007",
+      "sub_msg": "待创建的文件夹属性和父级文件夹属性不一致"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10003）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:10003",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 文件夹层数超出最大限制（sub_code: isv.business-failed:21002）",
+      "action": "文件夹层数超出最大限制",
+      "sub_code": "isv.business-failed:21002",
+      "sub_msg": "文件夹层数超出最大限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材中心尚未初始化，请联系客服或稍后重试（sub_code: isv.business-failed:30003）",
+      "action": "素材中心尚未初始化，请联系客服或稍后重试",
+      "sub_code": "isv.business-failed:30003",
+      "sub_msg": "素材中心尚未初始化，请联系客服或稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 30004:仅支持正常运营的商家创建素材/文件夹（sub_code: isv.business-failed:30004）",
+      "action": "30004:仅支持正常运营的商家创建素材/文件夹",
+      "sub_code": "isv.business-failed:30004",
+      "sub_msg": "30004:仅支持正常运营的商家创建素材/文件夹"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "参数错误，请调整参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/946",
+  "updatedAt": "2024-06-12",
+  "_file_stem": "material-material-createFolder"
+}

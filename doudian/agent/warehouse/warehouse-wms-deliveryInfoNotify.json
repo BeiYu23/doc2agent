@@ -1,0 +1,116 @@
+{
+  "id": "doudian.warehouse.wms.deliveryInfoNotify",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "wms.deliveryInfoNotify",
+  "description": "仓储系统回传发货信息",
+  "method": "GET",
+  "path": "/wms/deliveryInfoNotify",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_des",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "描述",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "时间",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_user",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operator_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "timestamp",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时间戳",
+      "example": "2021-10-12 10:00:00",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 通用业务错误码（sub_code: isv.business-failed:-1）",
+      "action": "参考返回值中的message字段",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "通用业务错误码"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/wms/deliveryInfoNotify?app_key=your_appkey_here&method=wms.deliveryInfoNotify&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "通用业务错误码"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1374",
+  "updatedAt": "2021-10-12",
+  "_file_stem": "warehouse-wms-deliveryInfoNotify"
+}

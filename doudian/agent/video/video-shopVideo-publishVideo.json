@@ -1,0 +1,185 @@
+{
+  "id": "doudian.video.shopVideo.publishVideo",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.publishVideo",
+  "description": "投稿短视频",
+  "method": "GET",
+  "path": "/shopVideo/publishVideo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "anchor_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "短视频锚点（关联商品）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "锚点类型：3-国内电商（挂车），7-电商种草",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "锚点关联商品id，当前只支持关联一个商品",
+      "example": "[1]",
+      "_depth": 1
+    },
+    {
+      "name": "basic_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "短视频基础信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "media_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频id",
+      "example": "v0d27cg10001csve2qfog65o283c1h0g",
+      "_depth": 1
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "描述",
+      "example": "描述",
+      "_depth": 1
+    },
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标题",
+      "example": "标题",
+      "_depth": 1
+    },
+    {
+      "name": "activity_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "活动列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动id",
+      "example": "2222",
+      "_depth": 2
+    },
+    {
+      "name": "activity_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动名称",
+      "example": "蛋仔派对互动玩法开播活动",
+      "_depth": 2
+    },
+    {
+      "name": "cover_image_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "封面uri，通过sdk上传封面素材后获取。\n上传方式见：https://bytedance.larkoffice.com/docx/doxcnyCpq3C9gik15T2dtKK0Tlc?source_type=message&from=message",
+      "example": "tos-cn-i-jm8ajry58r/eef3500af8084b3586c9c15e91c1e89f",
+      "_depth": 1
+    },
+    {
+      "name": "hotspot",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "热点",
+      "example": "小米YU7定价预测",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "item_id",
+      "type": "mixed",
+      "description": "抖音主端短视频ID",
+      "example": "33322133"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "根据返回文案调整参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部错误（sub_code: isp.service-error:501）",
+      "action": "请尝试重新调用接口",
+      "sub_code": "isp.service-error:501",
+      "sub_msg": "内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺未绑定人店一体账号（sub_code: isv.business-failed:628002009）",
+      "action": "引导商家去抖店-内容-短视频创作tab绑定抖音账号",
+      "sub_code": "isv.business-failed:628002009",
+      "sub_msg": "店铺未绑定人店一体账号"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/publishVideo?app_key=your_appkey_here&method=shopVideo.publishVideo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "item_id": "33322133"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7145",
+  "updatedAt": "2025-01-13",
+  "_file_stem": "video-shopVideo-publishVideo"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "doudian.logistics-provider.instantShopping.starhub.querySaleOutboundOrderReceiver",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "instantShopping.starhub.querySaleOutboundOrderReceiver",
+  "description": "服务商主动向抖音获取城市仓单收货信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "outbound_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音出库主单号",
+      "example": "124124",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "收货人信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 仓单id未找到（sub_code: isv.parameter-invalid:40001）",
+      "action": "检查仓单id是否异常",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "仓单id未找到"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50040:获取虚拟号失败（sub_code: isv.business-failed:50040）",
+      "action": "获取虚拟号失败，请重试",
+      "sub_code": "isv.business-failed:50040",
+      "sub_msg": "50040:获取虚拟号失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:Internal Server Error（sub_code: isv.business-failed:1004）",
+      "action": "1004:Internal Server Error",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:Internal Server Error"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40006:仓单已完结,不可查询收货人信息（sub_code: isv.business-failed:40006）",
+      "action": "40006:仓单已完结,不可查询收货人信息",
+      "sub_code": "isv.business-failed:40006",
+      "sub_msg": "40006:仓单已完结,不可查询收货人信息"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "仓单id未找到"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/6914",
+  "updatedAt": "2024-11-21",
+  "_file_stem": "logistics-provider-instantShopping-starhub-querySaleOutboundOrderReceiver"
+}

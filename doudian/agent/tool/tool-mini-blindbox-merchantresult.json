@@ -1,0 +1,150 @@
+{
+  "id": "doudian.tool.mini.blindbox.merchantresult",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "mini.blindbox.merchantresult",
+  "description": "1、使用场景说明，主播在直播间抽完后把盲盒结果回传平台，商家可以再订单详情查看抽中结果，用户可以在订单详情查看抽中结果",
+  "method": "GET",
+  "path": "/mini/blindbox/merchantresult",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "blind_box_result_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "盲盒信息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku单id",
+      "example": "777",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_img",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "盲盒结果图片",
+      "example": "https://xxx/1.jpg",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "盲盒结果标题",
+      "example": "LV包",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_sub_title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "盲盒信息备注字段，开发者自定义",
+      "example": "45671-3",
+      "_depth": 1
+    },
+    {
+      "name": "blind_result_open_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "盲盒结果开盒时间",
+      "example": "1723631662789",
+      "_depth": 1
+    },
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖店openid",
+      "example": "31341#1A123",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺单id",
+      "example": "777",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_success",
+      "type": "boolean",
+      "description": "写入成功/失败",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606000102:RPCError{PSM:[ecom.trade.order_query] Method:[GetSkuOrderInfoGroupsBySkuOrder] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110001] BizStatusMessage:[[FAIL,OQ10002,查询订单不存在]]}（sub_code: isv.business-failed:606000102）",
+      "action": "找平台同学",
+      "sub_code": "isv.business-failed:606000102",
+      "sub_msg": "606000102:RPCError{PSM:[ecom.trade.order_query] Method:[GetSkuOrderInfoGroupsBySkuOrder] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110001] BizStatusMessage:[[FAIL,OQ10002,查询订单不存在]]}"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606010000:入参店铺id非法（sub_code: isv.business-failed:606010000）",
+      "action": "检查入参",
+      "sub_code": "isv.business-failed:606010000",
+      "sub_msg": "606010000:入参店铺id非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/applyActivities?app_key=your_appkey_here&method=buyin.applyActivities&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": [
+          {
+            "error_code": "0",
+            "error_msg": "success",
+            "is_success": "true",
+            "product_id": "123123123123"
+          }
+        ],
+        "total": "20"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:606000102",
+      "sub_msg": "606000102:RPCError{PSM:[ecom.trade.order_query] Method:[GetSkuOrderInfoGroupsBySkuOrder] ErrType:[RPC_STATUS_CODE_NOT_ZERO] OriginalErr:[<nil>] BizStatusCode:[110001] BizStatusMessage:[[FAIL,OQ10002,查询订单不存在]]}"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7436",
+  "updatedAt": "2025-04-29",
+  "_file_stem": "tool-mini-blindbox-merchantresult"
+}

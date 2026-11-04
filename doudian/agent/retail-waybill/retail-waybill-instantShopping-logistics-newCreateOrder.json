@@ -1,0 +1,851 @@
+{
+  "id": "doudian.retail-waybill.instantShopping.logistics.newCreateOrder",
+  "platform": "doudian",
+  "group": "retail-waybill",
+  "name": "instantShopping.logistics.newCreateOrder",
+  "description": "取号接口，传入收货人密文获取运单号",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API【即时零售】（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商编码",
+      "example": "jtexpress",
+      "_depth": 0
+    },
+    {
+      "name": "sender_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "寄件人信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "寄件人地址信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "丹棱街1号",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国家编码（默认CHN，目前只有国内业务）",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "详细地址",
+      "example": "丹棱街1号",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "地区名称",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "联系方式",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "名称",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人固话（和mobile二选一）",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人移动电话（和phone二选一），支持密文",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "order_channel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单渠道来源编码，具体请参考[下单渠道来源编码表](https://bytedance.feishu.cn/sheets/shtcngIVwcJlgXLzWhEtKrmv7Af)，当order_id订单号为非抖音订单时必传",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_req",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "派送要求（目前仅德邦支持）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_center_delivery",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "条件，物流商=德邦时，该字段必须有值，前端系统（ISV、商家后台等前端传值以传入的值为准；未传值，默认传false） 是否接受仅镇中心派送",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "is_pickup_self",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "条件，物流商=德邦时，该字段必须有值，前端系统（ISV、商家后台等前端传值以传入的值为准；未传值，默认传false）是否合伙人自提",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店id",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "order_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "详细订单列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "pay_method",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "支付方式（1-寄付，2-到付，3-第三方付）不传默认为寄付",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号（合单情况下，isv只需传其中一个订单号）",
+      "example": "112322",
+      "_depth": 1
+    },
+    {
+      "name": "total_pack_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹总数，本期不支持子母单，传1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单货物总体积，单位立方厘米,精确到小数点后3位，会用于计抛",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "pack_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "包裹id。拆包（一个订单获取多个独立的运单，非子母件）场景使用，只能传入15位以内的数字、字母和下划线，大小写敏感（即123A,123a为不同包裹id），仅第2个及以后的运单取号时传不同id。",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sender_fetch_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "要求上门取件时间段",
+      "example": "2020-11-11 22:00:00|2020-11-11 23:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "special_delivery_type_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "顺丰极效前置场景（必填）使用  2:极效前置单",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "shipping_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件码/运单号，根据快递商提供的服务决定 一个订单只能有一个主单号；若是子母单的情况，主运单号（母运单号）在首位，子运单号以半角逗号分隔",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "product_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓相关信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "wh_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库订单号(丹鸟等仓发链路使用)",
+      "example": "8837383",
+      "_depth": 2
+    },
+    {
+      "name": "delivery_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货方式（用于韵达、京东链路）1或不传-普通发货2-门店发货3-仓库发货",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "wh_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库编码",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "is_sumup",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否为总对总",
+      "example": "true",
+      "_depth": 2
+    },
+    {
+      "name": "total_width",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "客户订单货物总宽，单位厘米，精确到小数点后3位，包含子母件",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品明细信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "item_net_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "总净重量",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "item_volume",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "体积",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "item_specs",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品规格",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "item_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称",
+      "example": "手机",
+      "_depth": 2
+    },
+    {
+      "name": "item_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "总重量",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "item_count",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品数量",
+      "example": "-",
+      "_depth": 2
+    },
+    {
+      "name": "net_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "网点信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "secret_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "总对总时的密码",
+      "example": "ddfdfdf",
+      "_depth": 2
+    },
+    {
+      "name": "category",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流服务商类型（直营or加盟）可不穿",
+      "example": "加盟",
+      "_depth": 2
+    },
+    {
+      "name": "net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点编码,当category为加盟类型时，该字段必填；为直营类型时可不传；对总模式该字段均为非必填",
+      "example": "XS222",
+      "_depth": 2
+    },
+    {
+      "name": "monthly_account",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "月结账号，当类型字段为直营制时，则该字段会用到，加盟制时无需使用； 总对总时的账号",
+      "example": "324322432",
+      "_depth": 2
+    },
+    {
+      "name": "total_height",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "客户订单货物总高，单位厘米，精确到小数点后3位，包含子母件",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "收件人信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "-",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市编码code",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码code",
+      "example": "11",
+      "_depth": 3
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码code",
+      "example": "11111",
+      "_depth": 3
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国家编码CHN",
+      "example": "CHN",
+      "_depth": 3
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区/县名称",
+      "example": "海淀区",
+      "_depth": 3
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "丹棱街1号",
+      "_depth": 3
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省名称",
+      "example": "北京市",
+      "_depth": 3
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "剩余详细地址，支持密文",
+      "example": "丹棱街1号",
+      "_depth": 3
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区编码code",
+      "example": "1111",
+      "_depth": 3
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "城市名称",
+      "example": "市辖区",
+      "_depth": 3
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "-",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人固话（和mobile二选一）",
+      "example": "-",
+      "_depth": 3
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "名称",
+      "example": "-",
+      "_depth": 3
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收件人移动电话（和phone二选一），支持密文",
+      "example": "-",
+      "_depth": 3
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备用扩展字段",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "total_length",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "客户订单货物总长，单位厘米，精确到小数点后3位，包含子母件",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "total_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单货物总重量，若为子母件必填，单位克,如果提供此值，必须>0 (子母件需>6)",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "package_weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "包裹总重量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "service_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "增值服务列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "service_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "增值服务对应的value值 \"{\\\"value\\\":\\\"1000000\\\", \\\"value1\\\":\\\"\\\",\\\"value2\\\":\\\"\\\"}\"",
+      "example": "{\\\"value\\\":\\\"2200\\\"}",
+      "_depth": 2
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "增值服务类型",
+      "example": "SVC-INSURE",
+      "_depth": 2
+    },
+    {
+      "name": "combine_orders",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "合单场景的订单列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "special_delivery_type_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "顺丰极效前置场景使用",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "pay_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "到付运费金额，单位为分",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单号使用用户ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "发货仓id，次日达发货仓取号需要，不同仓的订单必须分开调用接口取号",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "err_infos",
+      "type": "array",
+      "description": "错误信息列表",
+      "example": ""
+    },
+    {
+      "name": "e_bill_infos",
+      "type": "array",
+      "description": "电子面单信息列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数（sub_code: isv.parameter-invalid:40004）",
+      "action": "参数非法",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "非法的参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 共享订单不存在（sub_code: isv.parameter-invalid:10003）",
+      "action": "检查参数是否准确",
+      "sub_code": "isv.parameter-invalid:10003",
+      "sub_msg": "共享订单不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 寄件人姓名不能为空（sub_code: isv.parameter-invalid:4006）",
+      "action": "检查参数是否准确",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "寄件人姓名不能为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 拼接参数异常（sub_code: isv.parameter-invalid:1000）",
+      "action": "检查参数是否准确",
+      "sub_code": "isv.parameter-invalid:1000",
+      "sub_msg": "拼接参数异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询订单信息失败，请重试（sub_code: isv.business-failed:4007）",
+      "action": "检查参数是否准确，如果确认无误提工单或者群里反馈",
+      "sub_code": "isv.business-failed:4007",
+      "sub_msg": "查询订单信息失败，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不是该店铺下的订单（sub_code: isv.business-failed:15000）",
+      "action": "切换店铺或更换订单号",
+      "sub_code": "isv.business-failed:15000",
+      "sub_msg": "订单不是该店铺下的订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单信息不存在（sub_code: isv.business-failed:15002）",
+      "action": "确认订单信息是否正确",
+      "sub_code": "isv.business-failed:15002",
+      "sub_msg": "订单信息不存在"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:15001）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:15001",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统内部错误（sub_code: isv.business-failed:4029）",
+      "action": "稍后重试",
+      "sub_code": "isv.business-failed:4029",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1004:Internal Server Error（sub_code: isv.business-failed:1004）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:1004",
+      "sub_msg": "1004:Internal Server Error"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40001:仅支持抖音渠道订单（sub_code: isv.business-failed:40001）",
+      "action": "仅支持抖音渠道订单",
+      "sub_code": "isv.business-failed:40001",
+      "sub_msg": "40001:仅支持抖音渠道订单"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.logistics.newCreateOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "e_bill_infos": [
+          {
+            "company": "zhongtong",
+            "extra": "1",
+            "extra_resp": "1",
+            "hint_code": "1",
+            "hint_msg": "您传入的收件地址与订单不一致，已采用平台订单地址完成取号",
+            "mark_destination_code": "1",
+            "mark_destination_code_name": "1",
+            "order_channel": "1",
+            "order_id": "202011809",
+            "pack_id": "1",
+            "package_code": "1",
+            "package_code_name": "1",
+            "shipping_code": "1",
+            "sort_code": "1",
+            "sub_waybill_codes": "1",
+            "track_no": "1"
+          }
+        ],
+        "err_infos": [
+          {
+            "err_code": "10701",
+            "err_msg": "电子面单库存不足",
+            "order_channel": "2",
+            "order_id": "1",
+            "pack_id": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1578/7242",
+  "updatedAt": "2026-08-13",
+  "_file_stem": "retail-waybill-instantShopping-logistics-newCreateOrder"
+}

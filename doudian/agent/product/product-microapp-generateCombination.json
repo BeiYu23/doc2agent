@@ -1,0 +1,201 @@
+{
+  "id": "doudian.product.microapp.generateCombination",
+  "platform": "doudian",
+  "group": "product",
+  "name": "microapp.generateCombination",
+  "description": "生成组合购",
+  "method": "GET",
+  "path": "/microapp/generateCombination",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "当前生成组合购的标题，长度为6-10个字符",
+      "example": "组合购标题",
+      "_depth": 0
+    },
+    {
+      "name": "creator",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "操作者账号id，飞鸽客服场景下即飞鸽客服id",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "comment",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卖家留言，用于展示在C端组件首页上",
+      "example": "这是商品组合购",
+      "_depth": 0
+    },
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品id",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku id",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "sku_num",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "sku数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "价格",
+      "example": "111",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "combo_link",
+      "type": "string",
+      "description": "生成的组合购短链接",
+      "example": "https://v.douyin.com/dfadfsd"
+    },
+    {
+      "name": "biz_error",
+      "type": "object",
+      "description": "返回错误",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:10001）",
+      "action": "系统错误，联系平台",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:10010）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:10010",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数非法（sub_code: isv.missing-parameter:10011）",
+      "action": "检查参数",
+      "sub_code": "isv.missing-parameter:10011",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:10012）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:10012",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:10013）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:10013",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:搭配名称不能超过10个字符（sub_code: isv.business-failed:2010004）",
+      "action": "检查搭配名称参数，6-10个字符之间",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:搭配名称不能超过10个字符"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10014:商品数量不能为空（sub_code: isv.business-failed:10014）",
+      "action": "搭配商品数量不能为空",
+      "sub_code": "isv.business-failed:10014",
+      "sub_msg": "10014:商品数量不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010013:获取商品信息失败（sub_code: isv.business-failed:2010013）",
+      "action": "校验商品信息状态",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "2010013:获取商品信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10015:商品Sku非法（sub_code: isv.business-failed:10015）",
+      "action": "检查商品sku信息",
+      "sub_code": "isv.business-failed:10015",
+      "sub_msg": "10015:商品Sku非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:系统异常,请重试（sub_code: isv.business-failed:2010001）",
+      "action": "2010001:系统异常,请重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:系统异常,请重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/syncV2?app_key=your_appkey_here&method=coupons.syncV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/2787",
+  "updatedAt": "2022-12-12",
+  "_file_stem": "product-microapp-generateCombination"
+}

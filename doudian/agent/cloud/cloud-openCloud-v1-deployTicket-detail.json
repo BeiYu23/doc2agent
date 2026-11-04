@@ -1,0 +1,150 @@
+{
+  "id": "doudian.cloud.openCloud.v1.deployTicket.detail",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.v1.deployTicket.detail",
+  "description": "获取发布详情",
+  "method": "GET",
+  "path": "/openCloud/v1/deployTicket/detail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器id",
+      "example": "7239708175753249068",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发布单id",
+      "example": "7239916236111413548",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100044514",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ticket",
+      "type": "object",
+      "description": "发布单信息",
+      "example": ""
+    },
+    {
+      "name": "cs",
+      "type": "object",
+      "description": "容器信息",
+      "example": ""
+    },
+    {
+      "name": "image_version",
+      "type": "object",
+      "description": "镜像信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=openCloud.v1.deployTicket.detail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "cs": {
+          "cluster_name": "测试集群",
+          "create_time": "1685628943",
+          "cs_env": "1",
+          "cs_id": "7239708175753249068",
+          "cs_name": "测试服务",
+          "cs_resource_status": "60",
+          "cs_type": "1",
+          "custom_image": {
+            "contain_code_package": "false",
+            "repo": "\"\"",
+            "tag_name": "\"\""
+          },
+          "image_desc": "java8基础镜像",
+          "image_id": "123",
+          "image_type": "1",
+          "instance_spec": {
+            "cron_str": "\"\"",
+            "instance_num": "2",
+            "limited_cpu": "2",
+            "limited_memory": "2000",
+            "requested_cpu": "2",
+            "requested_memory": "200"
+          },
+          "update_time": "1685628943"
+        },
+        "image_version": {
+          "create_time": "1685675755",
+          "cs_id": "7239708175753249068",
+          "cs_name": "测试服务",
+          "failed_reason": "\"\"",
+          "file_name": "1bc0a0ad0abf4b06abd4161064d99050.jar",
+          "remark": "测试",
+          "status": "2",
+          "version_id": "123",
+          "version_name": "v1.4"
+        },
+        "ticket": {
+          "config_id": "7239908695869063468",
+          "confirm_time": "1685696102",
+          "create_time": "1685696029",
+          "cs_id": "7239708175753249068",
+          "extra": {},
+          "image_version_id": "7239916236111348012",
+          "max_surge": "1",
+          "max_surge_num": "1",
+          "max_unavailable": "0",
+          "max_unavailable_num": "0",
+          "name": "测试发布",
+          "remark": "测试",
+          "show_instance_list": "false",
+          "ticket_id": "7239916236111413548",
+          "ticket_status": "20",
+          "ticket_type": "0",
+          "update_time": "1685696029",
+          "upgrade_strategy": "1",
+          "use_time": "0"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/4148",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-v1-deployTicket-detail"
+}

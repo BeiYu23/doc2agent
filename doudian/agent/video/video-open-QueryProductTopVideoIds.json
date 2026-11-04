@@ -1,0 +1,98 @@
+{
+  "id": "doudian.video.open.QueryProductTopVideoIds",
+  "platform": "doudian",
+  "group": "video",
+  "name": "open.QueryProductTopVideoIds",
+  "description": "单商品 Top 内容 ID 查询接口协议",
+  "method": "GET",
+  "path": "/open/QueryProductTopVideoIds",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "content_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "内容体裁: 仅支持 video、image; video 返回短视频 ID, image 返回图文 item_id",
+      "example": "video",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "被查询的商品 ID(正 Int64 字符串)",
+      "example": "3000004973070000",
+      "_depth": 0
+    },
+    {
+      "name": "time_range",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "统计窗口: 仅支持 1、7、30",
+      "example": "7",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "业务状态码, 成功为 0",
+      "example": "0"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "成功时为 success",
+      "example": "success"
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "description": "业务数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/open/QueryProductTopVideoIds?app_key=your_appkey_here&method=open.QueryProductTopVideoIds&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "product_id": "3000004973070000",
+          "top_video_ids": "[\"12333333\"]"
+        },
+        "message": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8641",
+  "updatedAt": "2026-09-21",
+  "_file_stem": "video-open-QueryProductTopVideoIds"
+}

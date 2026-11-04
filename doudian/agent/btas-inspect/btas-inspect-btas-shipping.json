@@ -1,0 +1,41 @@
+{
+  "id": "doudian.btas-inspect.btas.shipping",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.shipping",
+  "description": "商家接口_自发货订单商家发货给买家",
+  "method": "GET",
+  "path": "/btas/shipping",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?method=btas.shipping&param_json={}'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success"
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/489",
+  "updatedAt": "2023-01-06",
+  "_file_stem": "btas-inspect-btas-shipping"
+}

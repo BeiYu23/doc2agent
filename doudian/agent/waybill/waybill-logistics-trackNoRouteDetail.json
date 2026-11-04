@@ -1,0 +1,141 @@
+{
+  "id": "doudian.waybill.logistics.trackNoRouteDetail",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.trackNoRouteDetail",
+  "description": "查询条件：\n1、必须是通过抖音电子面单获取的单号并且调用过发货接口回传的运单号才可以查询到物流轨迹；",
+  "method": "GET",
+  "path": "/logistics/trackNoRouteDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V1.06）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商编码；需使用【/order/logisticsCompanyList】接口响应参数中的code；",
+      "example": "shentong",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号；可使用电子面单接口获取返回的单号查询【/logistics/newCreateOrder】或商家店铺后台查看",
+      "example": "78393454",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "route__node_list",
+      "type": "array",
+      "description": "轨迹信息",
+      "example": ""
+    },
+    {
+      "name": "track_info",
+      "type": "object",
+      "description": "运单信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单已取消，不允许变更（sub_code: isv.parameter-invalid:10901）",
+      "action": "-",
+      "sub_code": "isv.parameter-invalid:10901",
+      "sub_msg": "订单已取消，不允许变更"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非抖音电商电子面单不支持查询轨迹（sub_code: isv.business-failed:10015）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10015",
+      "sub_msg": "非抖音电商电子面单不支持查询轨迹"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求内部服务超时，请重试（sub_code: isv.business-failed:4007）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:4007",
+      "sub_msg": "请求内部服务超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 记录不存在（sub_code: isv.business-failed:-10004）",
+      "action": "-",
+      "sub_code": "isv.business-failed:-10004",
+      "sub_msg": "记录不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务器开了小差，请稍后重试（sub_code: isv.business-failed:-10006）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:-10006",
+      "sub_msg": "服务器开了小差，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运单号不能为空（sub_code: isv.business-failed:4006）",
+      "action": "请检查运单号信息",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "运单号不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:-10001）",
+      "action": "请检查请求参数",
+      "sub_code": "isv.business-failed:-10001",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/trackNoRouteDetail?app_key=your_appkey_here&method=logistics.trackNoRouteDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "route__node_list": [
+          {
+            "content": "配送中",
+            "site_name": "北京",
+            "state": "1",
+            "state_description": "配送",
+            "timestamp": "161324234234"
+          }
+        ],
+        "track_info": {
+          "express": "shentong",
+          "track_no": "234234234"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:10901",
+      "sub_msg": "订单已取消，不允许变更"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/1851",
+  "updatedAt": "2021-08-18",
+  "_file_stem": "waybill-logistics-trackNoRouteDetail"
+}

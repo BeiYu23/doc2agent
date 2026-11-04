@@ -1,0 +1,117 @@
+{
+  "id": "doudian.supply-chain.supplyChain.updateConsign",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.updateConsign",
+  "description": "供货单更新发货物流",
+  "method": "GET",
+  "path": "/supplyChain/updateConsign",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供货单号",
+      "example": "CT706899923423",
+      "_depth": 0
+    },
+    {
+      "name": "tms_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发货的物流商编码",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发货的运单号",
+      "example": "SF398235235235",
+      "_depth": 0
+    },
+    {
+      "name": "old_tms_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【必填】上一次发货的物流商编码或者空字符串",
+      "example": "yunda",
+      "_depth": 0
+    },
+    {
+      "name": "old_tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【必填】上一次发货的运单号或者空字符串",
+      "example": "2212121241",
+      "_depth": 0
+    },
+    {
+      "name": "new_ship_cnt",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【非必填】只有在需要修改件数的时候才填写。当前不支持即修改运单，又修改件数。在修改件数时，新老运单需要填写一样的内容",
+      "example": "5",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "true=调用成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:2000）",
+      "action": "请参考错误信息，或联系对接人员",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/updateConsign?app_key=your_appkey_here&method=supplyChain.updateConsign&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/1735",
+  "updatedAt": "2023-07-20",
+  "_file_stem": "supply-chain-supplyChain-updateConsign"
+}

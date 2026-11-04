@@ -1,0 +1,125 @@
+{
+  "id": "doudian.logistics-provider.install.order.supplierSyncSiteInfo",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "install.order.supplierSyncSiteInfo",
+  "description": "服务商同步网点信息",
+  "method": "GET",
+  "path": "/install/order/supplierSyncSiteInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实操单号",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "operation_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间，格式：\"yyyy-MM-dd HH:mm:ss\"",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "site_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点名称",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "site_detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点地址详情",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "site_latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点纬度",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "site_longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点经度",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "site_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点联系方式，格式，真实号：主机号；虚拟号：主机号-分机号；",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "site_contacter_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点联系人姓名",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.order.supplierSyncSiteInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5779",
+  "updatedAt": "2023-12-21",
+  "_file_stem": "logistics-provider-install-order-supplierSyncSiteInfo"
+}

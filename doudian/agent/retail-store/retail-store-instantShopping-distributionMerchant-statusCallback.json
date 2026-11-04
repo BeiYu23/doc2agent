@@ -1,0 +1,318 @@
+{
+  "id": "doudian.retail-store.instantShopping.distributionMerchant.statusCallback",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "instantShopping.distributionMerchant.statusCallback",
+  "description": "配送商状态回调",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "orderId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音呼单id",
+      "example": "\"1\"",
+      "_depth": 0
+    },
+    {
+      "name": "tradeOrderId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音即配运单id",
+      "example": "\"1\"",
+      "_depth": 0
+    },
+    {
+      "name": "carrierDeliveryId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流单号",
+      "example": "\"1\"",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态 https://bytedance.larkoffice.com/wiki/QzSAwROIxiQNQPkLD20cxp2mnbe",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "riderName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上报骑手姓名",
+      "example": "\"王晓\"",
+      "_depth": 0
+    },
+    {
+      "name": "riderId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "骑手/司机Id，接单后必填",
+      "example": "\"1\"",
+      "_depth": 0
+    },
+    {
+      "name": "riderPhone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上报骑手电话。若使用隐私号，须确保商家和收件人在配送完成后48小时内均可通过该电话联系上骑手。",
+      "example": "\"13322224444\"",
+      "_depth": 0
+    },
+    {
+      "name": "riderPhoneType",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "骑手/司机电话类型。0：真实号\n1：隐私号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "riderPhoneExpire_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "隐私号距离完成单号失效时间，秒。骑手/司机的电话类型是隐私号时，该字段必填",
+      "example": "1715686808",
+      "_depth": 0
+    },
+    {
+      "name": "riderLng",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "骑手/司机经度*10^6 火星坐标系",
+      "example": "122333333",
+      "_depth": 0
+    },
+    {
+      "name": "riderLat",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "骑手/司机纬度*10^6 火星坐标系",
+      "example": "122333333",
+      "_depth": 0
+    },
+    {
+      "name": "operateTime",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态变更时间，秒时间戳",
+      "example": "1715686808",
+      "_depth": 0
+    },
+    {
+      "name": "cancelReasonCode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "订单取消原因code https://bytedance.larkoffice.com/wiki/SHbHwg39ni3PLokoMQBceKAbnEf",
+      "example": "100",
+      "_depth": 0
+    },
+    {
+      "name": "cancelSource",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "取消来源 https://bytedance.larkoffice.com/wiki/SHbHwg39ni3PLokoMQBceKAbnEf",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "cancelReasonDesc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单取消原因描述，订单为取消状态则必填",
+      "example": "\"1\"",
+      "_depth": 0
+    },
+    {
+      "name": "actualFee",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实际支付金额，元",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "licenseplate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "车牌号",
+      "example": "\"浙A3332\"",
+      "_depth": 0
+    },
+    {
+      "name": "orderImages",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单详情的Map信息（订单详情的Map信息，key是业务场景，value是照片的URL组合的List\n图片最多不超过5张)",
+      "example": "{\"业务场景\":[\"url\",\"url\"]}",
+      "_depth": 0
+    },
+    {
+      "name": "tollFee",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "过路费，包括高速费、过桥费等，元",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "handlingFee",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搬运费，元",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "waitingFee",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "等候费，元",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "parkingFee",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "停车费，元",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "otherCharges",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "其他费用",
+      "example": "{\"其他费用\":12}",
+      "_depth": 0
+    },
+    {
+      "name": "extInfo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单扩展信息，json格式，线下约定不同承运商的kv结构。",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1101510032:transfer delivery DeliveryId is error（sub_code: isv.business-failed:1101510032）",
+      "action": "1101510032:transfer delivery DeliveryId is error",
+      "sub_code": "isv.business-failed:1101510032",
+      "sub_msg": "1101510032:transfer delivery DeliveryId is error"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100002006:获取分布式锁失败（sub_code: isv.business-failed:100002006）",
+      "action": "100002006:获取分布式锁失败",
+      "sub_code": "isv.business-failed:100002006",
+      "sub_msg": "100002006:获取分布式锁失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1454039998:服务异常，请稍后再试#（sub_code: isv.business-failed:1454039998）",
+      "action": "1454039998:服务异常，请稍后再试#",
+      "sub_code": "isv.business-failed:1454039998",
+      "sub_msg": "1454039998:服务异常，请稍后再试#"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 999001001:订单扩展信息不能为空（sub_code: isv.business-failed:999001001）",
+      "action": "999001001:订单扩展信息不能为空",
+      "sub_code": "isv.business-failed:999001001",
+      "sub_msg": "999001001:订单扩展信息不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 999002001:redis异常（sub_code: isv.business-failed:999002001）",
+      "action": "999002001:redis异常",
+      "sub_code": "isv.business-failed:999002001",
+      "sub_msg": "999002001:redis异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1101510309:UpdateDelivery lock err（sub_code: isv.business-failed:1101510309）",
+      "action": "1101510309:UpdateDelivery lock err",
+      "sub_code": "isv.business-failed:1101510309",
+      "sub_msg": "1101510309:UpdateDelivery lock err"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1101519998:服务异常，请稍后再试#（sub_code: isv.business-failed:1101519998）",
+      "action": "1101519998:服务异常，请稍后再试#",
+      "sub_code": "isv.business-failed:1101519998",
+      "sub_msg": "1101519998:服务异常，请稍后再试#"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100002007:数据InterfaceConf异常，缺失%!s(MISSING)（sub_code: isv.business-failed:100002007）",
+      "action": "100002007:数据InterfaceConf异常，缺失%!s(MISSING)",
+      "sub_code": "isv.business-failed:100002007",
+      "sub_msg": "100002007:数据InterfaceConf异常，缺失%!s(MISSING)"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/wms/deliveryInfoNotify_uat?app_key=your_appkey_here&method=wms.deliveryInfoNotify_uat&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1101510032",
+      "sub_msg": "1101510032:transfer delivery DeliveryId is error"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/6516",
+  "updatedAt": "2024-05-14",
+  "_file_stem": "retail-store-instantShopping-distributionMerchant-statusCallback"
+}

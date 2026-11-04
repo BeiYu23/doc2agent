@@ -1,0 +1,88 @@
+{
+  "id": "doudian.product.opptyProduct.getApplyProgress",
+  "platform": "doudian",
+  "group": "product",
+  "name": "opptyProduct.getApplyProgress",
+  "description": "机会品提报进度查询",
+  "method": "GET",
+  "path": "/opptyProduct/getApplyProgress",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商品ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "origin",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "机会品来源。ISV代表服务商",
+      "example": "ISV",
+      "_depth": 0
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "机会品类型。NEW代表新品",
+      "example": "NEW",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "status",
+      "type": "string",
+      "description": "机会品提报状态编码",
+      "example": "NEW_PRODUCT"
+    },
+    {
+      "name": "status_desc",
+      "type": "string",
+      "description": "机会品提报状态中文描述",
+      "example": "新品"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=opptyProduct.getApplyProgress&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "status": "NEW_PRODUCT",
+        "status_desc": "新品"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1796",
+  "updatedAt": "2021-09-13",
+  "_file_stem": "product-opptyProduct-getApplyProgress"
+}

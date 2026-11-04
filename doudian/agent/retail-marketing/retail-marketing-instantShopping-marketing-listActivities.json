@@ -1,0 +1,161 @@
+{
+  "id": "doudian.retail-marketing.instantShopping.marketing.listActivities",
+  "platform": "doudian",
+  "group": "retail-marketing",
+  "name": "instantShopping.marketing.listActivities",
+  "description": "查询活动列表",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "翻页页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页条数",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动状态",
+      "example": "90",
+      "_depth": 0
+    },
+    {
+      "name": "activity_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动类型，10：限时限量购，20：店铺券； 30：商品券",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "activity_sub_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动类型， 101限时秒杀，102，普通降价促销",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "activity_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "活动ID列表",
+      "example": "[123,124]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "结果",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-40000）",
+      "action": "检查请求参数",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 越权错误（sub_code: isv.parameter-invalid:-50001）",
+      "action": "检查当前用户是否有权限操作",
+      "sub_code": "isv.parameter-invalid:-50001",
+      "sub_msg": "越权错误"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 系统繁忙，请稍后重试（sub_code: isp.service-timeout-error:-10000）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isp.service-timeout-error:-10000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请联系技术人员排查（sub_code: isp.service-error:-11450）",
+      "action": "系统异常，请联系技术人员排查",
+      "sub_code": "isp.service-error:-11450",
+      "sub_msg": "系统异常，请联系技术人员排查"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.marketing.listActivities&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "activity_base_info": {
+              "activity_end_time": "1711265959",
+              "activity_start_time": "1711265959",
+              "activity_stock_sold_setting": "1",
+              "limit_activity_stock": "1",
+              "order_cancel_time": "300",
+              "warm_up": "false"
+            },
+            "activity_id": "123",
+            "activity_status": "90",
+            "activity_sub_type": "101",
+            "activity_title": "测试活动",
+            "activity_type": "10"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-40000",
+      "sub_msg": "参数不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1541/6377",
+  "updatedAt": "2024-05-08",
+  "_file_stem": "retail-marketing-instantShopping-marketing-listActivities"
+}

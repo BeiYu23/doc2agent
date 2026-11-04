@@ -1,0 +1,89 @@
+{
+  "id": "doudian.recycle.resale.order.expressRecieved",
+  "platform": "doudian",
+  "group": "recycle",
+  "name": "resale.order.expressRecieved",
+  "description": "【邮寄回收】邮寄快递签收",
+  "method": "GET",
+  "path": "/resale/order/expressRecieved",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 回收寄卖API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operation_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "内部单号",
+      "example": "\"1232323213\"",
+      "_depth": 0
+    },
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码，平台提供",
+      "example": "\"xxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递单号",
+      "example": "\"xxxxxxxxxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_company",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递公司",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "operate_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作时间",
+      "example": "\"yyyy-MM-dd hh:MM:ss\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=resale.order.expressRecieved&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/68/4630",
+  "updatedAt": "2023-09-06",
+  "_file_stem": "recycle-resale-order-expressRecieved"
+}

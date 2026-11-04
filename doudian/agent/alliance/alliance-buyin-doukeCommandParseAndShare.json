@@ -1,0 +1,350 @@
+{
+  "id": "doudian.alliance.buyin.doukeCommandParseAndShare",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.doukeCommandParseAndShare",
+  "description": "口令解析&转链",
+  "method": "GET",
+  "path": "/buyin/doukeCommandParseAndShare",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 抖客"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "command",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖口令或短链",
+      "example": "3.:/ hO长[抱拳]按????墆此条消息，搭[呲牙]揩ƿȎƲ[拥抱]ȳɫǹ搜索，查看商品详情ηηcuTRuYrzTv8Я\\t##cuTRuYrzTv8##",
+      "_depth": 0
+    },
+    {
+      "name": "share_params",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "转链参数，无需转链可不传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "pid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖客PID",
+      "example": "dy_123_233_2222",
+      "_depth": 1
+    },
+    {
+      "name": "external_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义字段，只允许 数字、字母和_，限制长度为40",
+      "example": "111_222",
+      "_depth": 1
+    },
+    {
+      "name": "need_share_info_field",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "所需的转链分享物料，默认仅返回deeplink（建议按需获取，获取多种会导致响应耗时增加）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "need_share_command",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要口令",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "need_qrcode",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要二维码",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "need_zlink",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要zlink",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "need_share_link",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要站外H5链接（仅商品生效）",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "platform",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "回流端标识 0：抖音 1：抖音极速版",
+      "example": "0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "command_info",
+      "type": "object",
+      "description": "口令信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前口令无效（sub_code: isv.parameter-invalid:4446）",
+      "action": "当前口令无效",
+      "sub_code": "isv.parameter-invalid:4446",
+      "sub_msg": "当前口令无效"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前口令无效（sub_code: isv.parameter-invalid:4447）",
+      "action": "当前口令无效",
+      "sub_code": "isv.parameter-invalid:4447",
+      "sub_msg": "当前口令无效"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效直播预告口令（sub_code: isv.parameter-invalid:4448）",
+      "action": "无效直播预告口令",
+      "sub_code": "isv.parameter-invalid:4448",
+      "sub_msg": "无效直播预告口令"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效红包口令（sub_code: isv.parameter-invalid:4449）",
+      "action": "无效红包口令",
+      "sub_code": "isv.parameter-invalid:4449",
+      "sub_msg": "无效红包口令"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效活动口令（sub_code: isv.parameter-invalid:4450）",
+      "action": "无效活动口令",
+      "sub_code": "isv.parameter-invalid:4450",
+      "sub_msg": "无效活动口令"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前口令暂不支持解析（sub_code: isv.parameter-invalid:4451）",
+      "action": "当前口令暂不支持解析",
+      "sub_code": "isv.parameter-invalid:4451",
+      "sub_msg": "当前口令暂不支持解析"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效直播间口令（sub_code: isv.parameter-invalid:4147）",
+      "action": "无效直播间口令",
+      "sub_code": "isv.parameter-invalid:4147",
+      "sub_msg": "无效直播间口令"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效商品口令（sub_code: isv.parameter-invalid:4148）",
+      "action": "无效商品口令",
+      "sub_code": "isv.parameter-invalid:4148",
+      "sub_msg": "无效商品口令"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-timeout-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-timeout-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 需对应角色正确授权后访问（sub_code: isv.parameter-invalid:8196）",
+      "action": "需对应角色正确授权后访问",
+      "sub_code": "isv.parameter-invalid:8196",
+      "sub_msg": "需对应角色正确授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 454:无效口令（sub_code: isv.business-failed:454）",
+      "action": "454:无效口令",
+      "sub_code": "isv.business-failed:454",
+      "sub_msg": "454:无效口令"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 448:当前口令无效（sub_code: isv.business-failed:448）",
+      "action": "448:当前口令无效",
+      "sub_code": "isv.business-failed:448",
+      "sub_msg": "448:当前口令无效"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 446:当前口令暂不支持解析（sub_code: isv.business-failed:446）",
+      "action": "446:当前口令暂不支持解析",
+      "sub_code": "isv.business-failed:446",
+      "sub_msg": "446:当前口令暂不支持解析"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 513:当前抖客暂不支持该功能（sub_code: isv.business-failed:513）",
+      "action": "513:当前抖客暂不支持该功能",
+      "sub_code": "isv.business-failed:513",
+      "sub_msg": "513:当前抖客暂不支持该功能"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4132:商品没有加入精选联盟（sub_code: isv.business-failed:4132）",
+      "action": "4132:商品没有加入精选联盟",
+      "sub_code": "isv.business-failed:4132",
+      "sub_msg": "4132:商品没有加入精选联盟"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4133:商品已下架（sub_code: isv.business-failed:4133）",
+      "action": "4133:商品已下架",
+      "sub_code": "isv.business-failed:4133",
+      "sub_msg": "4133:商品已下架"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4097:参数校验失败（sub_code: isv.business-failed:4097）",
+      "action": "4097:参数校验失败",
+      "sub_code": "isv.business-failed:4097",
+      "sub_msg": "4097:参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4112:当前达人未开通分销采买业务权限（sub_code: isv.business-failed:4112）",
+      "action": "4112:当前达人未开通分销采买业务权限",
+      "sub_code": "isv.business-failed:4112",
+      "sub_msg": "4112:当前达人未开通分销采买业务权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 449:无效直播间口令（sub_code: isv.business-failed:449）",
+      "action": "449:无效直播间口令",
+      "sub_code": "isv.business-failed:449",
+      "sub_msg": "449:无效直播间口令"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/doukeCommandParseAndShare?app_key=your_appkey_here&method=buyin.doukeCommandParseAndShare&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "command_info": {
+          "activity_info": {
+            "extra_params": "{\"product_id\":\"12345678\"}\"",
+            "material_id": "123456",
+            "share_info": {
+              "deeplink": "snssdk1128://ec_goods_detail/?promotion_id=3471556980941674&kol_id=99575927",
+              "qrcode": {
+                "height": "360",
+                "url": "https://p3.douyinpic.com/img/aweme-qrcode/PqFhya700510763792421~c5_360x360.webp?from=1723184",
+                "width": "360"
+              },
+              "share_command": "长按覆[呲牙]zhi此条消息，咑[玫瑰]搜[烟花]，查看商品详情Ig9FOHrrl8ηη",
+              "zlink": "https://z.douyin.com/xxxxxxx"
+            }
+          },
+          "command_type": "1",
+          "live_appoint_info": {
+            "author_buyin_id": "112233",
+            "live_appointment_id": "123456",
+            "share_info": {
+              "deeplink": "snssdk1128://ec_goods_detail/?promotion_id=3471556980941674&kol_id=99575927",
+              "qrcode": {
+                "height": "360",
+                "url": "https://p3.douyinpic.com/img/aweme-qrcode/PqFhya700510763792421~c5_360x360.webp?from=1723184",
+                "width": "360"
+              },
+              "share_command": "长按覆[呲牙]zhi此条消息，咑[玫瑰]搜[烟花]，查看商品详情Ig9FOHrrl8ηη"
+            }
+          },
+          "live_info": {
+            "author_buyin_id": "112233",
+            "product_id": "123456",
+            "share_info": {
+              "deeplink": "snssdk1128://ec_goods_detail/?promotion_id=3471556980941674&kol_id=99575927",
+              "qrcode": {
+                "height": "360",
+                "url": "https://p3.douyinpic.com/img/aweme-qrcode/PqFhya700510763792421~c5_360x360.webp?from=1723184",
+                "width": "360"
+              },
+              "share_command": "长按覆[呲牙]zhi此条消息，咑[玫瑰]搜[烟花]，查看商品详情Ig9FOHrrl8ηη",
+              "zlink": "https://z.douyin.com/xxxxxxx"
+            }
+          },
+          "pid": "\"\"",
+          "product_info": {
+            "ins_activity_param": "abc",
+            "product_id": "123456",
+            "share_info": {
+              "deeplink": "snssdk1128://ec_goods_detail/?promotion_id=3471556980941674&kol_id=99575927",
+              "qrcode": {
+                "height": "360",
+                "url": "https://p3.douyinpic.com/img/aweme-qrcode/PqFhya700510763792421~c5_360x360.webp?from=1723184",
+                "width": "360"
+              },
+              "share_command": "长按覆[呲牙]zhi此条消息，咑[玫瑰]搜[烟花]，查看商品详情Ig9FOHrrl8ηη",
+              "share_link": "https://haohuo.jinritemai.YOUR_SECRET_KEY.html?id=",
+              "zlink": "https://z.douyin.com/xxxxxxx"
+            }
+          },
+          "redpack_info": {
+            "redpack_id": "123456",
+            "share_info": {
+              "deeplink": "snssdk1128://ec_goods_detail/?promotion_id=3471556980941674&kol_id=99575927",
+              "qrcode": {
+                "height": "360",
+                "url": "https://p3.douyinpic.com/img/aweme-qrcode/PqFhya700510763792421~c5_360x360.webp?from=1723184",
+                "width": "360"
+              },
+              "share_command": "长按覆[呲牙]zhi此条消息，咑[玫瑰]搜[烟花]，查看商品详情Ig9FOHrrl8ηη"
+            }
+          }
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4446",
+      "sub_msg": "当前口令无效"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/4010",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-doukeCommandParseAndShare"
+}

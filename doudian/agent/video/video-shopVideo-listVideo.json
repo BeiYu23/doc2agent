@@ -1,0 +1,163 @@
+{
+  "id": "doudian.video.shopVideo.listVideo",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.listVideo",
+  "description": "查询已投稿短视频列表",
+  "method": "GET",
+  "path": "/shopVideo/listVideo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "create_time_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "视频上传开始时间戳，支持查询90天内视频",
+      "example": "1733910301",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，>1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量，1至50",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "order_by_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "排序类型：0-降序，1-升序",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "item_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "抖音主端短视频ID",
+      "example": "2344",
+      "_depth": 0
+    },
+    {
+      "name": "order_by_field",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "排序字段，1-创建时间，2-累计成交量，3-播放量",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "bind_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "关联的商品id",
+      "example": "22333",
+      "_depth": 0
+    },
+    {
+      "name": "bind_type_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "绑定类型：0-未绑定，1-挂车，2-种草",
+      "example": "2",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "video_list",
+      "type": "array",
+      "description": "视频列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "99"
+    },
+    {
+      "name": "current_page",
+      "type": "mixed",
+      "description": "当前页码",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "根据异常描述调整参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/listVideo?app_key=your_appkey_here&method=shopVideo.listVideo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "current_page": "1",
+        "total": "99",
+        "video_list": [
+          {
+            "alliance_product_list": "[2233]",
+            "bind_type": "2",
+            "create_time": "1733910689",
+            "item_id": "232323",
+            "modify_time": "1733910689",
+            "order_amount": "290",
+            "play_count": "100",
+            "seeding_product_list": "[333]",
+            "shop_id": "232323",
+            "status": "0",
+            "user_id": "2323"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7146",
+  "updatedAt": "2024-12-12",
+  "_file_stem": "video-shopVideo-listVideo"
+}

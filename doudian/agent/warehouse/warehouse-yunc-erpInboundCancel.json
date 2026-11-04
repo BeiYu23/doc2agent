@@ -1,0 +1,147 @@
+{
+  "id": "doudian.warehouse.yunc.erpInboundCancel",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.erpInboundCancel",
+  "description": "取消入库单",
+  "method": "GET",
+  "path": "/yunc/erpInboundCancel",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "入库单号",
+      "example": "IB0001",
+      "_depth": 0
+    },
+    {
+      "name": "action_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因",
+      "example": "计划取消",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单类型",
+      "example": "CGSH",
+      "_depth": 0
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 62303015:调用仓储失败（sub_code: isv.business-failed:62303015）",
+      "action": "62303015:调用仓储失败",
+      "sub_code": "isv.business-failed:62303015",
+      "sub_msg": "62303015:调用仓储失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500:500（sub_code: isv.business-failed:500）",
+      "action": "500:500",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "500:500"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100102:取消送仓单失败，仓库可能已作业（sub_code: isv.business-failed:100102）",
+      "action": "100102:取消送仓单失败，仓库可能已作业",
+      "sub_code": "isv.business-failed:100102",
+      "sub_msg": "100102:取消送仓单失败，仓库可能已作业"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1001:调用wms取消入库单失败（sub_code: isv.business-failed:1001）",
+      "action": "1001:调用wms取消入库单失败",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "1001:调用wms取消入库单失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100100:ownerCode字段缺失（sub_code: isv.business-failed:100100）",
+      "action": "货主编码ownerCode必填，请补充后重试！",
+      "sub_code": "isv.business-failed:100100",
+      "sub_msg": "100100:ownerCode字段缺失"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:内部服务超时，请重试（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:内部服务超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9003:取消送仓单失败，仓库已作业（sub_code: isv.business-failed:9003）",
+      "action": "取消送仓单失败，仓库已作业",
+      "sub_code": "isv.business-failed:9003",
+      "sub_msg": "9003:取消送仓单失败，仓库已作业"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9023:500（sub_code: isv.business-failed:9023）",
+      "action": "500",
+      "sub_code": "isv.business-failed:9023",
+      "sub_msg": "9023:500"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/erpInboundCancel?app_key=your_appkey_here&method=yunc.erpInboundCancel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:62303015",
+      "sub_msg": "62303015:调用仓储失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1869",
+  "updatedAt": "2023-01-30",
+  "_file_stem": "warehouse-yunc-erpInboundCancel"
+}

@@ -1,0 +1,198 @@
+{
+  "id": "doudian.order.order.getUserOrderList",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.getUserOrderList",
+  "description": "支持按抖店open_id或抖音小程序open_id查询订单简要信息，仅电商小程序在C端面向用户呈现订单任务类场景使用",
+  "method": "GET",
+  "path": "/order/getUserOrderList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 小程序, 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "create_time_start",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "下单时间：开始，秒级时间戳",
+      "example": "1617355413",
+      "_depth": 0
+    },
+    {
+      "name": "create_time_end",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "下单时间：截止，秒级时间戳",
+      "example": "1617355413",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "单页大小，限制100以内",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页码，0页开始",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "用户openId",
+      "example": "3b829624-67bc-5c26-93be-32d9bc7c1922",
+      "_depth": 0
+    },
+    {
+      "name": "open_id_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "用户openId类型，固定为 douyin 抖音",
+      "example": "douyin",
+      "_depth": 0
+    },
+    {
+      "name": "order_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单状态：all-全部，under_sure-待确认，unpaid-待支付，stock_up-待发货，on_delivery-已发货，received-已完成，closed-已关闭，to_groups-待成团",
+      "example": "under_sure",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "page",
+      "type": "number",
+      "description": "页数，从0开始",
+      "example": "0"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总订单数",
+      "example": "1000"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": "单页大小",
+      "example": "20"
+    },
+    {
+      "name": "shop_order_list",
+      "type": "array",
+      "description": "订单信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单查询只支持查询最近90天内的数据（sub_code: isv.parameter-invalid:20022）",
+      "action": "把下单开始时间设置为最近90天内",
+      "sub_code": "isv.parameter-invalid:20022",
+      "sub_msg": "订单查询只支持查询最近90天内的数据"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单查询最多支持查询5万（sub_code: isv.parameter-invalid:20013）",
+      "action": "缩短查询时间范围",
+      "sub_code": "isv.parameter-invalid:20013",
+      "sub_msg": "订单查询最多支持查询5万"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单查询状态条件超过限制，只支持1个元素（sub_code: isv.parameter-invalid:20012）",
+      "action": "状态查询条件是list，但现在只支持传入一个元素，重新组装参数查询",
+      "sub_code": "isv.parameter-invalid:20012",
+      "sub_msg": "订单查询状态条件超过限制，只支持1个元素"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 单次查询订单数超过限制（sub_code: isv.parameter-invalid:20008）",
+      "action": "单页最大支持100，size设置需要 u003c= 100",
+      "sub_code": "isv.parameter-invalid:20008",
+      "sub_msg": "单次查询订单数超过限制"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 系统繁忙，请稍后重试（sub_code: isv.parameter-invalid:20005）",
+      "action": "如遇到该报错，建议再30秒内重试3~5次，如还是报错可提交工单咨询",
+      "sub_code": "isv.parameter-invalid:20005",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 系统繁忙，请稍后重试（sub_code: isv.parameter-invalid:20004）",
+      "action": "如遇到该报错，建议再30秒内重试3~5次，如还是报错可提交工单咨询",
+      "sub_code": "isv.parameter-invalid:20004",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/getUserOrderList?app_key=your_appkey_here&method=order.getUserOrderList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "page": "0",
+        "shop_order_list": [
+          {
+            "create_time": "1617355413",
+            "order_id": "4781320682406083640",
+            "order_status": "3",
+            "pay_amount": "500",
+            "sku_order_list": [
+              {
+                "sku_info": {
+                  "product_id": "3473196049974326153",
+                  "product_name": "衣服",
+                  "sku_id": "3254535"
+                }
+              }
+            ]
+          }
+        ],
+        "size": "20",
+        "total": "1000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20022",
+      "sub_msg": "订单查询只支持查询最近90天内的数据"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1915",
+  "updatedAt": "2022-05-12",
+  "_file_stem": "order-order-getUserOrderList"
+}

@@ -1,0 +1,218 @@
+{
+  "id": "doudian.dongchedi.second.brand.getBrandQualInfos",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.brand.getBrandQualInfos",
+  "description": "【二方接口】查询品牌资质信息",
+  "method": "GET",
+  "path": "/second/brand/getBrandQualInfos",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "uid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商业化账号组uid，用作鉴权",
+      "example": "15495388485",
+      "_depth": 0
+    },
+    {
+      "name": "shopId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "店铺ID",
+      "example": "5055915",
+      "_depth": 0
+    },
+    {
+      "name": "holder",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "holder",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "objectId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "对象id，\\n当object_type是店铺的时候，是店铺id\\n当object_type是机构的时候，是机构id\\n当object_type是服务市场服务商的时候，是服务商id\\nint64->string",
+      "example": "8109181",
+      "_depth": 1
+    },
+    {
+      "name": "objectType",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "对象类型",
+      "example": "1753215",
+      "_depth": 1
+    },
+    {
+      "name": "extraOptions",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "extra_options",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "excludeDisplayedUrl",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "excludeDisplayedUrl 不返回图片URL",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "includeInvalid",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "includeInvalid 是否包含无效品牌资质(失效、封禁)",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "excludeCategory",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "excludeCategory 排除类目返回",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "excludeAggregatedCategory",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "excludeAggregatedCategory 不聚合类目信息，为true时将只返回category_id, 且没有Name",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "brand_qual_infos",
+      "type": "array",
+      "description": "brand_qual_infos",
+      "example": "[]"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / uid不能为空（sub_code: isp.service-error:300001）",
+      "action": "uid不能为空",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / shopId不能为空（sub_code: isp.service-error:300002）",
+      "action": "shopId不能为空",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "shopId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / objectId不能为空（sub_code: isp.service-error:300003）",
+      "action": "objectId不能为空",
+      "sub_code": "isp.service-error:300003",
+      "sub_msg": "objectId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / objectType不能为空（sub_code: isp.service-error:300004）",
+      "action": "objectType不能为空",
+      "sub_code": "isp.service-error:300004",
+      "sub_msg": "objectType不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / excludeDisplayedUrl不能为空（sub_code: isp.service-error:300005）",
+      "action": "excludeDisplayedUrl不能为空",
+      "sub_code": "isp.service-error:300005",
+      "sub_msg": "excludeDisplayedUrl不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / includeInvalid不能为空（sub_code: isp.service-error:300006）",
+      "action": "includeInvalid不能为空",
+      "sub_code": "isp.service-error:300006",
+      "sub_msg": "includeInvalid不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / excludeCategory不能为空（sub_code: isp.service-error:300007）",
+      "action": "excludeCategory不能为空",
+      "sub_code": "isp.service-error:300007",
+      "sub_msg": "excludeCategory不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / excludeAggregatedCategory不能为空（sub_code: isp.service-error:300008）",
+      "action": "excludeAggregatedCategory不能为空",
+      "sub_code": "isp.service-error:300008",
+      "sub_msg": "excludeAggregatedCategory不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 店铺鉴权失败（sub_code: isp.service-error:500004）",
+      "action": "店铺鉴权失败",
+      "sub_code": "isp.service-error:500004",
+      "sub_msg": "店铺鉴权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.brand.getBrandQualInfos&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "brand_qual_infos": [
+          {
+            "brand_info": {
+              "brand_id": "4366412",
+              "cn_name": "a7d95216",
+              "en_name": "93860b34",
+              "relate_id": "1774893"
+            }
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6941",
+  "updatedAt": "2024-10-15",
+  "_file_stem": "dongchedi-second-brand-getBrandQualInfos"
+}

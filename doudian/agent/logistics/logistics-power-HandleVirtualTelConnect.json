@@ -1,0 +1,207 @@
+{
+  "id": "doudian.logistics.power.HandleVirtualTelConnect",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.HandleVirtualTelConnect",
+  "description": "虚拟号服务商回传虚拟号接通事件",
+  "method": "GET",
+  "path": "/power/HandleVirtualTelConnect",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓, 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "请求id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商code",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "callid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "通话id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "tel_a",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "A号码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "tel_x",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "X号码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "tel_b",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "B号码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "tel_y",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "Y号码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "subid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "绑定id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "calltype",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "呼叫类型",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "calltime",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "呼叫时间（已废弃，请传下方的eventTime字段）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "tel_xext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "分机号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "collect_num_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "时间(可不传，废弃字段)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "拓展字段",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "event_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "事件类型（1开始呼叫、2被叫方振铃、3呼叫建立、4呼叫结束）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "all_event_type",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "本次通话全部的通话事件（正常接通挂断的情况下）",
+      "example": "1,3,4",
+      "_depth": 0
+    },
+    {
+      "name": "event_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "事件发生时间的时间戳（单位：秒）",
+      "example": "1669344970",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/HandleVirtualTelConnect?app_key=your_appkey_here&method=power.HandleVirtualTelConnect&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2011",
+  "updatedAt": "2022-12-09",
+  "_file_stem": "logistics-power-HandleVirtualTelConnect"
+}

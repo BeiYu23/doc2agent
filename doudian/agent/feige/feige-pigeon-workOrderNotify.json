@@ -1,0 +1,242 @@
+{
+  "id": "doudian.feige.pigeon.workOrderNotify",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.workOrderNotify",
+  "description": "更新或者存储工单",
+  "method": "GET",
+  "path": "/pigeon/workOrderNotify",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "creator_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工单创建人ID",
+      "example": "123123213",
+      "_depth": 0
+    },
+    {
+      "name": "work_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工单唯一标识id",
+      "example": "xxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "open_user_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖店用户ID",
+      "example": "#YOUR_SECRET_KEY",
+      "_depth": 0
+    },
+    {
+      "name": "relation_id_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "工单关联id类型，1店铺订单 2商品订单 3售后单 4商品",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "relation_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "关联单Id，如1 店铺订单ID，2 商品订单ID，3 售后单ID，4 商品ID",
+      "example": "4936192001894376568",
+      "_depth": 0
+    },
+    {
+      "name": "work_order_type_desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工单状态描述",
+      "example": "换货工单",
+      "_depth": 0
+    },
+    {
+      "name": "work_order_status",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "工单状态  10 待处理/ 20 处理中/30 已完结/40 已失效（已删除，飞鸽内不展示）",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工单标题",
+      "example": "开放测试工单",
+      "_depth": 0
+    },
+    {
+      "name": "event_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "事件类型  1 创建事件  2 更新事件",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "creator_id_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "工单创建人 账号体系 1 飞鸽账号体系 2 ISV账号体系，若为飞鸽体系，则creator_id传递飞鸽体系的身份ID，如OpenId,若为ISV账号，则需要和飞鸽协商后确定",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "event_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "事件发生时间（单位：秒)",
+      "example": "1654163962",
+      "_depth": 0
+    },
+    {
+      "name": "scene",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "工单场景 0其他 1补发 2换货",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "trigger_action",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "触发操作：0无操作 1发卡片",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "extra_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展数据",
+      "example": "xxx",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:2008）",
+      "action": "请检查参数",
+      "sub_code": "isv.parameter-invalid:2008",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必要的业务参数（sub_code: isv.missing-parameter:9002）",
+      "action": "请检查入参",
+      "sub_code": "isv.missing-parameter:9002",
+      "sub_msg": "缺少必要的业务参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:9001）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:9001",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:2006）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:2006",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数过期（sub_code: isv.parameter-invalid:2007）",
+      "action": "请重试",
+      "sub_code": "isv.parameter-invalid:2007",
+      "sub_msg": "参数过期"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:9003）",
+      "action": "请检查参数信息后重试",
+      "sub_code": "isv.business-failed:9003",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 关联单查询失败（sub_code: isv.business-failed:2013）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:2013",
+      "sub_msg": "关联单查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 工单卡片发送失败（sub_code: isv.business-failed:2016）",
+      "action": "请检查参数信息后重试",
+      "sub_code": "isv.business-failed:2016",
+      "sub_msg": "工单卡片发送失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 工单已存在（sub_code: isv.business-failed:2018）",
+      "action": "请检查参数",
+      "sub_code": "isv.business-failed:2018",
+      "sub_msg": "工单已存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 工单不存在（sub_code: isv.business-failed:2005）",
+      "action": "请检查参数",
+      "sub_code": "isv.business-failed:2005",
+      "sub_msg": "工单不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/workOrderNotify?app_key=your_appkey_here&method=pigeon.workOrderNotify&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2008",
+      "sub_msg": "参数非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/1974",
+  "updatedAt": "2022-10-27",
+  "_file_stem": "feige-pigeon-workOrderNotify"
+}

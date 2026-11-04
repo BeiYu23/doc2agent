@@ -1,0 +1,117 @@
+{
+  "id": "doudian.cloud.openCloud.v1.imageVersion.create",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.v1.imageVersion.create",
+  "description": "创建镜像",
+  "method": "GET",
+  "path": "/openCloud/v1/imageVersion/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器服务id",
+      "example": "7239708175753249068",
+      "_depth": 0
+    },
+    {
+      "name": "version_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "版本名称",
+      "example": "v1.0",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "备注",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "程序包上传素材中心后返回的uri",
+      "example": "http://p-ecom-open-boe-sign.bytedance.net/tos-boe-i-39cvtodz2w/1bc0a0ad0abf4b06abd4161064d99050.jar?x-orig-authkey=ak39cvtodz2w&x-orig-expires=1685623279&x-orig-sign=DXC0yu4DmMiQFRPKzsbhMP%2B1sLI%3D",
+      "_depth": 0
+    },
+    {
+      "name": "file_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件名称",
+      "example": "demo.jar",
+      "_depth": 0
+    },
+    {
+      "name": "cs_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器名称",
+      "example": "mar-pod",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100384108",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "version_id",
+      "type": "string",
+      "description": "镜像版本id",
+      "example": "7241903236771234092"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=openCloud.v1.imageVersion.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "version_id": "7241903236771234092"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/4155",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-v1-imageVersion-create"
+}

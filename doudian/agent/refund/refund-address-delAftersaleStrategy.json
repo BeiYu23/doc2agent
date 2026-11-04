@@ -1,0 +1,76 @@
+{
+  "id": "doudian.refund.address.delAftersaleStrategy",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "address.delAftersaleStrategy",
+  "description": "删除售后地址策略",
+  "method": "GET",
+  "path": "/address/delAftersaleStrategy",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "strategy_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "必填，售后地址策略。",
+      "example": "AFS7418487171435053348",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请输入正确的参数（sub_code: isv.parameter-invalid:4000）",
+      "action": "按照返回的提示信息修改参数后重试。",
+      "sub_code": "isv.parameter-invalid:4000",
+      "sub_msg": "请输入正确的参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:3000）",
+      "action": "一般为系统内部异常，重试不能解决后，可以在开放平台提工单或者联系抖店运营/开发人员解决",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:8001）",
+      "action": "一般为系统内部异常，重试不能解决后，可以在开放平台提工单或者联系抖店运营/开发人员解决",
+      "sub_code": "isv.business-failed:8001",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/address/delAftersaleStrategy?app_key=your_appkey_here&method=address.delAftersaleStrategy&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4000",
+      "sub_msg": "请输入正确的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/6909",
+  "updatedAt": "2024-09-25",
+  "_file_stem": "refund-address-delAftersaleStrategy"
+}

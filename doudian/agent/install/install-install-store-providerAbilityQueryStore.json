@@ -1,0 +1,111 @@
+{
+  "id": "doudian.install.install.store.providerAbilityQueryStore",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.providerAbilityQueryStore",
+  "description": "到店安装通过服务能力反查门店id列表",
+  "method": "GET",
+  "path": "/install/store/providerAbilityQueryStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ability_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "能力id (注意，这里只能是单个能力哈，不支持多个能力)",
+      "example": "33862_549444_9343",
+      "_depth": 0
+    },
+    {
+      "name": "lp_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商code",
+      "example": "xxxx",
+      "_depth": 0
+    },
+    {
+      "name": "pn",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "rn",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当前大小",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store_id_list",
+      "type": "array",
+      "description": "门店id列表(具备指定能力的门店id列表)",
+      "example": "<1,2,3>"
+    },
+    {
+      "name": "pn",
+      "type": "mixed",
+      "description": "当前页码",
+      "example": "1"
+    },
+    {
+      "name": "rn",
+      "type": "mixed",
+      "description": "每一页的数量",
+      "example": "10"
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "返回的总数量",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.providerAbilityQueryStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "pn": "1",
+        "rn": "10",
+        "store_id_list": "<1,2,3>",
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7843",
+  "updatedAt": "2025-11-05",
+  "_file_stem": "install-install-store-providerAbilityQueryStore"
+}

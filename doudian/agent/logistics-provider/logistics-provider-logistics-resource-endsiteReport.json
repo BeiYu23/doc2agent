@@ -1,0 +1,356 @@
+{
+  "id": "doudian.logistics-provider.logistics.resource.endsiteReport",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.resource.endsiteReport",
+  "description": "同步物流商数据的接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "brandCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站品牌的名称",
+      "example": "mamayizhan",
+      "_depth": 0
+    },
+    {
+      "name": "endSites",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "驿站信息列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "endSiteName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站名称",
+      "example": "妈妈驿站（北京）",
+      "_depth": 1
+    },
+    {
+      "name": "endSiteCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站编码",
+      "example": "AC2312A",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "详细地址",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "countryCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国家编码固定CHN",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "provinceCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站在当前物流商省编码",
+      "example": "11",
+      "_depth": 2
+    },
+    {
+      "name": "provinceName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站在当前物流商省名称",
+      "example": "北京",
+      "_depth": 2
+    },
+    {
+      "name": "cityCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站在当前物流商市编码",
+      "example": "11123312",
+      "_depth": 2
+    },
+    {
+      "name": "cityName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站在当前物流商市名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "districtCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站在当前物流商区编码",
+      "example": "1112331223",
+      "_depth": 2
+    },
+    {
+      "name": "districtName",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站在当前物流商区名称",
+      "example": "朝阳区",
+      "_depth": 2
+    },
+    {
+      "name": "streetCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站在当前物流商街道编码",
+      "example": "111233122323",
+      "_depth": 2
+    },
+    {
+      "name": "streetName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站在当前物流商街道名称",
+      "example": "中关村街道",
+      "_depth": 2
+    },
+    {
+      "name": "detailAddress",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站详细地址",
+      "example": "北京北京市丹棱街5号",
+      "_depth": 2
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "驿站联系人信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站联系人姓名",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站联系人电话",
+      "example": "12332121233",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站联系人手机",
+      "example": "12332121233",
+      "_depth": 2
+    },
+    {
+      "name": "email",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驿站联系人邮箱",
+      "example": "zhangsan@bytedance.com",
+      "_depth": 2
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站经度",
+      "example": "111.11",
+      "_depth": 1
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站纬度",
+      "example": "23.11",
+      "_depth": 1
+    },
+    {
+      "name": "serviceStartTime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站营业开始时间24小时制",
+      "example": "14:00",
+      "_depth": 1
+    },
+    {
+      "name": "serviceEndTime",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "驿站营业结束时间24小时制",
+      "example": "22:00",
+      "_depth": 1
+    },
+    {
+      "name": "endSiteStatus",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "驿站运营状态1-运营中，2-未运营",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "err_code",
+      "type": "string",
+      "description": "错误编码",
+      "example": "0"
+    },
+    {
+      "name": "err_reason",
+      "type": "string",
+      "description": "错误描述",
+      "example": "成功"
+    },
+    {
+      "name": "failRecords",
+      "type": "array",
+      "description": "错误记录",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / -（sub_code: isp.service-error:10001）",
+      "action": "修改请求参数",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "-"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / -（sub_code: isp.service-error:10002）",
+      "action": "接口重试",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "-"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / -（sub_code: isp.service-error:10003）",
+      "action": "联系开发人员",
+      "sub_code": "isp.service-error:10003",
+      "sub_msg": "-"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -（sub_code: isv.business-failed:10206）",
+      "action": "驿站信息存在错误",
+      "sub_code": "isv.business-failed:10206",
+      "sub_msg": "-"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.resource.endsiteReport&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "err_code": "0",
+        "err_reason": "成功",
+        "failRecords": [
+          {
+            "endSites": {
+              "address": {
+                "cityCode": "-",
+                "cityName": "-",
+                "countryCode": "CHN",
+                "detailAddress": "-",
+                "districtCode": "-",
+                "districtName": "-",
+                "latitude": "-",
+                "longitude": "-",
+                "provinceCode": "-",
+                "provinceName": "-",
+                "streetCode": "-",
+                "streetName": "-"
+              },
+              "contact": {
+                "email": "zhangsan@bytedance.com",
+                "mobile": "12332121233",
+                "name": "张三",
+                "phone": "12332121233"
+              },
+              "endSiteCode": "-",
+              "endSiteName": "-",
+              "endSiteStatus": "1",
+              "latitude": "23.11",
+              "longitude": "111.11",
+              "serviceEndTime": "22:00",
+              "serviceStartTime": "14:00"
+            },
+            "failDesc": "-"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "-"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2947",
+  "updatedAt": "2024-06-19",
+  "_file_stem": "logistics-provider-logistics-resource-endsiteReport"
+}

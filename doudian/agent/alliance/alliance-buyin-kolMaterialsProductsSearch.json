@@ -1,0 +1,317 @@
+{
+  "id": "doudian.alliance.buyin.kolMaterialsProductsSearch",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.kolMaterialsProductsSearch",
+  "description": "检索精选联盟商品，需达人/抖客授权",
+  "method": "GET",
+  "path": "/buyin/kolMaterialsProductsSearch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 达人, 抖客, MCN机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品标题，返回标题中包含某个关键词的商品",
+      "example": "测试商品名称",
+      "_depth": 0
+    },
+    {
+      "name": "first_cids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "筛选商品一级类目",
+      "example": "[1,2,3,4]",
+      "_depth": 0
+    },
+    {
+      "name": "second_cids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "筛选商品二级类目",
+      "example": "[22]",
+      "_depth": 0
+    },
+    {
+      "name": "third_cids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "筛选商品三级类目",
+      "example": "[333]",
+      "_depth": 0
+    },
+    {
+      "name": "price_min",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选价格区间-最小值（单位为分）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "price_max",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选价格区间-最大值（单位为分）",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "sell_num_min",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选历史销量区间-最小值",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "sell_num_max",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选历史销量区间-最大值",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "search_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "召回结果排序条件，0默认排序1历史销量排序2价格排序3佣金金额排序4佣金比例排序；",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "排序顺序（0升序1降序）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "cos_fee_min",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选普通佣金区间-最小值（单位为分）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cos_fee_max",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选普通佣金区间-最大值（单位为分）",
+      "example": "50",
+      "_depth": 0
+    },
+    {
+      "name": "cos_ratio_min",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选普通佣金率区间-最小值 （乘100，例如1.1%为110）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cos_ratio_max",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "筛选普通佣金率区间-最大值（乘100，例如1.1%为110）",
+      "example": "15",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "分页（从1开始）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页的数量（小于等于20）",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "share_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "获取商品分销状态。1: 仅返回可分销商品；0:返回全量商品",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "【废弃】推荐使用tag字段。",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "tag",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品标签。 0:返回全量商品; 1:返回超值购商品; 2:返回抖音超市(次日达)商品",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "商品总数",
+      "example": "1000"
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "description": "商品列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败: 无效搜索类型（sub_code: isv.parameter-invalid:4098）",
+      "action": "无效搜索类型",
+      "sub_code": "isv.parameter-invalid:4098",
+      "sub_msg": "参数校验失败: 无效搜索类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败: 无效分页大小（sub_code: isv.parameter-invalid:4097）",
+      "action": "无效分页大小",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败: 无效分页大小"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效百应ID（sub_code: isv.business-failed:4173）",
+      "action": "请重新授权",
+      "sub_code": "isv.business-failed:4173",
+      "sub_msg": "无效百应ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 今日访问商品数已达上限（sub_code: isv.business-failed:4195）",
+      "action": "今日访问商品数已达上限",
+      "sub_code": "isv.business-failed:4195",
+      "sub_msg": "今日访问商品数已达上限"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/kolMaterialsProductsSearch?app_key=your_appkey_here&method=buyin.kolMaterialsProductsSearch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "products": [
+          {
+            "activity_id": "1",
+            "available_coupons": [
+              {
+                "apply_end_time": "2016-01-01 13:00:00",
+                "apply_start_time": "2016-01-01 12:00:00",
+                "coupon_type": "1",
+                "discount_desc": "满20减1",
+                "type_desc": "平台券",
+                "use_end_time": "2016-01-01 13:00:00",
+                "use_start_time": "2016-01-01 12:00:00",
+                "valid_period": "3600",
+                "validity_type": "1"
+              }
+            ],
+            "commission_type": "1",
+            "cos_fee": "1",
+            "cos_ratio": "10",
+            "coupon_price": "92",
+            "cover": "https://sf1-ttcdn-tos.pstatp.com/img/temai/Fpt8famR3twTGYz09e25nz5PbTRuwww800-800~1125x1125_q50.webp",
+            "detail_url": "https://haohuo.jinritemai.com/views/product/item2?id=3400312511185213726",
+            "first_cid": "1206",
+            "in_stock": "1",
+            "kol_ad_cos_fee": "10",
+            "kol_ad_cos_ratio": "10.00",
+            "kol_cos_fee": "10",
+            "kol_cos_ratio": "10.00",
+            "limit_min_sale": "false",
+            "post_free": "true",
+            "presell_type": "0",
+            "price": "100",
+            "product_id": "3400312511185213726",
+            "sales": "1234",
+            "second_cid": "1402",
+            "sharable": "true",
+            "shop_id": "2232",
+            "shop_name": "maggie测试小铺",
+            "third_cid": "2634",
+            "title": "测试商品"
+          }
+        ],
+        "total": "1000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4098",
+      "sub_msg": "参数校验失败: 无效搜索类型"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1725",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-kolMaterialsProductsSearch"
+}

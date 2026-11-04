@@ -1,0 +1,90 @@
+{
+  "id": "doudian.video.second.ecomInsight.trackSecondVideoId",
+  "platform": "doudian",
+  "group": "video",
+  "name": "second.ecomInsight.trackSecondVideoId",
+  "description": "记录秒级数据追踪数据",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "second_track_video_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "秒级追踪视频ID",
+      "example": "video_987654",
+      "_depth": 0
+    },
+    {
+      "name": "task_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "任务ID",
+      "example": "123456789",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回数据对象",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "全局提示信息",
+      "example": "请求成功"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "返回码",
+      "example": "200"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.ecomInsight.trackSecondVideoId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "200",
+        "data": {
+          "id": "1001",
+          "msg": "操作成功",
+          "success": "true"
+        },
+        "msg": "请求成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8634",
+  "updatedAt": "2026-10-10",
+  "_file_stem": "video-second-ecomInsight-trackSecondVideoId"
+}

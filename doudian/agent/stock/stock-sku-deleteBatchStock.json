@@ -1,0 +1,171 @@
+{
+  "id": "doudian.stock.sku.deleteBatchStock",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "sku.deleteBatchStock",
+  "description": "批量删除批次库存",
+  "method": "GET",
+  "path": "/sku/deleteBatchStock",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "删除item",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品ID",
+      "example": "34543534",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "skuid",
+      "example": "242342343",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "仓ID",
+      "example": "43242424",
+      "_depth": 1
+    },
+    {
+      "name": "batch_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0时效 1唯一码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "time_batch_uk",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "时效唯一键",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "arrive_time_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "到货时间类型",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "arrive_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "到货时间",
+      "example": "12312321",
+      "_depth": 2
+    },
+    {
+      "name": "unique_batch_uk",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "唯一码唯一键",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "unique_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "唯一码id",
+      "example": "sfsafasdfdgd",
+      "_depth": 2
+    },
+    {
+      "name": "outer_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "入参区分",
+      "example": "dsfsfsfsfd",
+      "_depth": 1
+    },
+    {
+      "name": "token",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单据幂等",
+      "example": "asfsefdsfdsfsf",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result_map",
+      "type": "string",
+      "description": "返回结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 该批次已删除（sub_code: isv.parameter-invalid:-10002）",
+      "action": "取消删除该批次",
+      "sub_code": "isv.parameter-invalid:-10002",
+      "sub_msg": "该批次已删除"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sku/deleteBatchStock?app_key=your_appkey_here&method=sku.deleteBatchStock&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:-10002",
+      "sub_msg": "该批次已删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/7723",
+  "updatedAt": "2025-08-26",
+  "_file_stem": "stock-sku-deleteBatchStock"
+}

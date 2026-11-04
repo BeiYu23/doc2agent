@@ -1,0 +1,95 @@
+{
+  "id": "doudian.warehouse.yunc.getVirtualMobile",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.getVirtualMobile",
+  "description": "隐私小号获取",
+  "method": "GET",
+  "path": "/yunc/getVirtualMobile",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "platform_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺父订单号，抖店平台生成，平台下唯一",
+      "example": "6917531973167941080",
+      "_depth": 0
+    },
+    {
+      "name": "out_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "ERP单号",
+      "example": "1111111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_new_create",
+      "type": "boolean",
+      "description": "是否新创建",
+      "example": "true/false"
+    },
+    {
+      "name": "mobile_virtual",
+      "type": "string",
+      "description": "虚拟号值",
+      "example": "10220333123"
+    },
+    {
+      "name": "expire_time",
+      "type": "string",
+      "description": "虚拟号过期时间，格式为yyyy-MM-dd HH:mm:ss，时区为GMT+8，例如：2016-01-01 12:00:00",
+      "example": "2023-04-17 20:00:00"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:请求内部服务超时（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:请求内部服务超时"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/getVirtualMobile?app_key=your_appkey_here&method=yunc.getVirtualMobile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "expire_time": "2023-04-17 20:00:00",
+        "is_new_create": "true/false",
+        "mobile_virtual": "10220333123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20001,
+      "msg": "内部服务超时",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:请求内部服务超时"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/3583",
+  "updatedAt": "2023-04-18",
+  "_file_stem": "warehouse-yunc-getVirtualMobile"
+}

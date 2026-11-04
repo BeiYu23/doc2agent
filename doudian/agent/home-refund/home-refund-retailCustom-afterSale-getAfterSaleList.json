@@ -1,0 +1,508 @@
+{
+  "id": "doudian.home-refund.retailCustom.afterSale.getAfterSaleList",
+  "platform": "doudian",
+  "group": "home-refund",
+  "name": "retailCustom.afterSale.getAfterSaleList",
+  "description": "售后列表接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 到家售后管理（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_by",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "排序方式，优先级按照列表顺序从前往后依次减小，写法为\"<字段名称> <排序方式>\"，字段名称目前支持\"status_deadline\"（逾期时间）、\"apply_time\"（申请时间）和 \"update_time\"（更新时间），排序方式目前支持\"asc\"（升序）和\"desc\"（降序）。按照\"逾期时间\"升序排列，会优先返回临近逾期时间的数据。",
+      "example": "[\"status_deadline desc\"]",
+      "_depth": 0
+    },
+    {
+      "name": "standard_aftersale_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "售后状态；6-待商家同意；7-待买家退货；8-待商家发货；11-待商家二次同意；12-售后成功；13-换货\\补寄\\维修待买家收货；14-换货\\补寄\\维修成功；27-商家一次拒绝；28-售后失败；29-商家二次拒绝；支持传多种状态，使用英文“,”分隔；注意：如传入非枚举值信息会被系统忽略，如传入都不合法则默认查询所有；",
+      "example": "[6,7,11]",
+      "_depth": 0
+    },
+    {
+      "name": "update_end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "更新时间结束，单位为秒（查询范围包含开始值）；当使用update_start_time和update_end_time时，请配合传入order_by= update_time否则会导致基于更新时间查询售后列表轮询数据遗漏；",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "已废弃，推荐使用standard_aftersale_status字段。售后状态，枚举为6(待商家同意),7(待买家退货),8(待商家发货),11(待商家二次同意),12(售后成功),13(换货待买家收货),14(换货成功),27(商家一次拒绝),28(售后失败),29(商家二次拒绝)",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "申请时间结束，单位为秒（查询范围不包含结束值）",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "amount_start",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "金额下限，单位为分（查询范围包含开始值）",
+      "example": "300",
+      "_depth": 0
+    },
+    {
+      "name": "order_logistics_tracking_no",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "正向物流单号",
+      "example": "[\"SF12345678910\"]",
+      "_depth": 0
+    },
+    {
+      "name": "agree_refuse_sign",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "售后申请: 是否拒签 （1：已同意拒签, 2：未同意拒签）",
+      "example": "[1,2]",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_sub_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售后子类型",
+      "example": "8001",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售后类型；0-退货退款；1-已发货仅退款；2-未发货仅退款；3-换货；6-价保；7-补寄；8-维修",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "arbitrate_status",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "已废弃，推荐使用standard_aftersale_status字段。售后状态，枚举为6(待商家同意),7(待买家退货),8(待商家发货),11(待商家二次同意),12(售后成功),13(换货待买家收货),14(换货成功),27(商家一次拒绝),28(售后失败),29(商家二次拒绝)",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "need_special_type",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否展示特殊售后",
+      "example": "true/false",
+      "_depth": 0
+    },
+    {
+      "name": "order_logistics_state",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "正向物流状态（仅支持拒签场景下的状态筛选，状态更新有一定时延。1：买家已拒签；2：买家已签收；3：快递退回中，运往商家，包含快递拦截成功；4：商家已签收）",
+      "example": "[1,2,3,4]",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_status_to_final_start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售后完结时间开始，单位为秒（查询范围包含开始值），仅支持售后完结时间在近6个月内的售后单，按完结时间筛选；售后完结时间生成规则是平台根据商品的类型，售后状态等综合判断生成，当售后单有完结时间返回时售后单不可再做任何操作；",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "risk_flag",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "风控标签，枚举为-1(退货正常),1(退货异常)",
+      "example": "-1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量，最多100个",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "refund_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "退款类型，枚举为0(原路退款),1(线下退款),2(备用金),3(保证金),4(无需退款)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "update_start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "更新时间开始，单位为秒（查询范围包含开始值）；当使用update_start_time和update_end_time时，请配合传入order_by= update_time否则会导致基于更新时间查询售后列表轮询数据遗漏；",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "父订单号",
+      "example": "4821845786203981633",
+      "_depth": 0
+    },
+    {
+      "name": "logistics_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "退货物流状态，枚举为1(全部),2(已发货),3(未发货)",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "amount_end",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "金额上限，单位为分（查询范围不包含结束值）",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，从0开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_status_to_final_end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售后完结时间结束，单位为秒（查询范围包含开始值），仅支持售后完结时间在近6个月内的售后单，按完结时间筛选；售后完结时间生成规则是平台根据商品的类型，售后状态等综合判断生成，当售后单有完结时间返回时售后单不可再做任何操作；",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "售后理由；1-七天无理由退货；2-非七天无理由退货；",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "pay_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "付款方式，枚举为1(全部), 2(货到付款),3(线上付款)",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "申请时间开始，单位为秒（查询范围包含开始值）",
+      "example": "1626770133",
+      "_depth": 0
+    },
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后单号",
+      "example": "6987272148133888300",
+      "_depth": 0
+    },
+    {
+      "name": "order_flag",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "插旗信息：0：灰 1：紫 2: 青 3：绿 4： 橙 5： 红",
+      "example": "[1,2,3]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "items",
+      "type": "array",
+      "description": "返回的数据",
+      "example": ""
+    },
+    {
+      "name": "has_more",
+      "type": "boolean",
+      "description": "是否还有更多",
+      "example": "true"
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "数据总数",
+      "example": "1025"
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "当前页码，原样返回",
+      "example": "1"
+    },
+    {
+      "name": "size",
+      "type": "mixed",
+      "description": "每一页的数量，原样返回",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务系统异常-不可重试的错误（sub_code: isv.business-failed:5000001）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "业务系统异常-不可重试的错误"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必填参数（sub_code: isv.missing-parameter:4100001）",
+      "action": "请参考能力文档传入必填参数",
+      "sub_code": "isv.missing-parameter:4100001",
+      "sub_msg": "缺少必填参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数类型错误（sub_code: isv.parameter-invalid:4100002）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100002",
+      "sub_msg": "参数类型错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100003）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常-可重试（sub_code: isp.service-error:5100002）",
+      "action": "系统异常，可尝试重试",
+      "sub_code": "isp.service-error:5100002",
+      "sub_msg": "系统异常-可重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=retailCustom.afterSale.getAfterSaleList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "has_more": "true",
+        "items": [
+          {
+            "aftersale_info": {
+              "aftersale_id": "146490102070261820",
+              "aftersale_num": "1",
+              "aftersale_order_type": "1",
+              "aftersale_refund_type": "0",
+              "aftersale_status": "7",
+              "aftersale_status_to_final_time": "0",
+              "aftersale_sub_type": "0",
+              "aftersale_tags": [
+                {
+                  "placeholder": {},
+                  "tag_detail": "退货退款",
+                  "tag_detail_en": "after_sale_type",
+                  "tag_detail_text": "该售后单【xxx预警原因】请根据物流/商品状态进行核实。若确认有风险，请及时保存举证${relate_doc}，可在${asset_prevent}操作批量拒绝售后；若无风险，可同意售后。",
+                  "tag_link_url": "略"
+                }
+              ],
+              "aftersale_type": "0",
+              "apply_time": "1626860666",
+              "arbitrate_blame": "0",
+              "arbitrate_status": "0",
+              "auto_audit_bits": "[]",
+              "create_time": "1626753592",
+              "exchange_logistics_company_name": "韵达快递",
+              "exchange_sku_info": {
+                "code": "\"10000\"",
+                "name": "\"xxx\"",
+                "num": "0",
+                "out_sku_id": "\"10000\"",
+                "out_warehouse_id": "\"10000\"",
+                "price": "\"100\"",
+                "sku_id": "\"1709160688834615\"",
+                "spec_desc": "\"xx/xx/xx\"",
+                "supplier_id": "\"10000\"",
+                "url": "\"http://xxxxx\""
+              },
+              "got_pkg": "1",
+              "is_agree_refuse_sign": "0",
+              "left_urge_sms_count": "3",
+              "order_logistics": [
+                {
+                  "company_code": "powertestexpress",
+                  "company_name": "物流QA速递",
+                  "logistics_state": "13",
+                  "logistics_time": "1626860666",
+                  "tracking_no": "1719405648826990374443860"
+                }
+              ],
+              "part_type": "0",
+              "reason_second_labels": [
+                {
+                  "code": "1",
+                  "name": "衣服买大"
+                }
+              ],
+              "refund_amount": "200",
+              "refund_post_amount": "0",
+              "refund_status": "1",
+              "refund_tax_amount": "0",
+              "refund_type": "0",
+              "related_id": "6917562991037056921",
+              "remark": "买家不想要了",
+              "return_logistics_code": "\"XY123123123\"",
+              "return_logistics_company_name": "\"\"",
+              "return_promotion_amount": "0",
+              "risk_decision_code": "0",
+              "risk_decision_description": "\"\"",
+              "risk_decision_reason": "\"\"",
+              "status_deadline": "1626860666",
+              "store_id": "0",
+              "store_name": "xxx朝阳分店",
+              "update_time": "1626860666"
+            },
+            "order_info": {
+              "order_flag": "0",
+              "related_order_info": [
+                {
+                  "aftersale_item_num": "1",
+                  "aftersale_pay_amount": "200",
+                  "aftersale_post_amount": "0",
+                  "aftersale_tax_amount": "0",
+                  "create_time": "1626753592",
+                  "given_sku_order_ids": "[]",
+                  "is_oversea_order": "0",
+                  "item_num": "1",
+                  "logistics_code": "\"RABBIT123123\"",
+                  "logistics_company_name": "顺丰速运",
+                  "order_status": "3",
+                  "pay_amount": "200",
+                  "post_amount": "0",
+                  "price": "200",
+                  "product_id": "9999888777666",
+                  "product_image": "https://tosv.boe.byted.org/obj/temai/96a87c5c951433184a6223264704577ewww1600-1200",
+                  "product_name": "测试手机数据线",
+                  "promotion_pay_amount": "0",
+                  "shop_sku_code": "\"\"",
+                  "sku_order_id": "6917562991037056921",
+                  "sku_spec": [
+                    {
+                      "name": "规格项1",
+                      "value": "v1"
+                    }
+                  ],
+                  "tags": [
+                    {
+                      "tag_detail": "7天",
+                      "tag_detail_en": "unboxing_7day_return",
+                      "tag_link_url": "https://school.jinritemai.com/doudian/web/article/101835?from=shop_article"
+                    }
+                  ],
+                  "tax_amount": "0"
+                }
+              ],
+              "shop_order_id": "6917562991037056921"
+            },
+            "seller_logs": [
+              {
+                "content": "\"买家觉得小兔子太可爱了，不想要了\"",
+                "create_time": "2001-01-01 03:04:05",
+                "op_name": "\"兔子店铺CEO\"",
+                "star": "0"
+              }
+            ],
+            "signed": "false",
+            "text_part": {
+              "aftersale_refund_type_text": "原路退款",
+              "aftersale_status_text": "待买家退货",
+              "aftersale_type_text": "退货退款",
+              "arbitrate_status_text": "未介入",
+              "bad_item_text": "\"\"",
+              "logistics_text": "1/1已发货",
+              "reason_text": "其他",
+              "return_logistics_text": "未发货"
+            }
+          }
+        ],
+        "page": "1",
+        "size": "1",
+        "total": "1025"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "业务系统异常-不可重试的错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1521/6656",
+  "updatedAt": "2024-06-28",
+  "_file_stem": "home-refund-retailCustom-afterSale-getAfterSaleList"
+}

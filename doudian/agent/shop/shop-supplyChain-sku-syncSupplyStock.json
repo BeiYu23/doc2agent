@@ -1,0 +1,109 @@
+{
+  "id": "doudian.shop.supplyChain.sku.syncSupplyStock",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "supplyChain.sku.syncSupplyStock",
+  "description": "设置库存",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "skuid",
+      "example": "111111111111",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "productid",
+      "example": "11111111",
+      "_depth": 0
+    },
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部仓库编码",
+      "example": "w12345",
+      "_depth": 0
+    },
+    {
+      "name": "incremental",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否增量同步，当前供销平台只支持增量同步",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "idempotent_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "请求幂等键",
+      "example": "w12345_0_1656262875",
+      "_depth": 0
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "库存变更量，负值代表减",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20000）",
+      "action": "系统错误",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.sku.syncSupplyStock&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:20000",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2123",
+  "updatedAt": "2022-06-28",
+  "_file_stem": "shop-supplyChain-sku-syncSupplyStock"
+}

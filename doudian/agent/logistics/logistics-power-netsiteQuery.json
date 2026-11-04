@@ -1,0 +1,119 @@
+{
+  "id": "doudian.logistics.power.netsiteQuery",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.netsiteQuery",
+  "description": "网点信息查询",
+  "method": "GET",
+  "path": "/power/netsiteQuery",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "net_codes",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "网点编码",
+      "example": "[\"101046\"]",
+      "_depth": 0
+    },
+    {
+      "name": "pagination",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "翻页",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "第几页，默认1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "页大小，最大100",
+      "example": "10",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "net_sites",
+      "type": "array",
+      "description": "网点列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/netsiteQuery?app_key=your_appkey_here&method=power.netsiteQuery&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "net_sites": [
+          {
+            "address": {
+              "address_id": "1",
+              "city_code": "330100",
+              "city_name": "杭州市",
+              "country_code": "CHN",
+              "detail_address": "良渚路166号",
+              "district_code": "330110",
+              "district_name": "余杭区",
+              "province_code": "330000",
+              "province_name": "浙江省",
+              "street_code": "330111",
+              "street_name": "良渚街道"
+            },
+            "company": "yunda",
+            "contact": {
+              "email": "zhangsan@163.com",
+              "mobile": "18867727373",
+              "name": "张三",
+              "phone": "010-86383838"
+            },
+            "facility_type": "1",
+            "father_net_code": "029648",
+            "net_area": "100",
+            "net_code": "200120",
+            "net_name": "上海浦东新区陆家嘴公司",
+            "organization_type": "承包区"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1453",
+  "updatedAt": "2023-03-20",
+  "_file_stem": "logistics-power-netsiteQuery"
+}

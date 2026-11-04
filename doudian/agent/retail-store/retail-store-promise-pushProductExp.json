@@ -1,0 +1,112 @@
+{
+  "id": "doudian.retail-store.promise.pushProductExp",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "promise.pushProductExp",
+  "description": "推送(商品SKU)过期时间",
+  "method": "GET",
+  "path": "/promise/pushProductExp",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_exp_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "待同步的商品列表（store_id-product-sku-exp），单次同步量需小于1000",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "抖音商品ID",
+      "example": "3632246015060527131",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "抖音SKU ID",
+      "example": "6917539360121882326",
+      "_depth": 1
+    },
+    {
+      "name": "exp_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商品过期时间",
+      "example": "1692901833",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "门店ID",
+      "example": "1111409547",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必要入参，请调整后重试（sub_code: isv.missing-parameter:40002）",
+      "action": "缺少必要入参，请重试",
+      "sub_code": "isv.missing-parameter:40002",
+      "sub_msg": "缺少必要入参，请调整后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法入参，请调整后重试（sub_code: isv.parameter-invalid:40004）",
+      "action": "非法入参，请调整后重试",
+      "sub_code": "isv.parameter-invalid:40004",
+      "sub_msg": "非法入参，请调整后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品过期时间更新部分失败（sub_code: isv.business-failed:50002）",
+      "action": "商品过期时间更新部分失败",
+      "sub_code": "isv.business-failed:50002",
+      "sub_msg": "商品过期时间更新部分失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/promise/pushProductExp?app_key=your_appkey_here&method=promise.pushProductExp&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:40002",
+      "sub_msg": "缺少必要入参，请调整后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/4688",
+  "updatedAt": "2023-09-12",
+  "_file_stem": "retail-store-promise-pushProductExp"
+}

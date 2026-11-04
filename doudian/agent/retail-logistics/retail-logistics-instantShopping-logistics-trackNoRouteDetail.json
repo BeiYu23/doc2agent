@@ -1,0 +1,120 @@
+{
+  "id": "doudian.retail-logistics.instantShopping.logistics.trackNoRouteDetail",
+  "platform": "doudian",
+  "group": "retail-logistics",
+  "name": "instantShopping.logistics.trackNoRouteDetail",
+  "description": "运单轨迹查询接口",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商编码；需使用【/order/logisticsCompanyList】接口响应参数中的code；",
+      "example": "shentong",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号；可使用电子面单接口获取返回的单号查询【YOUR_SECRET_KEY】或商家店铺后台查看",
+      "example": "78393454",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "route_node_list",
+      "type": "array",
+      "description": "轨迹信息",
+      "example": ""
+    },
+    {
+      "name": "track_info",
+      "type": "object",
+      "description": "运单信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 运单号不能为空、物流商不能为空（sub_code: isv.parameter-invalid:40001）",
+      "action": "-",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "运单号不能为空、物流商不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务异常（sub_code: isp.service-error:50020）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:50020",
+      "sub_msg": "服务异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非即时零售电子面单不支持（sub_code: isv.business-failed:40004）",
+      "action": "切换取号的店铺授权后来查询",
+      "sub_code": "isv.business-failed:40004",
+      "sub_msg": "非即时零售电子面单不支持"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺无该运单号权限（sub_code: isv.business-failed:40006）",
+      "action": "请检查运单号",
+      "sub_code": "isv.business-failed:40006",
+      "sub_msg": "店铺无该运单号权限"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.logistics.trackNoRouteDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "route_node_list": [
+          {
+            "content": "配送",
+            "site_name": "1",
+            "state": "配送中",
+            "state_description": "配送",
+            "timestamp": "161324234"
+          }
+        ],
+        "track_info": {
+          "express": "shentong",
+          "track_no": "234234234"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "运单号不能为空、物流商不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1530/7381",
+  "updatedAt": "2025-03-25",
+  "_file_stem": "retail-logistics-instantShopping-logistics-trackNoRouteDetail"
+}

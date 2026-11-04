@@ -1,0 +1,122 @@
+{
+  "id": "doudian.btas-inspect.btas.sc.confirmReceiveOfflineOrders",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.sc.confirmReceiveOfflineOrders",
+  "description": "质检机构_确认收货(实物质检订单）",
+  "method": "GET",
+  "path": "/btas/sc/confirmReceiveOfflineOrders",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "orders",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "\"12313111\"",
+      "_depth": 1
+    },
+    {
+      "name": "product_quantity",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sc_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "质检机构ID。请填入当前订单对应的",
+      "example": "2",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "orders",
+      "type": "array",
+      "description": "订单列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3006:全部收货失败（sub_code: isv.business-failed:3006）",
+      "action": "3006:全部收货失败",
+      "sub_code": "isv.business-failed:3006",
+      "sub_msg": "3006:全部收货失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/activitySearch?app_key=your_appkey_here&method=buyin.activitySearch&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "activity_list": [
+          {
+            "activity_desc": "无要求",
+            "activity_id": "23123123123",
+            "activity_name": "测试活动",
+            "activity_status": "0",
+            "activity_status_desc": "任意状态",
+            "apply_end_time": "2021/1/16",
+            "apply_start_time": "2021/1/16",
+            "categories_limit": "\"\"",
+            "commission_rate": "10",
+            "estimated_single_sale": "500",
+            "institution_name": "测试机构1",
+            "new_shop_limit": "可报名",
+            "product_activity_ratio": "10.11",
+            "promote_end_time": "2021/1/16",
+            "promote_start_time": "2021/1/16",
+            "service_rate": "10",
+            "service_ratio": "10.11",
+            "shop_score_limit": "\"0\"",
+            "shop_type_limit": "\"\""
+          }
+        ],
+        "total": "20"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:3006",
+      "sub_msg": "3006:全部收货失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/2922",
+  "updatedAt": "2023-02-09",
+  "_file_stem": "btas-inspect-btas-sc-confirmReceiveOfflineOrders"
+}

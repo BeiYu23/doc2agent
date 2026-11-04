@@ -1,0 +1,111 @@
+{
+  "id": "doudian.store.pickup.batchBindStoreLibrary",
+  "platform": "doudian",
+  "group": "store",
+  "name": "pickup.batchBindStoreLibrary",
+  "description": "门店组批量绑定门店",
+  "method": "GET",
+  "path": "/pickup/batchBindStoreLibrary",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 自提门店API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "library_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店组id",
+      "example": "7459680072136671532",
+      "_depth": 0
+    },
+    {
+      "name": "store_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "门店id列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店ID",
+      "example": "1138991967",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_count",
+      "type": "mixed",
+      "description": "成功数量",
+      "example": "1"
+    },
+    {
+      "name": "fail_count",
+      "type": "mixed",
+      "description": "失败数量",
+      "example": "0"
+    },
+    {
+      "name": "failed_file",
+      "type": "string",
+      "description": "失败的文件链接",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -3:门店库id不存在（sub_code: isv.business-failed:-3）",
+      "action": "请修改门店库",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "-3:门店库id不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:RPCError{PSM:[cmp.ecom.vshop] Method:[GetStoreLibraryInfo] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1604 cds_key=THRIFT_INGRESS|ecom.logistics.resource_management:default:lq:|cmp.ecom.vshop:default:lq::|GetStoreLibraryInfo|prod| onOverQPSLimit, comment=cluster_limits_749185, threshold=2, unit=SECOND, instance=fdbd:dc03:11:621::44,fed-dp-4f78682c8f-5c4f957ddd-gj4t7] BizStatusCode:[0] BizStatusMessage:[]}（sub_code: isv.business-failed:-1）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:RPCError{PSM:[cmp.ecom.vshop] Method:[GetStoreLibraryInfo] ErrType:[RPC_FAILED] OriginalErr:[remote or network error[remote]: error_code=1604 cds_key=THRIFT_INGRESS|ecom.logistics.resource_management:default:lq:|cmp.ecom.vshop:default:lq::|GetStoreLibraryInfo|prod| onOverQPSLimit, comment=cluster_limits_749185, threshold=2, unit=SECOND, instance=fdbd:dc03:11:621::44,fed-dp-4f78682c8f-5c4f957ddd-gj4t7] BizStatusCode:[0] BizStatusMessage:[]}"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pickup/batchBindStoreLibrary?app_key=your_appkey_here&method=pickup.batchBindStoreLibrary&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fail_count": "0",
+        "failed_file": "-",
+        "success_count": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "-3:门店库id不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1559/7237",
+  "updatedAt": "2026-06-24",
+  "_file_stem": "store-pickup-batchBindStoreLibrary"
+}

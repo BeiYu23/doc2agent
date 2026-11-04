@@ -1,0 +1,124 @@
+{
+  "id": "doudian.retail-store.superm.capacityRule.queryByid",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.capacityRule.queryByid",
+  "description": "门店时段容量查询",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "rule_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "规则id",
+      "example": "Rule-124121",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "rule_dto",
+      "type": "object",
+      "description": "查询到的实体信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取组织关系失败（sub_code: isv.business-failed:20232）",
+      "action": "获取组织关系失败",
+      "sub_code": "isv.business-failed:20232",
+      "sub_msg": "获取组织关系失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询服务失败（sub_code: isv.business-failed:20233）",
+      "action": "门店查询服务失败",
+      "sub_code": "isv.business-failed:20233",
+      "sub_msg": "门店查询服务失败"
+    },
+    {
+      "code": "10001",
+      "meaning": "请求部分失败 / 数据转换错误（sub_code: isv.business-part-failed:50202）",
+      "action": "数据转换错误",
+      "sub_code": "isv.business-part-failed:50202",
+      "sub_msg": "数据转换错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=superm.capacityRule.queryByid&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "rule_dto": {
+          "details": [
+            {
+              "end_date": "2022-06-17",
+              "end_time": "19:00",
+              "rule_id": "Rule-124121",
+              "start_date": "2022-06-17",
+              "start_time": "19:00",
+              "time_interval": "60",
+              "time_limit_bound": "1"
+            }
+          ],
+          "relations": [
+            {
+              "capacity_target_code": "21421321",
+              "capacity_target_type": "1",
+              "rule_id": "Rule-124121"
+            }
+          ],
+          "rule_dto": {
+            "all_store": "1",
+            "create_time": "1682059220",
+            "creator": "xm",
+            "date_limit_bound": "1",
+            "date_limit_enable": "1",
+            "rule_entity_type": "1",
+            "rule_id": "Rule-124121",
+            "rule_name": "test",
+            "status": "1",
+            "updater": "xm"
+          }
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:20232",
+      "sub_msg": "获取组织关系失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/3593",
+  "updatedAt": "2023-09-15",
+  "_file_stem": "retail-store-superm-capacityRule-queryByid"
+}

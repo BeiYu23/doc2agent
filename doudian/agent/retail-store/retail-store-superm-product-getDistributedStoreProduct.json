@@ -1,0 +1,121 @@
+{
+  "id": "doudian.retail-store.superm.product.getDistributedStoreProduct",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.product.getDistributedStoreProduct",
+  "description": "根据店铺主商品ID查询已经铺品的门店及子商品",
+  "method": "GET",
+  "path": "/superm/product/getDistributedStoreProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "main_product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺主商品ID",
+      "example": "3576410646054571500",
+      "_depth": 0
+    },
+    {
+      "name": "store_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店列表",
+      "example": "56386074,64145175",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "起始页 (从0开始)",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页尺寸 (最大值50)",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "store_products",
+      "type": "array",
+      "description": "门店列表信息",
+      "example": ""
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "起始页 (从0开始)",
+      "example": "0"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": "每页尺寸 (最大值50)",
+      "example": "10"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "商品总数",
+      "example": "30"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:主商品信息不合法（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:主商品信息不合法",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:主商品信息不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:查询渠道品信息失败（sub_code: isv.business-failed:2010001）",
+      "action": "2010001:查询渠道品信息失败",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:查询渠道品信息失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/qualification/settle?app_key=your_appkey_here&method=qualification.settle&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:主商品信息不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2693",
+  "updatedAt": "2022-11-02",
+  "_file_stem": "retail-store-superm-product-getDistributedStoreProduct"
+}

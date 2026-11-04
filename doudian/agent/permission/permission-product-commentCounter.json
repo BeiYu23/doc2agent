@@ -1,0 +1,700 @@
+{
+  "id": "doudian.permission.product.commentCounter",
+  "platform": "doudian",
+  "group": "permission",
+  "name": "product.commentCounter",
+  "description": "获取商品维度或者店铺维度的评价计数信息、或者是印象词信息",
+  "method": "GET",
+  "path": "/product/commentCounter",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 二方开放权限组（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "basic_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "请求的基本信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "shop_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "店铺id列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "user_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "用户id列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "offset",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "offset",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "appid",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "device_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "设备id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "order_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "订单id列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "count",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sort",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "排序方式",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品id列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "kol_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "达人id列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当前请求人的user_id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "from_kol_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "算法用",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "counter_opt",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "【计数选项】",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "photos",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取有图数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "mid",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取中评数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "video",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取有视频数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "good",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取好评数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "rule_string",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "对于复杂的查询条件，可以直接传入约定的【规则字符串】，评价服务根据【规则字符串】查询对应的标签组名",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "need_has_word_count",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "需要有字评价数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "has_meaning",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "需要获取有意义的计数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "need_detailed_count",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "需要获取详实评价数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "photo_video",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取有图/视频的数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "total",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取评价总数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sku",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "只获取sku下的计数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "bad",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取差评数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "virtual_main",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "虚拟主评/逾期追评数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "has_meaningless",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "需要获取无意义的计数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "selection",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取买家秀数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "append",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "获取有追评的数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "biz_scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务场景",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "impression_opt",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "【印象词选项】",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "need_refine_sort",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要算法精排序（默认排序是按照印象词数量从大到小排序）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "exclude_product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "获取店铺印象词时，需要排除的商品id（店铺维度生效）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sku",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "获取sku下的印象词",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "count_limit",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "需要的印象词个数，0表示不限制个数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "only_positive",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "只要正向印象词",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "show_common_first",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否优先展示通用印象词（店铺维度生效）",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "impression_version",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "印象词版本号，默认是v1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "only_negative",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "只要负向印象词",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "stat_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "评价一级tab，1-8 对应 全部/有图/好评/中评/追评/差评/最新/中差评",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外的入参",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_ctx",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "1",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "host_app_version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "宿主（源）版本号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "iid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "11",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "os_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "app_version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "version_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "device_platform",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "ab_context",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "ab_param",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "AB参数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "device_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "entrance",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "请求入口，list:列表页，detail:商详页，shoplist:店铺列表",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "priority_region",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "channel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "user_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "biz",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "user_agent",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "version_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "host_app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "宿主（源）appid",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "device_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "saas_app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "saas端appid，不传表示不是saas场景，传7386表示当前为saas场景，传入的情况下app_id作为映射id，host_app_id作为原appid",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "x_forwarded_for",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "access_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "x_real_ip",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "update_version_code",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "os_version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "app_name_",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "dimension",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "需要获取的评价计数/印象词的维度",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "impression_tags",
+      "type": "string",
+      "description": "印象词",
+      "example": "1"
+    },
+    {
+      "name": "agg_map",
+      "type": "string",
+      "description": "基础计数数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/commentCounter?app_key=your_appkey_here&method=product.commentCounter&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "agg_map": {},
+        "impression_tags": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1506/7909",
+  "updatedAt": "2025-12-02",
+  "_file_stem": "permission-product-commentCounter"
+}

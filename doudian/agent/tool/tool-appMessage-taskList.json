@@ -1,0 +1,105 @@
+{
+  "id": "doudian.tool.appMessage.taskList",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "appMessage.taskList",
+  "description": "获取服务市场应用消息任务列表",
+  "method": "GET",
+  "path": "/appMessage/taskList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "模板id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页大小",
+      "example": "5",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "task_list",
+      "type": "array",
+      "description": "消息任务列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/appMessage/taskList?app_key=your_appkey_here&method=appMessage.taskList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "task_list": [
+          {
+            "app_id": "6864478719709301000",
+            "app_name": "open_admin自动化",
+            "create_time": "1683544661",
+            "failure_cnt": "0",
+            "id": "168",
+            "msg_param": "{\\\"warning_title\\\":\\\"物流异常\\\",\\\"warning_content\\\":\\\"您的78笔订单，物流出现异常情况，请及时查看。\\\",\\\"jump_url\\\":\\\"https://www.baidu.com/\\\"}",
+            "rid": "7791664a-beee-5a41-0ae6-06dc93d5e619",
+            "send_status": "3",
+            "send_to": "12345",
+            "shop_name": "刘好好",
+            "success_cnt": "1",
+            "template_id": "6864478719709301000",
+            "template_name": "异常预警",
+            "update_time": "1683544662"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/3646",
+  "updatedAt": "2023-05-08",
+  "_file_stem": "tool-appMessage-taskList"
+}

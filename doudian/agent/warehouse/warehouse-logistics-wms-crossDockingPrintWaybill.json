@@ -1,0 +1,182 @@
+{
+  "id": "doudian.warehouse.logistics.wms.crossDockingPrintWaybill",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "logistics.wms.crossDockingPrintWaybill",
+  "description": "越库单质检取号打印接口",
+  "method": "GET",
+  "path": "/logistics/wms/crossDockingPrintWaybill",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码",
+      "example": "01",
+      "_depth": 0
+    },
+    {
+      "name": "cross_docking_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "越库单号",
+      "example": "CD7397266657065943340",
+      "_depth": 0
+    },
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "0755057550",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "cross_docking_order_no",
+      "type": "string",
+      "description": "越库单号",
+      "example": "CD7397266657065943340"
+    },
+    {
+      "name": "order_code",
+      "type": "string",
+      "description": "订单码",
+      "example": "0755057550"
+    },
+    {
+      "name": "logistics_code",
+      "type": "string",
+      "description": "快递承运商",
+      "example": "shunfeng"
+    },
+    {
+      "name": "logistics_no",
+      "type": "string",
+      "description": "快递单号",
+      "example": "SF0001"
+    },
+    {
+      "name": "print_info",
+      "type": "string",
+      "description": "面单打印信息",
+      "example": "{\\\"cmd\\\":\\\"print\\\",\\\"requestID\\\":\\\"123458976\\\",\\\"version\\\":\\\"1.0\\\",\\\"isOpen\\\":false,\\\"task\\\":{\\\"taskID\\\":\\\"01_CD7397266657065943340_20240809143106\\\",\\\"printer\\\":\\\"\\\",\\\"preview\\\":false,\\\"config\\\":\\\"\\\",\\\"documents\\\":[{\\\"docNo\\\":\\\"CD7397266657065943340\\\",\\\"documentID\\\":\\\"41010469075\\\",\\\"copy\\\":1,\\\"contents\\\":[{\\\"params\\\":\\\"AppKey=edf6edb8-4882-46e1-a557-67c0d795fb25\\\\u0026ShopId=1001672549713098\\\\u0026TimeStamp=2024-08-09 06:31:06\\\\u0026V=1\\\\u0026Sign=6bde0c4d723de0f540563d6a18d5d70a\\\",\\\"signature\\\":\\\"YOUR_SECRET_KEY\\\",\\\"encryptedData\\\":\\\"YOUR_SECRET_KEY\\\",\\\"templateURL\\\":\\\"https://tosv.boe.byted.org/obj/logistics-YOUR_SECRET_KEY_76_130.xml\\\"}]}]}}"
+    },
+    {
+      "name": "order_flow",
+      "type": "string",
+      "description": "订单流向（枚举值：consumer消费者，seller商家）",
+      "example": "消费者"
+    },
+    {
+      "name": "remark",
+      "type": "string",
+      "description": "备注",
+      "example": "无"
+    },
+    {
+      "name": "warehouse_code",
+      "type": "string",
+      "description": "仓编码",
+      "example": "01"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部错误（sub_code: isp.service-error:1001）",
+      "action": "请重试或联系管理员",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "内部错误"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:1004）",
+      "action": "请检查后重试",
+      "sub_code": "isv.missing-parameter:1004",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 越库单单据状态不符合预期（sub_code: isv.business-failed:4004）",
+      "action": "请确认当前单据状态",
+      "sub_code": "isv.business-failed:4004",
+      "sub_msg": "越库单单据状态不符合预期"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 取号失败（sub_code: isv.business-failed:4005）",
+      "action": "请重试或联系管理员",
+      "sub_code": "isv.business-failed:4005",
+      "sub_msg": "取号失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010251407:越库单据状态不符合预期map[IDX_1: 待送检]（sub_code: isv.business-failed:2010251407）",
+      "action": "2010251407:越库单据状态不符合预期map[IDX_1: 待送检]",
+      "sub_code": "isv.business-failed:2010251407",
+      "sub_msg": "2010251407:越库单据状态不符合预期map[IDX_1: 待送检]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010251403:越库事务执行失败map[IDX_1:数据库异常]（sub_code: isv.business-failed:2010251403）",
+      "action": "2010251403:越库事务执行失败map[IDX_1:数据库异常]",
+      "sub_code": "isv.business-failed:2010251403",
+      "sub_msg": "2010251403:越库事务执行失败map[IDX_1:数据库异常]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010251104:分布式锁错误，重复请求（sub_code: isv.business-failed:2010251104）",
+      "action": "2010251104:分布式锁错误，重复请求",
+      "sub_code": "isv.business-failed:2010251104",
+      "sub_msg": "2010251104:分布式锁错误，重复请求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2030251007:InnerErrormap[]（sub_code: isv.business-failed:2030251007）",
+      "action": "2030251007:InnerErrormap[]",
+      "sub_code": "isv.business-failed:2030251007",
+      "sub_msg": "2030251007:InnerErrormap[]"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/sign/delete?app_key=your_appkey_here&method=sms.sign.delete&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "message": "成功"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1001",
+      "sub_msg": "内部错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/6765",
+  "updatedAt": "2024-08-16",
+  "_file_stem": "warehouse-logistics-wms-crossDockingPrintWaybill"
+}

@@ -1,0 +1,95 @@
+{
+  "id": "doudian.alliance.buyin.mHandleTrusteeshipApply",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.mHandleTrusteeshipApply",
+  "description": "团长托管商品审核",
+  "method": "GET",
+  "path": "/buyin/mHandleTrusteeshipApply",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品 id 列表，最多20个商品ID",
+      "example": "7843162348237",
+      "_depth": 0
+    },
+    {
+      "name": "op_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型（1：通过，2：拒绝）",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "fail_item",
+      "type": "string",
+      "description": "添加失败的记录（key：商品id，value：失败原因）",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8192:当前托管商品数已达上限，无法新增托管商品（sub_code: isv.business-failed:8192）",
+      "action": "8192:当前托管商品数已达上限，无法新增托管商品",
+      "sub_code": "isv.business-failed:8192",
+      "sub_msg": "8192:当前托管商品数已达上限，无法新增托管商品"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/mHandleTrusteeshipApply?app_key=your_appkey_here&method=buyin.mHandleTrusteeshipApply&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fail_item": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/2138",
+  "updatedAt": "2022-09-07",
+  "_file_stem": "alliance-buyin-mHandleTrusteeshipApply"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "doudian.refund.afterSale.CancelSendGoodsSuccess",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.CancelSendGoodsSuccess",
+  "description": "1、商家在抖店后台售后小助手配置取消发货自动退策略；\n2、当用户发起退款申请，且商家判断符合退款的场景时，可以调用取消发货接口同步平台取消发货；\n3、命中策略后该售后单自动执行退款操作；",
+  "method": "GET",
+  "path": "/afterSale/CancelSendGoodsSuccess",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V5.04）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "售后单ID",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "op_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "unix时间戳，单位为秒",
+      "example": "1627905819",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 序列化失败，可能为入参问题，请检查。（sub_code: isv.business-failed:11004）",
+      "action": "检查后重试",
+      "sub_code": "isv.business-failed:11004",
+      "sub_msg": "序列化失败，可能为入参问题，请检查。"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参数错误（sub_code: isp.service-error:10002）",
+      "action": "通常为不应该发生的系统错误，请检查售后单状态，谨慎重试",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:11000）",
+      "action": "请检查入参",
+      "sub_code": "isv.business-failed:11000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统错误（sub_code: isv.business-failed:10000）",
+      "action": "可能为系统处理超时，请检查后重试",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 店铺未设置或启用售后小助手策略，请店铺通过抖店后台或以下链接进行设置：https://fxg.jinritemai.YOUR_SECRET_KEY（sub_code: isv.business-failed:11002）",
+      "action": "检查是否开启小助手策略",
+      "sub_code": "isv.business-failed:11002",
+      "sub_msg": "店铺未设置或启用售后小助手策略，请店铺通过抖店后台或以下链接进行设置：https://fxg.jinritemai.YOUR_SECRET_KEY"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 售后单已被其他自动退款方式命中,售后小助手策略不再执行（sub_code: isv.business-failed:12001）",
+      "action": "查看售后单状态",
+      "sub_code": "isv.business-failed:12001",
+      "sub_msg": "售后单已被其他自动退款方式命中,售后小助手策略不再执行"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该售后单不存在（sub_code: isv.business-failed:11003）",
+      "action": "检查入参后重试",
+      "sub_code": "isv.business-failed:11003",
+      "sub_msg": "该售后单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取售后小助手策略失败（sub_code: isv.business-failed:12000）",
+      "action": "请检查后重试",
+      "sub_code": "isv.business-failed:12000",
+      "sub_msg": "获取售后小助手策略失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/CancelSendGoodsSuccess?app_key=your_appkey_here&method=afterSale.CancelSendGoodsSuccess&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:11004",
+      "sub_msg": "序列化失败，可能为入参问题，请检查。"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/816",
+  "updatedAt": "2021-08-11",
+  "_file_stem": "refund-afterSale-CancelSendGoodsSuccess"
+}

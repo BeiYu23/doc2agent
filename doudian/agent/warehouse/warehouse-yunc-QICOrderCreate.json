@@ -1,0 +1,620 @@
+{
+  "id": "doudian.warehouse.yunc.QICOrderCreate",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.QICOrderCreate",
+  "description": "云仓QIC订单创建接口",
+  "method": "GET",
+  "path": "/yunc/QICOrderCreate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部业务单号 仅支持纯数字字符串，长度小于20 必填",
+      "example": "22334234546456",
+      "_depth": 0
+    },
+    {
+      "name": "BIC_order_detail",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "必填",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "external_shop_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部店铺ID 仅支持纯数字字符串 必填",
+      "example": "1422534",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部店铺ID",
+      "example": "4300291",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检仓编码 必填",
+      "example": "SC-BIC-SH",
+      "_depth": 1
+    },
+    {
+      "name": "receiver_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "收件人信息 必填",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "姓名 必填",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话号",
+      "example": "010-26321234",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号 必填",
+      "example": "15200001234",
+      "_depth": 2
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家编码 必填",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "01",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称 必填",
+      "example": "北京",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称 必填",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "345",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称 必填",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "657",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "中关村街道",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址 必填",
+      "example": "互联网金融中心",
+      "_depth": 2
+    },
+    {
+      "name": "sender_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "寄件人信息 必填",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "姓名 必填",
+      "example": "张三",
+      "_depth": 2
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "固定电话号",
+      "example": "010-26321234",
+      "_depth": 2
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号 必填",
+      "example": "15200001234",
+      "_depth": 2
+    },
+    {
+      "name": "country_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "国家编码 必填",
+      "example": "CHN",
+      "_depth": 2
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省编码",
+      "example": "01",
+      "_depth": 2
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称 必填",
+      "example": "北京",
+      "_depth": 2
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市编码",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称 必填",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县编码",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县名称 必填",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "street_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道编码",
+      "example": "43245",
+      "_depth": 2
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "中关村街道",
+      "_depth": 2
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址 必填",
+      "example": "互联网金融中心",
+      "_depth": 2
+    },
+    {
+      "name": "buyer_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "买家备注",
+      "example": "快点发货",
+      "_depth": 1
+    },
+    {
+      "name": "seller_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卖家备注",
+      "example": "越快越好",
+      "_depth": 1
+    },
+    {
+      "name": "book_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "下单时间 秒级时间戳",
+      "example": "1666868569",
+      "_depth": 1
+    },
+    {
+      "name": "pay_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "支付时间 秒级时间戳",
+      "example": "1666868569",
+      "_depth": 1
+    },
+    {
+      "name": "promise_sign_time",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "期望收货时间 秒级时间戳",
+      "example": "1666868569",
+      "_depth": 1
+    },
+    {
+      "name": "order_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "订单费用 单位（分）",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "freight_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "运费 单位（分）",
+      "example": "456",
+      "_depth": 1
+    },
+    {
+      "name": "pay_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "支付费用 单位（分）",
+      "example": "789",
+      "_depth": 1
+    },
+    {
+      "name": "is_allow_merge",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "是否合单 1-合单，2-非合单 默认非合单",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "source_platform_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单来源平台 DY-抖音",
+      "example": "DY",
+      "_depth": 1
+    },
+    {
+      "name": "BIC_product_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品明细 必填",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品ID 必填",
+      "example": "1234",
+      "_depth": 1
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品名称 必填",
+      "example": "新疆玉石",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "skuId 必填",
+      "example": "3424",
+      "_depth": 1
+    },
+    {
+      "name": "spec_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规格信息",
+      "example": "玉",
+      "_depth": 1
+    },
+    {
+      "name": "count",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "数量 必填",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "sku_price",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "价格 必填",
+      "example": "2034",
+      "_depth": 1
+    },
+    {
+      "name": "sku_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku描述",
+      "example": "玉",
+      "_depth": 1
+    },
+    {
+      "name": "pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品图片的url 必填",
+      "example": "https://p3-aio.ecombdimg.com/obj/temai/Fq8p6AbLZdvWsVWRhEVBqsy6CmQB",
+      "_depth": 1
+    },
+    {
+      "name": "unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "单位",
+      "example": "块",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台货品id",
+      "example": "7004716017276518700",
+      "_depth": 1
+    },
+    {
+      "name": "bar_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "条码",
+      "example": "6975482081806",
+      "_depth": 1
+    },
+    {
+      "name": "first_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目ID",
+      "example": "955400",
+      "_depth": 1
+    },
+    {
+      "name": "second_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目ID",
+      "example": "955401",
+      "_depth": 1
+    },
+    {
+      "name": "third_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目ID",
+      "example": "955402",
+      "_depth": 1
+    },
+    {
+      "name": "fourth_category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目ID",
+      "example": "955403",
+      "_depth": 1
+    },
+    {
+      "name": "first_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目名称",
+      "example": "珠宝与衍生品",
+      "_depth": 1
+    },
+    {
+      "name": "second_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目名称",
+      "example": "天然水晶",
+      "_depth": 1
+    },
+    {
+      "name": "third_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目名称",
+      "example": "天然水晶摆挂件",
+      "_depth": 1
+    },
+    {
+      "name": "fourth_category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目名称",
+      "example": "天然水晶摆挂件",
+      "_depth": 1
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "需要在\"origin_track_no\"key中填写原始运单号  必填",
+      "example": "",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2665",
+  "updatedAt": "2022-10-27",
+  "_file_stem": "warehouse-yunc-QICOrderCreate"
+}

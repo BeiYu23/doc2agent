@@ -1,0 +1,121 @@
+{
+  "id": "doudian.warehouse.instantShopping.starhub.updateRelayOrderStatus",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "instantShopping.starhub.updateRelayOrderStatus",
+  "description": "同步正向接力单状态",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "relay_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音接力单id",
+      "example": "\"4732894793824719\"",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "抖音正向接力单当前状态",
+      "example": "120",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "单据货品总毛重，（后续结算需要），单位mg",
+      "example": "4020000",
+      "_depth": 0
+    },
+    {
+      "name": "operator_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人id",
+      "example": "\"123\"",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人姓名",
+      "example": "\"xxx\"",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "状态更新时间",
+      "example": "793824719",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法入参（sub_code: isv.parameter-invalid:40001）",
+      "action": "请传入合法入参",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法入参"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不存在的接力单（sub_code: isv.business-failed:40004）",
+      "action": "请传入正确的接力单id",
+      "sub_code": "isv.business-failed:40004",
+      "sub_msg": "不存在的接力单"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 没有权限操作接力单（sub_code: isv.parameter-invalid:40006）",
+      "action": "请传入正确的接力单id",
+      "sub_code": "isv.parameter-invalid:40006",
+      "sub_msg": "没有权限操作接力单"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.starhub.updateRelayOrderStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "非法入参"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/6543",
+  "updatedAt": "2024-05-27",
+  "_file_stem": "warehouse-instantShopping-starhub-updateRelayOrderStatus"
+}

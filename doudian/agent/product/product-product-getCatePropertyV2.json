@@ -1,0 +1,297 @@
+{
+  "id": "doudian.product.product.getCatePropertyV2",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.getCatePropertyV2",
+  "description": "1、调用【/product/addV2】创建商品和【/product/editV2】更新商品时，请求参数【product_format_new】字段需传入。",
+  "method": "GET",
+  "path": "/product/getCatePropertyV2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V8.08）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "叶子类目id 1、传category_leaf_id ，则不需要传first_cid、second_cid、third_cid这三个字段 2、如果没传category_leaf_id，走之前的逻辑，需要传first_cid、second_cid、third_cid这三个字段",
+      "example": "1342353245",
+      "_depth": 0
+    },
+    {
+      "name": "product_format_new",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "measure_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "度量衡信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "度量衡模板id",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义度量衡扩展信息",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "度量衡内容",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "度量衡扩展信息",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "unit_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "度量衡单位名称",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "值内容",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "前缀",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "suffix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "后缀",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "prefix_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "前缀id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "unit_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "度量衡单位id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "suffix_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "后缀id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "module_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "模块id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "value_required",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否必填",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "value_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "值id",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "diy_type",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "是否为商家自定义属性值，1为是，0为不是",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "need_process_prop_cascade",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回参数列表",
+      "example": ""
+    },
+    {
+      "name": "tpl_type",
+      "type": "number",
+      "description": "模板类型，SPU为1，结构化为2，默认为0（无特殊需求忽略该字段即可）",
+      "example": "2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前类目不存在，请重新选择类目（sub_code: isv.parameter-invalid:2010003）",
+      "action": "类目已经不存在，业务预期内，不透出属于正常case",
+      "sub_code": "isv.parameter-invalid:2010003",
+      "sub_msg": "当前类目不存在，请重新选择类目"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 此类目已调整升级，请重新选择类目进行商品发布（sub_code: isv.parameter-invalid:2010044）",
+      "action": "切换类目",
+      "sub_code": "isv.parameter-invalid:2010044",
+      "sub_msg": "此类目已调整升级，请重新选择类目进行商品发布"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取类目配置失败（sub_code: isv.business-failed:2010202）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:2010202",
+      "sub_msg": "获取类目配置失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取可选品牌失败（sub_code: isv.business-failed:2010013）",
+      "action": "重新调用接口获取",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "获取可选品牌失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常（sub_code: isv.business-failed:2010001）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:未指定类目ID（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:未指定类目ID",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:未指定类目ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110210112:商品类目不符合平台规则，请重新选择商品类目（sub_code: isv.business-failed:110210112）",
+      "action": "请重新选择",
+      "sub_code": "isv.business-failed:110210112",
+      "sub_msg": "110210112:商品类目不符合平台规则，请重新选择商品类目"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2010003",
+      "sub_msg": "当前类目不存在，请重新选择类目"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1373",
+  "updatedAt": "2026-05-22",
+  "_file_stem": "product-product-getCatePropertyV2"
+}

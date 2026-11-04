@@ -1,0 +1,206 @@
+{
+  "id": "doudian.stock.warehouse.list",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.list",
+  "description": "批量查询区域仓",
+  "method": "GET",
+  "path": "/warehouse/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部仓库ID",
+      "example": "abc",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库名称",
+      "example": "仓名称示例",
+      "_depth": 0
+    },
+    {
+      "name": "addr",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "仓库覆盖地址",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "addr_id1",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "一级地址",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "二级地址",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "三级地址",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "四级地址",
+      "example": "4",
+      "_depth": 1
+    },
+    {
+      "name": "out_warehouse_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "外部仓库ID列表",
+      "example": "[\"1596011622\", \"1596011760\"]",
+      "_depth": 0
+    },
+    {
+      "name": "order_by",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序方式，可选create_time、update_time",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "rank",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "顺序，可选desc、asc，与order_by同时生效",
+      "example": "desc",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页码，从0开始，最大到100",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页数量，最大100，超过100会限制到100",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouses",
+      "type": "array",
+      "description": "仓库信息",
+      "example": "-"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "3"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2:参数错误,OrderBy格式不正确（sub_code: isv.business-failed:2）",
+      "action": "调整请求",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "2:参数错误,OrderBy格式不正确"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/list?app_key=your_appkey_here&method=warehouse.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "total": "3",
+        "warehouses": [
+          {
+            "addr": [
+              {
+                "addr_id1": "100",
+                "addr_id2": "100100",
+                "addr_id3": "100110",
+                "addr_id4": "100111",
+                "create_time": "1623918481",
+                "update_time": "1623918481"
+              }
+            ],
+            "address_detail": "xx小区xx号",
+            "create_time": "1623918481",
+            "intro": "介绍",
+            "name": "名字",
+            "out_fence_ids": "fence01",
+            "out_warehouse_id": "ABC",
+            "shop_id": "123456",
+            "update_time": "1623918481",
+            "warehouse_id": "6853386941874864391",
+            "warehouse_location": {
+              "address_id1": "11",
+              "address_id2": "110000",
+              "address_id3": "110101",
+              "address_id4": "0"
+            }
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "2:参数错误,OrderBy格式不正确"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/1858",
+  "updatedAt": "2022-08-18",
+  "_file_stem": "stock-warehouse-list"
+}

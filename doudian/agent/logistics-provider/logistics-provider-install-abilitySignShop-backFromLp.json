@@ -1,0 +1,146 @@
+{
+  "id": "doudian.logistics-provider.install.abilitySignShop.backFromLp",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "install.abilitySignShop.backFromLp",
+  "description": "服务商商家签约回传",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "param",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "签约参数对象",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "lp_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商编码（字节提供，固定值，服务商入驻后会生成）",
+      "example": "powerTestCode",
+      "_depth": 1
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺ID（店铺唯一标识）",
+      "example": "123452",
+      "_depth": 1
+    },
+    {
+      "name": "res",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "签约结果 1-同意签约，2-不同意签约",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签约说明",
+      "example": "已完成签约",
+      "_depth": 1
+    },
+    {
+      "name": "event_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "事件时间（秒级时间戳）",
+      "example": "1699522857",
+      "_depth": 1
+    },
+    {
+      "name": "resource_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商能力类型，HOME_INSTALL_SERVICE：上门安装",
+      "example": "HOME_INSTALL_SERVICE",
+      "_depth": 0
+    },
+    {
+      "name": "ability_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商资源类型，INSTALL_SERVICE：安装服务",
+      "example": "INSTALL_SERVICE",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 入参对象为空（sub_code: isv.business-failed:-7）",
+      "action": "修正参数，重新调用",
+      "sub_code": "isv.business-failed:-7",
+      "sub_msg": "入参对象为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-3）",
+      "action": "修正参数，重新调用",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常（sub_code: isv.business-failed:-1）",
+      "action": "重试调用",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 调用RPC异常（sub_code: isv.business-failed:-600）",
+      "action": "重试调用",
+      "sub_code": "isv.business-failed:-600",
+      "sub_msg": "调用RPC异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.abilitySignShop.backFromLp&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-7",
+      "sub_msg": "入参对象为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/5861",
+  "updatedAt": "2023-12-07",
+  "_file_stem": "logistics-provider-install-abilitySignShop-backFromLp"
+}

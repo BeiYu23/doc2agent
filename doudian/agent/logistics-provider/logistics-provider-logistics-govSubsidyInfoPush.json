@@ -1,0 +1,203 @@
+{
+  "id": "doudian.logistics-provider.logistics.govSubsidyInfoPush",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.govSubsidyInfoPush",
+  "description": "国补拍照信息回传接口",
+  "method": "GET",
+  "path": "/logistics/govSubsidyInfoPush",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "fulfillment_finish",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否履约",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "correct_finish",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否正常完成任务",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "sn_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "snCode",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "imei_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "imeiCode",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单号",
+      "example": "1231231",
+      "_depth": 0
+    },
+    {
+      "name": "finish_timestamp",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "任务完成时间",
+      "example": "1747896088",
+      "_depth": 0
+    },
+    {
+      "name": "reason_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "失败原因类型",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "photo_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "照片列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "photo_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "照片类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "photo_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "支持下载的图片url",
+      "example": "可下载的链接",
+      "_depth": 1
+    },
+    {
+      "name": "imei_code2",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "imeiCode2",
+      "example": "imeiCode2",
+      "_depth": 0
+    },
+    {
+      "name": "start_timestamp",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "任务开始时间",
+      "example": "开始时间",
+      "_depth": 0
+    },
+    {
+      "name": "sn_code_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sn_code列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sn_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "snCode",
+      "example": "snCode",
+      "_depth": 1
+    },
+    {
+      "name": "sn_code_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sn类型",
+      "example": "Outdoor",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "boolean",
+      "description": "请求是否成功",
+      "example": "true"
+    },
+    {
+      "name": "return_code",
+      "type": "mixed",
+      "description": "返回码",
+      "example": "0"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "错误信息",
+      "example": "成功"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/govSubsidyInfoPush?app_key=your_appkey_here&method=logistics.govSubsidyInfoPush&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "message": "成功",
+        "result": "true",
+        "return_code": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/7492",
+  "updatedAt": "2026-03-13",
+  "_file_stem": "logistics-provider-logistics-govSubsidyInfoPush"
+}

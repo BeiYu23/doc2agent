@@ -1,0 +1,122 @@
+{
+  "id": "doudian.product.shop.prodOrderCntDiagnose",
+  "platform": "doudian",
+  "group": "product",
+  "name": "shop.prodOrderCntDiagnose",
+  "description": "商品维度订单量诊断",
+  "method": "GET",
+  "path": "/shop/prodOrderCntDiagnose",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "entity_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "实体信息，业务方需要诊断的实体列表，最多1个",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "entity_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实体id",
+      "example": "123456",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "st",
+      "type": "mixed",
+      "description": "状态码，0: 成功",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "出错提示消息",
+      "example": "success"
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "description": "实体诊断结果列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/prodOrderCntDiagnose?app_key=your_appkey_here&method=shop.prodOrderCntDiagnose&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "action_map": {},
+            "entity_id": "3457624212251013171",
+            "entity_problem_list": [
+              {
+                "diagnose_result": {
+                  "diagnose_index_map": {},
+                  "improve_factors": [
+                    {
+                      "factor_code": "ship_to_arrive_lte_14d_pay_to_arrive_lgt_dur_1d",
+                      "factor_name": "商品物流时长"
+                    }
+                  ],
+                  "suggest_list": [
+                    {
+                      "backtest_accuracy": "0.9",
+                      "diagnose_suggest": "减少物流时常",
+                      "diagnose_target": {
+                        "target_name": "商品流量"
+                      },
+                      "impact_ratio": "9.84%",
+                      "impact_value": "76.15%->85.99%",
+                      "rule_code": "DiagnoseRule177668223744729170",
+                      "rule_detail": "商品物流时长<52.79小时\\n重要属性填写数量>=2个\\n支持运费险\\n关联内容达人数量>=17个",
+                      "sample_coverage": "100"
+                    }
+                  ],
+                  "total_impact_ratio": "11.14%"
+                },
+                "problem_code": "xgboost_order_count",
+                "problem_name": "XGBoost 订单量"
+              }
+            ],
+            "entity_type": "4"
+          }
+        ],
+        "msg": "success",
+        "st": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/8371",
+  "updatedAt": "2026-07-03",
+  "_file_stem": "product-shop-prodOrderCntDiagnose"
+}

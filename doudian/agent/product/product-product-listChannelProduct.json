@@ -1,0 +1,176 @@
+{
+  "id": "doudian.product.product.listChannelProduct",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.listChannelProduct",
+  "description": "检索渠道商品",
+  "method": "GET",
+  "path": "/product/listChannelProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "main_product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "主商品ID。不需要此查询条件可传0",
+      "example": "3232323232323232",
+      "_depth": 0
+    },
+    {
+      "name": "channel_id",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "渠道ID",
+      "example": "1771739938745351",
+      "_depth": 0
+    },
+    {
+      "name": "channel_type",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "渠道类型：3商家自卖，4达人带货",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "kol_id",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "绑定的达人ID",
+      "example": "1111",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "渠道品状态：0下架，2上架，3封禁",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "有效期开始时间",
+      "example": "2023-07-01 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "有效期结束时间",
+      "example": "2023-07-21 00:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "第几页，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页数量，默认20，最多50",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "渠道品列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "12"
+    },
+    {
+      "name": "page",
+      "type": "number",
+      "description": "当前页面数",
+      "example": "1"
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": "每页数目大小",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商家不在开放名单内（sub_code: isv.business-failed:2010003）",
+      "action": "商家不在开放名单内",
+      "sub_code": "isv.business-failed:2010003",
+      "sub_msg": "商家不在开放名单内"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常,请重试（sub_code: isv.business-failed:2010001）",
+      "action": "系统异常,请重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "系统异常,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / pageSize不可超过50（sub_code: isv.business-failed:2010004）",
+      "action": "pageSize不可超过50",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "pageSize不可超过50"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=yunc.erp.inbound.callback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "{}"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010003",
+      "sub_msg": "商家不在开放名单内"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4465",
+  "updatedAt": "2024-05-13",
+  "_file_stem": "product-product-listChannelProduct"
+}

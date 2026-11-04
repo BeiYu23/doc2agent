@@ -1,0 +1,624 @@
+{
+  "id": "doudian.shop.product.detail",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "product.detail",
+  "description": "商品查询",
+  "method": "GET",
+  "path": "/product/detail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V12.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品id",
+      "example": "3539925204033339668",
+      "_depth": 0
+    },
+    {
+      "name": "out_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部商品id",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "show_draft",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "\"true\"：读取草稿数据；\"false\"：读取上架数据",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_id",
+      "type": "number",
+      "description": "商品ID",
+      "example": "3539925204033339668"
+    },
+    {
+      "name": "product_id_str",
+      "type": "string",
+      "description": "商品ID，字符串格式",
+      "example": "3539925204033339668"
+    },
+    {
+      "name": "out_product_id",
+      "type": "number",
+      "description": "商品外部ID",
+      "example": "11111"
+    },
+    {
+      "name": "outer_product_id",
+      "type": "string",
+      "description": "商品外部ID字符串",
+      "example": "11111"
+    },
+    {
+      "name": "open_user_id",
+      "type": "number",
+      "description": "open应用id",
+      "example": "1"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "商品名称",
+      "example": "xxx爽肤水"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "description": "详情html",
+      "example": "<img src=\\\"https://tosv.boe.byted.org/obj/temai/54cbf542128eff94a3549284817c0af5bf5c2960www800-800\\\" style=\\\"width:100%;\\\">"
+    },
+    {
+      "name": "delivery_method",
+      "type": "string",
+      "description": "承诺发货时间，单位是天 不传则默认为2天，presell_type为0或2均只支持传入2，presell_type为1时支持可选值为: 2、3、5、7、10、15",
+      "example": "7"
+    },
+    {
+      "name": "cdf_category",
+      "type": "string",
+      "description": "海南免税：海关限购分类编码",
+      "example": "1"
+    },
+    {
+      "name": "status",
+      "type": "number",
+      "description": "商品上下架状态：0上架 1下架 2已删除",
+      "example": "1"
+    },
+    {
+      "name": "spec_id",
+      "type": "number",
+      "description": "规格id",
+      "example": "1"
+    },
+    {
+      "name": "check_status",
+      "type": "number",
+      "description": "商品审核状态：1未提审 2审核中 3审核通过 4审核驳回 5封禁 7审核通过，待上架状态",
+      "example": "1"
+    },
+    {
+      "name": "mobile",
+      "type": "string",
+      "description": "手机号",
+      "example": "15677775555"
+    },
+    {
+      "name": "brand_id",
+      "type": "number",
+      "description": "品牌id",
+      "example": "12344"
+    },
+    {
+      "name": "is_sub_product",
+      "type": "boolean",
+      "description": "是否是组套商品的子商品",
+      "example": "true"
+    },
+    {
+      "name": "draft_status",
+      "type": "number",
+      "description": "草稿状态：0 无草稿,1 未提审,2 待审核,3 审核通过,4 审核未通过",
+      "example": "2"
+    },
+    {
+      "name": "category_detail",
+      "type": "object",
+      "description": "新类目的详情",
+      "example": ""
+    },
+    {
+      "name": "pay_type",
+      "type": "number",
+      "description": "支持的支付方式：0货到付款 1在线支付 2两者都支持",
+      "example": "1"
+    },
+    {
+      "name": "recommend_remark",
+      "type": "string",
+      "description": "商家推荐语",
+      "example": "真的很好啊"
+    },
+    {
+      "name": "extra",
+      "type": "string",
+      "description": "扩展字段",
+      "example": "-"
+    },
+    {
+      "name": "is_create",
+      "type": "number",
+      "description": "已废弃，无业务意义",
+      "example": "1"
+    },
+    {
+      "name": "create_time",
+      "type": "string",
+      "description": "创建时间",
+      "example": "2021-03-29 15:52:52"
+    },
+    {
+      "name": "update_time",
+      "type": "string",
+      "description": "更新时间",
+      "example": "2021-03-29T15:52:52+08:00"
+    },
+    {
+      "name": "pic",
+      "type": "array",
+      "description": "商品主图",
+      "example": "[\"https://sf6-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\"]"
+    },
+    {
+      "name": "product_format",
+      "type": "string",
+      "description": "属性名称|属性值 之间用|分隔, 多组之间用^分开",
+      "example": "{\"货号\":\"8888\"}"
+    },
+    {
+      "name": "spec_pics",
+      "type": "array",
+      "description": "规格图片",
+      "example": ""
+    },
+    {
+      "name": "spec_prices",
+      "type": "array",
+      "description": "sku详情",
+      "example": ""
+    },
+    {
+      "name": "specs",
+      "type": "array",
+      "description": "销售属性",
+      "example": ""
+    },
+    {
+      "name": "img",
+      "type": "string",
+      "description": "头图，主图第一张",
+      "example": "https://xxxx.byted.org/obj/temai/54cbf542128eff94a3549284817c0af5bf5c2960www800-800"
+    },
+    {
+      "name": "presell_type",
+      "type": "number",
+      "description": "预售类型，1-全款预售，0-非预售，2-阶梯库存",
+      "example": "1"
+    },
+    {
+      "name": "maximum_per_order",
+      "type": "number",
+      "description": "每个用户每次下单限购件数",
+      "example": "5"
+    },
+    {
+      "name": "limit_per_buyer",
+      "type": "number",
+      "description": "每个用户累计限购件数",
+      "example": "5"
+    },
+    {
+      "name": "minimum_per_order",
+      "type": "number",
+      "description": "每个用户每次下单至少购买的件数",
+      "example": "1"
+    },
+    {
+      "name": "quality_list",
+      "type": "array",
+      "description": "资质信息",
+      "example": ""
+    },
+    {
+      "name": "logistics_info",
+      "type": "object",
+      "description": "跨境物流信息",
+      "example": ""
+    },
+    {
+      "name": "after_sale_service",
+      "type": "string",
+      "description": "售后服务",
+      "example": "{\"supply_7day_return\":\"2\"}"
+    },
+    {
+      "name": "price_has_tax",
+      "type": "number",
+      "description": "商品价格是否含税",
+      "example": "0"
+    },
+    {
+      "name": "appoint_delivery_day",
+      "type": "number",
+      "description": "可预约发货天数",
+      "example": "2"
+    },
+    {
+      "name": "product_format_new",
+      "type": "string",
+      "description": "类目属性",
+      "example": "{\"1088\":[{\"Value\":0,\"Name\":\"小33学二年级\",\"PropertyId\":1088,\"PropertyName\":\"适用学龄段\",\"diy_type\":1}],\"1319\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":1319,\"PropertyName\":\"适用地区\",\"diy_type\":0}],\"1618\":[{\"Value\":0,\"Name\":\"9787218122861\",\"PropertyId\":1618,\"PropertyName\":\"ISBN编号\",\"diy_type\":0}],\"1831\":[{\"Value\":0,\"Name\":\"小学英语看图说话写话二年级\",\"PropertyId\":1831,\"PropertyName\":\"书名\",\"diy_type\":0}],\"2000\":[{\"Value\":34762,\"Name\":\"无\",\"PropertyId\":2000,\"PropertyName\":\"作者地区\",\"diy_type\":0}],\"2229\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":2229,\"PropertyName\":\"编者\",\"diy_type\":0}],\"3271\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":3271,\"PropertyName\":\"出版时间\",\"diy_type\":0}],\"449\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":449,\"PropertyName\":\"作者\",\"diy_type\":0}],\"501\":[{\"Value\":7310,\"Name\":\"否\",\"PropertyId\":501,\"PropertyName\":\"是否是套装\",\"diy_type\":0}],\"855\":[{\"Value\":0,\"Name\":\"陕西人民教育出版社\",\"PropertyId\":855,\"PropertyName\":\"出版社名称\",\"diy_type\":0}]}"
+    },
+    {
+      "name": "standard_brand_id",
+      "type": "number",
+      "description": "品牌库brand id，原brand_id代表商标关系id",
+      "example": "121354"
+    },
+    {
+      "name": "market_price",
+      "type": "number",
+      "description": "划线价 单位分",
+      "example": "12000"
+    },
+    {
+      "name": "discount_price",
+      "type": "number",
+      "description": "售卖价 单位分",
+      "example": "12000"
+    },
+    {
+      "name": "car_vin_code",
+      "type": "string",
+      "description": "汽车vin码",
+      "example": "VIN11111111111111"
+    },
+    {
+      "name": "need_recharge_mode",
+      "type": "boolean",
+      "description": "生活娱乐充值模式",
+      "example": "false"
+    },
+    {
+      "name": "account_template_id",
+      "type": "string",
+      "description": "多账号充值账号模板",
+      "example": "1"
+    },
+    {
+      "name": "presell_config_level",
+      "type": "number",
+      "description": "发货模式：presell_type = 0 现货；presell_type = 2 阶梯；presell_type = 1 && presell_config_level = 0 全款预售；presell_type = 1 && presell_config_level = 1 sku预售；presell_type = 1 && presell_config_level = 2 现货+预售；presell_type = 1 && presell_config_level = 3 新预售",
+      "example": "2"
+    },
+    {
+      "name": "delivery_delay_day",
+      "type": "number",
+      "description": "现货模式的发货天数；阶梯模式现货部分的发货天数，9999=当日发、1=次日发",
+      "example": "2"
+    },
+    {
+      "name": "presell_delay",
+      "type": "number",
+      "description": "阶梯模式阶梯部分的发货天数；商品全款预售模式，预售天数",
+      "example": "4"
+    },
+    {
+      "name": "poi_resource",
+      "type": "object",
+      "description": "卡券信息",
+      "example": ""
+    },
+    {
+      "name": "delay_rule",
+      "type": "object",
+      "description": "特殊日期延迟发货规则",
+      "example": ""
+    },
+    {
+      "name": "long_pic_url",
+      "type": "string",
+      "description": "3:4长图url(仅素材中心url有效)",
+      "example": "https://aaa"
+    },
+    {
+      "name": "sell_channel",
+      "type": "array",
+      "description": "售卖方式;0:全渠道手售卖,1:仅指定直播间售卖",
+      "example": "[0]"
+    },
+    {
+      "name": "freight_id",
+      "type": "number",
+      "description": "运费模版ID",
+      "example": "123"
+    },
+    {
+      "name": "material_video_id",
+      "type": "string",
+      "description": "主图视频ID",
+      "example": "Vaaxxaa"
+    },
+    {
+      "name": "pickup_method",
+      "type": "string",
+      "description": "提取方式新字段，推荐使用。\"0\": 普通商品-使用物流发货, \"1\": 虚拟商品-无需物流与电子交易凭证, \"2\": 虚拟商品-使用电子交易凭证,  \"3\": 虚拟商品-充值直连",
+      "example": "0"
+    },
+    {
+      "name": "size_info_template_id",
+      "type": "number",
+      "description": "尺码模板ID",
+      "example": "7102988069296423000"
+    },
+    {
+      "name": "white_back_ground_pic_url",
+      "type": "string",
+      "description": "白底图url(仅素材中心url有效)",
+      "example": "https://aaa"
+    },
+    {
+      "name": "sale_channel_type",
+      "type": "string",
+      "description": "销售渠道类型，包括纯电商（onlineOnly）、专柜同款（sameAsOffline），云零售商家（https://fxg.jinritemai.com/ffa/merchant-growth/cloud-retail）可以设置",
+      "example": "sameAsOffline"
+    },
+    {
+      "name": "store_id",
+      "type": "number",
+      "description": "门店ID",
+      "example": "103121"
+    },
+    {
+      "name": "main_product_id",
+      "type": "number",
+      "description": "主商品ID",
+      "example": "3121213"
+    },
+    {
+      "name": "sale_limit_id",
+      "type": "number",
+      "description": "限售模板ID",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / out_product_id未找到或商品已删除（sub_code: isv.parameter-invalid:4）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.parameter-invalid:4",
+      "sub_msg": "out_product_id未找到或商品已删除"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 7:请求失败，请稍后再试（sub_code: isp.service-error:7）",
+      "action": "请检查参数后重试",
+      "sub_code": "isp.service-error:7",
+      "sub_msg": "7:请求失败，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/detail?app_key=your_appkey_here&method=product.detail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "account_template_id": "1",
+        "after_sale_service": "{\"supply_7day_return\":\"2\"}",
+        "appoint_delivery_day": "2",
+        "brand_id": "12344",
+        "car_vin_code": "VIN11111111111111",
+        "category_detail": {
+          "first_cid": "23264",
+          "first_cname": "教育培训",
+          "fourth_cid": "0",
+          "fourth_cname": "-",
+          "second_cid": "0",
+          "second_cname": "学习卡",
+          "third_cid": "0",
+          "third_cname": "-"
+        },
+        "cdf_category": "1",
+        "check_status": "1",
+        "create_time": "2021-03-29 15:52:52",
+        "delay_rule": {
+          "config_type": "1",
+          "config_value": "1673539199",
+          "enable": "true",
+          "end_time": "1672502400",
+          "start_time": "1643040000"
+        },
+        "delivery_delay_day": "2",
+        "delivery_method": "7",
+        "description": "<img src=\\\"https://tosv.boe.byted.org/obj/temai/54cbf542128eff94a3549284817c0af5bf5c2960www800-800\\\" style=\\\"width:100%;\\\">",
+        "discount_price": "12000",
+        "draft_status": "2",
+        "extra": "-",
+        "freight_id": "123",
+        "img": "https://xxxx.byted.org/obj/temai/54cbf542128eff94a3549284817c0af5bf5c2960www800-800",
+        "is_create": "1",
+        "is_sub_product": "true",
+        "limit_per_buyer": "5",
+        "logistics_info": {
+          "brand_country_id": "123",
+          "customs_clear_type": "1",
+          "net_weight_qty": "100",
+          "origin_country_id": "123",
+          "source_country_id": "123",
+          "tax_payer": "0"
+        },
+        "long_pic_url": "https://aaa",
+        "main_product_id": "3121213",
+        "market_price": "12000",
+        "material_video_id": "Vaaxxaa",
+        "maximum_per_order": "5",
+        "minimum_per_order": "1",
+        "mobile": "15677775555",
+        "name": "xxx爽肤水",
+        "need_recharge_mode": "false",
+        "open_user_id": "1",
+        "out_product_id": "11111",
+        "outer_product_id": "11111",
+        "pay_type": "1",
+        "pic": "[\"https://sf6-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\"]",
+        "pickup_method": "0",
+        "poi_resource": {
+          "coupon_return_methods": "[1]"
+        },
+        "presell_config_level": "2",
+        "presell_delay": "4",
+        "presell_type": "1",
+        "price_has_tax": "0",
+        "product_format": "{\"货号\":\"8888\"}",
+        "product_format_new": "{\"1088\":[{\"Value\":0,\"Name\":\"小33学二年级\",\"PropertyId\":1088,\"PropertyName\":\"适用学龄段\",\"diy_type\":1}],\"1319\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":1319,\"PropertyName\":\"适用地区\",\"diy_type\":0}],\"1618\":[{\"Value\":0,\"Name\":\"9787218122861\",\"PropertyId\":1618,\"PropertyName\":\"ISBN编号\",\"diy_type\":0}],\"1831\":[{\"Value\":0,\"Name\":\"小学英语看图说话写话二年级\",\"PropertyId\":1831,\"PropertyName\":\"书名\",\"diy_type\":0}],\"2000\":[{\"Value\":34762,\"Name\":\"无\",\"PropertyId\":2000,\"PropertyName\":\"作者地区\",\"diy_type\":0}],\"2229\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":2229,\"PropertyName\":\"编者\",\"diy_type\":0}],\"3271\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":3271,\"PropertyName\":\"出版时间\",\"diy_type\":0}],\"449\":[{\"Value\":0,\"Name\":\"1\",\"PropertyId\":449,\"PropertyName\":\"作者\",\"diy_type\":0}],\"501\":[{\"Value\":7310,\"Name\":\"否\",\"PropertyId\":501,\"PropertyName\":\"是否是套装\",\"diy_type\":0}],\"855\":[{\"Value\":0,\"Name\":\"陕西人民教育出版社\",\"PropertyId\":855,\"PropertyName\":\"出版社名称\",\"diy_type\":0}]}",
+        "product_id": "3539925204033339668",
+        "product_id_str": "3539925204033339668",
+        "quality_list": [
+          {
+            "quality_attachments": [
+              {
+                "media_type": "1",
+                "url": "http://www.byted***.com/YYYY"
+              }
+            ],
+            "quality_key": "3457***9470978",
+            "quality_name": "进货凭证"
+          }
+        ],
+        "recommend_remark": "真的很好啊",
+        "sale_channel_type": "sameAsOffline",
+        "sale_limit_id": "123",
+        "sell_channel": "[0]",
+        "size_info_template_id": "7102988069296423000",
+        "spec_id": "1",
+        "spec_pics": [
+          {
+            "pic": "temai/b637513c50b994f4c89de56a17886caca5d6569awww800-800",
+            "spec_detail_id": "1695459998447656"
+          }
+        ],
+        "spec_prices": [
+          {
+            "code": "aaa",
+            "customs_report_info": {
+              "bar_code": "-",
+              "first_measure_qty": "1",
+              "first_measure_unit": "-",
+              "g_model": "-",
+              "hs_code": "1564564",
+              "report_brand_name": "-",
+              "report_name": "-",
+              "second_measure_qty": "1",
+              "second_measure_unit": "-",
+              "unit": "-",
+              "usage": "-"
+            },
+            "delivery_infos": {
+              "info_type": "weight",
+              "info_unit": "当info_type=weight时，支持mg,g,kg三种类型",
+              "info_value": "100"
+            },
+            "lock_step_stock_num": "1",
+            "lock_stock_num": "1",
+            "out_sku_id": "0",
+            "outer_sku_id": "0",
+            "presell_delay": "5",
+            "price": "102",
+            "prom_step_stock_num": "0",
+            "prom_stock_num": "0",
+            "promotion_step_stock_num": "0",
+            "promotion_stock_num": "0",
+            "sku_id": "1695459998495774",
+            "sku_type": "0",
+            "spec_detail_id1": "1695459998494734",
+            "spec_detail_id2": "1695459998494734",
+            "spec_detail_id3": "0",
+            "spec_detail_ids": "[1695459998494734, 1695459998494766]",
+            "step_stock_num": "0",
+            "stock_num": "13",
+            "stock_num_map": {},
+            "supplier_id": "123",
+            "tax_exemption_sku_info": {
+              "is_suit": "1",
+              "suit_num": "10",
+              "volume": "100"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "id": "1713023986705415",
+            "is_leaf": "0",
+            "name": "颜色",
+            "pid": "1713023986705415",
+            "spec_id": "1713023983665214",
+            "values": [
+              {
+                "id": "1695459998447656",
+                "is_leaf": "1",
+                "name": "红色",
+                "pid": "1695459998447640",
+                "spec_id": "1713023983665214",
+                "status": "1"
+              }
+            ]
+          }
+        ],
+        "standard_brand_id": "121354",
+        "status": "1",
+        "store_id": "103121",
+        "update_time": "2021-03-29T15:52:52+08:00",
+        "white_back_ground_pic_url": "https://aaa"
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4",
+      "sub_msg": "out_product_id未找到或商品已删除"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/2083",
+  "updatedAt": "2022-06-29",
+  "_file_stem": "shop-product-detail"
+}

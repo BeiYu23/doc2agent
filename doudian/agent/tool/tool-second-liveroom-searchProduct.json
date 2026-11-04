@@ -1,0 +1,107 @@
+{
+  "id": "doudian.tool.second.liveroom.searchProduct",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "second.liveroom.searchProduct",
+  "description": "根据关键词查询直播间商品",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "anchorID",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "主播抖音账号UID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "productSearchKey",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品关键词",
+      "example": "测试",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "sale_num",
+      "type": "string",
+      "description": "已售数量",
+      "example": "123"
+    },
+    {
+      "name": "product_url",
+      "type": "string",
+      "description": "商品链接",
+      "example": "test"
+    },
+    {
+      "name": "product_id",
+      "type": "mixed",
+      "description": "商品ID",
+      "example": "123"
+    },
+    {
+      "name": "product_name",
+      "type": "string",
+      "description": "商品名称",
+      "example": "test"
+    },
+    {
+      "name": "main_img",
+      "type": "string",
+      "description": "商品主图",
+      "example": "test"
+    },
+    {
+      "name": "sale_price",
+      "type": "string",
+      "description": "商品价格",
+      "example": "123"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.liveroom.searchProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "main_img": "test",
+        "product_id": "123",
+        "product_name": "test",
+        "product_url": "test",
+        "sale_num": "123",
+        "sale_price": "123"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7565",
+  "updatedAt": "2025-07-07",
+  "_file_stem": "tool-second-liveroom-searchProduct"
+}

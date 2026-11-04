@@ -1,0 +1,188 @@
+{
+  "id": "doudian.install.install.store.providerStoreAPIUpdateInfo",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.providerStoreAPIUpdateInfo",
+  "description": "服务商门店更新API",
+  "method": "GET",
+  "path": "/install/store/providerStoreAPIUpdateInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "open_time_desc",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "营业时间的描述（使用这个来解析出来营业时间）",
+      "example": "[\"周一至周五 10:00-20:00\", \"周六至周日 10:00-23:00\"]",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作更新的门店ID YOUR_SECRET_KEY.go",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省",
+      "example": "北京市",
+      "_depth": 0
+    },
+    {
+      "name": "business_license_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "营业执照",
+      "example": "https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/bf9ea417-4352-443a-94c1-565ca986df8c.jpeg",
+      "_depth": 0
+    },
+    {
+      "name": "backup_contact_mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备用联系方式",
+      "example": "18600000000",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "以下是可编辑字段\n门店名称",
+      "example": "测试门店",
+      "_depth": 0
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区",
+      "example": "海淀区",
+      "_depth": 0
+    },
+    {
+      "name": "contact",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系方式",
+      "example": "18600000000",
+      "_depth": 0
+    },
+    {
+      "name": "door_photo_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门头照",
+      "example": "https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/bf9ea417-4352-443a-94c1-565ca986df8c.jpeg",
+      "_depth": 0
+    },
+    {
+      "name": "room_photo_url",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "店内照 可以多张",
+      "example": "[\"https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/bf9ea417-4352-443a-94c1-565ca986df8c.jpeg\"]",
+      "_depth": 0
+    },
+    {
+      "name": "contact_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "联系人",
+      "example": "刘先生",
+      "_depth": 0
+    },
+    {
+      "name": "business_license_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "营业执照上的门店地址信息",
+      "example": "https://lf-resource-tos.ecombdstatic.com/obj/ecom-logistics-resource/store_install/bf9ea417-4352-443a-94c1-565ca986df8c.jpeg",
+      "_depth": 0
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市",
+      "example": "北京市",
+      "_depth": 0
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "4级地址 街道/镇",
+      "example": "花园路街道",
+      "_depth": 0
+    },
+    {
+      "name": "store_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "更新门店自用编码",
+      "example": "自用编码123",
+      "_depth": 0
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "中兴大厦",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.providerStoreAPIUpdateInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7680",
+  "updatedAt": "2026-06-02",
+  "_file_stem": "install-install-store-providerStoreAPIUpdateInfo"
+}

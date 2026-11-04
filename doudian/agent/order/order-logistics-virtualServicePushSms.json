@@ -1,0 +1,207 @@
+{
+  "id": "doudian.order.logistics.virtualServicePushSms",
+  "platform": "doudian",
+  "group": "order",
+  "name": "logistics.virtualServicePushSms",
+  "description": "短信回传",
+  "method": "GET",
+  "path": "/logistics/virtualServicePushSms",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "请求id",
+      "example": "10bc556c-5f64-45af-b9b2-63a9d98beff4",
+      "_depth": 0
+    },
+    {
+      "name": "record_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商短信记录id",
+      "example": "C202209101052380A21184104136870",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务商身份标识",
+      "example": "volcengine",
+      "_depth": 0
+    },
+    {
+      "name": "tel_a",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "A真实号码",
+      "example": "13013013013",
+      "_depth": 0
+    },
+    {
+      "name": "tel_x",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "虚拟主号",
+      "example": "13141200999",
+      "_depth": 0
+    },
+    {
+      "name": "tel_b",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "B真实号码",
+      "example": "13113113113",
+      "_depth": 0
+    },
+    {
+      "name": "sub_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "绑定关系id",
+      "example": "0008b5c563f5486dbb5e99875f3dd9a2",
+      "_depth": 0
+    },
+    {
+      "name": "send_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "13：话单中A号码接收短信 14：话单中A号码发送短信 30：无绑定关系的短信",
+      "example": "13",
+      "_depth": 0
+    },
+    {
+      "name": "area_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区域",
+      "example": "010",
+      "_depth": 0
+    },
+    {
+      "name": "receive_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信接收时间",
+      "example": "2006-01-02 15:04:05",
+      "_depth": 0
+    },
+    {
+      "name": "sms_content",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信内容",
+      "example": "【测试】这是一条测试短信",
+      "_depth": 0
+    },
+    {
+      "name": "sms_result",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发送状态",
+      "example": "SMS_SUCCESS",
+      "_depth": 0
+    },
+    {
+      "name": "sms_num",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "短信条数",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "发送成功的短信无需解析",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "tel_xext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "分机号",
+      "example": "1234",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:-1）",
+      "action": "重试",
+      "sub_code": "isp.service-error:-1",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/virtualServicePushSms?app_key=your_appkey_here&method=logistics.virtualServicePushSms&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:-1",
+      "sub_msg": "系统错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/2676",
+  "updatedAt": "2022-10-31",
+  "_file_stem": "order-logistics-virtualServicePushSms"
+}

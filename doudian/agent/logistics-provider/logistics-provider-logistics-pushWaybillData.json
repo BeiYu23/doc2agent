@@ -1,0 +1,141 @@
+{
+  "id": "doudian.logistics-provider.logistics.pushWaybillData",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.pushWaybillData",
+  "description": "物流商推送非抖运单信息",
+  "method": "GET",
+  "path": "/logistics/pushWaybillData",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流商编码（连接平台物流商必填）",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份密文，加密规则（运单号+省份， sm3 hash算法生成），例如运单号1234567，云南省，密文是fa0fcc2df6207a7007a3d9a40314a8d29ecc81e42fb0d5e47987bf84d2c0c743",
+      "example": "fa0fcc2df6207a7007a3d9a40314a8d29ecc81e42fb0d5e47987bf84d2c0c743",
+      "_depth": 0
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市密文，加密规则（运单号+城市， sm3 hash算法生成），例如运单号1234567，曲靖市，密文是8649477408039bbdab5fb592d90449bd32e6dee4c86927d87dd50ca4ad791021",
+      "example": "8649477408039bbdab5fb592d90449bd32e6dee4c86927d87dd50ca4ad791021",
+      "_depth": 0
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区县密文，加密规则（运单号+区县， sm3 hash算法生成），例如运单号1234567，区县明文是 富源县 ，密文是5613f9ead98fec9ff4834e8d4bbeca07d643e4fa794aabb688f7f7f2e080910c",
+      "example": "5613f9ead98fec9ff4834e8d4bbeca07d643e4fa794aabb688f7f7f2e080910c",
+      "_depth": 0
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道密文，加密规则（运单号+街道， sm3 hash算法生成），例如运单号1234567，街道明文是 哈哈街道 ，密文是1fd6c1949b7283d3458f02d32f21d96399ddab5adc559eb84db8b39edca02ae2",
+      "example": "1fd6c1949b7283d3458f02d32f21d96399ddab5adc559eb84db8b39edca02ae2",
+      "_depth": 0
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址密文，加密规则（运单号+详细地址， sm3 hash算法生成），例如运单号1234567，详细地址是 二小对面，密文是727eec2f0eb34e0bd71caa25f241132ffc83f4c35abab4a08aaa62de27b691b8",
+      "example": "727eec2f0eb34e0bd71caa25f241132ffc83f4c35abab4a08aaa62de27b691b8",
+      "_depth": 0
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号，与phone二者必填其一。为虚拟号码时则传不含分机号的未脱敏的前11位主机号，非虚拟号时传未脱敏的11位完整号码；加密规则（运单号+手机号， sm3 hash算法生成），例如运单号1234567，手机号是 18867727373，密文是8f8bf5dcc4e444197756f43fcb0e596f8af2466b4bbe195cb9eb66d54a89759b",
+      "example": "8f8bf5dcc4e444197756f43fcb0e596f8af2466b4bbe195cb9eb66d54a89759b",
+      "_depth": 0
+    },
+    {
+      "name": "phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号，与mobile二者必填其一。为虚拟号码时则传不含分机号的未脱敏的前11位主机号，非虚拟号时传未脱敏的11位完整号码；加密规则（运单号+手机号， sm3 hash算法生成），例如运单号1234567，手机号是 18867727373，密文是8f8bf5dcc4e444197756f43fcb0e596f8af2466b4bbe195cb9eb66d54a89759b",
+      "example": "69b5c6366379824c02b843c9994969134e321553254d5a9ca5552be0857d9a68",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:4006）",
+      "action": "修正入参",
+      "sub_code": "isv.missing-parameter:4006",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:4007）",
+      "action": "重试",
+      "sub_code": "isp.service-error:4007",
+      "sub_msg": "系统异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=order.shopOperate.getSkuReviewResult&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:4006",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/6927",
+  "updatedAt": "2025-03-10",
+  "_file_stem": "logistics-provider-logistics-pushWaybillData"
+}

@@ -1,0 +1,396 @@
+{
+  "id": "doudian.miniapp.mini.getStoreList",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.getStoreList",
+  "description": "C端小程序获取门店列表",
+  "method": "GET",
+  "path": "/mini/getStoreList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 小程序"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页大小",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "stock_param",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "库存参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "SkuId",
+      "example": "123",
+      "_depth": 2
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "购买的Sku数量",
+      "example": "3",
+      "_depth": 2
+    },
+    {
+      "name": "sku_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "sku库存类型，0普通库存，1区域库存",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "promation_stock_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否使用活动库存，0：使用 1：不使用",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店Id（可不传）",
+      "example": "/",
+      "_depth": 2
+    },
+    {
+      "name": "store_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店Id list",
+      "example": "[1234]",
+      "_depth": 2
+    },
+    {
+      "name": "delivery_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "-1 未指定 0 物流发货 1 自提",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品ID",
+      "example": "12341234",
+      "_depth": 2
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "活动id",
+      "example": "12341234",
+      "_depth": 2
+    },
+    {
+      "name": "store_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店Id list",
+      "example": "/",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "-1 未指定 0 物流发货 1 自提",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "store_library_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "门店组Id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "lbs_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "起点经纬度",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "latitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "纬度",
+      "example": "31.1",
+      "_depth": 1
+    },
+    {
+      "name": "longitude",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "经度",
+      "example": "120.1",
+      "_depth": 1
+    },
+    {
+      "name": "address",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "地址信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市",
+      "example": "上海市",
+      "_depth": 1
+    },
+    {
+      "name": "district",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区",
+      "example": "杨浦区",
+      "_depth": 1
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省",
+      "example": "上海市",
+      "_depth": 1
+    },
+    {
+      "name": "city_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市代码",
+      "example": "310000",
+      "_depth": 1
+    },
+    {
+      "name": "district_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "区代码",
+      "example": "310110",
+      "_depth": 1
+    },
+    {
+      "name": "province_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省代码",
+      "example": "31",
+      "_depth": 1
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "store_library_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "门店需要满足的所有门店组ID",
+      "example": "123415123123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "门店总数",
+      "example": "3"
+    },
+    {
+      "name": "page",
+      "type": "mixed",
+      "description": "页码",
+      "example": "0"
+    },
+    {
+      "name": "page_size",
+      "type": "mixed",
+      "description": "每页大小",
+      "example": "20"
+    },
+    {
+      "name": "store_list",
+      "type": "array",
+      "description": "门店列表",
+      "example": ""
+    },
+    {
+      "name": "custom_err",
+      "type": "object",
+      "description": "响应信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:200217）",
+      "action": "检查参数、稍后重试",
+      "sub_code": "isp.service-error:200217",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / OpenAppId为空（sub_code: isv.parameter-invalid:100001）",
+      "action": "检验token是否正确",
+      "sub_code": "isv.parameter-invalid:100001",
+      "sub_msg": "OpenAppId为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统内部错误（sub_code: isv.business-failed:200216）",
+      "action": "检查参数、稍后重试",
+      "sub_code": "isv.business-failed:200216",
+      "sub_msg": "系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店店铺信息不匹配，请确认店铺（sub_code: isv.business-failed:200219）",
+      "action": "检验token是否正确",
+      "sub_code": "isv.business-failed:200219",
+      "sub_msg": "门店店铺信息不匹配，请确认店铺"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/getStoreList?app_key=your_appkey_here&method=mini.getStoreList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "custom_err": {
+          "err_code": "0",
+          "err_msg": "success"
+        },
+        "page": "0",
+        "page_size": "20",
+        "store_list": [
+          {
+            "address_info": {
+              "detail": "联创街与爱沙路交叉口",
+              "lbs_city": "杭州市",
+              "lbs_city_code": "330100",
+              "lbs_district": "余杭区",
+              "lbs_district_code": "3301100000000",
+              "lbs_province": "浙江省",
+              "lbs_province_code": "33",
+              "lbs_town": "/",
+              "lbs_town_code": "/"
+            },
+            "contact": "12341234123",
+            "distance": "48400.123",
+            "distance_desc": "距您48.4km",
+            "global_stock": "true",
+            "lbs_info": {
+              "latitude": "31.3",
+              "longitude": "121.5"
+            },
+            "logo_img": "https://p3-ecom-qualification-sign.ecombdimg.com/tos-cn-i-6v",
+            "open_time": {
+              "custom": "周一至周五 08:00-20:30",
+              "day_map": {}
+            },
+            "stock_infos": [
+              {
+                "product_id": "12341234",
+                "sku_id": "12344321",
+                "stock_num": "3",
+                "store_id": "12341234"
+              }
+            ],
+            "stock_num": "100",
+            "store_id": "201500000",
+            "store_name": "服饰自提测试门店2"
+          }
+        ],
+        "total": "3"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:200217",
+      "sub_msg": "系统内部错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/7260",
+  "updatedAt": "2025-02-21",
+  "_file_stem": "miniapp-mini-getStoreList"
+}

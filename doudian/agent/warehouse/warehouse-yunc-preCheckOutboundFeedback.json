@@ -1,0 +1,222 @@
+{
+  "id": "doudian.warehouse.yunc.preCheckOutboundFeedback",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.preCheckOutboundFeedback",
+  "description": "ToC出库回告预校验接口",
+  "method": "GET",
+  "path": "/yunc/preCheckOutboundFeedback",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "outbound_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "出库单号",
+      "example": "OB763843789875838983",
+      "_depth": 0
+    },
+    {
+      "name": "sn_order_check_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "国补订单待校验信息(非国补SN订单，可以为空)",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sn_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "SN码",
+      "example": "S9457489789789",
+      "_depth": 1
+    },
+    {
+      "name": "imei_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "Imei信息（非必填，应传尽传）",
+      "example": "[\"22439089088\",\"45989u8934\"]",
+      "_depth": 1
+    },
+    {
+      "name": "additional_sn_infos",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "附加SN信息，主要针对空调品类场景需要区分内机和外机的SN，空调品类国补场景内机和外机SN都必传。",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sn_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "1-内机SN \n2-外机SN",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sn_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "SN码",
+      "example": "S9457489789789",
+      "_depth": 2
+    },
+    {
+      "name": "bar_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品69码",
+      "example": "69837378979283",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓Code",
+      "example": "V1068",
+      "_depth": 0
+    },
+    {
+      "name": "express_check_info",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "快递商待校验信息（如单据下发时货品明细商未指定快递商，可以为空，否则必传）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "express_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "使用的快递商Code",
+      "example": "shunfeng",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品Code",
+      "example": "7898793749878945423",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "校验结果",
+      "example": ""
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "0：正常",
+      "example": "错误码"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误信息",
+      "example": "系统错误"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1004）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部错误（sub_code: isv.business-failed:1001）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:1001",
+      "sub_msg": "内部错误"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 内部错误（sub_code: isp.service-timeout-error:1204）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1204",
+      "sub_msg": "内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 单据不存在（sub_code: isv.business-failed:1012）",
+      "action": "检查仓Code和出库单号是否正确后重试",
+      "sub_code": "isv.business-failed:1012",
+      "sub_msg": "单据不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / SN码校验失败（sub_code: isv.business-failed:4021）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:4021",
+      "sub_msg": "SN码校验失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/preCheckOutboundFeedback?app_key=your_appkey_here&method=yunc.preCheckOutboundFeedback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "错误码",
+        "data": {
+          "failed_reason": "未使用指定的快递商",
+          "result": "1",
+          "sn_order_check_result": {
+            "imei_list": "[38907948987,87979790083]",
+            "occupy_available": "true/false",
+            "platform_order_no": "688368268496537867",
+            "sn_code": "S9457489789789"
+          }
+        },
+        "msg": "系统错误"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1004",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/7387",
+  "updatedAt": "2026-04-28",
+  "_file_stem": "warehouse-yunc-preCheckOutboundFeedback"
+}

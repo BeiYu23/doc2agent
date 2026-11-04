@@ -1,0 +1,147 @@
+{
+  "id": "doudian.logistics.logistics.sendByteDanceMessage",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.sendByteDanceMessage",
+  "description": "短信代发",
+  "method": "GET",
+  "path": "/logistics/sendByteDanceMessage",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybillCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "75538750081658",
+      "_depth": 0
+    },
+    {
+      "name": "expressCompany",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递商编码",
+      "example": "zhongtong",
+      "_depth": 0
+    },
+    {
+      "name": "message",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "代码内容",
+      "example": "【妈妈驿站】取货码02-124，您有中通快递包裹，已到您的快递已到达圆通妈妈驿站",
+      "_depth": 0
+    },
+    {
+      "name": "pickMsgCode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取件消息唯一编码",
+      "example": "0A0729AE8E3A49C2FAAE07949B972AB6",
+      "_depth": 0
+    },
+    {
+      "name": "scene",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "业务场景（与平台研发确认具体值）",
+      "example": "default",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:11000）",
+      "action": "修改参数",
+      "sub_code": "isv.parameter-invalid:11000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据库错误（sub_code: isv.business-failed:11001）",
+      "action": "下个字节单",
+      "sub_code": "isv.business-failed:11001",
+      "sub_msg": "数据库错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不是字节包裹（sub_code: isv.business-failed:10014）",
+      "action": "找测试下个字节单",
+      "sub_code": "isv.business-failed:10014",
+      "sub_msg": "不是字节包裹"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 关联下游处理失败（sub_code: isv.business-failed:11004）",
+      "action": "找研发确认问题",
+      "sub_code": "isv.business-failed:11004",
+      "sub_msg": "关联下游处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不是字节面单（sub_code: isv.business-failed:10015）",
+      "action": "找测试下个字节单",
+      "sub_code": "isv.business-failed:10015",
+      "sub_msg": "不是字节面单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 短信代发失败（sub_code: isv.business-failed:11010）",
+      "action": "找研发确认问题",
+      "sub_code": "isv.business-failed:11010",
+      "sub_msg": "短信代发失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部处理失败（sub_code: isv.business-failed:11008）",
+      "action": "找研发确认问题",
+      "sub_code": "isv.business-failed:11008",
+      "sub_msg": "内部处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内容检测失败（sub_code: isv.business-failed:10002）",
+      "action": "换个合法短信内容",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "内容检测失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/sendByteDanceMessage?app_key=your_appkey_here&method=logistics.sendByteDanceMessage&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:11000",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2462",
+  "updatedAt": "2024-02-21",
+  "_file_stem": "logistics-logistics-sendByteDanceMessage"
+}

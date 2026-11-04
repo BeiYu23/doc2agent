@@ -1,0 +1,539 @@
+{
+  "id": "doudian.cloud.openCloud.createConfig",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.createConfig",
+  "description": "创建容器服务配置",
+  "method": "GET",
+  "path": "/openCloud/createConfig",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "elegant_config",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "优雅上下线",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "post_start",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "启动",
+      "example": "\"ad\"",
+      "_depth": 1
+    },
+    {
+      "name": "pre_stop",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "停止",
+      "example": "\"fd\"",
+      "_depth": 1
+    },
+    {
+      "name": "termination_grace_period_seconds",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "终止宽限",
+      "example": "\"fgsdf\"",
+      "_depth": 1
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "版本号",
+      "example": "\"1751923646621\"",
+      "_depth": 0
+    },
+    {
+      "name": "init_script",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "启动脚本",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "envs",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "环境变量参数配置",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "k",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "键",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "v",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "值",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "描述",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "readiness",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "就绪检查",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "delay_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "检查延迟时间(s)",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "timeout",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "超时时间(s)",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "success_threshold",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "成功次数阀值",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "port",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "端口号",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "script_text",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "script脚本文本",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "is_check",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否开启检查",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "detect_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "健康检查探测方式:HTTP|TCP|SHELL_SCRIPT",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "duration_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "间隔时间(s)",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "failure_threshold",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "失败次数阀值",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "url",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "file_mount",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "文件挂载",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "path",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "路径",
+      "example": "\"az\"",
+      "_depth": 1
+    },
+    {
+      "name": "config",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "配置",
+      "example": "\"s\"",
+      "_depth": 1
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "描述",
+      "example": "\"s\"",
+      "_depth": 1
+    },
+    {
+      "name": "mount_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "挂载类型",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "volume",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "存储卷",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "source_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "源名称",
+      "example": "\"\"",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "名称",
+      "example": "\"as\"",
+      "_depth": 2
+    },
+    {
+      "name": "kind",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "存储卷固定传入 pvc",
+      "example": "\"df\"",
+      "_depth": 2
+    },
+    {
+      "name": "schedule_rule",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "调度策略",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "node_taint_toleration",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "节点亲和性",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "键",
+      "example": "\"k\"",
+      "_depth": 2
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "值",
+      "example": "\"v\"",
+      "_depth": 2
+    },
+    {
+      "name": "is_system",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否为系统默认标签",
+      "example": "true",
+      "_depth": 2
+    },
+    {
+      "name": "schedule_rule_effect_enum",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "调度效果",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "pod_anti_affinity_with_hostname",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否开启容器优先调度到不同节点的能力(根据配置hostname反亲和性实现)，默认开启 true",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "node_labels",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "节点标签",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "键",
+      "example": "\"v\"",
+      "_depth": 2
+    },
+    {
+      "name": "is_system",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否为系统默认标签",
+      "example": "true",
+      "_depth": 2
+    },
+    {
+      "name": "key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "值",
+      "example": "\"k\"",
+      "_depth": 2
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "火山账号",
+      "example": "2300003853",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发布配置名称",
+      "example": "7497139137958921770",
+      "_depth": 0
+    },
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器服务Id",
+      "example": "7524231212381340454",
+      "_depth": 0
+    },
+    {
+      "name": "liveness",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "健康检查，也就是存活检查",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "is_check",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否开启检查",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "detect_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "健康检查探测方式:HTTP|TCP|SHELL_SCRIPT",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "duration_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "间隔时间(s)",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "url",
+      "example": "\"\"",
+      "_depth": 1
+    },
+    {
+      "name": "script_text",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "script脚本文本",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "delay_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "检查延迟时间(s)",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "timeout",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "超时时间(s)",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "failure_threshold",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "失败次数阀值",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "success_threshold",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "成功次数阀值",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "port",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "端口号",
+      "example": "0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/createConfig?app_key=your_appkey_here&method=openCloud.createConfig&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/7610",
+  "updatedAt": "2025-07-17",
+  "_file_stem": "cloud-openCloud-createConfig"
+}

@@ -1,0 +1,142 @@
+{
+  "id": "doudian.refund.afterSale.applyLogisticsIntercept",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.applyLogisticsIntercept",
+  "description": "申请物流拦截",
+  "method": "GET",
+  "path": "/afterSale/applyLogisticsIntercept",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "售后单ID",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "op_from",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作来源（1:商家  3:客服）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "intercept_targets",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "要拦截的包裹",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "company_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流公司编码",
+      "example": "yuantong",
+      "_depth": 1
+    },
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流单号",
+      "example": "YT1387990014325",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "intercept_results",
+      "type": "array",
+      "description": "物流拦截结果",
+      "example": ""
+    },
+    {
+      "name": "success_count",
+      "type": "number",
+      "description": "拦截成功次数",
+      "example": "0"
+    },
+    {
+      "name": "failed_count",
+      "type": "number",
+      "description": "拦截失败次数",
+      "example": "1"
+    },
+    {
+      "name": "unavailable_reason_code",
+      "type": "number",
+      "description": "不可拦截编码(failed_count=1时有意义)",
+      "example": "-10006"
+    },
+    {
+      "name": "unavailable_reason",
+      "type": "string",
+      "description": "不可拦截原因(failed_count=1时有意义)",
+      "example": "服务器开了小差，请稍后重试"
+    },
+    {
+      "name": "refund_amount",
+      "type": "number",
+      "description": "售后单退款总金额",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 信息获取失败，请稍后重试（sub_code: isv.business-failed:10000）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "信息获取失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 12001:售后类型不支持快递拦截（sub_code: isv.business-failed:12001）",
+      "action": "12001:售后类型不支持快递拦截",
+      "sub_code": "isv.business-failed:12001",
+      "sub_msg": "12001:售后类型不支持快递拦截"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "信息获取失败，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/897",
+  "updatedAt": "2022-11-25",
+  "_file_stem": "refund-afterSale-applyLogisticsIntercept"
+}

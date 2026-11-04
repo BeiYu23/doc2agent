@@ -1,0 +1,126 @@
+{
+  "id": "doudian.product.product.isv.scanClue",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.isv.scanClue",
+  "description": "扫描获取商机中心全量线索信息",
+  "method": "GET",
+  "path": "/product/isv/scanClue",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "clue_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "线索Id（游标id）",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "source_channel_code",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "渠道code，搜索热招：competitive，蓝海：query_none_less，行业趋势：industry_selected，低价：choice_low_price",
+      "example": "[\"query_none_less\",\"industry_selected\"]",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "限制200",
+      "example": "100",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "线索列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:501）",
+      "action": "联系开发者",
+      "sub_code": "isp.service-error:501",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 渠道code限制错误（sub_code: isv.parameter-invalid:502）",
+      "action": "联系开发者",
+      "sub_code": "isv.parameter-invalid:502",
+      "sub_msg": "渠道code限制错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 分页参数错误（sub_code: isv.parameter-invalid:503）",
+      "action": "pageSize不能小于等于0，不能超过限制值200",
+      "sub_code": "isv.parameter-invalid:503",
+      "sub_msg": "分页参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/isv/scanClue?app_key=your_appkey_here&method=product.isv.scanClue&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "brand_id": "0",
+            "brand_name_cn": "\"\"",
+            "brand_name_en": "\"\"",
+            "clue_id": "123",
+            "clue_name": "我是线索",
+            "demand_and_supply_rate": "4.56",
+            "first_cid": "20029",
+            "first_name": "彩妆/香水/美妆工具",
+            "fourth_cid": "0",
+            "fourth_name": "\"\"",
+            "pic_url": "\"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/SVCpeIZ_m_eb5bf8ba296491e6ed50bf4d5f4cb291_sx_38409_www\"",
+            "price_max": "3990",
+            "price_min": "1890",
+            "query_name_cut_list": "[\"加绒\",\"加厚\"]",
+            "search_heat": "577",
+            "second_cid": "20570",
+            "second_name": "男士彩妆",
+            "third_cid": "0",
+            "third_name": "\"\""
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:501",
+      "sub_msg": "系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4801",
+  "updatedAt": "2023-10-20",
+  "_file_stem": "product-product-isv-scanClue"
+}

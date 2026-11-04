@@ -1,0 +1,106 @@
+{
+  "id": "doudian.feige.pigeon.ISVToolEventPreCheck",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.ISVToolEventPreCheck",
+  "description": "ISV客服工具可用性预检查接口，用于查询指定会话中各个客服工具的可执行状态和频控限制",
+  "method": "GET",
+  "path": "/pigeon/ISVToolEventPreCheck",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户ID（用于AB实验分流）",
+      "example": "\"1@#0n0iM1mdffUpnP+ZsNTCDQIjknfxQfgiUOZRJFU5nm1jAuO4EtbjEEqYA4G9lepbLTocwRkymA==\"",
+      "_depth": 0
+    },
+    {
+      "name": "tool_codes",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "工具代码列表",
+      "example": "[\n        \"URGE_PURCHASE\",\n        \"BASIC_PRODUCT_CARD\",\n        \"GOODS_RECOMMEND\",\n        \"ACK_ORDER_ADDRESS\",\n        \"APPLY_REFUND\",\n        \"APPLY_EXCHANGE\",\n        \"APPLY_AFTERSALE\",\n        \"URGE_DELIVERY\",\n        \"CLARIFY_ORDER\",\n        \"URGE_AFTERSALE\",\n        \"AFTERSALE_PROGRESS\",\n        \"SENDBACK_GOODS\",\n        \"REVERSE_LOGISTIC\",\n        \"FREIGHT_REFUND\",\n        \"LOGISTIC\",\n        \"GIFT_LOGISTIC\",\n        \"DIRECT_SWITCH_HUMAN\",\n        \"INVOICE\",\n        \"SEND_IMAGE\"\n    ]",
+      "_depth": 0
+    },
+    {
+      "name": "conversation_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "会话ID（用于会话维度频控）",
+      "example": "\"7582570312244544808\"",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "pigeon_biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "飞鸽业务类型",
+      "example": "2",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tool_availability",
+      "type": "string",
+      "description": "工具可用性，key为tool_code，value为是否可用",
+      "example": "{\"ACK_ORDER_ADDRESS\":true,\"AFTERSALE_PROGRESS\":true,\"APPLY_AFTERSALE\":true,\"APPLY_EXCHANGE\":true,\"APPLY_REFUND\":true,\"BASIC_PRODUCT_CARD\":false,\"CLARIFY_ORDER\":true,\"DIRECT_SWITCH_HUMAN\":true,\"FREIGHT_REFUND\":true,\"GIFT_LOGISTIC\":true,\"GOODS_RECOMMEND\":true,\"INVOICE\":true,\"LOGISTIC\":true,\"REVERSE_LOGISTIC\":true,\"SENDBACK_GOODS\":true,\"SEND_IMAGE\":true,\"URGE_AFTERSALE\":true,\"URGE_DELIVERY\":true,\"URGE_PURCHASE\":true}"
+    },
+    {
+      "name": "ext",
+      "type": "string",
+      "description": "扩展字段",
+      "example": "\"\""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/ISVToolEventPreCheck?app_key=your_appkey_here&method=pigeon.ISVToolEventPreCheck&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ext": "\"\"",
+        "tool_availability": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/7955",
+  "updatedAt": "2025-12-17",
+  "_file_stem": "feige-pigeon-ISVToolEventPreCheck"
+}

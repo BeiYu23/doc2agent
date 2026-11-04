@@ -1,0 +1,152 @@
+{
+  "id": "doudian.alliance.buyin.kolLiveShare",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.kolLiveShare",
+  "description": "获取达人直播间分享链接",
+  "method": "GET",
+  "path": "/buyin/kolLiveShare",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 达人"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pid_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "PID信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "pid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "达人PID",
+      "example": "dy_10101245197859_1726220821_2656147525",
+      "_depth": 1
+    },
+    {
+      "name": "external_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义字段，只允许 数字、字母和_，限制长度为40",
+      "example": "123_456",
+      "_depth": 1
+    },
+    {
+      "name": "need_qr_code",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要二维码(获取二维码将增加响应耗时，推荐false)",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "platform",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "回流端标识 0：抖音 1：抖音极速版",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "need_zlink",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要zlink(默认返回，不需要可以填false)",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效的doudian_open_id（sub_code: isv.parameter-invalid:4149）",
+      "action": "无效的doudian_open_id",
+      "sub_code": "isv.parameter-invalid:4149",
+      "sub_msg": "无效的doudian_open_id"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 达人未开播（sub_code: isv.business-failed:4130）",
+      "action": "达人未开播",
+      "sub_code": "isv.business-failed:4130",
+      "sub_msg": "达人未开播"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 达人未开通分销业务（sub_code: isv.business-failed:4129）",
+      "action": "达人未开通分销业务",
+      "sub_code": "isv.business-failed:4129",
+      "sub_msg": "达人未开通分销业务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败：无效 PID（sub_code: isv.business-failed:4102）",
+      "action": "无效 PID",
+      "sub_code": "isv.business-failed:4102",
+      "sub_msg": "参数校验失败：无效 PID"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 回流平台参数非法（sub_code: isv.parameter-invalid:4122）",
+      "action": "回流平台参数非法",
+      "sub_code": "isv.parameter-invalid:4122",
+      "sub_msg": "回流平台参数非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/kolLiveShare?app_key=your_appkey_here&method=buyin.kolLiveShare&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4149",
+      "sub_msg": "无效的doudian_open_id"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1724",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-kolLiveShare"
+}

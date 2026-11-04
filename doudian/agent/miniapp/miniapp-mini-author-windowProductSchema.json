@@ -1,0 +1,99 @@
+{
+  "id": "doudian.miniapp.mini.author.windowProductSchema",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.author.windowProductSchema",
+  "description": "获取达人橱窗商品 schema",
+  "method": "GET",
+  "path": "/mini/author/windowProductSchema",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "author_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "达人uid",
+      "example": "777",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音c端用户open id",
+      "example": "888",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品id",
+      "example": "3544316315726671982",
+      "_depth": 0
+    },
+    {
+      "name": "micro_app_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "小程序 appId",
+      "example": "tt12312894712894",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_schema",
+      "type": "string",
+      "description": "商详页链接",
+      "example": "sslocal://ec_goods_pdp?biz_context=%7B%22author_id%22%3A%222430379999917452%22%2C%22sec_author_id%22%3A%22MS4wLjABAAAA8h8aoimC_MmfFJp-AAB6bxHQaFMYtrfhbeHwtqdrD-nNnfr_4vuI23AKuGRI%22%2C%22same_product_scene%22%3A0%2C%22hot_sale_type%22%3A0%7D&chain_info=%7B%22ecom_entrance_form%22%3A%22products%22%2C%22enter_from%22%3A%22store_page%22%2C%22ecom_scene_id%22%3A%221004%22%2C%22enter_method%22%3A%22click_store_product%22%2C%22carr---"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 606010000:入参UserId非法（sub_code: isv.business-failed:606010000）",
+      "action": "请检查入参",
+      "sub_code": "isv.business-failed:606010000",
+      "sub_msg": "606010000:入参UserId非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/author/windowProductSchema?app_key=your_appkey_here&method=mini.author.windowProductSchema&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_schema": "sslocal://ec_goods_pdp?biz_context=%7B%22author_id%22%3A%222430379999917452%22%2C%22sec_author_id%22%3A%22MS4wLjABAAAA8h8aoimC_MmfFJp-AAB6bxHQaFMYtrfhbeHwtqdrD-nNnfr_4vuI23AKuGRI%22%2C%22same_product_scene%22%3A0%2C%22hot_sale_type%22%3A0%7D&chain_info=%7B%22ecom_entrance_form%22%3A%22products%22%2C%22enter_from%22%3A%22store_page%22%2C%22ecom_scene_id%22%3A%221004%22%2C%22enter_method%22%3A%22click_store_product%22%2C%22carr---"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:606010000",
+      "sub_msg": "606010000:入参UserId非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/6925",
+  "updatedAt": "2024-10-08",
+  "_file_stem": "miniapp-mini-author-windowProductSchema"
+}

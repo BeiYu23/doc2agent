@@ -1,0 +1,164 @@
+{
+  "id": "doudian.product.product.publishPreCheck",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.publishPreCheck",
+  "description": "商品发布前置校验接口",
+  "method": "GET",
+  "path": "/product/publishPreCheck",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "check_types",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "校验类型，需要进行哪些校验，可以支持部分校验。\n店铺发品门槛校验：shop_publish_product_access，不需要传其他字段；店铺使用类目权限校验：shop_use_category_access，需要传category_id字段；商品标题校验product_title_illegal_check，需要传title、title_prefix、title_suffix\n水洗标校验product_wash_tag_pic_check，需要传category_id、category_property_pics",
+      "example": "[\"shop_publish_product_access\",\"shop_use_category_access\",\"shop_out_product_id_unique\"]",
+      "_depth": 0
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "叶子类目id",
+      "example": "20219",
+      "_depth": 0
+    },
+    {
+      "name": "out_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部商品编码，对应商品outer_product_id字段",
+      "example": "123456678",
+      "_depth": 0
+    },
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "完整的标题，需要包含前后缀",
+      "example": "标题前缀我是个标题标题后缀",
+      "_depth": 0
+    },
+    {
+      "name": "title_prefix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标题前缀",
+      "example": "标题前缀",
+      "_depth": 0
+    },
+    {
+      "name": "title_suffix",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标题后缀",
+      "example": "标题后缀",
+      "_depth": 0
+    },
+    {
+      "name": "category_property_pics",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性图（水洗标）, 参考格式{\"785\":{\"urls\":[\"https://xxxxxxx\"]}}",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "urls",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "属性图url，仅支持传递一张图",
+      "example": "[\"https://xxxxxxxxxx\"]",
+      "_depth": 1
+    },
+    {
+      "name": "brand_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "品牌id",
+      "example": "12345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "common_check_results",
+      "type": "array",
+      "description": "校验",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010004:校验类目使用权限需要类目id参数（sub_code: isv.business-failed:2010004）",
+      "action": "2010004:校验类目使用权限需要类目id参数",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:校验类目使用权限需要类目id参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010001:系统异常,请重试（sub_code: isv.business-failed:2010001）",
+      "action": "2010001:系统异常,请重试",
+      "sub_code": "isv.business-failed:2010001",
+      "sub_msg": "2010001:系统异常,请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110210112:商品类目不符合平台规则，请重新选择商品类目（sub_code: isv.business-failed:110210112）",
+      "action": "110210112:商品类目不符合平台规则，请重新选择商品类目",
+      "sub_code": "isv.business-failed:110210112",
+      "sub_msg": "110210112:商品类目不符合平台规则，请重新选择商品类目"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/publishPreCheck?app_key=your_appkey_here&method=product.publishPreCheck&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "common_check_results": [
+          {
+            "check_result_code": "0",
+            "check_result_msg": "success",
+            "check_type": "shop_publish_product_access"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2010004",
+      "sub_msg": "2010004:校验类目使用权限需要类目id参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/6503",
+  "updatedAt": "2026-08-21",
+  "_file_stem": "product-product-publishPreCheck"
+}

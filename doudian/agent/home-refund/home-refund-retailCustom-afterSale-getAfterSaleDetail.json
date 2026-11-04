@@ -1,0 +1,488 @@
+{
+  "id": "doudian.home-refund.retailCustom.afterSale.getAfterSaleDetail",
+  "platform": "doudian",
+  "group": "home-refund",
+  "name": "retailCustom.afterSale.getAfterSaleDetail",
+  "description": "提供给商家获取售后单详情信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 到家售后管理（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "售后单ID",
+      "example": "146490101500306813",
+      "_depth": 0
+    },
+    {
+      "name": "need_operation_record",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要操作记录",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "process_info",
+      "type": "object",
+      "description": "售后单及相关信息",
+      "example": ""
+    },
+    {
+      "name": "order_info",
+      "type": "object",
+      "description": "售后单关联订单信息",
+      "example": ""
+    },
+    {
+      "name": "signed",
+      "type": "boolean",
+      "description": "发起售后时订单是否已送达，仅即时零售行业",
+      "example": "false"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少必填参数（sub_code: isv.missing-parameter:4100001）",
+      "action": "请参考能力文档传入必填参数",
+      "sub_code": "isv.missing-parameter:4100001",
+      "sub_msg": "缺少必填参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数类型错误（sub_code: isv.parameter-invalid:4100002）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100002",
+      "sub_msg": "参数类型错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:4100003）",
+      "action": "请参考能力文档传入合法参数",
+      "sub_code": "isv.parameter-invalid:4100003",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务系统异常-不可重试的错误（sub_code: isv.business-failed:5000001）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:5000001",
+      "sub_msg": "业务系统异常-不可重试的错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常-可重试（sub_code: isp.service-error:5100002）",
+      "action": "系统异常，可尝试重试",
+      "sub_code": "isp.service-error:5100002",
+      "sub_msg": "系统异常-可重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=retailCustom.afterSale.getAfterSaleDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "order_info": {
+          "shop_order_id": "12345",
+          "sku_order_infos": [
+            {
+              "after_sale_item_count": "3",
+              "create_time": "1.719363179e+09",
+              "given_sku_details": [
+                {
+                  "item_order_num": "1",
+                  "product_id": "361124732503867950",
+                  "product_name": "赠品1衣服",
+                  "shop_sku_code": "123",
+                  "sku_order_id": "4866736775786465058"
+                }
+              ],
+              "insurance_tags": [
+                {
+                  "tag_detail": "运费险",
+                  "tag_detail_en": "returnfreight2020v1",
+                  "tag_link_url": "https://fxg-boe.bytedance.YOUR_SECRET_KEY-info?order_id=6917562949342070677&ins_product_id=returnfreight2020v1"
+                }
+              ],
+              "is_oversea_order": "0",
+              "item_quantity": "3",
+              "item_sum_amount": "300",
+              "order_status": "5",
+              "pay_amount": "300",
+              "pay_type": "2",
+              "post_amount": "0",
+              "product_id": "12345",
+              "product_image": "https://tosv.boe.byted.org/obj/ecom-shop-material/iEystqeEx_m_1f2963059bfa5bfbb64211165ff8a575_sx_221116_www1080-1080",
+              "product_name": "hambaka 上门取件测试商品",
+              "promotion_amount": "0",
+              "shop_sku_code": "\\\"12345\\\"",
+              "sku_id": "1.695808407736334e+15",
+              "sku_order_id": "12345",
+              "sku_pay_amount": "300",
+              "sku_spec": [
+                {
+                  "name": "规格项1",
+                  "value": "v1"
+                }
+              ],
+              "tags": [
+                {
+                  "tag_detail": "7天",
+                  "tag_detail_en": "supply_7day_return",
+                  "tag_link_url": "https://school.jinritemai.com/doudian/web/article/101835?from=shop_article"
+                }
+              ],
+              "tax_amount": "0"
+            }
+          ]
+        },
+        "process_info": {
+          "after_sale_info": {
+            "after_sale_apply_count": "3",
+            "after_sale_id": "6965315853751632172",
+            "after_sale_order_type": "1",
+            "after_sale_status": "28",
+            "after_sale_status_desc": "售后关闭",
+            "after_sale_sub_type": "0",
+            "after_sale_type": "3",
+            "after_sale_type_text": "换货",
+            "aftersale_status_to_final_time": "1735660800",
+            "aftersale_tags": [
+              {
+                "placeholder": {},
+                "tag_detail": "换货",
+                "tag_detail_en": "after_sale_type",
+                "tag_detail_text": "该售后单【xxx预警原因】请根据物流/商品状态进行核实。若确认有风险，请及时保存举证${relate_doc}，可在${asset_prevent}操作批量拒绝售后；若无风险，可同意售后。",
+                "tag_link_url": "略"
+              }
+            ],
+            "agree_refuse_sign": "0",
+            "apply_role": "1",
+            "apply_time": "1735660800",
+            "auto_audit_bits": "[]",
+            "deduction_amount": "0",
+            "disable_coupon_id": "0",
+            "encrypt_post_receiver": "\\\"张三\\\"",
+            "encrypt_post_tel_sec": "\\\"18740098531\\\"",
+            "evidence": "[\"https://tosv.boe.byted.org/obj/temai/8e8d1e888d959a9029d5daadcab1bc5dwww208-208\",\"https://tosv.boe.byted.org/obj/temai/8ab3161413e2328d6125d15540ad2bbdwww208-208\",\"https://tosv.boe.byted.org/obj/temai/22586f100ba9a71810979d42c0ca9c9dwww208-208\",\"https://tosv.boe.byted.org/obj/temai/73739442f45c0a6b55d7e5a8c194317fwww208-208\"]",
+            "exchange_sku_info": {
+              "code": "\\\"10000\\\"",
+              "name": "hambaka 上门取件测试商品",
+              "num": "3",
+              "out_sku_id": "\\\"10000\\\"",
+              "out_warehouse_id": "\\\"10000\\\"",
+              "price": "100",
+              "sku_id": "1695808407736334",
+              "spec_desc": "v1",
+              "supplier_id": "\\\"10000\\\"",
+              "url": "https://tosv.boe.byted.org/obj/ecom-shop-material/iEystqeEx_m_1f2963059bfa5bfbb64211165ff8a575_sx_221116_www1080-1080"
+            },
+            "gold_coin_return_amount": "0",
+            "got_pkg": "1",
+            "kol_discount_return_amount": "0",
+            "kol_discount_return_status": "0",
+            "need_return_count": "3",
+            "part_type": "1",
+            "platform_discount_return_amount": "0",
+            "platform_discount_return_status": "0",
+            "post_address": {
+              "city": {
+                "id": "110000",
+                "name": "北京市"
+              },
+              "encrypt_detail": "23432",
+              "landmark": "\"\"",
+              "province": {
+                "id": "11",
+                "name": "北京市"
+              },
+              "street": {
+                "id": "110108012",
+                "name": "海淀街道"
+              },
+              "town": {
+                "id": "110108",
+                "name": "海淀区"
+              }
+            },
+            "post_discount_return_amount": "0",
+            "post_discount_return_status": "0",
+            "real_refund_amount": "0",
+            "reason": "其他",
+            "reason_code": "15",
+            "reason_remark": "接口自动化测试-发起售后",
+            "reason_second_labels": [
+              {
+                "code": "1",
+                "name": "衣服买大"
+              }
+            ],
+            "refund_fail_reason": "\\\"用户账户异常，平台处理中\\\"",
+            "refund_packing_charge_amount": "0",
+            "refund_post_amount": "0",
+            "refund_promotion_amount": "0",
+            "refund_status": "0",
+            "refund_time": "0",
+            "refund_total_amount": "0",
+            "refund_type": "0",
+            "refund_type_text": "无需退款",
+            "refund_voucher_num": "0",
+            "refund_voucher_times": "0",
+            "return_address": {
+              "city": {
+                "id": "440300",
+                "name": "深圳市"
+              },
+              "detail": "前海枫叶大厦b座506-接口自动化-选择退货地址-1719403697421078018",
+              "landmark": "\"\"",
+              "province": {
+                "id": "44",
+                "name": "广东省"
+              },
+              "street": {
+                "id": "440305002",
+                "name": "南山街道"
+              },
+              "town": {
+                "id": "440305",
+                "name": "南山区"
+              }
+            },
+            "return_address_id": "0",
+            "return_book_info": {
+              "book_time_begin": "09:00",
+              "book_time_end": "13:00",
+              "contact_info": {
+                "addr": {
+                  "address_id": "-",
+                  "city": {
+                    "id": "110000",
+                    "name": "北京市"
+                  },
+                  "encrypt_detail": "-",
+                  "province": {
+                    "id": "11",
+                    "name": "北京市"
+                  },
+                  "street": {
+                    "id": "110108012",
+                    "name": "海淀街道"
+                  },
+                  "town": {
+                    "id": "110108",
+                    "name": "海淀区"
+                  }
+                },
+                "encrypt_tel": "-",
+                "name": "邓之琨"
+              },
+              "return_type": "1",
+              "sender_address_id": "-",
+              "station_id": "-"
+            },
+            "return_method": "1",
+            "risk_decsison_code": "0",
+            "risk_decsison_description": "退货物流可能存在异常，多个售后单物流单号一致，请仔细核对或与买家核实后尽快处理。",
+            "risk_decsison_reason": "多个售后单同一单号",
+            "shop_discount_return_amount": "0",
+            "status_deadline": "0",
+            "store_id": "0",
+            "store_name": "海底捞昌阳店",
+            "update_time": "1735660800"
+          },
+          "after_sale_service_tag": {
+            "after_sale_service_tag": [
+              {
+                "tag_detail": "\\\"7天\\\"",
+                "tag_detail_en": "\\\"supply_7day_return\\\"",
+                "tag_link_url": "\\\"https://school.jinritemai.com/doudian/web/article/101835?from=shop_article\\\""
+              }
+            ]
+          },
+          "after_sale_shop_remarks": [
+            {
+              "after_sale_id": "54321",
+              "create_time": "173566080",
+              "operator": "\\\"小亮\\\"",
+              "order_id": "12345",
+              "remark": "\\\"你好\\\""
+            }
+          ],
+          "arbitrate_info": {
+            "arbitrate_blame": "0",
+            "arbitrate_conclusion": "0",
+            "arbitrate_create_time": "0",
+            "arbitrate_evidence": {
+              "describe": "仲裁描述",
+              "images": "[]"
+            },
+            "arbitrate_evidence_tmpl": {
+              "dead_line": "0",
+              "describe": "仲裁描述",
+              "images": "[]"
+            },
+            "arbitrate_id": "12345",
+            "arbitrate_opinion": "仲裁原因描述",
+            "arbitrate_status": "0",
+            "arbitrate_status_deadline": "1735660800",
+            "arbitrate_update_time": "0",
+            "is_required_evidence": "false"
+          },
+          "logistics_info": {
+            "exchange": {
+              "company_code": "shunfeng",
+              "company_name": "顺丰",
+              "logistics_time": "0",
+              "tracking_no": "12345"
+            },
+            "order": [
+              {
+                "company_code": "powertestexpress",
+                "company_name": "物流QA速递",
+                "logistics_state": "13",
+                "logistics_time": "1.719363195e+09",
+                "tracking_no": "1719363193867083162951214",
+                "value_added_services": [
+                  {
+                    "code": "SVC-WBHOMEDELIVERY",
+                    "name": "送货上门"
+                  }
+                ]
+              }
+            ],
+            "resend": {
+              "company_code": "shunfeng",
+              "company_name": "顺丰",
+              "logistics_time": "0",
+              "tracking_no": "12345"
+            },
+            "return": {
+              "company_code": "shunfeng",
+              "company_name": "顺丰",
+              "logistics_time": "0",
+              "tracking_no": "12345"
+            }
+          },
+          "price_protection_detail": {
+            "check_price": {
+              "actual_amount": {
+                "amount": "400",
+                "price_text": "当前商品预计总价"
+              },
+              "deduction_price_detail": [
+                {
+                  "amount": "600",
+                  "price_text": "店铺券"
+                }
+              ],
+              "origin_amount": {
+                "amount": "1000",
+                "price_text": "商品合计原价"
+              }
+            },
+            "platform_recycle_amount": "0",
+            "platform_to_merchant_refund_status": "0",
+            "price_protection_formulas": "实退差价=原订单商品总价（非实付价）-当前商品预计总价-已退差价-支付优惠回收金额",
+            "refund_bearer_list": [
+              {
+                "amount": "124",
+                "price_text": "商家实退差价"
+              }
+            ],
+            "refund_detail": {
+              "actual_amount": {
+                "amount": "494",
+                "price_text": "实退差价"
+              },
+              "deduction_price_detail": [
+                {
+                  "amount": "0",
+                  "price_text": "已退差价"
+                }
+              ],
+              "origin_amount": {
+                "amount": "494",
+                "price_text": "合计差价"
+              }
+            },
+            "standard_price": {
+              "actual_amount": {
+                "amount": "894",
+                "price_text": "原订单商品总价（非实付价）"
+              },
+              "deduction_price_detail": [
+                {
+                  "amount": "100",
+                  "price_text": "店铺满减"
+                }
+              ],
+              "origin_amount": {
+                "amount": "1000",
+                "price_text": "商品合计原价"
+              }
+            },
+            "title": "大促价保计算明细"
+          },
+          "record_logs_list": [
+            {
+              "action": "申请售后",
+              "all_evidence": [
+                {
+                  "desc": "描述",
+                  "type": "1",
+                  "urls": "图片链接"
+                }
+              ],
+              "desc_kvs": [
+                {
+                  "highlight": "false",
+                  "key": "售后类型",
+                  "notice": "空",
+                  "value": "换货"
+                }
+              ],
+              "images": "[\"http://p-boe-sign.bytedance.net/temai/8e8d1e888d959a9029d5daadcab1bc5dwww208-208~tplv-j6grunm42e-q75-jpeg.jpeg?lk3s=e120b4f8\\u0026x-orig-authkey=boeorigin\\u0026x-orig-expires=1735219242\\u0026x-orig-sign=G4of4tMJBCvNdNhaziyaRWoxwC0%3D\",\"http://p-boe-sign.bytedance.net/temai/8ab3161413e2328d6125d15540ad2bbdwww208-208~tplv-j6grunm42e-q75-jpeg.jpeg?lk3s=e120b4f8\\u0026x-orig-authkey=boeorigin\\u0026x-orig-expires=1735219242\\u0026x-orig-sign=7HvyUNNvaCju3eVhNDwjaNY1lDI%3D\",\"http://p-boe-sign.bytedance.net/temai/22586f100ba9a71810979d42c0ca9c9dwww208-208~tplv-j6grunm42e-q75-jpeg.jpeg?lk3s=e120b4f8\\u0026x-orig-authkey=boeorigin\\u0026x-orig-expires=1735219242\\u0026x-orig-sign=Ano7VcW8i4fnaRlBg5ipwO1tgZA%3D\",\"http://p-boe-sign.bytedance.net/temai/73739442f45c0a6b55d7e5a8c194317fwww208-208~tplv-j6grunm42e-q75-jpeg.jpeg?lk3s=e120b4f8\\u0026x-orig-authkey=boeorigin\\u0026x-orig-expires=1735219242\\u0026x-orig-sign=hxYac48d1FxEQWJn4tsTJ3I0Ebs%3D\"]",
+              "operator": "买家",
+              "role": "1",
+              "text": "发起了换货申请，等待商家处理",
+              "time": "2024-06-26 20:08:14"
+            }
+          ]
+        },
+        "signed": "false"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:4100001",
+      "sub_msg": "缺少必填参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1521/6657",
+  "updatedAt": "2024-06-28",
+  "_file_stem": "home-refund-retailCustom-afterSale-getAfterSaleDetail"
+}

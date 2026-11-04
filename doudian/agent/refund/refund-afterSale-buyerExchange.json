@@ -1,0 +1,130 @@
+{
+  "id": "doudian.refund.afterSale.buyerExchange",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "afterSale.buyerExchange",
+  "description": "商家处理换货请求接口",
+  "method": "GET",
+  "path": "/afterSale/buyerExchange",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "aftersale_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "售后ID",
+      "example": "7028908275186158347",
+      "_depth": 0
+    },
+    {
+      "name": "is_reject",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否拒绝",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "sms_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "短信模板ID",
+      "example": "123123",
+      "_depth": 0
+    },
+    {
+      "name": "comment",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家留言",
+      "example": "同意",
+      "_depth": 0
+    },
+    {
+      "name": "evidence",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商家凭证",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "address_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商家选择的换货地址",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家备注",
+      "example": "好吧，那就换吧",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 此订单状态已经发生变化，请刷新（sub_code: isv.business-failed:10007）",
+      "action": "检查售后单状态",
+      "sub_code": "isv.business-failed:10007",
+      "sub_msg": "此订单状态已经发生变化，请刷新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 售后类型无法处理（sub_code: isv.business-failed:10002）",
+      "action": "检查售后单状态",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "售后类型无法处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "服务不可用 / 服务器繁忙，请刷新后重试（sub_code: isp.service-error:10001）",
+      "action": "检查后重试",
+      "sub_code": "isp.service-error:10001",
+      "sub_msg": "服务器繁忙，请刷新后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/buyerExchange?app_key=your_appkey_here&method=afterSale.buyerExchange&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:10007",
+      "sub_msg": "此订单状态已经发生变化，请刷新"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/769",
+  "updatedAt": "2021-08-03",
+  "_file_stem": "refund-afterSale-buyerExchange"
+}

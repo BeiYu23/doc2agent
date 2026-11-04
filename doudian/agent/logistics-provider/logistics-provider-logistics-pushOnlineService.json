@@ -1,0 +1,267 @@
+{
+  "id": "doudian.logistics-provider.logistics.pushOnlineService",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.pushOnlineService",
+  "description": "物流商推送商家的产品类型/增值服务的变更数据",
+  "method": "GET",
+  "path": "/logistics/pushOnlineService",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "netsite",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "月结账号或者网点编码  shopId+网点编码或者月结账号确定唯一",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "secret_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "总对总时的密码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "net_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "网点编码,当类型字段为加盟制时，则该字段为必填；直营制时无需使用",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "category",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流服务商类型（直营or加盟）",
+      "example": "\"加盟\"",
+      "_depth": 1
+    },
+    {
+      "name": "monthly_account",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "月结账号，当类型字段为直营制时，则该字段会用到，加盟制时无需使用； 总对总时的账号",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "verification_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "验证码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "service_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "增值服务",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流产品编码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "refuse_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "statusType=3 时必填，拒绝原因",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "status_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0=已开通 1=未开通 2=审核中 3=拒绝",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "product_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "物流产品",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "service_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流产品编码",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "status_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0=已开通 1=未开通 2=审核中 3=拒绝",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "refuse_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "statusType=3 时必填，拒绝原因",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "op_timestamp",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "时间戳",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sign_mode",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "合作模式",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "op_source",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "开通来源",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id_compatible",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商家id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "sub_brand",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "实际的物流商code",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "invalid_service_list",
+      "type": "array",
+      "description": "无效增值服务列表",
+      "example": ""
+    },
+    {
+      "name": "invalid_product_list",
+      "type": "array",
+      "description": "无效物流产品列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 存在非法参数（sub_code: isv.parameter-invalid:4006）",
+      "action": "检查参数是否正确",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "存在非法参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 面单账户不存在（sub_code: isv.business-failed:14023）",
+      "action": "检查参数是否正确",
+      "sub_code": "isv.business-failed:14023",
+      "sub_msg": "面单账户不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 产品/增值服务编码无效（sub_code: isv.parameter-invalid:4056）",
+      "action": "检查参数是否正确",
+      "sub_code": "isv.parameter-invalid:4056",
+      "sub_msg": "产品/增值服务编码无效"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/pushOnlineService?app_key=your_appkey_here&method=logistics.pushOnlineService&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "invalid_product_list": [
+          {
+            "refuse_reason": "1",
+            "service_code": "1",
+            "status_type": "1"
+          }
+        ],
+        "invalid_service_list": [
+          {
+            "refuse_reason": "1",
+            "service_code": "1",
+            "status_type": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "存在非法参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8368",
+  "updatedAt": "2026-06-29",
+  "_file_stem": "logistics-provider-logistics-pushOnlineService"
+}

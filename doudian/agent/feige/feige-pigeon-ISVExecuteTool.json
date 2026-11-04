@@ -1,0 +1,301 @@
+{
+  "id": "doudian.feige.pigeon.ISVExecuteTool",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.ISVExecuteTool",
+  "description": "执行ISV客服工具的接口，支持执行各种客服相关的自动化工具和脚本",
+  "method": "GET",
+  "path": "/pigeon/ISVExecuteTool",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "tool_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工具code",
+      "example": "\"BASIC_SCRIPT\"",
+      "_depth": 0
+    },
+    {
+      "name": "execute_params",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "工具执行参数，部分工具存在必传参数",
+      "example": "\"product_id_list\": \"[\\\"3740656536352063689\\\",\\\"3686240338055397653\\\"]\"",
+      "_depth": 0
+    },
+    {
+      "name": "script",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "回复话术（BASIC_SCRIPT工具必传）",
+      "example": "\"您好\"",
+      "_depth": 0
+    },
+    {
+      "name": "biz_params_context",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "固定业务参数，有就传，部分工具存在必传参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "talk_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "子会话ID",
+      "example": "\"7524598324482114\"",
+      "_depth": 1
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商城订单ID",
+      "example": "\"0\"",
+      "_depth": 1
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku订单ID",
+      "example": "\"0\"",
+      "_depth": 1
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后ID",
+      "example": "\"0\"",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品ID",
+      "example": "\"37608307150512459\"",
+      "_depth": 1
+    },
+    {
+      "name": "msg_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "消息ID",
+      "example": "\"18370601871002\"",
+      "_depth": 1
+    },
+    {
+      "name": "pigeon_biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "业务身份",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "pigeon_shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "飞鸽店铺ID",
+      "example": "14562951",
+      "_depth": 0
+    },
+    {
+      "name": "biz_idempotent_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工具执行幂等ID，过期时间2h",
+      "example": "\"0217519571190490000717ab0:1837060187100\"",
+      "_depth": 0
+    },
+    {
+      "name": "trace_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "生命周期ID",
+      "example": "\"0217511190490000ffff40a17ab0:1837100268\"",
+      "_depth": 0
+    },
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "执行对象ID，一般为消费者ID",
+      "example": "\"104477413000\"",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "string",
+      "description": "工具执行结果。SUCCESS or FAILED",
+      "example": "\"SUCCESS\""
+    },
+    {
+      "name": "trace_id",
+      "type": "string",
+      "description": "生命周期ID",
+      "example": "\"0217511190490000ffff40a17ab0:1837100268\""
+    },
+    {
+      "name": "biz_err",
+      "type": "object",
+      "description": "业务错误",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具执行参数异常（sub_code: isp.service-error:30001）",
+      "action": "检查工具参数配置是否正确",
+      "sub_code": "isp.service-error:30001",
+      "sub_msg": "工具执行参数异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具暂不支持（sub_code: isp.service-error:30002）",
+      "action": "确认工具是否已上线或支持",
+      "sub_code": "isp.service-error:30002",
+      "sub_msg": "工具暂不支持"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 当前会话已使用过该工具（sub_code: isp.service-error:30003）",
+      "action": "检查会话状态或更换工具",
+      "sub_code": "isp.service-error:30003",
+      "sub_msg": "当前会话已使用过该工具"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具执行失败（sub_code: isp.service-error:30004）",
+      "action": "查看执行日志定位原因",
+      "sub_code": "isp.service-error:30004",
+      "sub_msg": "工具执行失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具执行幂等（sub_code: isp.service-error:30005）",
+      "action": "确认是否重复调用或重复请求",
+      "sub_code": "isp.service-error:30005",
+      "sub_msg": "工具执行幂等"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具预先校验失败（sub_code: isp.service-error:30006）",
+      "action": "检查前置条件或参数是否符合要求",
+      "sub_code": "isp.service-error:30006",
+      "sub_msg": "工具预先校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具执行参数异常（sub_code: isp.service-error:30007）",
+      "action": "检查参数完整性与格式",
+      "sub_code": "isp.service-error:30007",
+      "sub_msg": "工具执行参数异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具配置加载失败（sub_code: isp.service-error:31000）",
+      "action": "检查配置文件或资源是否正常",
+      "sub_code": "isp.service-error:31000",
+      "sub_msg": "工具配置加载失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 工具生命周期ID缺失（sub_code: isp.service-error:31001）",
+      "action": "确认生命周期ID是否正确传入",
+      "sub_code": "isp.service-error:31001",
+      "sub_msg": "工具生命周期ID缺失"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 事件执行失败（sub_code: isp.service-error:31100）",
+      "action": "检查事件执行逻辑及日志",
+      "sub_code": "isp.service-error:31100",
+      "sub_msg": "事件执行失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 事件表达失败（sub_code: isp.service-error:31101）",
+      "action": "检查事件表达式配置及语法",
+      "sub_code": "isp.service-error:31101",
+      "sub_msg": "事件表达失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 事件参数校验失败（sub_code: isp.service-error:31102）",
+      "action": "检查事件参数是否完整及符合要求",
+      "sub_code": "isp.service-error:31102",
+      "sub_msg": "事件参数校验失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/ISVExecuteTool?app_key=your_appkey_here&method=pigeon.ISVExecuteTool&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "biz_err": {
+          "code": "0",
+          "msg": "\"\""
+        },
+        "result": "\"SUCCESS\"",
+        "trace_id": "\"0217511190490000ffff40a17ab0:1837100268\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:30001",
+      "sub_msg": "工具执行参数异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/7670",
+  "updatedAt": "2025-11-27",
+  "_file_stem": "feige-pigeon-ISVExecuteTool"
+}

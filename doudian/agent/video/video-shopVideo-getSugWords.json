@@ -1,0 +1,69 @@
+{
+  "id": "doudian.video.shopVideo.getSugWords",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.getSugWords",
+  "description": "查询话题信息",
+  "method": "GET",
+  "path": "/shopVideo/getSugWords",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "keyword",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "话题词",
+      "example": "关键词是我",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "响应参数",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/getSugWords?app_key=your_appkey_here&method=shopVideo.getSugWords&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "play_count": "12121212",
+            "topic_id": "122333",
+            "topic_name": "话题名称"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7491",
+  "updatedAt": "2025-05-28",
+  "_file_stem": "video-shopVideo-getSugWords"
+}

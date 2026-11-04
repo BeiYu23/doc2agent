@@ -1,0 +1,107 @@
+{
+  "id": "doudian.industry.rights.freezeUsageCount",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "rights.freezeUsageCount",
+  "description": "冻结权益使用次数",
+  "method": "GET",
+  "path": "/rights/freezeUsageCount",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "freeze_cnt",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "冻结次数",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "outer_biz_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部业务ID(模板市场为模板code)，非必传，不可与serviceId同传",
+      "example": "6859718390706503687",
+      "_depth": 0
+    },
+    {
+      "name": "service_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "服务ID，非必传，不可与outerBizId同传",
+      "example": "1111",
+      "_depth": 0
+    },
+    {
+      "name": "log_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "执行规定操作所调用openapi的log_id",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "req_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "请求id, 作幂等键",
+      "example": "isv_service1#user1#202312251010999",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注，长度不超过1024",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "auto_deduct_usage",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否自动扣减冻结次数，true：7天之后未核销自动流转至扣减",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/rights/freezeUsageCount?app_key=your_appkey_here&method=rights.freezeUsageCount&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8348",
+  "updatedAt": "2026-06-23",
+  "_file_stem": "industry-rights-freezeUsageCount"
+}

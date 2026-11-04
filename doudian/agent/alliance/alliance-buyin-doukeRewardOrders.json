@@ -1,0 +1,177 @@
+{
+  "id": "doudian.alliance.buyin.doukeRewardOrders",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.doukeRewardOrders",
+  "description": "抖客获取近30天内奖励订单",
+  "method": "GET",
+  "path": "/buyin/doukeRewardOrders",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 抖客, 达人"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页数，从1开始；",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页订单数目，最大为100",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "pid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "独立抖客PID",
+      "example": "dy_123_445_4995",
+      "_depth": 0
+    },
+    {
+      "name": "start_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "查询开始日期，格式：20230308，奖励订单只保存近30天的订单",
+      "example": "20230308",
+      "_depth": 0
+    },
+    {
+      "name": "end_date",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "查询结束日期，格式：20230308，奖励订单只保存近30天的订单",
+      "example": "20230308",
+      "_depth": 0
+    },
+    {
+      "name": "distribution_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "默认全部，0:全部 1:商品分销 2: 直播间分销 3: mix自建活动页分销 4:频道页分销 99:其他",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "reward_orders",
+      "type": "array",
+      "description": "奖励订单信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "查询的奖励订单总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 分销类型参数错误（sub_code: isv.parameter-invalid:4414）",
+      "action": "分销类型参数错误",
+      "sub_code": "isv.parameter-invalid:4414",
+      "sub_msg": "分销类型参数错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效pageSize（sub_code: isv.parameter-invalid:4415）",
+      "action": "参数校验失败：无效pageSize",
+      "sub_code": "isv.parameter-invalid:4415",
+      "sub_msg": "参数校验失败：无效pageSize"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效时间区间（开始时间不能大于结束时间）（sub_code: isv.parameter-invalid:4416）",
+      "action": "参数校验失败：无效时间区间（开始时间不能大于结束时间）",
+      "sub_code": "isv.parameter-invalid:4416",
+      "sub_msg": "参数校验失败：无效时间区间（开始时间不能大于结束时间）"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效 PID（sub_code: isv.parameter-invalid:4102）",
+      "action": "参数校验失败：无效 PID",
+      "sub_code": "isv.parameter-invalid:4102",
+      "sub_msg": "参数校验失败：无效 PID"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效开始时间（sub_code: isv.parameter-invalid:4249）",
+      "action": "参数校验失败：无效开始时间",
+      "sub_code": "isv.parameter-invalid:4249",
+      "sub_msg": "参数校验失败：无效开始时间"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效结束时间（sub_code: isv.parameter-invalid:4250）",
+      "action": "参数校验失败：无效结束时间",
+      "sub_code": "isv.parameter-invalid:4250",
+      "sub_msg": "参数校验失败：无效结束时间"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/doukeRewardOrders?app_key=your_appkey_here&method=buyin.doukeRewardOrders&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "reward_orders": [
+          {
+            "external_info": "test",
+            "pay_amount": "100",
+            "pay_date": "20230308",
+            "product_id": "12345678",
+            "product_name": "测试商品",
+            "promotion_info": "dy_123_445_4995",
+            "reward_order_id": "12345678",
+            "reward_type": "拉新"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4414",
+      "sub_msg": "分销类型参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/3200",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-doukeRewardOrders"
+}

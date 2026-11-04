@@ -1,0 +1,138 @@
+{
+  "id": "doudian.logistics.freightTemplate.list",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "freightTemplate.list",
+  "description": "获取运费模板列表",
+  "method": "GET",
+  "path": "/freightTemplate/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运费模板名称，支持模糊搜索",
+      "example": "模版1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "页数（默认为0，第一页从0开始）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "每页模板数（默认为10），最大值是100",
+      "example": "10",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "List",
+      "type": "array",
+      "description": "运费模版列表",
+      "example": ""
+    },
+    {
+      "name": "Count",
+      "type": "number",
+      "description": "总数",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 获取运费模板列表失败，请稍后重试（sub_code: isp.service-error:20013）",
+      "action": "稍后重试",
+      "sub_code": "isp.service-error:20013",
+      "sub_msg": "获取运费模板列表失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20012:size参数格式错误（sub_code: isv.business-failed:20012）",
+      "action": "请检查size参数格式",
+      "sub_code": "isv.business-failed:20012",
+      "sub_msg": "20012:size参数格式错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20011:page参数格式错误（sub_code: isv.business-failed:20011）",
+      "action": "请检查page参数格式",
+      "sub_code": "isv.business-failed:20011",
+      "sub_msg": "20011:page参数格式错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 422:搜索超过最大字数限制（sub_code: isv.business-failed:422）",
+      "action": "请检查参数",
+      "sub_code": "isv.business-failed:422",
+      "sub_msg": "422:搜索超过最大字数限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500:查询运费模版失败（sub_code: isv.business-failed:500）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "500:查询运费模版失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/freightTemplate/list?app_key=your_appkey_here&method=freightTemplate.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "Count": "1",
+        "List": [
+          {
+            "template": {
+              "calculate_type": "1",
+              "fixed_amount": "1",
+              "id": "1",
+              "product_city": "\"320000\"",
+              "product_province": "\"32\"",
+              "rule_type": "1",
+              "template_name": "模版示例",
+              "transfer_type": "1"
+            }
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:20013",
+      "sub_msg": "获取运费模板列表失败，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/565",
+  "updatedAt": "2021-06-04",
+  "_file_stem": "logistics-freightTemplate-list"
+}

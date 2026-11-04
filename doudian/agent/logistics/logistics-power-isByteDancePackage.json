@@ -1,0 +1,183 @@
+{
+  "id": "doudian.logistics.power.isByteDancePackage",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "power.isByteDancePackage",
+  "description": "末端服务字节面单信息查询（仅用于兼容老物流网关）",
+  "method": "GET",
+  "path": "/power/isByteDancePackage",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "waybill_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "express_company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "-",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "is_bytedance_waybill",
+      "type": "string",
+      "description": "是否是字节包裹",
+      "example": "0"
+    },
+    {
+      "name": "is_bytedance_dec",
+      "type": "string",
+      "description": "是否是字节面单",
+      "example": "0"
+    },
+    {
+      "name": "sender",
+      "type": "object",
+      "description": "寄件人信息",
+      "example": ""
+    },
+    {
+      "name": "receiver",
+      "type": "object",
+      "description": "收件人信息",
+      "example": ""
+    },
+    {
+      "name": "privacy_flag",
+      "type": "string",
+      "description": "是否是虚拟号",
+      "example": "1"
+    },
+    {
+      "name": "isSmsSupported",
+      "type": "boolean",
+      "description": "是否支持短信代发",
+      "example": "true"
+    },
+    {
+      "name": "smsNotSupportedReason",
+      "type": "string",
+      "description": "短信不支持原因",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11009:手机号不存在（sub_code: isv.business-failed:11009）",
+      "action": "修改入参",
+      "sub_code": "isv.business-failed:11009",
+      "sub_msg": "11009:手机号不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11004:不支持该物流服务商（sub_code: isv.business-failed:11004）",
+      "action": "修改入参",
+      "sub_code": "isv.business-failed:11004",
+      "sub_msg": "11004:不支持该物流服务商"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11000:expressCompany is nil（sub_code: isv.business-failed:11000）",
+      "action": "修改入参",
+      "sub_code": "isv.business-failed:11000",
+      "sub_msg": "11000:expressCompany is nil"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11003:系统异常（sub_code: isv.business-failed:11003）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:11003",
+      "sub_msg": "11003:系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11021:判断是否抖音面单异常:不支持该物流服务商（sub_code: isv.business-failed:11021）",
+      "action": "11021:判断是否抖音面单异常:不支持该物流服务商",
+      "sub_code": "isv.business-failed:11021",
+      "sub_msg": "11021:判断是否抖音面单异常:不支持该物流服务商"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11022:判断是否抖音包裹异常:网络超时（sub_code: isv.business-failed:11022）",
+      "action": "11022:判断是否抖音包裹异常:网络超时",
+      "sub_code": "isv.business-failed:11022",
+      "sub_msg": "11022:判断是否抖音包裹异常:网络超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 11019:收件人信息获取失败:网络超时（sub_code: isv.business-failed:11019）",
+      "action": "11019:收件人信息获取失败:网络超时",
+      "sub_code": "isv.business-failed:11019",
+      "sub_msg": "11019:收件人信息获取失败:网络超时"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/power/isByteDancePackage?app_key=your_appkey_here&method=power.isByteDancePackage&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "isSmsSupported": "true",
+        "is_bytedance_dec": "0",
+        "is_bytedance_waybill": "0",
+        "privacy_flag": "1",
+        "receiver": {
+          "auth_end_time": "-",
+          "auth_flag": "-",
+          "auth_start_time": "-",
+          "is_virtual_no": "0",
+          "mobile": "0",
+          "name": "0",
+          "virtual_no": "0",
+          "virtual_status": "0"
+        },
+        "sender": {
+          "auth_end_time": "-",
+          "auth_flag": "-",
+          "auth_start_time": "-",
+          "is_virtual_no": "0",
+          "mobile": "0",
+          "name": "0",
+          "virtual_no": "0",
+          "virtual_status": "0"
+        },
+        "smsNotSupportedReason": "-"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:11009",
+      "sub_msg": "11009:手机号不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1558",
+  "updatedAt": "2025-04-17",
+  "_file_stem": "logistics-power-isByteDancePackage"
+}

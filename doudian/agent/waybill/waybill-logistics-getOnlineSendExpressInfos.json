@@ -1,0 +1,200 @@
+{
+  "id": "doudian.waybill.logistics.getOnlineSendExpressInfos",
+  "platform": "doudian",
+  "group": "waybill",
+  "name": "logistics.getOnlineSendExpressInfos",
+  "description": "在线寄件询价接口",
+  "method": "GET",
+  "path": "/logistics/getOnlineSendExpressInfos",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电子面单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "sender_address",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "寄件地址",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "寄件省",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "寄件市",
+      "example": "北京市",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "寄件区",
+      "example": "海淀区",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "寄件街道",
+      "example": "中关村街道",
+      "_depth": 1
+    },
+    {
+      "name": "detail_address",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "寄件详细地址",
+      "example": "地震局",
+      "_depth": 1
+    },
+    {
+      "name": "order_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "订单列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音订单号",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "insured_amount",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "保价金额，单位分",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "package_weight",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "包裹重量，单位克，默认填300",
+      "example": "3000",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "express_infos",
+      "type": "array",
+      "description": "各物流商报价信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常（sub_code: isv.parameter-invalid:4006）",
+      "action": "根据错误提示检查入参",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "参数异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:4007）",
+      "action": "检查文案或重试",
+      "sub_code": "isp.service-error:4007",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单信息不存在（sub_code: isv.parameter-invalid:15002）",
+      "action": "检查订单号是否真实抖音订单号",
+      "sub_code": "isv.parameter-invalid:15002",
+      "sub_msg": "订单信息不存在"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询订单信息失败（sub_code: isp.service-error:15000）",
+      "action": "检查订单号是否真实抖音订单号或重试",
+      "sub_code": "isp.service-error:15000",
+      "sub_msg": "查询订单信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货地暂无可用服务商（sub_code: isv.business-failed:131000）",
+      "action": "可做友好提示：您的发货地暂无可用服务商，城市陆续开通中，敬请期待",
+      "sub_code": "isv.business-failed:131000",
+      "sub_msg": "发货地暂无可用服务商"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getOnlineSendExpressInfos?app_key=your_appkey_here&method=logistics.getOnlineSendExpressInfos&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "express_infos": [
+          {
+            "cut_off_time": "15:04",
+            "express": "jtexpress",
+            "price_infos": [
+              {
+                "insured_amount": "100",
+                "logistics_cost": "100",
+                "order_id": "123",
+                "package_weight": "1000",
+                "receive_city": "北京市",
+                "send_city": "北京市"
+              }
+            ],
+            "recommended_reason": "1",
+            "total_cost": "200",
+            "total_insured_amount": "100",
+            "total_logistics_cost": "100"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4006",
+      "sub_msg": "参数异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1262/4831",
+  "updatedAt": "2023-10-09",
+  "_file_stem": "waybill-logistics-getOnlineSendExpressInfos"
+}

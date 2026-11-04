@@ -1,0 +1,124 @@
+{
+  "id": "doudian.product.product.isv.createProductFromSupplyPlatform",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.isv.createProductFromSupplyPlatform",
+  "description": "搜索线索提报 (三方货源发品场景)",
+  "method": "GET",
+  "path": "/product/isv/createProductFromSupplyPlatform",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 商品API（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "query_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "搜索词id",
+      "example": "\"qwe14\"",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商品id",
+      "example": "123445234234344",
+      "_depth": 0
+    },
+    {
+      "name": "origin",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "来源",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "clue_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "线索id",
+      "example": "123",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:501）",
+      "action": "联系开发者",
+      "sub_code": "isp.service-error:501",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / clueId和queryId不能同时为空（sub_code: isv.parameter-invalid:502）",
+      "action": "clueId>0 或者 queryId不为空字符串",
+      "sub_code": "isv.parameter-invalid:502",
+      "sub_msg": "clueId和queryId不能同时为空"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 平台来源错误（sub_code: isv.parameter-invalid:503）",
+      "action": "联系开发者",
+      "sub_code": "isv.parameter-invalid:503",
+      "sub_msg": "平台来源错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / ProductId不能为0（sub_code: isv.parameter-invalid:504）",
+      "action": "ProductId>0",
+      "sub_code": "isv.parameter-invalid:504",
+      "sub_msg": "ProductId不能为0"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效的线索信息（sub_code: isv.business-failed:505）",
+      "action": "联系开发者",
+      "sub_code": "isv.business-failed:505",
+      "sub_msg": "无效的线索信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效商品id（sub_code: isv.business-failed:506）",
+      "action": "联系开发者",
+      "sub_code": "isv.business-failed:506",
+      "sub_msg": "无效商品id"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/isv/createProductFromSupplyPlatform?app_key=your_appkey_here&method=product.isv.createProductFromSupplyPlatform&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:501",
+      "sub_msg": "系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/4665",
+  "updatedAt": "2023-09-07",
+  "_file_stem": "product-product-isv-createProductFromSupplyPlatform"
+}

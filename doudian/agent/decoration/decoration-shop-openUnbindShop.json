@@ -1,0 +1,87 @@
+{
+  "id": "doudian.decoration.shop.openUnbindShop",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.openUnbindShop",
+  "description": "店铺装修-解绑门店",
+  "method": "GET",
+  "path": "/shop/openUnbindShop",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "tmp_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "需要解绑的页面id",
+      "example": "7332399246898888986",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "需要解绑的店铺id。如果选择全部清空，会删除页面下所有门店，不需要传这个。",
+      "example": "[\"155753860\"]",
+      "_depth": 0
+    },
+    {
+      "name": "is_batch_del",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否全部清空",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / RPC调用失败（sub_code: isp.service-error:10004）",
+      "action": "根据报错内容排查",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40002:系统开小差了，请稍后重试哟（sub_code: isv.business-failed:40002）",
+      "action": "根据报错日志排查",
+      "sub_code": "isv.business-failed:40002",
+      "sub_msg": "40002:系统开小差了，请稍后重试哟"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/openUnbindShop?app_key=your_appkey_here&method=shop.openUnbindShop&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6302",
+  "updatedAt": "2026-04-02",
+  "_file_stem": "decoration-shop-openUnbindShop"
+}

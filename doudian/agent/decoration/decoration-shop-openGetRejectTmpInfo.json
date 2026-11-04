@@ -1,0 +1,67 @@
+{
+  "id": "doudian.decoration.shop.openGetRejectTmpInfo",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.openGetRejectTmpInfo",
+  "description": "店铺装修-审核失败提示",
+  "method": "GET",
+  "path": "/shop/openGetRejectTmpInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "info_list",
+      "type": "array",
+      "description": "返回参数",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / RPC调用失败（sub_code: isp.service-error:10004）",
+      "action": "根据报错内容排查",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/openGetRejectTmpInfo?app_key=your_appkey_here&method=shop.openGetRejectTmpInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "info_list": [
+          {
+            "tmp_id": "7332399246898888986",
+            "tmp_name": "数据迁移回归数据1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "RPC调用失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6301",
+  "updatedAt": "2026-04-02",
+  "_file_stem": "decoration-shop-openGetRejectTmpInfo"
+}

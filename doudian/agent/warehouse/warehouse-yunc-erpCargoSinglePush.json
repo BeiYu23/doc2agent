@@ -1,0 +1,838 @@
+{
+  "id": "doudian.warehouse.yunc.erpCargoSinglePush",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.erpCargoSinglePush",
+  "description": "货品推送接口-ERP(单个)",
+  "method": "GET",
+  "path": "/yunc/erpCargoSinglePush",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "抖店店铺id",
+      "example": "1001",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品名称",
+      "example": "iphone6s",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品描述",
+      "example": "这是一段描述",
+      "_depth": 0
+    },
+    {
+      "name": "english_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品英文名",
+      "example": "iphone6s",
+      "_depth": 0
+    },
+    {
+      "name": "stock_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "计量单位, 枚举值: 台, 双, 本, 支, 片, 个, 套, 件, 副, 束, 盒",
+      "example": "件",
+      "_depth": 0
+    },
+    {
+      "name": "length_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "长度单位, 枚举值: mm, cm, m, km. 最小精度为整数位mm",
+      "example": "厘米",
+      "_depth": 0
+    },
+    {
+      "name": "length",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "长",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "width",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "宽",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "height",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "高",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "weight_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "重量单位, 枚举值: g, kg. 默认为g. 最小精度为整数位g",
+      "example": "千克",
+      "_depth": 0
+    },
+    {
+      "name": "gross_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "毛重",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "net_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "净重",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "currency_unit",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货币单位, 枚举值: USD, CNY, EUR, GBP",
+      "example": "元",
+      "_depth": 0
+    },
+    {
+      "name": "market_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "市场价(吊牌价)",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "supply_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "采购价",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "retail_price",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "零售价",
+      "example": "10.01",
+      "_depth": 0
+    },
+    {
+      "name": "is_embargo",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否航空禁运品；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_fragile",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否易碎品；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_large",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否大件；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_precious",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否贵重品；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_need_valid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否效期管理；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_liquid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否液体",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_hazardous",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否危险品",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "period_of_validity",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "有效期；以天为单位",
+      "example": "90",
+      "_depth": 0
+    },
+    {
+      "name": "period_of_forbid_sale",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "禁售期；以天为单位. 按有效期计算, 计算规则以平台为准",
+      "example": "90",
+      "_depth": 0
+    },
+    {
+      "name": "period_of_forbid_take",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "禁收期；以天为单位. 按有效期计算, 计算规则以平台为准",
+      "example": "90",
+      "_depth": 0
+    },
+    {
+      "name": "period_of_warning",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "临期预警天数；以天为单位",
+      "example": "90",
+      "_depth": 0
+    },
+    {
+      "name": "is_need_batch",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否批次管理；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "batch_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "批次类型（1：生产批次/2：采购批次/3：收货批次）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "is_must_batch",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否强批次管理；0否1是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "accessory_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配件信息，字符串展示, 如\"电源 * 1, 数据线 * 2\"",
+      "example": "电源 * 1, 数据线 * 2",
+      "_depth": 0
+    },
+    {
+      "name": "origin_address",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产地，一般给国家-省两级信息即可",
+      "example": "中国浙江省",
+      "_depth": 0
+    },
+    {
+      "name": "tax_rate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "增值税率",
+      "example": "10%",
+      "_depth": 0
+    },
+    {
+      "name": "delivery_temp",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运输温度",
+      "example": "32.5",
+      "_depth": 0
+    },
+    {
+      "name": "storage_temp",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "存储温度",
+      "example": "32.5",
+      "_depth": 0
+    },
+    {
+      "name": "brand_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌编码",
+      "example": "1001",
+      "_depth": 0
+    },
+    {
+      "name": "brand_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌名称",
+      "example": "苹果",
+      "_depth": 0
+    },
+    {
+      "name": "picture",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品图片",
+      "example": "http://alicdn.xx.com/1.jgp",
+      "_depth": 0
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商家ERP的sku_id",
+      "example": "x01",
+      "_depth": 0
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "叶子类目id",
+      "example": "1001",
+      "_depth": 0
+    },
+    {
+      "name": "category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "叶子类目名称",
+      "example": "电脑",
+      "_depth": 0
+    },
+    {
+      "name": "barcode",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "条形码",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "props_extends",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品扩展描述属性",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prop_val_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "1001",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性keyId",
+      "example": "1001",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性key",
+      "example": "材质",
+      "_depth": 1
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "属性值",
+      "example": "木板",
+      "_depth": 1
+    },
+    {
+      "name": "sku_props",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "货品销售规格",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "销售规格keyId",
+      "example": "101",
+      "_depth": 1
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售规格值",
+      "example": "白色",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "销售规格名称",
+      "example": "颜色",
+      "_depth": 1
+    },
+    {
+      "name": "prop_val_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "销售规格值id",
+      "example": "101",
+      "_depth": 1
+    },
+    {
+      "name": "category_detail",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "类目详情",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "third_cid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "三级类目id",
+      "example": "111",
+      "_depth": 1
+    },
+    {
+      "name": "first_cname",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级类目名称",
+      "example": "数码/3c",
+      "_depth": 1
+    },
+    {
+      "name": "fourth_cname",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "四级类目名称",
+      "example": "苹果手机",
+      "_depth": 1
+    },
+    {
+      "name": "second_cid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "二级类目id",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "first_cid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "一级类目id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "third_cname",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三级类目名称",
+      "example": "智能手机",
+      "_depth": 1
+    },
+    {
+      "name": "second_cname",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二级类目名称",
+      "example": "手持设备",
+      "_depth": 1
+    },
+    {
+      "name": "fourth_cid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "四级类目id",
+      "example": "1111",
+      "_depth": 1
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "货品状态：1正常 -1停用",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "仓库编码，2023.6.26日后，请默认传空串，平台会全自动推品到订购的所有仓，无需制定具体某一个仓了",
+      "example": "\"\"",
+      "_depth": 0
+    },
+    {
+      "name": "relation_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商货关系列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP侧skuID",
+      "example": "ABCD",
+      "_depth": 1
+    },
+    {
+      "name": "package_erp_sku_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "组合品sku列表，is_package_erp_sku为0，则无本结构",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sub_erp_sku_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "组套关系",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "spec_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "抖店商品SKU",
+      "example": "",
+      "_depth": 3
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "抖店店铺id",
+      "example": "123456",
+      "_depth": 4
+    },
+    {
+      "name": "spec_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖店商品SKUID",
+      "example": "14213294743",
+      "_depth": 4
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音侧商品Id",
+      "example": "62313294743",
+      "_depth": 4
+    },
+    {
+      "name": "quantity",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "数量",
+      "example": "5",
+      "_depth": 3
+    },
+    {
+      "name": "erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "对应ERP子品SKUID",
+      "example": "24186443",
+      "_depth": 3
+    },
+    {
+      "name": "package_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音组合商品Id",
+      "example": "24186443",
+      "_depth": 2
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "抖店店铺id",
+      "example": "123456",
+      "_depth": 2
+    },
+    {
+      "name": "package_erp_sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "ERP组合商品ID",
+      "example": "24186443",
+      "_depth": 2
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音侧商品Id",
+      "example": "62313294743",
+      "_depth": 2
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品编码",
+      "example": "7643824637246",
+      "_depth": 1
+    },
+    {
+      "name": "spec_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "对应抖店商品SKUID, 货品SKUID是否属于组合品为0时，此结构体才有值",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音侧商品Id",
+      "example": "62313294743",
+      "_depth": 2
+    },
+    {
+      "name": "spec_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖店商品SKUID",
+      "example": "14213294743",
+      "_depth": 2
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "抖店店铺id",
+      "example": "123456",
+      "_depth": 2
+    },
+    {
+      "name": "is_package_erp_sku",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品SKUID是否属于组合品： 0：单品（非组合品，也不从属组合品），1:组合品，2：从属某个组合品",
+      "example": "0",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "erp_sku_id",
+      "type": "string",
+      "description": "erp的sku_id",
+      "example": "1001"
+    },
+    {
+      "name": "cargo_code",
+      "type": "string",
+      "description": "字节平台货品编码",
+      "example": "X01"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务异常（sub_code: isp.service-error:1000）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:3000）",
+      "action": "请根据报错修复参数",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 并发更新失败（sub_code: isv.business-failed:3202）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:3202",
+      "sub_msg": "并发更新失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 并发更新失败（sub_code: isv.business-failed:3201）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:3201",
+      "sub_msg": "并发更新失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/erpCargoSinglePush?app_key=your_appkey_here&method=yunc.erpCargoSinglePush&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "cargo_code": "X01",
+        "erp_sku_id": "1001"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "服务异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/932",
+  "updatedAt": "2025-11-28",
+  "_file_stem": "warehouse-yunc-erpCargoSinglePush"
+}

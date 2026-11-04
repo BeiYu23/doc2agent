@@ -1,0 +1,111 @@
+{
+  "id": "doudian.warehouse.yunc.fetchSortingInstruction",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.fetchSortingInstruction",
+  "description": "获取分拣指令",
+  "method": "GET",
+  "path": "/yunc/fetchSortingInstruction",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 云仓"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "scene_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "场景名称: 快递分拣:`express_sorting`; 详细枚举值请联系仓储团队获取",
+      "example": "express_sorting",
+      "_depth": 0
+    },
+    {
+      "name": "hu_ident_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作对象识别码, 如 面单号, 容器条码等",
+      "example": "SF609790790",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "重量(单位g)",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "labor_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "劳动力ID, 对于设备来说是就是deviceId",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "extend",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息",
+      "example": "",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "sorting_instruction",
+      "type": "object",
+      "description": "分拣指令",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无法识别的面单号（sub_code: isv.business-failed:3000）",
+      "action": "无法识别的面单号",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "无法识别的面单号"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/fetchSortingInstruction?app_key=your_appkey_here&method=yunc.fetchSortingInstruction&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "sorting_instruction": {
+          "extend": {},
+          "sorting_grid_no": "A"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "无法识别的面单号"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2669",
+  "updatedAt": "2022-11-08",
+  "_file_stem": "warehouse-yunc-fetchSortingInstruction"
+}

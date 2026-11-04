@@ -1,0 +1,135 @@
+{
+  "id": "doudian.decoration.shop.marketCategoryOpsProd",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.marketCategoryOpsProd",
+  "description": "基于商品维度更新分类页绑定关系",
+  "method": "GET",
+  "path": "/shop/marketCategoryOpsProd",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "需要更新的item、分类关系",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "item_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品ID",
+      "example": "7337543193975587098",
+      "_depth": 1
+    },
+    {
+      "name": "item_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "类型枚举，表示item_id归属类型\n1：商品",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "category_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "店铺分类页生效的叶子类目ID，支持一二级分类。\n如果一级分类下面存在子分类，则绑定失败。",
+      "example": "[\"7337543193975587098\",\"7337543193975587091\",\"7337543193975587092\"]",
+      "_depth": 1
+    },
+    {
+      "name": "ops_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "操作类型\n1：添加\n2：删除\n3：移动(先删除原分类，再添加到新分类)",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "tmp_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页面ID，建议指定对应要更新的页面ID",
+      "example": "7337543193975587098",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "item_tips",
+      "type": "string",
+      "description": "商品提示信息",
+      "example": "{\"7337543193975587098\":\"商品信息不存在\"}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 更新类目校验失败（sub_code: isv.parameter-invalid:23002）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:23002",
+      "sub_msg": "更新类目校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 更新类目失败（sub_code: isv.business-failed:23003）",
+      "action": "稍后重试，或减少处理量",
+      "sub_code": "isv.business-failed:23003",
+      "sub_msg": "更新类目失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20110:当前页面已删除（sub_code: isv.business-failed:20110）",
+      "action": "20110:当前页面已删除",
+      "sub_code": "isv.business-failed:20110",
+      "sub_msg": "20110:当前页面已删除"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40016:网络异常，请稍后重试（sub_code: isv.business-failed:40016）",
+      "action": "40016:网络异常，请稍后重试",
+      "sub_code": "isv.business-failed:40016",
+      "sub_msg": "40016:网络异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:23002",
+      "sub_msg": "更新类目校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6242",
+  "updatedAt": "2024-05-06",
+  "_file_stem": "decoration-shop-marketCategoryOpsProd"
+}

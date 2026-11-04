@@ -1,0 +1,66 @@
+{
+  "id": "doudian.btas-inspect.btas.listBrand",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.listBrand",
+  "description": "获取可图片鉴定的品牌",
+  "method": "GET",
+  "path": "/btas/listBrand",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "brand_list",
+      "type": "array",
+      "description": "品牌列表",
+      "example": "-"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/btas/listBrand?app_key=your_appkey_here&method=btas.listBrand&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "brand_list": [
+          {
+            "brand_category_list": [
+              {
+                "id": "1",
+                "name": "鞋靴"
+              }
+            ],
+            "brand_id": "1",
+            "brand_name": "\"aj\""
+          }
+        ]
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/1865",
+  "updatedAt": "2021-06-07",
+  "_file_stem": "btas-inspect-btas-listBrand"
+}

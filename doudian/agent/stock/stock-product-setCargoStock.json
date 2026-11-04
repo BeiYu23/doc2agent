@@ -1,0 +1,108 @@
+{
+  "id": "doudian.stock.product.setCargoStock",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "product.setCargoStock",
+  "description": "设置货品库存",
+  "method": "GET",
+  "path": "/product/setCargoStock",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "items",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "设置的库存明细",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "stock_num",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "修改的库存数量 负数为减库存 正数为加库存",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "cargo_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品ID",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "warehouse_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓编码",
+      "example": "ABC",
+      "_depth": 1
+    },
+    {
+      "name": "token",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作号 用于幂等",
+      "example": "abcd",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "results",
+      "type": "array",
+      "description": "操作结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/setCargoStock?app_key=your_appkey_here&method=product.setCargoStock&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "results": [
+          {
+            "base_resp": {
+              "status_code": "20001",
+              "status_message": "系统错误"
+            },
+            "cargo_id": "123",
+            "warehouse_code": "ABC"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/8417",
+  "updatedAt": "2026-07-16",
+  "_file_stem": "stock-product-setCargoStock"
+}

@@ -1,0 +1,153 @@
+{
+  "id": "doudian.alliance.buyin.shopPidMemberCreate",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.shopPidMemberCreate",
+  "description": "店铺会员绑定渠道关系创建",
+  "method": "GET",
+  "path": "/buyin/shopPidMemberCreate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V5.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "人店一体达人PID",
+      "example": "dy_123_345_456",
+      "_depth": 0
+    },
+    {
+      "name": "member_available_time",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "会员绑定有效天数，至少30天",
+      "example": "365",
+      "_depth": 0
+    },
+    {
+      "name": "external_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义字段，只允许 数字、字母和_，限制长度为40",
+      "example": "external_info_test",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "qrcode",
+      "type": "string",
+      "description": "入会二维码",
+      "example": "https://p26.douyinpic.com/img/aweme-qrcode/eZlDuG70339820345906863~c5_360x360.webp?from=1723184"
+    },
+    {
+      "name": "member_join_url",
+      "type": "string",
+      "description": "入会跳转URL",
+      "example": "https://aweme.snssdk.com/ecom_member/facade_douyin/v1/join_member_link/?sec_shop_uid=MS4wLjABAAAAgRxF3bIh9bhDhDjEeQBkUQpyn-zXyLjZf6bt5y8UW-0Kc8yuRezI&page_from=dy_lm&pid=dy_123_345_456&pid_extra=eyJtZW1iZXJfYXZxhYmxlX3RpbWUiOjfQ&pid_sign=b16b975bab337c552651e35ff97c7b"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:4097）",
+      "action": "检查参数是否正确",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 会员绑定有效期必须大于30天（sub_code: isv.parameter-invalid:4103）",
+      "action": "检查参数是否正确",
+      "sub_code": "isv.parameter-invalid:4103",
+      "sub_msg": "会员绑定有效期必须大于30天"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前机构或商家尚未开通分销权限（sub_code: isv.business-failed:4105）",
+      "action": "当前机构或商家尚未开通分销权限",
+      "sub_code": "isv.business-failed:4105",
+      "sub_msg": "当前机构或商家尚未开通分销权限"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前商家暂未开通会员（sub_code: isv.business-failed:4106）",
+      "action": "当前商家暂未开通会员",
+      "sub_code": "isv.business-failed:4106",
+      "sub_msg": "当前商家暂未开通会员"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未知错误（sub_code: isv.business-failed:255）",
+      "action": "未知错误",
+      "sub_code": "isv.business-failed:255",
+      "sub_msg": "未知错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前商家未绑定人店一体官方账号（sub_code: isv.business-failed:4107）",
+      "action": "当前商家未绑定人店一体官方账号",
+      "sub_code": "isv.business-failed:4107",
+      "sub_msg": "当前商家未绑定人店一体官方账号"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 当前pid非此店铺绑定官方达人所创建（sub_code: isv.parameter-invalid:4108）",
+      "action": "当前pid非此店铺绑定官方达人所创建",
+      "sub_code": "isv.parameter-invalid:4108",
+      "sub_msg": "当前pid非此店铺绑定官方达人所创建"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效 PID（sub_code: isv.parameter-invalid:4102）",
+      "action": "参数校验失败：无效 PID",
+      "sub_code": "isv.parameter-invalid:4102",
+      "sub_msg": "无效 PID"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效 external_info（sub_code: isv.parameter-invalid:4101）",
+      "action": "参数校验失败：无效 external_info",
+      "sub_code": "isv.parameter-invalid:4101",
+      "sub_msg": "无效 external_info"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/shopPidMemberCreate?app_key=your_appkey_here&method=buyin.shopPidMemberCreate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "member_join_url": "https://aweme.snssdk.com/ecom_member/facade_douyin/v1/join_member_link/?sec_shop_uid=MS4wLjABAAAAgRxF3bIh9bhDhDjEeQBkUQpyn-zXyLjZf6bt5y8UW-0Kc8yuRezI&page_from=dy_lm&pid=dy_123_345_456&pid_extra=eyJtZW1iZXJfYXZxhYmxlX3RpbWUiOjfQ&pid_sign=b16b975bab337c552651e35ff97c7b",
+        "qrcode": "https://p26.douyinpic.com/img/aweme-qrcode/eZlDuG70339820345906863~c5_360x360.webp?from=1723184"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1493",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-shopPidMemberCreate"
+}

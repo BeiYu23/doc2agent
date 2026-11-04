@@ -1,0 +1,128 @@
+{
+  "id": "doudian.install.install.store.providerStoreAPIModifyAbilities",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.providerStoreAPIModifyAbilities",
+  "description": "行业服务商门店更新门店服务能力",
+  "method": "GET",
+  "path": "/install/store/providerStoreAPIModifyAbilities",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "op_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "操作类型:0：覆盖式添加。1：增加。2：删除",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店ID",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "abilities",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店能力列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "ability_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "能力属性id，注意，这里是key结合的哈",
+      "example": "34226_304099_7696",
+      "_depth": 1
+    },
+    {
+      "name": "ability_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "能力属性名称",
+      "example": "安装刹车片(不含解码)_黄色",
+      "_depth": 1
+    },
+    {
+      "name": "category_channel",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目渠道",
+      "example": "0表示旧类目体系能力\n1表示新类目体系能力",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数不合法（sub_code: isv.business-failed:-3）",
+      "action": "检查参数重试",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "参数不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店状态错误，当前状态不可被操作（sub_code: isv.business-failed:-118）",
+      "action": "检查门店状态",
+      "sub_code": "isv.business-failed:-118",
+      "sub_msg": "门店状态错误，当前状态不可被操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取服务商门店列表失败（sub_code: isv.business-failed:-102）",
+      "action": "重试解决",
+      "sub_code": "isv.business-failed:-102",
+      "sub_msg": "获取服务商门店列表失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务商能力模板获取错误（sub_code: isv.business-failed:-119）",
+      "action": "重试解决",
+      "sub_code": "isv.business-failed:-119",
+      "sub_msg": "服务商能力模板获取错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.providerStoreAPIModifyAbilities&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-3",
+      "sub_msg": "参数不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7682",
+  "updatedAt": "2026-02-12",
+  "_file_stem": "install-install-store-providerStoreAPIModifyAbilities"
+}

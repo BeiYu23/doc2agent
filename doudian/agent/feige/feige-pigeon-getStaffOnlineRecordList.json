@@ -1,0 +1,104 @@
+{
+  "id": "doudian.feige.pigeon.getStaffOnlineRecordList",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.getStaffOnlineRecordList",
+  "description": "查询客服在线日志列表",
+  "method": "GET",
+  "path": "/pigeon/getStaffOnlineRecordList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "date",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "查询哪一天的数据",
+      "example": "20231223",
+      "_depth": 0
+    },
+    {
+      "name": "staff_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "客服id",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "platform",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "1 APP 2 PC 3 PC+APP",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "staff_online_records",
+      "type": "array",
+      "description": "结果列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-1）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 最多只能查询35天的数据（sub_code: isv.business-failed:2）",
+      "action": "最多只能查询35天的数据",
+      "sub_code": "isv.business-failed:2",
+      "sub_msg": "最多只能查询35天的数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3:db错误（sub_code: isv.business-failed:3）",
+      "action": "3:db错误",
+      "sub_code": "isv.business-failed:3",
+      "sub_msg": "3:db错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comyunc/wms/inbound/create?app_key=your_appkey_here&method=yunc.wms.inbound.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "{}"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/5343",
+  "updatedAt": "2023-11-10",
+  "_file_stem": "feige-pigeon-getStaffOnlineRecordList"
+}

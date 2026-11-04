@@ -1,0 +1,139 @@
+{
+  "id": "doudian.hospital.medicine.doctorAcceptConsult",
+  "platform": "doudian",
+  "group": "hospital",
+  "name": "medicine.doctorAcceptConsult",
+  "description": "医生接诊",
+  "method": "GET",
+  "path": "/medicine/doctorAcceptConsult",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 互联网医院（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "consult_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "问诊单id",
+      "example": "6917546006426224265",
+      "_depth": 0
+    },
+    {
+      "name": "doctor_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "医生名称",
+      "example": "测试医生",
+      "_depth": 0
+    },
+    {
+      "name": "img",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "医生头像",
+      "example": "https://p6-open-static.ecombdimg.com/tos-cn-i-o8j9kkde8i/86976da6c8034393a9074b21d465b2d6~tplv-o8j9kkde8i-1.image",
+      "_depth": 0
+    },
+    {
+      "name": "hospital_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "互联网医院名称（需要和服务市场注册的名称保持一致）",
+      "example": "测试医院",
+      "_depth": 0
+    },
+    {
+      "name": "doc_practice_cert",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "医生执业证编号",
+      "example": "1231231233",
+      "_depth": 0
+    },
+    {
+      "name": "dept",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "科室",
+      "example": "妇科",
+      "_depth": 0
+    },
+    {
+      "name": "level",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "医生级别",
+      "example": "主治医生",
+      "_depth": 0
+    },
+    {
+      "name": "profile",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "医生简介",
+      "example": "我是xx医院xx科室医生",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -1:系统错误，请稍后重试（sub_code: isv.business-failed:-1）",
+      "action": "排查",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:系统错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100001:问诊当前状态[Cancel]不支持更新.（sub_code: isv.business-failed:500014）",
+      "action": "排查",
+      "sub_code": "isv.business-failed:500014",
+      "sub_msg": "100001:问诊当前状态[Cancel]不支持更新."
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500011:问诊信息不存在（sub_code: isv.business-failed:500011）",
+      "action": "排查",
+      "sub_code": "isv.business-failed:500011",
+      "sub_msg": "500011:问诊信息不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/medicine/doctorAcceptConsult?app_key=your_appkey_here&method=medicine.doctorAcceptConsult&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "-1:系统错误，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1451/5899",
+  "updatedAt": "2024-05-06",
+  "_file_stem": "hospital-medicine-doctorAcceptConsult"
+}

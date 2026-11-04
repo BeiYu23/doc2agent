@@ -1,0 +1,261 @@
+{
+  "id": "doudian.alliance.buyin.colonelActivityDetail",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.colonelActivityDetail",
+  "description": "获取团长活动详情",
+  "method": "GET",
+  "path": "/buyin/colonelActivityDetail",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "活动ID",
+      "example": "54321",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "institution_id",
+      "type": "mixed",
+      "description": "机构ID",
+      "example": "794156847175"
+    },
+    {
+      "name": "activity_id",
+      "type": "mixed",
+      "description": "活动ID",
+      "example": "54321"
+    },
+    {
+      "name": "is_new_shop",
+      "type": "boolean",
+      "description": "报名门槛是否限制新手店铺",
+      "example": "true"
+    },
+    {
+      "name": "shop_type",
+      "type": "array",
+      "description": "报名门槛。0：普通店；1：专营店；2：旗舰店；3：专卖店；4：商场店；5:专卖型旗舰店；6:官方旗舰店；7:企业店；8:个体店",
+      "example": "0"
+    },
+    {
+      "name": "activity_name",
+      "type": "string",
+      "description": "活动名称",
+      "example": "一个活动"
+    },
+    {
+      "name": "activity_desc",
+      "type": "string",
+      "description": "活动描述",
+      "example": "一个活动"
+    },
+    {
+      "name": "apply_start_time",
+      "type": "string",
+      "description": "活动报名开始时间",
+      "example": "2022-01-10"
+    },
+    {
+      "name": "apply_end_time",
+      "type": "string",
+      "description": "活动报名结束时间",
+      "example": "2022-02-20"
+    },
+    {
+      "name": "commission_rate",
+      "type": "string",
+      "description": "活动要求的最低佣金率",
+      "example": "500"
+    },
+    {
+      "name": "service_rate",
+      "type": "string",
+      "description": "活动要求的最低服务费率",
+      "example": "1000"
+    },
+    {
+      "name": "wechat_id",
+      "type": "string",
+      "description": "微信号（返回微信号密文，需通过 https://op.jinritemai.com/docs/api-docs/61/2829 解密）",
+      "example": "6UNGOWt5MkBIgEDQ1I31w=="
+    },
+    {
+      "name": "phone_num",
+      "type": "string",
+      "description": "手机号（返回联系电话密文，需通过 https://op.jinritemai.com/docs/api-docs/61/2829 解密）",
+      "example": "6UNGOWt5MkBIgEDQ1I31w=="
+    },
+    {
+      "name": "estimated_single_sale",
+      "type": "string",
+      "description": "预估销售额",
+      "example": "1000"
+    },
+    {
+      "name": "activity_type",
+      "type": "mixed",
+      "description": "活动类型。1： 全部商家； 2： 指定商家",
+      "example": "1"
+    },
+    {
+      "name": "specified_shop_ids",
+      "type": "string",
+      "description": "指定商家ID",
+      "example": "0"
+    },
+    {
+      "name": "categories",
+      "type": "array",
+      "description": "招商类目",
+      "example": "1"
+    },
+    {
+      "name": "shop_score",
+      "type": "mixed",
+      "description": "报名门槛-店铺体验分选项。0表示不限",
+      "example": "0"
+    },
+    {
+      "name": "min_promotion_days",
+      "type": "mixed",
+      "description": "最短推广周期，0：不限；>0:具体天数；现在只有0、15、30、60、90",
+      "example": "15"
+    },
+    {
+      "name": "threshold_cross_border",
+      "type": "mixed",
+      "description": "跨境店铺 可/不可 报名（0:跨境店铺可报名，1:跨境店铺不可报名）",
+      "example": "0"
+    },
+    {
+      "name": "has_threshold",
+      "type": "boolean",
+      "description": "是否有报名门槛",
+      "example": "true"
+    },
+    {
+      "name": "colonel_buyin_id",
+      "type": "mixed",
+      "description": "团长百应ID",
+      "example": "1467231562381423"
+    },
+    {
+      "name": "months_of_protection",
+      "type": "mixed",
+      "description": "团长活动设置的限时独家期限 0-6个月, 单位：月",
+      "example": "1"
+    },
+    {
+      "name": "colonel_name",
+      "type": "string",
+      "description": "团长名称",
+      "example": "一个团长"
+    },
+    {
+      "name": "cos_limit_type",
+      "type": "mixed",
+      "description": "佣金限制类型1:不限制 2:仅双佣金 3:仅固定佣金",
+      "example": "1"
+    },
+    {
+      "name": "ad_commission_rate",
+      "type": "string",
+      "description": "最低双佣金投放期商品佣金率",
+      "example": "1000"
+    },
+    {
+      "name": "ad_service_rate",
+      "type": "string",
+      "description": "最低双佣金投放期服务费率",
+      "example": "500"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动不存在（sub_code: isv.business-failed:500）",
+      "action": "活动不存在",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "活动不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/colonelActivityDetail?app_key=your_appkey_here&method=buyin.colonelActivityDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "activity_desc": "一个活动",
+        "activity_id": "54321",
+        "activity_name": "一个活动",
+        "activity_type": "1",
+        "ad_commission_rate": "1000",
+        "ad_service_rate": "500",
+        "apply_end_time": "2022-02-20",
+        "apply_start_time": "2022-01-10",
+        "categories": "1",
+        "colonel_buyin_id": "1467231562381423",
+        "colonel_name": "一个团长",
+        "commission_rate": "500",
+        "cos_limit_type": "1",
+        "estimated_single_sale": "1000",
+        "has_threshold": "true",
+        "institution_id": "794156847175",
+        "is_new_shop": "true",
+        "min_promotion_days": "15",
+        "months_of_protection": "1",
+        "phone_num": "6UNGOWt5MkBIgEDQ1I31w==",
+        "service_rate": "1000",
+        "shop_score": "0",
+        "shop_type": "0",
+        "specified_shop_ids": "0",
+        "threshold_cross_border": "0",
+        "wechat_id": "6UNGOWt5MkBIgEDQ1I31w=="
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "活动不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1670",
+  "updatedAt": "2026-04-21",
+  "_file_stem": "alliance-buyin-colonelActivityDetail"
+}

@@ -1,0 +1,238 @@
+{
+  "id": "doudian.warehouse.instantShopping.updateStockUpInboundOrder",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "instantShopping.updateStockUpInboundOrder",
+  "description": "更新备货入库子单信息",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "stock_up_sub_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备货入库子单id",
+      "example": "736478236482341",
+      "_depth": 0
+    },
+    {
+      "name": "stock_up_sub_order_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "入库单当前状态",
+      "example": "140",
+      "_depth": 0
+    },
+    {
+      "name": "receive_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实收数量  (当140情况下必填)",
+      "example": "8",
+      "_depth": 0
+    },
+    {
+      "name": "total_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "残次+正品总和 (当200情况下必填)",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "shelf_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "上架数量 (当200情况下必填)",
+      "example": "8",
+      "_depth": 0
+    },
+    {
+      "name": "defective_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "残次数量 (当200情况下必填)",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注信息",
+      "_depth": 0
+    },
+    {
+      "name": "receive_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "入库时间，秒级时间戳(当200情况下必填)",
+      "example": "1722231519",
+      "_depth": 0
+    },
+    {
+      "name": "production_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "生产日期，秒级时间戳(当200情况下必填)",
+      "example": "1722231519",
+      "_depth": 0
+    },
+    {
+      "name": "expire_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "失效日期，秒级时间戳(当200情况下必填)",
+      "example": "1722231519",
+      "_depth": 0
+    },
+    {
+      "name": "operator_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人id",
+      "example": "1212512512",
+      "_depth": 0
+    },
+    {
+      "name": "operator_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "操作人姓名",
+      "example": "xyza",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态更新时间",
+      "example": "1722231519",
+      "_depth": 0
+    },
+    {
+      "name": "charging_unit",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "计费单元",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "throwing_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "该子单实际入库抛重（g）；无则传0",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "charging_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "实际参与计费字段（g）；",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "total_volume",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "该子单实际入库总体积（CM³）；可根据业务精度需求传整数或带小数。",
+      "example": "123",
+      "_depth": 1
+    },
+    {
+      "name": "total_box",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "该子单实际入库总箱数，整数",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "total_weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "该子单实际入库总重量（g）；",
+      "example": "123",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参错误（sub_code: isv.parameter-invalid:40001）",
+      "action": "研发盘查对应单据等请求是否异常",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "入参错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40010:（sub_code: isv.business-failed:40010）",
+      "action": "40010:",
+      "sub_code": "isv.business-failed:40010",
+      "sub_msg": "40010:"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40006:no permission（sub_code: isv.business-failed:40006）",
+      "action": "40006:no permission",
+      "sub_code": "isv.business-failed:40006",
+      "sub_msg": "40006:no permission"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.updateStockUpInboundOrder&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "入参错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/6754",
+  "updatedAt": "2025-01-13",
+  "_file_stem": "warehouse-instantShopping-updateStockUpInboundOrder"
+}

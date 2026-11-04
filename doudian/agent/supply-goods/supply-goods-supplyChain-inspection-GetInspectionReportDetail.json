@@ -1,0 +1,137 @@
+{
+  "id": "doudian.supply-goods.supplyChain.inspection.GetInspectionReportDetail",
+  "platform": "doudian",
+  "group": "supply-goods",
+  "name": "supplyChain.inspection.GetInspectionReportDetail",
+  "description": "查询验机报告详情",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销货品管理（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inspection_report_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "报告id",
+      "example": "111111111",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回值",
+      "example": ""
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "0",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "运行信息",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.inspection.GetInspectionReportDetail&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "inspection_report": {
+            "base_info": {
+              "brand_id": "1121",
+              "brand_name": "品牌名",
+              "category_id": "1000007628",
+              "category_name": "类目名",
+              "collection_code": "标准集编码",
+              "cover_image": {
+                "appearance_image_type": "11",
+                "url": "图片 URL"
+              },
+              "create_time": "11111",
+              "fineness": "成色",
+              "imei": "IMEI",
+              "inspection_report_id": "验机报告 ID",
+              "model_id": "1112",
+              "model_name": "型号名",
+              "qc_code": "质检中心的验机报告编号",
+              "reject_reason": "驳回原因",
+              "reject_time": "111111",
+              "remark": "备注",
+              "status": "111"
+            },
+            "flow_list": [
+              {
+                "flow_id": "质检流程的 ID",
+                "flow_name": "质检流程的名称",
+                "item_list": [
+                  {
+                    "item_code": "标准项code",
+                    "item_name": "标准项名称",
+                    "values": "标准项值"
+                  }
+                ]
+              }
+            ],
+            "image_info": {
+              "appearance_images": [
+                {
+                  "appearance_image_type": "外观图片类别",
+                  "url": "图片 URL"
+                }
+              ],
+              "defect_images": [
+                {
+                  "appearance_image_type": "1",
+                  "url": "图片 URL"
+                }
+              ]
+            },
+            "reject_detail_list": [
+              {
+                "appearance_image_type": "1",
+                "reject_content_index": "0",
+                "reject_content_type": "1",
+                "reject_reason": "驳回原因"
+              }
+            ]
+          }
+        },
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1523/8264",
+  "updatedAt": "2026-05-06",
+  "_file_stem": "supply-goods-supplyChain-inspection-GetInspectionReportDetail"
+}

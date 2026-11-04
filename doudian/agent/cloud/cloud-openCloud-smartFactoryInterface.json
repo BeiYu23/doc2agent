@@ -1,0 +1,109 @@
+{
+  "id": "doudian.cloud.openCloud.smartFactoryInterface",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.smartFactoryInterface",
+  "description": "智造工场数据开放接口",
+  "method": "GET",
+  "path": "/openCloud/smartFactoryInterface",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "api_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "智造工场开放API名称",
+      "example": "demo",
+      "_depth": 0
+    },
+    {
+      "name": "body",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "智造工场开放API请求体",
+      "example": "{\n  \"pageNum\": 1,\n  \"pageSize\": 1\n}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "string",
+      "description": "智造工场开放API响应结果",
+      "example": "{\\\"Meta\\\":[{\\\"Name\\\":\\\"shop_id\\\",\\\"Type\\\":\\\"int\\\",\\\"Comment\\\":\\\"\\\"}],\\\"Data\\\":[]}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求api不存在（sub_code: isv.business-failed:63000700）",
+      "action": "开发者确认apiName是否填写正确",
+      "sub_code": "isv.business-failed:63000700",
+      "sub_msg": "请求api不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未知错误，请联系客服（sub_code: isv.business-failed:-1）",
+      "action": "未知错误，请联系客服",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "未知错误，请联系客服"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 报表中的API未上线，请先上线API（sub_code: isv.business-failed:63000720）",
+      "action": "报表中的API未上线，请先上线API",
+      "sub_code": "isv.business-failed:63000720",
+      "sub_msg": "报表中的API未上线，请先上线API"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / volc inner 调用开放接口失败（sub_code: isv.business-failed:63000704）",
+      "action": "volc inner 调用开放接口失败",
+      "sub_code": "isv.business-failed:63000704",
+      "sub_msg": "volc inner 调用开放接口失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000199:未知错误，请联系客服（sub_code: isv.business-failed:10000199）",
+      "action": "10000199:未知错误，请联系客服",
+      "sub_code": "isv.business-failed:10000199",
+      "sub_msg": "10000199:未知错误，请联系客服"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/smartFactoryInterface?app_key=your_appkey_here&method=openCloud.smartFactoryInterface&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": "{\\\"Meta\\\":[{\\\"Name\\\":\\\"shop_id\\\",\\\"Type\\\":\\\"int\\\",\\\"Comment\\\":\\\"\\\"}],\\\"Data\\\":[]}"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:63000700",
+      "sub_msg": "请求api不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/2907",
+  "updatedAt": "2025-06-30",
+  "_file_stem": "cloud-openCloud-smartFactoryInterface"
+}

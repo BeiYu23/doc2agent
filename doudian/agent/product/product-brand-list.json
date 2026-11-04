@@ -1,0 +1,212 @@
+{
+  "id": "doudian.product.brand.list",
+  "platform": "doudian",
+  "group": "product",
+  "name": "brand.list",
+  "description": "根据类目id获取可选品牌",
+  "method": "GET",
+  "path": "/brand/list",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V5.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "categories",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "（已停止使用）类目列表",
+      "example": "[123]",
+      "_depth": 0
+    },
+    {
+      "name": "offset",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "（已停止使用）起始位",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "（已停止使用）单次最大条数",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "sort",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "（已停止使用）排序顺序，默认为倒排 0:降序, 1:升序",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "（已停止使用）品牌状态 1:审核中, 2:审核通过, 3:审核拒绝",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "full_brand_info",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "（已停止使用）是否返回完全的品牌信息",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "（推荐使用，必填）类目id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "query",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌前缀（中文或者英文），适用于不需要品牌资质的场景，根据前缀搜索品牌",
+      "example": "wu",
+      "_depth": 0
+    },
+    {
+      "name": "brand_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "（选填）品牌ids，传了品牌ids默认直接拿品牌id搜索并返回结果(放在brand_list里)，不会使用其他入参",
+      "example": "[123]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "brand_ids",
+      "type": "array",
+      "description": "（已停止使用）品牌id列表",
+      "example": "[]"
+    },
+    {
+      "name": "brand_infos",
+      "type": "string",
+      "description": "（已停止使用）品牌信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "（已停止使用）总数",
+      "example": "0"
+    },
+    {
+      "name": "has_more",
+      "type": "boolean",
+      "description": "（已停止使用）还有更多",
+      "example": "True"
+    },
+    {
+      "name": "auth_required",
+      "type": "boolean",
+      "description": "类目是否要求品牌有授权",
+      "example": "true"
+    },
+    {
+      "name": "auth_brand_list",
+      "type": "array",
+      "description": "授权的品牌列表",
+      "example": ""
+    },
+    {
+      "name": "brand_list",
+      "type": "array",
+      "description": "未授权的品牌列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数category_id缺失（sub_code: isv.parameter-invalid:2010004）",
+      "action": "请检查是否输入了category_id参数",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "参数category_id缺失"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 查询数据失败，系统异常（sub_code: isp.service-error:2010001）",
+      "action": "请重试",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "查询数据失败，系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2010013:获取账号信息失败（sub_code: isv.business-failed:2010013）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:2010013",
+      "sub_msg": "2010013:获取账号信息失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/brand/list?app_key=your_appkey_here&method=brand.list&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "auth_brand_list": [
+          {
+            "brand_id": "123",
+            "name_cn": "中文名",
+            "name_en": "xxx"
+          }
+        ],
+        "auth_required": "true",
+        "brand_ids": "[]",
+        "brand_infos": {},
+        "brand_list": [
+          {
+            "brand_id": "123",
+            "name_cn": "中文名",
+            "name_en": "xxx"
+          }
+        ],
+        "has_more": "True",
+        "total": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "参数category_id缺失"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1267",
+  "updatedAt": "2023-05-30",
+  "_file_stem": "product-brand-list"
+}

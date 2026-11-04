@@ -1,0 +1,133 @@
+{
+  "id": "doudian.cross-border.crossBorder.GetProductRecordBasicOptions",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "crossBorder.GetProductRecordBasicOptions",
+  "description": "获取备案基础信息",
+  "method": "GET",
+  "path": "/crossBorder/GetProductRecordBasicOptions",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "额外信息",
+      "example": "{\"xx\": \"xxx\"}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "返回码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "返回结果描述",
+      "example": "-"
+    },
+    {
+      "name": "customs_sp_warehouse_list",
+      "type": "array",
+      "description": "清关口岸-服务商仓信息",
+      "example": ""
+    },
+    {
+      "name": "extra",
+      "type": "string",
+      "description": "额外信息",
+      "example": "{\"示例\":\"\"}"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部系统异常（sub_code: isp.service-error:10000）",
+      "action": "重试，多次失败联系平台处理",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "内部系统异常"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 达到qps上限，触发限流（sub_code: isp.traffic-limited:10002）",
+      "action": "重试，并调整流量，控制QPS符合平台要求",
+      "sub_code": "isp.traffic-limited:10002",
+      "sub_msg": "达到qps上限，触发限流"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常（sub_code: isv.parameter-invalid:20000）",
+      "action": "请检查参数后重试",
+      "sub_code": "isv.parameter-invalid:20000",
+      "sub_msg": "参数异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 业务处理异常（sub_code: isv.business-failed:30000）",
+      "action": "结合返回信息处理，有疑问联系平台处理",
+      "sub_code": "isv.business-failed:30000",
+      "sub_msg": "业务处理异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/crossBorder/GetProductRecordBasicOptions?app_key=your_appkey_here&method=crossBorder.GetProductRecordBasicOptions&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "customs_sp_warehouse_list": [
+          {
+            "customs_code": "ZZJC",
+            "customs_name": "杭州下沙",
+            "sp_warehouse_list": [
+              {
+                "sp_code": "0127",
+                "sp_name": "北京字节跳动科技有限公司",
+                "warehouse_list": [
+                  {
+                    "clear_type_list": "[0, 1]",
+                    "warehouse_code": "LYYBBC",
+                    "warehouse_mode": "1",
+                    "warehouse_name": "懒洋洋仓"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "extra": {},
+        "msg": "-"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10000",
+      "sub_msg": "内部系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6320",
+  "updatedAt": "2024-03-26",
+  "_file_stem": "cross-border-crossBorder-GetProductRecordBasicOptions"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "doudian.marketing.marketing.pageQueryActivity",
+  "platform": "doudian",
+  "group": "marketing",
+  "name": "marketing.pageQueryActivity",
+  "description": "分页查询营销玩法",
+  "method": "GET",
+  "path": "/marketing/pageQueryActivity",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 营销管理API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页数量。最多不超过20。",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "activity_query_index_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "玩法查询索引信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "activity_query_index_item_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "索引列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "activity_index_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "玩法索引键。 activity_name: 活动名称; activity_code_list: 玩法编码列表; status_list: 活动状态列表; time_buy_discount_type: 单品直降优惠类型; product_id: 商品ID; start_time_before: 活动开始时间下限; start_time_after: 活动开始时间下限; start_time_before: 活动结束时间下限; end_time_after: 活动结束时间上限。状态查询需搭配活动时间索引条件",
+      "example": "activity_code_list",
+      "_depth": 2
+    },
+    {
+      "name": "activity_index_value",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "玩法索引值。list 用英文逗号分隔",
+      "example": "LimitTimeTimeBuy,LimitQuantityTimeBuy",
+      "_depth": 2
+    },
+    {
+      "name": "activity_query_option_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "玩法查询选项列表。activity_dto : 玩法模型; need_product_info: 需要商品信息",
+      "example": "[\"activity_dto\",\"need_product_info\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "activity_model",
+      "type": "array",
+      "description": "玩法模型",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "总数",
+      "example": "800"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:-100001）",
+      "action": "调整入参",
+      "sub_code": "isv.parameter-invalid:-100001",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-100002）",
+      "action": "联系技术人员",
+      "sub_code": "isv.business-failed:-100002",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/kolOrderAds?app_key=your_appkey_here&method=buyin.kolOrderAds&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:-100001",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1361/7777",
+  "updatedAt": "2025-09-16",
+  "_file_stem": "marketing-marketing-pageQueryActivity"
+}

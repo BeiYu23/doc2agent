@@ -1,0 +1,138 @@
+{
+  "id": "doudian.sms.sms.bindSignatures",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "sms.bindSignatures",
+  "description": "模板绑定商家签名",
+  "method": "GET",
+  "path": "/sms/bindSignatures",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "signatures",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "签名",
+      "example": "北京字节跳动",
+      "_depth": 0
+    },
+    {
+      "name": "sub_account",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "消息组",
+      "example": "sojfse",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "一级模板id",
+      "example": "S1T_xx",
+      "_depth": 0
+    },
+    {
+      "name": "template_traffic_driving_groups",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "引流参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "params",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "引流参数",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "param_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "变量类型",
+      "example": "2",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "变量内容",
+      "example": "http://xxx",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "变量名",
+      "example": "url",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "template_id",
+      "type": "string",
+      "description": "一级模板id",
+      "example": "S1T_xxx"
+    },
+    {
+      "name": "second_templates",
+      "type": "array",
+      "description": "二级模板",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/sms/bindSignatures?app_key=your_appkey_here&method=sms.bindSignatures&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "second_templates": [
+          {
+            "second_template_id": "S2T_xxx",
+            "signature": "北京字节跳动"
+          }
+        ],
+        "template_id": "S1T_xxx"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/8439",
+  "updatedAt": "2026-07-28",
+  "_file_stem": "sms-sms-bindSignatures"
+}

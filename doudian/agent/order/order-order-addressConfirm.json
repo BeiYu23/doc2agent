@@ -1,0 +1,120 @@
+{
+  "id": "doudian.order.order.addressConfirm",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.addressConfirm",
+  "description": "买家地址变更确认",
+  "method": "GET",
+  "path": "/order/addressConfirm",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "主订单id，注意请求时order/list或 order/detail中返回的主订单id带的‘A’需要截断掉",
+      "example": "3539925204033339668",
+      "_depth": 0
+    },
+    {
+      "name": "is_approved",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "0:同意; \n拒绝需要传入以下参数： \n1001:订单已进入拣货环节 \n1002:订单已进入配货环节 \n1003:订单已进入仓库环节\n1004:订单已进入出库环节 \n1005:订单已进入发货环节\n300001:省级地址已变更，无法修改地址\n300003:市级地址已变更，无法修改地址\n300004:区级地址已变更，无法修改地址\n300005:联系人已变更，无法修改地址",
+      "example": "0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该任务已经被取消:发起售后自动取消审核任务（sub_code: isv.business-failed:50042）",
+      "action": "请检查订单状态",
+      "sub_code": "isv.business-failed:50042",
+      "sub_msg": "该任务已经被取消:发起售后自动取消审核任务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该任务已经被驳回:订单已进入发货环节（sub_code: isv.business-failed:50041）",
+      "action": "请检查订单状态",
+      "sub_code": "isv.business-failed:50041",
+      "sub_msg": "该任务已经被驳回:订单已进入发货环节"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该任务已经被通过（sub_code: isv.business-failed:50040）",
+      "action": "该任务已经被通过",
+      "sub_code": "isv.business-failed:50040",
+      "sub_msg": "该任务已经被通过"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 该订单不存在修改地址审核记录（sub_code: isv.parameter-invalid:50039）",
+      "action": "不存在审核记录，请检查",
+      "sub_code": "isv.parameter-invalid:50039",
+      "sub_msg": "该订单不存在修改地址审核记录"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 审核开关未打开（sub_code: isv.parameter-invalid:50038）",
+      "action": "审核开关未打开，请检查",
+      "sub_code": "isv.parameter-invalid:50038",
+      "sub_msg": "审核开关未打开"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 审核失败，当前app id无权审核用户的修改地址请求（sub_code: isv.business-failed:50036）",
+      "action": "审核失败，当前app id无权审核用户的修改地址请求",
+      "sub_code": "isv.business-failed:50036",
+      "sub_msg": "审核失败，当前app id无权审核用户的修改地址请求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请重试（sub_code: isv.business-failed:20003）",
+      "action": "系统异常，请重试",
+      "sub_code": "isv.business-failed:20003",
+      "sub_msg": "系统异常，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50001:订单号不能为空（sub_code: isv.business-failed:50001）",
+      "action": "50001:订单号不能为空",
+      "sub_code": "isv.business-failed:50001",
+      "sub_msg": "50001:订单号不能为空"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:50042",
+      "sub_msg": "该任务已经被取消:发起售后自动取消审核任务"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1836",
+  "updatedAt": "2024-06-24",
+  "_file_stem": "order-order-addressConfirm"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "doudian.industry.order.ReportVirtualMobile",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "order.ReportVirtualMobile",
+  "description": "主叫号码上报接口",
+  "method": "GET",
+  "path": "/order/ReportVirtualMobile",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "BSO单号、订单号等",
+      "example": "6922609697599159875",
+      "_depth": 0
+    },
+    {
+      "name": "mobile_caller_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "主叫号码，可批量，最多20个",
+      "example": "[\"1823333333\"]",
+      "_depth": 0
+    },
+    {
+      "name": "mobile_virtual",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "700虚拟号-15位",
+      "example": "700001010100000",
+      "_depth": 0
+    },
+    {
+      "name": "report_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "0非行业服务商 （默认）\n1行业服务商（可以不传token）",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "是否成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 行业服务商鉴权失败（sub_code: isv.business-failed:300113）",
+      "action": "检查是否为行业服务商/调用方式是否该为非店铺授权",
+      "sub_code": "isv.business-failed:300113",
+      "sub_msg": "行业服务商鉴权失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 鉴权失败，app不在申报加白名单（sub_code: isv.business-failed:300112）",
+      "action": "联系商家上报加白APP",
+      "sub_code": "isv.business-failed:300112",
+      "sub_msg": "鉴权失败，app不在申报加白名单"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数（sub_code: isv.missing-parameter:100002）",
+      "action": "检查是否缺失参数",
+      "sub_code": "isv.missing-parameter:100002",
+      "sub_msg": "缺少必选参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统内部错误（sub_code: isp.service-error:200000）",
+      "action": "1.若为行业，检查serviceId是否正确 2.其他场景请重试或提交工单咨询",
+      "sub_code": "isp.service-error:200000",
+      "sub_msg": "系统内部错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/ReportVirtualMobile?app_key=your_appkey_here&method=order.ReportVirtualMobile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:300113",
+      "sub_msg": "行业服务商鉴权失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8158",
+  "updatedAt": "2026-03-24",
+  "_file_stem": "industry-order-ReportVirtualMobile"
+}

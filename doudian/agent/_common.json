@@ -1,0 +1,104 @@
+{
+  "id": "doudian._common",
+  "platform": "doudian",
+  "name": "抖店开放平台公共参数",
+  "description": "所有接口调用都需要携带的公共参数与签名说明（来源: 文档站 publicParam）。",
+  "method": "GET",
+  "path": "/（网关公共参数）",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "app_key + access_token + sign(HMAC-SHA256)"
+  },
+  "notes": [
+    "抽样自: 豆包工作 / /contentAIGC/createAIVideoTaskOpen"
+  ],
+  "params": [
+    {
+      "name": "method",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "调用的API接口名称",
+      "example": "contentAIGC.createAIVideoTaskOpen"
+    },
+    {
+      "name": "app_key",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "应用创建完成后被分配的key",
+      "example": "6839996111118329223"
+    },
+    {
+      "name": "access_token",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "用于调用 API 的 access_token",
+      "example": "edae7c30-8386-443b-88a1-031111596fdd"
+    },
+    {
+      "name": "param_json",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "标准json类型，里面是业务参数按照参数名的字符串大小排序具体参数值，参考每个接口的参数表",
+      "example": "{cid:12,page:1}"
+    },
+    {
+      "name": "timestamp",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "时间戳，格式为yyyy-MM-dd HH:mm:ss，时区为GMT+8，例如：2016-01-01 12:00:00",
+      "example": "2020-09-15 14:48:13"
+    },
+    {
+      "name": "v",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "API协议版本，当前版本为2",
+      "example": "2"
+    },
+    {
+      "name": "sign",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "输入参数签名结果，签名算法参照 [API调用指南](https://op.jinritemai.com/docs/guide-docs/10/23)",
+      "example": "796559d40beb08a1a1113c456c5c5a62"
+    },
+    {
+      "name": "sign_method",
+      "in": "query",
+      "type": "string",
+      "required": false,
+      "description": "签名算法类型推荐使用hmac-sha256后续会下线md5（不传则默认为\"md5\"）1. md5:表示用md5算法加密字符串 2. hmac-sha256:表示用hmac_sha_256算法加密字符串",
+      "example": "hmac-sha256"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?method=xxx&app_key=xxx&access_token=xxx&param_json={}&timestamp=2026-01-01 12:00:00&v=2&sign=xxx&sign_method=hmac-sha256'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success"
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/guide-docs/10/23",
+  "updatedAt": "2026-11-04"
+}

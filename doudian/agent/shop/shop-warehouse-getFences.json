@@ -1,0 +1,163 @@
+{
+  "id": "doudian.shop.warehouse.getFences",
+  "platform": "doudian",
+  "group": "shop",
+  "name": "warehouse.getFences",
+  "description": "获取电子围栏信息/列表",
+  "method": "GET",
+  "path": "/warehouse/getFences",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_fence_id_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "外部围栏id列表，不填则查全部",
+      "example": "fenceid2",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "fences",
+      "type": "array",
+      "description": "围栏信息列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:2）",
+      "action": "修改后重试",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:9999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:9999",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:2122）",
+      "action": "修改后重试",
+      "sub_code": "isv.parameter-invalid:2122",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2129999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2129999",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2121006）",
+      "action": "重试，重试失败联系管理员",
+      "sub_code": "isp.service-error:2121006",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/getFences?app_key=your_appkey_here&method=warehouse.getFences&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fences": [
+          {
+            "circular": {
+              "center": {
+                "latitude": "40.438585",
+                "longitude": "115.356445"
+              },
+              "radius": "1000"
+            },
+            "fence_id": "1312312313",
+            "multi_polygons": [
+              {
+                "inner": [
+                  {
+                    "vertices": [
+                      {
+                        "latitude": "40.438585",
+                        "longitude": "115.356445"
+                      }
+                    ]
+                  }
+                ],
+                "outer": {
+                  "vertices": [
+                    {
+                      "latitude": "40.438585",
+                      "longitude": "115.356445"
+                    }
+                  ]
+                }
+              }
+            ],
+            "out_fence_id": "fence02",
+            "polygon": {
+              "vertices": [
+                {
+                  "latitude": "40.438585",
+                  "longitude": "115.356445"
+                }
+              ]
+            },
+            "polygon_new": {
+              "inner": [
+                {
+                  "vertices": [
+                    {
+                      "latitude": "40.438585",
+                      "longitude": "115.356445"
+                    }
+                  ]
+                }
+              ],
+              "outer": {
+                "vertices": [
+                  {
+                    "latitude": "40.438585",
+                    "longitude": "115.356445"
+                  }
+                ]
+              }
+            },
+            "shape": "2"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/13/1783",
+  "updatedAt": "2024-06-11",
+  "_file_stem": "shop-warehouse-getFences"
+}

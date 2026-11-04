@@ -1,0 +1,125 @@
+{
+  "id": "doudian.video.shopVideo.getAfterWatchRelatedProducts",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.getAfterWatchRelatedProducts",
+  "description": "获取搜后承接商品列表",
+  "method": "GET",
+  "path": "/shopVideo/getAfterWatchRelatedProducts",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "query",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品ID或商品名称",
+      "example": "宠物秋冬带帽菱",
+      "_depth": 0
+    },
+    {
+      "name": "page_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "分页信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页大小",
+      "example": "10",
+      "_depth": 1
+    },
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当前页码",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回结果",
+      "example": ""
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "错误信息",
+      "example": "success"
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "错误码",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/getAfterWatchRelatedProducts?app_key=your_appkey_here&method=shopVideo.getAfterWatchRelatedProducts&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "product_list": [
+            {
+              "product_info": {
+                "category_name_list": "女装",
+                "detail_h5_url": "https://xxx",
+                "product_id": "1212121",
+                "product_image": "https://xxx",
+                "product_name": "宠物秋冬带帽菱形格卫",
+                "product_status": "0",
+                "sale_price": "1000",
+                "shop": {
+                  "shop_id": "121212",
+                  "shop_logo": "https://xxx",
+                  "shop_name": "测试店铺"
+                }
+              },
+              "stock": "100"
+            }
+          ],
+          "total": "100"
+        },
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/8138",
+  "updatedAt": "2026-03-11",
+  "_file_stem": "video-shopVideo-getAfterWatchRelatedProducts"
+}

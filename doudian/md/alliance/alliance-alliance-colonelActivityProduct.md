@@ -1,0 +1,148 @@
+# alliance.colonelActivityProduct
+
+> 活动商品查询接口
+
+| 元信息 | 值 |
+| --- | --- |
+| 接口 ID | `doudian.alliance.alliance.colonelActivityProduct` |
+| 平台 | `doudian` |
+| 请求方法 | `GET` |
+| 接口路径 | `/alliance/colonelActivityProduct` |
+| Base URL | `https://openapi-fxg.jinritemai.com` |
+| 鉴权方式 | `access_token+sign` |
+| 文档来源 | https://op.jinritemai.com/docs/api-docs/61/968 |
+| 更新日期 | `2026-04-21` |
+
+## 接口说明
+
+- 文档书: 精选联盟API（版本 V10.01）
+- 公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json
+
+## 请求参数
+
+| 参数名 | 位置 | 类型 | 必填 | 说明 | 示例 |
+| --- | --- | --- | --- | --- | --- |
+| `activity_id` | body | mixed | 是 | 活动ID | `11111` |
+| `search_type` | body | mixed | 否 | 召回结果排序条件，[推荐按更新时间倒序查]。0：报名时间；1：活动价格排序；2：活动佣金比例排序；4：更新时间排序 | `4` |
+| `sort_type` | body | mixed | 否 | 排序顺序。0：升序；1：降序 | `0` |
+| `page` | body | mixed | 否 | 页码，从1开始。分页模式下生效，超过10000条会被限制，推荐使用游标模式 retrieve_mode=1 | `1` |
+| `count` | body | mixed | 是 | 每页数量（每页最多20） | `20` |
+| `cooperation_info` | body | string | 否 | 商家ID or 商家名称 or 一级团长名称 or 一级团长ID | `23412312` |
+| `cooperation_type` | body | mixed | 否 | 合作类型. 0: 不限; 1: 商家; 2: 团长 | `0` |
+| `product_info` | body | string | 否 | 商品ID/名称（支持根据商品id或者商品名称搜索，商品ID精准匹配，商品名称模糊匹配） | `一个商品` |
+| `status` | body | mixed | 否 | 活动商品状态，不传查所有状态。0：待审核；1：推广中；2：申请未通过；3：合作已终止；6：合作已到期 | `0` |
+| `retrieve_mode` | body | mixed | 否 | 获取模式。0: 分页模式（默认），最多返回10000条数据；1: 游标模式（推荐），返回条数无限制 | `1` |
+| `cursor` | body | string | 否 | 游标。首页不需要传，请求下一页时需传入上一次请求响应的next_cursor值 | `cefe2r3r2332dcd2/ddf32` |
+
+## 请求示例
+
+```bash
+curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/colonelActivityProduct?app_key=your_appkey_here&method=alliance.colonelActivityProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'
+```
+
+## 响应参数
+
+| 字段名 | 类型 | 说明 | 示例 |
+| --- | --- | --- | --- |
+| `data` | array | 活动商品列表 | `` |
+| `total` | mixed | 活动商品条数，游标模式下不返回 | `10` |
+| `institution_id` | mixed | 机构id | `111111` |
+| `next_cursor` | string | 下一页游标。游标模式下返回，最后一页返回空 | `ee2k23i492njwtio5j435ij34n5n34` |
+
+## 响应码
+
+| code | 含义 | 处理建议 |
+| --- | --- | --- |
+| `10000` | success | 正常处理 |
+| `50002` | 业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257） | 参数校验失败 |
+| `20000` | 系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256） | 服务打瞌睡了，请稍后再试 |
+| `50002` | 业务处理失败 / 无效分页大小（sub_code: isv.business-failed:4097） | 每页最多20条数据 |
+| `50002` | 业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197） | 需【招商团长】角色授权后访问 |
+| `50002` | 业务处理失败 / 不允许继续翻页，请使用游标模式加载更多数据（sub_code: isv.business-failed:8197） | 请使用游标模式加载更多数据，详情：https://op.jinritemai.com/docs/notice-docs/5/3237 |
+| `50002` | 业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200） | 4200:账号状态异常，请检查账号状态 |
+
+## 响应示例
+
+成功：
+
+```json
+{
+  "data": {
+    "data": [
+      {
+        "activity_ad_cos_ratio": "8",
+        "activity_cos_fee": "1",
+        "activity_cos_ratio": "1000",
+        "activity_end_time": "2021-09-02",
+        "activity_price": "111",
+        "activity_start_time": "2021-09-02",
+        "ad_service_ratio": "10",
+        "apply_id": "11111",
+        "can_promote": "true",
+        "category_id": "2",
+        "category_name": "玩具乐器",
+        "colonel_coupon_info": "满1000减100",
+        "cos_fee": "1",
+        "cos_ratio": "10",
+        "cos_type": "1",
+        "cover": "fdsaf",
+        "detail_url": "https://haohuo.jinritemai.com/views/product/detail?id=34782428681388176\\u0026ins_activity_param=Rpd9L\\u0026pick_source=jCS47",
+        "exclusion_duration": "2",
+        "first_cid": "1",
+        "gift_info": "一个小礼物",
+        "has_douin_goods_tag": "true",
+        "in_stock": "true",
+        "is_new_shop": "true",
+        "is_trusteeship_product": "true",
+        "months_of_protection": "6",
+        "origin_activity_end_time": "2023/04/02",
+        "origin_activity_id": "0",
+        "origin_activity_start_time": "2023/01/02",
+        "origin_colonel_buyin_id": "4312346713451234",
+        "origin_institution_id": "0",
+        "origin_institution_name": "团长的名称",
+        "origin_institution_phone": "010-22209090",
+        "price": "100",
+        "product_id": "11111",
+        "product_stock": "100",
+        "promotion_end_time": "2021-09-02",
+        "promotion_start_time": "2021-09-02",
+        "promotion_step": "买就送一个小礼物",
+        "promotion_stock": "100",
+        "reason": "dfsadf",
+        "sales": "11111",
+        "second_cid": "1",
+        "service_ratio": "11",
+        "shop_contact": "6UNGOWt5MkBIgEDQ1I31w==",
+        "shop_id": "111",
+        "shop_name": "店铺111",
+        "shop_score": "4.45",
+        "status": "1",
+        "third_cid": "1",
+        "title": "商品111",
+        "update_time": "2006-01-02 15:04:05"
+      }
+    ],
+    "institution_id": "111111",
+    "next_cursor": "ee2k23i492njwtio5j435ij34n5n34",
+    "total": "10"
+  },
+  "code": 10000,
+  "msg": "success",
+  "sub_code": "",
+  "sub_msg": ""
+}
+```
+
+失败：
+
+```json
+{
+  "code": 50002,
+  "msg": "业务处理失败",
+  "sub_code": "isv.business-failed:257",
+  "sub_msg": "参数校验失败"
+}
+```
+
+## 备注

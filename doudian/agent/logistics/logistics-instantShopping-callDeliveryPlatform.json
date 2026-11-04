@@ -1,0 +1,321 @@
+{
+  "id": "doudian.logistics.instantShopping.callDeliveryPlatform",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "instantShopping.callDeliveryPlatform",
+  "description": "即时零售呼叫平台运力",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音电商shop order单id",
+      "example": "6917539978356459031",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店ID",
+      "example": "1111409547",
+      "_depth": 0
+    },
+    {
+      "name": "verify_code_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否需要取件码（0=不需要，1=需要）",
+      "example": "0/1",
+      "_depth": 0
+    },
+    {
+      "name": "serial_number_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "序列码列表，如果包含有多个序列码，请用\"_\"英文下划线分割（属于数码手机类目的商品订单才需要传序列码。）",
+      "example": "353245234",
+      "_depth": 0
+    },
+    {
+      "name": "need_receiver_code",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要收件码；true：需要；false：不需要",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "sku_trace_info_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "sku单的医疗溯源码信息;",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "对应sku单id",
+      "example": "4945338777763599988",
+      "_depth": 1
+    },
+    {
+      "name": "batch_and_trace_code_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批次+溯源码list（设计为list是可能有多个item单）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "batch_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "批次code",
+      "example": "12345",
+      "_depth": 2
+    },
+    {
+      "name": "trace_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "溯源码code",
+      "example": "12345",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "delivery_distance",
+      "type": "mixed",
+      "description": "订单配送距离，单位米",
+      "example": "3200"
+    },
+    {
+      "name": "delivery_fee",
+      "type": "mixed",
+      "description": "订单配送价格，单位分",
+      "example": "100"
+    },
+    {
+      "name": "pickup_goods_code",
+      "type": "string",
+      "description": "四到六位验证码",
+      "example": "2412"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:310000）",
+      "action": "参数非法，请检查传入的参数",
+      "sub_code": "isv.parameter-invalid:310000",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:50029）",
+      "action": "参数非法，请检查传入参数",
+      "sub_code": "isv.parameter-invalid:50029",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:700024）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:700024",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:1000001）",
+      "action": "参数非法",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 订单不能为空（sub_code: isv.missing-parameter:40013）",
+      "action": "订单不能为空",
+      "sub_code": "isv.missing-parameter:40013",
+      "sub_msg": "订单不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20111）",
+      "action": "订单查询失败",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20112）",
+      "action": "门店信息获取失败",
+      "sub_code": "isv.business-failed:20112",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20113）",
+      "action": "执行单不存在",
+      "sub_code": "isv.business-failed:20113",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20114）",
+      "action": "流水号为空",
+      "sub_code": "isv.business-failed:20114",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20200）",
+      "action": "履约查询超时",
+      "sub_code": "isv.business-failed:20200",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20211）",
+      "action": "履约呼叫运力失败",
+      "sub_code": "isv.business-failed:20211",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:20212）",
+      "action": "履约生成deliverId失败",
+      "sub_code": "isv.business-failed:20212",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非小时达订单不允许使用呼叫运力（sub_code: isv.business-failed:50110）",
+      "action": "非小时达订单不允许使用呼叫运力",
+      "sub_code": "isv.business-failed:50110",
+      "sub_msg": "非小时达订单不允许使用呼叫运力"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未开通平台运力服务，无法使用。（sub_code: isv.business-failed:50111）",
+      "action": "未开通平台运力服务，无法使用。",
+      "sub_code": "isv.business-failed:50111",
+      "sub_msg": "未开通平台运力服务，无法使用。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非本店铺订单，呼叫运力失败（sub_code: isv.business-failed:50112）",
+      "action": "非本店铺订单，呼叫运力失败",
+      "sub_code": "isv.business-failed:50112",
+      "sub_msg": "非本店铺订单，呼叫运力失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 发货订单包含非本门店订单，请重试（sub_code: isv.business-failed:50113）",
+      "action": "发货订单包含非本门店订单，请重试",
+      "sub_code": "isv.business-failed:50113",
+      "sub_msg": "发货订单包含非本门店订单，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID（sub_code: isv.business-failed:50114）",
+      "action": "store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID",
+      "sub_code": "isv.business-failed:50114",
+      "sub_msg": "store_id不存在/错误，超市小时达订单发货需传入订单对应的门店ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运费获取失败，请重新获取。（sub_code: isv.business-failed:50211）",
+      "action": "运费获取失败，请重新获取。",
+      "sub_code": "isv.business-failed:50211",
+      "sub_msg": "运费获取失败，请重新获取。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:50216）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:50216",
+      "sub_msg": "系统繁忙，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 超出配送范围（sub_code: isv.business-failed:50217）",
+      "action": "超出配送范围",
+      "sub_code": "isv.business-failed:50217",
+      "sub_msg": "超出配送范围"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不在站点营业时间（sub_code: isv.business-failed:50218）",
+      "action": "不在站点营业时间",
+      "sub_code": "isv.business-failed:50218",
+      "sub_msg": "不在站点营业时间"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未开通配送服务（sub_code: isv.business-failed:50219）",
+      "action": "未开通配送服务",
+      "sub_code": "isv.business-failed:50219",
+      "sub_msg": "未开通配送服务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 运力紧张无法接单（sub_code: isv.business-failed:50220）",
+      "action": "运力紧张无法接单",
+      "sub_code": "isv.business-failed:50220",
+      "sub_msg": "运力紧张无法接单"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.callDeliveryPlatform&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "delivery_distance": "3200",
+        "delivery_fee": "100",
+        "pickup_goods_code": "2412"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:310000",
+      "sub_msg": "参数非法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/7042",
+  "updatedAt": "2025-09-09",
+  "_file_stem": "logistics-instantShopping-callDeliveryPlatform"
+}

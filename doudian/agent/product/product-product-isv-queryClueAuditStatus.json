@@ -1,0 +1,127 @@
+{
+  "id": "doudian.product.product.isv.queryClueAuditStatus",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.isv.queryClueAuditStatus",
+  "description": "查询线索提报审核结果",
+  "method": "GET",
+  "path": "/product/isv/queryClueAuditStatus",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "clue_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "线索id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "item_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "分页参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "current",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "页大小，不要超过500",
+      "example": "10",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "提报记录列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总记录数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 提报记录不存在（sub_code: isv.business-failed:501）",
+      "action": "检查参数",
+      "sub_code": "isv.business-failed:501",
+      "sub_msg": "提报记录不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/isv/queryClueAuditStatus?app_key=your_appkey_here&method=product.isv.queryClueAuditStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "audit_status": "1",
+            "pic_url": "http://xxxx.image",
+            "product_id": "1",
+            "product_name": "长裤",
+            "refused_reason": "无",
+            "shop_id": "1",
+            "shop_name": "1",
+            "submit_id": "1",
+            "submit_time": "0"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:501",
+      "sub_msg": "提报记录不存在"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/2148",
+  "updatedAt": "2024-04-02",
+  "_file_stem": "product-product-isv-queryClueAuditStatus"
+}

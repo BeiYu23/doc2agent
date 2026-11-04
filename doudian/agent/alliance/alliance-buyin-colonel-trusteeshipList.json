@@ -1,0 +1,195 @@
+{
+  "id": "doudian.alliance.buyin.colonel.trusteeshipList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.colonel.trusteeshipList",
+  "description": "团长托管商品查询",
+  "method": "GET",
+  "path": "/buyin/colonel/trusteeshipList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V3.11）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商品ID",
+      "example": "16234123515826734",
+      "_depth": 0
+    },
+    {
+      "name": "business_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "商家ID",
+      "example": "461723",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "申请状态。0：待审核（默认）；1：生效中；2：已结束",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "sub_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "子状态（仅当status为已结束时需要传，1:申请未通过; 2:合作已终止; 3:合作已到期）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "页码，从1开始。分页模式下生效，超过10000条会被限制，推荐使用游标模式 retrieve_mode=1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页条数（最多20条）",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "retrieve_mode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "获取模式。0: 分页模式（默认），最多返回10000条数据；1: 游标模式（推荐），返回条数无限制",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cursor",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "游标。首页不需要传，请求下一页时需传入上一次请求响应的next_cursor值",
+      "example": "2keoi4023rj34532ko43o",
+      "_depth": 0
+    },
+    {
+      "name": "order_by",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "排序（1-按照更新时间倒序）",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "total",
+      "type": "number",
+      "description": "数据总条数",
+      "example": "100"
+    },
+    {
+      "name": "records",
+      "type": "array",
+      "description": "托管商品列表",
+      "example": ""
+    },
+    {
+      "name": "next_cursor",
+      "type": "string",
+      "description": "下一页游标。游标模式下返回，最后一页返回空",
+      "example": "3rr32212f24442ffwegrthrt"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍候再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍候再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍候再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / sub_status 参数校验失败（当且仅当status为2时必传，1:申请未通过 2:合作已终止 3:合作已到期）（sub_code: isv.parameter-invalid:16384）",
+      "action": "当且仅当status为2时必传，1:申请未通过 2:合作已终止 3:合作已到期",
+      "sub_code": "isv.parameter-invalid:16384",
+      "sub_msg": "sub_status 参数校验失败（当且仅当status为2时必传，1:申请未通过 2:合作已终止 3:合作已到期）"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效分页大小（sub_code: isv.business-failed:4097）",
+      "action": "无效分页大小",
+      "sub_code": "isv.business-failed:4097",
+      "sub_msg": "无效分页大小"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 不允许继续翻页，请使用游标模式加载更多数据（sub_code: isv.parameter-invalid:8197）",
+      "action": "请使用游标模式加载更多数据，详情：https://op.jinritemai.com/docs/notice-docs/5/3237",
+      "sub_code": "isv.parameter-invalid:8197",
+      "sub_msg": "不允许继续翻页，请使用游标模式加载更多数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "4200:账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍候再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/2137",
+  "updatedAt": "2023-06-20",
+  "_file_stem": "alliance-buyin-colonel-trusteeshipList"
+}

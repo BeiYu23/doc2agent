@@ -1,0 +1,130 @@
+{
+  "id": "doudian.industry.resale.supplier.categoryOperateQuery",
+  "platform": "doudian",
+  "group": "industry",
+  "name": "resale.supplier.categoryOperateQuery",
+  "description": "查询旧品类目操作结果",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 行业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "service_entity_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "服务实体编码",
+      "example": "SE2024001",
+      "_depth": 0
+    },
+    {
+      "name": "operate_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作编码，服务商自定义，不能重复，用于查询本次操作结果",
+      "example": "100001",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ret_msg",
+      "type": "string",
+      "description": "返回消息",
+      "example": "操作成功"
+    },
+    {
+      "name": "category_level",
+      "type": "mixed",
+      "description": "类目等级",
+      "example": "2"
+    },
+    {
+      "name": "category_detail",
+      "type": "array",
+      "description": "类目详情",
+      "example": ""
+    },
+    {
+      "name": "operate_type",
+      "type": "mixed",
+      "description": "操作类型：1：新增，2：修改，3：删除",
+      "example": "1"
+    },
+    {
+      "name": "operate_no",
+      "type": "string",
+      "description": "操作编码，服务商自定义，不能重复，用于查询本次操作结果",
+      "example": "100001"
+    },
+    {
+      "name": "status",
+      "type": "mixed",
+      "description": "类目状态：1: 已生效 2: 审核中 3: 审核拒绝",
+      "example": "1"
+    },
+    {
+      "name": "status_desc",
+      "type": "string",
+      "description": "类目状态描述",
+      "example": "已生效"
+    },
+    {
+      "name": "ret_code",
+      "type": "mixed",
+      "description": "返回码",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=resale.supplier.categoryOperateQuery&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "category_detail": [
+          {
+            "category_id": "C2024001",
+            "image_url": "https://example.com/category/image.jpg",
+            "level": "2",
+            "name": "冰箱",
+            "remark": "仅回收100L以上冰箱",
+            "sort": "10"
+          }
+        ],
+        "category_level": "2",
+        "operate_no": "100001",
+        "operate_type": "1",
+        "ret_code": "0",
+        "ret_msg": "操作成功",
+        "status": "1",
+        "status_desc": "已生效"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1612/8464",
+  "updatedAt": "2026-08-12",
+  "_file_stem": "industry-resale-supplier-categoryOperateQuery"
+}

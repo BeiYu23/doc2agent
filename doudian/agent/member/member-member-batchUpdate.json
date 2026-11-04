@@ -1,0 +1,269 @@
+{
+  "id": "doudian.member.member.batchUpdate",
+  "platform": "doudian",
+  "group": "member",
+  "name": "member.batchUpdate",
+  "description": "会员数据更新接口",
+  "method": "GET",
+  "path": "/member/batchUpdate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "表明外部平台",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "member_info_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "新的用户数据，数组中一次最多可更新5个用户的信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "birthday",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "会员生日，格式：月-日，如08-08",
+      "example": "08-08",
+      "_depth": 1
+    },
+    {
+      "name": "open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "会员对外的身份ID",
+      "example": "cb7bf7efa6d652046abd2f7d84ee18c1",
+      "_depth": 1
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "新的手机号",
+      "example": "15012345678",
+      "_depth": 1
+    },
+    {
+      "name": "level",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "新的等级",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "unbind",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否解绑",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "integral",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "已废弃，仅支持存量历史商家】用户最新积分，正数表示法。如果有小数或者负数诉求的必须对接PointCent字段。新商家考虑扩展性，都建议对接PointCent。PointCent设置值时，优先级比Integral高",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "pointCent",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "【推荐】用户最新积分，分表示法，会乘以100放大，目前最多支持两位小数，同时也支持负数，PointCent=100表示1积分，PointCent=-111表示-1.11积分",
+      "example": "11100",
+      "_depth": 1
+    },
+    {
+      "name": "union_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "【仅品牌会员通商家设置】品牌会员的union_id，可此以此来标识某一个用户。（商家在抖店企业版配置同品牌跨店互通配置）",
+      "example": "#YOUR_SECRET_KEY",
+      "_depth": 1
+    },
+    {
+      "name": "cancel",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "【仅测试商家使用】是否注销，区别于上面的解绑动作，注销操作会清空用户历史绑定信息，影响用户开卡礼等权益领取判断。目前灰度测试中，如有必要使用，需提报会员通运营审批后使用。",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "batch_update_response_info",
+      "type": "array",
+      "description": "更新用户的信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 网络错误，请稍后再试~（sub_code: isp.service-error:628145000）",
+      "action": "请稍后再试",
+      "sub_code": "isp.service-error:628145000",
+      "sub_msg": "网络错误，请稍后再试~"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "请查看操作接口返回的详细错误描述，针对性的调整错误参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求过于频繁，请稍后重试（sub_code: isv.business-failed:628145015）",
+      "action": "请检查短时间内是否并发操作同账号？请检查是否和平台SPI请求并发？",
+      "sub_code": "isv.business-failed:628145015",
+      "sub_msg": "请求过于频繁，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / openId非法（sub_code: isv.parameter-invalid:628145003）",
+      "action": "请检查传入的open_id和token店铺ID是否有关联？确认openId是否合法？",
+      "sub_code": "isv.parameter-invalid:628145003",
+      "sub_msg": "openId非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 【抖店会员体系升级会员通体系】会员数据传输中，请勿更新会员数据。（sub_code: isv.business-failed:628145010）",
+      "action": "等待升级完成。如有疑问，请联系商家IT或者服务商技术同学咨询",
+      "sub_code": "isv.business-failed:628145010",
+      "sub_msg": "【抖店会员体系升级会员通体系】会员数据传输中，请勿更新会员数据。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 抖店会员商家不允许更新用户信息（sub_code: isv.business-failed:628145006）",
+      "action": "联系行业运营完成抖店会员数据升级到会员通体系",
+      "sub_code": "isv.business-failed:628145006",
+      "sub_msg": "抖店会员商家不允许更新用户信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 用户是品牌会员，必须使用品牌唯一身份的UnionId来更新（sub_code: isv.business-failed:628145036）",
+      "action": "当前是批量接口，针对品牌会员的那一行更新请传入unionId",
+      "sub_code": "isv.business-failed:628145036",
+      "sub_msg": "用户是品牌会员，必须使用品牌唯一身份的UnionId来更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求超时，请稍后重试（sub_code: isv.business-failed:628004002）",
+      "action": "请求超时，请稍后重试",
+      "sub_code": "isv.business-failed:628004002",
+      "sub_msg": "请求超时，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 会员已经在平台设置生日，不允许商家外部系统更新（sub_code: isv.business-failed:628145045）",
+      "action": "会员已经在平台设置生日，不允许商家外部系统更新",
+      "sub_code": "isv.business-failed:628145045",
+      "sub_msg": "会员已经在平台设置生日，不允许商家外部系统更新"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 【抖店会员体系升级会员通体系】会员数据传输中，请勿更新会员数据，等待升级完成。如有疑问，请联系商家IT或者服务商技术同学咨询（sub_code: isv.business-failed:628143000）",
+      "action": "请等待【抖店会员体系升级会员】升级完成",
+      "sub_code": "isv.business-failed:628143000",
+      "sub_msg": "【抖店会员体系升级会员通体系】会员数据传输中，请勿更新会员数据，等待升级完成。如有疑问，请联系商家IT或者服务商技术同学咨询"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / UnionId非法，无法正常解析（sub_code: isv.business-failed:628145021）",
+      "action": "请检查传入的UnionId和token店铺ID是否有关联？确认UnionId是否合法？",
+      "sub_code": "isv.business-failed:628145021",
+      "sub_msg": "UnionId非法，无法正常解析"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求的店铺非品牌店铺（sub_code: isv.business-failed:628145007）",
+      "action": "请检查传入的token归属店铺ID是否是品牌店铺",
+      "sub_code": "isv.business-failed:628145007",
+      "sub_msg": "请求的店铺非品牌店铺"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 更新用户信息失败（sub_code: isv.business-failed:628145047）",
+      "action": "内部操作失败，请稍后再试",
+      "sub_code": "isv.business-failed:628145047",
+      "sub_msg": "更新用户信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 未授权商家禁止使用会员清退功能（sub_code: isv.business-failed:628145050）",
+      "action": "如需要使用会员注销功能，请联系会员通运营同学申请权限",
+      "sub_code": "isv.business-failed:628145050",
+      "sub_msg": "未授权商家禁止使用会员清退功能"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 用户不满足注销的无活跃要求（sub_code: isv.business-failed:628145051）",
+      "action": "用户不满足注销的无活跃要求，禁止注销该用户",
+      "sub_code": "isv.business-failed:628145051",
+      "sub_msg": "用户不满足注销的无活跃要求"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/batchUpdate?app_key=your_appkey_here&method=member.batchUpdate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "batch_update_response_info": [
+          {
+            "err_code": "0",
+            "err_msg": "网络错误，请稍后再试",
+            "extend": "{}",
+            "open_id": "cb7bf7efa6d652046abd2f7d84ee18c1",
+            "success": "true",
+            "union_id": "#YOUR_SECRET_KEY"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:628145000",
+      "sub_msg": "网络错误，请稍后再试~"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/329",
+  "updatedAt": "2024-07-22",
+  "_file_stem": "member-member-batchUpdate"
+}

@@ -1,0 +1,128 @@
+{
+  "id": "doudian.warehouse.warehouse.edit",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "warehouse.edit",
+  "description": "编辑区域仓",
+  "method": "GET",
+  "path": "/warehouse/edit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓库id",
+      "example": "abc",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库名称",
+      "example": "仓名称示例",
+      "_depth": 0
+    },
+    {
+      "name": "intro",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓库介绍",
+      "example": "仓介绍示例",
+      "_depth": 0
+    },
+    {
+      "name": "address_id1",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "省地址编码",
+      "example": "11",
+      "_depth": 0
+    },
+    {
+      "name": "address_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "市地址编码",
+      "example": "110000",
+      "_depth": 0
+    },
+    {
+      "name": "address_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "区地址编码",
+      "example": "110101",
+      "_depth": 0
+    },
+    {
+      "name": "address_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "街道地址编码",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "address_detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "xx消息xx号",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "boolean",
+      "description": "修改结果",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/edit?app_key=your_appkey_here&method=warehouse.edit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "true"
+      },
+      "err_no": 0,
+      "message": "success",
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2078",
+  "updatedAt": "2022-06-23",
+  "_file_stem": "warehouse-warehouse-edit"
+}

@@ -1,0 +1,137 @@
+{
+  "id": "doudian.alliance.alliance.colonelActivityProductExtension",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.colonelActivityProductExtension",
+  "description": "专属团长活动商品延时接口",
+  "method": "GET",
+  "path": "/alliance/colonelActivityProductExtension",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "团长活动id",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品id 用,隔开,少于20个",
+      "example": "[3553361443837581161]",
+      "_depth": 0
+    },
+    {
+      "name": "extend_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "延长的时长",
+      "example": "2021-09-02",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "延迟失败原因列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 推广延长时间小于当前时间或小于设置的推广结束时间（sub_code: isv.business-failed:4137）",
+      "action": "请检查延长时间",
+      "sub_code": "isv.business-failed:4137",
+      "sub_msg": "推广延长时间小于当前时间或小于设置的推广结束时间"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动不是处在报名中，不能审核（sub_code: isv.business-failed:4140）",
+      "action": "活动不是处在报名中，不能审核",
+      "sub_code": "isv.business-failed:4140",
+      "sub_msg": "活动不是处在报名中，不能审核"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前用户不是创建活动的用户（sub_code: isv.business-failed:4139）",
+      "action": "当前用户不是创建活动的用户",
+      "sub_code": "isv.business-failed:4139",
+      "sub_msg": "当前用户不是创建活动的用户"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 256:服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "256:服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/colonelActivityProductExtension?app_key=your_appkey_here&method=alliance.colonelActivityProductExtension&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "msg": "商品不支持延长推广",
+            "product_id": "3553361443837581161"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1881",
+  "updatedAt": "2024-11-22",
+  "_file_stem": "alliance-alliance-colonelActivityProductExtension"
+}

@@ -1,0 +1,304 @@
+{
+  "id": "doudian.coupon.coupons.verifyV2",
+  "platform": "doudian",
+  "group": "coupon",
+  "name": "coupons.verifyV2",
+  "description": "卡券核销接口V2版本",
+  "method": "GET",
+  "path": "/coupons/verifyV2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 卡券API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cert_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "卡券号码",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "verify_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "核销时间",
+      "example": "2021-03-04 00:00：00",
+      "_depth": 0
+    },
+    {
+      "name": "batch_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "幂等请求id",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "verify_count",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "当次核销的次数",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "cert_key",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "卡券密码",
+      "example": "12345",
+      "_depth": 0
+    },
+    {
+      "name": "cert_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "卡券类型：0-电商三方卡券，1-即时零售提货券/电商服饰自提/电商到店安装场景（请传入1），不传默认是0（电商三方卡券）核销方式",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店Id（提货券核销必传）",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "verify_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三方订单Id",
+      "example": "123123",
+      "_depth": 0
+    },
+    {
+      "name": "check_verify_order_id",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否检查订单Id（verify_order_id）和卡券号码（cert_no）的关联关系",
+      "example": "false",
+      "_depth": 0
+    },
+    {
+      "name": "vehicle_identity",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "车架码（电动车自提）",
+      "example": "12345",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数错误（sub_code: isv.missing-parameter:000002）",
+      "action": "参数错误",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010002:非未使用状态电子凭证禁止核销（sub_code: isv.business-failed:010002）",
+      "action": "010002:非未使用状态电子凭证禁止核销",
+      "sub_code": "isv.business-failed:010002",
+      "sub_msg": "010002:非未使用状态电子凭证禁止核销"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 030001:UpdateCertInfo error（sub_code: isv.business-failed:030001）",
+      "action": "030001:UpdateCertInfo error",
+      "sub_code": "isv.business-failed:030001",
+      "sub_msg": "030001:UpdateCertInfo error"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 核销码与订单不匹配，请重新核对订单（sub_code: isv.business-failed:010021）",
+      "action": "核销码与订单不匹配，请重新核对订单",
+      "sub_code": "isv.business-failed:010021",
+      "sub_msg": "核销码与订单不匹配，请重新核对订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010009:核销数量超出最大可核销数量（sub_code: isv.business-failed:010009）",
+      "action": "010009:核销数量超出最大可核销数量",
+      "sub_code": "isv.business-failed:010009",
+      "sub_msg": "010009:核销数量超出最大可核销数量"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010017:未在有效期内禁止核销（sub_code: isv.business-failed:010017）",
+      "action": "010017:未在有效期内禁止核销",
+      "sub_code": "isv.business-failed:010017",
+      "sub_msg": "010017:未在有效期内禁止核销"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010006:找不到该电子凭证（sub_code: isv.business-failed:10006）",
+      "action": "找不到该电子凭证",
+      "sub_code": "isv.business-failed:10006",
+      "sub_msg": "010006:找不到该电子凭证"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010014:卡密校验失败（sub_code: isv.business-failed:010014）",
+      "action": "010014:卡密校验失败",
+      "sub_code": "isv.business-failed:010014",
+      "sub_msg": "010014:卡密校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010016:订单中还存在未处理的售后，请先完成售后单处理（sub_code: isv.business-failed:010016）",
+      "action": "010016:订单中还存在未处理的售后，请先完成售后单处理",
+      "sub_code": "isv.business-failed:010016",
+      "sub_msg": "010016:订单中还存在未处理的售后，请先完成售后单处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1（sub_code: isv.business-failed:9）",
+      "action": "1",
+      "sub_code": "isv.business-failed:9",
+      "sub_msg": "1"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 2（sub_code: isv.business-failed:8）",
+      "action": "2",
+      "sub_code": "isv.business-failed:8",
+      "sub_msg": "2"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3（sub_code: isv.business-failed:30002）",
+      "action": "3",
+      "sub_code": "isv.business-failed:30002",
+      "sub_msg": "3"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 009999:系统内部错误（sub_code: isv.business-failed:9999）",
+      "action": "009999:系统内部错误",
+      "sub_code": "isv.business-failed:9999",
+      "sub_msg": "009999:系统内部错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020005:查询订单失败（sub_code: isv.business-failed:20005）",
+      "action": "020005:查询订单失败",
+      "sub_code": "isv.business-failed:20005",
+      "sub_msg": "020005:查询订单失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020008:卡券查询失败（sub_code: isv.business-failed:20008）",
+      "action": "020008:卡券查询失败",
+      "sub_code": "isv.business-failed:20008",
+      "sub_msg": "020008:卡券查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020027:门店查询失败（sub_code: isv.business-failed:20027）",
+      "action": "020027:门店查询失败",
+      "sub_code": "isv.business-failed:20027",
+      "sub_msg": "020027:门店查询失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 020011:ByteScheduler处理失败（sub_code: isv.business-failed:20011）",
+      "action": "020011:ByteScheduler处理失败",
+      "sub_code": "isv.business-failed:20011",
+      "sub_msg": "020011:ByteScheduler处理失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单与核销码不匹配，请重新核对订单（sub_code: isv.parameter-invalid:020014）",
+      "action": "订单与核销码不匹配，请重新核对订单",
+      "sub_code": "isv.parameter-invalid:020014",
+      "sub_msg": "订单与核销码不匹配，请重新核对订单"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010029:并发请求,请稍后重试（sub_code: isv.business-failed:10029）",
+      "action": "请重试",
+      "sub_code": "isv.business-failed:10029",
+      "sub_msg": "010029:并发请求,请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店状态异常，无法核销，请联系商家（sub_code: isv.business-failed:20025）",
+      "action": "门店状态异常，无法核销，请联系商家",
+      "sub_code": "isv.business-failed:20025",
+      "sub_msg": "门店状态异常，无法核销，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 核销门店id未正确传参（sub_code: isv.business-failed:20024）",
+      "action": "核销门店id未正确传参",
+      "sub_code": "isv.business-failed:20024",
+      "sub_msg": "核销门店id未正确传参"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不允许跨城市核销，请联系商家（sub_code: isv.business-failed:20032）",
+      "action": "不允许跨城市核销，请联系商家",
+      "sub_code": "isv.business-failed:20032",
+      "sub_msg": "不允许跨城市核销，请联系商家"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 车架码不存在，请核对信息（sub_code: isv.business-failed:020034）",
+      "action": "车架码不存在，请核对信息",
+      "sub_code": "isv.business-failed:020034",
+      "sub_msg": "车架码不存在，请核对信息"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 010031:缺少车架号等发票必填信息（sub_code: isv.business-failed:10031）",
+      "action": "010031:缺少车架号等发票必填信息",
+      "sub_code": "isv.business-failed:10031",
+      "sub_msg": "010031:缺少车架号等发票必填信息"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/verifyV2?app_key=your_appkey_here&method=coupons.verifyV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40002,
+      "msg": "缺少必选参数",
+      "sub_code": "isv.missing-parameter:000002",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/52/797",
+  "updatedAt": "2026-10-20",
+  "_file_stem": "coupon-coupons-verifyV2"
+}

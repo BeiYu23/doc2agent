@@ -1,0 +1,124 @@
+{
+  "id": "doudian.creative.product.material.editCompositeVideo",
+  "platform": "doudian",
+  "group": "creative",
+  "name": "product.material.editCompositeVideo",
+  "description": "商品元视频创意编辑",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 创意管理API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "material_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "(作品)素材id",
+      "example": "11321231",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "(作品)素材名称",
+      "example": "创意素材",
+      "_depth": 0
+    },
+    {
+      "name": "pass_through_extra",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "扩展属性，开发者自定义数据，存放主图视频的编辑信息，平台不做逻辑处理",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "vid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资源文件uri",
+      "example": "v0377bg10003civ1de3c77u6bfuh84ag",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "商品id",
+      "example": "11123123",
+      "_depth": 0
+    },
+    {
+      "name": "is_direct_apply",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "创建完是否直接发布应用，true-是，fasle-否，默认fasle；",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "material_id",
+      "type": "number",
+      "description": "(作品)素材id",
+      "example": "111"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效入参（sub_code: isv.parameter-invalid:2012004）",
+      "action": "isv检查入参",
+      "sub_code": "isv.parameter-invalid:2012004",
+      "sub_msg": "无效入参"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2012001）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2012001",
+      "sub_msg": "系统错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=product.material.editCompositeVideo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "material_id": "111"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2012004",
+      "sub_msg": "无效入参"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1358/4238",
+  "updatedAt": "2023-08-02",
+  "_file_stem": "creative-product-material-editCompositeVideo"
+}

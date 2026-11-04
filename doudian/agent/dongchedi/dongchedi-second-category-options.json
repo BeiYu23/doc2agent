@@ -1,0 +1,104 @@
+{
+  "id": "doudian.dongchedi.second.category.options",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.category.options",
+  "description": "【二方接口】获取店铺的可选类目",
+  "method": "GET",
+  "path": "/second/category/options",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "parentCid",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "父类目id，获取一级类目，传0",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "filterPersonal",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "结果是否过滤个人商家不可选类目",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "displayAll",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否展示所有类目",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "categoryList",
+      "type": "array",
+      "description": "查询结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / shopId不能为空（sub_code: isp.service-error:300002）",
+      "action": "shopId不能为空",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "shopId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / parentCid参数非法（sub_code: isp.service-error:300003）",
+      "action": "parentCid参数非法",
+      "sub_code": "isp.service-error:300003",
+      "sub_msg": "parentCid参数非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/category/options?app_key=your_appkey_here&method=second.category.options&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "categoryList": [
+          {
+            "id": "1",
+            "isLeaf": "1",
+            "level": "level",
+            "name": "test"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "shopId不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6838",
+  "updatedAt": "2024-12-12",
+  "_file_stem": "dongchedi-second-category-options"
+}

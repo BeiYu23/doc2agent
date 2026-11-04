@@ -1,0 +1,162 @@
+{
+  "id": "doudian.alliance.alliance.colonelActivityProductAudit",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.colonelActivityProductAudit",
+  "description": "专属团长活动商品审核接口",
+  "method": "GET",
+  "path": "/alliance/colonelActivityProductAudit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.10）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "团长活动id",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "apply_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "团长商品申请ID。（可在活动商品查询接口中获取）",
+      "example": "[123124,4342311]",
+      "_depth": 0
+    },
+    {
+      "name": "operation",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "审核信息（0：通过； 1：拒绝）",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "repeat_apply",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否允许二次报名（true:允许，false:不允许）",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "suggest_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "审核建议",
+      "example": "sakfhkjsd'",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_audit_info",
+      "type": "array",
+      "description": "审核结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动不是处在报名中，不能审核（sub_code: isv.business-failed:4140）",
+      "action": "活动不是处在报名中，不能审核",
+      "sub_code": "isv.business-failed:4140",
+      "sub_msg": "活动不是处在报名中，不能审核"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "请稍候再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前用户不是创建活动的用户（sub_code: isv.business-failed:4139）",
+      "action": "当前用户不是创建活动的用户",
+      "sub_code": "isv.business-failed:4139",
+      "sub_msg": "当前用户不是创建活动的用户"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 活动ID不存在（sub_code: isv.business-failed:4138）",
+      "action": "活动ID不存在",
+      "sub_code": "isv.business-failed:4138",
+      "sub_msg": "活动ID不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8192:商品3662679639140211700存在次日生效的费率，请次日再来审批（sub_code: isv.business-failed:8192）",
+      "action": "8192:商品3662679639140211700存在次日生效的费率，请次日再来审批",
+      "sub_code": "isv.business-failed:8192",
+      "sub_msg": "8192:商品3662679639140211700存在次日生效的费率，请次日再来审批"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "4200:账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/colonelActivityProductAudit?app_key=your_appkey_here&method=alliance.colonelActivityProductAudit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_audit_info": [
+          {
+            "apply_id": "111",
+            "reject_reason": "商品不在该活动中"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4140",
+      "sub_msg": "活动不是处在报名中，不能审核"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/971",
+  "updatedAt": "2022-09-07",
+  "_file_stem": "alliance-alliance-colonelActivityProductAudit"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "doudian.creative.product.sellPointList",
+  "platform": "doudian",
+  "group": "creative",
+  "name": "product.sellPointList",
+  "description": "查询商品卖点列表",
+  "method": "GET",
+  "path": "/product/sellPointList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 创意管理API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "商品id",
+      "example": "3655859374502583355",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_sell_point_list",
+      "type": "array",
+      "description": "商品卖点列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/sellPointList?app_key=your_appkey_here&method=product.sellPointList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_sell_point_list": [
+          {
+            "content": "创新设计",
+            "sell_point_category": "趋势话题",
+            "sell_point_category_id": "18",
+            "sell_point_id": "1068"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1358/5979",
+  "updatedAt": "2023-12-25",
+  "_file_stem": "creative-product-sellPointList"
+}

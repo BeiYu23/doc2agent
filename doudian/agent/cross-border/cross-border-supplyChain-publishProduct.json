@@ -1,0 +1,777 @@
+{
+  "id": "doudian.cross-border.supplyChain.publishProduct",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "supplyChain.publishProduct",
+  "description": "发布货品",
+  "method": "GET",
+  "path": "/supplyChain/publishProduct",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "bmp_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "行业身份（跨境pop：xiaodian.crossborder）",
+      "example": "xiaodian.crossborder",
+      "_depth": 0
+    },
+    {
+      "name": "supplier_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "供应商id",
+      "example": "11111",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "叶子类目id",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "item_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "货品类型 1:普通货品 2:配件 6:包材 7:耗材",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "product_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品名称",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "product_desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "货品描述",
+      "example": "测试",
+      "_depth": 0
+    },
+    {
+      "name": "category_props",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "类目属性列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "属性识别数据（传入属性接口用于确认是哪个属性，与获取属性接口的prop_key保持一致）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "属性id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性名称",
+      "example": "品牌",
+      "_depth": 2
+    },
+    {
+      "name": "prop_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性编码",
+      "example": "brand",
+      "_depth": 2
+    },
+    {
+      "name": "is_multi",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否多选",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "属性值信息（不是多选时使用这一字段）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 2
+    },
+    {
+      "name": "prop_val_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "多选下，属性值信息（多选时使用这一字段）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 2
+    },
+    {
+      "name": "is_need_batch",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否批次管理 1:是 0:否 （跨境pop须填“是”）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "batch_props",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "批次管理属性列表（需要批次管理时填写；跨境pop须将“生产批号采集”、“入库业务单号”、“入库日期”、“采集生产日期”、“采集失效日期”填写“是”）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "属性识别数据（传入属性接口用于确认是哪个属性，与获取属性接口的prop_key保持一致）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "属性id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性名称",
+      "example": "品牌",
+      "_depth": 2
+    },
+    {
+      "name": "prop_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性编码",
+      "example": "brand",
+      "_depth": 2
+    },
+    {
+      "name": "is_multi",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否多选",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "属性值（不是多选时使用这一字段）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 2
+    },
+    {
+      "name": "prop_val_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "多选下，属性值信息（多选时使用这一字段）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 2
+    },
+    {
+      "name": "is_need_valid",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "是否需要效期管理 1:是 0:否",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "period_props",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "效期属性列表（需要效期管理时填写）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "属性识别数据（传入属性接口用于确认是哪个属性，与获取属性接口的prop_key保持一致）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "属性id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性名称",
+      "example": "品牌",
+      "_depth": 2
+    },
+    {
+      "name": "prop_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性编码",
+      "example": "brand",
+      "_depth": 2
+    },
+    {
+      "name": "is_multi",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否多选",
+      "example": "false",
+      "_depth": 1
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "属性值信息（不是多选时使用这一字段）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 2
+    },
+    {
+      "name": "prop_val_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "多选下，属性值信息（多选时使用这一字段）",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 2
+    },
+    {
+      "name": "skus",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "货品下的sku",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sku_props",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "sku属性列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "属性识别数据（传入属性接口用于确认是哪个属性，与获取属性接口的prop_key保持一致）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "属性id",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性名称",
+      "example": "品牌",
+      "_depth": 3
+    },
+    {
+      "name": "prop_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性编码",
+      "example": "brand",
+      "_depth": 3
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "属性值信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 3
+    },
+    {
+      "name": "sku_category_props",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "sku级类目属性列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "属性识别数据（传入属性接口用于确认是哪个属性，与获取属性接口的prop_key保持一致）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "prop_key_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "属性id",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "prop_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性名称",
+      "example": "品牌",
+      "_depth": 3
+    },
+    {
+      "name": "prop_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性编码",
+      "example": "brand",
+      "_depth": 3
+    },
+    {
+      "name": "is_multi",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "是否多选",
+      "example": "false",
+      "_depth": 2
+    },
+    {
+      "name": "prop_val",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "属性值（不是多选时使用这一字段）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 3
+    },
+    {
+      "name": "prop_val_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "多选下，属性值信息（多选时使用这一字段）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "prop_value_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "属性值id",
+      "example": "111",
+      "_depth": 3
+    },
+    {
+      "name": "prop_value",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "属性值",
+      "example": "是",
+      "_depth": 3
+    },
+    {
+      "name": "image",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "sku维度的图片（应传入使用上传接口获取的URL）",
+      "example": "https://example.com/xxx.jpg",
+      "_depth": 1
+    },
+    {
+      "name": "is_suite",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "是否组套 1:是 0:否",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "extend_feature01",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段1",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "extend_feature02",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段2",
+      "example": "222",
+      "_depth": 0
+    },
+    {
+      "name": "business_model",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "经营模式（跨境pop：/）",
+      "example": "/",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数（sub_code: isv.parameter-invalid:400001）",
+      "action": "请检查传入的参数",
+      "sub_code": "isv.parameter-invalid:400001",
+      "sub_msg": "非法的参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 该条码已存在（sub_code: isv.parameter-invalid:3001）",
+      "action": "请检查条码属性是否与已有货品发生重复",
+      "sub_code": "isv.parameter-invalid:3001",
+      "sub_msg": "该条码已存在"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 内部服务返回错误（sub_code: isp.service-error:200001）",
+      "action": "请检查传入的参数并稍后重试",
+      "sub_code": "isp.service-error:200001",
+      "sub_msg": "内部服务返回错误"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少行业参数（sub_code: isv.missing-parameter:400002）",
+      "action": "请检查传入的 BmpCode 参数并重试",
+      "sub_code": "isv.missing-parameter:400002",
+      "sub_msg": "缺少行业参数"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 行业身份不支持（sub_code: isv.parameter-invalid:400003）",
+      "action": "请检查传入的 BmpCode 参数并重试",
+      "sub_code": "isv.parameter-invalid:400003",
+      "sub_msg": "行业身份不支持"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺少业务类型（sub_code: isv.missing-parameter:400004）",
+      "action": "请检查传入的 BusinessModel",
+      "sub_code": "isv.missing-parameter:400004",
+      "sub_msg": "缺少业务类型"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 业务类型不支持（sub_code: isv.parameter-invalid:400005）",
+      "action": "请检查传入的 BusinessModel",
+      "sub_code": "isv.parameter-invalid:400005",
+      "sub_msg": "业务类型不支持"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 效期属性计算失败（sub_code: isp.service-error:200013）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:200013",
+      "sub_msg": "效期属性计算失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 调用发品内部逻辑失败（sub_code: isp.service-error:200014）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:200014",
+      "sub_msg": "调用发品内部逻辑失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3201:Redis加锁异常（sub_code: isv.business-failed:3201）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:3201",
+      "sub_msg": "3201:Redis加锁异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 1000:服务异常（sub_code: isv.business-failed:1000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "1000:服务异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3202:Redis加锁失败（sub_code: isv.business-failed:3202）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:3202",
+      "sub_msg": "3202:Redis加锁失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/publishProduct?app_key=your_appkey_here&method=supplyChain.publishProduct&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "results": [
+            {
+              "cargo_code": "11111",
+              "external_cargo_code": "11111"
+            }
+          ]
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:400001",
+      "sub_msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6325",
+  "updatedAt": "2024-05-16",
+  "_file_stem": "cross-border-supplyChain-publishProduct"
+}

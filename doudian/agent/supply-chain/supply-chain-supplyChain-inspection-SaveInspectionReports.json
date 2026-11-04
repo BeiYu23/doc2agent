@@ -1,0 +1,446 @@
+{
+  "id": "doudian.supply-chain.supplyChain.inspection.SaveInspectionReports",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.inspection.SaveInspectionReports",
+  "description": "创建/编辑验机报告",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "inspection_report_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "报告列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "image_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "验机报告图片信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "appearance_images",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "外观实拍图（TaggedImage）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片 URL",
+      "example": "http://ssxxxx",
+      "_depth": 3
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外观图片类别",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "defect_images",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "瑕疵实拍图",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片 URL",
+      "example": "图片 URL",
+      "_depth": 3
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外观图片类别",
+      "example": "1",
+      "_depth": 3
+    },
+    {
+      "name": "reject_detail_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "驳回详情列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "reject_content_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "驳回内容类型",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "reject_content_index",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "驳回内容索引（从0开始）",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "实拍图类型（如果驳回内容是实拍图）",
+      "example": "实拍图类型（如果驳回内容是实拍图）",
+      "_depth": 2
+    },
+    {
+      "name": "reject_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驳回原因",
+      "example": "驳回原因",
+      "_depth": 2
+    },
+    {
+      "name": "base_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "验机报告基础信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "inspection_report_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "验机报告 ID",
+      "example": "验机报告 ID",
+      "_depth": 2
+    },
+    {
+      "name": "reject_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "驳回原因",
+      "example": "驳回原因",
+      "_depth": 2
+    },
+    {
+      "name": "model_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "型号 ID",
+      "example": "型号 ID",
+      "_depth": 2
+    },
+    {
+      "name": "category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目名",
+      "example": "类目名",
+      "_depth": 2
+    },
+    {
+      "name": "qc_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检中心的验机报告编号",
+      "example": "质检中心的验机报告编号",
+      "_depth": 2
+    },
+    {
+      "name": "brand_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌名",
+      "example": "品牌名",
+      "_depth": 2
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "备注",
+      "example": "备注",
+      "_depth": 2
+    },
+    {
+      "name": "collection_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准集编码",
+      "example": "标准集编码",
+      "_depth": 2
+    },
+    {
+      "name": "brand_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "品牌 ID",
+      "example": "112",
+      "_depth": 2
+    },
+    {
+      "name": "create_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建时间（时间戳）",
+      "example": "1111111",
+      "_depth": 2
+    },
+    {
+      "name": "fineness",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "成色",
+      "example": "成色",
+      "_depth": 2
+    },
+    {
+      "name": "reject_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "驳回时间（时间戳）",
+      "example": "1122211",
+      "_depth": 2
+    },
+    {
+      "name": "imei",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "IMEI",
+      "example": "1112222",
+      "_depth": 2
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态",
+      "example": "0",
+      "_depth": 2
+    },
+    {
+      "name": "model_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "型号名",
+      "example": "型号名",
+      "_depth": 2
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目 ID",
+      "example": "1000007628",
+      "_depth": 2
+    },
+    {
+      "name": "cover_image",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "封面图（用于列表页展示）",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "appearance_image_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外观图片类别",
+      "example": "外观图片类别",
+      "_depth": 3
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片 URL",
+      "example": "http://ssxxxx",
+      "_depth": 3
+    },
+    {
+      "name": "flow_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检流程列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "flow_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检流程的 ID",
+      "example": "质检流程的 ID",
+      "_depth": 2
+    },
+    {
+      "name": "flow_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "质检流程的名称",
+      "example": "质检流程的名称",
+      "_depth": 2
+    },
+    {
+      "name": "item_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "质检项的列表",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "item_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准项code",
+      "example": "标准项code",
+      "_depth": 3
+    },
+    {
+      "name": "values",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "标准项值",
+      "example": "标准项值",
+      "_depth": 3
+    },
+    {
+      "name": "item_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "标准项名称",
+      "example": "标准项名称",
+      "_depth": 3
+    },
+    {
+      "name": "merge_duplicate_imei",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否合并重复 IMEI 的报告",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "保存结果",
+      "example": ""
+    },
+    {
+      "name": "code",
+      "type": "mixed",
+      "description": "执行编码",
+      "example": "0"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "执行信息",
+      "example": "success"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyChain.inspection.SaveInspectionReports&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "code": "0",
+        "data": {
+          "result_list": [
+            {
+              "fail_reason": "保存失败原因",
+              "inspection_report_id": "验机报告 ID",
+              "is_duplicate_imei": "true",
+              "succeed": "true"
+            }
+          ]
+        },
+        "msg": "success"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/8265",
+  "updatedAt": "2026-05-06",
+  "_file_stem": "supply-chain-supplyChain-inspection-SaveInspectionReports"
+}

@@ -1,0 +1,242 @@
+{
+  "id": "doudian.tool.token.create",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "token.create",
+  "description": "生成token API。创建token成功即可，可以定期调/token/refresh接口来刷新token避免过期，请不要频繁的调用！\n推荐使用SDK进行token获取：https://op.jinritemai.com/docs/guide-docs/1",
+  "method": "GET",
+  "path": "/token/create",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V2.13）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "授权码；参数必传，工具型应用: 传code值；自用型应用:传\"\"",
+      "example": "82bdc687-eff1-4f63-8444-0b43086c25fd",
+      "_depth": 0
+    },
+    {
+      "name": "grant_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "授权类型 ；【工具型应用:authorization_code  自用型应用:authorization_self】，如果自用型应用有授权code，传authorization_code",
+      "example": "authorization_code",
+      "_depth": 0
+    },
+    {
+      "name": "test_shop",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "判断测试店铺标识 ，非必传，若新增测试店铺传1，若不是则不必传",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺ID，抖店自研应用使用。当auth_subject_type不为空时，该字段请勿传值，请将值传入到auth_id字段中",
+      "example": "17239",
+      "_depth": 0
+    },
+    {
+      "name": "auth_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "授权id，配合auth_subject_type字段使用。当auth_subject_type不为空时，请使用auth_id字段传值，shop_id请勿使用。",
+      "example": "112334",
+      "_depth": 0
+    },
+    {
+      "name": "auth_subject_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "授权主体类型，配合auth_id字段使用，YunCang -云仓；WuLiuShang -物流商；WLGongYingShang -物流供应商；MiniApp -小程序；MCN-联盟MCN机构；DouKe-联盟抖客 ；Colonel-联盟团长；",
+      "example": "WuLiuShang",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "access_token",
+      "type": "string",
+      "description": "token值。 Tips： 1. 在 access_token 过期前1h之前，ISV使用 refresh_token 刷新时，会返回原来的 access_token 和 refresh_token，但是二者有效期不会变； 2. 在 access_token 过期前1h之内，ISV使用 refresh_token 刷新时，会返回新的 access_token 和 refresh_token，但是原来的 access_token 和 refresh_token 继续有效一个小时； 3. 在 access_token 过期后，ISV使用 refresh_token 刷新时，将获得新的 acces_token 和 refresh_token，同时原来的 acces_token 和 refresh_token 失效；",
+      "example": "5a3bd7d0-1b48-46d6-811e-7e05ace08a2f"
+    },
+    {
+      "name": "expires_in",
+      "type": "number",
+      "description": "过期时间(秒级时间戳)",
+      "example": "412219354"
+    },
+    {
+      "name": "refresh_token",
+      "type": "string",
+      "description": "刷新token值。用于刷新access_token的刷新令牌（有效期：14 天）",
+      "example": "50b6ae40-ed8f-4b60-a4af-2ed743a4b903"
+    },
+    {
+      "name": "scope",
+      "type": "string",
+      "description": "范围",
+      "example": "SCOPE"
+    },
+    {
+      "name": "shop_id",
+      "type": "number",
+      "description": "店铺ID",
+      "example": "11111172"
+    },
+    {
+      "name": "shop_name",
+      "type": "string",
+      "description": "店铺名称",
+      "example": "李飞测试放心花人店一体"
+    },
+    {
+      "name": "authority_id",
+      "type": "string",
+      "description": "授权ID",
+      "example": "3445403781179769176"
+    },
+    {
+      "name": "auth_subject_type",
+      "type": "string",
+      "description": "授权主体类型",
+      "example": "WuLiuShang"
+    },
+    {
+      "name": "encrypt_operator",
+      "type": "string",
+      "description": "操作店铺账号（加密），不支持解密",
+      "example": "x123xxxxxxxxxx"
+    },
+    {
+      "name": "operator_name",
+      "type": "string",
+      "description": "操作店铺账号昵称（脱敏）",
+      "example": "*磊"
+    },
+    {
+      "name": "shop_biz_type",
+      "type": "number",
+      "description": "店铺业务类型。0：普通店铺，1：即时零售连锁店，2：即时零售个体店",
+      "example": "0"
+    },
+    {
+      "name": "toutiao_id",
+      "type": "string",
+      "description": "token生成对应的账号",
+      "example": "121212"
+    },
+    {
+      "name": "token_type",
+      "type": "number",
+      "description": "0表示token是由主账号生成，1表示token由子账号生成",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31006:生成token失败, 店铺授权已失效，请重新引导商家完成店铺授权（sub_code: isv.business-failed:31006）",
+      "action": "店铺授权已失效",
+      "sub_code": "isv.business-failed:31006",
+      "sub_msg": "31006:生成token失败, 店铺授权已失效，请重新引导商家完成店铺授权"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31020:authCode对应的授权不存在（sub_code: isv.business-failed:31020）",
+      "action": "授权不存在",
+      "sub_code": "isv.business-failed:31020",
+      "sub_msg": "31020:authCode对应的授权不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31005:根据appId和shopId未找到授权记录（sub_code: isv.business-failed:31005）",
+      "action": "授权不存在",
+      "sub_code": "isv.business-failed:31005",
+      "sub_msg": "31005:根据appId和shopId未找到授权记录"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31021:authCode已失效，请重新点击去使用按钮（sub_code: isv.business-failed:31021）",
+      "action": "authCode不存在或者过期失效，请重新在商家后台获取code",
+      "sub_code": "isv.business-failed:31021",
+      "sub_msg": "31021:authCode已失效，请重新点击去使用按钮"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31007:生成token失败，code已经失效（code的有效期为10分钟）（sub_code: isv.business-failed:31007）",
+      "action": "authCode已经过期",
+      "sub_code": "isv.business-failed:31007",
+      "sub_msg": "31007:生成token失败，code已经失效（code的有效期为10分钟）"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31012:刷新token失败，有并发请求（sub_code: isv.business-failed:31012）",
+      "action": "create/token接口有并发请求，请减少并发次数",
+      "sub_code": "isv.business-failed:31012",
+      "sub_msg": "31012:刷新token失败，有并发请求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31003:生成token失败（sub_code: isv.business-failed:31003）",
+      "action": "grant_type参数取值不正确,请参照文档根据应用类型填写不同的值",
+      "sub_code": "isv.business-failed:31003",
+      "sub_msg": "31003:生成token失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4:非自用型应用code不能为空（sub_code: isv.business-failed:4）",
+      "action": "非自用型应用code不能为空",
+      "sub_code": "isv.business-failed:4",
+      "sub_msg": "4:非自用型应用code不能为空"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31011:生成token失败, 当前应用不存在（sub_code: isv.business-failed:31011）",
+      "action": "当前应用不存在，请检查请求参数app_key的值",
+      "sub_code": "isv.business-failed:31011",
+      "sub_msg": "31011:生成token失败, 当前应用不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:31006",
+      "sub_msg": "31006:生成token失败, 店铺授权已失效，请重新引导商家完成店铺授权"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/1600",
+  "updatedAt": "2025-01-06",
+  "_file_stem": "tool-token-create"
+}

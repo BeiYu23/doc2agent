@@ -1,0 +1,111 @@
+{
+  "id": "doudian.virtual.trade.contractPhone.sync_info",
+  "platform": "doudian",
+  "group": "virtual",
+  "name": "trade.contractPhone.sync_info",
+  "description": "合约机办理结果同步接口",
+  "method": "GET",
+  "path": "/trade/contractPhone/sync_info",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 虚拟充值API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "店铺单id",
+      "example": "1234",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku单id",
+      "example": "456868",
+      "_depth": 0
+    },
+    {
+      "name": "phone_number",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "合约手机号码",
+      "example": "1388888888",
+      "_depth": 0
+    },
+    {
+      "name": "update_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "发生的时间（单位毫秒）",
+      "example": "12454545454",
+      "_depth": 0
+    },
+    {
+      "name": "contract_result",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1：合约待办理，2：合约办理中，3：合约办理成功，4：合约办理失败",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "合约办理回传备注",
+      "example": "办理完成",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "ret_biz",
+      "type": "object",
+      "description": "返回结构",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/trade/contractPhone/sync_info?app_key=your_appkey_here&method=trade.contractPhone.sync_info&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "ret_biz": {
+          "ret_code": "0",
+          "ret_msg": "回传成功"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/164/2437",
+  "updatedAt": "2022-10-10",
+  "_file_stem": "virtual-trade-contractPhone-sync_info"
+}

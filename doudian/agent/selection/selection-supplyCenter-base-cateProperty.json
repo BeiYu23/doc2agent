@@ -1,0 +1,103 @@
+{
+  "id": "doudian.selection.supplyCenter.base.cateProperty",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.base.cateProperty",
+  "description": "精选货源获取类目属性",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "叶子类目id",
+      "example": "1332132",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "返回列表",
+      "example": ""
+    },
+    {
+      "name": "tpl_type",
+      "type": "number",
+      "description": "模板类型，SPU为1，结构化为2，默认为0（无特殊需求忽略该字段即可）",
+      "example": "2"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照类目属性接口（sub_code: isv.parameter-invalid:6666666）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/1373",
+      "sub_code": "isv.parameter-invalid:6666666",
+      "sub_msg": "参照类目属性接口"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.base.cateProperty&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "category_id": "31918",
+            "diy_type": "1",
+            "has_sub_property": "false",
+            "important_type": "1",
+            "multi_select_max": "5",
+            "options": [
+              {
+                "name": "ON:THE BODY/安宝笛",
+                "sequence": "2",
+                "value": "1062254699",
+                "value_id": "1"
+              }
+            ],
+            "property_id": "14133",
+            "property_name": "材质",
+            "property_type": "1",
+            "relation_id": "1",
+            "required": "0",
+            "sequence": "2",
+            "status": "1",
+            "type": "text"
+          }
+        ],
+        "tpl_type": "2"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:6666666",
+      "sub_msg": "参照类目属性接口"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5326",
+  "updatedAt": "2023-10-25",
+  "_file_stem": "selection-supplyCenter-base-cateProperty"
+}

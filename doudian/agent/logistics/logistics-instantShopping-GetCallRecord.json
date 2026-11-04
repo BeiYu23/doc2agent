@@ -1,0 +1,109 @@
+{
+  "id": "doudian.logistics.instantShopping.GetCallRecord",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "instantShopping.GetCallRecord",
+  "description": "查询骑手-用户通话记录",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "delivery_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "运单id",
+      "example": "a_1234",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "配送商code",
+      "example": "AAA",
+      "_depth": 0
+    },
+    {
+      "name": "distributor_rider_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "骑手id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "exception_code",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "异常报备code",
+      "example": "1001",
+      "_depth": 0
+    },
+    {
+      "name": "exception_descr",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常报备描述",
+      "example": "异常情况1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "record_list",
+      "type": "array",
+      "description": "通话记录集合",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.GetCallRecord&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "record_list": [
+          {
+            "call_result": "0",
+            "call_start_time": "1732000000",
+            "is_call_receipt": "false",
+            "rider_name": "张三",
+            "rider_phone": "13911112222",
+            "ring_time": "1732000000",
+            "ring_time_duration": "10"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/7155",
+  "updatedAt": "2024-12-17",
+  "_file_stem": "logistics-instantShopping-GetCallRecord"
+}

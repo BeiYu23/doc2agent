@@ -1,0 +1,93 @@
+{
+  "id": "doudian.logistics.order.checkPreDelivery",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "order.checkPreDelivery",
+  "description": "查询商家/订单是否可用预发货。如果不传订单ID，则查询店铺维度预发货判定结果。如果传了订单ID，则查询订单维度预发货判定结果。",
+  "method": "GET",
+  "path": "/order/checkPreDelivery",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单ID",
+      "example": "112233",
+      "_depth": 0
+    },
+    {
+      "name": "extra",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "ware_mode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "仓模式, 枚举值：self 自有仓 cloud 云仓 hybrid 混合仓",
+      "example": "cloud",
+      "_depth": 0
+    },
+    {
+      "name": "daily_audit_times",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家每日审单次数",
+      "example": "3",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "can_pre_delivery",
+      "type": "boolean",
+      "description": "是否允许预发货",
+      "example": "false"
+    },
+    {
+      "name": "reason",
+      "type": "string",
+      "description": "原因说明",
+      "example": "店铺存在虚假发货违规单"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comyunc/wms/outbound/create?app_key=your_appkey_here&method=yunc.wms.outbound.create&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/8212",
+  "updatedAt": "2026-04-22",
+  "_file_stem": "logistics-order-checkPreDelivery"
+}

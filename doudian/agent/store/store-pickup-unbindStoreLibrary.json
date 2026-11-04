@@ -1,0 +1,120 @@
+{
+  "id": "doudian.store.pickup.unbindStoreLibrary",
+  "platform": "doudian",
+  "group": "store",
+  "name": "pickup.unbindStoreLibrary",
+  "description": "门店组批量解绑门店",
+  "method": "GET",
+  "path": "/pickup/unbindStoreLibrary",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 自提门店API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_infos",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "门店id列表，最大数量100",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店ID",
+      "example": "100",
+      "_depth": 1
+    },
+    {
+      "name": "source",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "业务类型；2-自提",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "library_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "门店组id",
+      "example": "200",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "failed_file",
+      "type": "string",
+      "description": "失败的文件链接",
+      "example": "-"
+    },
+    {
+      "name": "success_count",
+      "type": "mixed",
+      "description": "成功数量",
+      "example": "1"
+    },
+    {
+      "name": "fail_count",
+      "type": "mixed",
+      "description": "失败数量",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -36:门店数量超过100（sub_code: isv.business-failed:-36）",
+      "action": "检查门店数量",
+      "sub_code": "isv.business-failed:-36",
+      "sub_msg": "-36:门店数量超过100"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -7:入参对象为空（sub_code: isv.business-failed:-7）",
+      "action": "检查入参是否完整",
+      "sub_code": "isv.business-failed:-7",
+      "sub_msg": "-7:入参对象为空"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pickup/unbindStoreLibrary?app_key=your_appkey_here&method=pickup.unbindStoreLibrary&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "fail_count": "0",
+        "failed_file": "-",
+        "success_count": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-36",
+      "sub_msg": "-36:门店数量超过100"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1559/7337",
+  "updatedAt": "2026-06-24",
+  "_file_stem": "store-pickup-unbindStoreLibrary"
+}

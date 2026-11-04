@@ -1,0 +1,170 @@
+{
+  "id": "doudian.alliance.alliance.instituteColonelActivityList",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "alliance.instituteColonelActivityList",
+  "description": "团长活动查询接口",
+  "method": "GET",
+  "path": "/alliance/instituteColonelActivityList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V5.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "活动状态。0：任意状态； 1：未上线； 2：报名未开始； 3：报名中； 4：推广未开始； 5：推广中； 7：报名结束",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "search_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "排序选项，0:创建时间； 1:活动报名开始时间排序；2:活动报名结束时间排序",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "排序顺序, 0：升序；1：降序",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "页码，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "每页数量（最大20）",
+      "example": "20",
+      "_depth": 0
+    },
+    {
+      "name": "activity_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动信息，支持通过活动ID和活动名称搜索",
+      "example": "一个活动",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "institution_id",
+      "type": "number",
+      "description": "机构ID",
+      "example": "11111111"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "活动条数",
+      "example": "10"
+    },
+    {
+      "name": "activity_list",
+      "type": "array",
+      "description": "活动列表",
+      "example": ""
+    },
+    {
+      "name": "colonel_buyin_id",
+      "type": "number",
+      "description": "团长百应ID",
+      "example": "46128341673481234"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:257）",
+      "action": "根据接口文档检查下入参是否合法",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务内部错误，稍候再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 需【招商团长】角色授权后访问（sub_code: isv.business-failed:4197）",
+      "action": "需【招商团长】角色授权后访问",
+      "sub_code": "isv.business-failed:4197",
+      "sub_msg": "需【招商团长】角色授权后访问"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4200:账号状态异常，请检查账号状态（sub_code: isv.business-failed:4200）",
+      "action": "4200:账号状态异常，请检查账号状态",
+      "sub_code": "isv.business-failed:4200",
+      "sub_msg": "4200:账号状态异常，请检查账号状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/alliance/instituteColonelActivityList?app_key=your_appkey_here&method=alliance.instituteColonelActivityList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "activity_list": [
+          {
+            "activity_end_time": "2021-09-02",
+            "activity_id": "11111",
+            "activity_name": "活动1",
+            "activity_start_time": "2021-09-02",
+            "application_end_time": "2021-09-02",
+            "application_start_time": "2021-09-02",
+            "categories_limit": {},
+            "status": "1"
+          }
+        ],
+        "colonel_buyin_id": "46128341673481234",
+        "institution_id": "11111111",
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:257",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/1330",
+  "updatedAt": "2022-09-07",
+  "_file_stem": "alliance-alliance-instituteColonelActivityList"
+}

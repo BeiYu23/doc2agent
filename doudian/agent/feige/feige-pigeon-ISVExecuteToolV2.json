@@ -1,0 +1,224 @@
+{
+  "id": "doudian.feige.pigeon.ISVExecuteToolV2",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.ISVExecuteToolV2",
+  "description": "ISV执行客服工具接口V2",
+  "method": "GET",
+  "path": "/pigeon/ISVExecuteToolV2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_idempotent_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工具执行幂等ID，过期时间2小时，建议格式：{tool_code}_{唯一标识}",
+      "example": "\"test_basic_script_001\"",
+      "_depth": 0
+    },
+    {
+      "name": "pigeon_biz_type",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "业务身份，固定传2（国内电商场景）",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "product_id_list",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商品ID列表，JSON数组字符串\n                                                    // 必传的工具: GOODS_RECOMMEND",
+      "example": "\"[\\\"3740656536352063689\\\",\\\"3686240338055397653\\\"]\"",
+      "_depth": 0
+    },
+    {
+      "name": "switch_to_human_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "转人工类型\n                                                    // 必传的工具: DIRECT_SWITCH_HUMAN\n                                                    // 20001: 消费者主动转人工",
+      "example": "\"20001\"",
+      "_depth": 0
+    },
+    {
+      "name": "tool_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "工具编码，支持20种工具类型",
+      "example": "\"BASIC_SCRIPT\"",
+      "_depth": 0
+    },
+    {
+      "name": "user_entry",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户入口\n                                                    // 必传的工具: DIRECT_SWITCH_HUMAN",
+      "example": "\"0\"",
+      "_depth": 0
+    },
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "执行对象ID，通常为消费者ID",
+      "example": "\"1@#0n0iM1mdffUpnP+ZsNTCDQIjknfxQfgiUOZRJFU5nm1jAuO4EtbjEEqYA4G9lepbLTocwRkymA==\"",
+      "_depth": 0
+    },
+    {
+      "name": "msg_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "消息ID（用你要回复的那条消息的ID）",
+      "example": "\"1851031936466972\"",
+      "_depth": 0
+    },
+    {
+      "name": "talk_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "子会话ID",
+      "example": "\"7581826770509366591\"",
+      "_depth": 0
+    },
+    {
+      "name": "script",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "必传的工具: BASIC_SCRIPT（回复话术）, SEND_IMAGE（图片URL）",
+      "example": "\"这是ISV接口测试发送的一条回复消息\"",
+      "_depth": 0
+    },
+    {
+      "name": "sku_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "SKU订单ID\n                                                    // 必传的工具: APPLY_REFUND, APPLY_EXCHANGE, APPLY_AFTERSALE, CLARIFY_ORDER, \n                                                    //            URGE_AFTERSALE, AFTERSALE_PROGRESS, SENDBACK_GOODS, REVERSE_LOGISTIC, \n                                                    //            FREIGHT_REFUND",
+      "example": "\"6948640812388390043\"",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后ID\n                                                    // 必传的工具: URGE_AFTERSALE, AFTERSALE_PROGRESS, SENDBACK_GOODS, REVERSE_LOGISTIC",
+      "example": "\"147258183017671555\"",
+      "_depth": 0
+    },
+    {
+      "name": "trace_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "生命周期ID（链路追踪）",
+      "example": "\"trace_test_001\"",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商城订单ID\n                                                    // 必传的工具: ACK_ORDER_ADDRESS, APPLY_REFUND, APPLY_EXCHANGE, APPLY_AFTERSALE, \n                                                    //            URGE_DELIVERY, CLARIFY_ORDER, URGE_AFTERSALE, AFTERSALE_PROGRESS, \n                                                    //            SENDBACK_GOODS, REVERSE_LOGISTIC, FREIGHT_REFUND, LOGISTIC, \n                                                    //            GIFT_LOGISTIC, INVOICE",
+      "example": "\"6948640812388390043\"",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "产品ID\n                                                    // 必传的工具: URGE_PURCHASE, BASIC_PRODUCT_CARD",
+      "example": "\"3691024156255715625\"",
+      "_depth": 0
+    },
+    {
+      "name": "intents",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "意图信息，JSON数组字符串\n                                                    // 必传的工具: GIFT_LOGISTIC",
+      "example": "\"[{\\\"demand\\\":\\\"\\\",\\\"slot\\\":\\\"\\\",\\\"query\\\":\\\"\\\",\\\"reply\\\":\\\"\\\"}]\"",
+      "_depth": 0
+    },
+    {
+      "name": "ext",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展字段",
+      "example": "\"\"",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "string",
+      "description": "处理结果\n                                                    // SUCCESS: 执行成功\n                                                    // FAILED: 执行失败",
+      "example": "\"SUCCESS\""
+    },
+    {
+      "name": "trace_id",
+      "type": "string",
+      "description": "链路追踪ID，与请求中传入的trace_id一致",
+      "example": "\"trace_test_001\""
+    },
+    {
+      "name": "biz_err",
+      "type": "object",
+      "description": "业务异常信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/ISVExecuteToolV2?app_key=your_appkey_here&method=pigeon.ISVExecuteToolV2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "biz_err": {
+          "code": "0",
+          "msg": "\"success\""
+        },
+        "result": "\"SUCCESS\"",
+        "trace_id": "\"trace_test_001\""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/8028",
+  "updatedAt": "2026-01-14",
+  "_file_stem": "feige-pigeon-ISVExecuteToolV2"
+}

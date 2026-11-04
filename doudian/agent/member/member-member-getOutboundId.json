@@ -1,0 +1,191 @@
+{
+  "id": "doudian.member.member.getOutboundId",
+  "platform": "doudian",
+  "group": "member",
+  "name": "member.getOutboundId",
+  "description": "获取外呼id",
+  "method": "GET",
+  "path": "/member/getOutboundId",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "doudian_open_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单接口返回的doudian_open_id（t+2）",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "encrypt_uid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外呼人群包计划生成的加密外呼ID",
+      "example": "#sdiahdiaihhidhaihiahd",
+      "_depth": 0
+    },
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "店铺单id",
+      "example": "12312312413",
+      "_depth": 0
+    },
+    {
+      "name": "encrypt_phone",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "加密手机号",
+      "example": "$$sfasef24123$$",
+      "_depth": 0
+    },
+    {
+      "name": "outbound_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "外呼类型 0默认 1教育类(手机号和店铺单id必传)",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "doudian_open_id_v2",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单接口返回的doudian_open_id（实时）",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "after_sale_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后单id",
+      "example": "12312312413",
+      "_depth": 0
+    },
+    {
+      "name": "is_downgrade",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否自动降级使用收货人手机号",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "outbound_id",
+      "type": "string",
+      "description": "外呼id，有效期：1h，人群包外呼ID有效期：24h",
+      "example": "17037442535v6Nz7_3u0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参错误（sub_code: isv.parameter-invalid:628002001）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "入参错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 生成outboundId错误（sub_code: isp.service-error:628004920）",
+      "action": "生成outboundId错误，重试或提交工单咨询",
+      "sub_code": "isp.service-error:628004920",
+      "sub_msg": "生成outboundId错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:628004206）",
+      "action": "内部错误，重试或提交工单咨询",
+      "sub_code": "isp.service-error:628004206",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 火山账号与开发者账号不匹配（sub_code: isv.business-failed:628002004）",
+      "action": "确保火山账号与开发者账号一致",
+      "sub_code": "isv.business-failed:628002004",
+      "sub_msg": "火山账号与开发者账号不匹配"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 用户非店铺会员（sub_code: isv.business-failed:628003200）",
+      "action": "入参doudian_open_id对应订单用户非店铺会员，无法获取outboundId，建议检查入参信息",
+      "sub_code": "isv.business-failed:628003200",
+      "sub_msg": "用户非店铺会员"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004001:GetUserMobiles failed.（sub_code: isv.business-failed:628004001）",
+      "action": "628004001:GetUserMobiles failed.",
+      "sub_code": "isv.business-failed:628004001",
+      "sub_msg": "628004001:GetUserMobiles failed."
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004002:RPC超时（sub_code: isv.business-failed:628004002）",
+      "action": "628004002:RPC超时",
+      "sub_code": "isv.business-failed:628004002",
+      "sub_msg": "628004002:RPC超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004950:member custom qps limit|cmp.ecom.open_ability:default:lq:|cmp.ecom.outer_member:default:lq:|GetUserMobiles|prod| onOverQPSLimit, instance=fdbd:dc03:13:945::105,fed-dp-71d4013a60-7c8888b7fb-2hq9w, err_type=limiter_sdk_err_request_limited（sub_code: isv.business-failed:628004950）",
+      "action": "调用频率过高，控制调用QPS",
+      "sub_code": "isv.business-failed:628004950",
+      "sub_msg": "628004950:member custom qps limit|cmp.ecom.open_ability:default:lq:|cmp.ecom.outer_member:default:lq:|GetUserMobiles|prod| onOverQPSLimit, instance=fdbd:dc03:13:945::105,fed-dp-71d4013a60-7c8888b7fb-2hq9w, err_type=limiter_sdk_err_request_limited"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628004000:read tcp [fdbd:dc02:ff:2:1:174:80:147]:53986->[fdbd:dc02:d:264::33]:9719: i/o timeout（sub_code: isv.business-failed:628004000）",
+      "action": "系统抖动，稍后重试",
+      "sub_code": "isv.business-failed:628004000",
+      "sub_msg": "628004000:read tcp [fdbd:dc02:ff:2:1:174:80:147]:53986->[fdbd:dc02:d:264::33]:9719: i/o timeout"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/getOutboundId?app_key=your_appkey_here&method=member.getOutboundId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "outbound_id": "17037442535v6Nz7_3u0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "入参错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/6114",
+  "updatedAt": "2026-03-17",
+  "_file_stem": "member-member-getOutboundId"
+}

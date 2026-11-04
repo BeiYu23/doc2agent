@@ -1,0 +1,72 @@
+{
+  "id": "doudian.miniapp.mini.activity.rights",
+  "platform": "doudian",
+  "group": "miniapp",
+  "name": "mini.activity.rights",
+  "description": "根据商品查询用户权益现状",
+  "method": "GET",
+  "path": "/mini/activity/rights",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 电商小程序（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品id列表",
+      "example": "[111,222,333]",
+      "_depth": 0
+    },
+    {
+      "name": "dy_open_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖音openId",
+      "example": "777",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result_map",
+      "type": "string",
+      "description": "商品id->权益map",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/mini/activity/rights?app_key=your_appkey_here&method=mini.activity.rights&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result_map": {}
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1434/6746",
+  "updatedAt": "2024-08-05",
+  "_file_stem": "miniapp-mini-activity-rights"
+}

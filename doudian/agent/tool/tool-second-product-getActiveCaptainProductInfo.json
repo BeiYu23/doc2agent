@@ -1,0 +1,202 @@
+{
+  "id": "doudian.tool.second.product.getActiveCaptainProductInfo",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "second.product.getActiveCaptainProductInfo",
+  "description": "【二方接口】查询生效的团长商品信息",
+  "method": "GET",
+  "path": "/second/product/getActiveCaptainProductInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "trusteeship_product_reqs",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "查询是否托管中的商品活动信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "captain_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "为空则不限团长",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "trusteeship_search_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "trusteeship_product_reqs托管查询类型，默认为一批商品id",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "need_promote_time",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "need_promote_url",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "activity_product_reqs",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "查询是否活动中的商品活动信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "activity_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "为空则不限制活动",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "captain_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "为空则不限团长",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "activity_search_type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "activity_product_reqs活动查询类型，默认为一批商品id",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "activity_product_infos",
+      "type": "array",
+      "description": "商品活动查询结果",
+      "example": ""
+    },
+    {
+      "name": "trusteeship_product_infos",
+      "type": "array",
+      "description": "商品托管查询结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=second.product.getActiveCaptainProductInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "activity_product_infos": [
+          {
+            "activity_id": "1",
+            "activity_name": "1",
+            "captain_avatar": "1",
+            "captain_id": "1",
+            "captain_name": "1",
+            "commission_rate": "1",
+            "origin_activity_id": "1",
+            "origin_instituion_name": "1",
+            "origin_institution_id": "1",
+            "product_id": "1",
+            "product_img": "1",
+            "product_name": "1",
+            "promote_end_time": "1",
+            "promote_start_time": "1",
+            "promote_url": "1",
+            "promotion_id": "1",
+            "search_result": "1",
+            "service_rate": "1",
+            "shop_id": "1",
+            "shop_name": "1"
+          }
+        ],
+        "trusteeship_product_infos": [
+          {
+            "captain_avatar": "1",
+            "captain_buyin_id": "1",
+            "captain_id": "1",
+            "captain_name": "1",
+            "commission_rate": "1",
+            "product_id": "1",
+            "product_img": "1",
+            "product_name": "1",
+            "promote_url": "1",
+            "promotion_id": "1",
+            "search_result": "1",
+            "service_rate": "1",
+            "shop_id": "1",
+            "shop_name": "1",
+            "trusteeship_end_time": "1",
+            "trusteeship_start_time": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7606",
+  "updatedAt": "2025-07-17",
+  "_file_stem": "tool-second-product-getActiveCaptainProductInfo"
+}

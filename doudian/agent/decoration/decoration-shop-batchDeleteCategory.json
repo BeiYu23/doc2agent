@@ -1,0 +1,106 @@
+{
+  "id": "doudian.decoration.shop.batchDeleteCategory",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.batchDeleteCategory",
+  "description": "批量删除类目",
+  "method": "GET",
+  "path": "/shop/batchDeleteCategory",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "tmp_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "页面id,请使用【/shop/openShopPageManagementList】接口查询页面id或访问店铺装修列表页面获取页面id。",
+      "example": "735278978958386",
+      "_depth": 0
+    },
+    {
+      "name": "category_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "分类id列表，如果是一级分类id会删除所有关联的二级分类。单次最多支持传100个id。",
+      "example": "[\"735278978958382\", \"735278978958383\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "tmp_id",
+      "type": "string",
+      "description": "页面id，成功时有值。",
+      "example": "7352789789583868197"
+    },
+    {
+      "name": "category_list",
+      "type": "array",
+      "description": "一级分类列表。成功后返回页面完整分类列表。",
+      "example": ""
+    },
+    {
+      "name": "failed_category_list",
+      "type": "array",
+      "description": "失败分类列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/batchDeleteCategory?app_key=your_appkey_here&method=shop.batchDeleteCategory&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "category_list": [
+          {
+            "children_category_list": [
+              {
+                "cid": "7352789789583868196",
+                "name": "葡萄",
+                "rank": "100"
+              }
+            ],
+            "cid": "7352789789583868198",
+            "name": "水果",
+            "rank": "100"
+          }
+        ],
+        "failed_category_list": [
+          {
+            "cid": "7352789789583868193",
+            "level": "2",
+            "msg": "分类不存在",
+            "name": "水果"
+          }
+        ],
+        "tmp_id": "7352789789583868197"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/6518",
+  "updatedAt": "2024-05-15",
+  "_file_stem": "decoration-shop-batchDeleteCategory"
+}

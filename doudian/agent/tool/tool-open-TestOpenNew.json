@@ -1,0 +1,512 @@
+{
+  "id": "doudian.tool.open.TestOpenNew",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "open.TestOpenNew",
+  "description": "测试使用的API",
+  "method": "GET",
+  "path": "/open/TestOpenNew",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "req_not_must",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_bool",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "1",
+      "example": "11",
+      "_depth": 0
+    },
+    {
+      "name": "req_cons_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_cons_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_cons_bool",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_int16",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_int32",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_list_int64",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_list_string",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_list_bool",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_list_int16",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_list_int32",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "req_list_struct",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sub_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sub_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sub_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "sub_struct",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "1",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sub_struct_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sub_struct_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sub_struct_int32",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sub_struct_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "req_struct",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "1",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "struct_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "struct_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "struct_bool",
+      "in": "body",
+      "type": "boolean",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "struct_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "sub_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sub_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "sub_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "struct_struct",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "1",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "struct_struct_int64",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "struct_struct_string",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "struct_struct_int32",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "struct_struct_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "1",
+      "example": "1",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "res_int64",
+      "type": "number",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_string",
+      "type": "string",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_bool",
+      "type": "boolean",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_cons_int64",
+      "type": "number",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_cons_string",
+      "type": "string",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_cons_bool",
+      "type": "boolean",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_int16",
+      "type": "string",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_int32",
+      "type": "string",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_list_int64",
+      "type": "array",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_list_string",
+      "type": "array",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_list_bool",
+      "type": "array",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_list_int16",
+      "type": "array",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_list_int32",
+      "type": "array",
+      "description": "1",
+      "example": "1"
+    },
+    {
+      "name": "res_list_struct",
+      "type": "array",
+      "description": "1",
+      "example": ""
+    },
+    {
+      "name": "res_struct",
+      "type": "object",
+      "description": "1",
+      "example": ""
+    },
+    {
+      "name": "shop_id",
+      "type": "number",
+      "description": "1",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/open/TestOpenNew?app_key=your_appkey_here&method=open.TestOpenNew&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "res_bool": "1",
+        "res_cons_bool": "1",
+        "res_cons_int64": "1",
+        "res_cons_string": "1",
+        "res_int16": "1",
+        "res_int32": "1",
+        "res_int64": "1",
+        "res_list_bool": "1",
+        "res_list_int16": "1",
+        "res_list_int32": "1",
+        "res_list_int64": "1",
+        "res_list_string": "1",
+        "res_list_struct": [
+          {
+            "sub_int64": "1",
+            "sub_list": "1",
+            "sub_string": "1",
+            "sub_struct": {
+              "sub_struct_int32": "1",
+              "sub_struct_int64": "1",
+              "sub_struct_list": "1",
+              "sub_struct_string": "1"
+            }
+          }
+        ],
+        "res_string": "1",
+        "res_struct": {
+          "struct_bool": "1",
+          "struct_int64": "1",
+          "struct_list": [
+            {
+              "sub_int64": "1",
+              "sub_list": "1",
+              "sub_string": "1"
+            }
+          ],
+          "struct_string": "1",
+          "struct_struct": {
+            "struct_struct_int32": "1",
+            "struct_struct_int64": "1",
+            "struct_struct_list": "1",
+            "struct_struct_string": "1"
+          }
+        },
+        "shop_id": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/2273",
+  "updatedAt": "2022-08-01",
+  "_file_stem": "tool-open-TestOpenNew"
+}

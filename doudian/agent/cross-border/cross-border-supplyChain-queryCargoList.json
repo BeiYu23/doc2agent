@@ -1,0 +1,181 @@
+{
+  "id": "doudian.cross-border.supplyChain.queryCargoList",
+  "platform": "doudian",
+  "group": "cross-border",
+  "name": "supplyChain.queryCargoList",
+  "description": "查询货品列表",
+  "method": "GET",
+  "path": "/supplyChain/queryCargoList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 跨境API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_no",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "当前页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货品编码",
+      "example": "7344945371866677548",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_barcode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "条形码",
+      "example": "6924567890138",
+      "_depth": 0
+    },
+    {
+      "name": "external_cargo_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部货品编码",
+      "example": "22291",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "货品类目id",
+      "example": "22291",
+      "_depth": 0
+    },
+    {
+      "name": "create_start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建时间，开始",
+      "example": "1704067200",
+      "_depth": 0
+    },
+    {
+      "name": "create_end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "创建时间，截止",
+      "example": "1706659200",
+      "_depth": 0
+    },
+    {
+      "name": "flatten_status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "聚合状态.3-已生效,4 -已生效待审批,5-已生效审批拒绝, 6-草稿",
+      "example": "3",
+      "_depth": 0
+    },
+    {
+      "name": "bmp_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "行业身份编码",
+      "example": "xiaodian.crossborder",
+      "_depth": 0
+    },
+    {
+      "name": "cargo_barcode_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "批量查询条码",
+      "example": "1111,22222",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "cargoList",
+      "type": "array",
+      "description": "返回值",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "1000"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/queryCargoList?app_key=your_appkey_here&method=supplyChain.queryCargoList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "cargoList": [
+          {
+            "barcode_list": "111111111",
+            "cargo_code": "123456789",
+            "cargo_name": "测试货品",
+            "external_cargo_code": "1111",
+            "first_cid": "1",
+            "first_cname": "一级类目",
+            "flatten_status": "3",
+            "fourth_cid": "4",
+            "fourth_cname": "四级类目名称",
+            "is_need_valid": "1",
+            "period_of_forbid_sale": "1",
+            "period_of_forbid_take": "1",
+            "period_of_validity": "1",
+            "picture": "http://xxx.jgp",
+            "second_cid": "2",
+            "second_cname": "二级类目",
+            "third_cid": "3",
+            "third_cname": "三级类目名称"
+          }
+        ],
+        "total": "1000"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/53/6328",
+  "updatedAt": "2026-05-28",
+  "_file_stem": "cross-border-supplyChain-queryCargoList"
+}

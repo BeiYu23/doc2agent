@@ -1,0 +1,162 @@
+{
+  "id": "doudian.material.material.uploadVideoAsyncForIsv",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.uploadVideoAsyncForIsv",
+  "description": "isv单个视频上传",
+  "method": "GET",
+  "path": "/material/uploadVideoAsyncForIsv",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件夹id，0为根目录",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片url，必须是公网可访问。url和file_uri二选一，不能同时为空，如果2者都不为空取url",
+      "example": "http://xxx.xxx",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频名称，开发者自定义，不得超过50个字符。",
+      "example": "视频名称.mp4",
+      "_depth": 0
+    },
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二进制文件对应的uri，获取方式请参考：https://op.jinritemai.com/docs/guide-docs/171/1719",
+      "example": "9e1df78157524c63abf7caa9bb1e88e0",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "material_id",
+      "type": "string",
+      "description": "素材id",
+      "example": "7000254886243811628"
+    },
+    {
+      "name": "folder_id",
+      "type": "string",
+      "description": "素材所在文件夹id，0-素材中心的根目录；其他值-表示对应的文件夹id；",
+      "example": "0"
+    },
+    {
+      "name": "is_new",
+      "type": "boolean",
+      "description": "是否是新建，true-新建",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 解析素材格式失败（sub_code: isv.parameter-invalid:20001）",
+      "action": "素材的格式不是素材中心支持的",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "解析素材格式失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:10003）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材库容量不足（sub_code: isv.parameter-invalid:30001）",
+      "action": "删除无用素材 或 联系客服扩容",
+      "sub_code": "isv.parameter-invalid:30001",
+      "sub_msg": "素材库容量不足"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求已生效，请勿重复请求（sub_code: isv.parameter-invalid:310001）",
+      "action": "并发请求，勿重试",
+      "sub_code": "isv.parameter-invalid:310001",
+      "sub_msg": "请求已生效，请勿重复请求"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:10004）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材涉嫌违规，不能上传（sub_code: isv.parameter-invalid:22007）",
+      "action": "素材涉嫌违规，不能上传",
+      "sub_code": "isv.parameter-invalid:22007",
+      "sub_msg": "素材涉嫌违规，不能上传"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材大小超出限制（sub_code: isv.parameter-invalid:22001）",
+      "action": "素材大小超出限制",
+      "sub_code": "isv.parameter-invalid:22001",
+      "sub_msg": "素材大小超出限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材下载失败，请重新上传（sub_code: isv.business-failed:10010）",
+      "action": "素材下载失败，请重新上传",
+      "sub_code": "isv.business-failed:10010",
+      "sub_msg": "素材下载失败，请重新上传"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/material/uploadVideoAsyncForIsv?app_key=your_appkey_here&method=material.uploadVideoAsyncForIsv&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "folder_id": "0",
+        "is_new": "true",
+        "material_id": "7000254886243811628"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "解析素材格式失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/3241",
+  "updatedAt": "2023-03-16",
+  "_file_stem": "material-material-uploadVideoAsyncForIsv"
+}

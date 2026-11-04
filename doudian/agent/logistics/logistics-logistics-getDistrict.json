@@ -1,0 +1,162 @@
+{
+  "id": "doudian.logistics.logistics.getDistrict",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.getDistrict",
+  "description": "四级地址查询接口",
+  "method": "GET",
+  "path": "/logistics/getDistrict",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商, 云仓, , 供应商"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "行政区划code",
+      "example": "CN",
+      "_depth": 0
+    },
+    {
+      "name": "subdistrict",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "返回下级层级",
+      "example": "2",
+      "_depth": 0
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "版本号",
+      "example": "ecom",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "district",
+      "type": "object",
+      "description": "区划信息",
+      "example": ""
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "description": "版本号",
+      "example": "1.0.0"
+    },
+    {
+      "name": "update_time",
+      "type": "string",
+      "description": "更新时间戳",
+      "example": "123456789"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误（sub_code: isv.business-failed:400）",
+      "action": "修改参数重新调用",
+      "sub_code": "isv.business-failed:400",
+      "sub_msg": "参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/getDistrict?app_key=your_appkey_here&method=logistics.getDistrict&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "district": {
+          "centroid": "1.0,2.0",
+          "code": "110000",
+          "description": "市",
+          "level": "1",
+          "name": "北京",
+          "par_regions": [
+            {
+              "centroid": "1.0,2.0",
+              "code": "110000",
+              "description": "市",
+              "level": "1",
+              "name": "北京"
+            }
+          ],
+          "pre_region": {
+            "centroid": "1",
+            "code": "1",
+            "description": "1",
+            "level": "1",
+            "name": "1"
+          },
+          "sub_region": [
+            {
+              "centroid": "1",
+              "code": "110000",
+              "description": "1",
+              "level": "1",
+              "name": "北京",
+              "sub_region": [
+                {
+                  "centroid": "1",
+                  "code": "1",
+                  "description": "1",
+                  "level": "1",
+                  "name": "1",
+                  "sub_region": [
+                    {
+                      "centroid": "[1.0,2.0]",
+                      "code": "1",
+                      "description": "1",
+                      "level": "1",
+                      "name": "1",
+                      "sub_region": [
+                        {
+                          "centroid": "1",
+                          "code": "1",
+                          "description": "1",
+                          "level": "1",
+                          "name": "1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "update_time": "123456789",
+        "version": "1.0.0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:400",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/2905",
+  "updatedAt": "2023-09-15",
+  "_file_stem": "logistics-logistics-getDistrict"
+}

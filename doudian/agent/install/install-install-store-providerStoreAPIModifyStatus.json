@@ -1,0 +1,78 @@
+{
+  "id": "doudian.install.install.store.providerStoreAPIModifyStatus",
+  "platform": "doudian",
+  "group": "install",
+  "name": "install.store.providerStoreAPIModifyStatus",
+  "description": "到店安装门店状态修改",
+  "method": "GET",
+  "path": "/install/store/providerStoreAPIModifyStatus",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 到店安装API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "门店id列表",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "is_enable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "true:上线, false:下线",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -118:门店状态错误，当前状态不可被操作（sub_code: isv.business-failed:-118）",
+      "action": "清确认门店状态是否正确",
+      "sub_code": "isv.business-failed:-118",
+      "sub_msg": "-118:门店状态错误，当前状态不可被操作"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / -102:获取服务商门店列表失败（sub_code: isv.business-failed:-102）",
+      "action": "请稍后再试",
+      "sub_code": "isv.business-failed:-102",
+      "sub_msg": "-102:获取服务商门店列表失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=install.store.providerStoreAPIModifyStatus&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:-118",
+      "sub_msg": "-118:门店状态错误，当前状态不可被操作"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1602/7679",
+  "updatedAt": "2026-06-02",
+  "_file_stem": "install-install-store-providerStoreAPIModifyStatus"
+}

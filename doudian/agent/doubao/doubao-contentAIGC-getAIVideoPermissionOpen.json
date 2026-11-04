@@ -1,0 +1,86 @@
+{
+  "id": "doudian.doubao.contentAIGC.getAIVideoPermissionOpen",
+  "platform": "doudian",
+  "group": "doubao",
+  "name": "contentAIGC.getAIVideoPermissionOpen",
+  "description": "查询商家成片权限",
+  "method": "GET",
+  "path": "/contentAIGC/getAIVideoPermissionOpen",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 豆包工作（版本 SNAPSHOT）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "permissions",
+      "type": "array",
+      "description": "调用成功时返回全部检查项，全部通过才可继续。",
+      "example": ""
+    },
+    {
+      "name": "base_resp",
+      "type": "object",
+      "description": "查询异常统一返回错误，不能将查询失败当作权限未通过。",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:1000000）",
+      "action": "请稍后重试；创建任务重试时请保持原 requestId 不变。若持续失败，请联系技术支持。",
+      "sub_code": "isp.service-error:1000000",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 请求参数错误（sub_code: isv.parameter-invalid:1000001）",
+      "action": "请按接口文档检查必填字段、参数类型及取值后重试。",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "请求参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/contentAIGC/getAIVideoPermissionOpen?app_key=your_appkey_here&method=contentAIGC.getAIVideoPermissionOpen&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "base_resp": {
+          "extra": {},
+          "status_code": "0",
+          "status_message": ""
+        },
+        "permissions": [
+          {
+            "passed": "0",
+            "permission_type": "0",
+            "reason": ""
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:1000000",
+      "sub_msg": "系统异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1627/8654",
+  "updatedAt": "2026-09-23",
+  "_file_stem": "doubao-contentAIGC-getAIVideoPermissionOpen"
+}

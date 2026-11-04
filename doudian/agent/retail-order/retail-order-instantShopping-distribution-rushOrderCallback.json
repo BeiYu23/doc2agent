@@ -1,0 +1,71 @@
+{
+  "id": "doudian.retail-order.instantShopping.distribution.rushOrderCallback",
+  "platform": "doudian",
+  "group": "retail-order",
+  "name": "instantShopping.distribution.rushOrderCallback",
+  "description": "配送商催单结果回调",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 订单管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "rushId",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "催单ID",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "interfaceRushResult",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接口催单结果",
+      "example": "{\n        \"IsSuccess\": true,\n        \"Msg\": \"\"\n}",
+      "_depth": 0
+    },
+    {
+      "name": "callRushResult",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外呼催单结果",
+      "example": "{\n        \"IsSuccess\": true,\n        \"Msg\": \"\",\n        \"IsThrough\": true\n}",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=instantShopping.distribution.rushOrderCallback&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1531/7031",
+  "updatedAt": "2024-10-30",
+  "_file_stem": "retail-order-instantShopping-distribution-rushOrderCallback"
+}

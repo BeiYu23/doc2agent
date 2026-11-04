@@ -1,0 +1,78 @@
+{
+  "id": "doudian.product.trade.TopSearchQueryPredict",
+  "platform": "doudian",
+  "group": "product",
+  "name": "trade.TopSearchQueryPredict",
+  "description": "商品标题热搜词推荐",
+  "method": "GET",
+  "path": "/trade/TopSearchQueryPredict",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "叶子类目ID；通过【/shop/getShopCategory】接口获取，填写错误id接口返回为空。",
+      "example": "25108",
+      "_depth": 0
+    },
+    {
+      "name": "image",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "首图信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "image_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "首图url，url公网可访问地址即可。",
+      "example": "\"https://p9-aio.ecombdimg.com/obj/ecom-shop-material/vGQQPXed_m_00512396211e8d0f6d4cacecea4597e7_sx_138896_www960-960\"",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "array",
+      "description": "推荐热搜词",
+      "example": "['面料', '防油', '防水', '围裙', '工作服', '成人', '围腰', '罩衣', '时尚', '无袖', '做饭', '家用', '韩版', '防污', '透气', '背带', '薄款', '可爱', '袖套', '洋气']"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/coupons/cancelVerify?app_key=your_appkey_here&method=coupons.cancelVerify&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/2677",
+  "updatedAt": "2022-11-03",
+  "_file_stem": "product-trade-TopSearchQueryPredict"
+}

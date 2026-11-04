@@ -1,0 +1,131 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyCombineConsign",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyCombineConsign",
+  "description": "供货单合单发货",
+  "method": "GET",
+  "path": "/supplyChain/supplyCombineConsign",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "combine_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "合单号",
+      "example": "HD7577367719507400000",
+      "_depth": 0
+    },
+    {
+      "name": "tms_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递商公司编码，如yunda",
+      "example": "yunda",
+      "_depth": 0
+    },
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递单号",
+      "example": "SF53798222352",
+      "_depth": 0
+    },
+    {
+      "name": "package_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "供货单发货列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "ship_cnt",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "发货数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供货单号",
+      "example": "CT7577367719507000000",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "success",
+      "example": "0"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数请求（sub_code: isv.parameter-invalid:1020）",
+      "action": "请参考错误信息，或联系对接人员",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "非法参数请求"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:1000）",
+      "action": "请稍后再试，或联系对接人员",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:2000）",
+      "action": "请参考错误信息，或联系对接人员",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/supplyCombineConsign?app_key=your_appkey_here&method=supplyChain.supplyCombineConsign&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "0"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "非法参数请求"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/7903",
+  "updatedAt": "2025-11-28",
+  "_file_stem": "supply-chain-supplyChain-supplyCombineConsign"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "doudian.tool.order.getMCToken",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "order.getMCToken",
+  "description": "获取前端组件token",
+  "method": "GET",
+  "path": "/order/getMCToken",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [
+    {
+      "name": "token",
+      "type": "string",
+      "description": "前端组件token",
+      "example": "ahiosdfhuiq2h41io5j4398ras"
+    },
+    {
+      "name": "expire_time",
+      "type": "mixed",
+      "description": "token过期时间，时间戳，秒级",
+      "example": "1680522258"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据加密失败，请稍后重试（sub_code: isv.business-failed:300001）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:300001",
+      "sub_msg": "数据加密失败，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 服务器错误，请稍后重试（sub_code: isv.business-failed:10000000）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:10000000",
+      "sub_msg": "服务器错误，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询该shopID对应的用户信息为空（sub_code: isv.business-failed:605040009）",
+      "action": "检查用户id和店铺id",
+      "sub_code": "isv.business-failed:605040009",
+      "sub_msg": "查询该shopID对应的用户信息为空"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/getMCToken?app_key=your_appkey_here&method=order.getMCToken&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "expire_time": "1680522258",
+        "token": "ahiosdfhuiq2h41io5j4398ras"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:300001",
+      "sub_msg": "数据加密失败，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/3586",
+  "updatedAt": "2025-06-23",
+  "_file_stem": "tool-order-getMCToken"
+}

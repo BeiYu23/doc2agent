@@ -1,0 +1,140 @@
+{
+  "id": "doudian.creative.product.material.createProductImageText",
+  "platform": "doudian",
+  "group": "creative",
+  "name": "product.material.createProductImageText",
+  "description": "商品元图文创意创建",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 创意管理API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "素材名称",
+      "example": "创意",
+      "_depth": 0
+    },
+    {
+      "name": "pic_urls",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "元数据图片列表",
+      "example": "[\"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/bMLccs_m_de71e7048436b02bc41cc6fc2beeca07_sx_80208_www1000-1000\\\",\"https://p3-aio.ecombdimg.com/obj/ecom-shop-material/bMLccs_m_de71e7048436b02bc41cc6fc2beeca07_sx_80208_www1000-1000\\\"]",
+      "_depth": 0
+    },
+    {
+      "name": "subtitle",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "图文讲解",
+      "example": "这个夏天不想被大家说是“小肉球”了吧,那你一定要试试我们这款女装套装,这件连衣裙版型非常正,而且还有加宽的设计,可以藏起来多余的赘肉,从视觉上就很显瘦,面料也很重要,这件选用高档雪纺面料,清新、透气、质地冰凉、光泽度强,更显得年轻和活力,整体的设计给人一种古风古风时尚的感觉,真心建议每一位女士都去尝试一下",
+      "_depth": 0
+    },
+    {
+      "name": "bgm_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "背景音乐id",
+      "example": "12323123",
+      "_depth": 0
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "绑定商品id",
+      "example": "1111",
+      "_depth": 0
+    },
+    {
+      "name": "is_direct_apply",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "创建完是否直接发布应用，true-是，fasle-否，默认fasle；",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "image_text_template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图文生成所用模板",
+      "example": "31312312312313",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "material_id",
+      "type": "mixed",
+      "description": "(作品)素材id",
+      "example": "1111"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效入参（sub_code: isv.parameter-invalid:2012004）",
+      "action": "isv检查入参",
+      "sub_code": "isv.parameter-invalid:2012004",
+      "sub_msg": "无效入参"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2012001）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2012001",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 文本黑词校验失败（sub_code: isv.business-failed:2012013）",
+      "action": "修改后重试",
+      "sub_code": "isv.business-failed:2012013",
+      "sub_msg": "文本黑词校验失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=product.material.createProductImageText&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "material_id": "1111"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2012004",
+      "sub_msg": "无效入参"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1358/4237",
+  "updatedAt": "2023-12-28",
+  "_file_stem": "creative-product-material-createProductImageText"
+}

@@ -1,0 +1,215 @@
+{
+  "id": "doudian.product.productClue.distributableCluelist",
+  "platform": "doudian",
+  "group": "product",
+  "name": "productClue.distributableCluelist",
+  "description": "批量获取可分发在架线索列表",
+  "method": "GET",
+  "path": "/productClue/distributableCluelist",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "每页数量",
+      "example": "50",
+      "_depth": 0
+    },
+    {
+      "name": "current",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "当前页",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "query",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "查询条件",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "content_types",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优势体裁类型，仅支持video/live/product_card",
+      "example": "[product_card,video]",
+      "_depth": 1
+    },
+    {
+      "name": "keyword",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "关键字",
+      "example": "古风连衣裙",
+      "_depth": 1
+    },
+    {
+      "name": "profit_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "权益ID，或关系",
+      "example": "[1,2,3]",
+      "_depth": 1
+    },
+    {
+      "name": "price_lowest",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最低价-分",
+      "example": "1200",
+      "_depth": 1
+    },
+    {
+      "name": "sort_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "排序规则，仅支持pay_amt_desc/pay_amt_rate_desc/demand_supply_rate_desc",
+      "example": "pay_amt_desc",
+      "_depth": 1
+    },
+    {
+      "name": "price_highest",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "最高价-分",
+      "example": "2400",
+      "_depth": 1
+    },
+    {
+      "name": "online_time_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "上新时间类型，仅支持1d/7d/30d",
+      "example": "1d",
+      "_depth": 1
+    },
+    {
+      "name": "brand_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "品牌ID",
+      "example": "[1,2]",
+      "_depth": 1
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目ID",
+      "example": "20023",
+      "_depth": 1
+    },
+    {
+      "name": "label_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "标签ID，或关系",
+      "example": "[1,2,3]",
+      "_depth": 1
+    },
+    {
+      "name": "clue_brand_exists",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "线索是否存在品牌",
+      "example": "false",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "array",
+      "description": "商机列表信息",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "100"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 503:分页获取数据超出限制（sub_code: isv.business-failed:503）",
+      "action": "请联系管理员",
+      "sub_code": "isv.business-failed:503",
+      "sub_msg": "503:分页获取数据超出限制"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/productClue/distributableCluelist?app_key=your_appkey_here&method=productClue.distributableCluelist&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": [
+          {
+            "category_id": "4",
+            "category_name": "叶子类目",
+            "clue_id": "1111",
+            "first_cid": "1",
+            "first_name": "一级类目",
+            "fourth_cid": "4",
+            "fourth_name": "四级类目",
+            "name": "测试商机",
+            "pay_amt_rate": "98.12%",
+            "product_pic_url": "https://www.bejson.com/",
+            "profit_ids": "[1,3]",
+            "search_pv_cnt_range": "1万-5万",
+            "second_cid": "2",
+            "second_name": "二级类目",
+            "third_cid": "3",
+            "third_name": "三级类目"
+          }
+        ],
+        "total": "100"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:503",
+      "sub_msg": "503:分页获取数据超出限制"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/7748",
+  "updatedAt": "2026-03-16",
+  "_file_stem": "product-productClue-distributableCluelist"
+}

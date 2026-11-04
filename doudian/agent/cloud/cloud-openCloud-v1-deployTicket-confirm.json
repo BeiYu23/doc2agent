@@ -1,0 +1,71 @@
+{
+  "id": "doudian.cloud.openCloud.v1.deployTicket.confirm",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.v1.deployTicket.confirm",
+  "description": "确认发布",
+  "method": "GET",
+  "path": "/openCloud/v1/deployTicket/confirm",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: "
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cs_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "容器id",
+      "example": "7239708175753249068",
+      "_depth": 0
+    },
+    {
+      "name": "ticket_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "发布单id",
+      "example": "7239916236111413548",
+      "_depth": 0
+    },
+    {
+      "name": "volc_account_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "如果是强管控、跨境、微应用等租户，需要传火山账号id",
+      "example": "2100044514",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=openCloud.v1.deployTicket.confirm&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/4154",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-v1-deployTicket-confirm"
+}

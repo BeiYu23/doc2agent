@@ -1,0 +1,293 @@
+{
+  "id": "doudian.video.shopVideo.publishVideoNew",
+  "platform": "doudian",
+  "group": "video",
+  "name": "shopVideo.publishVideoNew",
+  "description": "发布视频新接口",
+  "method": "GET",
+  "path": "/shopVideo/publishVideoNew",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 短视频API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "publish_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "发布信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "source",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "来自open端默认传3",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "用户id，不传则为人店一体账号",
+      "example": "111",
+      "_depth": 1
+    },
+    {
+      "name": "schedule_publish_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "定时发布时间",
+      "example": "112121212",
+      "_depth": 1
+    },
+    {
+      "name": "video_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "视频信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "desc",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频描述",
+      "example": "这是视频描述",
+      "_depth": 1
+    },
+    {
+      "name": "cover_image_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "封面地址。",
+      "example": "12122121",
+      "_depth": 1
+    },
+    {
+      "name": "media_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频id，格式如：v0d27cg10001csve2qfog65o283c1h0g",
+      "example": "112121",
+      "_depth": 1
+    },
+    {
+      "name": "title",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频标题",
+      "example": "这是视频标题",
+      "_depth": 1
+    },
+    {
+      "name": "anchor_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "锚点信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "anchors",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "锚点列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "keyword",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "锚点标题，例如小黄车的标题",
+      "example": "锚点标题",
+      "_depth": 2
+    },
+    {
+      "name": "product_ids",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "商品id，挂车和非挂车均需要",
+      "example": "121212122",
+      "_depth": 2
+    },
+    {
+      "name": "anchor_draft_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "锚点草稿id。发布挂车视频时必传",
+      "example": "121212122",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "锚点文案",
+      "example": "锚点文案",
+      "_depth": 2
+    },
+    {
+      "name": "type",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "锚点类型，3-挂车，7-非挂车",
+      "example": "3",
+      "_depth": 2
+    },
+    {
+      "name": "related_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "相关信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "topics",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "话题信息",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "topic_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "活动名称",
+      "example": "这是活动名称",
+      "_depth": 2
+    },
+    {
+      "name": "topic_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "话题id",
+      "example": "121211212",
+      "_depth": 2
+    },
+    {
+      "name": "hot_sentence",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "热点词",
+      "example": "热点词",
+      "_depth": 1
+    },
+    {
+      "name": "app_info",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "应用信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "app_key",
+      "example": "appid",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应参数",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 1000001:定时发布时间不能大于当前时间+14天（sub_code: isv.parameter-invalid:1000001）",
+      "action": "定时发布时间不能大于当前时间+14天",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "1000001:定时发布时间不能大于当前时间+14天"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60488027:视频发布失败（sub_code: isv.business-failed:60488027）",
+      "action": "视频发布失败",
+      "sub_code": "isv.business-failed:60488027",
+      "sub_msg": "60488027:视频发布失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60488028:视频投稿功能已封禁（sub_code: isv.business-failed:60488028）",
+      "action": "视频投稿功能已封禁",
+      "sub_code": "isv.business-failed:60488028",
+      "sub_msg": "60488028:视频投稿功能已封禁"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 60488029:抱歉，今天投稿次数已达到上限，请明天再试（sub_code: isv.business-failed:60488029）",
+      "action": "抱歉，今天投稿次数已达到上限，请明天再试",
+      "sub_code": "isv.business-failed:60488029",
+      "sub_msg": "60488029:抱歉，今天投稿次数已达到上限，请明天再试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shopVideo/publishVideoNew?app_key=your_appkey_here&method=shopVideo.publishVideoNew&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "item_id": "1212121212"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1000001",
+      "sub_msg": "1000001:定时发布时间不能大于当前时间+14天"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1568/7489",
+  "updatedAt": "2025-10-16",
+  "_file_stem": "video-shopVideo-publishVideoNew"
+}

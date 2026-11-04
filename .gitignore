@@ -1,0 +1,12 @@
+# 治理文档：本仓库的工作台文件，不进入 git
+AGENTS.md
+**/AGENTS.md
+todo.md
+**/todo.md
+
+# 工具脚本目录：本地维护，不进入 git（仅仓库根级 tool/，别伤到抖店「工具API」分组 doudian/*/tool/）
+/tool/
+
+# 系统与编辑器杂项
+.DS_Store
+Thumbs.db

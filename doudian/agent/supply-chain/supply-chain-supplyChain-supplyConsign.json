@@ -1,0 +1,230 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyConsign",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyConsign",
+  "description": "供货单发货",
+  "method": "GET",
+  "path": "/supplyChain/supplyConsign",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "供货单号",
+      "example": "CT7069898293592",
+      "_depth": 0
+    },
+    {
+      "name": "tms_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递商编码，使用package_list进行多包裹发货时，该字段传\"\"",
+      "example": "shunfeng",
+      "_depth": 0
+    },
+    {
+      "name": "tracking_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递单号,使用package_list进行多包裹发货时，该字段传\"\"",
+      "example": "SF53798222352",
+      "_depth": 0
+    },
+    {
+      "name": "sender_addr",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "发货人地址结构",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "省名称",
+      "example": "浙江省",
+      "_depth": 1
+    },
+    {
+      "name": "city_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "市名称",
+      "example": "杭州市",
+      "_depth": 1
+    },
+    {
+      "name": "district_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "区名称",
+      "example": "余杭区",
+      "_depth": 1
+    },
+    {
+      "name": "street_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称，没有则填空字符",
+      "example": "仓前街道",
+      "_depth": 1
+    },
+    {
+      "name": "addr_detail",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "剩余详细地址",
+      "example": "文一西路1号",
+      "_depth": 1
+    },
+    {
+      "name": "sender_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货人姓名",
+      "example": "张三",
+      "_depth": 0
+    },
+    {
+      "name": "sender_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "发货人联系电话",
+      "example": "13252354532",
+      "_depth": 0
+    },
+    {
+      "name": "package_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "包裹列表，用于拆包发货",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "sn",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "电器sn码",
+      "example": "1234123",
+      "_depth": 1
+    },
+    {
+      "name": "imei",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机类imei码",
+      "example": "12345",
+      "_depth": 1
+    },
+    {
+      "name": "tms_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递商编码",
+      "example": "shunfeng",
+      "_depth": 1
+    },
+    {
+      "name": "ship_cnt",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "发货数量",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "快递单号",
+      "example": "SF53798222352",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "true=发货成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:2000）",
+      "action": "请参考错误信息，或联系对接人员",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常（sub_code: isp.service-error:1000）",
+      "action": "请稍后再试，或联系对接人员",
+      "sub_code": "isp.service-error:1000",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法参数请求（sub_code: isv.parameter-invalid:1020）",
+      "action": "请参考错误信息，或联系对接人员",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "非法参数请求"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/supplyConsign?app_key=your_appkey_here&method=supplyChain.supplyConsign&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "success": "true"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:2000",
+      "sub_msg": "业务处理失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/1733",
+  "updatedAt": "2025-04-29",
+  "_file_stem": "supply-chain-supplyChain-supplyConsign"
+}

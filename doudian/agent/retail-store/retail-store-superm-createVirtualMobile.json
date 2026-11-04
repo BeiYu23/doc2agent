@@ -1,0 +1,118 @@
+{
+  "id": "doudian.retail-store.superm.createVirtualMobile",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.createVirtualMobile",
+  "description": "隐私小号获取",
+  "method": "GET",
+  "path": "/superm/createVirtualMobile",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺订单编号",
+      "example": "店铺订单号",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "mobile_info",
+      "type": "object",
+      "description": "获取虚拟号返回结果信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据转换错误（sub_code: isv.business-failed:50202）",
+      "action": "请通过错误信息排查问题",
+      "sub_code": "isv.business-failed:50202",
+      "sub_msg": "数据转换错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20100）",
+      "action": "请通过错误信息排查问题",
+      "sub_code": "isp.service-error:20100",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非法的请求参数（sub_code: isv.parameter-invalid:40100）",
+      "action": "请确认请求参数是否正确",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "非法的请求参数"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 缺失必传参数（sub_code: isv.missing-parameter:40000）",
+      "action": "请确认缺失的必传参数",
+      "sub_code": "isv.missing-parameter:40000",
+      "sub_msg": "缺失必传参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 配置信息错误（sub_code: isv.business-failed:50203）",
+      "action": "请排查配置信息错误",
+      "sub_code": "isv.business-failed:50203",
+      "sub_msg": "配置信息错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前查询单据不存在：订单不存在（sub_code: isv.business-failed:20111）",
+      "action": "当前查询单据不存在：订单不存在",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "当前查询单据不存在：订单不存在"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统繁忙，请稍后重试（sub_code: isv.business-failed:10036）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:10036",
+      "sub_msg": "系统繁忙，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/superm/createVirtualMobile?app_key=your_appkey_here&method=superm.createVirtualMobile&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "mobile_info": {
+          "expire_time": "2022-11-07 20:00:00",
+          "is_new_create": "true",
+          "mobile_virtual": "1893434345-1234"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:50202",
+      "sub_msg": "数据转换错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/2739",
+  "updatedAt": "2023-09-19",
+  "_file_stem": "retail-store-superm-createVirtualMobile"
+}

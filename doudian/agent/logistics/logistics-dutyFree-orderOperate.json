@@ -1,0 +1,191 @@
+{
+  "id": "doudian.logistics.dutyFree.orderOperate",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "dutyFree.orderOperate",
+  "description": "海南项目服务商回传实操节点",
+  "method": "GET",
+  "path": "/dutyFree/orderOperate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单id",
+      "example": "3214321413241",
+      "_depth": 0
+    },
+    {
+      "name": "occurrence_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "物流状态的真实发生时间，yyyy-MM-dd hh:mm:ss",
+      "example": "2021-06-18 11:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "节点状态：1 出库异常，2 已出库 ， 3  提货公司揽收异常，4 提货公司已揽收，5 已送达自提点， 6 消费者已提货，7 提货异常，8已核销，9 核销异常",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "verification_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "核销信息，status传入8时必填",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "leave_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "离岛工具：1 飞机，2 火车， 3 轮船",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "leave_ticket_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "离岛工具票号",
+      "example": "21413241",
+      "_depth": 1
+    },
+    {
+      "name": "leave_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "用户所填交通工具离岛时间 yyyy-MM-dd hh:mm:ss",
+      "example": "2021-06-18 11:00:00",
+      "_depth": 1
+    },
+    {
+      "name": "transportation",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "发货信息，邮寄模式或会员购模式下，status传入2时必填",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "domestic_carrier",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "国内快递公司编码 按字节定义的编码推送",
+      "example": "JD",
+      "_depth": 1
+    },
+    {
+      "name": "domestic_trans_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "JD321413241",
+      "_depth": 1
+    },
+    {
+      "name": "error_info",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "节点异常，status传入1、3、7、9时必填",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "error_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "返回失败编码，商家只回传不可逆转的失败",
+      "example": "1001",
+      "_depth": 1
+    },
+    {
+      "name": "error_msg",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "返回详细失败原因",
+      "example": "核销失败",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 接口调用异常，请重试，多次失败请人工反馈（sub_code: isv.business-failed:99999）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:99999",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 回告节点时序有误，当前节点为【出库完成】（sub_code: isv.business-failed:10002）",
+      "action": "请检查当前节点",
+      "sub_code": "isv.business-failed:10002",
+      "sub_msg": "回告节点时序有误，当前节点为【出库完成】"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不存在，请联系履约确认是否已推单成功（sub_code: isv.business-failed:10001）",
+      "action": "请核实订单信息",
+      "sub_code": "isv.business-failed:10001",
+      "sub_msg": "订单不存在，请联系履约确认是否已推单成功"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 交易单已关闭，请核实交易单状态（sub_code: isv.business-failed:10003）",
+      "action": "请核实交易单状态",
+      "sub_code": "isv.business-failed:10003",
+      "sub_msg": "交易单已关闭，请核实交易单状态"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/dutyFree/orderOperate?app_key=your_appkey_here&method=dutyFree.orderOperate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:99999",
+      "sub_msg": "接口调用异常，请重试，多次失败请人工反馈"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/1850",
+  "updatedAt": "2022-12-14",
+  "_file_stem": "logistics-dutyFree-orderOperate"
+}

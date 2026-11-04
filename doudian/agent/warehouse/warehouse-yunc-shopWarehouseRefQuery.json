@@ -1,0 +1,91 @@
+{
+  "id": "doudian.warehouse.yunc.shopWarehouseRefQuery",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.shopWarehouseRefQuery",
+  "description": "商家入驻仓关系查询",
+  "method": "GET",
+  "path": "/yunc/shopWarehouseRefQuery",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "shop_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "店铺id",
+      "example": "1001",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "warehouse_list",
+      "type": "array",
+      "description": "仓信息",
+      "example": ""
+    },
+    {
+      "name": "owner_code",
+      "type": "string",
+      "description": "货主编码",
+      "example": "货主code"
+    },
+    {
+      "name": "owner_name",
+      "type": "string",
+      "description": "货主名称",
+      "example": "货主名称"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 3000:参数错误（sub_code: isv.business-failed:3000）",
+      "action": "校验参数准确性",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "3000:参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/shopWarehouseRefQuery?app_key=your_appkey_here&method=yunc.shopWarehouseRefQuery&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "owner_code": "货主code",
+        "owner_name": "货主名称",
+        "warehouse_list": [
+          {
+            "warehouse_code": "W01",
+            "warehouse_name": "瑞丽测试仓"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:3000",
+      "sub_msg": "3000:参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/925",
+  "updatedAt": "2022-08-31",
+  "_file_stem": "warehouse-yunc-shopWarehouseRefQuery"
+}

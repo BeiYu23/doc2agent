@@ -1,0 +1,180 @@
+{
+  "id": "doudian.supply-chain.supplyChain.queryReturnOrderList",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.queryReturnOrderList",
+  "description": "根据筛选条件批量查询售后单列表，单次最多返回100个",
+  "method": "GET",
+  "path": "/supplyChain/queryReturnOrderList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.05）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "after_sale_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后单号",
+      "example": "GSH123123123",
+      "_depth": 0
+    },
+    {
+      "name": "channel_trade_order_no",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "供货单号",
+      "example": "CT12312312312",
+      "_depth": 0
+    },
+    {
+      "name": "standard_order_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "订单标准状态；1-待抖店商家同意退款；2-待供应商同意退款；3-待买家退货；4-买家已退货，待供应商确认收货；5-退款中；6-退款成功；7-售后仲裁中；8-待供应商同意退货申请；9-待商家/分销商退货；11-待平台审核退款；12-待平台审核退货申请；13-已退货，待平台审核退款；20-售后取消；21-售后关闭；22-售后拒绝；23-售后异常",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "create_date_begin",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "创建时间开始，单位为秒（查询范围包含开始值）",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "create_date_end",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "创建结束开始，单位为秒（查询范围包含开始值）",
+      "example": "1626856525",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "页数，从1开始",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "每页数量，最多100个",
+      "example": "50",
+      "_depth": 0
+    },
+    {
+      "name": "order_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "售后类型；1-退货退款，3-退款",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "order_asc",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否创建时间升序排列",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "code",
+      "type": "number",
+      "description": "响应状态码",
+      "example": "200"
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "description": "响应信息",
+      "example": "success"
+    },
+    {
+      "name": "order_list",
+      "type": "array",
+      "description": "售后单信息列表",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "当前搜索条件下，匹配到的总数量",
+      "example": "200"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:1020）",
+      "action": "参数修改",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:1000）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 业务处理失败（sub_code: isp.service-error:1040）",
+      "action": "根据提示处理",
+      "sub_code": "isp.service-error:1040",
+      "sub_msg": "业务处理失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败（sub_code: isv.business-failed:-1）",
+      "action": "业务处理失败",
+      "sub_code": "isv.business-failed:-1",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/wms/inboundResultNotify?app_key=your_appkey_here&method=wms.inboundResultNotify&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:1020",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/4034",
+  "updatedAt": "2026-03-05",
+  "_file_stem": "supply-chain-supplyChain-queryReturnOrderList"
+}

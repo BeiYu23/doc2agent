@@ -1,0 +1,132 @@
+{
+  "id": "doudian.sms.recycle.sms.searchSmsTemplate",
+  "platform": "doudian",
+  "group": "sms",
+  "name": "recycle.sms.searchSmsTemplate",
+  "description": "获取短信模板",
+  "method": "GET",
+  "path": "/recycle/sms/searchSmsTemplate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 短信API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_content",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板内容",
+      "example": "sfesf",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "状态",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "size",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "页大小",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "qweqwe",
+      "_depth": 0
+    },
+    {
+      "name": "sms_account",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "渠道账号",
+      "example": "sfwa",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板id",
+      "example": "sfes",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "template_search_list",
+      "type": "array",
+      "description": "11",
+      "example": ""
+    },
+    {
+      "name": "total",
+      "type": "mixed",
+      "description": "总数",
+      "example": "10"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/recycle/sms/searchSmsTemplate?app_key=your_appkey_here&method=recycle.sms.searchSmsTemplate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "template_search_list": [
+          {
+            "channel_type": "CN_NTC",
+            "sms_account": "sefasef",
+            "template_content": "sefsefa",
+            "template_id": "ST_Xxxx",
+            "template_name": "模板"
+          }
+        ],
+        "total": "10"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/163/7832",
+  "updatedAt": "2025-11-03",
+  "_file_stem": "sms-recycle-sms-searchSmsTemplate"
+}

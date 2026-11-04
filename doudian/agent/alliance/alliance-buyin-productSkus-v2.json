@@ -1,0 +1,131 @@
+{
+  "id": "doudian.alliance.buyin.productSkus.v2",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.productSkus.v2",
+  "description": "查询商品 SKU",
+  "method": "GET",
+  "path": "/buyin/productSkus/v2",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 达人, MCN机构, 抖客, 团长"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品ID",
+      "example": "3553361443837581161",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "specs",
+      "type": "array",
+      "description": "商品规格信息列表",
+      "example": ""
+    },
+    {
+      "name": "pictures",
+      "type": "string",
+      "description": "图片",
+      "example": ""
+    },
+    {
+      "name": "skus",
+      "type": "string",
+      "description": "sku 信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数校验失败（sub_code: isv.business-failed:257）",
+      "action": "参数校验失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品没有加入精选联盟（sub_code: isv.business-failed:4133）",
+      "action": "商品没有加入精选联盟",
+      "sub_code": "isv.business-failed:4133",
+      "sub_msg": "商品没有加入精选联盟"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 亲爱的用户，因服务器升级，商品展示可能异常，带来不便，敬请见谅。（sub_code: isv.business-failed:8193）",
+      "action": "亲爱的用户，因服务器升级，商品展示可能异常，带来不便，敬请见谅。",
+      "sub_code": "isv.business-failed:8193",
+      "sub_msg": "亲爱的用户，因服务器升级，商品展示可能异常，带来不便，敬请见谅。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 无效商品ID（sub_code: isv.business-failed:265）",
+      "action": "无效商品ID",
+      "sub_code": "isv.business-failed:265",
+      "sub_msg": "无效商品ID"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品无SKU（sub_code: isv.business-failed:4134）",
+      "action": "商品无SKU",
+      "sub_code": "isv.business-failed:4134",
+      "sub_msg": "商品无SKU"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/productSkus/v2?app_key=your_appkey_here&method=buyin.productSkus.v2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "pictures": {},
+        "skus": {},
+        "specs": [
+          {
+            "name": "机身颜色",
+            "spec_items": [
+              {
+                "id": "1712481022018592",
+                "name": "粉色"
+              }
+            ]
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:257",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/6468",
+  "updatedAt": "2024-06-06",
+  "_file_stem": "alliance-buyin-productSkus-v2"
+}

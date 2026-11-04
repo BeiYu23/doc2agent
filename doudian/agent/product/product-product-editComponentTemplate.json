@@ -1,0 +1,138 @@
+{
+  "id": "doudian.product.product.editComponentTemplate",
+  "platform": "doudian",
+  "group": "product",
+  "name": "product.editComponentTemplate",
+  "description": "编辑尺码模板",
+  "method": "GET",
+  "path": "/product/editComponentTemplate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V2.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "模板ID",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "template_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板名称",
+      "example": "模板名称2",
+      "_depth": 0
+    },
+    {
+      "name": "component_data",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板数据json",
+      "example": "{\"title\":\"服装上衣模板\",\"desc\":\"dy服装上衣模板\",\"tempName\":\"dy服装上衣模板\",\"configTable\":[{\"size\":\"XS\",\"specMap\":{\"身高（cm）\":\"180\",\"体重（斤）\":\"70\",\"胸围（cm）\":\"80\"}},{\"size\":\"M\",\"specMap\":{\"身高（cm）\":\"185\",\"体重（斤）\":\"80\",\"胸围（cm）\":\"85\"}}],\"selectedSpecs\":[\"身高（cm）\",\"体重（斤）\",\"胸围（cm）\"],\"specOptions\":[\"身高（cm）\",\"体重（斤）\",\"胸围（cm）\"],\"selectedSize\":[\"xl\",\"xxl\"]}",
+      "_depth": 0
+    },
+    {
+      "name": "shareable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否为公有模板(多个商品可共用)",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统处理异常（sub_code: isp.service-error:2010001）",
+      "action": "系统处理异常，咨询研发人员",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "系统处理异常"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 参数缺失（sub_code: isv.missing-parameter:2010003）",
+      "action": "根据返回信息提示检查参数",
+      "sub_code": "isv.missing-parameter:2010003",
+      "sub_msg": "参数缺失"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:2010004）",
+      "action": "根据返回信息提示检查参数",
+      "sub_code": "isv.parameter-invalid:2010004",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2010011）",
+      "action": "系统处理异常，咨询研发人员",
+      "sub_code": "isp.service-error:2010011",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:2010012）",
+      "action": "系统处理异常，咨询研发人员",
+      "sub_code": "isp.service-error:2010012",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250103:该类目商品需上传完整尺码表信息，目前缺失规格：身高，请补充！<a href='https://school.jinritemai.YOUR_SECRET_KEY' target='_blank'>规则介绍</a>（sub_code: isv.business-failed:110250103）",
+      "action": "110250103:该类目商品需上传完整尺码表信息，目前缺失规格：身高，请补充！<a href='https://school.jinritemai.YOUR_SECRET_KEY' target='_blank'>规则介绍</a>",
+      "sub_code": "isv.business-failed:110250103",
+      "sub_msg": "110250103:该类目商品需上传完整尺码表信息，目前缺失规格：身高，请补充！<a href='https://school.jinritemai.YOUR_SECRET_KEY' target='_blank'>规则介绍</a>"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250142:尺码信息区间值中最大值需要大于最小值（sub_code: isv.business-failed:110250142）",
+      "action": "110250142:尺码信息区间值中最大值需要大于最小值",
+      "sub_code": "isv.business-failed:110250142",
+      "sub_msg": "110250142:尺码信息区间值中最大值需要大于最小值"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 110250138:模板列数超过上限（sub_code: isv.business-failed:110250138）",
+      "action": "110250138:模板列数超过上限",
+      "sub_code": "isv.business-failed:110250138",
+      "sub_msg": "110250138:模板列数超过上限"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/editComponentTemplate?app_key=your_appkey_here&method=product.editComponentTemplate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:2010001",
+      "sub_msg": "系统处理异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/1993",
+  "updatedAt": "2022-06-11",
+  "_file_stem": "product-product-editComponentTemplate"
+}

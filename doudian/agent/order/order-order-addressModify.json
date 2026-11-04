@@ -1,0 +1,418 @@
+{
+  "id": "doudian.order.order.addressModify",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.addressModify",
+  "description": "用于卖家和买家沟通后，主动帮买家修改收货信息",
+  "method": "GET",
+  "path": "/order/addressModify",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.06）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单号1",
+      "example": "4784385386387328490",
+      "_depth": 0
+    },
+    {
+      "name": "post_addr",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "修改收货地址，post_addr中的所有字段都必传",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "province",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "省",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省id",
+      "example": "112",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省名称",
+      "example": "北京",
+      "_depth": 2
+    },
+    {
+      "name": "city",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "城市",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市id",
+      "example": "110000",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "城市名称",
+      "example": "北京市",
+      "_depth": 2
+    },
+    {
+      "name": "town",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "镇",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镇id",
+      "example": "110108",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "镇名称",
+      "example": "海淀区",
+      "_depth": 2
+    },
+    {
+      "name": "street",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "街道",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道id",
+      "example": "110108011",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "街道名称",
+      "example": "中关村街道",
+      "_depth": 2
+    },
+    {
+      "name": "address_detail",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "详细地址",
+      "example": "互联网金融",
+      "_depth": 1
+    },
+    {
+      "name": "land_mark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "暂时未使用的字段",
+      "example": "空",
+      "_depth": 1
+    },
+    {
+      "name": "post_receiver",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收货人姓名",
+      "example": "艾一一",
+      "_depth": 0
+    },
+    {
+      "name": "post_tel",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "收货人电话号码",
+      "example": "12312341234",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "need_user_review",
+      "type": "boolean",
+      "description": "true 表示当前改地址需要消费者确认，消费者确认之后才修改地址\nfalse 表示当前改地址不需要消费者确认，直接修改成功",
+      "example": "true"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 未更改任何数据，请检查后重新提交（sub_code: isv.parameter-invalid:80004）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:80004",
+      "sub_msg": "未更改任何数据，请检查后重新提交"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 订单不存在（sub_code: isv.parameter-invalid:20003）",
+      "action": "校验订单之后，再提交",
+      "sub_code": "isv.parameter-invalid:20003",
+      "sub_msg": "订单不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 手机号格式错误，请修改后重试（sub_code: isv.parameter-invalid:20002）",
+      "action": "校验参数",
+      "sub_code": "isv.parameter-invalid:20002",
+      "sub_msg": "手机号格式错误，请修改后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 部分发货不能修改收货地址（sub_code: isv.business-failed:80001）",
+      "action": "不要重试",
+      "sub_code": "isv.business-failed:80001",
+      "sub_msg": "部分发货不能修改收货地址"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 8888:call ChangeAddress failed（sub_code: isv.business-failed:8888）",
+      "action": "系统繁忙，请稍后重试",
+      "sub_code": "isv.business-failed:8888",
+      "sub_msg": "8888:call ChangeAddress failed"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 80002:详细地址长度格式不符合要求，请限制在1-60个汉字内（sub_code: isv.business-failed:80002）",
+      "action": "详细地址长度格式不符合要求，请限制在1-60个汉字内",
+      "sub_code": "isv.business-failed:80002",
+      "sub_msg": "80002:详细地址长度格式不符合要求，请限制在1-60个汉字内"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 40001:热门商品下单后无法修改地址（sub_code: isv.business-failed:40001）",
+      "action": "热门商品下单后无法修改地址",
+      "sub_code": "isv.business-failed:40001",
+      "sub_msg": "40001:热门商品下单后无法修改地址"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单部分发货，不支持修改地址。（sub_code: isv.business-failed:80102）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80102",
+      "sub_msg": "该订单部分发货，不支持修改地址。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询订单详情错误（sub_code: isv.business-failed:700007）",
+      "action": "-",
+      "sub_code": "isv.business-failed:700007",
+      "sub_msg": "查询订单详情错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单不属于当前用户（sub_code: isv.business-failed:50004）",
+      "action": "-",
+      "sub_code": "isv.business-failed:50004",
+      "sub_msg": "订单不属于当前用户"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单含有跨境商品且用户已支付，不支持修改地址。（sub_code: isv.business-failed:80101）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80101",
+      "sub_msg": "订单含有跨境商品且用户已支付，不支持修改地址。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 收件人长度需为2-25字，请修改（sub_code: isv.business-failed:80120）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80120",
+      "sub_msg": "收件人长度需为2-25字，请修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 手机号格式有误，请修改（sub_code: isv.business-failed:80119）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80119",
+      "sub_msg": "手机号格式有误，请修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请输入正确的市（sub_code: isv.business-failed:80113）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80113",
+      "sub_msg": "请输入正确的市"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 新地址与消费者申请修改地址冲突，请和消费者确认后重新提交（sub_code: isv.business-failed:80123）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80123",
+      "sub_msg": "新地址与消费者申请修改地址冲突，请和消费者确认后重新提交"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请输入正确的区/县（sub_code: isv.business-failed:80114）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80114",
+      "sub_msg": "请输入正确的区/县"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统识别当前地址为商家地址，请和消费者确认后重新提交（sub_code: isv.business-failed:80118）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80118",
+      "sub_msg": "系统识别当前地址为商家地址，请和消费者确认后重新提交"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请输入正确的省（sub_code: isv.business-failed:80112）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80112",
+      "sub_msg": "请输入正确的省"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 新地址是双地址，请修改，避免影响配送（sub_code: isv.business-failed:80117）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80117",
+      "sub_msg": "新地址是双地址，请修改，避免影响配送"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 详细地址长度需为2-60字，请修改（sub_code: isv.business-failed:80121）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80121",
+      "sub_msg": "详细地址长度需为2-60字，请修改"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请输入正确的街道（sub_code: isv.business-failed:80115）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80115",
+      "sub_msg": "请输入正确的街道"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前存在待用户确认的改地址任务（sub_code: isv.business-failed:80131）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80131",
+      "sub_msg": "当前存在待用户确认的改地址任务"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商品已报名平台包邮活动，修改地址不满足活动包邮规则（sub_code: isv.business-failed:80129）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80129",
+      "sub_msg": "商品已报名平台包邮活动，修改地址不满足活动包邮规则"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该订单为小时达订单，不支持修改地址。（sub_code: isv.business-failed:80103）",
+      "action": "-",
+      "sub_code": "isv.business-failed:80103",
+      "sub_msg": "该订单为小时达订单，不支持修改地址。"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当日改地址次数达到限额（sub_code: isv.business-failed:50067）",
+      "action": "-",
+      "sub_code": "isv.business-failed:50067",
+      "sub_msg": "当日改地址次数达到限额"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据更新失败（sub_code: isv.business-failed:20015）",
+      "action": "-",
+      "sub_code": "isv.business-failed:20015",
+      "sub_msg": "数据更新失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 50066:消息幂等校验失败（sub_code: isv.business-failed:50066）",
+      "action": "50066:消息幂等校验失败",
+      "sub_code": "isv.business-failed:50066",
+      "sub_msg": "50066:消息幂等校验失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 20001:service error%!(EXTRA string=消息幂等校验失败)（sub_code: isv.business-failed:20001）",
+      "action": "20001:service error%!(EXTRA string=消息幂等校验失败)",
+      "sub_code": "isv.business-failed:20001",
+      "sub_msg": "20001:service error%!(EXTRA string=消息幂等校验失败)"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 80007:订单已享政府补贴,暂不支持修改该地址（sub_code: isv.business-failed:80007）",
+      "action": "80007:订单已享政府补贴,暂不支持修改该地址",
+      "sub_code": "isv.business-failed:80007",
+      "sub_msg": "80007:订单已享政府补贴,暂不支持修改该地址"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:80004",
+      "sub_msg": "未更改任何数据，请检查后重新提交"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/290",
+  "updatedAt": "2024-07-31",
+  "_file_stem": "order-order-addressModify"
+}

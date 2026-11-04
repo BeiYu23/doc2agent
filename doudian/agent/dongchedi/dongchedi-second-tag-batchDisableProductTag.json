@@ -1,0 +1,238 @@
+{
+  "id": "doudian.dongchedi.second.tag.batchDisableProductTag",
+  "platform": "doudian",
+  "group": "dongchedi",
+  "name": "second.tag.batchDisableProductTag",
+  "description": "【二方接口】商品批量去标",
+  "method": "GET",
+  "path": "/second/tag/batchDisableProductTag",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 懂车帝业务（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "uid",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商业化账号组uid，用作鉴权",
+      "example": "15495388485",
+      "_depth": 0
+    },
+    {
+      "name": "productTags",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "productTags",
+      "example": "[]",
+      "_depth": 0
+    },
+    {
+      "name": "shopId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "shopId",
+      "example": "5055915",
+      "_depth": 1
+    },
+    {
+      "name": "tagCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "tagCode",
+      "example": "5169adc9",
+      "_depth": 1
+    },
+    {
+      "name": "tagVal",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "tagVal",
+      "example": "b046b431",
+      "_depth": 1
+    },
+    {
+      "name": "productId",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "productId",
+      "example": "9612565",
+      "_depth": 1
+    },
+    {
+      "name": "operator",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "operator",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "userId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "userId",
+      "example": "2dcc30e6",
+      "_depth": 1
+    },
+    {
+      "name": "userName",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "userName",
+      "example": "a95e4149",
+      "_depth": 1
+    },
+    {
+      "name": "tagSource",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "tagSource",
+      "example": "8337850",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "successList",
+      "type": "array",
+      "description": "successList",
+      "example": "[]"
+    },
+    {
+      "name": "failedList",
+      "type": "array",
+      "description": "failedList",
+      "example": "[]"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / uid不能为空（sub_code: isp.service-error:300001）",
+      "action": "uid不能为空",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / productTags不能为空（sub_code: isp.service-error:300002）",
+      "action": "productTags不能为空",
+      "sub_code": "isp.service-error:300002",
+      "sub_msg": "productTags不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 只能更改同一店铺的商品Tag（sub_code: isp.service-error:300003）",
+      "action": "只能更改同一店铺的商品Tag",
+      "sub_code": "isp.service-error:300003",
+      "sub_msg": "只能更改同一店铺的商品Tag"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / userId不能为空（sub_code: isp.service-error:300004）",
+      "action": "userId不能为空",
+      "sub_code": "isp.service-error:300004",
+      "sub_msg": "userId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / userName不能为空（sub_code: isp.service-error:300005）",
+      "action": "userName不能为空",
+      "sub_code": "isp.service-error:300005",
+      "sub_msg": "userName不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / tagCode不能为空（sub_code: isp.service-error:300006）",
+      "action": "tagCode不能为空",
+      "sub_code": "isp.service-error:300006",
+      "sub_msg": "tagCode不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / tagVal不能为空（sub_code: isp.service-error:300007）",
+      "action": "tagVal不能为空",
+      "sub_code": "isp.service-error:300007",
+      "sub_msg": "tagVal不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / productId不能为空（sub_code: isp.service-error:300008）",
+      "action": "productId不能为空",
+      "sub_code": "isp.service-error:300008",
+      "sub_msg": "productId不能为空"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 店铺鉴权失败（sub_code: isp.service-error:500004）",
+      "action": "店铺鉴权失败",
+      "sub_code": "isp.service-error:500004",
+      "sub_msg": "店铺鉴权失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/tag/batchDisableProductTag?app_key=your_appkey_here&method=second.tag.batchDisableProductTag&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "failedList": [
+          {
+            "channel": {
+              "channelId": "5714884",
+              "channelType": "4543034"
+            },
+            "productId": "4620210",
+            "shopId": "3330051",
+            "tagCode": "cb8cc6ad",
+            "tagVal": "38c2c825"
+          }
+        ],
+        "successList": [
+          {
+            "channel": {
+              "channelId": "3255576",
+              "channelType": "3961043"
+            },
+            "productId": "5214315",
+            "shopId": "1295438",
+            "tagCode": "dbe2be84",
+            "tagVal": "11fce41c"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:300001",
+      "sub_msg": "uid不能为空"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1544/6942",
+  "updatedAt": "2024-10-15",
+  "_file_stem": "dongchedi-second-tag-batchDisableProductTag"
+}

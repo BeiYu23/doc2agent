@@ -1,0 +1,138 @@
+{
+  "id": "doudian.member.member.batchGetHistoryMemberUnionId",
+  "platform": "doudian",
+  "group": "member",
+  "name": "member.batchGetHistoryMemberUnionId",
+  "description": "该接口可以根据店铺会员的openId获取品牌维度的用户身份标识unionId。同品牌下跨店铺中存量的抖音会员，可以用这个接口查询unionId，相同的unionId表示是同一个用户。\n注1：店铺如果不是品牌店铺，将无法获取unionId\n注2：用户如果不是",
+  "method": "GET",
+  "path": "/member/batchGetHistoryMemberUnionId",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "表明外部平台",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "open_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "会员对外的OpenID列表，该接口一次最多进行20个Openld的解析",
+      "example": "[\"openIdopenIdopenIdopenIdopenId1\",\"openIdopenIdopenIdopenIdopenId2\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "union_id_infos",
+      "type": "array",
+      "description": "获取到的unionId列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 网络错误，请稍后再试~（sub_code: isp.service-error:628145000）",
+      "action": "请稍后重试",
+      "sub_code": "isp.service-error:628145000",
+      "sub_msg": "网络错误，请稍后再试~"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非品牌会员店铺不支持获取UnionId（sub_code: isv.business-failed:628145001）",
+      "action": "品牌方到抖店企业版中圈选本店铺为品牌店铺",
+      "sub_code": "isv.business-failed:628145001",
+      "sub_msg": "非品牌会员店铺不支持获取UnionId"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 非会员通店铺不支持获取UnionId（sub_code: isv.business-failed:628145002）",
+      "action": "请联系平台运营提报并开通会员通体系",
+      "sub_code": "isv.business-failed:628145002",
+      "sub_msg": "非会员通店铺不支持获取UnionId"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / openId非法（sub_code: isv.parameter-invalid:628145003）",
+      "action": "请检查openId是否填写正确或者是否是本店铺用户",
+      "sub_code": "isv.parameter-invalid:628145003",
+      "sub_msg": "openId非法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 用户不是当前店铺的会员（sub_code: isv.business-failed:628145004）",
+      "action": "用户加入成为本店铺的会员",
+      "sub_code": "isv.business-failed:628145004",
+      "sub_msg": "用户不是当前店铺的会员"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数非法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "请检查请求的入参",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数非法"
+    },
+    {
+      "code": "60000",
+      "meaning": "触发限流，请稍后重试 / 请求过于频繁（sub_code: isp.traffic-limited:628002006）",
+      "action": "请求过于频繁，请稍后重试",
+      "sub_code": "isp.traffic-limited:628002006",
+      "sub_msg": "请求过于频繁"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 商家未开通会员体系（sub_code: isv.business-failed:628005200）",
+      "action": "请商家联系产运开通会员体系",
+      "sub_code": "isv.business-failed:628005200",
+      "sub_msg": "商家未开通会员体系"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/batchGetHistoryMemberUnionId?app_key=your_appkey_here&method=member.batchGetHistoryMemberUnionId&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "union_id_infos": [
+          {
+            "err_code": "628145000",
+            "err_msg": "网络错误，请稍后再试~",
+            "open_id": "openIdopenIdstring",
+            "success": "true",
+            "union_id": "unionIdunionIdstring"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:628145000",
+      "sub_msg": "网络错误，请稍后再试~"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/2136",
+  "updatedAt": "2022-07-01",
+  "_file_stem": "member-member-batchGetHistoryMemberUnionId"
+}

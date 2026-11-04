@@ -1,0 +1,312 @@
+{
+  "id": "doudian.permission.buyin.getDistributionLiveProductList",
+  "platform": "doudian",
+  "group": "permission",
+  "name": "buyin.getDistributionLiveProductList",
+  "description": "【二方接口】直播间商品列表",
+  "method": "GET",
+  "path": "/buyin/getDistributionLiveProductList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 机构, 达人, MCN机构, 抖客"
+  },
+  "notes": [
+    "文档书: 二方开放权限组（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "author_buyin_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "百应ID",
+      "example": "1345532224355",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "create_time",
+      "type": "mixed",
+      "description": "直播间创建时间",
+      "example": "xxxxxxxx"
+    },
+    {
+      "name": "online_num",
+      "type": "mixed",
+      "description": "在线人数",
+      "example": "100"
+    },
+    {
+      "name": "is_rest_assured",
+      "type": "boolean",
+      "description": "是否安心购",
+      "example": "false"
+    },
+    {
+      "name": "has_kol_coupon",
+      "type": "boolean",
+      "description": "是否有主播券",
+      "example": "false"
+    },
+    {
+      "name": "is_flash_live_room",
+      "type": "boolean",
+      "description": "是否闪购直播间",
+      "example": "false"
+    },
+    {
+      "name": "product_count",
+      "type": "mixed",
+      "description": "商品总数",
+      "example": "10"
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "description": "普通商品列表",
+      "example": ""
+    },
+    {
+      "name": "flash_products_count",
+      "type": "mixed",
+      "description": "闪购商品总数",
+      "example": "1"
+    },
+    {
+      "name": "flash_products",
+      "type": "array",
+      "description": "闪购商品列表",
+      "example": ""
+    },
+    {
+      "name": "room_id",
+      "type": "mixed",
+      "description": "直播间ID",
+      "example": "1"
+    },
+    {
+      "name": "author_nickname",
+      "type": "string",
+      "description": "达人昵称",
+      "example": "测试昵称"
+    },
+    {
+      "name": "author_buyin_id",
+      "type": "mixed",
+      "description": "达人百应ID",
+      "example": "4453563322"
+    },
+    {
+      "name": "lottery_products",
+      "type": "array",
+      "description": "福袋商品列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 256:服务打瞌睡了，请稍后再试（sub_code: isv.business-failed:256）",
+      "action": "256:服务打瞌睡了，请稍后再试",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "256:服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4130:达人未开播（sub_code: isv.business-failed:4130）",
+      "action": "4130:达人未开播",
+      "sub_code": "isv.business-failed:4130",
+      "sub_msg": "4130:达人未开播"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/getDistributionLiveProductList?app_key=your_appkey_here&method=buyin.getDistributionLiveProductList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "author_buyin_id": "4453563322",
+        "author_nickname": "测试昵称",
+        "create_time": "xxxxxxxx",
+        "flash_products": [
+          {
+            "ads_promotion_ratio": {
+              "old_fans_ratio": "1",
+              "share_ratio": "1"
+            },
+            "available_coupons": [
+              {
+                "apply_end_time": "xxxxxx",
+                "apply_start_time": "xxxxxx",
+                "coupon_type": "0",
+                "discount_desc": "满20减1",
+                "type_desc": "平台券",
+                "use_end_time": "1",
+                "use_start_time": "1",
+                "valid_period": "2",
+                "validity_type": "1"
+              }
+            ],
+            "category_id": "行业类目",
+            "cover": "xxxxxx",
+            "first_cid": "1",
+            "first_cname": "一级类目",
+            "given_products": [
+              {
+                "cover": "xxxxxx",
+                "given_skus": [
+                  {
+                    "cover": "xxxxx",
+                    "product_id": "112233",
+                    "sku_id": "223311"
+                  }
+                ],
+                "product_id": "12233",
+                "product_name": "测试商品"
+              }
+            ],
+            "is_explaining": "false",
+            "list_num": "1",
+            "live_room_price": "10",
+            "price": "10",
+            "product_id": "1111111",
+            "second_cid": "2",
+            "second_cname": "二级类目",
+            "third_cid": "3",
+            "third_cname": "三级类目",
+            "title": "测试商品"
+          }
+        ],
+        "flash_products_count": "1",
+        "has_kol_coupon": "false",
+        "is_flash_live_room": "false",
+        "is_rest_assured": "false",
+        "lottery_products": [
+          {
+            "lottery_activity_id": "1",
+            "lottery_product_end_time": "xxxxxxx",
+            "lottery_product_start_time": "xxxxxxx",
+            "product_info": {
+              "ads_promotion_ratio": {
+                "old_fans_ratio": "1",
+                "share_ratio": "1"
+              },
+              "available_coupons": [
+                {
+                  "apply_end_time": "xxxxx",
+                  "apply_start_time": "xxxxx",
+                  "coupon_type": "0",
+                  "discount_desc": "满20减1",
+                  "type_desc": "平台券",
+                  "use_end_time": "xxxxx",
+                  "use_start_time": "xxxxxx",
+                  "valid_period": "1000",
+                  "validity_type": "1"
+                }
+              ],
+              "category_id": "1",
+              "cover": "xxxxxx",
+              "first_cid": "1",
+              "first_cname": "一级类目名称",
+              "given_products": [
+                {
+                  "cover": "xxxxxx",
+                  "given_skus": [
+                    {
+                      "cover": "xxxxxx",
+                      "product_id": "1122333",
+                      "sku_id": "456743"
+                    }
+                  ],
+                  "product_id": "112233",
+                  "product_name": "测试商品"
+                }
+              ],
+              "is_explaining": "false",
+              "list_num": "1",
+              "live_room_price": "10",
+              "price": "10",
+              "product_id": "1231231",
+              "second_cid": "2",
+              "second_cname": "二级类目名称",
+              "third_cid": "3",
+              "third_cname": "三级类目名称",
+              "title": "测试商品"
+            }
+          }
+        ],
+        "online_num": "100",
+        "product_count": "10",
+        "products": [
+          {
+            "ads_promotion_ratio": {
+              "old_fans_ratio": "1",
+              "share_ratio": "1"
+            },
+            "available_coupons": [
+              {
+                "apply_end_time": "1xxxxxx",
+                "apply_start_time": "1xxxxxx",
+                "coupon_type": "0",
+                "discount_desc": "满20减1",
+                "type_desc": "平台券",
+                "use_end_time": "1",
+                "use_start_time": "1",
+                "valid_period": "2",
+                "validity_type": "1"
+              }
+            ],
+            "category_id": "4",
+            "cover": "xxxxxxx",
+            "first_cid": "1",
+            "first_cname": "一级类目",
+            "given_products": [
+              {
+                "cover": "xxxxxxx",
+                "given_skus": [
+                  {
+                    "cover": "xxxxxxx",
+                    "product_id": "1122345",
+                    "sku_id": "112233"
+                  }
+                ],
+                "product_id": "223145",
+                "product_name": "测试商品"
+              }
+            ],
+            "is_explaining": "false",
+            "list_num": "1",
+            "live_room_price": "10",
+            "price": "100",
+            "product_id": "112233",
+            "second_cid": "2",
+            "second_cname": "二级类目",
+            "third_cid": "3",
+            "third_cname": "三级类目",
+            "title": "测试商品"
+          }
+        ],
+        "room_id": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:256",
+      "sub_msg": "256:服务打瞌睡了，请稍后再试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1506/6582",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "permission-buyin-getDistributionLiveProductList"
+}

@@ -1,0 +1,323 @@
+{
+  "id": "doudian.supply-chain.supplyChain.supplyProduct.edit",
+  "platform": "doudian",
+  "group": "supply-chain",
+  "name": "supplyChain.supplyProduct.edit",
+  "description": "编辑产品",
+  "method": "GET",
+  "path": "/supplyChain/supplyProduct/edit",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 供应商"
+  },
+  "notes": [
+    "文档书: 供销平台API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "产品id",
+      "example": "3506108675121111111",
+      "_depth": 0
+    },
+    {
+      "name": "category_leaf_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "叶子类目ID通过getSupplyProductUpdateRule",
+      "example": "20000",
+      "_depth": 0
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品名称，最多60个字符(30个汉字)，不能含emoj表情",
+      "example": "xxx补水液",
+      "_depth": 0
+    },
+    {
+      "name": "recommend_remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家推荐语，不能含emoj表情商品轮播图，多张图片用 \\\"|\\\" 分开，第一张图为主图，最多5张，至少600x600，大小不超过1M 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "这个商品很好啊",
+      "_depth": 0
+    },
+    {
+      "name": "pic",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "产品轮播图，多张图片用 \\\"|\\\" 分开，第一张图为主图，最多5张，至少600x600，大小不超过1M 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "description",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "商品描述，目前只支持图片。多张图片用 \\\"|\\\" 分开。不能用其他网站的文本粘贴，这样会出现css样式不兼容。",
+      "example": "img_url1|img_url2|img_url3",
+      "_depth": 0
+    },
+    {
+      "name": "weight",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "重量",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "weight_unit",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "重量单位，0-kg, 1-g",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "remark",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商家可见备注",
+      "example": "备注",
+      "_depth": 0
+    },
+    {
+      "name": "quality_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "资质列表",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "quality_key",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资质key",
+      "example": "3457***9470978",
+      "_depth": 1
+    },
+    {
+      "name": "quality_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "资质名称",
+      "example": "进货凭证",
+      "_depth": 1
+    },
+    {
+      "name": "quality_attachments",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "资质",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "media_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "1-图片，2-pdf",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "凭证url",
+      "example": "\\\"http://www.byted***.com/YYYY\\\"",
+      "_depth": 2
+    },
+    {
+      "name": "spec_name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "规格名为各级规格名用 \\\"-\\\" 分割",
+      "example": "颜色-尺码",
+      "_depth": 0
+    },
+    {
+      "name": "specs",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "通用规格，能被同类商品通用。多规格用^分隔，规格与规格值用|分隔，多个规格值用,分隔。",
+      "example": "颜色|红色,黑色^尺码|S,M",
+      "_depth": 0
+    },
+    {
+      "name": "spec_prices",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "sku详情，只支持全量编辑, 否则会视为删除,  对于非新增的sku,不支持同时编辑价格或库存, 编辑已有sku注意传递内外部id, 供销平台的id是数字",
+      "example": "[{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"sku_id\\\":33333333333333,\"outer_sku_id\":\"00000000000\"},{\\\"spec_detail_name1\\\":\\\"黑色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"sku_id\\\":222222222222,\"outer_sku_id\":\"11111111111\"},{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"S\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"sku_id\\\":111111111111,\"outer_sku_id\":\"3333333333\"},{\\\"spec_detail_name1\\\":\\\"红色\\\",\\\"spec_detail_name2\\\":\\\"M\\\",\\\"spec_detail_name3\\\":\\\"\\\",\\\"sku_id\\\":222222222222,\"outer_sku_id\":\"44444444444\"}]",
+      "_depth": 0
+    },
+    {
+      "name": "spec_pic",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "如颜色-尺寸, 颜色就是主规格, 颜色如黑,白,黄,它们图片url以逗号分隔 注：\\\"pic\\\"、\\\"description\\\"、\\\"spec_pic\\\"这三个字段里的传入的图片数量总和，不得超过50张。",
+      "example": "img_url,img_url,img_url",
+      "_depth": 0
+    },
+    {
+      "name": "product_format_new",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "类目属性",
+      "example": "类目属性",
+      "_depth": 0
+    },
+    {
+      "name": "spu_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "spu_id",
+      "example": "14567",
+      "_depth": 0
+    },
+    {
+      "name": "extends",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "扩展信息",
+      "example": "{}",
+      "_depth": 0
+    },
+    {
+      "name": "outer_product_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外部product id",
+      "example": "11111111111111",
+      "_depth": 0
+    },
+    {
+      "name": "standard_brand_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "品牌id，通过/supplyProduct/getSupplyProductUpdateRule获取，无品牌id则传596120136",
+      "example": "111",
+      "_depth": 0
+    },
+    {
+      "name": "white_back_ground_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "白底图url",
+      "example": "http://aaaa",
+      "_depth": 0
+    },
+    {
+      "name": "long_pic_url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "3:4长图url",
+      "example": "http://aaaa",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_id",
+      "type": "number",
+      "description": "供应链产品id",
+      "example": "7147950556525380000"
+    },
+    {
+      "name": "outer_product_id",
+      "type": "string",
+      "description": "外部产品编码",
+      "example": "232334"
+    },
+    {
+      "name": "sku_list",
+      "type": "array",
+      "description": "sku列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 编辑分销品错误（sub_code: isv.business-failed:3207）",
+      "action": "编辑分销品错误",
+      "sub_code": "isv.business-failed:3207",
+      "sub_msg": "编辑分销品错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 分销品供货价不能是0（sub_code: isv.business-failed:3206）",
+      "action": "分销品供货价不能是0",
+      "sub_code": "isv.business-failed:3206",
+      "sub_msg": "分销品供货价不能是0"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/supplyChain/supplyProduct/edit?app_key=your_appkey_here&method=supplyChain.supplyProduct.edit&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "outer_product_id": "232334",
+        "product_id": "7147950556525380000",
+        "sku_list": [
+          {
+            "outer_sku_id": "111eee2222",
+            "sku_id": "7147944438030516000"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:3207",
+      "sub_msg": "编辑分销品错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/172/2552",
+  "updatedAt": "2023-04-12",
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-edit"
+}

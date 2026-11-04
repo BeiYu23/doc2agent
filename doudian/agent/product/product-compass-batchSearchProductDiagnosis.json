@@ -1,0 +1,89 @@
+{
+  "id": "doudian.product.compass.batchSearchProductDiagnosis",
+  "platform": "doudian",
+  "group": "product",
+  "name": "compass.batchSearchProductDiagnosis",
+  "description": "批量查询商品搜索优化项",
+  "method": "GET",
+  "path": "/compass/batchSearchProductDiagnosis",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 商品API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "product_id_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "商品列表 单次最多传20个",
+      "example": "[1,2,3]",
+      "_depth": 0
+    },
+    {
+      "name": "factor_list",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "只看指定优化项，不传则返回所有可优化项",
+      "example": "1：主图视频  \n2：34主图  \n3：报名活动（报名大促、超值购、秒杀）  \n4：设置运费险  \n5：信息质量不达标  \n6：详实评价  \n7：价格  \n8：销量  \n9：上架  \n10：库存",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "product_diagnosis_result",
+      "type": "array",
+      "description": "诊断结果列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/compass/batchSearchProductDiagnosis?app_key=your_appkey_here&method=compass.batchSearchProductDiagnosis&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "product_diagnosis_result": [
+          {
+            "diagnosis_list": [
+              {
+                "diagnosis_item": "sale_001",
+                "diagnosis_item_text": "待优化项描述",
+                "improvement_advices": [
+                  {
+                    "advice": "优化信息质量分",
+                    "product_factor_rise": "0.24823810710678254"
+                  }
+                ]
+              }
+            ],
+            "max_estimate_promote_rate": "0.2768340470954546",
+            "product_id": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/14/7947",
+  "updatedAt": "2025-12-19",
+  "_file_stem": "product-compass-batchSearchProductDiagnosis"
+}

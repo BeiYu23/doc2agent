@@ -1,0 +1,80 @@
+{
+  "id": "doudian.order.bigCustomer.setCountingRules",
+  "platform": "doudian",
+  "group": "order",
+  "name": "bigCustomer.setCountingRules",
+  "description": "设置统计销量规则",
+  "method": "GET",
+  "path": "/bigCustomer/setCountingRules",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "counting_rules",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "规则列表（size <= 20）",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计数结束时间（秒级别时间戳）",
+      "example": "1752940800",
+      "_depth": 1
+    },
+    {
+      "name": "sku_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "平台SkuID",
+      "example": "3453363154713090",
+      "_depth": 1
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "计数开始时间（秒级别时间戳）",
+      "example": "1752076800",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/bigCustomer/setCountingRules?app_key=your_appkey_here&method=bigCustomer.setCountingRules&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/7649",
+  "updatedAt": "2025-07-31",
+  "_file_stem": "order-bigCustomer-setCountingRules"
+}

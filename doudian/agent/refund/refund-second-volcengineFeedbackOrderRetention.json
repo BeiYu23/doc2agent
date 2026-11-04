@@ -1,0 +1,123 @@
+{
+  "id": "doudian.refund.second.volcengineFeedbackOrderRetention",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "second.volcengineFeedbackOrderRetention",
+  "description": "AI挽单回调接口",
+  "method": "GET",
+  "path": "/second/volcengineFeedbackOrderRetention",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "订单挽回的金额，单位为分，如19000。如果status=success，则order_amount和order_retention_cost必填。",
+      "example": "19000",
+      "_depth": 0
+    },
+    {
+      "name": "failed_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "挽回失败原因，如：外呼未接通、客户买错了等",
+      "example": "外呼未接通",
+      "_depth": 0
+    },
+    {
+      "name": "shop_order_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "必填, String, 订单号",
+      "example": "123456789012345",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "挽回状态，success/fail。如果is_outbound=1，则status和call_status必填。",
+      "example": "success",
+      "_depth": 0
+    },
+    {
+      "name": "is_outbound",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "必填，是否进行外呼，0: 否；1: 是",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "order_retention_cost",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "挽单的成本，单位为分，口径需要和服务商保持一致，比如：外呼成本。如果status=success，则order_amount和order_retention_cost必填。",
+      "example": "1000",
+      "_depth": 0
+    },
+    {
+      "name": "call_status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接通状态，answered/unanswered。如果is_outbound=1，则status和call_status必填",
+      "example": "answered",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数不对，请检查（sub_code: isv.parameter-invalid:40001）",
+      "action": "缺少必要的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "参数不对，请检查"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 业务处理失败（sub_code: isp.service-error:50000）",
+      "action": "请反馈平台开发",
+      "sub_code": "isp.service-error:50000",
+      "sub_msg": "业务处理失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/second/volcengineFeedbackOrderRetention?app_key=your_appkey_here&method=second.volcengineFeedbackOrderRetention&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40001",
+      "sub_msg": "参数不对，请检查"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/8136",
+  "updatedAt": "2026-03-12",
+  "_file_stem": "refund-second-volcengineFeedbackOrderRetention"
+}

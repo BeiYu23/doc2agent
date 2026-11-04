@@ -1,0 +1,224 @@
+{
+  "id": "doudian.decoration.shop.marketCategoryOperate",
+  "platform": "doudian",
+  "group": "decoration",
+  "name": "shop.marketCategoryOperate",
+  "description": "店铺装修类目操作接口",
+  "method": "GET",
+  "path": "/shop/marketCategoryOperate",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 店铺装修API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "operate_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "操作类型：创建、更新、删除\n\n1. create创建：category_id parent_category_id 只有以下两种情况（0等同于nil）:\nnil nil 表示创建一个一级分类，\nnil parent_category_id 表示在指定一级分类下创建一个二级分类；\n\n2. update编辑：category_id parent_category_id  只有以下两种情况：\ncategoryId nil 表示编辑一个一级分类，\ncategoryId parent_category_id 表示编辑一个二级分类；\n\n3. delete删除：category_id parent_category_id 只有以下两种情况：\ncategory_id nil 表示删除一个一级分类及关联二级分类.(含商品)\ncategory_id parent_category_id  表示删除一个二级分类；",
+      "example": "create、update、delete",
+      "_depth": 0
+    },
+    {
+      "name": "parent_category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "父类目的id，传0或者不传则category_id表示一级类目",
+      "example": "7184332308881850668",
+      "_depth": 0
+    },
+    {
+      "name": "category_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目的id,创建的时候不传或传0，编辑删除的时候必传",
+      "example": "7184332308881850668",
+      "_depth": 0
+    },
+    {
+      "name": "sequence",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "表示类目在同级别排序的索引位置（从0开始），-1表示倒数第一，-2倒数第二，以此类推。不传则不变化（create时默认后面追加,修改顺序请使用update方法）。 如3个一级分类，取值范围[-2,2]。注意：0也是有效值",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "category_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "类目名称，创建操作时必填名称",
+      "example": "水果生鲜",
+      "_depth": 0
+    },
+    {
+      "name": "rank",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "类目在同级别优先级权重，越大则越靠前，范围[0,100000]，若指定sequence，则rank失效",
+      "example": "5000",
+      "_depth": 0
+    },
+    {
+      "name": "tmp_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "要更新的页面，如果存在多个生效页面，必须指定。可以从管理端查询，或通过[/shop/openShopPageManagementList]接口查询。",
+      "example": "页面ID",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "category_id",
+      "type": "mixed",
+      "description": "创建、编辑、删除的类目id。\n创建成功后进入审核阶段，正式生效存在秒级时差。",
+      "example": "7184332308881850668"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数检验不通过（sub_code: isv.parameter-invalid:20115）",
+      "action": "请检查参数是否合法，是否是有效的类目信息",
+      "sub_code": "isv.parameter-invalid:20115",
+      "sub_msg": "参数检验不通过"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常（sub_code: isv.business-failed:20116）",
+      "action": "处理失败，请重试或联系客服处理",
+      "sub_code": "isv.business-failed:20116",
+      "sub_msg": "系统异常"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数检验不通过（sub_code: isv.business-failed:20120）",
+      "action": "请检查参数是否合法，是否是有效的类目信息",
+      "sub_code": "isv.business-failed:20120",
+      "sub_msg": "参数检验不通过"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数为空，请检查（sub_code: isv.business-failed:10000）",
+      "action": "请检查参数是否符合规范",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "参数为空，请检查"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数检验不通过（sub_code: isv.business-failed:20125）",
+      "action": "请检查参数是否合法，是否是有效的类目信息",
+      "sub_code": "isv.business-failed:20125",
+      "sub_msg": "参数检验不通过"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前页面处于[待送审], 不可编辑（sub_code: isv.business-failed:20000）",
+      "action": "当前页面送审中，请延迟稍后再试。",
+      "sub_code": "isv.business-failed:20000",
+      "sub_msg": "当前页面处于[待送审], 不可编辑"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 分类ID未查询到有效类目（sub_code: isv.business-failed:20130）",
+      "action": "分类ID不存在，或分类未正式生效，先调用查询接口，待生效后操作。",
+      "sub_code": "isv.business-failed:20130",
+      "sub_msg": "分类ID未查询到有效类目"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请联系客服咨询（sub_code: isv.business-failed:50012）",
+      "action": "系统异常，联系客服",
+      "sub_code": "isv.business-failed:50012",
+      "sub_msg": "系统异常，请联系客服咨询"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前页面未生效（sub_code: isv.business-failed:20110）",
+      "action": "页面未生效，请先到PC后台将页面发布",
+      "sub_code": "isv.business-failed:20110",
+      "sub_msg": "当前页面未生效"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 网络异常，请稍后重试（sub_code: isv.business-failed:20126）",
+      "action": "系统异常，联系客服",
+      "sub_code": "isv.business-failed:20126",
+      "sub_msg": "网络异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 存在多个生效的页面,请指定id（sub_code: isv.business-failed:23000）",
+      "action": "存在多个生效的页面，需要指定tmp_id",
+      "sub_code": "isv.business-failed:23000",
+      "sub_msg": "存在多个生效的页面,请指定id"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 没有可编辑的分类页版本，请到商家后台创建并生效（sub_code: isv.business-failed:20111）",
+      "action": "当前没有生效的分类页，请先到pc后台创建",
+      "sub_code": "isv.business-failed:20111",
+      "sub_msg": "没有可编辑的分类页版本，请到商家后台创建并生效"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 61000:当前层级含29个分类,sequence有效范围[-28,28]（sub_code: isv.business-failed:61000）",
+      "action": "再更新的时候，sequence超过有效范围",
+      "sub_code": "isv.business-failed:61000",
+      "sub_msg": "61000:当前层级含29个分类,sequence有效范围[-28,28]"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 23001:名称不能包含'爆款推荐'（sub_code: isv.business-failed:23001）",
+      "action": "名称不能包含“推荐”等关键词",
+      "sub_code": "isv.business-failed:23001",
+      "sub_msg": "23001:名称不能包含'爆款推荐'"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 30002:当前页面无组件，不允许生效（sub_code: isv.business-failed:30002）",
+      "action": "需要先创建一个分类",
+      "sub_code": "isv.business-failed:30002",
+      "sub_msg": "30002:当前页面无组件，不允许生效"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/shop/marketCategoryOperate?app_key=your_appkey_here&method=shop.marketCategoryOperate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "category_id": "7184332308881850668"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20115",
+      "sub_msg": "参数检验不通过"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/167/2903",
+  "updatedAt": "2024-11-21",
+  "_file_stem": "decoration-shop-marketCategoryOperate"
+}

@@ -1,0 +1,145 @@
+{
+  "id": "doudian.warehouse.yunc.cancelOutboundOrderToB",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "yunc.cancelOutboundOrderToB",
+  "description": "toB场景取消出库单",
+  "method": "GET",
+  "path": "/yunc/cancelOutboundOrderToB",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V4.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "erp_order_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "erp出库单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "op_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "操作类型 枚举值：0【取消】、1【拦截】",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_tag",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "取消标记，枚举值：0【整单取消】",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "cancel_reason",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "取消原因",
+      "example": "no want",
+      "_depth": 0
+    },
+    {
+      "name": "owner_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "货主编码",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "响应",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 订单状态不允许取消（sub_code: isv.business-failed:62302623）",
+      "action": "订单不允许取消",
+      "sub_code": "isv.business-failed:62302623",
+      "sub_msg": "订单状态不允许取消"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 100102:取消指令实操取消失败（sub_code: isv.business-failed:100102）",
+      "action": "取消指令实操取消失败",
+      "sub_code": "isv.business-failed:100102",
+      "sub_msg": "100102:取消指令实操取消失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4004:warehouse outbound operation error（sub_code: isv.business-failed:4004）",
+      "action": "出库操作失败",
+      "sub_code": "isv.business-failed:4004",
+      "sub_msg": "4004:warehouse outbound operation error"
+    },
+    {
+      "code": "20001",
+      "meaning": "内部服务超时 / 1103:服务超时，请重试（sub_code: isp.service-timeout-error:1103）",
+      "action": "请重试",
+      "sub_code": "isp.service-timeout-error:1103",
+      "sub_msg": "1103:服务超时，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 500:500（sub_code: isv.business-failed:500）",
+      "action": "500",
+      "sub_code": "isv.business-failed:500",
+      "sub_msg": "500:500"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 9023:取消指令实操取消失败（sub_code: isv.business-failed:9023）",
+      "action": "取消指令实操取消失败",
+      "sub_code": "isv.business-failed:9023",
+      "sub_msg": "9023:取消指令实操取消失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/yunc/cancelOutboundOrderToB?app_key=your_appkey_here&method=yunc.cancelOutboundOrderToB&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": {
+          "logistics_no": "lo111111"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:62302623",
+      "sub_msg": "订单状态不允许取消"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/745",
+  "updatedAt": "2023-01-30",
+  "_file_stem": "warehouse-yunc-cancelOutboundOrderToB"
+}

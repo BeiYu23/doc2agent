@@ -1,0 +1,168 @@
+{
+  "id": "doudian.btas-inspect.btas.sc.setInspectionResult",
+  "platform": "doudian",
+  "group": "btas-inspect",
+  "name": "btas.sc.setInspectionResult",
+  "description": "质检机构_上传订单质检结果",
+  "method": "GET",
+  "path": "/btas/sc/setInspectionResult",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: BTAS质检API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "order_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "订单码",
+      "example": "234231",
+      "_depth": 0
+    },
+    {
+      "name": "result",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检结果：1-通过，2-不通过，5-无法质检，99-无需质检，触发退货发",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "service_status",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "1：上传质检报告，2：取消质检报告",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "service_charge",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "回传的这单的质检费用。单位（分）",
+      "example": "3000",
+      "_depth": 0
+    },
+    {
+      "name": "service_center_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "质检中心ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "certification_code",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检编码,仅字母数字",
+      "example": "SNAKE001001",
+      "_depth": 0
+    },
+    {
+      "name": "result_details",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "质检详情。JSON字符串",
+      "example": "{\"brand\":\"苹果\",\"model\":\"Iphone 12 Pro Max\"}",
+      "_depth": 0
+    },
+    {
+      "name": "inspection_complete_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "质检完成时间（秒,UTC）",
+      "example": "1675244344",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 订单状态异常（sub_code: isp.service-error:2019）",
+      "action": "登录btas处理异常订单",
+      "sub_code": "isp.service-error:2019",
+      "sub_msg": "订单状态异常"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:3001）",
+      "action": "重试",
+      "sub_code": "isp.service-error:3001",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 质检任务错误（sub_code: isp.service-error:4002）",
+      "action": "重试",
+      "sub_code": "isp.service-error:4002",
+      "sub_msg": "质检任务错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 质检编码重复（sub_code: isp.service-error:2018）",
+      "action": "更换质检码",
+      "sub_code": "isp.service-error:2018",
+      "sub_msg": "质检编码重复"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 4105:更新质检任务出错（sub_code: isv.business-failed:4105）",
+      "action": "4105:更新质检任务出错",
+      "sub_code": "isv.business-failed:4105",
+      "sub_msg": "4105:更新质检任务出错"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10000:正在执行该订单的请求，请耐心等待（sub_code: isv.business-failed:10000）",
+      "action": "10000:正在执行该订单的请求，请耐心等待",
+      "sub_code": "isv.business-failed:10000",
+      "sub_msg": "10000:正在执行该订单的请求，请耐心等待"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/afterSale/OpenAfterSaleChannel?app_key=your_appkey_here&method=afterSale.OpenAfterSaleChannel&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "conclusion": {
+          "can_apply_type_list": "[1,2]",
+          "match_conclusion": "1",
+          "match_message": "\"\"",
+          "match_success": "true"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:2019",
+      "sub_msg": "订单状态异常"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/49/2923",
+  "updatedAt": "2023-02-09",
+  "_file_stem": "btas-inspect-btas-sc-setInspectionResult"
+}

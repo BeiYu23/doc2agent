@@ -1,0 +1,145 @@
+{
+  "id": "doudian.cloud.openCloud.ddpGetTraceInfo",
+  "platform": "doudian",
+  "group": "cloud",
+  "name": "openCloud.ddpGetTraceInfo",
+  "description": "获取数据推送轨迹",
+  "method": "GET",
+  "path": "/openCloud/ddpGetTraceInfo",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 电商云API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "biz_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "业务ID  1订单 2售后 3商品",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "data_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "业务单ID",
+      "example": "5032475919537882800",
+      "_depth": 0
+    },
+    {
+      "name": "instance_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "数据库实例id",
+      "example": "mysql-xxxxxxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "开始时间",
+      "example": "1735271910",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "结束时间",
+      "example": "1735271920",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data_info",
+      "type": "object",
+      "description": "基本信息",
+      "example": ""
+    },
+    {
+      "name": "trace_info_list",
+      "type": "array",
+      "description": "轨迹信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 内部错误，请稍后重试（sub_code: isv.business-failed:701）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:701",
+      "sub_msg": "内部错误，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/openCloud/ddpGetTraceInfo?app_key=your_appkey_here&method=openCloud.ddpGetTraceInfo&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data_info": {
+          "biz_id": "1",
+          "biz_name": "订单",
+          "biz_status": "5",
+          "biz_status_name": "已收货",
+          "create_time": "1675818459",
+          "data_id": "5032475919537882800",
+          "extra": {},
+          "history_push_day": "0",
+          "last_expiration_time": "1686708852",
+          "pay_time": "1675818464",
+          "push_status": "1",
+          "push_status_name": "已同步",
+          "shop_bind_time": "1677069633",
+          "shop_id": "77977",
+          "shop_name": "刘好好测试",
+          "status": "1",
+          "update_time": "1685521405"
+        },
+        "trace_info_list": [
+          {
+            "biz_status": "5",
+            "biz_status_name": "已收货",
+            "data_status": "1",
+            "data_status_name": "成功",
+            "db_instance_id": "mysql-8fd94e30b78x",
+            "happen_time": "1685521405",
+            "push_type_name": "历史补单",
+            "target_version": "1700042732605402",
+            "update_time": "1700042722"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:701",
+      "sub_msg": "内部错误，请稍后重试"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/158/5702",
+  "updatedAt": "2024-12-30",
+  "_file_stem": "cloud-openCloud-ddpGetTraceInfo"
+}

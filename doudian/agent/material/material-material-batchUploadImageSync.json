@@ -1,0 +1,229 @@
+{
+  "id": "doudian.material.material.batchUploadImageSync",
+  "platform": "doudian",
+  "group": "material",
+  "name": "material.batchUploadImageSync",
+  "description": "1、一次上传的数量限制50张图片且单个图片最大不能超过10M；   \n2、接口上传成功，素材中心会对素材进行异步审核，审核时效：非风险图片99%在4s内完成审核，风险图片我们会在24h内审核完成；对于审核失败的素材，素材中心会在一定时间内将其删除；\n3、上",
+  "method": "GET",
+  "path": "/material/batchUploadImageSync",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺, 供应商"
+  },
+  "notes": [
+    "文档书: 素材中心API（版本 V3.13）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "materials",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "素材信息；一次上传的数量限制50张图片且单个图片最大不能超过10M；",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "request_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "该参数仅有2个作用：（1）一次请求中素材的唯一标示；（2）接口防并发，规则是：不同请求所有request_id排序之后拼接起来，若相同视为同一次请求",
+      "example": "1234567890",
+      "_depth": 1
+    },
+    {
+      "name": "folder_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文件夹id，0为素材中心根目录。若想创建文件夹，请参考：https://ehome.bytedance.YOUR_SECRET_KEY?doc=true",
+      "example": "0",
+      "_depth": 1
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材名称，长度限制为50个字符",
+      "example": "这是一个图片",
+      "_depth": 1
+    },
+    {
+      "name": "url",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "图片url，必须是公网可访问地址；如果是二进制上传，请使用file_uri字段。url和file_uri二选一，不能同时为空",
+      "example": "http://xxx/origin",
+      "_depth": 1
+    },
+    {
+      "name": "file_uri",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "二进制文件对应的uri，获取方式请参考：https://op.jinritemai.com/docs/guide-docs/171/1719",
+      "example": "tos-cn-i-7veqoeduo3/9e1df78157524c63abf7caa9bb1e88e0",
+      "_depth": 1
+    },
+    {
+      "name": "material_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "素材类型，请传固定值：photo",
+      "example": "photo",
+      "_depth": 1
+    },
+    {
+      "name": "need_distinct",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否去重，默认true:去重，不支持false:不去重，传false无效依旧会去重。去重是指：存在已经审核通过且内容相同的图片，直接返回已存在的图片地址。",
+      "example": "true",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success_map",
+      "type": "string",
+      "description": "成功上传的素材，key为参数中的request_id",
+      "example": ""
+    },
+    {
+      "name": "failed_map",
+      "type": "string",
+      "description": "失败的素材，key为参数中的request_id",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / request_id无效（sub_code: isv.parameter-invalid:20002）",
+      "action": "使用有效的request_id",
+      "sub_code": "isv.parameter-invalid:20002",
+      "sub_msg": "request_id无效"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 请求已生效，请勿重复请求（sub_code: isv.business-failed:31001）",
+      "action": "并发请求，不要重复请求",
+      "sub_code": "isv.business-failed:31001",
+      "sub_msg": "请求已生效，请勿重复请求"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材数量为空或者超出50个（sub_code: isv.parameter-invalid:20001）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:20001",
+      "sub_msg": "素材数量为空或者超出50个"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材库容量不足（sub_code: isv.business-failed:30001）",
+      "action": "联系客服扩容",
+      "sub_code": "isv.business-failed:30001",
+      "sub_msg": "素材库容量不足"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10003）",
+      "action": "内部错误，稍后重试",
+      "sub_code": "isp.service-error:10003",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统异常，请稍后重试（sub_code: isp.service-error:10004）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isp.service-error:10004",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材涉嫌违规，不能上传（sub_code: isv.business-failed:22007）",
+      "action": "素材涉嫌违规，不能上传",
+      "sub_code": "isv.business-failed:22007",
+      "sub_msg": "素材涉嫌违规，不能上传"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 存在重复图片，请勿上传重复图片（sub_code: isv.business-failed:31003）",
+      "action": "本次请求中存在重复图片",
+      "sub_code": "isv.business-failed:31003",
+      "sub_msg": "存在重复图片，请勿上传重复图片"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 素材下载失败，请重新上传（sub_code: isv.business-failed:10010）",
+      "action": "重新上传",
+      "sub_code": "isv.business-failed:10010",
+      "sub_msg": "素材下载失败，请重新上传"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 素材大小超出限制（sub_code: isv.parameter-invalid:22001）",
+      "action": "素材大小超出限制，不要重试",
+      "sub_code": "isv.parameter-invalid:22001",
+      "sub_msg": "素材大小超出限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 已退店商家不支持创建素材/文件夹（sub_code: isv.business-failed:30004）",
+      "action": "请联系客服，不要重复请求",
+      "sub_code": "isv.business-failed:30004",
+      "sub_msg": "已退店商家不支持创建素材/文件夹"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 31004:店铺超过每秒上传限制（sub_code: isv.business-failed:31004）",
+      "action": "31004:店铺超过每秒上传限制",
+      "sub_code": "isv.business-failed:31004",
+      "sub_msg": "31004:店铺超过每秒上传限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 22006:当前文件夹下不支持创建该类素材（sub_code: isv.business-failed:22006）",
+      "action": "22006:当前文件夹下不支持创建该类素材",
+      "sub_code": "isv.business-failed:22006",
+      "sub_msg": "22006:当前文件夹下不支持创建该类素材"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 10009:系统异常，请稍后重试（sub_code: isv.business-failed:10009）",
+      "action": "10009:系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:10009",
+      "sub_msg": "10009:系统异常，请稍后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?app_key=your_appkey_here&method=&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:20002",
+      "sub_msg": "request_id无效"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/69/1616",
+  "updatedAt": "2022-12-16",
+  "_file_stem": "material-material-batchUploadImageSync"
+}

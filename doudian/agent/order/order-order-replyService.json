@@ -1,0 +1,94 @@
+{
+  "id": "doudian.order.order.replyService",
+  "platform": "doudian",
+  "group": "order",
+  "name": "order.replyService",
+  "description": "回复服务请求",
+  "method": "GET",
+  "path": "/order/replyService",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 订单API（版本 V6.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "服务请求列表中获取的id",
+      "example": "123",
+      "_depth": 0
+    },
+    {
+      "name": "reply",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "回复内容",
+      "example": "哈哈哈",
+      "_depth": 0
+    },
+    {
+      "name": "evidence",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "回复凭证，通过/order/serviceDetail获取是否当前服务单</br>是否必须上传凭证。多张图片用竖线分开。不超过4张",
+      "example": "img_url1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务申请已经回复，无需重复回复（sub_code: isp.service-error:10009）",
+      "action": "-",
+      "sub_code": "isp.service-error:10009",
+      "sub_msg": "服务申请已经回复，无需重复回复"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 参数错误（sub_code: isp.service-error:10002）",
+      "action": "-",
+      "sub_code": "isp.service-error:10002",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 图片链接有误（sub_code: isv.business-failed:10017）",
+      "action": "-",
+      "sub_code": "isv.business-failed:10017",
+      "sub_msg": "图片链接有误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/order/replyService?app_key=your_appkey_here&method=order.replyService&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 20000,
+      "msg": "系统错误",
+      "sub_code": "isp.service-error:10009",
+      "sub_msg": "服务申请已经回复，无需重复回复"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/15/1917",
+  "updatedAt": "2022-11-14",
+  "_file_stem": "order-order-replyService"
+}

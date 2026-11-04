@@ -1,0 +1,121 @@
+{
+  "id": "doudian.stock.warehouse.removeAddr",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.removeAddr",
+  "description": "地址与区域仓解绑",
+  "method": "GET",
+  "path": "/warehouse/removeAddr",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V2.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "out_warehouse_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "外部仓库ID",
+      "example": "ABC",
+      "_depth": 0
+    },
+    {
+      "name": "addr",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "删除的地址结构体",
+      "example": "-",
+      "_depth": 0
+    },
+    {
+      "name": "addr_id1",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "一级地址id",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id2",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "二级地址id",
+      "example": "2",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id3",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "三级地址id",
+      "example": "3",
+      "_depth": 1
+    },
+    {
+      "name": "addr_id4",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "四级地址id",
+      "example": "4",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误:地址格式错误（sub_code: isv.parameter-invalid:2）",
+      "action": "请检查地址格式",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误:地址格式错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 单次请求过于频繁，请稍后重试（sub_code: isv.business-failed:1005）",
+      "action": "请稍后重试",
+      "sub_code": "isv.business-failed:1005",
+      "sub_msg": "单次请求过于频繁，请稍后重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 仓库不存在（sub_code: isv.business-failed:20002）",
+      "action": "请检查确认仓库信息",
+      "sub_code": "isv.business-failed:20002",
+      "sub_msg": "仓库不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/removeAddr?app_key=your_appkey_here&method=warehouse.removeAddr&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误:地址格式错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/1899",
+  "updatedAt": "2022-05-09",
+  "_file_stem": "stock-warehouse-removeAddr"
+}

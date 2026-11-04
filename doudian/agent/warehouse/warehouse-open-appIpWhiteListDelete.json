@@ -1,0 +1,53 @@
+{
+  "id": "doudian.warehouse.open.appIpWhiteListDelete",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "open.appIpWhiteListDelete",
+  "description": "仓库解绑门店接口",
+  "method": "GET",
+  "path": "/open/appIpWhiteListDelete",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V1.02）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "ip_list",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "ip地址列表",
+      "example": "[\"1.2.3.4\"]",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/open/appIpWhiteListDelete?app_key=your_appkey_here&method=open.appIpWhiteListDelete&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/1819",
+  "updatedAt": "2022-05-06",
+  "_file_stem": "warehouse-open-appIpWhiteListDelete"
+}

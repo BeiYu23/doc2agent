@@ -1,0 +1,99 @@
+{
+  "id": "doudian.feige.pigeon.getIMMsgDetailDailyList",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.getIMMsgDetailDailyList",
+  "description": "查询消息列表",
+  "method": "GET",
+  "path": "/pigeon/getIMMsgDetailDailyList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "conv_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "会话id列表,单次不能超过100",
+      "example": "7300859031382394152",
+      "_depth": 0
+    },
+    {
+      "name": "date",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "会话开始时间所在的日期",
+      "example": "20231102",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "i_m_msg_details",
+      "type": "array",
+      "description": "消息列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 最多只能查询35天的数据（sub_code: isv.business-failed:1000）",
+      "action": "最多只能查询35天的数据",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "最多只能查询35天的数据"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/getIMMsgDetailDailyList?app_key=your_appkey_here&method=pigeon.getIMMsgDetailDailyList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "i_m_msg_details": [
+          {
+            "auto_welcome_tag": "1",
+            "card_type": "live_invitation",
+            "content_type": "transfer_conversation",
+            "conv_id": "7293093180768109839",
+            "direction": "1",
+            "direction_v2": "1",
+            "doudian_open_id": "1",
+            "msg_type": "1",
+            "phase": "1",
+            "robot_auto_answer": "1",
+            "send_time_ts": "1",
+            "server_msg_id": "1",
+            "sponsor": "1",
+            "staff_id": "1",
+            "trans_in_staff_id": "1"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:1000",
+      "sub_msg": "最多只能查询35天的数据"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/5348",
+  "updatedAt": "2025-07-24",
+  "_file_stem": "feige-pigeon-getIMMsgDetailDailyList"
+}

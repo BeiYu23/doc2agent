@@ -1,0 +1,136 @@
+{
+  "id": "doudian.stock.warehouse.bindFencesByStore",
+  "platform": "doudian",
+  "group": "stock",
+  "name": "warehouse.bindFencesByStore",
+  "description": "绑定门店和电子围栏",
+  "method": "GET",
+  "path": "/warehouse/bindFencesByStore",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 库存API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "store_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "门店id",
+      "example": "11114442321",
+      "_depth": 0
+    },
+    {
+      "name": "add_out_fence_ids",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "要添加的外部围栏id列表",
+      "example": "fence_id1,fence_id3",
+      "_depth": 0
+    },
+    {
+      "name": "auto_opt",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否允许平台自动处理，默认不处理",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:2）",
+      "action": "检查参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统错误，请重试（sub_code: isp.service-error:9999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:9999",
+      "sub_msg": "系统错误，请重试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 该仓已绑定平台配送的围栏，不允许商家操作自配围栏（sub_code: isv.business-failed:100010）",
+      "action": "检查数据",
+      "sub_code": "isv.business-failed:100010",
+      "sub_msg": "该仓已绑定平台配送的围栏，不允许商家操作自配围栏"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 围栏距离门店位置太远，要求围栏必须在门店50000 米内（sub_code: isv.business-failed:1009）",
+      "action": "检查数据",
+      "sub_code": "isv.business-failed:1009",
+      "sub_msg": "围栏距离门店位置太远，要求围栏必须在门店50000 米内"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询门店信息失败（sub_code: isv.business-failed:20004）",
+      "action": "重试",
+      "sub_code": "isv.business-failed:20004",
+      "sub_msg": "查询门店信息失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 参数错误，请检查参数（sub_code: isv.business-failed:2122）",
+      "action": "只允许传入一个围栏，请检查",
+      "sub_code": "isv.business-failed:2122",
+      "sub_msg": "参数错误，请检查参数"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 系统错误请重试（sub_code: isp.service-error:2129999）",
+      "action": "重试",
+      "sub_code": "isp.service-error:2129999",
+      "sub_msg": "系统错误请重试"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误（sub_code: isp.service-error:20002）",
+      "action": "重试",
+      "sub_code": "isp.service-error:20002",
+      "sub_msg": "系统错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不在系统约束的最大范围内（sub_code: isv.business-failed:2121006）",
+      "action": "缩小围栏",
+      "sub_code": "isv.business-failed:2121006",
+      "sub_msg": "不在系统约束的最大范围内"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/warehouse/bindFencesByStore?app_key=your_appkey_here&method=warehouse.bindFencesByStore&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:2",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/34/2535",
+  "updatedAt": "2024-12-17",
+  "_file_stem": "stock-warehouse-bindFencesByStore"
+}

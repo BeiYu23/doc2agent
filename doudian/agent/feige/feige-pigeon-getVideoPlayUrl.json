@@ -1,0 +1,153 @@
+{
+  "id": "doudian.feige.pigeon.getVideoPlayUrl",
+  "platform": "doudian",
+  "group": "feige",
+  "name": "pigeon.getVideoPlayUrl",
+  "description": "获取飞鸽视频播放URL",
+  "method": "GET",
+  "path": "/pigeon/getVideoPlayUrl",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 飞鸽API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "video_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "视频ID",
+      "example": "v121ewadadad",
+      "_depth": 0
+    },
+    {
+      "name": "conversation_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "会话ID",
+      "example": "7314506401752139315",
+      "_depth": 0
+    },
+    {
+      "name": "server_msg_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "消息ID",
+      "example": "7314259492131127588",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "cover_url",
+      "type": "string",
+      "description": "视频封面图",
+      "example": "https://"
+    },
+    {
+      "name": "duration",
+      "type": "string",
+      "description": "视频时长，单位秒",
+      "example": "602.1"
+    },
+    {
+      "name": "url_expire",
+      "type": "mixed",
+      "description": "URL过期时间",
+      "example": "86400"
+    },
+    {
+      "name": "main_play_url",
+      "type": "string",
+      "description": "播放URL",
+      "example": "https://"
+    },
+    {
+      "name": "backup_play_url",
+      "type": "string",
+      "description": "播放URL，如果main_play_url不可用，可切换到此URL",
+      "example": "https://"
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "description": "视频格式",
+      "example": "mp4"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常，请填写正确的参数（sub_code: isv.parameter-invalid:605022003）",
+      "action": "请填写正确的参数",
+      "sub_code": "isv.parameter-invalid:605022003",
+      "sub_msg": "参数异常，请填写正确的参数"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 系统异常，请稍后重试（sub_code: isv.business-failed:605022001）",
+      "action": "系统异常，请稍后重试",
+      "sub_code": "isv.business-failed:605022001",
+      "sub_msg": "系统异常，请稍后重试"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常，会话信息不存在（sub_code: isv.parameter-invalid:605022002）",
+      "action": "参数异常，会话信息不存在",
+      "sub_code": "isv.parameter-invalid:605022002",
+      "sub_msg": "参数异常，会话信息不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常，消息不存在（sub_code: isv.parameter-invalid:605022006）",
+      "action": "参数异常，消息不存在",
+      "sub_code": "isv.parameter-invalid:605022006",
+      "sub_msg": "参数异常，消息不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数异常，视频消息不存在（sub_code: isv.parameter-invalid:605022007）",
+      "action": "参数异常，视频消息不存在",
+      "sub_code": "isv.parameter-invalid:605022007",
+      "sub_msg": "参数异常，视频消息不存在"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/pigeon/getVideoPlayUrl?app_key=your_appkey_here&method=pigeon.getVideoPlayUrl&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "backup_play_url": "https://",
+        "cover_url": "https://",
+        "duration": "602.1",
+        "format": "mp4",
+        "main_play_url": "https://",
+        "url_expire": "86400"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:605022003",
+      "sub_msg": "参数异常，请填写正确的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/188/5947",
+  "updatedAt": "2023-12-20",
+  "_file_stem": "feige-pigeon-getVideoPlayUrl"
+}

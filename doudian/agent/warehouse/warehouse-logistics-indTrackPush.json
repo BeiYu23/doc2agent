@@ -1,0 +1,204 @@
+{
+  "id": "doudian.warehouse.logistics.indTrackPush",
+  "platform": "doudian",
+  "group": "warehouse",
+  "name": "logistics.indTrackPush",
+  "description": "即时配轨迹推送接口",
+  "method": "GET",
+  "path": "/logistics/indTrackPush",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 仓库作业API（版本 V3.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "cur_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "请求时间",
+      "example": "2022-04-28 10:17:54",
+      "_depth": 0
+    },
+    {
+      "name": "company",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "公司编码",
+      "example": "powertestexpress",
+      "_depth": 0
+    },
+    {
+      "name": "trace_msgs",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "轨迹信息",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "track_no",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "运单号",
+      "example": "87878100070426001",
+      "_depth": 1
+    },
+    {
+      "name": "traces",
+      "in": "body",
+      "type": "array",
+      "required": true,
+      "description": "轨迹列表",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "opcode",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "事件编码",
+      "example": "ORDER_RECEIVED",
+      "_depth": 2
+    },
+    {
+      "name": "op_time",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "事件操作时间",
+      "example": "2022-04-28 14:17:54",
+      "_depth": 2
+    },
+    {
+      "name": "content",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "文案",
+      "example": "骑手已送到",
+      "_depth": 2
+    },
+    {
+      "name": "rider",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "骑手信息",
+      "example": "",
+      "_depth": 2
+    },
+    {
+      "name": "name",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手姓名",
+      "example": "张三",
+      "_depth": 3
+    },
+    {
+      "name": "mobile",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "骑手电话号码",
+      "example": "18888888888",
+      "_depth": 3
+    },
+    {
+      "name": "third_party_company",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "三方运力公司，顺丰同城 sftc 闪送 shansong 达达 dada UU uupt 美团 meituan 蜂鸟 fengniao",
+      "example": "sftc",
+      "_depth": 2
+    },
+    {
+      "name": "exception_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常编码,“1001” 联系不上门店 “1002” 门店地址错误 “2001” 联系不上顾客 “2002” 顾客地址错误 “2003” 更改顾客配送地址 “3001” 托寄物损坏 “3002” 托寄物丢失 “4001” 服务商系统异常 “5001” 内部系统异常 “9000” 其他分类 “9999” 未知分类",
+      "example": "1001",
+      "_depth": 2
+    },
+    {
+      "name": "exception_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "异常原因",
+      "example": "联系不上门店",
+      "_depth": 2
+    },
+    {
+      "name": "cancel_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取消编码，“1000” 商户原因取消 “2000” 消费者原因取消 “3000” 骑手原因取消 “4000” 即时配公司原因取消",
+      "example": "1000",
+      "_depth": 2
+    },
+    {
+      "name": "cancel_desc",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取消原因",
+      "example": "商户原因取消",
+      "_depth": 2
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:-10001）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:-10001",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / company参数错误（sub_code: isv.parameter-invalid:-20005）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:-20005",
+      "sub_msg": "company参数错误"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/indTrackPush?app_key=your_appkey_here&method=logistics.indTrackPush&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:-10001",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/50/2109",
+  "updatedAt": "2022-10-09",
+  "_file_stem": "warehouse-logistics-indTrackPush"
+}

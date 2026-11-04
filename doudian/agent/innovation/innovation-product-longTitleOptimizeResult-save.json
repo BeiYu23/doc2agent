@@ -1,0 +1,107 @@
+{
+  "id": "doudian.innovation.product.longTitleOptimizeResult.save",
+  "platform": "doudian",
+  "group": "innovation",
+  "name": "product.longTitleOptimizeResult.save",
+  "description": "回传商品长标题优化结果",
+  "method": "GET",
+  "path": "/product/longTitleOptimizeResult/save",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 创新应用（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "result",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "优化结果",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "long_title",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "长标题",
+      "example": "商品长标题",
+      "_depth": 1
+    },
+    {
+      "name": "product_id",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "商品id",
+      "example": "商品id",
+      "_depth": 1
+    },
+    {
+      "name": "success",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否成功",
+      "example": "true",
+      "_depth": 1
+    },
+    {
+      "name": "failed_reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "失败原因",
+      "example": "失败原因",
+      "_depth": 1
+    },
+    {
+      "name": "task_id",
+      "in": "body",
+      "type": "mixed",
+      "required": true,
+      "description": "任务id",
+      "example": "任务id",
+      "_depth": 0
+    },
+    {
+      "name": "ability_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "功能点code",
+      "example": "431",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/product/longTitleOptimizeResult/save?app_key=your_appkey_here&method=product.longTitleOptimizeResult.save&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1543/6835",
+  "updatedAt": "2024-12-02",
+  "_file_stem": "innovation-product-longTitleOptimizeResult-save"
+}

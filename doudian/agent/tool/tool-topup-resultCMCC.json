@@ -1,0 +1,171 @@
+{
+  "id": "doudian.tool.topup.resultCMCC",
+  "platform": "doudian",
+  "group": "tool",
+  "name": "topup.resultCMCC",
+  "description": "中国移动话费充值结果回传",
+  "method": "GET",
+  "path": "/topup/resultCMCC",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 工具API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接口类型，例如：PhoneOfflineNotifySM",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "version",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "接口版本",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "bankAbbr",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "银行简称，例如：CMPAY",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "mobileNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "手机号码",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "requestId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "抖音电商订单号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "accountDate",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "金科系统内订单日期，格式：yyyyMMdd",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "merchantId",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "商户ID",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "message",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "返回信息",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "amount",
+      "in": "body",
+      "type": "mixed",
+      "required": false,
+      "description": "充值金额（单位：分）",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "chargeTime",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "充值时间，格式：yyyyMMddHHmmss",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "充值状态：SUCCESS-成功，FAILED-失败",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "payNo",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "金科返回的交易流水号",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "returnCode",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "返回码：00000-成功，其他-失败",
+      "example": "1",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "result",
+      "type": "string",
+      "description": "响应固定字符串：\"SUCCESS\"",
+      "example": "1"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/topup/resultCMCC?app_key=your_appkey_here&method=topup.resultCMCC&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "result": "1"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "sub_code": "",
+      "sub_msg": ""
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/162/7620",
+  "updatedAt": "2025-07-22",
+  "_file_stem": "tool-topup-resultCMCC"
+}

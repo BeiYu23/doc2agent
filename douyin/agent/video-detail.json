@@ -1,0 +1,91 @@
+{
+  "id": "douyin.video.detail",
+  "platform": "douyin",
+  "name": "获取视频详情",
+  "description": "按视频 ID 拉取单条视频的详情数据（标题、作者、统计等）。",
+  "method": "GET",
+  "path": "/aweme/v1/web/aweme/detail",
+  "baseUrl": "https://www.douyin.com",
+  "auth": {
+    "type": "cookie+sign",
+    "description": "需要浏览器 Cookie（含 ttwid），关键参数需 a_bogus 签名；凭证放在请求头 Cookie 中。"
+  },
+  "notes": [
+    "签名参数 a_bogus 由前端 JS 生成，过期或缺失会返回风控码。",
+    "高频调用易触发风控，建议控制频率并复用会话。"
+  ],
+  "params": [
+    {
+      "name": "aweme_id",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "视频 ID",
+      "example": "7xxxxx9000000000000"
+    },
+    {
+      "name": "a_bogus",
+      "in": "query",
+      "type": "string",
+      "required": true,
+      "description": "前端签名参数",
+      "example": "Hh8XXXXXXXXX"
+    },
+    {
+      "name": "device_platform",
+      "in": "query",
+      "type": "string",
+      "required": false,
+      "description": "设备平台标识",
+      "example": "webapp"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "0",
+      "meaning": "成功",
+      "action": "正常读取 aweme_detail 字段"
+    },
+    {
+      "code": "2154",
+      "meaning": "视频不存在或已删除",
+      "action": "确认 aweme_id 后跳过"
+    },
+    {
+      "code": "8",
+      "meaning": "签名校验失败",
+      "action": "重新生成 a_bogus 再试"
+    },
+    {
+      "code": "cursor_out_of_range",
+      "meaning": "风控拦截",
+      "action": "降低频率，更换会话后重试"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://www.douyin.com/aweme/v1/web/aweme/detail?aweme_id=7xxxxx9000000000000&a_bogus=Hh8XXXXXXXXX&device_platform=webapp' -H 'Cookie: ttwid=<TTWID>' -H 'User-Agent: <UA>'",
+    "responseSuccess": {
+      "status_code": 0,
+      "aweme_detail": {
+        "aweme_id": "7xxxxx9000000000000",
+        "desc": "示例视频标题",
+        "author": {
+          "nickname": "示例作者",
+          "sec_uid": "MS4wLjABAAAAxxxxxxxx"
+        },
+        "statistics": {
+          "digg_count": 12345,
+          "comment_count": 678,
+          "share_count": 90
+        }
+      }
+    },
+    "responseError": {
+      "status_code": 8,
+      "status_msg": "签名校验失败",
+      "aweme_detail": null
+    }
+  },
+  "source": "自测整理（示例数据，字段以实测为准）",
+  "updatedAt": "2026-11-04"
+}

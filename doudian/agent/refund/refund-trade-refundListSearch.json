@@ -1,0 +1,41 @@
+{
+  "id": "doudian.refund.trade.refundListSearch",
+  "platform": "doudian",
+  "group": "refund",
+  "name": "trade.refundListSearch",
+  "description": "查询退款单列表",
+  "method": "GET",
+  "path": "/trade/refundListSearch",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 售后退款API（版本 ）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "成功",
+      "action": "正常处理"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com?method=trade.refundListSearch&param_json={}'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success"
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/17/221",
+  "updatedAt": "2021-01-11",
+  "_file_stem": "refund-trade-refundListSearch"
+}

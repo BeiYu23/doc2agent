@@ -1,0 +1,117 @@
+{
+  "id": "doudian.logistics-provider.logistics.majorAppliances.UpdateCollectTime",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.majorAppliances.UpdateCollectTime",
+  "description": "服务商改约",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "pickup_order_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "取件单号",
+      "example": "LBFxxxx",
+      "_depth": 0
+    },
+    {
+      "name": "reason",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "改约原因，枚举值\n1. UNABLE_TO_CONTACT_CONSUMER：无法联系上消费者\n2: AGREEMENT_WITH_CONSUMER 与消费者达成一致后取消",
+      "example": "AGREEMENT_WITH_CONSUMER",
+      "_depth": 0
+    },
+    {
+      "name": "new_start_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "新上门开始时间",
+      "example": "2026-05-01 10:00:00",
+      "_depth": 0
+    },
+    {
+      "name": "new_end_time",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "新上门结束时间",
+      "example": "2026-05-01 20:00:00",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 入参错误（sub_code: isv.parameter-invalid:12004）",
+      "action": "检查入参",
+      "sub_code": "isv.parameter-invalid:12004",
+      "sub_msg": "入参错误"
+    },
+    {
+      "code": "40002",
+      "meaning": "缺少必选参数 / 必填参数缺少（sub_code: isv.missing-parameter:12005）",
+      "action": "检查入参",
+      "sub_code": "isv.missing-parameter:12005",
+      "sub_msg": "必填参数缺少"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 改约次数超过限制（sub_code: isv.business-failed:18001）",
+      "action": "按当天预约时间上门取件",
+      "sub_code": "isv.business-failed:18001",
+      "sub_msg": "改约次数超过限制"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 改约时间不合法（sub_code: isv.business-failed:18002）",
+      "action": "检查改约时间是否在T+1～T+7时间段内",
+      "sub_code": "isv.business-failed:18002",
+      "sub_msg": "改约时间不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 改约原因不合法（sub_code: isv.business-failed:18003）",
+      "action": "检查改约原因",
+      "sub_code": "isv.business-failed:18003",
+      "sub_msg": "改约原因不合法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=logistics.majorAppliances.UpdateCollectTime&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:12004",
+      "sub_msg": "入参错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/8271",
+  "updatedAt": "2026-05-08",
+  "_file_stem": "logistics-provider-logistics-majorAppliances-UpdateCollectTime"
+}

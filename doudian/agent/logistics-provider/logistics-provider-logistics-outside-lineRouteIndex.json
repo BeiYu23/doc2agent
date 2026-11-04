@@ -1,0 +1,191 @@
+{
+  "id": "doudian.logistics-provider.logistics.outside.lineRouteIndex",
+  "platform": "doudian",
+  "group": "logistics-provider",
+  "name": "logistics.outside.lineRouteIndex",
+  "description": "查询Top200的责任线路",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 物流商"
+  },
+  "notes": [
+    "文档书: 物流商API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "start_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "查询开始秒级时间戳",
+      "example": "1675353599",
+      "_depth": 0
+    },
+    {
+      "name": "end_time",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "查询结束秒级时间戳",
+      "example": "1675353599",
+      "_depth": 0
+    },
+    {
+      "name": "fresh_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "生鲜类型\n0 表示非生鲜 1 表示生鲜 2 表示全部",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "date_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "日期类型\n1 自然日 2 自然周 3 自然月 4 自定义",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "index_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "查询的指标\n 1 -支付-签收时效达成率  揽收-签收环节 2-滞留清理率",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "departure",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "出发地",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "area_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "地区类型\n1 全国 2 省份",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "destination",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "目的地",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "省份编码",
+      "example": "11",
+      "_depth": 1
+    },
+    {
+      "name": "area_type",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "地区类型\n1 全国 2 省份",
+      "example": "1",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "object",
+      "description": "返回的线路数据",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 领航者查询错误（sub_code: isv.business-failed:101）",
+      "action": "对外物流指数",
+      "sub_code": "isv.business-failed:101",
+      "sub_msg": "领航者查询错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 查询时间范围过长（sub_code: isv.business-failed:10004）",
+      "action": "对外物流指数",
+      "sub_code": "isv.business-failed:10004",
+      "sub_msg": "查询时间范围过长"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 查询生鲜维度类型异常（sub_code: isv.parameter-invalid:10005）",
+      "action": "对外物流指数",
+      "sub_code": "isv.parameter-invalid:10005",
+      "sub_msg": "查询生鲜维度类型异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 查询日期类型异常（sub_code: isv.parameter-invalid:10006）",
+      "action": "对外物流指数",
+      "sub_code": "isv.parameter-invalid:10006",
+      "sub_msg": "查询日期类型异常"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 查询地区类型异常（sub_code: isv.parameter-invalid:10008）",
+      "action": "对外物流指数",
+      "sub_code": "isv.parameter-invalid:10008",
+      "sub_msg": "查询地区类型异常"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.comtest/encrypt/2?app_key=your_appkey_here&method=test.encrypt.2&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": "2",
+        "or": "7"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:101",
+      "sub_msg": "领航者查询错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1048/2925",
+  "updatedAt": "2023-02-03",
+  "_file_stem": "logistics-provider-logistics-outside-lineRouteIndex"
+}

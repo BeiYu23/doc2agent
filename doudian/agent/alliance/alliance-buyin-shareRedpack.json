@@ -1,0 +1,183 @@
+{
+  "id": "doudian.alliance.buyin.shareRedpack",
+  "platform": "doudian",
+  "group": "alliance",
+  "name": "buyin.shareRedpack",
+  "description": "抖客红包转链",
+  "method": "GET",
+  "path": "/buyin/shareRedpack",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 机构, 抖客"
+  },
+  "notes": [
+    "文档书: 精选联盟API（版本 V2.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "redpack_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "红包批次ID",
+      "example": "123456",
+      "_depth": 0
+    },
+    {
+      "name": "pid",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "抖客PID",
+      "example": "dy_1234_123_123",
+      "_depth": 0
+    },
+    {
+      "name": "external_info",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "自定义字段，只允许 数字、字母和_，限制长度为40",
+      "example": "123_456",
+      "_depth": 0
+    },
+    {
+      "name": "need_qr_code",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否需要二维码(获取二维码将增加响应耗时，推荐false)",
+      "example": "false",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "结果",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败（sub_code: isv.parameter-invalid:4097）",
+      "action": "参数校验失败",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 服务打瞌睡了，请稍后再试（sub_code: isp.service-error:256）",
+      "action": "服务打瞌睡了，请稍后再试",
+      "sub_code": "isp.service-error:256",
+      "sub_msg": "服务打瞌睡了，请稍后再试"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 当前抖客未开通直播间分销业务权限（sub_code: isv.business-failed:4113）",
+      "action": "当前抖客未开通直播间分销业务权限",
+      "sub_code": "isv.business-failed:4113",
+      "sub_msg": "当前抖客未开通直播间分销业务权限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验失败：无效 PID（sub_code: isv.parameter-invalid:4102）",
+      "action": "参数校验失败：无效 PID",
+      "sub_code": "isv.parameter-invalid:4102",
+      "sub_msg": "参数校验失败：无效 PID"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 红包不存在（sub_code: isv.parameter-invalid:4118）",
+      "action": "红包不存在",
+      "sub_code": "isv.parameter-invalid:4118",
+      "sub_msg": "红包不存在"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 非抖客渠道红包（sub_code: isv.parameter-invalid:4299）",
+      "action": "非抖客渠道红包",
+      "sub_code": "isv.parameter-invalid:4299",
+      "sub_msg": "非抖客渠道红包"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 红包不是生效状态或已领完（sub_code: isv.parameter-invalid:4120）",
+      "action": "红包不是生效状态或已领完",
+      "sub_code": "isv.parameter-invalid:4120",
+      "sub_msg": "红包不是生效状态或已领完"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 红包未到或已过领取时间，不可转链（sub_code: isv.parameter-invalid:4300）",
+      "action": "红包未到或已过领取时间，不可转链",
+      "sub_code": "isv.parameter-invalid:4300",
+      "sub_msg": "红包未到或已过领取时间，不可转链"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 红包参数校验失败（sub_code: isv.parameter-invalid:4298）",
+      "action": "红包参数校验失败",
+      "sub_code": "isv.parameter-invalid:4298",
+      "sub_msg": "红包参数校验失败"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 无效 external_info（sub_code: isv.parameter-invalid:4101）",
+      "action": "参数校验失败：无效 external_info",
+      "sub_code": "isv.parameter-invalid:4101",
+      "sub_msg": "无效 external_info"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 抖客红包不支持自营（sub_code: isv.parameter-invalid:4116）",
+      "action": "抖客红包不支持自营",
+      "sub_code": "isv.parameter-invalid:4116",
+      "sub_msg": "抖客红包不支持自营"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 达人无抖客红包权限（sub_code: isv.business-failed:4117）",
+      "action": "达人无抖客红包权限",
+      "sub_code": "isv.business-failed:4117",
+      "sub_msg": "达人无抖客红包权限"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 红包参数非法（sub_code: isv.parameter-invalid:4119）",
+      "action": "红包参数非法",
+      "sub_code": "isv.parameter-invalid:4119",
+      "sub_msg": "红包参数非法"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/buyin/shareRedpack?app_key=your_appkey_here&method=buyin.shareRedpack&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "data": ""
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:4097",
+      "sub_msg": "参数校验失败"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/61/2547",
+  "updatedAt": "2025-06-26",
+  "_file_stem": "alliance-buyin-shareRedpack"
+}

@@ -1,0 +1,186 @@
+{
+  "id": "doudian.member.member.ChangePoint",
+  "platform": "doudian",
+  "group": "member",
+  "name": "member.ChangePoint",
+  "description": "会员侧对外积分变更接口",
+  "method": "GET",
+  "path": "/member/ChangePoint",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 小程序"
+  },
+  "notes": [
+    "文档书: 会员中心API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "app_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "抖音APPID",
+      "example": "1128",
+      "_depth": 0
+    },
+    {
+      "name": "user_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "用户ID",
+      "example": "51513211",
+      "_depth": 0
+    },
+    {
+      "name": "op_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "积分操作类型 1增加 2扣减",
+      "example": "1",
+      "_depth": 0
+    },
+    {
+      "name": "action_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "积分操作动作类型",
+      "example": "9",
+      "_depth": 0
+    },
+    {
+      "name": "amount",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "积分操作数量",
+      "example": "10",
+      "_depth": 0
+    },
+    {
+      "name": "unique_id",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "积分操作幂等ID",
+      "example": "2132134432231",
+      "_depth": 0
+    },
+    {
+      "name": "options",
+      "in": "body",
+      "type": "object",
+      "required": false,
+      "description": "非必需参数",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "outer_domain_id",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "外域业务ID",
+      "example": "tt5daf2b12c2857910",
+      "_depth": 1
+    },
+    {
+      "name": "member_shop_id",
+      "in": "body",
+      "type": "number",
+      "required": true,
+      "description": "会员店铺ID",
+      "example": "77977",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "success",
+      "type": "boolean",
+      "description": "积分操作是否成功",
+      "example": "true"
+    },
+    {
+      "name": "unique_id",
+      "type": "string",
+      "description": "积分操作幂等ID",
+      "example": "2313141123131"
+    },
+    {
+      "name": "remark",
+      "type": "string",
+      "description": "积分操作失败原因",
+      "example": "未找到积分账号数据"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数校验不合法（sub_code: isv.parameter-invalid:628002001）",
+      "action": "调整参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数校验不合法"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 下游rpc错误（sub_code: isv.business-failed:628004004）",
+      "action": "下游rpc错误",
+      "sub_code": "isv.business-failed:628004004",
+      "sub_msg": "下游rpc错误"
+    },
+    {
+      "code": "20000",
+      "meaning": "系统错误 / 下游rpc超时（sub_code: isp.service-error:628004002）",
+      "action": "重试",
+      "sub_code": "isp.service-error:628004002",
+      "sub_msg": "下游rpc超时"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628215016:未找到积分账号数据（sub_code: isv.business-failed:628215016）",
+      "action": "628215016:未找到积分账号数据",
+      "sub_code": "isv.business-failed:628215016",
+      "sub_msg": "628215016:未找到积分账号数据"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 628215028:积分账户写冲突 account_id = 3920750333841424651（sub_code: isv.business-failed:628215028）",
+      "action": "628215028:积分账户写冲突 account_id = 3920750333841424651",
+      "sub_code": "isv.business-failed:628215028",
+      "sub_msg": "628215028:积分账户写冲突 account_id = 3920750333841424651"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/member/ChangePoint?app_key=your_appkey_here&method=member.ChangePoint&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "remark": "未找到积分账号数据",
+        "success": "true",
+        "unique_id": "2313141123131"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:628002001",
+      "sub_msg": "参数校验不合法"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/66/2433",
+  "updatedAt": "2022-08-26",
+  "_file_stem": "member-member-ChangePoint"
+}

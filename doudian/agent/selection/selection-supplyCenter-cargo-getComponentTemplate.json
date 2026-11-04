@@ -1,0 +1,142 @@
+{
+  "id": "doudian.selection.supplyCenter.cargo.getComponentTemplate",
+  "platform": "doudian",
+  "group": "selection",
+  "name": "supplyCenter.cargo.getComponentTemplate",
+  "description": "分页查询尺寸模板",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 见平台说明"
+  },
+  "notes": [
+    "文档书: 精选货源API（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "template_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "模板类型: size_info(尺码表)",
+      "example": "size_info",
+      "_depth": 0
+    },
+    {
+      "name": "template_sub_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "组件模板子类型；clothing -饰；undies-内衣；shoes 鞋靴；children_clothing-童装",
+      "example": "clothing",
+      "_depth": 0
+    },
+    {
+      "name": "template_id",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "模板ID",
+      "example": "101",
+      "_depth": 0
+    },
+    {
+      "name": "shareable",
+      "in": "body",
+      "type": "boolean",
+      "required": false,
+      "description": "是否设置为公有模板(多个商品可共用)。true-是，false-不是；不传默认true",
+      "example": "true",
+      "_depth": 0
+    },
+    {
+      "name": "page_num",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "页码，从0开始，最大支持100",
+      "example": "0",
+      "_depth": 0
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "每页条数，最大支持20；page_size和template_id二选一入参",
+      "example": "20",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "component_template_info_list",
+      "type": "array",
+      "description": "尺码模板列表",
+      "example": ""
+    },
+    {
+      "name": "total_num",
+      "type": "number",
+      "description": "总数",
+      "example": "200"
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参照查询模板列表接口（sub_code: isv.parameter-invalid:66666）",
+      "action": "https://op.jinritemai.com/docs/api-docs/14/1990",
+      "sub_code": "isv.parameter-invalid:66666",
+      "sub_msg": "参照查询模板列表接口"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=supplyCenter.cargo.getComponentTemplate&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "component_template_info_list": [
+          {
+            "category_id": "22465",
+            "component_data": "{\"title\":\"衣服尺码title\",\"sub_title\":\"衣服尺码desc\",\"selected_size\":[\"XS\",\"M\"],\"selected_specs\":[\"身高（cm）\",\"体重（斤）\",\"胸围（cm）\"],\"config\":{\"M\":{\"体重（斤）\":\"70\",\"胸围（cm）\":\"67\",\"身高（cm）\":\"110\"},\"XS\":{\"体重（斤）\":\"55\",\"胸围（cm）\":\"66\",\"身高（cm）\":\"100\"}}}",
+            "component_front_data": "{\"title\":\"衣服尺码title\",\"desc\":\"衣服尺码desc\",\"tempName\":\"0711衣服模板tempName\",\"configTable\":[{\"size\":\"XS\",\"specMap\":{\"身高（cm）\":\"100\",\"体重（斤）\":\"55\",\"胸围（cm）\":\"66\"}},{\"size\":\"M\",\"specMap\":{\"身高（cm）\":\"110\",\"体重（斤）\":\"70\",\"胸围（cm）\":\"67\"}}],\"selectedSpecs\":[\"身高（cm）\",\"体重（斤）\",\"胸围（cm）\"],\"specOptions\":[\"身高1（cm）\",\"体重1（斤）\",\"胸围1（cm）\"],\"selectedSize\":[\"XS\",\"M\"]}",
+            "create_time": "1",
+            "image": {
+              "height": "256",
+              "url": "http://xx.xxx",
+              "width": "200"
+            },
+            "shareable": "false",
+            "template_id": "101",
+            "template_name": "模板名称1",
+            "template_sub_type": "clothing",
+            "template_type": "size_info",
+            "update_time": "1"
+          }
+        ],
+        "total_num": "200"
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:66666",
+      "sub_msg": "参照查询模板列表接口"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1438/5332",
+  "updatedAt": "2023-10-25",
+  "_file_stem": "selection-supplyCenter-cargo-getComponentTemplate"
+}

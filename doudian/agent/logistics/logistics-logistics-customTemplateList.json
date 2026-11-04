@@ -1,0 +1,84 @@
+{
+  "id": "doudian.logistics.logistics.customTemplateList",
+  "platform": "doudian",
+  "group": "logistics",
+  "name": "logistics.customTemplateList",
+  "description": "查询商家自定义区域数据",
+  "method": "GET",
+  "path": "/logistics/customTemplateList",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 物流发货API（版本 V1.03）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "logistics_code",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "物流商编码",
+      "example": "jtexpress",
+      "_depth": 0
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "custom_template_data",
+      "type": "array",
+      "description": "自定义模板的数据列表",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 不支持的服务商（sub_code: isv.business-failed:4006）",
+      "action": "请检查logistics_code字段",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "不支持的服务商"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.com/logistics/customTemplateList?app_key=your_appkey_here&method=logistics.customTemplateList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "custom_template_data": [
+          {
+            "custom_template_infos": [
+              {
+                "custom_template_code": "C1asaeew2",
+                "custom_template_name": "jtexpress自定义模版",
+                "custom_template_url": "http://ekdj",
+                "parent_template_code": "jtexpress_76_130"
+              }
+            ],
+            "logistics_code": "jtexpress"
+          }
+        ]
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 50002,
+      "msg": "业务处理失败",
+      "sub_code": "isv.business-failed:4006",
+      "sub_msg": "不支持的服务商"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/16/549",
+  "updatedAt": "2021-06-23",
+  "_file_stem": "logistics-logistics-customTemplateList"
+}

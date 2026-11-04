@@ -1,0 +1,219 @@
+{
+  "id": "doudian.retail-store.superm.capacityRule.queryList",
+  "platform": "doudian",
+  "group": "retail-store",
+  "name": "superm.capacityRule.queryList",
+  "description": "门店时段容量查询列表",
+  "method": "GET",
+  "path": "YOUR_SECRET_KEY",
+  "baseUrl": "https://openapi-fxg.jinritemai.com",
+  "auth": {
+    "type": "access_token+sign",
+    "description": "调用网关需携带 app_key / access_token / timestamp / v / sign 等公共参数，sign 按 HMAC-SHA256 签名算法生成；权限主体: 店铺"
+  },
+  "notes": [
+    "文档书: 门店管理API【即时零售】（版本 V1.01）",
+    "公共参数（method/app_key/access_token/param_YOUR_SECRET_KEY_method）见 doudian/agent/_common.json"
+  ],
+  "params": [
+    {
+      "name": "page_query",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "查询条件",
+      "example": "",
+      "_depth": 0
+    },
+    {
+      "name": "rule_query",
+      "in": "body",
+      "type": "object",
+      "required": true,
+      "description": "规则",
+      "example": "",
+      "_depth": 1
+    },
+    {
+      "name": "rule_entity_type",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "规则归属类型 ，本期只有 1: 企业",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "rule_name",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规则名",
+      "example": "test",
+      "_depth": 2
+    },
+    {
+      "name": "create_time_start",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "开始时间 秒级时间戳",
+      "example": "1682059624",
+      "_depth": 2
+    },
+    {
+      "name": "create_time_end",
+      "in": "body",
+      "type": "number",
+      "required": false,
+      "description": "结束时间 秒级时间戳",
+      "example": "1682059624",
+      "_depth": 2
+    },
+    {
+      "name": "creator",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "创建人",
+      "example": "xm",
+      "_depth": 2
+    },
+    {
+      "name": "status",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "规则状态，1启用，2不启用",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "capacity_target_type",
+      "in": "body",
+      "type": "string",
+      "required": false,
+      "description": "作业产能类型 本期只有 1:门店",
+      "example": "1",
+      "_depth": 2
+    },
+    {
+      "name": "capacity_target_code",
+      "in": "body",
+      "type": "array",
+      "required": false,
+      "description": "门店id",
+      "example": "12321312",
+      "_depth": 2
+    },
+    {
+      "name": "current_page",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "页码，从1计算",
+      "example": "1",
+      "_depth": 1
+    },
+    {
+      "name": "page_size",
+      "in": "body",
+      "type": "string",
+      "required": true,
+      "description": "pageSize",
+      "example": "10",
+      "_depth": 1
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "page_dto",
+      "type": "object",
+      "description": "查询到的实体信息",
+      "example": ""
+    }
+  ],
+  "responseCodes": [
+    {
+      "code": "10000",
+      "meaning": "success",
+      "action": "正常处理"
+    },
+    {
+      "code": "40004",
+      "meaning": "非法的参数 / 参数错误（sub_code: isv.parameter-invalid:40100）",
+      "action": "参数错误",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 数据转换错误（sub_code: isv.business-failed:50202）",
+      "action": "数据转换错误",
+      "sub_code": "isv.business-failed:50202",
+      "sub_msg": "数据转换错误"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 获取组织关系失败（sub_code: isv.business-failed:20232）",
+      "action": "获取组织关系失败",
+      "sub_code": "isv.business-failed:20232",
+      "sub_msg": "获取组织关系失败"
+    },
+    {
+      "code": "50002",
+      "meaning": "业务处理失败 / 门店查询服务失败（sub_code: isv.business-failed:20233）",
+      "action": "门店查询服务失败",
+      "sub_code": "isv.business-failed:20233",
+      "sub_msg": "门店查询服务失败"
+    }
+  ],
+  "examples": {
+    "request": "curl -X GET 'https://openapi-fxg.jinritemai.YOUR_SECRET_KEY?app_key=your_appkey_here&method=superm.capacityRule.queryList&access_token=your_accesstoken_here&param_json={}&timestamp=2018-06-19%2016:06:59&v=2&sign=your_sign_here'",
+    "responseSuccess": {
+      "data": {
+        "page_dto": {
+          "current_page": "1",
+          "page_size": "10",
+          "rule_dtos": [
+            {
+              "relations": [
+                {
+                  "capacity_target_code": "21343153",
+                  "capacity_target_type": "1",
+                  "rule_id": "Rule_34b55c75-3717"
+                }
+              ],
+              "rule_dto": {
+                "all_store": "1",
+                "create_time": "1682059220",
+                "creator": "xm",
+                "date_limit_bound": "1",
+                "date_limit_enable": "1",
+                "rule_entity_type": "1",
+                "rule_id": "Rule_34b55c75-3717",
+                "rule_name": "test",
+                "status": "1",
+                "updater": "xm"
+              }
+            }
+          ],
+          "total_count": "99"
+        }
+      },
+      "code": 10000,
+      "msg": "success",
+      "sub_code": "",
+      "sub_msg": ""
+    },
+    "responseError": {
+      "code": 40004,
+      "msg": "非法的参数",
+      "sub_code": "isv.parameter-invalid:40100",
+      "sub_msg": "参数错误"
+    }
+  },
+  "source": "https://op.jinritemai.com/docs/api-docs/1033/3592",
+  "updatedAt": "2023-09-15",
+  "_file_stem": "retail-store-superm-capacityRule-queryList"
+}
