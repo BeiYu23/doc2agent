@@ -1022,5 +1022,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/718",
   "updatedAt": "2025-08-20",
-  "_file_stem": "logistics-order-logisticsAdd"
+  "_file_stem": "logistics-order-logisticsAdd",
+  "cnName": "暂时只支持整单出库"
 }

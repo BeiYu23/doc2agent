@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.promise.deliveryList` |
+| 中文名 | 商家发货时效配置推荐 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/deliveryList` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.compass.getShopLiveLeaderTradeListByWeek` |
+| 中文名 | 罗盘周维度的直播交易榜 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/compass/getShopLiveLeaderTradeListByWeek` |

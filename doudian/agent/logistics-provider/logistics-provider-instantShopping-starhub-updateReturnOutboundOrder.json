@@ -193,5 +193,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7023",
   "updatedAt": "2024-10-23",
-  "_file_stem": "logistics-provider-instantShopping-starhub-updateReturnOutboundOrder"
+  "_file_stem": "logistics-provider-instantShopping-starhub-updateReturnOutboundOrder",
+  "cnName": "退供出库场景，服务商通知抖音退仓出库单状态"
 }

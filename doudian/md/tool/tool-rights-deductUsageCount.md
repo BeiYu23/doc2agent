@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.rights.deductUsageCount` |
+| 中文名 | 扣减权益可使用次数 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/deductUsageCount` |

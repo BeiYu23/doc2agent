@@ -484,5 +484,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1521/6657",
   "updatedAt": "2024-06-28",
-  "_file_stem": "home-refund-retailCustom-afterSale-getAfterSaleDetail"
+  "_file_stem": "home-refund-retailCustom-afterSale-getAfterSaleDetail",
+  "cnName": "提供给商家获取售后单详情信息"
 }

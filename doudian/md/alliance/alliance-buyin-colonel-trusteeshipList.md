@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.colonel.trusteeshipList` |
+| 中文名 | 团长托管商品查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/colonel/trusteeshipList` |

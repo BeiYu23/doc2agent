@@ -108,5 +108,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1526/6709",
   "updatedAt": "2024-07-19",
-  "_file_stem": "pickup-logistics-overSize-verifyFetchCode"
+  "_file_stem": "pickup-logistics-overSize-verifyFetchCode",
+  "cnName": "大件取件码核销"
 }

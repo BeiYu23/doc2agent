@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.shop.setStorePackageFee` |
+| 中文名 | 设置门店打包费 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/setStorePackageFee` |

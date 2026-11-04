@@ -135,5 +135,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/490",
   "updatedAt": "2021-06-22",
-  "_file_stem": "waybill-logistics-waybillApply"
+  "_file_stem": "waybill-logistics-waybillApply",
+  "cnName": "获取面单信息"
 }

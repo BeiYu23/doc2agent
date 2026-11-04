@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.token.create` |
+| 中文名 | 生成token |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/token/create` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.shopVideo.queryUploadTask` |
+| 中文名 | 查询url上传视频接口的任务信息（状态 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/queryUploadTask` |

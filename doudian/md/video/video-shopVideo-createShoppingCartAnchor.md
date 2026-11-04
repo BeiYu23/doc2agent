@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.shopVideo.createShoppingCartAnchor` |
+| 中文名 | 创建挂车锚点 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/createShoppingCartAnchor` |

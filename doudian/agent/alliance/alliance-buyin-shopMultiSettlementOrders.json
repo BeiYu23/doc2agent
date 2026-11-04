@@ -206,5 +206,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2703",
   "updatedAt": "2023-04-18",
-  "_file_stem": "alliance-buyin-shopMultiSettlementOrders"
+  "_file_stem": "alliance-buyin-shopMultiSettlementOrders",
+  "cnName": "商家分次结算订单"
 }

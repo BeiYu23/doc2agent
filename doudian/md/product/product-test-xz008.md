@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.test.xz008` |
+| 中文名 | 笑死我啦哈哈哈 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/xz008` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.miniapp.mini.fans.userInfo` |
+| 中文名 | 获取用户的购物粉丝团等级 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/fans/userInfo` |

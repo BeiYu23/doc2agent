@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.install.order.queryOperationOrderCallLog` |
+| 中文名 | 服务商查询通话记录 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/queryOperationOrderCallLog` |

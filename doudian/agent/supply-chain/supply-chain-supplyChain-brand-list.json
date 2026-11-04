@@ -74,5 +74,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2550",
   "updatedAt": "2022-09-28",
-  "_file_stem": "supply-chain-supplyChain-brand-list"
+  "_file_stem": "supply-chain-supplyChain-brand-list",
+  "cnName": "获取品牌信息"
 }

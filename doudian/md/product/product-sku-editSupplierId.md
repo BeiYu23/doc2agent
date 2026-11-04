@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.sku.editSupplierId` |
+| 中文名 | 修改sku对应的供应商编码ID |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/editSupplierId` |

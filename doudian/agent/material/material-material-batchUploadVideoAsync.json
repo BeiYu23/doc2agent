@@ -153,5 +153,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1617",
   "updatedAt": "2022-10-11",
-  "_file_stem": "material-material-batchUploadVideoAsync"
+  "_file_stem": "material-material-batchUploadVideoAsync",
+  "cnName": "批量上传视频到素材中心"
 }

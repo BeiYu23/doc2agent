@@ -79,5 +79,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3586",
   "updatedAt": "2025-06-23",
-  "_file_stem": "tool-order-getMCToken"
+  "_file_stem": "tool-order-getMCToken",
+  "cnName": "获取前端组件token"
 }

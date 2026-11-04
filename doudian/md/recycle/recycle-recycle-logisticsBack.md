@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.recycle.logisticsBack` |
+| 中文名 | 回收商退货发货 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/logisticsBack` |

@@ -1,10 +1,10 @@
 # douyin 接口目录
 
-> 全平台 1 个接口。文档地址均为**本仓库内相对路径**（`md/` 人读版 + `agent/` 机器读版成对）。
+> 全平台 1 个接口。`中文名` 为从官方描述提炼的简短中文名；文档地址均为**本仓库内相对路径**（`md/` 人读版 + `agent/` 机器读版成对）。
 
-| 接口 ID | 名称 | 方法 | 路径 | 分组 | 人读文档 | 机器读文档 |
-| --- | --- | --- | --- | --- | --- | --- |
-| `douyin.video.detail` | 获取视频详情 | `GET` | `/aweme/v1/web/aweme/detail` | - | [`md`](../douyin/md/video-detail.md) | [`json`](../douyin/agent/video-detail.json) |
+| 接口 ID | 中文名 | 名称 | 方法 | 路径 | 分组 | 人读文档 | 机器读文档 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `douyin.video.detail` | - | 获取视频详情 | `GET` | `/aweme/v1/web/aweme/detail` | - | [`md`](../douyin/md/video-detail.md) | [`json`](../douyin/agent/video-detail.json) |
 
 ## 用法
 

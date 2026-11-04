@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2480",
   "updatedAt": "2024-06-12",
-  "_file_stem": "logistics-provider-supplyChain-outside-getLineAgingRate"
+  "_file_stem": "logistics-provider-supplyChain-outside-getLineAgingRate",
+  "cnName": "获取线路达成率"
 }

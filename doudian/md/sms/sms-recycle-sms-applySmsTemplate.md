@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.recycle.sms.applySmsTemplate` |
+| 中文名 | 申请短信模板 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sms/applySmsTemplate` |

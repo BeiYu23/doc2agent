@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cross-border.supplyChain.uploadImage` |
+| 中文名 | 转换上传图片 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/uploadImage` |

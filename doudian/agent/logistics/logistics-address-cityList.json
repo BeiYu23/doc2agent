@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/102",
   "updatedAt": "2021-05-07",
-  "_file_stem": "logistics-address-cityList"
+  "_file_stem": "logistics-address-cityList",
+  "cnName": "获取市列表"
 }

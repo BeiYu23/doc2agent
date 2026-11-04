@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.public.template` |
+| 中文名 | 公共模版查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/public/template` |

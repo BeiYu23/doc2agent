@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.shop.bindStoreSaleLimit` |
+| 中文名 | 门店绑定限售模版 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/bindStoreSaleLimit` |

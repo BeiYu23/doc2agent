@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-order.retail.order.getOrder` |
+| 中文名 | 【即时零售】订单详情查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/retail/order/getOrder` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.trace.cancelShop` |
+| 中文名 | 订单链路监控删除用户 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trace/cancelShop` |

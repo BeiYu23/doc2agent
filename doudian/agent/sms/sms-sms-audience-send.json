@@ -345,5 +345,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6664",
   "updatedAt": "2026-09-03",
-  "_file_stem": "sms-sms-audience-send"
+  "_file_stem": "sms-sms-audience-send",
+  "cnName": "按人群包发送短信"
 }

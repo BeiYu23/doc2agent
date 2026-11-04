@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cross-border.supplyChain.queryBrandList` |
+| 中文名 | 查询品牌列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryBrandList` |

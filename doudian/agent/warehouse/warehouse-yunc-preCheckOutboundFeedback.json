@@ -218,5 +218,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/7387",
   "updatedAt": "2026-04-28",
-  "_file_stem": "warehouse-yunc-preCheckOutboundFeedback"
+  "_file_stem": "warehouse-yunc-preCheckOutboundFeedback",
+  "cnName": "ToC出库回告预校验"
 }

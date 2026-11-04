@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.activityProductCancel` |
+| 中文名 | 一级团长取消活动提报申请 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/activityProductCancel` |

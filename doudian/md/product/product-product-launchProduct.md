@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.launchProduct` |
+| 中文名 | 上架商品（抖店店铺 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/launchProduct` |

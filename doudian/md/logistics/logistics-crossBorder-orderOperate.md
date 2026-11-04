@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.crossBorder.orderOperate` |
+| 中文名 | 服务商回传仓储 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/orderOperate` |

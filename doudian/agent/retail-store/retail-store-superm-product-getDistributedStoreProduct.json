@@ -117,5 +117,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2693",
   "updatedAt": "2022-11-02",
-  "_file_stem": "retail-store-superm-product-getDistributedStoreProduct"
+  "_file_stem": "retail-store-superm-product-getDistributedStoreProduct",
+  "cnName": "根据店铺主商品ID查询已经铺品的门店及子商品"
 }

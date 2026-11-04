@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.updatePushUser` |
+| 中文名 | 飞鸽消息推送店铺设置 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/updatePushUser` |

@@ -111,5 +111,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2697",
   "updatedAt": "2024-12-19",
-  "_file_stem": "retail-store-superm-product-batchRedistributeStoreProduct"
+  "_file_stem": "retail-store-superm-product-batchRedistributeStoreProduct",
+  "cnName": "重新分配店铺主品对应的门店子品 (异步执行"
 }

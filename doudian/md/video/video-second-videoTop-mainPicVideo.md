@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.second.videoTop.mainPicVideo` |
+| 中文名 | 获取主图视频榜单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

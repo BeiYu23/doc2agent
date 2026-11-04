@@ -130,5 +130,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1594/7826",
   "updatedAt": "2025-10-29",
-  "_file_stem": "retail-stock-instantShopping-product-getSkuStockNum"
+  "_file_stem": "retail-stock-instantShopping-product-getSkuStockNum",
+  "cnName": "查询sku库存信息"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.getCatePropertyV2` |
+| 中文名 | 调用【/product/addV2】创建商品和… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getCatePropertyV2` |

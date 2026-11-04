@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.uploadImageSyncForIsv` |
+| 中文名 | isv单个图片上传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/uploadImageSyncForIsv` |

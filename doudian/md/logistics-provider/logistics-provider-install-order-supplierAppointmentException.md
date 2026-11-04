@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.install.order.supplierAppointmentException` |
+| 中文名 | 服务商预约异常 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierAppointmentException` |

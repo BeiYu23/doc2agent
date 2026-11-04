@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.open.TestOpenNew` |
+| 中文名 | 测试使用的 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/TestOpenNew` |

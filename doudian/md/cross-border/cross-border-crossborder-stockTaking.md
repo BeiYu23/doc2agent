@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cross-border.crossborder.stockTaking` |
+| 中文名 | 库存盘点回告 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/stockTaking` |

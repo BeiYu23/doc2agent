@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.open.openIdSwitch` |
+| 中文名 | 提供抖音和抖店 Openid 转换功能 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/openIdSwitch` |

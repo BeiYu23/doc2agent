@@ -276,5 +276,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7233",
   "updatedAt": "2026-06-24",
-  "_file_stem": "store-pickup-batchCreateStore"
+  "_file_stem": "store-pickup-batchCreateStore",
+  "cnName": "批量创建门店"
 }

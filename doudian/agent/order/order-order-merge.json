@@ -100,5 +100,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/4042",
   "updatedAt": "2023-06-15",
-  "_file_stem": "order-order-merge"
+  "_file_stem": "order-order-merge",
+  "cnName": "判断一批待发货订单"
 }

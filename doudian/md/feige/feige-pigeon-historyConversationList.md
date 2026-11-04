@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.historyConversationList` |
+| 中文名 | 飞鸽历史会话列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/historyConversationList` |

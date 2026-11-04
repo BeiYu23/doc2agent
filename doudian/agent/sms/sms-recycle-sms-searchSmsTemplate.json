@@ -128,5 +128,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7832",
   "updatedAt": "2025-11-03",
-  "_file_stem": "sms-recycle-sms-searchSmsTemplate"
+  "_file_stem": "sms-recycle-sms-searchSmsTemplate",
+  "cnName": "获取短信模板"
 }

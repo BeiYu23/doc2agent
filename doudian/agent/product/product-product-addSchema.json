@@ -1190,5 +1190,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6370",
   "updatedAt": "2026-07-15",
-  "_file_stem": "product-product-addSchema"
+  "_file_stem": "product-product-addSchema",
+  "cnName": "商品发布schema提交"
 }

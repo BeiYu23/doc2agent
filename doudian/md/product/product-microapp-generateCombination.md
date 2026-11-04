@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.microapp.generateCombination` |
+| 中文名 | 生成组合购 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/microapp/generateCombination` |

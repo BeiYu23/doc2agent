@@ -88,5 +88,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/5900",
   "updatedAt": "2023-12-13",
-  "_file_stem": "hospital-medicine-doctorCloseConsultConversation"
+  "_file_stem": "hospital-medicine-doctorCloseConsultConversation",
+  "cnName": "医生结束问诊会话"
 }

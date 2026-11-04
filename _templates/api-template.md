@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `<platform>.<resource>.<action>` |
+| 中文名 | <简短中文名；无官方中文名时用 `（英文动作名）` 占位> |
 | 平台 | `<platform>` |
 | 请求方法 | `GET` / `POST` |
 | 接口路径 | `/v1/example/path` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.spu.updateShopSpu` |
+| 中文名 | 更新spu信息-接口下线 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/updateShopSpu` |

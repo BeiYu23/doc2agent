@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.ddp_open.ai.addChatMessage` |
+| 中文名 | 主动推送消息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/ddp_open/ai/addChatMessage` |

@@ -916,5 +916,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/562",
   "updatedAt": "2025-01-22",
-  "_file_stem": "logistics-order-logisticsAddMultiPack"
+  "_file_stem": "logistics-order-logisticsAddMultiPack",
+  "cnName": "单个店铺订单拆分为多个物流包裹进行发货"
 }

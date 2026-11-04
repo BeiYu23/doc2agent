@@ -74,5 +74,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/7650",
   "updatedAt": "2025-07-31",
-  "_file_stem": "order-bigCustomer-queryCounting"
+  "_file_stem": "order-bigCustomer-queryCounting",
+  "cnName": "查询统计销量结果"
 }

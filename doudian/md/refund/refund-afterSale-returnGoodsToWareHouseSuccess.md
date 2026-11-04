@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.returnGoodsToWareHouseSuccess` |
+| 中文名 | 商家确认售后单对应的用户退货入仓成功 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/returnGoodsToWareHouseSuccess` |

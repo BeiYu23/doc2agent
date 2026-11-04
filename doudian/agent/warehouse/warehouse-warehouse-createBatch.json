@@ -158,5 +158,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2076",
   "updatedAt": "2022-06-23",
-  "_file_stem": "warehouse-warehouse-createBatch"
+  "_file_stem": "warehouse-warehouse-createBatch",
+  "cnName": "批量创建区域仓"
 }

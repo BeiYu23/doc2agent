@@ -88,5 +88,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/469",
   "updatedAt": "2024-06-13",
-  "_file_stem": "alliance-alliance-getOrderList"
+  "_file_stem": "alliance-alliance-getOrderList",
+  "cnName": "查询联盟订单明细"
 }

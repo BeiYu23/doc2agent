@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.waybill.logistics.trackNoRouteDetail` |
+| 中文名 | 查询条件 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/trackNoRouteDetail` |

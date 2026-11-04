@@ -198,5 +198,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1148",
   "updatedAt": "2022-11-17",
-  "_file_stem": "material-material-searchMaterial"
+  "_file_stem": "material-material-searchMaterial",
+  "cnName": "不会返回已经删除的素材"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.second.liveroom.getUserProfile` |
+| 中文名 | 查询直播间用户画像 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -196,5 +196,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2111",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-trade-create_trade_limit_template"
+  "_file_stem": "shop-trade-create_trade_limit_template",
+  "cnName": "创建限售规则模板"
 }

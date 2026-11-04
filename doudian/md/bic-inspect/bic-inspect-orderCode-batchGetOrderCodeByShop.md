@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bic-inspect.orderCode.batchGetOrderCodeByShop` |
+| 中文名 | 批量预绑订单码 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/batchGetOrderCodeByShop` |

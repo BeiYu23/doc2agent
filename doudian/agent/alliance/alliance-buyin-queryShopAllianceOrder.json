@@ -159,5 +159,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2407",
   "updatedAt": "2023-04-18",
-  "_file_stem": "alliance-buyin-queryShopAllianceOrder"
+  "_file_stem": "alliance-buyin-queryShopAllianceOrder",
+  "cnName": "获取商家的联盟订单"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.bindSignatures` |
+| 中文名 | 模板绑定商家签名 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/bindSignatures` |

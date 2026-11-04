@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bill.supplyChain.settlement.querySettlementDetail` |
+| 中文名 | 查询对账单行(结算明细)信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

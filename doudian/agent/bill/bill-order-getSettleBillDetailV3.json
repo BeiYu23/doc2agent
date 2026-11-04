@@ -259,5 +259,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/7226",
   "updatedAt": "2026-07-16",
-  "_file_stem": "bill-order-getSettleBillDetailV3"
+  "_file_stem": "bill-order-getSettleBillDetailV3",
+  "cnName": "商家结算账单"
 }

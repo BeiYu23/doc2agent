@@ -169,5 +169,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1534/6774",
   "updatedAt": "2024-08-15",
-  "_file_stem": "retail-message-sendHome-spi-querySpiError"
+  "_file_stem": "retail-message-sendHome-spi-querySpiError",
+  "cnName": "到家查询spi最终持久化失败落库记录"
 }

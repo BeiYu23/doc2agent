@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.sms.audience.getSendTaskList` |
+| 中文名 | 按人群包发送短信任务列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/getSendTaskList` |

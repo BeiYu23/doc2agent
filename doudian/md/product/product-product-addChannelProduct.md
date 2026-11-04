@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.addChannelProduct` |
+| 中文名 | 创建销售渠道品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/addChannelProduct` |

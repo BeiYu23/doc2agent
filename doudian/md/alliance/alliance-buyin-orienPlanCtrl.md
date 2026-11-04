@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.orienPlanCtrl` |
+| 中文名 | 商品定向计划管理 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/orienPlanCtrl` |

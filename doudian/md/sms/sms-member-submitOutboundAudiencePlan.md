@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.member.submitOutboundAudiencePlan` |
+| 中文名 | 提交外呼人群包生成计划 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/submitOutboundAudiencePlan` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.power.pushKeyWordMatch` |
+| 中文名 | 关键词匹配 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushKeyWordMatch` |

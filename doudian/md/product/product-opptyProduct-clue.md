@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.opptyProduct.clue` |
+| 中文名 | 机会品线索触达 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/opptyProduct/clue` |

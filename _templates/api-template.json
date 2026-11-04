@@ -4,6 +4,7 @@
   "id": "<platform>.<resource>.<action>",
   "platform": "<platform>",
   "name": "<接口名称>",
+  "cnName": "<简短中文名；由 tool/cn_name.py 从 description 提炼，无需手填>",
   "description": "<一句话说明>",
   "method": "GET",
   "path": "/v1/example/path",

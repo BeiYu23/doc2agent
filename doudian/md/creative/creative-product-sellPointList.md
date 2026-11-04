@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.creative.product.sellPointList` |
+| 中文名 | 查询商品卖点列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/sellPointList` |

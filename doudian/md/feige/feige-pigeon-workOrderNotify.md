@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.workOrderNotify` |
+| 中文名 | 更新或者存储工单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/workOrderNotify` |

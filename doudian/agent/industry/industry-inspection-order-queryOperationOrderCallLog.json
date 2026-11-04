@@ -92,5 +92,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8326",
   "updatedAt": "2026-05-21",
-  "_file_stem": "industry-inspection-order-queryOperationOrderCallLog"
+  "_file_stem": "industry-inspection-order-queryOperationOrderCallLog",
+  "cnName": "服务商查询通话记录"
 }

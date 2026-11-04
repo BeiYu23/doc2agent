@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.addCbProduct` |
+| 中文名 | 新增跨境/海南商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/addCbProduct` |

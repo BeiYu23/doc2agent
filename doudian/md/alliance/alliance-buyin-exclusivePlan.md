@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.exclusivePlan` |
+| 中文名 | 创建/修改商品专属推广计划 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/exclusivePlan` |

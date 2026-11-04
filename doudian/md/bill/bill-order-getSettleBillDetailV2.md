@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bill.order.getSettleBillDetailV2` |
+| 中文名 | 2024年7月1日停止服务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getSettleBillDetailV2` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.alliance.kol.storeList` |
+| 中文名 | 查询达人的橱窗商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/kol/storeList` |

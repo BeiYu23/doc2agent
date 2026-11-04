@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.open.QueryProductTopVideoIds` |
+| 中文名 | 单商品 Top 内容 ID 查询接口协议 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/QueryProductTopVideoIds` |

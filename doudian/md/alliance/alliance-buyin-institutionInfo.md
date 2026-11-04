@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.institutionInfo` |
+| 中文名 | 获取机构信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/institutionInfo` |

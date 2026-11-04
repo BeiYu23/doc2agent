@@ -94,5 +94,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2921",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorAcceptOrderEvent"
+  "_file_stem": "logistics-logistics-operatorAcceptOrderEvent",
+  "cnName": "服务商接收派单后回执"
 }

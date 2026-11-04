@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.shipping` |
+| 中文名 | 商家接口_自发货订单商家发货给买家 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/shipping` |

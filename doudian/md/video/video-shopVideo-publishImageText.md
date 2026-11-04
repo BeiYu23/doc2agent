@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.shopVideo.publishImageText` |
+| 中文名 | 发布图文接口，支持渠道号 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/publishImageText` |

@@ -119,5 +119,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2117",
   "updatedAt": "2022-06-27",
-  "_file_stem": "shop-supplyChain-supplyProduct-getSupplyProductUpdateRule"
+  "_file_stem": "shop-supplyChain-supplyProduct-getSupplyProductUpdateRule",
+  "cnName": "获取产品发布模板"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.deliverTimeChangeConfirm` |
+| 中文名 | 延迟发货审核结果回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/deliverTimeChangeConfirm` |

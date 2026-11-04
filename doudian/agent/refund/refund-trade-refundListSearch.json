@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/221",
   "updatedAt": "2021-01-11",
-  "_file_stem": "refund-trade-refundListSearch"
+  "_file_stem": "refund-trade-refundListSearch",
+  "cnName": "查询退款单列表"
 }

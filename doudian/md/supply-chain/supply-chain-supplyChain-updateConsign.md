@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.supply-chain.supplyChain.updateConsign` |
+| 中文名 | 供货单更新发货物流 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/updateConsign` |

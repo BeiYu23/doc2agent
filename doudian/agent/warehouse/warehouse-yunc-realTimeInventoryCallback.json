@@ -238,5 +238,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2990",
   "updatedAt": "2023-03-17",
-  "_file_stem": "warehouse-yunc-realTimeInventoryCallback"
+  "_file_stem": "warehouse-yunc-realTimeInventoryCallback",
+  "cnName": "实时库存同步"
 }

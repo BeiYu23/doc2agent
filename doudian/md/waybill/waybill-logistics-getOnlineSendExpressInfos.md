@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.waybill.logistics.getOnlineSendExpressInfos` |
+| 中文名 | 在线寄件询价 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getOnlineSendExpressInfos` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.logistics.sendByteDanceMessage` |
+| 中文名 | 短信代发 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/sendByteDanceMessage` |

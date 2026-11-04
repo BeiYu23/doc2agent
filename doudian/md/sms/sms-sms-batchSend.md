@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.batchSend` |
+| 中文名 | 批量短信发送 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/batchSend` |

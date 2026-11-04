@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.waybill.logistics.newCreateOrder` |
+| 中文名 | 商家ERP/ISV |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/newCreateOrder` |

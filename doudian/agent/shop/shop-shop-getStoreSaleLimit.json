@@ -64,5 +64,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2379",
   "updatedAt": "2024-02-26",
-  "_file_stem": "shop-shop-getStoreSaleLimit"
+  "_file_stem": "shop-shop-getStoreSaleLimit",
+  "cnName": "获取门店绑定的限售模版"
 }

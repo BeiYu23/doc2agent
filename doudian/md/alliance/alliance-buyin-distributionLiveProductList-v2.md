@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.distributionLiveProductList.v2` |
+| 中文名 | 分销直播间商品列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/distributionLiveProductList/v2` |

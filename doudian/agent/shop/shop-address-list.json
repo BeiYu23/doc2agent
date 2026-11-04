@@ -173,5 +173,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1435",
   "updatedAt": "2025-03-17",
-  "_file_stem": "shop-address-list"
+  "_file_stem": "shop-address-list",
+  "cnName": "批量查询地址库列表"
 }

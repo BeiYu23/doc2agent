@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.alliance.mGetItems` |
+| 中文名 | 【二方接口】根据推广id列表获取推广 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.inspection.inspectionTemplate.get` |
+| 中文名 | 获取检测模版 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/inspectionTemplate/get` |

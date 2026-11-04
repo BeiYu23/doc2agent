@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.sku.syncStockBatchMultiProducts` |
+| 中文名 | 多商品内 sku 更新库存 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/syncStockBatchMultiProducts` |

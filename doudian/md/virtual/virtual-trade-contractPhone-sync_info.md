@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.virtual.trade.contractPhone.sync_info` |
+| 中文名 | 合约机办理结果同步 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/contractPhone/sync_info` |

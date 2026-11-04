@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.waybill.logistics.pushOnlineServiceConfig` |
+| 中文名 | 物流商推送面单服务的配置 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/pushOnlineServiceConfig` |

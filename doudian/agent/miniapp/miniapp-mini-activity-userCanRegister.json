@@ -249,5 +249,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/6659",
   "updatedAt": "2024-08-13",
-  "_file_stem": "miniapp-mini-activity-userCanRegister"
+  "_file_stem": "miniapp-mini-activity-userCanRegister",
+  "cnName": "判断用户是否可以参加活动"
 }

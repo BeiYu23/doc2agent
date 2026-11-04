@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.service.pigeon.ISVEvaluationCallback` |
+| 中文名 | ISV评测结果回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/ISVEvaluationCallback` |

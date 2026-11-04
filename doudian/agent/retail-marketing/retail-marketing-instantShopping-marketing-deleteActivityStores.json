@@ -101,5 +101,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/7553",
   "updatedAt": "2025-07-03",
-  "_file_stem": "retail-marketing-instantShopping-marketing-deleteActivityStores"
+  "_file_stem": "retail-marketing-instantShopping-marketing-deleteActivityStores",
+  "cnName": "删除活动下的报名门店，目前仅用于配送费营销"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.AddressAppliedSwitch` |
+| 中文名 | 支持调用后打开（或关闭）卖家针对买家收货地址变… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/AddressAppliedSwitch` |

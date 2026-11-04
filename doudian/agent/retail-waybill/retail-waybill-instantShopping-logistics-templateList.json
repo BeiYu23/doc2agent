@@ -80,5 +80,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7243",
   "updatedAt": "2025-02-06",
-  "_file_stem": "retail-waybill-instantShopping-logistics-templateList"
+  "_file_stem": "retail-waybill-instantShopping-logistics-templateList",
+  "cnName": "获取商家所有标准模版信息"
 }

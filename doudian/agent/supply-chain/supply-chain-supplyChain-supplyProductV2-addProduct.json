@@ -1050,5 +1050,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6679",
   "updatedAt": "2025-04-23",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-addProduct"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-addProduct",
+  "cnName": "创建货品"
 }

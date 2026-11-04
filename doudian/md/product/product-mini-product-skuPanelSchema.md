@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.mini.product.skuPanelSchema` |
+| 中文名 | 获取商品sku面板schema |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/product/skuPanelSchema` |

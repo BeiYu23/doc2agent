@@ -284,5 +284,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2042",
   "updatedAt": "2022-08-08",
-  "_file_stem": "shop-shop-getStoreList"
+  "_file_stem": "shop-shop-getStoreList",
+  "cnName": "门店列表分页查询"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.open.unionIdToOpenId` |
+| 中文名 | UnionId转成OpenId |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/unionIdToOpenId` |

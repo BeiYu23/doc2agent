@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.shopVideo.listVideo` |
+| 中文名 | 查询已投稿短视频列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/listVideo` |

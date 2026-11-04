@@ -118,5 +118,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1830",
   "updatedAt": "2024-05-24",
-  "_file_stem": "product-product-qualityDetail"
+  "_file_stem": "product-product-qualityDetail",
+  "cnName": "商品信息质量分查询"
 }

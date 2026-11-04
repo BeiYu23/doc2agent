@@ -102,5 +102,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/1871",
   "updatedAt": "2024-08-01",
-  "_file_stem": "bic-inspect-orderCode-downloadOrderCodeByShop"
+  "_file_stem": "bic-inspect-orderCode-downloadOrderCodeByShop",
+  "cnName": "预绑订单码"
 }

@@ -142,5 +142,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/1403",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-ddpDeleteShop"
+  "_file_stem": "cloud-openCloud-ddpDeleteShop",
+  "cnName": "数据推送，删除绑定的推送店铺"
 }

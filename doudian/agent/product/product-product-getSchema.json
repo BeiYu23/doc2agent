@@ -134,5 +134,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6361",
   "updatedAt": "2026-05-22",
-  "_file_stem": "product-product-getSchema"
+  "_file_stem": "product-product-getSchema",
+  "cnName": "商品发布schema-渲染"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.shop.delStore` |
+| 中文名 | 删除门店 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/delStore` |

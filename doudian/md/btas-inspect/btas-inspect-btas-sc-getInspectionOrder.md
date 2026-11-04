@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.sc.getInspectionOrder` |
+| 中文名 | 质检机构获取该机构的订单状态信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/getInspectionOrder` |

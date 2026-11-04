@@ -302,5 +302,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1920",
   "updatedAt": "2022-12-09",
-  "_file_stem": "logistics-power-virtualServicePushCallRecord"
+  "_file_stem": "logistics-power-virtualServicePushCallRecord",
+  "cnName": "虚拟号服务商通话记录回传（仅用于兼容老物流网关"
 }

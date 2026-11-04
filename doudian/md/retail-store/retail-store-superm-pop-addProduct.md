@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.superm.pop.addProduct` |
+| 中文名 | 小时达营销活动添加商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/pop/addProduct` |

@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6622",
   "updatedAt": "2024-06-11",
-  "_file_stem": "warehouse-wms-outboundDetailNotify_uat"
+  "_file_stem": "warehouse-wms-outboundDetailNotify_uat",
+  "cnName": "UAT环境WMS出库回调"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.batchUpdate` |
+| 中文名 | 会员数据更新 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/batchUpdate` |

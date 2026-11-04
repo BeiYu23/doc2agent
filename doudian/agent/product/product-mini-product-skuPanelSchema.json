@@ -158,5 +158,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4251",
   "updatedAt": "2024-08-30",
-  "_file_stem": "product-mini-product-skuPanelSchema"
+  "_file_stem": "product-mini-product-skuPanelSchema",
+  "cnName": "获取商品sku面板schema"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.sms.uploadAudience` |
+| 中文名 | 上传人群 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/uploadAudience` |

@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.kolProductsDetail` |
+| 中文名 | 本接口用于查询达人视角下单个或批量推广商品的 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/kolProductsDetail` |

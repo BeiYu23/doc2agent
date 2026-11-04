@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.supply-chain.supplyChain.bannedSchema.list` |
+| 中文名 | 查询限售方案 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/bannedSchema/list` |

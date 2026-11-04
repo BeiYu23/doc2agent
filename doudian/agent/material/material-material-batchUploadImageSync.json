@@ -225,5 +225,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1616",
   "updatedAt": "2022-12-16",
-  "_file_stem": "material-material-batchUploadImageSync"
+  "_file_stem": "material-material-batchUploadImageSync",
+  "cnName": "一次上传的数量限制50张图片且单个图片最大不能…"
 }

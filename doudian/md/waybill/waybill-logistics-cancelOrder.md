@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.waybill.logistics.cancelOrder` |
+| 中文名 | 用于ISV/商家ERP系统 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/cancelOrder` |

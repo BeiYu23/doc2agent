@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.hospital.medicine.doctorCloseConsultConversation` |
+| 中文名 | 医生结束问诊会话 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/doctorCloseConsultConversation` |

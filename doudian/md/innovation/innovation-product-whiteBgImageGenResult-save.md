@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.innovation.product.whiteBgImageGenResult.save` |
+| 中文名 | 白底图生成结果回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/whiteBgImageGenResult/save` |

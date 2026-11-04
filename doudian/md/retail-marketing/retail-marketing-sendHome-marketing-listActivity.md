@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-marketing.sendHome.marketing.listActivity` |
+| 中文名 | 查询营销活动列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

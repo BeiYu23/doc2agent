@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.warehouse.createBatch` |
+| 中文名 | 批量创建区域仓 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/createBatch` |

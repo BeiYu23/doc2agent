@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dropshipping.iop.waybillGet` |
+| 中文名 | 电子面单取号 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/waybillGet` |

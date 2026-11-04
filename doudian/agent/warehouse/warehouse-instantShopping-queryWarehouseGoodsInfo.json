@@ -116,5 +116,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6405",
   "updatedAt": "2024-04-12",
-  "_file_stem": "warehouse-instantShopping-queryWarehouseGoodsInfo"
+  "_file_stem": "warehouse-instantShopping-queryWarehouseGoodsInfo",
+  "cnName": "支持仓储服务商查询仓货品基础数据"
 }

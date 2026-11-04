@@ -93,5 +93,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/7017",
   "updatedAt": "2024-10-21",
-  "_file_stem": "dongchedi-second-alliance-mGetItems"
+  "_file_stem": "dongchedi-second-alliance-mGetItems",
+  "cnName": "【二方接口】根据推广id列表获取推广"
 }

@@ -632,5 +632,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2694",
   "updatedAt": "2026-07-14",
-  "_file_stem": "product-product-partialEdit"
+  "_file_stem": "product-product-partialEdit",
+  "cnName": "部分编辑商品信息"
 }

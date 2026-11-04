@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.stock.warehouse.createV2` |
+| 中文名 | 单个仓创建v2版本 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/createV2` |

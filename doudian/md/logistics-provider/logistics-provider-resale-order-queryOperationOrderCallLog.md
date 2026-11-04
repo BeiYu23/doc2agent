@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.resale.order.queryOperationOrderCallLog` |
+| 中文名 | 以旧换新隐私号接通信息查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/queryOperationOrderCallLog` |

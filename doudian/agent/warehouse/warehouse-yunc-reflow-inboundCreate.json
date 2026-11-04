@@ -325,5 +325,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2278",
   "updatedAt": "2022-10-11",
-  "_file_stem": "warehouse-yunc-reflow-inboundCreate"
+  "_file_stem": "warehouse-yunc-reflow-inboundCreate",
+  "cnName": "翻仓入库单创建"
 }

@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.stock.promise.setSkuShipTime` |
+| 中文名 | 【接口调用需加白，不再新增名单】 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/setSkuShipTime` |

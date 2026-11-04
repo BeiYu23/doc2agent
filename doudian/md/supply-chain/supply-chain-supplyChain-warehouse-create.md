@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.supply-chain.supplyChain.warehouse.create` |
+| 中文名 | 创建区域仓 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/warehouse/create` |

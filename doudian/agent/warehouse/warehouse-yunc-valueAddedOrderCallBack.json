@@ -175,5 +175,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2536",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-valueAddedOrderCallBack"
+  "_file_stem": "warehouse-yunc-valueAddedOrderCallBack",
+  "cnName": "WMS回传增值服务单数据"
 }

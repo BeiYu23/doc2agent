@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bill.cpaypromotion.ecom.downloadMerchantSettleBill` |
+| 中文名 | 通过【/cpaypromotion/ecom/… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

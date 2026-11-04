@@ -315,5 +315,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2735",
   "updatedAt": "2022-11-14",
-  "_file_stem": "order-logistics-virtualServicePushCallRecord"
+  "_file_stem": "order-logistics-virtualServicePushCallRecord",
+  "cnName": "虚拟号服务商通话记录回传"
 }

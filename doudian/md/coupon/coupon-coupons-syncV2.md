@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.coupon.coupons.syncV2` |
+| 中文名 | 卡券同步 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/syncV2` |

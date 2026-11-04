@@ -89,5 +89,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7207",
   "updatedAt": "2025-01-15",
-  "_file_stem": "video-shopVideo-getHiddenWaterMarkTask"
+  "_file_stem": "video-shopVideo-getHiddenWaterMarkTask",
+  "cnName": "查询加暗水印任务"
 }

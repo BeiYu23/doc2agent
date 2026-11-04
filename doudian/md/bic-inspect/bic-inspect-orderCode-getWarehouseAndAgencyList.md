@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bic-inspect.orderCode.getWarehouseAndAgencyList` |
+| 中文名 | 获取全量QIC质检仓和机构的信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/getWarehouseAndAgencyList` |

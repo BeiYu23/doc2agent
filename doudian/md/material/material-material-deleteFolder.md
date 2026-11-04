@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.deleteFolder` |
+| 中文名 | 彻底删除文件夹 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/deleteFolder` |

@@ -270,5 +270,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2796",
   "updatedAt": "2022-12-19",
-  "_file_stem": "order-trace-record"
+  "_file_stem": "order-trace-record",
+  "cnName": "在订单链路监控场景中，回传轨迹信息"
 }

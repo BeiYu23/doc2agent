@@ -66,5 +66,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1532/7840",
   "updatedAt": "2026-03-31",
-  "_file_stem": "service-pigeon-ISVEvaluationCallback"
+  "_file_stem": "service-pigeon-ISVEvaluationCallback",
+  "cnName": "ISV评测结果回调"
 }

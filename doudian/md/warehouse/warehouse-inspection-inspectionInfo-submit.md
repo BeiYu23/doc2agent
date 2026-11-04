@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.inspection.inspectionInfo.submit` |
+| 中文名 | 品控中心-质检结果回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/inspectionInfo/submit` |

@@ -149,5 +149,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1493",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-shopPidMemberCreate"
+  "_file_stem": "alliance-buyin-shopPidMemberCreate",
+  "cnName": "店铺会员绑定渠道关系创建"
 }

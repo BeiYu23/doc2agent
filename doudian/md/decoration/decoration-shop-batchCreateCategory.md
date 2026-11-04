@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.decoration.shop.batchCreateCategory` |
+| 中文名 | 批量创建类目 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/batchCreateCategory` |

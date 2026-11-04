@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.audience.listSeedMeta` |
+| 中文名 | 获取种子人群元数据 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/listSeedMeta` |

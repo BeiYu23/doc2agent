@@ -377,5 +377,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1526/6706",
   "updatedAt": "2026-01-09",
-  "_file_stem": "pickup-logistics-overSize-reportException"
+  "_file_stem": "pickup-logistics-overSize-reportException",
+  "cnName": "上报大件上门取件履约过程中的异常"
 }

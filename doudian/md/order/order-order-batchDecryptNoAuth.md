@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.batchDecryptNoAuth` |
+| 中文名 | 接口支持解密在文档字段有“密文”红色标识字段值… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/batchDecryptNoAuth` |

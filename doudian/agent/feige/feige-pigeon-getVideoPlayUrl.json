@@ -149,5 +149,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5947",
   "updatedAt": "2023-12-20",
-  "_file_stem": "feige-pigeon-getVideoPlayUrl"
+  "_file_stem": "feige-pigeon-getVideoPlayUrl",
+  "cnName": "获取飞鸽视频播放URL"
 }

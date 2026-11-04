@@ -79,5 +79,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/7668",
   "updatedAt": "2025-08-04",
-  "_file_stem": "feige-pigeon-GetPigeonToolList"
+  "_file_stem": "feige-pigeon-GetPigeonToolList",
+  "cnName": "该接口用于根据业务身份和相关参数获取可用的客服…"
 }

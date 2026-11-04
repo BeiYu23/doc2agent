@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.supplyChain.outside.getCollectImproveList` |
+| 中文名 | 查询揽收及时率待改进责任机构排名 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.shopVideo.reportVideoPublishRecord` |
+| 中文名 | 上报短视频上传记录 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/reportVideoPublishRecord` |

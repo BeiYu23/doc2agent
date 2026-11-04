@@ -335,5 +335,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7241",
   "updatedAt": "2025-02-08",
-  "_file_stem": "retail-waybill-instantShopping-logistics-cancelOrder"
+  "_file_stem": "retail-waybill-instantShopping-logistics-cancelOrder",
+  "cnName": "取消已获取的电子面单号"
 }

@@ -194,5 +194,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/6523",
   "updatedAt": "2024-05-27",
-  "_file_stem": "cloud-microapp-invoke-cloudApi"
+  "_file_stem": "cloud-microapp-invoke-cloudApi",
+  "cnName": "调用ISV云内应用"
 }

@@ -415,5 +415,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/4777",
   "updatedAt": "2025-09-10",
-  "_file_stem": "retail-store-instantShopping-createDelivery"
+  "_file_stem": "retail-store-instantShopping-createDelivery",
+  "cnName": "即时零售下发配送任务"
 }

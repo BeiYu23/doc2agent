@@ -103,5 +103,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5323",
   "updatedAt": "2023-11-10",
-  "_file_stem": "selection-supplyCenter-order-pay"
+  "_file_stem": "selection-supplyCenter-order-pay",
+  "cnName": "支付成功状态推进"
 }

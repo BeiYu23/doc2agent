@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-message.sendHome.spi.querySpiError` |
+| 中文名 | 到家查询spi最终持久化失败落库记录 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sendHome/spi/querySpiError` |

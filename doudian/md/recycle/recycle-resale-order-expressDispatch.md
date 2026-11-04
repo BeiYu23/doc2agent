@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.resale.order.expressDispatch` |
+| 中文名 | 【邮寄回收】服务商已派单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/expressDispatch` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.shop.prodOrderCntDiagnose` |
+| 中文名 | 商品维度订单量诊断 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/prodOrderCntDiagnose` |

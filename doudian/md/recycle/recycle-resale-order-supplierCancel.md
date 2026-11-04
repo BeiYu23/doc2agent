@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.resale.order.supplierCancel` |
+| 中文名 | 服务商取消回收 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/supplierCancel` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.logistics.uploadVirtualTelCaller` |
+| 中文名 | 700虚拟号主叫上报 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/uploadVirtualTelCaller` |

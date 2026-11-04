@@ -74,5 +74,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/4016",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-deleteVmsTemplate"
+  "_file_stem": "sms-sms-deleteVmsTemplate",
+  "cnName": "删除视频短信模板"
 }

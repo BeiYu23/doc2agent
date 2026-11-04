@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.brand.convert` |
+| 中文名 | 兼容老品牌id转为新品牌id |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/brand/convert` |

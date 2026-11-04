@@ -71,5 +71,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/8058",
   "updatedAt": "2026-01-21",
-  "_file_stem": "tool-product-isCategoryMigrateObj"
+  "_file_stem": "tool-product-isCategoryMigrateObj",
+  "cnName": "主要用于类目树升级场景"
 }

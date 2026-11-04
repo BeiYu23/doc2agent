@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.supplyChain.cartSchema` |
+| 中文名 | 获取购物车跳转链接schema |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/cartSchema` |

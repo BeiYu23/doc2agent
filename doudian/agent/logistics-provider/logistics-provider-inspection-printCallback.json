@@ -138,5 +138,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8646",
   "updatedAt": "2026-10-08",
-  "_file_stem": "logistics-provider-inspection-printCallback"
+  "_file_stem": "logistics-provider-inspection-printCallback",
+  "cnName": "qic外部系统打印回调"
 }

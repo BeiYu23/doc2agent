@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cloud.openCloud.v1.deployTicket.detail` |
+| 中文名 | 获取发布 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/v1/deployTicket/detail` |

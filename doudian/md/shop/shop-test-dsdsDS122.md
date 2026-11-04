@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.test.dsdsDS122` |
+| 中文名 | （dsdsDS122） |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/dsdsDS122` |

@@ -83,5 +83,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1497",
   "updatedAt": "2023-03-02",
-  "_file_stem": "alliance-buyin-materialsProductStatus"
+  "_file_stem": "alliance-buyin-materialsProductStatus",
+  "cnName": "商品状态查询"
 }

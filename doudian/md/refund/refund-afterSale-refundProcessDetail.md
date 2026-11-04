@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.refundProcessDetail` |
+| 中文名 | 根据子订单ID查询退款 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/refundProcessDetail` |

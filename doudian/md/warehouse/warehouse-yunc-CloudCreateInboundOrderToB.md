@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.CloudCreateInboundOrderToB` |
+| 中文名 | erp创建入库单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/CloudCreateInboundOrderToB` |

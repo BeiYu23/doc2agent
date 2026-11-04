@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.callAndCancelTransportCapability` |
+| 中文名 | 同城零售运力呼叫和运力取消 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/callAndCancelTransportCapability` |

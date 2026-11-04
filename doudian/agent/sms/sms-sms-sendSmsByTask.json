@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7789",
   "updatedAt": "2025-09-19",
-  "_file_stem": "sms-sms-sendSmsByTask"
+  "_file_stem": "sms-sms-sendSmsByTask",
+  "cnName": "通过父任务发起新的短信发送任务"
 }

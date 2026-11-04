@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.storage.notifySaleReturnStatus` |
+| 中文名 | 回告销退单状态 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/storage/notifySaleReturnStatus` |

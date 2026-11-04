@@ -149,5 +149,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2837",
   "updatedAt": "2025-09-19",
-  "_file_stem": "shop-max-products"
+  "_file_stem": "shop-max-products",
+  "cnName": "批量获取店铺商品信息"
 }

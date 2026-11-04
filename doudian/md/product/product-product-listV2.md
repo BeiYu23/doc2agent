@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.listV2` |
+| 中文名 | 批量查询商家抖店商品信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/listV2` |

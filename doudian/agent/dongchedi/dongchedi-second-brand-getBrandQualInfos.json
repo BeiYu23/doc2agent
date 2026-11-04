@@ -214,5 +214,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6941",
   "updatedAt": "2024-10-15",
-  "_file_stem": "dongchedi-second-brand-getBrandQualInfos"
+  "_file_stem": "dongchedi-second-brand-getBrandQualInfos",
+  "cnName": "【二方接口】查询品牌资质信息"
 }

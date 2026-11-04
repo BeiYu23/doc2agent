@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.trace.checkShop` |
+| 中文名 | 订单链路监控检查用户是否开通 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trace/checkShop` |

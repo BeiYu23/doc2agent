@@ -93,5 +93,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/7969",
   "updatedAt": "2025-12-19",
-  "_file_stem": "industry-supplyChain-procurement-queryProcurementOrder"
+  "_file_stem": "industry-supplyChain-procurement-queryProcurementOrder",
+  "cnName": "查询采购单信息"
 }

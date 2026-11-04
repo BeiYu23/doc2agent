@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.sc.confirmOrderByPickupCode` |
+| 中文名 | 质检机构_根据自提码确认商家自提完成 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/confirmOrderByPickupCode` |

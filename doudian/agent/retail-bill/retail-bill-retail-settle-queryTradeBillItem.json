@@ -210,5 +210,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1518/6772",
   "updatedAt": "2026-07-16",
-  "_file_stem": "retail-bill-retail-settle-queryTradeBillItem"
+  "_file_stem": "retail-bill-retail-settle-queryTradeBillItem",
+  "cnName": "即时零售交易账单查询"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.selection.supplyCenter.material.search` |
+| 中文名 | 素材中心--素材搜索 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/material/search` |

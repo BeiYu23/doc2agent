@@ -122,5 +122,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8352",
   "updatedAt": "2026-06-02",
-  "_file_stem": "video-second-ecomInsight-createVideoSearchTask"
+  "_file_stem": "video-second-ecomInsight-createVideoSearchTask",
+  "cnName": "创建视频搜索子任务"
 }

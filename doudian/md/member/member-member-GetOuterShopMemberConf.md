@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.GetOuterShopMemberConf` |
+| 中文名 | 入会面板调用 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/GetOuterShopMemberConf` |

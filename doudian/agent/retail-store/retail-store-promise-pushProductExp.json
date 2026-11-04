@@ -108,5 +108,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/4688",
   "updatedAt": "2023-09-12",
-  "_file_stem": "retail-store-promise-pushProductExp"
+  "_file_stem": "retail-store-promise-pushProductExp",
+  "cnName": "推送(商品SKU)过期时间"
 }

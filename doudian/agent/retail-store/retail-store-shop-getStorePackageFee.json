@@ -91,5 +91,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2634",
   "updatedAt": "2024-02-26",
-  "_file_stem": "retail-store-shop-getStorePackageFee"
+  "_file_stem": "retail-store-shop-getStorePackageFee",
+  "cnName": "获取门店打包费"
 }

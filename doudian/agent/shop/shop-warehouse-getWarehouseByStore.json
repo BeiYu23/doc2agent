@@ -84,5 +84,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2423",
   "updatedAt": "2022-08-25",
-  "_file_stem": "shop-warehouse-getWarehouseByStore"
+  "_file_stem": "shop-warehouse-getWarehouseByStore",
+  "cnName": "通过门店id查询仓信息"
 }

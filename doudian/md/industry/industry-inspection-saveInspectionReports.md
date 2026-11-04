@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.inspection.saveInspectionReports` |
+| 中文名 | 创建/编辑验机报告 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/saveInspectionReports` |

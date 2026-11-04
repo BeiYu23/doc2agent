@@ -101,5 +101,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2318",
   "updatedAt": "2022-08-23",
-  "_file_stem": "product-product-isv-batchGetClueSubmitStatus"
+  "_file_stem": "product-product-isv-batchGetClueSubmitStatus",
+  "cnName": "批量查询线索的提报状态"
 }

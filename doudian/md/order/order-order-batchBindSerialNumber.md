@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.batchBindSerialNumber` |
+| 中文名 | 上传序列号 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/batchBindSerialNumber` |

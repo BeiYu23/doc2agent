@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.updateOrderCourier` |
+| 中文名 | 更新订单的物流面单信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/updateOrderCourier` |

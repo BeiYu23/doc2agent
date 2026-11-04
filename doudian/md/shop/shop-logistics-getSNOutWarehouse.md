@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.logistics.getSNOutWarehouse` |
+| 中文名 | 获取SN出库数据 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getSNOutWarehouse` |

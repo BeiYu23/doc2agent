@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.quality.orderCode.getAssignedAgencyByOrderId` |
+| 中文名 | 通过订单号获取已分配的质检信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/getAssignedAgencyByOrderId` |

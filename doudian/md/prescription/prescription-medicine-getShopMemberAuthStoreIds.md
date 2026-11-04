@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.prescription.medicine.getShopMemberAuthStoreIds` |
+| 中文名 | 获取成员有权限的门店 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/getShopMemberAuthStoreIds` |

@@ -243,5 +243,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1511",
   "updatedAt": "2022-10-27",
-  "_file_stem": "shop-address-update"
+  "_file_stem": "shop-address-update",
+  "cnName": "该接口支持店铺修改单条售后地址信息"
 }

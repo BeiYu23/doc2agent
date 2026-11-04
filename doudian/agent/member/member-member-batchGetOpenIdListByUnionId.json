@@ -97,5 +97,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/2814",
   "updatedAt": "2022-12-08",
-  "_file_stem": "member-member-batchGetOpenIdListByUnionId"
+  "_file_stem": "member-member-batchGetOpenIdListByUnionId",
+  "cnName": "服务商可以根据品牌维度的用户唯一身份Union…"
 }

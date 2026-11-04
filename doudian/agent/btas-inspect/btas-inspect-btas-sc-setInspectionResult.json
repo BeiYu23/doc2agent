@@ -164,5 +164,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/2923",
   "updatedAt": "2023-02-09",
-  "_file_stem": "btas-inspect-btas-sc-setInspectionResult"
+  "_file_stem": "btas-inspect-btas-sc-setInspectionResult",
+  "cnName": "质检机构_上传订单质检结果"
 }

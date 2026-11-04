@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6728",
   "updatedAt": "2024-07-26",
-  "_file_stem": "sms-sms-GetLabelParamList"
+  "_file_stem": "sms-sms-GetLabelParamList",
+  "cnName": "标签参数获取"
 }

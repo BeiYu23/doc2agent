@@ -616,5 +616,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2665",
   "updatedAt": "2022-10-27",
-  "_file_stem": "warehouse-yunc-QICOrderCreate"
+  "_file_stem": "warehouse-yunc-QICOrderCreate",
+  "cnName": "云仓QIC订单创建"
 }

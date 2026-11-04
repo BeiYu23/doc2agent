@@ -75,5 +75,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6533",
   "updatedAt": "2024-05-24",
-  "_file_stem": "warehouse-instantShopping-starhub-queryAftersaleInboundOrder"
+  "_file_stem": "warehouse-instantShopping-starhub-queryAftersaleInboundOrder",
+  "cnName": "查询退供出库单状态数据"
 }

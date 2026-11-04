@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.logistics.operatorCancelEvent` |
+| 中文名 | 服务商主动取消上门事件通知 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/operatorCancelEvent` |

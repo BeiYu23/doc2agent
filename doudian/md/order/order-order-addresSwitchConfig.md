@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.addresSwitchConfig` |
+| 中文名 | 获取App对于商家订单修改地址的审核权限 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/addresSwitchConfig` |

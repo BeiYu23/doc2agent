@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.install.order.supplierUpdateAppointment` |
+| 中文名 | 上门安装服务商更新预约信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/supplierUpdateAppointment` |

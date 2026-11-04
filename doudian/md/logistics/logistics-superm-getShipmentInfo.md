@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.superm.getShipmentInfo` |
+| 中文名 | 小时达运力平台运力配送状态查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getShipmentInfo` |

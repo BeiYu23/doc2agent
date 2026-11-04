@@ -203,5 +203,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7713",
   "updatedAt": "2026-08-10",
-  "_file_stem": "logistics-provider-install-order-queryWaitAcceptOperationOrderList"
+  "_file_stem": "logistics-provider-install-order-queryWaitAcceptOperationOrderList",
+  "cnName": "未接单的实操单据列表查询"
 }

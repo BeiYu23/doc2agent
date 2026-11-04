@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.getOrderInspectionResult` |
+| 中文名 | 商家_获取订单的质检结果（鉴定结论 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/getOrderInspectionResult` |

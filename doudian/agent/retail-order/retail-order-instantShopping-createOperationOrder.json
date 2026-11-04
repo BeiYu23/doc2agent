@@ -221,5 +221,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1531/6946",
   "updatedAt": "2024-10-29",
-  "_file_stem": "retail-order-instantShopping-createOperationOrder"
+  "_file_stem": "retail-order-instantShopping-createOperationOrder",
+  "cnName": "创建仓内作业单"
 }

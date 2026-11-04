@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.open.SaasCreateImageAnalysisTask` |
+| 中文名 | 创建图片分析任务 (SaaS |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/SaasCreateImageAnalysisTask` |

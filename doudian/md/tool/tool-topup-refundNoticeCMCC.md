@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.topup.refundNoticeCMCC` |
+| 中文名 | 中国移动订单退款通知 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/refundNoticeCMCC` |

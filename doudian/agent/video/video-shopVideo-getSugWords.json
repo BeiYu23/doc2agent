@@ -65,5 +65,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7491",
   "updatedAt": "2025-05-28",
-  "_file_stem": "video-shopVideo-getSugWords"
+  "_file_stem": "video-shopVideo-getSugWords",
+  "cnName": "查询话题信息"
 }

@@ -122,5 +122,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/7440",
   "updatedAt": "2025-05-14",
-  "_file_stem": "supply-chain-supplyChain-queryWhInventorySnapshot"
+  "_file_stem": "supply-chain-supplyChain-queryWhInventorySnapshot",
+  "cnName": "查询品仓库存行快照信息"
 }

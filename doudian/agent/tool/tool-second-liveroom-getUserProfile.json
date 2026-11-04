@@ -59,5 +59,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7590",
   "updatedAt": "2025-08-25",
-  "_file_stem": "tool-second-liveroom-getUserProfile"
+  "_file_stem": "tool-second-liveroom-getUserProfile",
+  "cnName": "查询直播间用户画像"
 }

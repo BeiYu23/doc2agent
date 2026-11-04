@@ -74,5 +74,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2677",
   "updatedAt": "2022-11-03",
-  "_file_stem": "product-trade-TopSearchQueryPredict"
+  "_file_stem": "product-trade-TopSearchQueryPredict",
+  "cnName": "商品标题热搜词推荐"
 }

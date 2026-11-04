@@ -179,5 +179,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6811",
   "updatedAt": "2024-08-27",
-  "_file_stem": "retail-marketing-sendHome-marketing-listActivityProduct"
+  "_file_stem": "retail-marketing-sendHome-marketing-listActivityProduct",
+  "cnName": "查询营销活动门店绑定的商品"
 }

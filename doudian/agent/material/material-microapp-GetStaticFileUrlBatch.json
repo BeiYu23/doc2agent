@@ -100,5 +100,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/2914",
   "updatedAt": "2024-12-26",
-  "_file_stem": "material-microapp-GetStaticFileUrlBatch"
+  "_file_stem": "material-microapp-GetStaticFileUrlBatch",
+  "cnName": "ISV批量兑换文件url"
 }

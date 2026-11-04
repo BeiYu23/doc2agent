@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.superm.getStoreAutoAccept` |
+| 中文名 | 获取自动接单配置 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getStoreAutoAccept` |

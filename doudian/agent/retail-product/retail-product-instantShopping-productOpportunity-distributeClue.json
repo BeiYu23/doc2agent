@@ -162,5 +162,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1570/7476",
   "updatedAt": "2025-05-22",
-  "_file_stem": "retail-product-instantShopping-productOpportunity-distributeClue"
+  "_file_stem": "retail-product-instantShopping-productOpportunity-distributeClue",
+  "cnName": "商机发品流程：获取商机线索->发品传入商机参数"
 }

@@ -106,5 +106,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6474",
   "updatedAt": "2024-04-26",
-  "_file_stem": "supply-chain-supplyChain-bannedSchema-list"
+  "_file_stem": "supply-chain-supplyChain-bannedSchema-list",
+  "cnName": "查询限售方案"
 }

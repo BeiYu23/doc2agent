@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.virtual.topup.resultCMCCJiyun` |
+| 中文名 | 中国移动话费充值结果回传-50面额 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/resultCMCCJiyun` |

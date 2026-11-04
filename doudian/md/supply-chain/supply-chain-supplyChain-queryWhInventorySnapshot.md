@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.supply-chain.supplyChain.queryWhInventorySnapshot` |
+| 中文名 | 查询品仓库存行快照信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryWhInventorySnapshot` |

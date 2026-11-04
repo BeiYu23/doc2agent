@@ -77,5 +77,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6670",
   "updatedAt": "2024-07-04",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getQualificationConfig"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getQualificationConfig",
+  "cnName": "获取类目下需要填写的资质列表"
 }

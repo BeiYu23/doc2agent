@@ -414,5 +414,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/290",
   "updatedAt": "2024-07-31",
-  "_file_stem": "order-order-addressModify"
+  "_file_stem": "order-order-addressModify",
+  "cnName": "用于卖家和买家沟通后，主动帮买家修改收货信息"
 }

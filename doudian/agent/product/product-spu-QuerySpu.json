@@ -265,5 +265,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/6206",
   "updatedAt": "2026-08-14",
-  "_file_stem": "product-spu-QuerySpu"
+  "_file_stem": "product-spu-QuerySpu",
+  "cnName": "检索SPU"
 }

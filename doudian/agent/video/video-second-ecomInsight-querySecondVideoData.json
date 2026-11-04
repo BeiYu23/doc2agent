@@ -105,5 +105,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8633",
   "updatedAt": "2026-09-18",
-  "_file_stem": "video-second-ecomInsight-querySecondVideoData"
+  "_file_stem": "video-second-ecomInsight-querySecondVideoData",
+  "cnName": "获取秒级追踪数据"
 }

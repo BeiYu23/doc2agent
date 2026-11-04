@@ -108,5 +108,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2695",
   "updatedAt": "2022-11-02",
-  "_file_stem": "retail-store-superm-product-queryProductSyncSubTask"
+  "_file_stem": "retail-store-superm-product-queryProductSyncSubTask",
+  "cnName": "查询根任务下的子任务列表"
 }

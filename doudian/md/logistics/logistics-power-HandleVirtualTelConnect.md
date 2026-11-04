@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.power.HandleVirtualTelConnect` |
+| 中文名 | 虚拟号服务商回传虚拟号接通事件 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/HandleVirtualTelConnect` |

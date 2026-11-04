@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.miniapp.mini.activity.operate` |
+| 中文名 | 操作小程序活动 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/activity/operate` |

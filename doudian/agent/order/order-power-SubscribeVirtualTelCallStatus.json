@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2072",
   "updatedAt": "2022-06-23",
-  "_file_stem": "order-power-SubscribeVirtualTelCallStatus"
+  "_file_stem": "order-power-SubscribeVirtualTelCallStatus",
+  "cnName": "isv获取虚拟号通话状态申请"
 }

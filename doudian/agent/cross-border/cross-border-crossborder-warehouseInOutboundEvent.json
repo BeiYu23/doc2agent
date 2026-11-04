@@ -579,5 +579,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/1205",
   "updatedAt": "2023-05-19",
-  "_file_stem": "cross-border-crossborder-warehouseInOutboundEvent"
+  "_file_stem": "cross-border-crossborder-warehouseInOutboundEvent",
+  "cnName": "入库和提货出库回告"
 }

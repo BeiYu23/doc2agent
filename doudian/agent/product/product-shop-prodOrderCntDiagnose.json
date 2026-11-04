@@ -118,5 +118,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8371",
   "updatedAt": "2026-07-03",
-  "_file_stem": "product-shop-prodOrderCntDiagnose"
+  "_file_stem": "product-shop-prodOrderCntDiagnose",
+  "cnName": "商品维度订单量诊断"
 }

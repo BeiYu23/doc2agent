@@ -83,5 +83,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/1818",
   "updatedAt": "2022-05-06",
-  "_file_stem": "tool-open-appIpWhiteListAdd"
+  "_file_stem": "tool-open-appIpWhiteListAdd",
+  "cnName": "新增应用ip白名单"
 }

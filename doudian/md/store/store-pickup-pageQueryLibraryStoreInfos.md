@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.store.pickup.pageQueryLibraryStoreInfos` |
+| 中文名 | 门店组绑定门店列表查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/pageQueryLibraryStoreInfos` |

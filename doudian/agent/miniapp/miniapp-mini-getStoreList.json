@@ -392,5 +392,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7260",
   "updatedAt": "2025-02-21",
-  "_file_stem": "miniapp-mini-getStoreList"
+  "_file_stem": "miniapp-mini-getStoreList",
+  "cnName": "C端小程序获取门店列表"
 }

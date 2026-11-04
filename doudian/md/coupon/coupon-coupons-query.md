@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.coupon.coupons.query` |
+| 中文名 | 查询卡券（无需授权 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/query` |

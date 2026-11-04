@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.reflow.inboundCreate` |
+| 中文名 | 翻仓入库单创建 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/reflow/inboundCreate` |

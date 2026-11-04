@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.originColonelUnappliedProductList` |
+| 中文名 | 团长获取可提报二级团长活动的商品列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/originColonelUnappliedProductList` |

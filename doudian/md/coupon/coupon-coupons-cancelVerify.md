@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.coupon.coupons.cancelVerify` |
+| 中文名 | 卡券取消核销 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/cancelVerify` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.gis.fenceArea.push` |
+| 中文名 | 围栏数据推送 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/gis/fenceArea/push` |

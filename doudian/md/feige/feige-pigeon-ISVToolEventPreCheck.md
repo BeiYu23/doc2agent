@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.ISVToolEventPreCheck` |
+| 中文名 | ISV客服工具可用性预检查接口 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/ISVToolEventPreCheck` |

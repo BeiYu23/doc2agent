@@ -185,5 +185,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2428",
   "updatedAt": "2024-02-29",
-  "_file_stem": "product-product-getRecommendName"
+  "_file_stem": "product-product-getRecommendName",
+  "cnName": "根据商品信息推荐商品标题相关信息"
 }

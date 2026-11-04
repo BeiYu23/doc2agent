@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.virtual.order.PackageProcessSuccess` |
+| 中文名 | 套餐办理成功 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/PackageProcessSuccess` |

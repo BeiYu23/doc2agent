@@ -96,5 +96,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8255",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-getShopAvailableBaseInfo"
+  "_file_stem": "industry-inspection-getShopAvailableBaseInfo",
+  "cnName": "查询商家可用的基础信息（类目、品牌、型号"
 }

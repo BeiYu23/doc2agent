@@ -1111,5 +1111,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2643",
   "updatedAt": "2025-08-22",
-  "_file_stem": "logistics-provider-logistics-trackPush"
+  "_file_stem": "logistics-provider-logistics-trackPush",
+  "cnName": "快递模式轨迹推送"
 }

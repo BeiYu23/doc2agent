@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1803",
   "updatedAt": "2022-04-29",
-  "_file_stem": "member-member-GetUserShopMemberCard"
+  "_file_stem": "member-member-GetUserShopMemberCard",
+  "cnName": "电商会员卡面信息"
 }

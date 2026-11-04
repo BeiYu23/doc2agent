@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.trade.TopSearchQueryPredict` |
+| 中文名 | 商品标题热搜词推荐 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/trade/TopSearchQueryPredict` |

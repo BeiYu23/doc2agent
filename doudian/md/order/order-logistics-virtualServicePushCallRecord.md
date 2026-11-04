@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.logistics.virtualServicePushCallRecord` |
+| 中文名 | 虚拟号服务商通话记录回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/virtualServicePushCallRecord` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.decoration.shop.batchDeleteCategory` |
+| 中文名 | 批量删除类目 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/batchDeleteCategory` |

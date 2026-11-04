@@ -245,5 +245,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6681",
   "updatedAt": "2025-10-17",
-  "_file_stem": "member-sms-queryAudienceByCondition"
+  "_file_stem": "member-sms-queryAudienceByCondition",
+  "cnName": "查询人群信息"
 }

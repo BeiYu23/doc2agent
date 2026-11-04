@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.getVmsTemplateList` |
+| 中文名 | 获取视频短信模板list |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getVmsTemplateList` |

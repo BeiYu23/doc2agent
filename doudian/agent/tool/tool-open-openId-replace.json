@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/2755",
   "updatedAt": "2022-11-17",
-  "_file_stem": "tool-open-openId-replace"
+  "_file_stem": "tool-open-openId-replace",
+  "cnName": "用于将老openId替换为新openId"
 }

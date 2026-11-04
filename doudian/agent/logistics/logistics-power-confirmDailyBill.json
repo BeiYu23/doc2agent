@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1479",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-confirmDailyBill"
+  "_file_stem": "logistics-power-confirmDailyBill",
+  "cnName": "日对账文件结果推送（仅用于兼容老物流网关"
 }

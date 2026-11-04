@@ -355,5 +355,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2894",
   "updatedAt": "2023-02-27",
-  "_file_stem": "logistics-logistics-voiceNotifyCallRecordCallback"
+  "_file_stem": "logistics-logistics-voiceNotifyCallRecordCallback",
+  "cnName": "火山引擎语音通知回调"
 }

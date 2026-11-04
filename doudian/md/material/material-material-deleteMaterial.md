@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.deleteMaterial` |
+| 中文名 | 彻底删除素材 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/deleteMaterial` |

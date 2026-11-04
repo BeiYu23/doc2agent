@@ -100,5 +100,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5343",
   "updatedAt": "2023-11-10",
-  "_file_stem": "feige-pigeon-getStaffOnlineRecordList"
+  "_file_stem": "feige-pigeon-getStaffOnlineRecordList",
+  "cnName": "查询客服在线日志列表"
 }

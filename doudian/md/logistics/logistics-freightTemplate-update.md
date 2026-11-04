@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.freightTemplate.update` |
+| 中文名 | 更新运费模板 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/freightTemplate/update` |

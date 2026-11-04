@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.recycle.sms.searchSmsSign` |
+| 中文名 | 签名列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/sms/searchSmsSign` |

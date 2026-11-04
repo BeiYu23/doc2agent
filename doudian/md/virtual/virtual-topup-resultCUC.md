@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.virtual.topup.resultCUC` |
+| 中文名 | 联通交费回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/resultCUC` |

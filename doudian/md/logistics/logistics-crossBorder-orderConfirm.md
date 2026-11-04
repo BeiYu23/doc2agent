@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.crossBorder.orderConfirm` |
+| 中文名 | 服务商接单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/orderConfirm` |

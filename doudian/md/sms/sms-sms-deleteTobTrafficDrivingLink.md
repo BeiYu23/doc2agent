@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.deleteTobTrafficDrivingLink` |
+| 中文名 | 删除引流链接 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/deleteTobTrafficDrivingLink` |

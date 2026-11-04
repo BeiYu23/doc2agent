@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.refund.shopRefund` |
+| 中文名 | 商家处理备货中退款申请 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/refund/shopRefund` |

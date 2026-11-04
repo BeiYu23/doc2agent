@@ -8,6 +8,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.merge` |
+| 中文名 | 判断一批待发货订单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/merge` |

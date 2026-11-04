@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.batchUploadImageSync` |
+| 中文名 | 一次上传的数量限制50张图片且单个图片最大不能… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/batchUploadImageSync` |

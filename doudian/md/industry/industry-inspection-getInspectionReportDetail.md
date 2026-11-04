@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.inspection.getInspectionReportDetail` |
+| 中文名 | 验机报告详情查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/getInspectionReportDetail` |

@@ -179,5 +179,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/6672",
   "updatedAt": "2024-07-04",
-  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getCategoryProperty"
+  "_file_stem": "supply-chain-supplyChain-supplyProductV2-getCategoryProperty",
+  "cnName": "获取货品类目属性"
 }

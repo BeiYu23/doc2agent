@@ -187,5 +187,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2549",
   "updatedAt": "2026-08-05",
-  "_file_stem": "supply-chain-supplyChain-supplyProduct-getSupplyProductList"
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-getSupplyProductList",
+  "cnName": "获取供销产品列表"
 }

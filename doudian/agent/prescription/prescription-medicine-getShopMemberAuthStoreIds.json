@@ -1034,5 +1034,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1479/6487",
   "updatedAt": "2024-04-29",
-  "_file_stem": "prescription-medicine-getShopMemberAuthStoreIds"
+  "_file_stem": "prescription-medicine-getShopMemberAuthStoreIds",
+  "cnName": "获取成员有权限的门店"
 }

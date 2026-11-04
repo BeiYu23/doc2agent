@@ -330,5 +330,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2264",
   "updatedAt": "2022-11-04",
-  "_file_stem": "warehouse-yunc-syncInventoryLogFlow"
+  "_file_stem": "warehouse-yunc-syncInventoryLogFlow",
+  "cnName": "外部同步库存流水"
 }

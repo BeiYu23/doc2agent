@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.order.logisticsAddMultiPack` |
+| 中文名 | 单个店铺订单拆分为多个物流包裹进行发货 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsAddMultiPack` |

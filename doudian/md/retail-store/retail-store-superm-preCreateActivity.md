@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.superm.preCreateActivity` |
+| 中文名 | 通过圈选商品+门店，预创建营销活动 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/preCreateActivity` |

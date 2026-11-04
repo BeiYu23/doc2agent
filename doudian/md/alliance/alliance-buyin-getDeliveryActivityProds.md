@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.getDeliveryActivityProds` |
+| 中文名 | 三方获取活动页商品货池 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/getDeliveryActivityProds` |

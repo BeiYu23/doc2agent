@@ -303,5 +303,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6768",
   "updatedAt": "2025-10-24",
-  "_file_stem": "warehouse-inspection-inspectionInfo-submit"
+  "_file_stem": "warehouse-inspection-inspectionInfo-submit",
+  "cnName": "品控中心-质检结果回传"
 }

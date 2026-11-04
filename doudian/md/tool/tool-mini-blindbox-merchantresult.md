@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.mini.blindbox.merchantresult` |
+| 中文名 | 主播在直播间抽完后把盲盒结果回传平台 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/blindbox/merchantresult` |

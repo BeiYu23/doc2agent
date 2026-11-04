@@ -158,5 +158,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/527",
   "updatedAt": "2021-05-18",
-  "_file_stem": "logistics-crossborder-orderCustomClearance"
+  "_file_stem": "logistics-crossborder-orderCustomClearance",
+  "cnName": "服务商回告清关状态"
 }

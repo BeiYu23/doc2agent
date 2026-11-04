@@ -84,5 +84,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/8391",
   "updatedAt": "2026-07-13",
-  "_file_stem": "logistics-provider-logistics-getProofRules"
+  "_file_stem": "logistics-provider-logistics-getProofRules",
+  "cnName": "查询举证规则"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.qualityList` |
+| 中文名 | 查询店铺商品质量情况，对标后台商品成长中心 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/qualityList` |

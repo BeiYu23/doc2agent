@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.orienPlanAuthorsAdd` |
+| 中文名 | 向指定定向计划中添加达人 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/orienPlanAuthorsAdd` |

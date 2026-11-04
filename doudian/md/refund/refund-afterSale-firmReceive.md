@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.firmReceive` |
+| 中文名 | 商家确认是否收到退货 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/firmReceive` |

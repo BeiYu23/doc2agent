@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.doubao.contentAIGC.getAIVideoCreditOpen` |
+| 中文名 | 查询商家可用积分与充值地址 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/getAIVideoCreditOpen` |

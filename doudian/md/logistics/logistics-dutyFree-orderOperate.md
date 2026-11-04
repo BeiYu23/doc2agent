@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.dutyFree.orderOperate` |
+| 中文名 | 海南项目服务商回传实操节点 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/dutyFree/orderOperate` |

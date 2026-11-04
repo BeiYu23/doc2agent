@@ -346,5 +346,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/4010",
   "updatedAt": "2025-06-26",
-  "_file_stem": "alliance-buyin-doukeCommandParseAndShare"
+  "_file_stem": "alliance-buyin-doukeCommandParseAndShare",
+  "cnName": "口令解析&转链"
 }

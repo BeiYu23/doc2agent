@@ -468,5 +468,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1661",
   "updatedAt": "2025-03-13",
-  "_file_stem": "logistics-freightTemplate-create"
+  "_file_stem": "logistics-freightTemplate-create",
+  "cnName": "创建运费模板"
 }

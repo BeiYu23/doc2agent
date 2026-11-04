@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2852",
   "updatedAt": "2023-01-16",
-  "_file_stem": "shop-supplyChain-cartSchema"
+  "_file_stem": "shop-supplyChain-cartSchema",
+  "cnName": "获取购物车跳转链接schema"
 }

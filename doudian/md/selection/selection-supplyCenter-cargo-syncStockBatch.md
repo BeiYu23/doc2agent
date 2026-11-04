@@ -8,6 +8,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.selection.supplyCenter.cargo.syncStockBatch` |
+| 中文名 | 只支持批量同步归属于同一个商品的sku库存 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

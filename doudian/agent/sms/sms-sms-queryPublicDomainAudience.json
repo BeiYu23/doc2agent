@@ -126,5 +126,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7503",
   "updatedAt": "2025-10-15",
-  "_file_stem": "sms-sms-queryPublicDomainAudience"
+  "_file_stem": "sms-sms-queryPublicDomainAudience",
+  "cnName": "查询公域标签圈选的人群包"
 }

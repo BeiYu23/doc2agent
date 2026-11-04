@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.fuwu.payOrderForVolc` |
+| 中文名 | 火山支付成功回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/payOrderForVolc` |

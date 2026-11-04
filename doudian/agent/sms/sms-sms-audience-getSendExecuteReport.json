@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6665",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-audience-getSendExecuteReport"
+  "_file_stem": "sms-sms-audience-getSendExecuteReport",
+  "cnName": "查询任务发送情况"
 }

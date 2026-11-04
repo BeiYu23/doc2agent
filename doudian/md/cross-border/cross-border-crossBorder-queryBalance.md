@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cross-border.crossBorder.queryBalance` |
+| 中文名 | 查询跨境商家资金信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/queryBalance` |

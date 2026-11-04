@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.doubao.contentAIGC.searchShopProductOpen` |
+| 中文名 | 查询店铺商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/searchShopProductOpen` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.alliance.materialsProductsSearch` |
+| 中文名 | 检索精选联盟商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/materialsProductsSearch` |

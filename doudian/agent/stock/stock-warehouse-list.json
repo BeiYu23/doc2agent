@@ -202,5 +202,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1858",
   "updatedAt": "2022-08-18",
-  "_file_stem": "stock-warehouse-list"
+  "_file_stem": "stock-warehouse-list",
+  "cnName": "批量查询区域仓"
 }

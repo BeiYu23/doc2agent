@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.saveCombineAudience` |
+| 中文名 | 保存生产包交互规则，获取组合人群包 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/saveCombineAudience` |

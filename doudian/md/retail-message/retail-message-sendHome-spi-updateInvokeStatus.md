@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-message.sendHome.spi.updateInvokeStatus` |
+| 中文名 | 更新spi最终失败落库记录的状态 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sendHome/spi/updateInvokeStatus` |

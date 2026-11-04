@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dropshipping.iop.waybillCancel` |
+| 中文名 | 【厂商】取消电子面单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/waybillCancel` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.uploadErpFile` |
+| 中文名 | erp系统上传商货关系文件服务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/uploadErpFile` |

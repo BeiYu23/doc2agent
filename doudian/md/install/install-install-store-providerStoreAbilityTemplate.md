@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.install.install.store.providerStoreAbilityTemplate` |
+| 中文名 | 服务商的能力模板列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAbilityTemplate` |

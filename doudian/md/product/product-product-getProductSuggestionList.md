@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.getProductSuggestionList` |
+| 中文名 | 查询诊断商品列表及其处理建议 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getProductSuggestionList` |

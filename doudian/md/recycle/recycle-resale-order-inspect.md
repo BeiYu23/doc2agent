@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.resale.order.inspect` |
+| 中文名 | 【邮寄回收】开始质检 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/inspect` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.ISVExecuteToolV2` |
+| 中文名 | ISV执行客服工具接口V2 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/ISVExecuteToolV2` |

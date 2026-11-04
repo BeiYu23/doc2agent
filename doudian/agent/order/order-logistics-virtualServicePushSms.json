@@ -203,5 +203,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2676",
   "updatedAt": "2022-10-31",
-  "_file_stem": "order-logistics-virtualServicePushSms"
+  "_file_stem": "order-logistics-virtualServicePushSms",
+  "cnName": "短信回传"
 }

@@ -916,5 +916,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/898",
   "updatedAt": "2026-08-26",
-  "_file_stem": "warehouse-yunc-cloudCreateOutboundOrder"
+  "_file_stem": "warehouse-yunc-cloudCreateOutboundOrder",
+  "cnName": "云仓出库接单"
 }

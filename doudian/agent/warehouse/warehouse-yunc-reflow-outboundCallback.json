@@ -670,5 +670,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2275",
   "updatedAt": "2022-11-03",
-  "_file_stem": "warehouse-yunc-reflow-outboundCallback"
+  "_file_stem": "warehouse-yunc-reflow-outboundCallback",
+  "cnName": "翻仓出库单回告"
 }

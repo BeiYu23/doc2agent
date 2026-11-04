@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.selection.supplyCenter.order.cancel` |
+| 中文名 | 采购单取消 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/order/cancel` |

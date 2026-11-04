@@ -77,5 +77,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7234",
   "updatedAt": "2026-06-23",
-  "_file_stem": "store-pickup-getStoreDetail"
+  "_file_stem": "store-pickup-getStoreDetail",
+  "cnName": "门店详情查询"
 }

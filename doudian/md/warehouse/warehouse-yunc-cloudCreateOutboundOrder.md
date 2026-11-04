@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.cloudCreateOutboundOrder` |
+| 中文名 | 云仓出库接单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/cloudCreateOutboundOrder` |

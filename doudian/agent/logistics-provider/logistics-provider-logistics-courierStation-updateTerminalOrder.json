@@ -370,5 +370,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2935",
   "updatedAt": "2026-09-16",
-  "_file_stem": "logistics-provider-logistics-courierStation-updateTerminalOrder"
+  "_file_stem": "logistics-provider-logistics-courierStation-updateTerminalOrder",
+  "cnName": "信息推送"
 }

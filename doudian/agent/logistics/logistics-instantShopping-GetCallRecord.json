@@ -105,5 +105,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/7155",
   "updatedAt": "2024-12-17",
-  "_file_stem": "logistics-instantShopping-GetCallRecord"
+  "_file_stem": "logistics-instantShopping-GetCallRecord",
+  "cnName": "查询骑手-用户通话记录"
 }

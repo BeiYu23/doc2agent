@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.topup.productActionCMCC` |
+| 中文名 | 中国移动店铺商品上下架 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/productActionCMCC` |

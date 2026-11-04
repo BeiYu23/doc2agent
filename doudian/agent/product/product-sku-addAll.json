@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/83",
   "updatedAt": "2021-05-07",
-  "_file_stem": "product-sku-addAll"
+  "_file_stem": "product-sku-addAll",
+  "cnName": "批量添加sku"
 }

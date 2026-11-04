@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.supply-chain.supplyChain.returnOrder.operate` |
+| 中文名 | 供应商操作售后单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/returnOrder/operate` |

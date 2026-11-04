@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.waybill.power.ebillAccountGet` |
+| 中文名 | 面单余额查询（仅用于兼容老物流网关 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/ebillAccountGet` |

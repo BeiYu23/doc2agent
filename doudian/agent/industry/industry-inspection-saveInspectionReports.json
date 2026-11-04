@@ -490,5 +490,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8259",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-saveInspectionReports"
+  "_file_stem": "industry-inspection-saveInspectionReports",
+  "cnName": "创建/编辑验机报告"
 }

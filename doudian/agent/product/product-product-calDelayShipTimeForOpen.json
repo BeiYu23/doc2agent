@@ -1783,5 +1783,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8066",
   "updatedAt": "2026-01-29",
-  "_file_stem": "product-product-calDelayShipTimeForOpen"
+  "_file_stem": "product-product-calDelayShipTimeForOpen",
+  "cnName": "发货时效规则预览"
 }

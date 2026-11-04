@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2627",
   "updatedAt": "2023-04-25",
-  "_file_stem": "alliance-buyin-commonShareCommandParse"
+  "_file_stem": "alliance-buyin-commonShareCommandParse",
+  "cnName": "该接口用于解析抖口令和短链获取口令类型及对应口…"
 }

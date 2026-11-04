@@ -230,5 +230,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/1404",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-ddpGetShopList"
+  "_file_stem": "cloud-openCloud-ddpGetShopList",
+  "cnName": "数据推送，推送店铺列表"
 }

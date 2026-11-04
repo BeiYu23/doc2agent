@@ -109,5 +109,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/7334",
   "updatedAt": "2025-03-05",
-  "_file_stem": "supply-chain-supplyChain-batchGetSupplyStock"
+  "_file_stem": "supply-chain-supplyChain-batchGetSupplyStock",
+  "cnName": "批量获取库存"
 }

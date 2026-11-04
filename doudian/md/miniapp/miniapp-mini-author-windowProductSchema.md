@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.miniapp.mini.author.windowProductSchema` |
+| 中文名 | 获取达人橱窗商品 schema |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/author/windowProductSchema` |

@@ -171,5 +171,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/7577",
   "updatedAt": "2025-08-05",
-  "_file_stem": "miniapp-shop-topupTmaToken"
+  "_file_stem": "miniapp-shop-topupTmaToken",
+  "cnName": "获取腾讯侧小程序登陆态token"
 }

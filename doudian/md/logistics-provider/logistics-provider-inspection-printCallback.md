@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.inspection.printCallback` |
+| 中文名 | qic外部系统打印回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/printCallback` |

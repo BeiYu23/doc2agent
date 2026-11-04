@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.supplyChain.CouponCard` |
+| 中文名 | 跨境自营店铺首页优惠券卡片 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/CouponCard` |

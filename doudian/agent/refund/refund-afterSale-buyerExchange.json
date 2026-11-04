@@ -126,5 +126,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/769",
   "updatedAt": "2021-08-03",
-  "_file_stem": "refund-afterSale-buyerExchange"
+  "_file_stem": "refund-afterSale-buyerExchange",
+  "cnName": "商家处理换货请求"
 }

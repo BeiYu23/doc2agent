@@ -156,5 +156,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1862",
   "updatedAt": "2022-08-18",
-  "_file_stem": "stock-warehouse-createBatch"
+  "_file_stem": "stock-warehouse-createBatch",
+  "cnName": "批量创建区域仓"
 }

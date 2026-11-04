@@ -116,5 +116,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8154",
   "updatedAt": "2026-03-25",
-  "_file_stem": "product-promise-QueryBenefitTraction"
+  "_file_stem": "product-promise-QueryBenefitTraction",
+  "cnName": "查询店铺维度利益点和库存推荐"
 }

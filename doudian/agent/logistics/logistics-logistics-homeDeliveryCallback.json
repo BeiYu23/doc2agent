@@ -148,5 +148,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2731",
   "updatedAt": "2022-12-14",
-  "_file_stem": "logistics-logistics-homeDeliveryCallback"
+  "_file_stem": "logistics-logistics-homeDeliveryCallback",
+  "cnName": "履约结果推送"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.buyerRefund` |
+| 中文名 | 商家处理发货后仅退款申请 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/buyerRefund` |

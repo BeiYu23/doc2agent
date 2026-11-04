@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.sms.getAccurateUserAmount` |
+| 中文名 | 预估人群大小 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getAccurateUserAmount` |

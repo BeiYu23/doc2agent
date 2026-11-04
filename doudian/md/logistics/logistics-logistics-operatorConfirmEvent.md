@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.logistics.operatorConfirmEvent` |
+| 中文名 | 服务商师傅确认事件 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/operatorConfirmEvent` |

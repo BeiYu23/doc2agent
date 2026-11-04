@@ -115,5 +115,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1453",
   "updatedAt": "2023-03-20",
-  "_file_stem": "logistics-power-netsiteQuery"
+  "_file_stem": "logistics-power-netsiteQuery",
+  "cnName": "网点信息查询"
 }

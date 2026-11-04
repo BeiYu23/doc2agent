@@ -182,5 +182,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2008",
   "updatedAt": "2023-03-22",
-  "_file_stem": "alliance-buyin-instituteOrderPick"
+  "_file_stem": "alliance-buyin-instituteOrderPick",
+  "cnName": "选品订单明细查询"
 }

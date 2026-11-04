@@ -97,5 +97,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/585",
   "updatedAt": "2021-06-10",
-  "_file_stem": "refund-afterSale-addOrderRemark"
+  "_file_stem": "refund-afterSale-addOrderRemark",
+  "cnName": "店家给售后单添加备注"
 }

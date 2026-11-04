@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bill.order.downloadShopAccountItemFile` |
+| 中文名 | 资金流水明细文件下载(境内 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/downloadShopAccountItemFile` |

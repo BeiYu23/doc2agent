@@ -95,5 +95,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/2305",
   "updatedAt": "2022-09-07",
-  "_file_stem": "alliance-buyin-institutionInfo"
+  "_file_stem": "alliance-buyin-institutionInfo",
+  "cnName": "获取机构信息"
 }

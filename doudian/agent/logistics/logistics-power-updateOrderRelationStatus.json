@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2648",
   "updatedAt": "2022-11-17",
-  "_file_stem": "logistics-power-updateOrderRelationStatus"
+  "_file_stem": "logistics-power-updateOrderRelationStatus",
+  "cnName": "订购关系审核结果回传"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.fuwu.order.search` |
+| 中文名 | 服务市场商家订购搜索 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/order/search` |

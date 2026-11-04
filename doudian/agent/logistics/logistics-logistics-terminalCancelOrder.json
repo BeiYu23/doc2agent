@@ -290,5 +290,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2032",
   "updatedAt": "2024-03-01",
-  "_file_stem": "logistics-logistics-terminalCancelOrder"
+  "_file_stem": "logistics-logistics-terminalCancelOrder",
+  "cnName": "物流商取消"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.recoverFolder` |
+| 中文名 | 从回收站恢复文件夹 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/recoverFolder` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.resale.quote.result` |
+| 中文名 | 服务商质检完成报价/修改报价信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/quote/result` |

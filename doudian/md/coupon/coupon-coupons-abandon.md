@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.coupon.coupons.abandon` |
+| 中文名 | 2024年11月28日下线 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/abandon` |

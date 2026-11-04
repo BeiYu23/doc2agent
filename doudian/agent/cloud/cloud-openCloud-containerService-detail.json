@@ -129,5 +129,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/6451",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-containerService-detail"
+  "_file_stem": "cloud-openCloud-containerService-detail",
+  "cnName": "查询容器服务"
 }

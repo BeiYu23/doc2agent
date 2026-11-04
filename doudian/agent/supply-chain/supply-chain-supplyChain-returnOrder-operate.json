@@ -123,5 +123,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/4035",
   "updatedAt": "2023-06-05",
-  "_file_stem": "supply-chain-supplyChain-returnOrder-operate"
+  "_file_stem": "supply-chain-supplyChain-returnOrder-operate",
+  "cnName": "供应商操作售后单"
 }

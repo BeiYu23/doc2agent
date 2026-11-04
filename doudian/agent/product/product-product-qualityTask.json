@@ -186,5 +186,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1829",
   "updatedAt": "2021-09-08",
-  "_file_stem": "product-product-qualityTask"
+  "_file_stem": "product-product-qualityTask",
+  "cnName": "商品每日诊断任务查询"
 }

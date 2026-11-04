@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.queryInstituteOrders` |
+| 中文名 | 【即将下线】查询机构联盟订单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/queryInstituteOrders` |

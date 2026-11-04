@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.wms.outboundDetailNotify_uat` |
+| 中文名 | UAT环境WMS出库回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/wms/outboundDetailNotify_uat` |

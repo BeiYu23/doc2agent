@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-marketing.sendHome.marketing.invalidActivity` |
+| 中文名 | 异步将营销活动置为失效，任务结果将通过spi通知 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

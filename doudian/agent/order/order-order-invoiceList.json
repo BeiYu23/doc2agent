@@ -224,5 +224,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1842",
   "updatedAt": "2026-09-22",
-  "_file_stem": "order-order-invoiceList"
+  "_file_stem": "order-order-invoiceList",
+  "cnName": "查看商家开票列表"
 }

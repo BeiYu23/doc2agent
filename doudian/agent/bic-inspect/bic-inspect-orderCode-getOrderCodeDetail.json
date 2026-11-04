@@ -111,5 +111,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/2857",
   "updatedAt": "2024-07-30",
-  "_file_stem": "bic-inspect-orderCode-getOrderCodeDetail"
+  "_file_stem": "bic-inspect-orderCode-getOrderCodeDetail",
+  "cnName": "通过订单码和商家信息查询订单码绑定的订单详情信…"
 }

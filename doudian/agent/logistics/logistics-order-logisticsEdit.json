@@ -304,5 +304,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/390",
   "updatedAt": "2026-09-03",
-  "_file_stem": "logistics-order-logisticsEdit"
+  "_file_stem": "logistics-order-logisticsEdit",
+  "cnName": "更新整单发货物流信息"
 }

@@ -783,5 +783,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/7774",
   "updatedAt": "2025-09-16",
-  "_file_stem": "marketing-marketing-activityPreCheck"
+  "_file_stem": "marketing-marketing-activityPreCheck",
+  "cnName": "玩法优惠信息创建或修改前的预校验能力"
 }

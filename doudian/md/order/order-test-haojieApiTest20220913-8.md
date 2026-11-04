@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.test.haojieApiTest20220913.8` |
+| 中文名 | 升级 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/test/haojieApiTest20220913/8` |

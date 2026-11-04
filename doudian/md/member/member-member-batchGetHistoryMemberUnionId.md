@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.batchGetHistoryMemberUnionId` |
+| 中文名 | 该接口可以根据店铺会员的openId获取品牌维… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/batchGetHistoryMemberUnionId` |

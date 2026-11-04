@@ -76,5 +76,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3537",
   "updatedAt": "2023-04-18",
-  "_file_stem": "logistics-logistics-operatorCompleteEvent"
+  "_file_stem": "logistics-logistics-operatorCompleteEvent",
+  "cnName": "服务完成事件"
 }

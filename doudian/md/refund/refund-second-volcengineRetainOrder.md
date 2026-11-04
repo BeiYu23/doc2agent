@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.second.volcengineRetainOrder` |
+| 中文名 | 核心入口，用于对单一退货的订单进行全面评估 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/volcengineRetainOrder` |

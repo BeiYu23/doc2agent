@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.spu.QuerySpu` |
+| 中文名 | 检索SPU |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/QuerySpu` |

@@ -331,5 +331,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6751",
   "updatedAt": "2025-10-15",
-  "_file_stem": "member-sms-audience-getTaskTransform"
+  "_file_stem": "member-sms-audience-getTaskTransform",
+  "cnName": "获取任务转化数据"
 }

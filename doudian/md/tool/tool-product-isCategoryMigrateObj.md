@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.product.isCategoryMigrateObj` |
+| 中文名 | 主要用于类目树升级场景 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isCategoryMigrateObj` |

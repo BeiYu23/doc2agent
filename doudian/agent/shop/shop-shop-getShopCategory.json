@@ -88,5 +88,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/1820",
   "updatedAt": "2026-01-21",
-  "_file_stem": "shop-shop-getShopCategory"
+  "_file_stem": "shop-shop-getShopCategory",
+  "cnName": "请一定使用最小层级类目id，发布商品或更新商品"
 }

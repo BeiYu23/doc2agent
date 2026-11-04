@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.decoration.shop.marketCategoryOpsProd` |
+| 中文名 | 基于商品维度更新分类页绑定关系 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/marketCategoryOpsProd` |

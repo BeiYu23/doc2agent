@@ -87,5 +87,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8351",
   "updatedAt": "2026-08-26",
-  "_file_stem": "video-second-ecomInsight-createVideoUnderstandTask"
+  "_file_stem": "video-second-ecomInsight-createVideoUnderstandTask",
+  "cnName": "创建视频理解子任务"
 }

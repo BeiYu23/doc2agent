@@ -75,5 +75,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1500",
   "updatedAt": "2021-11-26",
-  "_file_stem": "product-brand-convert"
+  "_file_stem": "product-brand-convert",
+  "cnName": "兼容老品牌id转为新品牌id"
 }

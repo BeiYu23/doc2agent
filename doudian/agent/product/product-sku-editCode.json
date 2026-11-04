@@ -122,5 +122,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/86",
   "updatedAt": "2020-11-24",
-  "_file_stem": "product-sku-editCode"
+  "_file_stem": "product-sku-editCode",
+  "cnName": "修改sku编码"
 }

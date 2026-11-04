@@ -6,6 +6,7 @@ Tips：部分发货状态下的父订单，调此接口发货，会报错：该�
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.order.logisticsAdd` |
+| 中文名 | 暂时只支持整单出库 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsAdd` |

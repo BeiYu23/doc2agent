@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.coupon.coupons.verifyV2` |
+| 中文名 | 卡券核销接口V2版本 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/verifyV2` |

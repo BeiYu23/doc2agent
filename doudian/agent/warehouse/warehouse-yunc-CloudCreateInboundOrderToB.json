@@ -311,5 +311,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1197",
   "updatedAt": "2024-06-05",
-  "_file_stem": "warehouse-yunc-CloudCreateInboundOrderToB"
+  "_file_stem": "warehouse-yunc-CloudCreateInboundOrderToB",
+  "cnName": "erp创建入库单"
 }

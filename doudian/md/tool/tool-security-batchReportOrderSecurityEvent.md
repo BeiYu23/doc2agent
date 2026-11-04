@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.security.batchReportOrderSecurityEvent` |
+| 中文名 | 电商云批量上报订单安全事件 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/security/batchReportOrderSecurityEvent` |

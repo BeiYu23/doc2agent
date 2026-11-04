@@ -67,5 +67,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1506/7471",
   "updatedAt": "2025-05-20",
-  "_file_stem": "permission-second-liveroom-deleteAnchorBindRelationship"
+  "_file_stem": "permission-second-liveroom-deleteAnchorBindRelationship",
+  "cnName": "【三方接口】删除应用与直播间主播的绑定关系"
 }

@@ -120,5 +120,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1559",
   "updatedAt": "2021-12-27",
-  "_file_stem": "logistics-power-sendByteDanceMessage"
+  "_file_stem": "logistics-power-sendByteDanceMessage",
+  "cnName": "末端服务短信待发（仅用于兼容老物流网关"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.gis.serviceArea.sync` |
+| 中文名 | 同步服务范围数据 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/gis/serviceArea/sync` |

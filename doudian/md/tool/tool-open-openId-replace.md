@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.open.openId.replace` |
+| 中文名 | 用于将老openId替换为新openId |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/openId/replace` |

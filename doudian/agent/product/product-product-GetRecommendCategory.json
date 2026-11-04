@@ -212,5 +212,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2004",
   "updatedAt": "2026-03-12",
-  "_file_stem": "product-product-GetRecommendCategory"
+  "_file_stem": "product-product-GetRecommendCategory",
+  "cnName": "商品类目预测"
 }

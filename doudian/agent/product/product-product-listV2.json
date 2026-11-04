@@ -347,5 +347,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/633",
   "updatedAt": "2026-01-21",
-  "_file_stem": "product-product-listV2"
+  "_file_stem": "product-product-listV2",
+  "cnName": "批量查询商家抖店商品信息"
 }

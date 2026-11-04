@@ -92,5 +92,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/6750",
   "updatedAt": "2024-08-21",
-  "_file_stem": "retail-store-sendHome-msgComponent-getToken"
+  "_file_stem": "retail-store-sendHome-msgComponent-getToken",
+  "cnName": "获取消息组件token"
 }

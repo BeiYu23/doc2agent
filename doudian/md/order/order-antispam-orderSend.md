@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.antispam.orderSend` |
+| 中文名 | 支持使用在ISV系统商户发送（外部系统或模块 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/antispam/orderSend` |

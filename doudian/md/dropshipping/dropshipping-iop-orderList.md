@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dropshipping.iop.orderList` |
+| 中文名 | 【厂商】查询代打订单列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/iop/orderList` |

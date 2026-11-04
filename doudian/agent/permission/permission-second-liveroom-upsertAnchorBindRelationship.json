@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1506/7472",
   "updatedAt": "2025-05-20",
-  "_file_stem": "permission-second-liveroom-upsertAnchorBindRelationship"
+  "_file_stem": "permission-second-liveroom-upsertAnchorBindRelationship",
+  "cnName": "【三方接口】更新应用绑定的直播间主播列表"
 }

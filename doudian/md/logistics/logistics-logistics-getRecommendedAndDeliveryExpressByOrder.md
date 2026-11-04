@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.logistics.getRecommendedAndDeliveryExpressByOrder` |
+| 中文名 | 查询订单维度快递可达及推荐服务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/getRecommendedAndDeliveryExpressByOrder` |

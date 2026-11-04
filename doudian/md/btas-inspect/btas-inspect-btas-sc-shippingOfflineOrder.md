@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.sc.shippingOfflineOrder` |
+| 中文名 | 质检机构在收到实物质检商品质检完成 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/shippingOfflineOrder` |

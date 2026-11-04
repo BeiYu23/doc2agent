@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.recycle.changePrice` |
+| 中文名 | 回收商在用户确认前调整报价 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/recycle/changePrice` |

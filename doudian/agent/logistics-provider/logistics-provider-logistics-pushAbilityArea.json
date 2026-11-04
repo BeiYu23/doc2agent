@@ -491,5 +491,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7510",
   "updatedAt": "2025-06-23",
-  "_file_stem": "logistics-provider-logistics-pushAbilityArea"
+  "_file_stem": "logistics-provider-logistics-pushAbilityArea",
+  "cnName": "能力服务范围推送"
 }

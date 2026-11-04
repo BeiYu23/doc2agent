@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cross-border.crossBorder.bankAccountVerify` |
+| 中文名 | 银行信息校验 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/bankAccountVerify` |

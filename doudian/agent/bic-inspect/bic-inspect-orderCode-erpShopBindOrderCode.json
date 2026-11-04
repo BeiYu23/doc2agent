@@ -321,5 +321,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/806",
   "updatedAt": "2024-08-01",
-  "_file_stem": "bic-inspect-orderCode-erpShopBindOrderCode"
+  "_file_stem": "bic-inspect-orderCode-erpShopBindOrderCode",
+  "cnName": "质检/查验订单商家发货接口"
 }

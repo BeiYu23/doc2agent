@@ -87,5 +87,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/925",
   "updatedAt": "2022-08-31",
-  "_file_stem": "warehouse-yunc-shopWarehouseRefQuery"
+  "_file_stem": "warehouse-yunc-shopWarehouseRefQuery",
+  "cnName": "商家入驻仓关系查询"
 }

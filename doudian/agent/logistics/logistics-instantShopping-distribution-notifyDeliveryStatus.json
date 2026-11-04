@@ -338,5 +338,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/6585",
   "updatedAt": "2024-06-14",
-  "_file_stem": "logistics-instantShopping-distribution-notifyDeliveryStatus"
+  "_file_stem": "logistics-instantShopping-distribution-notifyDeliveryStatus",
+  "cnName": "抖音侧订单状态变更回调"
 }

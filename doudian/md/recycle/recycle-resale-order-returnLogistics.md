@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.recycle.resale.order.returnLogistics` |
+| 中文名 | 【邮寄回收】退货物流状态 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/returnLogistics` |

@@ -121,5 +121,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/8095",
   "updatedAt": "2026-02-13",
-  "_file_stem": "refund-open-reportOrderRecoveryResult"
+  "_file_stem": "refund-open-reportOrderRecoveryResult",
+  "cnName": "上报挽单执行结果"
 }

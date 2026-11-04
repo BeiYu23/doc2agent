@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.crossBorder.getOrderStatus` |
+| 中文名 | 跨境订单状态查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/getOrderStatus` |

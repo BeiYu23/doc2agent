@@ -238,5 +238,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1517",
   "updatedAt": "2026-08-18",
-  "_file_stem": "sms-sms-sendResult"
+  "_file_stem": "sms-sms-sendResult",
+  "cnName": "查询短信发送结果"
 }

@@ -83,5 +83,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/51/1872",
   "updatedAt": "2024-08-01",
-  "_file_stem": "bic-inspect-orderCode-batchGetOrderCodeByShop"
+  "_file_stem": "bic-inspect-orderCode-batchGetOrderCodeByShop",
+  "cnName": "批量预绑订单码"
 }

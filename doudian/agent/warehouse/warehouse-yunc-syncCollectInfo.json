@@ -323,5 +323,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2159",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-syncCollectInfo"
+  "_file_stem": "warehouse-yunc-syncCollectInfo",
+  "cnName": "货品数据采集"
 }

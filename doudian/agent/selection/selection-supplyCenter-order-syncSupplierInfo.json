@@ -112,5 +112,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5084",
   "updatedAt": "2023-10-17",
-  "_file_stem": "selection-supplyCenter-order-syncSupplierInfo"
+  "_file_stem": "selection-supplyCenter-order-syncSupplierInfo",
+  "cnName": "支付前回传数据信息"
 }

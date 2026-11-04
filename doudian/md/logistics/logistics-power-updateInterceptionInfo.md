@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.power.updateInterceptionInfo` |
+| 中文名 | 拦截成功退回结果回传接口（仅用于兼容老物流网关 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/updateInterceptionInfo` |

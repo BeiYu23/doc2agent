@@ -7,6 +7,7 @@ delivery_type 是 【0】&& ship_type 是【3】，对应混订单
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bic-inspect.orderCode.erpShopBindOrderCode` |
+| 中文名 | 质检/查验订单商家发货接口 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/erpShopBindOrderCode` |

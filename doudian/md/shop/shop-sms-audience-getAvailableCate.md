@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.sms.audience.getAvailableCate` |
+| 中文名 | 获取商家类目id |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/getAvailableCate` |

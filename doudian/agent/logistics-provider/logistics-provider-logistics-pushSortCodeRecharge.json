@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2998",
   "updatedAt": "2023-06-19",
-  "_file_stem": "logistics-provider-logistics-pushSortCodeRecharge"
+  "_file_stem": "logistics-provider-logistics-pushSortCodeRecharge",
+  "cnName": "三段码数据回灌"
 }

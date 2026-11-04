@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.shop.getLoginSubjects` |
+| 中文名 | 【二方接口】查询登陆信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/shop/getLoginSubjects` |

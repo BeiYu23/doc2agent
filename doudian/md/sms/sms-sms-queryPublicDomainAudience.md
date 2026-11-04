@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.queryPublicDomainAudience` |
+| 中文名 | 查询公域标签圈选的人群包 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/queryPublicDomainAudience` |

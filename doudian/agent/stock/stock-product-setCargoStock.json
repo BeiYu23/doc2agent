@@ -104,5 +104,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/8417",
   "updatedAt": "2026-07-16",
-  "_file_stem": "stock-product-setCargoStock"
+  "_file_stem": "stock-product-setCargoStock",
+  "cnName": "设置货品库存"
 }

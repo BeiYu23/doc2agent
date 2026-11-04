@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.fuwu.writeOffUsageCount` |
+| 中文名 | 核销已冻结的使用次数 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/writeOffUsageCount` |

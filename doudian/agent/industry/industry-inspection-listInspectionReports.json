@@ -254,5 +254,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8257",
   "updatedAt": "2026-04-28",
-  "_file_stem": "industry-inspection-listInspectionReports"
+  "_file_stem": "industry-inspection-listInspectionReports",
+  "cnName": "验机报告列表页查询"
 }

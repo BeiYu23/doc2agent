@@ -178,5 +178,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6765",
   "updatedAt": "2024-08-16",
-  "_file_stem": "warehouse-logistics-wms-crossDockingPrintWaybill"
+  "_file_stem": "warehouse-logistics-wms-crossDockingPrintWaybill",
+  "cnName": "越库单质检取号打印"
 }

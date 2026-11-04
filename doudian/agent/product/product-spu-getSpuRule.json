@@ -227,5 +227,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/2312",
   "updatedAt": "2026-08-13",
-  "_file_stem": "product-spu-getSpuRule"
+  "_file_stem": "product-spu-getSpuRule",
+  "cnName": "获取SPU发布规则和模板"
 }

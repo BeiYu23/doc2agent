@@ -120,5 +120,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8339",
   "updatedAt": "2026-08-06",
-  "_file_stem": "product-product-getProductSuggestionList"
+  "_file_stem": "product-product-getProductSuggestionList",
+  "cnName": "查询诊断商品列表及其处理建议"
 }

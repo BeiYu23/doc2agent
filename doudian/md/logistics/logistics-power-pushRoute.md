@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.power.pushRoute` |
+| 中文名 | 用于物流轨迹接口迁移（仅用于兼容老物流网关 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushRoute` |

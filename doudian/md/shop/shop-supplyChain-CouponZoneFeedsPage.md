@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.supplyChain.CouponZoneFeedsPage` |
+| 中文名 | 二级承接页商品卡片分页 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/CouponZoneFeedsPage` |

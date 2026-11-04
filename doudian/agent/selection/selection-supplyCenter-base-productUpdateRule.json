@@ -237,5 +237,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5338",
   "updatedAt": "2023-11-15",
-  "_file_stem": "selection-supplyCenter-base-productUpdateRule"
+  "_file_stem": "selection-supplyCenter-base-productUpdateRule",
+  "cnName": "获取类目下发布规则"
 }

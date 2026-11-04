@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2799",
   "updatedAt": "2023-09-15",
-  "_file_stem": "retail-store-superm-getStoreAutoCallRiderInfo"
+  "_file_stem": "retail-store-superm-getStoreAutoCallRiderInfo",
+  "cnName": "查询自动呼叫运力配置"
 }

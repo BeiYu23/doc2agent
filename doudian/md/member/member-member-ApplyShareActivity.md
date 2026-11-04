@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.ApplyShareActivity` |
+| 中文名 | 用户参与裂变申请裂变id |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/ApplyShareActivity` |

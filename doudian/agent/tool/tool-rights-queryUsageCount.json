@@ -105,5 +105,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/6059",
   "updatedAt": "2024-01-12",
-  "_file_stem": "tool-rights-queryUsageCount"
+  "_file_stem": "tool-rights-queryUsageCount",
+  "cnName": "查询权益可使用次数"
 }

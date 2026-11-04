@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.compass.CommonProductQueryData` |
+| 中文名 | 数据T+1生成，建议第二天10点之后查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/compass/CommonProductQueryData` |

@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1474",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-order"
+  "_file_stem": "logistics-power-order",
+  "cnName": "下单（仅用于兼容老物流网关"
 }

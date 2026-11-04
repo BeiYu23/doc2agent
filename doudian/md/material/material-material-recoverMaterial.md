@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.recoverMaterial` |
+| 中文名 | 从回收站中恢复素材 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/recoverMaterial` |

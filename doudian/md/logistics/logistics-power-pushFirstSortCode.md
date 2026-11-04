@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.power.pushFirstSortCode` |
+| 中文名 | 一段码推送（包含末端中心 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/pushFirstSortCode` |

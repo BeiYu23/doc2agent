@@ -119,5 +119,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/2074",
   "updatedAt": "2022-08-09",
-  "_file_stem": "shop-warehouse-getBoundStores"
+  "_file_stem": "shop-warehouse-getBoundStores",
+  "cnName": "获取仓库已经绑定的列表"
 }

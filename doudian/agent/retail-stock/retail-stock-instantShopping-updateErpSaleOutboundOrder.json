@@ -347,5 +347,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1594/7647",
   "updatedAt": "2025-08-06",
-  "_file_stem": "retail-stock-instantShopping-updateErpSaleOutboundOrder"
+  "_file_stem": "retail-stock-instantShopping-updateErpSaleOutboundOrder",
+  "cnName": "更新Erp订单关联的出库单状态"
 }

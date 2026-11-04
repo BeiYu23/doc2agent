@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2545",
   "updatedAt": "2022-09-28",
-  "_file_stem": "supply-chain-supplyChain-supplyProduct-getSupplyProductUpdateRule"
+  "_file_stem": "supply-chain-supplyChain-supplyProduct-getSupplyProductUpdateRule",
+  "cnName": "获取产品发布模板"
 }

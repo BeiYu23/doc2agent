@@ -98,5 +98,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/1973",
   "updatedAt": "2022-06-02",
-  "_file_stem": "tool-open-openIdSwitch"
+  "_file_stem": "tool-open-openIdSwitch",
+  "cnName": "提供抖音和抖店 Openid 转换功能"
 }

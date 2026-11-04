@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.install.install.store.providerStoreAPIUpdateInfo` |
+| 中文名 | 服务商门店更新 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerStoreAPIUpdateInfo` |

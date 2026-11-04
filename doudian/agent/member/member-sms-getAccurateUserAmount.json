@@ -666,5 +666,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/6684",
   "updatedAt": "2024-07-30",
-  "_file_stem": "member-sms-getAccurateUserAmount"
+  "_file_stem": "member-sms-getAccurateUserAmount",
+  "cnName": "预估人群大小"
 }

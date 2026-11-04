@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.exclusivePlanAuthorOperate` |
+| 中文名 | 店铺专属达人管理 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/exclusivePlanAuthorOperate` |

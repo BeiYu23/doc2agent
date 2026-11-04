@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.promise.QueryBenefitTractionByProductId` |
+| 中文名 | 商品维度查询利益点和库存建议 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/QueryBenefitTractionByProductId` |

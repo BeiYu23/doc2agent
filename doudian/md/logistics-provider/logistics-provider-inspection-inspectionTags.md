@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.inspection.inspectionTags` |
+| 中文名 | 需要给外部服务商提供一些订单/商品/商家等维度… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/inspectionTags` |

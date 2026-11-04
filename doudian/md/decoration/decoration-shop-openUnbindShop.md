@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.decoration.shop.openUnbindShop` |
+| 中文名 | 店铺装修-解绑门店 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/openUnbindShop` |

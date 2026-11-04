@@ -141,5 +141,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/745",
   "updatedAt": "2023-01-30",
-  "_file_stem": "warehouse-yunc-cancelOutboundOrderToB"
+  "_file_stem": "warehouse-yunc-cancelOutboundOrderToB",
+  "cnName": "toB场景取消出库单"
 }

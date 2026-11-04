@@ -558,5 +558,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/563",
   "updatedAt": "2025-01-22",
-  "_file_stem": "logistics-order-logisticsAddSinglePack"
+  "_file_stem": "logistics-order-logisticsAddSinglePack",
+  "cnName": "支持同一店铺同一收货人的多个订单发同一个物流包裹"
 }

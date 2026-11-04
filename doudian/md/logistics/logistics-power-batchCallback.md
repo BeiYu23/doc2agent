@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.power.batchCallback` |
+| 中文名 | batchCallback接口（仅用于兼容老物… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/power/batchCallback` |

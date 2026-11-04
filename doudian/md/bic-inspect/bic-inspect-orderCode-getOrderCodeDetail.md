@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bic-inspect.orderCode.getOrderCodeDetail` |
+| 中文名 | 通过订单码和商家信息查询订单码绑定的订单详情信… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/orderCode/getOrderCodeDetail` |

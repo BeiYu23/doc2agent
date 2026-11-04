@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.alliance.colonelGetOfficialSelectionProductList` |
+| 中文名 | 团长拉取爆品合伙人选品库商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelGetOfficialSelectionProductList` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.superm.applyPlatformPickUp` |
+| 中文名 | 呼叫运力售后取件 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/applyPlatformPickUp` |

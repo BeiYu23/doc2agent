@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.superm.product.batchRedistributeStoreProduct` |
+| 中文名 | 重新分配店铺主品对应的门店子品 (异步执行 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/product/batchRedistributeStoreProduct` |

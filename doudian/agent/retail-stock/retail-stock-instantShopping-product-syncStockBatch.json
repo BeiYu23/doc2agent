@@ -418,5 +418,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1594/7450",
   "updatedAt": "2025-05-13",
-  "_file_stem": "retail-stock-instantShopping-product-syncStockBatch"
+  "_file_stem": "retail-stock-instantShopping-product-syncStockBatch",
+  "cnName": "库存批量同步"
 }

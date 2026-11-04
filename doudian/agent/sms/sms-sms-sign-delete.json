@@ -84,5 +84,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/1520",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-sms-sign-delete"
+  "_file_stem": "sms-sms-sign-delete",
+  "cnName": "删除短信签名"
 }

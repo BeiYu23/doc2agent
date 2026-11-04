@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.open.appIpWhiteListDelete` |
+| 中文名 | 仓库解绑门店 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/appIpWhiteListDelete` |

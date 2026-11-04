@@ -411,5 +411,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/155",
   "updatedAt": "2025-02-17",
-  "_file_stem": "stock-sku-syncStock"
+  "_file_stem": "stock-sku-syncStock",
+  "cnName": "全量/增量更新商品sku库存"
 }

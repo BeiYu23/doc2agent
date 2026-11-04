@@ -73,5 +73,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2885",
   "updatedAt": "2023-03-08",
-  "_file_stem": "logistics-provider-inspection-QueryBtasAgencyList"
+  "_file_stem": "logistics-provider-inspection-QueryBtasAgencyList",
+  "cnName": "查询btas质检机构列表"
 }

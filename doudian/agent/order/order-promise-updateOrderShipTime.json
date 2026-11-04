@@ -103,5 +103,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/7857",
   "updatedAt": "2025-11-10",
-  "_file_stem": "order-promise-updateOrderShipTime"
+  "_file_stem": "order-promise-updateOrderShipTime",
+  "cnName": "更新订单承诺发货时间"
 }

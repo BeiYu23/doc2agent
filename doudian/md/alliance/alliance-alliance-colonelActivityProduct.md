@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.alliance.colonelActivityProduct` |
+| 中文名 | 活动商品查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelActivityProduct` |

@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1496",
   "updatedAt": "2022-11-29",
-  "_file_stem": "logistics-power-pushRoute"
+  "_file_stem": "logistics-power-pushRoute",
+  "cnName": "用于物流轨迹接口迁移（仅用于兼容老物流网关"
 }

@@ -87,5 +87,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/6530",
   "updatedAt": "2024-12-23",
-  "_file_stem": "tool-fuwu-settle-getBizOrder"
+  "_file_stem": "tool-fuwu-settle-getBizOrder",
+  "cnName": "获取某一笔服务市场订单的结算信息"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.open.SaasQueryProductRecommendations` |
+| 中文名 | 查询商品推荐 (SaaS |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/SaasQueryProductRecommendations` |

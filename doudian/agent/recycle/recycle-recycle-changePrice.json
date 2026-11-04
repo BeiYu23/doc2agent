@@ -67,5 +67,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/1886",
   "updatedAt": "2021-09-03",
-  "_file_stem": "recycle-recycle-changePrice"
+  "_file_stem": "recycle-recycle-changePrice",
+  "cnName": "回收商在用户确认前调整报价"
 }

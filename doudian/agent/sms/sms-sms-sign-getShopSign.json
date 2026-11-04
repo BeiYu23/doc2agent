@@ -75,5 +75,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/8148",
   "updatedAt": "2026-03-24",
-  "_file_stem": "sms-sms-sign-getShopSign"
+  "_file_stem": "sms-sms-sign-getShopSign",
+  "cnName": "获取商家在抖店的最新审核通过签名"
 }

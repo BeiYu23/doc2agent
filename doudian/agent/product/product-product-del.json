@@ -113,5 +113,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/61",
   "updatedAt": "2024-03-05",
-  "_file_stem": "product-product-del"
+  "_file_stem": "product-product-del",
+  "cnName": "删除商品"
 }

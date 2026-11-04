@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.resale.order.userSelfInspect` |
+| 中文名 | 一站式换新用户自助验机完成 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/resale/order/userSelfInspect` |

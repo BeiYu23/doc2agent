@@ -151,5 +151,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2743",
   "updatedAt": "2023-09-19",
-  "_file_stem": "logistics-superm-getShipmentInfo"
+  "_file_stem": "logistics-superm-getShipmentInfo",
+  "cnName": "小时达运力平台运力配送状态查询"
 }

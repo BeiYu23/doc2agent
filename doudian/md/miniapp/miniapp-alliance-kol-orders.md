@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.miniapp.alliance.kol.orders` |
+| 中文名 | 查询达人联盟订单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/kol/orders` |

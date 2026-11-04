@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.compass.batchSearchProductDiagnosis` |
+| 中文名 | 批量查询商品搜索优化项 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/compass/batchSearchProductDiagnosis` |

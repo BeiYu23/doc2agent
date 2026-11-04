@@ -209,5 +209,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/4142",
   "updatedAt": "2023-06-28",
-  "_file_stem": "waybill-logistics-fetchBluetoothCmd"
+  "_file_stem": "waybill-logistics-fetchBluetoothCmd",
+  "cnName": "电子面单场景下，获取蓝牙的打印指令"
 }

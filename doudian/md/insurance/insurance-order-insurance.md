@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.insurance.order.insurance` |
+| 中文名 | 根据订单ID |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/insurance` |

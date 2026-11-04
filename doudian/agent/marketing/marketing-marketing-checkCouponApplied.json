@@ -84,5 +84,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1361/4258",
   "updatedAt": "2023-08-04",
-  "_file_stem": "marketing-marketing-checkCouponApplied"
+  "_file_stem": "marketing-marketing-checkCouponApplied",
+  "cnName": "查询用户已领取优惠券核销数量"
 }

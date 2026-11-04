@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.video.shopVideo.submitHiddenWaterMarkTask` |
+| 中文名 | 提交加暗水印任务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shopVideo/submitHiddenWaterMarkTask` |

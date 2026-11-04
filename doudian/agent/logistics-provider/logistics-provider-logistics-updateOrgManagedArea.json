@@ -239,5 +239,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/5678",
   "updatedAt": "2025-06-10",
-  "_file_stem": "logistics-provider-logistics-updateOrgManagedArea"
+  "_file_stem": "logistics-provider-logistics-updateOrgManagedArea",
+  "cnName": "更新服务商更新组织（省区）管理范围"
 }

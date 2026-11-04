@@ -265,5 +265,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/1357",
   "updatedAt": "2021-09-29",
-  "_file_stem": "warehouse-wms-inboundDetailNotify"
+  "_file_stem": "warehouse-wms-inboundDetailNotify",
+  "cnName": "入库明细回传"
 }

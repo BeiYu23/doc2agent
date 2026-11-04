@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.coupons.CertSyncFailedCancelOrder` |
+| 中文名 | 定向开放接口 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/CertSyncFailedCancelOrder` |

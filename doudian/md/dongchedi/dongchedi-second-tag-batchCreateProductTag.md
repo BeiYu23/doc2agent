@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.tag.batchCreateProductTag` |
+| 中文名 | 【二方接口】商品批量打标 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/tag/batchCreateProductTag` |

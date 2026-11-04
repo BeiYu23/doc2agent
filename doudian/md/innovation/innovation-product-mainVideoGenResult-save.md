@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.innovation.product.mainVideoGenResult.save` |
+| 中文名 | 主图视频生成结果回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/mainVideoGenResult/save` |

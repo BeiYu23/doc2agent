@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.brand.mGetBrandInfoByIds` |
+| 中文名 | 【二方接口】根据brand_id查询品牌信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/brand/mGetBrandInfoByIds` |

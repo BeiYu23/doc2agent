@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.delProductMainPicVideo` |
+| 中文名 | 删除商品上的主图视频 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/delProductMainPicVideo` |

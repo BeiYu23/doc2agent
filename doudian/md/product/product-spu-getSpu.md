@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.spu.getSpu` |
+| 中文名 | 查询SPU（根据关键属性/SPU ID |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/getSpu` |

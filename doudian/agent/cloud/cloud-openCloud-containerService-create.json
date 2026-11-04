@@ -266,5 +266,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/7609",
   "updatedAt": "2025-07-17",
-  "_file_stem": "cloud-openCloud-containerService-create"
+  "_file_stem": "cloud-openCloud-containerService-create",
+  "cnName": "创建容器服务"
 }

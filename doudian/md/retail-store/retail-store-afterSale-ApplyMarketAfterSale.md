@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.afterSale.ApplyMarketAfterSale` |
+| 中文名 | 申请缺重/缺货 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/ApplyMarketAfterSale` |

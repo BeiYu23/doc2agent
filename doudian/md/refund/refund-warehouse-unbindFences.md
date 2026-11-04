@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.warehouse.unbindFences` |
+| 中文名 | 用于外部仓和电子围栏解绑 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/unbindFences` |

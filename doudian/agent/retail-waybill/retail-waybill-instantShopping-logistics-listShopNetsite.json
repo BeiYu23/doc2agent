@@ -155,5 +155,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7240",
   "updatedAt": "2025-04-23",
-  "_file_stem": "retail-waybill-instantShopping-logistics-listShopNetsite"
+  "_file_stem": "retail-waybill-instantShopping-logistics-listShopNetsite",
+  "cnName": "查询商家和物流商的订购关系以及物流单号使用情况"
 }

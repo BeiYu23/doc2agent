@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cross-border.crossBorder.GetProductRecordBasicOptions` |
+| 中文名 | 获取备案基础信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossBorder/GetProductRecordBasicOptions` |

@@ -114,5 +114,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4649",
   "updatedAt": "2026-01-21",
-  "_file_stem": "product-product-getCategories"
+  "_file_stem": "product-product-getCategories",
+  "cnName": "获取商家可选类目"
 }

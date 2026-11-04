@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1542",
   "updatedAt": "2021-12-14",
-  "_file_stem": "logistics-power-callback"
+  "_file_stem": "logistics-power-callback",
+  "cnName": "轨迹回传接口（仅用于兼容老物流网关"
 }

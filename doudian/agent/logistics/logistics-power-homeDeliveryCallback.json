@@ -157,5 +157,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1573",
   "updatedAt": "2022-11-08",
-  "_file_stem": "logistics-power-homeDeliveryCallback"
+  "_file_stem": "logistics-power-homeDeliveryCallback",
+  "cnName": "送货上门履约结果推送（仅用于兼容老物流网关"
 }

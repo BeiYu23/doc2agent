@@ -9,6 +9,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.decoration.shop.GetProdCateRelation` |
+| 中文名 | 即时零售 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/GetProdCateRelation` |

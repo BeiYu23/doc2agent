@@ -834,5 +834,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/932",
   "updatedAt": "2025-11-28",
-  "_file_stem": "warehouse-yunc-erpCargoSinglePush"
+  "_file_stem": "warehouse-yunc-erpCargoSinglePush",
+  "cnName": "货品推送接口-ERP(单个"
 }

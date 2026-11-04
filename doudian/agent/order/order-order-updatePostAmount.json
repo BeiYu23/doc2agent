@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1834",
   "updatedAt": "2024-06-12",
-  "_file_stem": "order-order-updatePostAmount"
+  "_file_stem": "order-order-updatePostAmount",
+  "cnName": "订单邮费修改"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.marketing.AbleCouponMeta` |
+| 中文名 | 作废/生效优惠券 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/AbleCouponMeta` |

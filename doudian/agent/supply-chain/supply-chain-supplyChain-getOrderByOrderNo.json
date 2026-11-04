@@ -148,5 +148,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/1738",
   "updatedAt": "2026-03-05",
-  "_file_stem": "supply-chain-supplyChain-getOrderByOrderNo"
+  "_file_stem": "supply-chain-supplyChain-getOrderByOrderNo",
+  "cnName": "根据供货单号查询"
 }

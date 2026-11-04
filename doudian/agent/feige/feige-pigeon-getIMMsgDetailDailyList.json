@@ -95,5 +95,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5348",
   "updatedAt": "2025-07-24",
-  "_file_stem": "feige-pigeon-getIMMsgDetailDailyList"
+  "_file_stem": "feige-pigeon-getIMMsgDetailDailyList",
+  "cnName": "查询消息列表"
 }

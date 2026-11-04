@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1563",
   "updatedAt": "2023-02-24",
-  "_file_stem": "logistics-power-receiveServiceMessage"
+  "_file_stem": "logistics-power-receiveServiceMessage",
+  "cnName": "客服发送消息"
 }

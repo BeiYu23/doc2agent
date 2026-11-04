@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/2554",
   "updatedAt": "2025-02-17",
-  "_file_stem": "supply-chain-supplyChain-sku-stockNum"
+  "_file_stem": "supply-chain-supplyChain-sku-stockNum",
+  "cnName": "查询sku库存"
 }

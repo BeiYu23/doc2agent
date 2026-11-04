@@ -101,5 +101,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/4838",
   "updatedAt": "2023-10-10",
-  "_file_stem": "waybill-logistics-BatchCheckServiceOpenStatus"
+  "_file_stem": "waybill-logistics-BatchCheckServiceOpenStatus",
+  "cnName": "批量服务订购查询"
 }

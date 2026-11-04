@@ -110,5 +110,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1859",
   "updatedAt": "2020-11-29",
-  "_file_stem": "stock-warehouse-setAddr"
+  "_file_stem": "stock-warehouse-setAddr",
+  "cnName": "绑定单个地址到区域仓"
 }

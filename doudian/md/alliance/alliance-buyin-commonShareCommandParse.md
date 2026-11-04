@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.commonShareCommandParse` |
+| 中文名 | 该接口用于解析抖口令和短链获取口令类型及对应口… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/commonShareCommandParse` |

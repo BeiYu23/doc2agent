@@ -49,5 +49,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/3590",
   "updatedAt": "2023-04-23",
-  "_file_stem": "btas-inspect-order-modifyQualityCheckType"
+  "_file_stem": "btas-inspect-order-modifyQualityCheckType",
+  "cnName": "修改可质检订单质检类型"
 }

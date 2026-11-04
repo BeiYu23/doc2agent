@@ -95,5 +95,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1790",
   "updatedAt": "2023-04-17",
-  "_file_stem": "member-member-batchGetUnionIdByOpenIdList"
+  "_file_stem": "member-member-batchGetUnionIdByOpenIdList",
+  "cnName": "会员open_id转union_id"
 }

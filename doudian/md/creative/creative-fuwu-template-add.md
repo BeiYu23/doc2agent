@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.creative.fuwu.template.add` |
+| 中文名 | 创建或编辑内容模版服务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/fuwu/template/add` |

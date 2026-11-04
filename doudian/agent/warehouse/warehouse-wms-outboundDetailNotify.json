@@ -391,5 +391,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/941",
   "updatedAt": "2021-09-08",
-  "_file_stem": "warehouse-wms-outboundDetailNotify"
+  "_file_stem": "warehouse-wms-outboundDetailNotify",
+  "cnName": "WMS出库明细回传"
 }

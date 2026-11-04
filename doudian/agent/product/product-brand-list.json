@@ -208,5 +208,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1267",
   "updatedAt": "2023-05-30",
-  "_file_stem": "product-brand-list"
+  "_file_stem": "product-brand-list",
+  "cnName": "根据类目id获取可选品牌"
 }

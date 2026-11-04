@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.marketing.marketing.pageQueryActivity` |
+| 中文名 | 分页查询营销玩法 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/pageQueryActivity` |

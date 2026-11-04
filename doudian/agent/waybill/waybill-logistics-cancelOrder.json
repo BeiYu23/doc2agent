@@ -326,5 +326,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/397",
   "updatedAt": "2021-04-22",
-  "_file_stem": "waybill-logistics-cancelOrder"
+  "_file_stem": "waybill-logistics-cancelOrder",
+  "cnName": "用于ISV/商家ERP系统"
 }

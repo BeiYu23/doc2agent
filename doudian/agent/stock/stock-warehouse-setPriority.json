@@ -94,5 +94,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/1863",
   "updatedAt": "2020-11-29",
-  "_file_stem": "stock-warehouse-setPriority"
+  "_file_stem": "stock-warehouse-setPriority",
+  "cnName": "设置指定地址下的仓的优先级"
 }

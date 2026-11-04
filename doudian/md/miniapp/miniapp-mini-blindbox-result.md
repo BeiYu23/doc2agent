@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.miniapp.mini.blindbox.result` |
+| 中文名 | 小程序用户抽盒，同步抽盒结果平台 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/mini/blindbox/result` |

@@ -158,5 +158,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7622",
   "updatedAt": "2025-07-22",
-  "_file_stem": "tool-topup-refundQueryCMCC"
+  "_file_stem": "tool-topup-refundQueryCMCC",
+  "cnName": "中国移动退款订单状态查询"
 }

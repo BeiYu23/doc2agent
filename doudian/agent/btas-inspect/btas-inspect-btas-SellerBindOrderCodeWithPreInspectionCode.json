@@ -80,5 +80,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/2878",
   "updatedAt": "2023-01-30",
-  "_file_stem": "btas-inspect-btas-SellerBindOrderCodeWithPreInspectionCode"
+  "_file_stem": "btas-inspect-btas-SellerBindOrderCodeWithPreInspectionCode",
+  "cnName": "商家_商家针对前置质检订单进行绑码或者换绑"
 }

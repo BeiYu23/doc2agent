@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.logistics.virtualTelAuthenticationUpload` |
+| 中文名 | 虚拟号主叫二次认证信息上传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/virtualTelAuthenticationUpload` |

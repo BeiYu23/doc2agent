@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.logistics.ind.aoi.push` |
+| 中文名 | 门店入驻后，自动/手动向承运商同步门店信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/ind/aoi/push` |

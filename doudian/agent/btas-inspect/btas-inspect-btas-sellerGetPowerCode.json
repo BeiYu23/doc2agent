@@ -84,5 +84,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/2944",
   "updatedAt": "2024-11-19",
-  "_file_stem": "btas-inspect-btas-sellerGetPowerCode"
+  "_file_stem": "btas-inspect-btas-sellerGetPowerCode",
+  "cnName": "商家_电子面单取号"
 }

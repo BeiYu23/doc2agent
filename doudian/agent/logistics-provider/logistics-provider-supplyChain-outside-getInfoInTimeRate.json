@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2482",
   "updatedAt": "2022-09-26",
-  "_file_stem": "logistics-provider-supplyChain-outside-getInfoInTimeRate"
+  "_file_stem": "logistics-provider-supplyChain-outside-getInfoInTimeRate",
+  "cnName": "查询信息及时量的责任机构排名"
 }

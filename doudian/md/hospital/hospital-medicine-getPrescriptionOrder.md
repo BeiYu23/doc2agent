@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.hospital.medicine.getPrescriptionOrder` |
+| 中文名 | 基于处方单查询订单状态 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/getPrescriptionOrder` |

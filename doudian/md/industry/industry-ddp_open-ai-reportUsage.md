@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.ddp_open.ai.reportUsage` |
+| 中文名 | 上报商家用量 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/ddp_open/ai/reportUsage` |

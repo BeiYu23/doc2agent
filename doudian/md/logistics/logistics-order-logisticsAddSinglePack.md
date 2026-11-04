@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.order.logisticsAddSinglePack` |
+| 中文名 | 支持同一店铺同一收货人的多个订单发同一个物流包裹 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/logisticsAddSinglePack` |

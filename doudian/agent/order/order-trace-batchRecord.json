@@ -268,5 +268,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/2797",
   "updatedAt": "2022-12-19",
-  "_file_stem": "order-trace-batchRecord"
+  "_file_stem": "order-trace-batchRecord",
+  "cnName": "在订单链路监控场景中"
 }

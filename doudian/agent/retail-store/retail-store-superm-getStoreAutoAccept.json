@@ -110,5 +110,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/2964",
   "updatedAt": "2023-09-19",
-  "_file_stem": "retail-store-superm-getStoreAutoAccept"
+  "_file_stem": "retail-store-superm-getStoreAutoAccept",
+  "cnName": "获取自动接单配置"
 }

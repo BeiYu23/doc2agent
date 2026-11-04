@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.install.order.queryWaitAcceptOperationOrderList` |
+| 中文名 | 未接单的实操单据列表查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/order/queryWaitAcceptOperationOrderList` |

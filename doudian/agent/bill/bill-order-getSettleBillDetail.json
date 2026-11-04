@@ -218,5 +218,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1192",
   "updatedAt": "2022-09-28",
-  "_file_stem": "bill-order-getSettleBillDetail"
+  "_file_stem": "bill-order-getSettleBillDetail",
+  "cnName": "查询账单明细"
 }

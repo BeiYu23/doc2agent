@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.getOutboundId` |
+| 中文名 | 获取外呼id |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/getOutboundId` |

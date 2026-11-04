@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.microapp.UpdateStaticFileMeta` |
+| 中文名 | ISV上传静态资源后绑定相对路径 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/microapp/UpdateStaticFileMeta` |

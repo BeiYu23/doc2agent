@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.buyin.originColonelEnrollableActivityList` |
+| 中文名 | 接口用于团长获取可参与的二级团长活动 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/originColonelEnrollableActivityList` |

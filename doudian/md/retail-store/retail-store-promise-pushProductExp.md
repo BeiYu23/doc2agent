@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.promise.pushProductExp` |
+| 中文名 | 推送(商品SKU)过期时间 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/promise/pushProductExp` |

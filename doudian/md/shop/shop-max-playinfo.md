@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.max.playinfo` |
+| 中文名 | 批量查询vid |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/max/playinfo` |

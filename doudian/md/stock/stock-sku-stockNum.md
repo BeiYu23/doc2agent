@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.stock.sku.stockNum` |
+| 中文名 | 查询商品规格库存 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sku/stockNum` |

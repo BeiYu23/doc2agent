@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/6914",
   "updatedAt": "2024-11-21",
-  "_file_stem": "logistics-provider-instantShopping-starhub-querySaleOutboundOrderReceiver"
+  "_file_stem": "logistics-provider-instantShopping-starhub-querySaleOutboundOrderReceiver",
+  "cnName": "服务商主动向抖音获取城市仓单收货信息"
 }

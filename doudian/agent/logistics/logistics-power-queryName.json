@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1491",
   "updatedAt": "2021-11-24",
-  "_file_stem": "logistics-power-queryName"
+  "_file_stem": "logistics-power-queryName",
+  "cnName": "检测物流单号（仅用于兼容老物流网关"
 }

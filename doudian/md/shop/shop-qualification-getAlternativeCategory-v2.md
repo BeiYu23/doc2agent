@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.qualification.getAlternativeCategory.v2` |
+| 中文名 | （v2） |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/qualification/getAlternativeCategory/v2` |

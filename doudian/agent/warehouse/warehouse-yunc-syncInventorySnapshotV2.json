@@ -297,5 +297,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/2399",
   "updatedAt": "2025-12-09",
-  "_file_stem": "warehouse-yunc-syncInventorySnapshotV2"
+  "_file_stem": "warehouse-yunc-syncInventorySnapshotV2",
+  "cnName": "库存快照回传V2"
 }

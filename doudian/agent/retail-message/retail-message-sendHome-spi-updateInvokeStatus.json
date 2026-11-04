@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1534/6775",
   "updatedAt": "2024-08-14",
-  "_file_stem": "retail-message-sendHome-spi-updateInvokeStatus"
+  "_file_stem": "retail-message-sendHome-spi-updateInvokeStatus",
+  "cnName": "更新spi最终失败落库记录的状态"
 }

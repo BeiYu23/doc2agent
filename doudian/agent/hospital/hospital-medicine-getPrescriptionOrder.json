@@ -80,5 +80,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1451/5993",
   "updatedAt": "2023-12-28",
-  "_file_stem": "hospital-medicine-getPrescriptionOrder"
+  "_file_stem": "hospital-medicine-getPrescriptionOrder",
+  "cnName": "基于处方单查询订单状态"
 }

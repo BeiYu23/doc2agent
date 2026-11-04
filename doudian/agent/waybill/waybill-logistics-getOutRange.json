@@ -357,5 +357,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/582",
   "updatedAt": "2026-08-12",
-  "_file_stem": "waybill-logistics-getOutRange"
+  "_file_stem": "waybill-logistics-getOutRange",
+  "cnName": "查询地址快递是否可以送达"
 }

@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/214",
   "updatedAt": "2020-11-29",
-  "_file_stem": "product-sku-editSupplierId"
+  "_file_stem": "product-sku-editSupplierId",
+  "cnName": "修改sku对应的供应商编码ID"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.qualification.settle` |
+| 中文名 | 商家入驻提交资料 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/qualification/settle` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.permission.buyin.getAllianceProductDetails` |
+| 中文名 | 【二方接口】联盟商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/buyin/getAllianceProductDetails` |

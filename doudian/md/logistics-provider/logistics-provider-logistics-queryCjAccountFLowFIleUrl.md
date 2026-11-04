@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.logistics.queryCjAccountFLowFIleUrl` |
+| 中文名 | 获取物流服务商对应账户的资金日账单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/queryCjAccountFLowFIleUrl` |

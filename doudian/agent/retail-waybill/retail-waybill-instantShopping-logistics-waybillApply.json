@@ -153,5 +153,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1578/7239",
   "updatedAt": "2025-02-06",
-  "_file_stem": "retail-waybill-instantShopping-logistics-waybillApply"
+  "_file_stem": "retail-waybill-instantShopping-logistics-waybillApply",
+  "cnName": "获取面单信息"
 }

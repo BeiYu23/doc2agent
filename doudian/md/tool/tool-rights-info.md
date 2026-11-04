@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.rights.info` |
+| 中文名 | 订购服务权益查询接口-服务市场 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/info` |

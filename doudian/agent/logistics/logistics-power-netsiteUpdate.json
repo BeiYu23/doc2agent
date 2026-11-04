@@ -288,5 +288,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1471",
   "updatedAt": "2023-03-20",
-  "_file_stem": "logistics-power-netsiteUpdate"
+  "_file_stem": "logistics-power-netsiteUpdate",
+  "cnName": "网点信息更新（仅用于兼容老物流网关"
 }

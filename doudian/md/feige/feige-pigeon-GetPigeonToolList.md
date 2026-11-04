@@ -12,6 +12,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.GetPigeonToolList` |
+| 中文名 | 该接口用于根据业务身份和相关参数获取可用的客服… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/GetPigeonToolList` |

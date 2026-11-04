@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.batchGetOpenIdListByUnionId` |
+| 中文名 | 服务商可以根据品牌维度的用户唯一身份Union… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/batchGetOpenIdListByUnionId` |

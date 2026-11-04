@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.isv.createProductFromSupplyPlatform` |
+| 中文名 | 搜索线索提报 (三方货源发品场景 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/createProductFromSupplyPlatform` |

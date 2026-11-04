@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.selection.supplyCenter.cargo.detail` |
+| 中文名 | 查询货品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyCenter/cargo/detail` |

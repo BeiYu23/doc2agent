@@ -292,5 +292,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/8481",
   "updatedAt": "2026-08-20",
-  "_file_stem": "product-spu-modifySpu"
+  "_file_stem": "product-spu-modifySpu",
+  "cnName": "修改spu信息"
 }

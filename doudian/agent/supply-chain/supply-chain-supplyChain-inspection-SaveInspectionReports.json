@@ -442,5 +442,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/172/8265",
   "updatedAt": "2026-05-06",
-  "_file_stem": "supply-chain-supplyChain-inspection-SaveInspectionReports"
+  "_file_stem": "supply-chain-supplyChain-inspection-SaveInspectionReports",
+  "cnName": "创建/编辑验机报告"
 }

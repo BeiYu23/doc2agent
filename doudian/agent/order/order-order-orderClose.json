@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/552",
   "updatedAt": "2021-05-27",
-  "_file_stem": "order-order-orderClose"
+  "_file_stem": "order-order-orderClose",
+  "cnName": "关闭订单"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.OpenAfterSaleChannel` |
+| 中文名 | 商家打开售后通道 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/OpenAfterSaleChannel` |

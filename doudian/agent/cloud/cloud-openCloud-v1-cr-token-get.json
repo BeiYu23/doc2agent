@@ -66,5 +66,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/4153",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-v1-cr-token-get"
+  "_file_stem": "cloud-openCloud-v1-cr-token-get",
+  "cnName": "获取上传镜像仓库的临时token"
 }

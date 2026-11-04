@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.mGetMemberInfoByOpenIdList` |
+| 中文名 | 【会员通商家】获取会员信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/mGetMemberInfoByOpenIdList` |

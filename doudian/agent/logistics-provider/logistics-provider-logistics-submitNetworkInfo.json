@@ -395,5 +395,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/7046",
   "updatedAt": "2025-06-09",
-  "_file_stem": "logistics-provider-logistics-submitNetworkInfo"
+  "_file_stem": "logistics-provider-logistics-submitNetworkInfo",
+  "cnName": "物流商提报线路信息"
 }

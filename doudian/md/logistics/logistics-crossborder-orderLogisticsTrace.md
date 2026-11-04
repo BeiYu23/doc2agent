@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.crossborder.orderLogisticsTrace` |
+| 中文名 | 服务商回传国际干线作业节点 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/crossborder/orderLogisticsTrace` |

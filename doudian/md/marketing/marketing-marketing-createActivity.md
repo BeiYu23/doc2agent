@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.marketing.marketing.createActivity` |
+| 中文名 | 创建营销玩法 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/createActivity` |

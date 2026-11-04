@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cloud.openCloud.ddpAddShop` |
+| 中文名 | 数据推送，添加数据推送店铺 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/ddpAddShop` |

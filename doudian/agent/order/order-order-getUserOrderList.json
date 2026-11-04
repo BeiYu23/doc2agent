@@ -194,5 +194,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/1915",
   "updatedAt": "2022-05-12",
-  "_file_stem": "order-order-getUserOrderList"
+  "_file_stem": "order-order-getUserOrderList",
+  "cnName": "支持按抖店open_id或抖音小程序open_…"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.service.rights.getProductPrivileges` |
+| 中文名 | 查询商品服务权益 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/getProductPrivileges` |

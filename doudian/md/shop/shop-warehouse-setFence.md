@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.warehouse.setFence` |
+| 中文名 | 更新电子围栏 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/warehouse/setFence` |

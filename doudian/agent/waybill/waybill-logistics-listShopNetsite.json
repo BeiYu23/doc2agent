@@ -77,5 +77,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1843",
   "updatedAt": "2023-03-20",
-  "_file_stem": "waybill-logistics-listShopNetsite"
+  "_file_stem": "waybill-logistics-listShopNetsite",
+  "cnName": "本接口可以查询商家和物流商的订购关系以及物流单…"
 }

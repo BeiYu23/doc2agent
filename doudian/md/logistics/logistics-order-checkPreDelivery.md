@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.order.checkPreDelivery` |
+| 中文名 | 查询商家/订单是否可用预发货 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/checkPreDelivery` |

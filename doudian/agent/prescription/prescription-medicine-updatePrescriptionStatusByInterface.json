@@ -114,5 +114,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1479/6463",
   "updatedAt": "2024-05-07",
-  "_file_stem": "prescription-medicine-updatePrescriptionStatusByInterface"
+  "_file_stem": "prescription-medicine-updatePrescriptionStatusByInterface",
+  "cnName": "商家ERP通过调用接口审核处方单"
 }

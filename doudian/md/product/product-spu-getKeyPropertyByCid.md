@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.spu.getKeyPropertyByCid` |
+| 中文名 | 关键属性查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/getKeyPropertyByCid` |

@@ -764,5 +764,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/7342",
   "updatedAt": "2025-04-24",
-  "_file_stem": "product-product-diagnoseCheck"
+  "_file_stem": "product-product-diagnoseCheck",
+  "cnName": "发布前校验"
 }

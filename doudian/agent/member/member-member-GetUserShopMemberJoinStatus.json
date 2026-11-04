@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/66/1804",
   "updatedAt": "2022-04-29",
-  "_file_stem": "member-member-GetUserShopMemberJoinStatus"
+  "_file_stem": "member-member-GetUserShopMemberJoinStatus",
+  "cnName": "判断用户会员状态"
 }

@@ -103,5 +103,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7565",
   "updatedAt": "2025-07-07",
-  "_file_stem": "tool-second-liveroom-searchProduct"
+  "_file_stem": "tool-second-liveroom-searchProduct",
+  "cnName": "根据关键词查询直播间商品"
 }

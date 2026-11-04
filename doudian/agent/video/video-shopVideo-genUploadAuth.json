@@ -110,5 +110,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/7150",
   "updatedAt": "2024-12-12",
-  "_file_stem": "video-shopVideo-genUploadAuth"
+  "_file_stem": "video-shopVideo-genUploadAuth",
+  "cnName": "获取SDK上传视频的授权"
 }

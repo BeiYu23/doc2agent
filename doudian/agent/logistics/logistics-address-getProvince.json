@@ -63,5 +63,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1848",
   "updatedAt": "2022-08-08",
-  "_file_stem": "logistics-address-getProvince"
+  "_file_stem": "logistics-address-getProvince",
+  "cnName": "获取四级地址全量省份信息"
 }

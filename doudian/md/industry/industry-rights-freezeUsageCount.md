@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.rights.freezeUsageCount` |
+| 中文名 | 冻结权益使用次数 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/rights/freezeUsageCount` |

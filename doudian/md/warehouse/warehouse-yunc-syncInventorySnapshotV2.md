@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.syncInventorySnapshotV2` |
+| 中文名 | 库存快照回传V2 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/syncInventorySnapshotV2` |

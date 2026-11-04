@@ -86,5 +86,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1541/6808",
   "updatedAt": "2024-08-27",
-  "_file_stem": "retail-marketing-sendHome-marketing-invalidActivity"
+  "_file_stem": "retail-marketing-sendHome-marketing-invalidActivity",
+  "cnName": "异步将营销活动置为失效，任务结果将通过spi通知"
 }

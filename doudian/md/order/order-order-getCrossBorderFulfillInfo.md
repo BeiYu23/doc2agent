@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.getCrossBorderFulfillInfo` |
+| 中文名 | 获取跨境承运单信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getCrossBorderFulfillInfo` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.feige.pigeon.getStaffHistoryDailyStatistics` |
+| 中文名 | 查询客服每日指标结果值 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pigeon/getStaffHistoryDailyStatistics` |

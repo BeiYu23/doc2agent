@@ -124,5 +124,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/69/1694",
   "updatedAt": "2022-11-17",
-  "_file_stem": "material-material-get_cap_info"
+  "_file_stem": "material-material-get_cap_info",
+  "cnName": "获取商家容量"
 }

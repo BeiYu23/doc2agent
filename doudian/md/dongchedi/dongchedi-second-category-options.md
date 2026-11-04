@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.category.options` |
+| 中文名 | 【二方接口】获取店铺的可选类目 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/category/options` |

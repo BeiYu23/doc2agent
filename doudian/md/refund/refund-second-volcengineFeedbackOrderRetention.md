@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.second.volcengineFeedbackOrderRetention` |
+| 中文名 | AI挽单回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/volcengineFeedbackOrderRetention` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.install.install.store.providerAbilityQueryStore` |
+| 中文名 | 到店安装通过服务能力反查门店id列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/store/providerAbilityQueryStore` |

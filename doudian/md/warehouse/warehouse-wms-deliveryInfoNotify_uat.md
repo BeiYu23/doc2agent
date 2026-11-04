@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.wms.deliveryInfoNotify_uat` |
+| 中文名 | WMS 签收回传UAT环境 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/wms/deliveryInfoNotify_uat` |

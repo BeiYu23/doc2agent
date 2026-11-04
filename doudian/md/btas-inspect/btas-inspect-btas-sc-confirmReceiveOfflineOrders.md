@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.sc.confirmReceiveOfflineOrders` |
+| 中文名 | 质检机构_确认收货(实物质检订单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/confirmReceiveOfflineOrders` |

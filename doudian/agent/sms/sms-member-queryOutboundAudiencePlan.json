@@ -73,5 +73,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/6878",
   "updatedAt": "2024-12-23",
-  "_file_stem": "sms-member-queryOutboundAudiencePlan"
+  "_file_stem": "sms-member-queryOutboundAudiencePlan",
+  "cnName": "外呼计划生产信息查询"
 }

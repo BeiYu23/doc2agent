@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.material.material.uploadVideoAsync` |
+| 中文名 | 素材中心--异步上传视频 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/material/uploadVideoAsync` |

@@ -75,5 +75,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/6544",
   "updatedAt": "2024-05-27",
-  "_file_stem": "warehouse-instantShopping-starhub-queryRelayReverseOrderStatus"
+  "_file_stem": "warehouse-instantShopping-starhub-queryRelayReverseOrderStatus",
+  "cnName": "逆向接力单状态查询"
 }

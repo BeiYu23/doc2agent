@@ -138,5 +138,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1438/5332",
   "updatedAt": "2023-10-25",
-  "_file_stem": "selection-supplyCenter-cargo-getComponentTemplate"
+  "_file_stem": "selection-supplyCenter-cargo-getComponentTemplate",
+  "cnName": "分页查询尺寸模板"
 }

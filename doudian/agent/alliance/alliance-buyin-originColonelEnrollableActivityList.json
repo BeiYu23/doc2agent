@@ -256,5 +256,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/61/1675",
   "updatedAt": "2026-04-21",
-  "_file_stem": "alliance-buyin-originColonelEnrollableActivityList"
+  "_file_stem": "alliance-buyin-originColonelEnrollableActivityList",
+  "cnName": "接口用于团长获取可参与的二级团长活动"
 }

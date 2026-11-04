@@ -131,5 +131,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1434/5083",
   "updatedAt": "2023-11-06",
-  "_file_stem": "miniapp-mini-follow-check"
+  "_file_stem": "miniapp-mini-follow-check",
+  "cnName": "检查小程序是否允许关注店铺"
 }

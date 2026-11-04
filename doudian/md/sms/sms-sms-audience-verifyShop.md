@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.audience.verifyShop` |
+| 中文名 | 公域标签短信商家是否符合准入门槛 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/audience/verifyShop` |

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.doubao.contentAIGC.createAIVideoTaskOpen` |
+| 中文名 | 创建成片任务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/createAIVideoTaskOpen` |

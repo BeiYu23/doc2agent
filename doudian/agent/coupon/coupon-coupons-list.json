@@ -83,5 +83,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/52/369",
   "updatedAt": "2024-03-21",
-  "_file_stem": "coupon-coupons-list"
+  "_file_stem": "coupon-coupons-list",
+  "cnName": "平台卡券和三方卡券的status枚举不一样"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bill.order.getSettleBillDetailV3` |
+| 中文名 | 商家结算账单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getSettleBillDetailV3` |

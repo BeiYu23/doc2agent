@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.superm.getDispatcherInfo` |
+| 中文名 | 运力呼叫询价/取消呼叫询价（正向 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/getDispatcherInfo` |

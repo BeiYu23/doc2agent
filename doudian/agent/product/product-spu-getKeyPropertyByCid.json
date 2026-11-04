@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1824",
   "updatedAt": "2021-06-30",
-  "_file_stem": "product-spu-getKeyPropertyByCid"
+  "_file_stem": "product-spu-getKeyPropertyByCid",
+  "cnName": "关键属性查询"
 }

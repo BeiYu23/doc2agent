@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.virtual.topup.simcardUserInfoWritingSucceed` |
+| 中文名 | 号卡商品用户信息补录完成回调 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/simcardUserInfoWritingSucceed` |

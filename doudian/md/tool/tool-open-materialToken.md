@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.open.materialToken` |
+| 中文名 | 素材上传接口访问token |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/materialToken` |

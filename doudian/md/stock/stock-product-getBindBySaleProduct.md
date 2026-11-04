@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.stock.product.getBindBySaleProduct` |
+| 中文名 | 通过前台销售商品查供货商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/getBindBySaleProduct` |

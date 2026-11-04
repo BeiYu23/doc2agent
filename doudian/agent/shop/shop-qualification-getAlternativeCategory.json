@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/657",
   "updatedAt": "2024-07-01",
-  "_file_stem": "shop-qualification-getAlternativeCategory"
+  "_file_stem": "shop-qualification-getAlternativeCategory",
+  "cnName": "获取商家的可选类目"
 }

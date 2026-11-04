@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.cloud.openCloud.containerService.create` |
+| 中文名 | 创建容器服务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/openCloud/containerService/create` |

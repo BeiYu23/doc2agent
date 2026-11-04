@@ -103,5 +103,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/3535",
   "updatedAt": "2023-04-19",
-  "_file_stem": "logistics-logistics-operatorCheckInEvent"
+  "_file_stem": "logistics-logistics-operatorCheckInEvent",
+  "cnName": "师傅上门签到事件"
 }

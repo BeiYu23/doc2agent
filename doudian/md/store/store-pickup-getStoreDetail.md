@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.store.pickup.getStoreDetail` |
+| 中文名 | 门店详情查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/getStoreDetail` |

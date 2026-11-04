@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/15/481",
   "updatedAt": "2021-05-07",
-  "_file_stem": "order-order-decryptBatch"
+  "_file_stem": "order-order-decryptBatch",
+  "cnName": "此接口用于批量解密"
 }

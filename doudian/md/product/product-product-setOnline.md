@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.setOnline` |
+| 中文名 | 拍卖商品上架接口-仅限拍卖商品使用 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/setOnline` |

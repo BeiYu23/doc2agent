@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.getPreviewUserAmount` |
+| 中文名 | 预估公域标签圈选人群包人群数量 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/getPreviewUserAmount` |

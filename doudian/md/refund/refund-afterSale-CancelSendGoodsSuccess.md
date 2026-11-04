@@ -7,6 +7,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.CancelSendGoodsSuccess` |
+| 中文名 | 商家在抖店后台售后小助手配置取消发货自动退策略 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/CancelSendGoodsSuccess` |

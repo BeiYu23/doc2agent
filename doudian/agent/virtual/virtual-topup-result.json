@@ -166,5 +166,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/164/1639",
   "updatedAt": "2024-10-21",
-  "_file_stem": "virtual-topup-result"
+  "_file_stem": "virtual-topup-result",
+  "cnName": "商家充值结果回调"
 }

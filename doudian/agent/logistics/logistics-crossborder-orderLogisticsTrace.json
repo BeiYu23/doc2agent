@@ -160,5 +160,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/528",
   "updatedAt": "2021-05-18",
-  "_file_stem": "logistics-crossborder-orderLogisticsTrace"
+  "_file_stem": "logistics-crossborder-orderLogisticsTrace",
+  "cnName": "服务商回传国际干线作业节点"
 }

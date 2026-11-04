@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.supply-chain.supplyChain.queryReturnOrderByOrderNo` |
+| 中文名 | 通过售后单ID或者渠道交易单ID查询售后明细 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/supplyChain/queryReturnOrderByOrderNo` |

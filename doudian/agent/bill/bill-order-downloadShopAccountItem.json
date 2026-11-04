@@ -131,5 +131,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/46/1431",
   "updatedAt": "2023-05-29",
-  "_file_stem": "bill-order-downloadShopAccountItem"
+  "_file_stem": "bill-order-downloadShopAccountItem",
+  "cnName": "请求下载资金流水明细"
 }

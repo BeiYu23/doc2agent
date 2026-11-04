@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.address.getAreasByProvince` |
+| 中文名 | 查询最新的四级地址用于订单售后处理 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/getAreasByProvince` |

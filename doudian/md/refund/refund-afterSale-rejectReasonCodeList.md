@@ -9,6 +9,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.afterSale.rejectReasonCodeList` |
+| 中文名 | 不传aftersale_id查询抖店支持的全量… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/afterSale/rejectReasonCodeList` |

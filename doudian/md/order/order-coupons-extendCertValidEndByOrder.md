@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.coupons.extendCertValidEndByOrder` |
+| 中文名 | 三方卡券延期 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/coupons/extendCertValidEndByOrder` |

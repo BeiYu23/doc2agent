@@ -75,5 +75,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1568/8221",
   "updatedAt": "2026-04-21",
-  "_file_stem": "video-second-ecomInsight-getVisualValidateResult"
+  "_file_stem": "video-second-ecomInsight-getVisualValidateResult",
+  "cnName": "获取活体检测结果"
 }

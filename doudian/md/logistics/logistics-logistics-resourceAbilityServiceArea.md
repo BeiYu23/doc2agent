@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics.logistics.resourceAbilityServiceArea` |
+| 中文名 | 比如服务商送货上门的服务范围 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/resourceAbilityServiceArea` |

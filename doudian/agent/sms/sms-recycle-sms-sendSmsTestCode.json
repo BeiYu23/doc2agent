@@ -85,5 +85,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/163/7865",
   "updatedAt": "2025-11-13",
-  "_file_stem": "sms-recycle-sms-sendSmsTestCode"
+  "_file_stem": "sms-recycle-sms-sendSmsTestCode",
+  "cnName": "发送短信验证码"
 }

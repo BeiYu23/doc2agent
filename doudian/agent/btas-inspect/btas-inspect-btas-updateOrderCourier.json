@@ -76,5 +76,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/3528",
   "updatedAt": "2023-04-12",
-  "_file_stem": "btas-inspect-btas-updateOrderCourier"
+  "_file_stem": "btas-inspect-btas-updateOrderCourier",
+  "cnName": "更新订单的物流面单信息"
 }

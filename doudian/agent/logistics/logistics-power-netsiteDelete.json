@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1472",
   "updatedAt": "2023-03-20",
-  "_file_stem": "logistics-power-netsiteDelete"
+  "_file_stem": "logistics-power-netsiteDelete",
+  "cnName": "网点信息停用（仅用于兼容老物流网关"
 }

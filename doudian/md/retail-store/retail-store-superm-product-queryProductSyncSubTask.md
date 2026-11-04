@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.superm.product.queryProductSyncSubTask` |
+| 中文名 | 查询根任务下的子任务列表 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/superm/product/queryProductSyncSubTask` |

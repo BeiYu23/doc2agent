@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.order.modifyQualityCheckType` |
+| 中文名 | 修改可质检订单质检类型 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/modifyQualityCheckType` |

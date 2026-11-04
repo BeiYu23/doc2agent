@@ -88,5 +88,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1382",
   "updatedAt": "2023-01-03",
-  "_file_stem": "product-product-qualificationConfig"
+  "_file_stem": "product-product-qualificationConfig",
+  "cnName": "获取类目下需要填写的资质列表"
 }

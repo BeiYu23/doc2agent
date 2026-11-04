@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.marketing.marketing.queryShopCouponList` |
+| 中文名 | 查询店铺优惠券信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/marketing/queryShopCouponList` |

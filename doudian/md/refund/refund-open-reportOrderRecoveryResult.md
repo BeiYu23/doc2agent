@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.open.reportOrderRecoveryResult` |
+| 中文名 | 上报挽单执行结果 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/reportOrderRecoveryResult` |

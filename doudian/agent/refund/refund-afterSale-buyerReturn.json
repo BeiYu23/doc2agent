@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/90",
   "updatedAt": "2021-06-30",
-  "_file_stem": "refund-afterSale-buyerReturn"
+  "_file_stem": "refund-afterSale-buyerReturn",
+  "cnName": "商家处理退货申请"
 }

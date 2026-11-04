@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-store.yunc.mutilpleGoodsFeedback` |
+| 中文名 | 无头包裹信息回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/mutilpleGoodsFeedback` |

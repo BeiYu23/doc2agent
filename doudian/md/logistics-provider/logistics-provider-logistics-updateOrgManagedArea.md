@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.logistics.updateOrgManagedArea` |
+| 中文名 | 更新服务商更新组织（省区）管理范围 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/logistics/updateOrgManagedArea` |

@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1823",
   "updatedAt": "2021-08-06",
-  "_file_stem": "product-product-editBuyerLimit"
+  "_file_stem": "product-product-editBuyerLimit",
+  "cnName": "设置商品限购"
 }

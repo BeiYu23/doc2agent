@@ -5,13 +5,13 @@
 ## 文件
 
 - `index.json` —— 全平台总索引（平台名 → 清单文件 → 接口数）
-- `<platform>.json` —— 平台接口清单，每个条目含 `id / name / method / path / group / md / agent`
-- `<platform>.md` —— 同内容的人读表格版
+- `<platform>.json` —— 平台接口清单，每个条目含 `id / cnName / name / method / path / group / description / md / agent`
+- `<platform>.md` —— 同内容的人读表格版（含「中文名」列）
 
 ## Agent 读取顺序
 
 1. `catalog/index.json` → 拿到平台与清单文件路径
-2. `catalog/<platform>.json` → 按 `id` 或 `name` 检索接口
+2. `catalog/<platform>.json` → 按 `id` / `cnName` / `name` 检索接口（`cnName` 是从官方描述提炼的简短中文名）
 3. 直接取条目的 `md` / `agent` 相对路径打开对应文档（无需再查 `<platform>/agent/index.json`）
 
 ## 约定

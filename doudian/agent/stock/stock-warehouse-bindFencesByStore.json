@@ -132,5 +132,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/2535",
   "updatedAt": "2024-12-17",
-  "_file_stem": "stock-warehouse-bindFencesByStore"
+  "_file_stem": "stock-warehouse-bindFencesByStore",
+  "cnName": "绑定门店和电子围栏"
 }

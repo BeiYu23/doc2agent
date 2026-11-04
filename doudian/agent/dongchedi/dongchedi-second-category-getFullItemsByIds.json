@@ -116,5 +116,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1544/6839",
   "updatedAt": "2024-09-03",
-  "_file_stem": "dongchedi-second-category-getFullItemsByIds"
+  "_file_stem": "dongchedi-second-category-getFullItemsByIds",
+  "cnName": "【二方接口】根据类目ID查询本级类目信息"
 }

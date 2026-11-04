@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.alliance.alliance.colonelActivityProductAudit` |
+| 中文名 | 专属团长活动商品审核 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/alliance/colonelActivityProductAudit` |

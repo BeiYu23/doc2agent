@@ -78,5 +78,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/1540",
   "updatedAt": "2022-09-07",
-  "_file_stem": "refund-afterSale-rejectReasonCodeList"
+  "_file_stem": "refund-afterSale-rejectReasonCodeList",
+  "cnName": "不传aftersale_id查询抖店支持的全量…"
 }

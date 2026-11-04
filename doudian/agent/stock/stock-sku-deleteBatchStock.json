@@ -167,5 +167,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/34/7723",
   "updatedAt": "2025-08-26",
-  "_file_stem": "stock-sku-deleteBatchStock"
+  "_file_stem": "stock-sku-deleteBatchStock",
+  "cnName": "批量删除批次库存"
 }

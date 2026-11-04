@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.ChangePoint` |
+| 中文名 | 会员侧对外积分变更 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/ChangePoint` |

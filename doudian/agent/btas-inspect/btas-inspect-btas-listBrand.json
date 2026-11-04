@@ -62,5 +62,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/49/1865",
   "updatedAt": "2021-06-07",
-  "_file_stem": "btas-inspect-btas-listBrand"
+  "_file_stem": "btas-inspect-btas-listBrand",
+  "cnName": "获取可图片鉴定的品牌"
 }

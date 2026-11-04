@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.product.isv.getClueList` |
+| 中文名 | 提供给isv，根据店铺获取线索 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/isv/getClueList` |

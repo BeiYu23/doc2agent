@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.tag.batchDisableProductTag` |
+| 中文名 | 【二方接口】商品批量去标 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/tag/batchDisableProductTag` |

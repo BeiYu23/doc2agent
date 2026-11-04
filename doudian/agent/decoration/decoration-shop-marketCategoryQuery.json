@@ -114,5 +114,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/167/2902",
   "updatedAt": "2024-03-05",
-  "_file_stem": "decoration-shop-marketCategoryQuery"
+  "_file_stem": "decoration-shop-marketCategoryQuery",
+  "cnName": "查询店铺的类目信息"
 }

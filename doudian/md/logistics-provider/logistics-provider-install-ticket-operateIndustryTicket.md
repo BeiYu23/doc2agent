@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.logistics-provider.install.ticket.operateIndustryTicket` |
+| 中文名 | 行业服务操作工单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/install/ticket/operateIndustryTicket` |

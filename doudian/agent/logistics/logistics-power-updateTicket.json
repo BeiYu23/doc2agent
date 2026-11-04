@@ -155,5 +155,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1477",
   "updatedAt": "2023-02-24",
-  "_file_stem": "logistics-power-updateTicket"
+  "_file_stem": "logistics-power-updateTicket",
+  "cnName": "工单处理回传"
 }

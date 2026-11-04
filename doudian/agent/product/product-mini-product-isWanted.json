@@ -75,5 +75,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/4229",
   "updatedAt": "2024-07-08",
-  "_file_stem": "product-mini-product-isWanted"
+  "_file_stem": "product-mini-product-isWanted",
+  "cnName": "查询是否收藏"
 }

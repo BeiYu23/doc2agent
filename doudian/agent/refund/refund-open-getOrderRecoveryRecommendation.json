@@ -175,5 +175,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/8096",
   "updatedAt": "2026-02-13",
-  "_file_stem": "refund-open-getOrderRecoveryRecommendation"
+  "_file_stem": "refund-open-getOrderRecoveryRecommendation",
+  "cnName": "一期暂无平台推荐策略能力，需三方自行制定"
 }

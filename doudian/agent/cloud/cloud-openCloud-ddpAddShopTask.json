@@ -140,5 +140,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/2908",
   "updatedAt": "2025-04-01",
-  "_file_stem": "cloud-openCloud-ddpAddShopTask"
+  "_file_stem": "cloud-openCloud-ddpAddShopTask",
+  "cnName": "数据推送，发起店铺补偿任务"
 }

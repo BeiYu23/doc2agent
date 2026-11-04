@@ -376,5 +376,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/1295",
   "updatedAt": "2025-04-27",
-  "_file_stem": "refund-afterSale-List"
+  "_file_stem": "refund-afterSale-List",
+  "cnName": "售后列表接口"
 }

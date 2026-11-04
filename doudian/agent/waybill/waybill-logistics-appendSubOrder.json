@@ -193,5 +193,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1075",
   "updatedAt": "2021-09-14",
-  "_file_stem": "waybill-logistics-appendSubOrder"
+  "_file_stem": "waybill-logistics-appendSubOrder",
+  "cnName": "电子面单追加子单号场景"
 }

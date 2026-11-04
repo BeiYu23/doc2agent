@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/17/92",
   "updatedAt": "2021-05-07",
-  "_file_stem": "refund-afterSale-uploadCompensation"
+  "_file_stem": "refund-afterSale-uploadCompensation",
+  "cnName": "货到付款订单上传赔付凭证"
 }

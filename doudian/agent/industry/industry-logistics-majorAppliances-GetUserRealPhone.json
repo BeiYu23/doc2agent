@@ -82,5 +82,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1612/8277",
   "updatedAt": "2026-05-12",
-  "_file_stem": "industry-logistics-majorAppliances-GetUserRealPhone"
+  "_file_stem": "industry-logistics-majorAppliances-GetUserRealPhone",
+  "cnName": "获取用户真实手机号"
 }

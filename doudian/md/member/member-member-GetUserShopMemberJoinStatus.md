@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.member.member.GetUserShopMemberJoinStatus` |
+| 中文名 | 判断用户会员状态 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/member/GetUserShopMemberJoinStatus` |

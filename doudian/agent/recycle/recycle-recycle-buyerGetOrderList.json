@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/68/914",
   "updatedAt": "2021-09-07",
-  "_file_stem": "recycle-recycle-buyerGetOrderList"
+  "_file_stem": "recycle-recycle-buyerGetOrderList",
+  "cnName": "拉取订单列表"
 }

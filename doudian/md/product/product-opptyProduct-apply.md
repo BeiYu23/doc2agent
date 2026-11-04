@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.opptyProduct.apply` |
+| 中文名 | 机会品提报 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/opptyProduct/apply` |

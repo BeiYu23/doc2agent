@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.pushOutboundAdditionalFeedback` |
+| 中文名 | 云仓出库单附属信息回传 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/pushOutboundAdditionalFeedback` |

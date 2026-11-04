@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1604",
   "updatedAt": "2025-11-18",
-  "_file_stem": "logistics-power-packageWaybillCallBack"
+  "_file_stem": "logistics-power-packageWaybillCallBack",
+  "cnName": "包裹运单信息推送"
 }

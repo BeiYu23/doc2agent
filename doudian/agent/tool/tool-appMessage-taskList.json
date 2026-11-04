@@ -101,5 +101,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3646",
   "updatedAt": "2023-05-08",
-  "_file_stem": "tool-appMessage-taskList"
+  "_file_stem": "tool-appMessage-taskList",
+  "cnName": "获取服务市场应用消息任务列表"
 }

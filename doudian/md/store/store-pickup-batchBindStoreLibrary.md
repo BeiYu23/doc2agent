@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.store.pickup.batchBindStoreLibrary` |
+| 中文名 | 门店组批量绑定门店 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/pickup/batchBindStoreLibrary` |

@@ -68,5 +68,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1578",
   "updatedAt": "2021-12-28",
-  "_file_stem": "waybill-logistics-deliveryNotice"
+  "_file_stem": "waybill-logistics-deliveryNotice",
+  "cnName": "顺丰极效前置订单放行/回退"
 }

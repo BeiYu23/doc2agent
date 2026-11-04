@@ -9,6 +9,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.shop.shop.getShopCategory` |
+| 中文名 | 请一定使用最小层级类目id，发布商品或更新商品 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/shop/getShopCategory` |

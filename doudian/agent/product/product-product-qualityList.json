@@ -162,5 +162,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/938",
   "updatedAt": "2025-03-10",
-  "_file_stem": "product-product-qualityList"
+  "_file_stem": "product-product-qualityList",
+  "cnName": "查询店铺商品质量情况，对标后台商品成长中心"
 }

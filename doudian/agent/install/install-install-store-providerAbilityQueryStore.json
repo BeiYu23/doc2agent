@@ -107,5 +107,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1602/7843",
   "updatedAt": "2025-11-05",
-  "_file_stem": "install-install-store-providerAbilityQueryStore"
+  "_file_stem": "install-install-store-providerAbilityQueryStore",
+  "cnName": "到店安装通过服务能力反查门店id列表"
 }

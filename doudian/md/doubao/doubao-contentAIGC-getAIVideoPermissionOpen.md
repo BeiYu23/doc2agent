@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.doubao.contentAIGC.getAIVideoPermissionOpen` |
+| 中文名 | 查询商家成片权限 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/contentAIGC/getAIVideoPermissionOpen` |

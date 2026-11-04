@@ -251,5 +251,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/873",
   "updatedAt": "2023-05-18",
-  "_file_stem": "warehouse-yunc-cloudCancelOutboundOrder"
+  "_file_stem": "warehouse-yunc-cloudCancelOutboundOrder",
+  "cnName": "云仓出库取消"
 }

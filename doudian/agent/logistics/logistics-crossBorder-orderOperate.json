@@ -520,5 +520,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/526",
   "updatedAt": "2023-05-19",
-  "_file_stem": "logistics-crossBorder-orderOperate"
+  "_file_stem": "logistics-crossBorder-orderOperate",
+  "cnName": "服务商回传仓储"
 }

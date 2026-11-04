@@ -673,5 +673,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1614",
   "updatedAt": "2026-09-14",
-  "_file_stem": "product-product-getProductUpdateRule"
+  "_file_stem": "product-product-getProductUpdateRule",
+  "cnName": "查询商品发布规则"
 }

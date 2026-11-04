@@ -281,5 +281,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2456",
   "updatedAt": "2023-04-24",
-  "_file_stem": "logistics-logistics-ind-orderStatusPush"
+  "_file_stem": "logistics-logistics-ind-orderStatusPush",
+  "cnName": "订单状态回传"
 }

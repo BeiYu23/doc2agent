@@ -203,5 +203,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/2011",
   "updatedAt": "2022-12-09",
-  "_file_stem": "logistics-power-HandleVirtualTelConnect"
+  "_file_stem": "logistics-power-HandleVirtualTelConnect",
+  "cnName": "虚拟号服务商回传虚拟号接通事件"
 }

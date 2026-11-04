@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.industry.inspection.operateInspectionReports` |
+| 中文名 | 验机报告管理操作（绑定/解绑sku，上架/下架 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/inspection/operateInspectionReports` |

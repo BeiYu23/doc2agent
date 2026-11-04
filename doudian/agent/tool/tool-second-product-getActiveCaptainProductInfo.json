@@ -198,5 +198,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/7606",
   "updatedAt": "2025-07-17",
-  "_file_stem": "tool-second-product-getActiveCaptainProductInfo"
+  "_file_stem": "tool-second-product-getActiveCaptainProductInfo",
+  "cnName": "【二方接口】查询生效的团长商品信息"
 }

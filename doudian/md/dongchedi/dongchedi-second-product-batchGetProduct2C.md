@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.dongchedi.second.product.batchGetProduct2C` |
+| 中文名 | 【二方接口】批量获取商品信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/second/product/batchGetProduct2C` |

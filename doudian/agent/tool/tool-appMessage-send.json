@@ -132,5 +132,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/162/3644",
   "updatedAt": "2023-05-17",
-  "_file_stem": "tool-appMessage-send"
+  "_file_stem": "tool-appMessage-send",
+  "cnName": "发送服务市场应用消息"
 }

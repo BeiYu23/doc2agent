@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.refund.address.updateAftersaleStrategy` |
+| 中文名 | 更新地址策略 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/address/updateAftersaleStrategy` |

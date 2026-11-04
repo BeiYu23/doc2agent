@@ -89,5 +89,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1033/6374",
   "updatedAt": "2024-08-20",
-  "_file_stem": "retail-store-warehouse-getFencesByStore"
+  "_file_stem": "retail-store-warehouse-getFencesByStore",
+  "cnName": "根据门店查询围栏"
 }

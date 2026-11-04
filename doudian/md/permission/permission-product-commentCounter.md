@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.permission.product.commentCounter` |
+| 中文名 | 获取商品维度或者店铺维度的评价计数信息 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/product/commentCounter` |

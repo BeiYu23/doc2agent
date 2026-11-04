@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.warehouse.yunc.shopWarehouseRefQuery` |
+| 中文名 | 商家入驻仓关系查询 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/yunc/shopWarehouseRefQuery` |

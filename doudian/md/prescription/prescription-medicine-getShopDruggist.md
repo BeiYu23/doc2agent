@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.prescription.medicine.getShopDruggist` |
+| 中文名 | 商家ERP获取店铺下的药剂师 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/medicine/getShopDruggist` |

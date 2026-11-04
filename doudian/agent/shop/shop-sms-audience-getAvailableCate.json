@@ -79,5 +79,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/13/7662",
   "updatedAt": "2025-09-19",
-  "_file_stem": "shop-sms-audience-getAvailableCate"
+  "_file_stem": "shop-sms-audience-getAvailableCate",
+  "cnName": "获取商家类目id"
 }

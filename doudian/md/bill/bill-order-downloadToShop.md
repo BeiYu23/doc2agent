@@ -6,6 +6,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.bill.order.downloadToShop` |
+| 中文名 | 通过【/order/downloadSettl… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/downloadToShop` |

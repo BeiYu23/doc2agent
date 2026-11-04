@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.order.order.getUserOrderList` |
+| 中文名 | 支持按抖店open_id或抖音小程序open_… |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/order/getUserOrderList` |

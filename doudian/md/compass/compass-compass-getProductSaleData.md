@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.compass.compass.getProductSaleData` |
+| 中文名 | 电商罗盘商品销售数据 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/compass/getProductSaleData` |

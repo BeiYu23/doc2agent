@@ -83,5 +83,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1262/1852",
   "updatedAt": "2021-08-19",
-  "_file_stem": "waybill-logistics-getCustomTemplateList"
+  "_file_stem": "waybill-logistics-getCustomTemplateList",
+  "cnName": "查询商家自定义区模板（新版"
 }

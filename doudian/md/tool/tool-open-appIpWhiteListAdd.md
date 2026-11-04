@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.tool.open.appIpWhiteListAdd` |
+| 中文名 | 新增应用ip白名单 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/open/appIpWhiteListAdd` |

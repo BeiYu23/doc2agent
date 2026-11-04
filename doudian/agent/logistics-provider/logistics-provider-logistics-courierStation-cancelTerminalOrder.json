@@ -218,5 +218,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1048/2938",
   "updatedAt": "2023-04-03",
-  "_file_stem": "logistics-provider-logistics-courierStation-cancelTerminalOrder"
+  "_file_stem": "logistics-provider-logistics-courierStation-cancelTerminalOrder",
+  "cnName": "驿站主动取消订单"
 }

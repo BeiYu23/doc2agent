@@ -37,5 +37,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/14/1825",
   "updatedAt": "2021-06-30",
-  "_file_stem": "product-spu-getSpuInfoBySpuId"
+  "_file_stem": "product-spu-getSpuInfoBySpuId",
+  "cnName": "SPU信息查看"
 }

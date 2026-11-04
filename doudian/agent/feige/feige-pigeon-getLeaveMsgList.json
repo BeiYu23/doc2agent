@@ -108,5 +108,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/188/5344",
   "updatedAt": "2023-11-09",
-  "_file_stem": "feige-pigeon-getLeaveMsgList"
+  "_file_stem": "feige-pigeon-getLeaveMsgList",
+  "cnName": "查询留言列表"
 }

@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.btas-inspect.btas.sc.shippingOrQueryOrderERP` |
+| 中文名 | 质检机构_实物质检订单发货 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/btas/sc/shippingOrQueryOrderERP` |

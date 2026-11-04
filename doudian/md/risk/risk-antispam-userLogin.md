@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.risk.antispam.userLogin` |
+| 中文名 | 商户登陆风险检查 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/antispam/userLogin` |

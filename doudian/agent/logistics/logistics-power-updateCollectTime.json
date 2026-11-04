@@ -291,5 +291,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/1627",
   "updatedAt": "2026-01-06",
-  "_file_stem": "logistics-power-updateCollectTime"
+  "_file_stem": "logistics-power-updateCollectTime",
+  "cnName": "物流商推送改约时间"
 }

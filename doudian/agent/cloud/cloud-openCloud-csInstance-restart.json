@@ -67,5 +67,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/158/6449",
   "updatedAt": "2024-12-30",
-  "_file_stem": "cloud-openCloud-csInstance-restart"
+  "_file_stem": "cloud-openCloud-csInstance-restart",
+  "cnName": "批量重启容器服务下的实例"
 }

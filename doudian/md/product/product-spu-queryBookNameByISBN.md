@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.product.spu.queryBookNameByISBN` |
+| 中文名 | 根据ISBN查询书名 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/spu/queryBookNameByISBN` |

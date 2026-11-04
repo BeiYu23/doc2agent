@@ -543,5 +543,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/16/8526",
   "updatedAt": "2026-08-20",
-  "_file_stem": "logistics-power-updateCollectInfo"
+  "_file_stem": "logistics-power-updateCollectInfo",
+  "cnName": "取件信息推送（仅用于兼容老物流网关"
 }

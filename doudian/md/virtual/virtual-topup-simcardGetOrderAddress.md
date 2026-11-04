@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.virtual.topup.simcardGetOrderAddress` |
+| 中文名 | 获取号卡商品订单中填写的地址 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/topup/simcardGetOrderAddress` |

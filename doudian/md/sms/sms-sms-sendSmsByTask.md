@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.sms.sms.sendSmsByTask` |
+| 中文名 | 通过父任务发起新的短信发送任务 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `/sms/sendSmsByTask` |

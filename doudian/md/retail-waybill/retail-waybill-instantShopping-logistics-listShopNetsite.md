@@ -5,6 +5,7 @@
 | 元信息 | 值 |
 | --- | --- |
 | 接口 ID | `doudian.retail-waybill.instantShopping.logistics.listShopNetsite` |
+| 中文名 | 查询商家和物流商的订购关系以及物流单号使用情况 |
 | 平台 | `doudian` |
 | 请求方法 | `GET` |
 | 接口路径 | `YOUR_SECRET_KEY` |

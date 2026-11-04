@@ -257,5 +257,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/1559/7232",
   "updatedAt": "2026-06-23",
-  "_file_stem": "store-pickup-searchStoreList"
+  "_file_stem": "store-pickup-searchStoreList",
+  "cnName": "门店列表搜索"
 }

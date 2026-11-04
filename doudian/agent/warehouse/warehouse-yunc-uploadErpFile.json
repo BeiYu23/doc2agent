@@ -166,5 +166,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/50/4523",
   "updatedAt": "2024-06-19",
-  "_file_stem": "warehouse-yunc-uploadErpFile"
+  "_file_stem": "warehouse-yunc-uploadErpFile",
+  "cnName": "erp系统上传商货关系文件服务"
 }

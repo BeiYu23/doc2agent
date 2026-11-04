@@ -174,5 +174,6 @@
   },
   "source": "https://op.jinritemai.com/docs/api-docs/53/6322",
   "updatedAt": "2024-03-26",
-  "_file_stem": "cross-border-supplyChain-batchGetCargoDetail"
+  "_file_stem": "cross-border-supplyChain-batchGetCargoDetail",
+  "cnName": "批量获取货品"
 }
